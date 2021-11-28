@@ -1,0 +1,53 @@
+--November, 5, 2021 (IROG)
+
+
+--Forum (80%) done, bug fixes and slight adjustments nalang
+
+--Cleanup ng mga use state
+
+--fixing a few bugs on lessons and profile
+
+--indexing
+
+
+
+
+*notes
+
+try natin ihiwalay modals para clean tingnan ung mga files para mas madali intindihin nila
+
+may binago ako sa lahat, wag i merge files nito. i lapat mo nalang dito mga ginawa mo para hindi magulo yung mga nilagay ko
+
+
+
+--November, 8, 2021 (ARLLAN)
+
+--Login - Register -Forgot Password align center ReCaptcha 
+--Thread Redesign Form 
+--Footer Design change
+
+
+--November, 13-14, 2016 (ARLLAN)
+-- inayos ko na din /error page
+-- inayos ko na sa course at lessons, nag lagay na  din ako ng  course.courseoverview na text sa firebase
+-- tapos  pa try ulit ako nong register kasi ang nag show sa profile.js na occupation at institution ay 1 & 2
+-- tapos pa remove na din ako nong isang field ng institution sa Register.js tsaka  pa auto clear na din pala text field 
+-- thread okay na, na adjust ko na layout 
+-- na add ko na Certificate.js 3000/certificate
+-- code sa Basic Programming Structures
+
+
+--November 15 2021 Irog
+
+-- tapos  pa try ulit ako nong register kasi ang nag show sa profile.js na occupation at institution ay 1 & 2 (DONE)
+-- tapos pa remove na din ako nong isang field ng institution sa Register.js tsaka  pa auto clear na din pala text field  (DONE)
+-- code sa Basic Programming Structures (DONE)
+
+--November 23 2021 Arllan
+
+>>UI
+-- All Pages Centered and Align-Items
+-- Create new Page for Lessons (Lessons.js) Content is courses of Programming Concepts and Programming Structures
+-- Course.js contents change to the available content of the website. (Programming, Computing)
+-- Profile.js Redesign and add card for level and discription. (Programming, Computing)
+-- Then I hide  the options button for  change of password and edit profile, feedback, and upload. (Programming, Computing)

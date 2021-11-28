@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  overflow-x: hidden;
+  font-size: 15px;
+}
+.hero-area {
+    position: relative;
+    padding: 50px 0 120px 0;
+    width: 100%;
+    height: 100%;
+    background-color: #151515;
+    background-image: url(https://images.unsplash.com/photo-1510915228340-29c85a43dcfe?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80);
+    background-repeat: no-repeat;
+    background-position: center 30%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 420px;
+  }
+
+  .hero-area .hero-image img {
+    width: 100%;
+  }
+  
+  @media only screen and (min-width: 520px) and (max-width: 520px) {
+    .hero-area .hero-image {
+      margin-top: 40px;
+    }
+  }
+  
+  @media (max-width: 767px) {
+    .hero-area .hero-image {
+      margin-top: 40px;
+    }
+  }
+
+  .rotate {
+    animation: rotation 8s infinite linear;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+  }
+  

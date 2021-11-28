@@ -1,0 +1,23 @@
+--November, 5, 2021 (IROG)
+
+
+--Forum (80%) done, bug fixes and slight adjustments nalang
+
+--Cleanup ng mga use state
+
+--fixing a few bugs on lessons and profile
+
+--indexing
+
+
+
+
+*notes
+
+try natin ihiwalay modals para clean tingnan ung mga files para mas madali intindihin nila
+
+may binago ako sa lahat, wag i merge files nito. i lapat mo nalang dito mga ginawa mo para hindi magulo yung mga nilagay ko
+
+--November, 8, 2021 (ARLLAN)
+
+--

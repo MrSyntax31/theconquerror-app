@@ -1,0 +1,102 @@
+import React, {useEffect,useState} from 'react';
+import Helmet from 'react-helmet';
+import {} from 'firebase/auth'
+import { getAuth } from '@firebase/auth';
+import { getDatabase, ref, onValue } from "firebase/database";
+import Navbar from '../../Components/Navbar/Navbar'
+import { Row, Container, Col, Card, Button } from 'react-bootstrap';
+
+
+
+
+
+const Course = () => {
+
+    //Services of Firebase (Authentication, Firestore, and Realtime Database)
+    const auth = getAuth();
+    const realtimedb = getDatabase();
+
+
+    //fetches the id of the current logged-in user which will be used to reference the data inside the Realtime database
+    const userId = auth.currentUser.uid;   
+    
+ //to be used by showProfile Function to map the data and be visible to users      
+ const [profile, setData] = useState([]);
+
+
+
+ //Loads the function inside the useEffect when the component renders
+   useEffect (() => {
+     
+   //Function that shows the profile of the user 
+   function showProfile() {
+    
+ 
+   //creating reference for realtimedb and fetching data from table users using the userID as reference then setting the data inside the Profile useState above
+     const profileData = ref(realtimedb, '/users/' + userId);
+     onValue(profileData, (snapshot) => {
+       setData(snapshot.val());
+   })
+ }
+ 
+         showProfile();
+       
+   },[]); // eslint-disable-line react-hooks/exhaustive-deps
+
+    return (
+        <>
+
+        {/* Division for Tab Page and Description*/}
+        <div>
+            <Helmet>
+            <title>ConquError | Course</title>
+            <meta name="description" content="ConquError Course page" />
+            </Helmet>
+        </div>
+        <Navbar/>
+
+      {/* Section for Course List*/}
+        <section className="features section bg-light mt-5">
+          <Container fluid="md" style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center"
+        }}>
+            <Row>
+            <Col className="text-center text-secondary">
+              <div className="">
+                  <h1 className="text-center text-secondary fw-bold">Welcome {profile.Name || ''} to the Courses Section</h1>
+                  <h4 className="text-center text-secondary"> Experience new and better way to learn programming</h4>
+                </div>
+            </Col>
+
+                          <p className="mt-4 mb-5 text-center">
+                                    ConquError offers various courses which cater the needs of IT and non-IT related professionals, 
+                                    and as well as students. In this lessons, you can learn and understand the very basic structures and fundamentals of 
+                                    computer programming, from concepts, methods, functions, and many more.</p>
+                      
+                                    <Card style={{ width: '18rem' }}>
+                                        <Card.Img variant="top" src="holder.js/100px180" />
+                                        <Card.Body>
+                                          <Card.Title>Card Title</Card.Title>
+                                          <Card.Text>
+                                            Some quick example text to build on the card title and make up the bulk of
+                                            the card's content.
+                                          </Card.Text>
+                                          
+                                        </Card.Body>
+                                    </Card>
+            </Row>  
+          </Container>
+        </section>
+
+      <a href="#top" className="scroll-top">
+        <i className="fa fa-chevron-up"></i>
+      </a>
+
+   
+    </>
+    )
+}
+
+export default Course

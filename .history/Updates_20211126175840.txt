@@ -1,0 +1,84 @@
+--November, 5, 2021 (IROG)
+
+
+--Forum (80%) done, bug fixes and slight adjustments nalang
+
+--Cleanup ng mga use state
+
+--fixing a few bugs on lessons and profile
+
+--indexing
+
+
+
+
+*notes
+
+try natin ihiwalay modals para clean tingnan ung mga files para mas madali intindihin nila
+
+may binago ako sa lahat, wag i merge files nito. i lapat mo nalang dito mga ginawa mo para hindi magulo yung mga nilagay ko
+
+
+
+--November, 8, 2021 (ARLLAN)
+
+--Login - Register -Forgot Password align center ReCaptcha 
+--Thread Redesign Form 
+--Footer Design change
+
+
+--November, 13-14, 2016 (ARLLAN)
+-- inayos ko na din /error page
+-- inayos ko na sa course at lessons, nag lagay na  din ako ng  course.courseoverview na text sa firebase
+-- tapos  pa try ulit ako nong register kasi ang nag show sa profile.js na occupation at institution ay 1 & 2
+-- tapos pa remove na din ako nong isang field ng institution sa Register.js tsaka  pa auto clear na din pala text field 
+-- thread okay na, na adjust ko na layout 
+-- na add ko na Certificate.js 3000/certificate
+-- code sa Basic Programming Structures
+
+
+--November 15 2021 Irog
+
+-- tapos  pa try ulit ako nong register kasi ang nag show sa profile.js na occupation at institution ay 1 & 2 (DONE)
+-- tapos pa remove na din ako nong isang field ng institution sa Register.js tsaka  pa auto clear na din pala text field  (DONE)
+-- code sa Basic Programming Structures (DONE)
+
+--November 23 2021 Arllan
+
+>>UI
+-- All Pages Centered and Align-Items
+-- Create new Page for Lessons (Lessons.js) Content is courses of Programming Concepts and Programming Structures
+-- Course.js contents change to the available content of the website. (Programming, Computing)
+-- Profile.js Redesign and add card for level and discription. (Programming, Computing)
+-- Then I hide  the options button for  change of password and edit profile, feedback, and upload. (Programming, Computing)
+-- Then I add the difficulty level number inthe lessons
+
+
+>>Bugs
+-- Get Started Button in  Lessons.js Not Functioning (Open)
+-- Register.js filter input data from the user.
+-- Redirect to the login page after register.
+
+--November 26-2021 Irog
+
+>>courses  
+inayos ko na yung sa jdoodle tapos nilagyan ko ng back button ung lessons content
+
+>>register
+lahat ng alert inalis ko na nilipat ko na sa baba ng register warning
+may checker na kung nag agree o hindi sa terms and agreement ung user
+nagana na yung others
+hindi na nalampas sa araw ngayon ung birthday
+naglagay nako ng gender at address
+okay na ung sa pang detect ng String
+
+>>login
+inalis ko na alert popup
+
+>>profile
+naglagay ng discord widget kahanay nung upload, change pass etc
+nilagyan na ng box ung para sa gender at address
+konting tweaks sa design para mas malinis at hindi redundant
+
+
+-- November, 26, 2
