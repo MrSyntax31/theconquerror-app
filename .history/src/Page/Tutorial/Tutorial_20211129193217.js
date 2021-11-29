@@ -144,11 +144,13 @@ class Tutorial extends Component {
                                             <Tab eventKey="home" title="Home">
                                                 <Row>
                                                     <Col  className="text-center">
-                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/162108690_121301806677028_8488807075884298821_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXydTM3EZ07XqXpezsDpNyw2d9yKe4opDDZ33Ip7iikJ4Mb5hSfrbJs4divK0bsoW4pLl_zqUldxKd-fXV-F1K&_nc_ohc=Deflbtpo54QAX8UoF5R&_nc_ht=scontent.fmnl13-2.fna&oh=8a34d0b958665e1297e6c9b006a9a9e7&oe=61CBC2F9" />
-                                                            <div className="text-center">
-                                                                <p><strong>Kuya Dev</strong></p>
-                                                                <p>Ako si Rem, ang inyong Kuya Dev.</p>
-                                                            </div>
+
+                                                            <Card.Body className="text-center ">
+                                                                    <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/162108690_121301806677028_8488807075884298821_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXydTM3EZ07XqXpezsDpNyw2d9yKe4opDDZ33Ip7iikJ4Mb5hSfrbJs4divK0bsoW4pLl_zqUldxKd-fXV-F1K&_nc_ohc=Deflbtpo54QAX8UoF5R&_nc_ht=scontent.fmnl13-2.fna&oh=8a34d0b958665e1297e6c9b006a9a9e7&oe=61CBC2F9" />
+                                                                <Card.Title><strong>Kuya Dev</strong></Card.Title>
+                                                                <Card.Text>Ako si Rem, ang inyong Kuya Dev.</Card.Text>
+                                                            </Card.Body>
+                                                        
                                                     </Col>
                                                     
                                                     <Col xs={12} md={8}>

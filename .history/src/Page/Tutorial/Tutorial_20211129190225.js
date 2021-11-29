@@ -135,43 +135,16 @@ class Tutorial extends Component {
                                                             </Card>            
                                                         </Col>
                                     </Row>
-                                </Container>
 
-                                {/* Kuya Dev */}
-                                <Container className="mt-5" fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                                    <Card>
-                                        <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
-                                            <Tab eventKey="home" title="Home">
-                                                <Row>
-                                                    <Col  className="text-center">
-                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/162108690_121301806677028_8488807075884298821_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXydTM3EZ07XqXpezsDpNyw2d9yKe4opDDZ33Ip7iikJ4Mb5hSfrbJs4divK0bsoW4pLl_zqUldxKd-fXV-F1K&_nc_ohc=Deflbtpo54QAX8UoF5R&_nc_ht=scontent.fmnl13-2.fna&oh=8a34d0b958665e1297e6c9b006a9a9e7&oe=61CBC2F9" />
-                                                            <div className="text-center">
-                                                                <p><strong>Kuya Dev</strong></p>
-                                                                <p>Ako si Rem, ang inyong Kuya Dev.</p>
-                                                            </div>
-                                                    </Col>
-                                                    
-                                                    <Col xs={12} md={8}>
-                                                        <p className="mt-2 text-justify">
-                                                        <strong>Rem Lampa</strong> is Kuya Dev. He is a podcaster, web developer, speaker, and tech community leader.
-                                                        <br/>
-                                                        Formerly an electrical engineer, he is currently a Senior JS Engineer at Prosple, specialized in ReactJS and ExpressJS.
-                                                        <br/>
-                                                        He is also a co-founder and community manager of freeCodeCamp.Manila, and part of the core team of ReactJS Philippines.
-                                                        <br/>
-                                                        * <i className="fw-bold">"Kuya"</i> means "older brother" in Filipino, often used as a term of endearment.
-                                                        </p>
-                                                        
-                                                    </Col>
-                                                </Row>
-                                            </Tab>
-
-                                            <Tab eventKey="profile" title="Profile">
-                                                days
-                                            </Tab>
-                                        </Tabs>
-                                    </Card>
                                 </Container>
+                                    <Tabs defaultActiveKey="Home" id="uncontrolled-tab-example" className="mb-3">
+                                        <Tab eventKey="home" title="Home">
+                                            d
+                                        </Tab>
+                                        <Tab eventKey="profile" title="Profile">
+                                            days
+                                        </Tab>
+                                    </Tabs>
                             </section>
 
                           
