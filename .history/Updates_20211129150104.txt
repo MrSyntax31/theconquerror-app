@@ -89,10 +89,5 @@ Redesign the current widget for registration form
 >>Lessons.js
 Add Tabs options for program overview and mechanics
 Insert the content of the tabs in the Firebase Database for
-Explore button in the Lessons.js is change to overflow components to hide the content of the tabs
-Mechanics a composition tool to assist the user in the path of the program.
-
->>Lessonsconetent.js
-Introduction Video Description(ongoing)
-Adjust side navigation with tooltip and popover 
+Explore button in the Lessons.js is change to overflow components to hide the content
 
