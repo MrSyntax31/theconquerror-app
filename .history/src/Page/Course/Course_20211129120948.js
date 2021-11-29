@@ -62,7 +62,7 @@ const renderTooltip = (props) => (
                                   <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                       <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                                 <div style={{textAlign:"center"}}>
-                                                  <Card.Img variant="top" className="mt-5 w-50" src="https://img.icons8.com/color/144/000000/informatics.png" />
+                                                  <Card.Img variant="top" className="mt-5 w-50" src="https://img.icons8.com/color/50/000000/informatics.png" />
                                                 </div>           
                                                   <Card.Body>
                                                     <Card.Title>Computing</Card.Title>

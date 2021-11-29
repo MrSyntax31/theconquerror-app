@@ -171,12 +171,10 @@ const Lessons = () => {
 
                     <Tab eventKey="home" title="Mechanics">
 
-                    <Container>
+                      <Container>
                       <h1 className="fw-bold text-primary mb-2">Learn to Code and Conquer your error!</h1>
+
                       <h3 className="text-justify fw-bold">What’s your goal?</h3>
-                    </Container>
-                    
-                      <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                         <Row>
                           <Col>
                             <Card style={{ width: '18rem', marginTop: '2rem' }} className="container mb-4">
@@ -193,6 +191,7 @@ const Lessons = () => {
                             <Card style={{ width: '18rem', marginTop: '2rem' }} className="container mb-4">
                                   <div style={{textAlign:"center"}}>
                                     <Card.Img variant="top" className="mt-2 w-50" src="https://cdn-icons-png.flaticon.com/512/1535/1535019.png" />
+                                  
                                   </div>
                                 <Card.Body>
                                   <Card.Title><strong>Gain Skill </strong></Card.Title>
@@ -230,7 +229,7 @@ const Lessons = () => {
                               
                               </div>
                               <p>Begin your journey by exploring the basic fundamentals of computer programming course.</p>
-                              <ul className="content-skills">
+                              <ul class="content-skills">
                               <li>Variables</li>
                               <li>Conditions</li>
                               <li>Introductions</li>

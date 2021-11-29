@@ -47,7 +47,8 @@ const renderTooltip = (props) => (
                                 <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                       <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                           <div style={{textAlign:"center"}}>
-                                            <Card.Img variant="top" className="mt-5 w-50" src="https://img.icons8.com/color/144/000000/outline.png" />
+                                            <Card.Img variant="top" className="mt-5 w-50" src="https://img.icons8.com/color/50/000000/outline.png" />
+                                            
                                           </div>
                                         <Card.Body>
                                           <Card.Title>Programming</Card.Title>
@@ -62,7 +63,7 @@ const renderTooltip = (props) => (
                                   <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                       <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                                 <div style={{textAlign:"center"}}>
-                                                  <Card.Img variant="top" className="mt-5 w-50" src="https://img.icons8.com/color/144/000000/informatics.png" />
+                                                  <Card.Img variant="top" className="mt-5 w-50" src="https://cdn-icons.flaticon.com/png/512/3131/premium/3131620.png?token=exp=1637653582~hmac=6b8ffa9485742e88483da2575aecea59" />
                                                 </div>           
                                                   <Card.Body>
                                                     <Card.Title>Computing</Card.Title>

@@ -172,10 +172,8 @@ const Lessons = () => {
                     <Tab eventKey="home" title="Mechanics">
 
                     <Container>
-                      <h1 className="fw-bold text-primary mb-2">Learn to Code and Conquer your error!</h1>
-                      <h3 className="text-justify fw-bold">What’s your goal?</h3>
+                      
                     </Container>
-                    
                       <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                         <Row>
                           <Col>
