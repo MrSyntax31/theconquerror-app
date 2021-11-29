@@ -120,19 +120,6 @@ class Tutorial extends Component {
                                                                                 </Card.Body>
                                                             </Card>            
                                                         </Col>
-
-                                                        <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                                            <Card style={{ width: '18rem', marginTop: '2rem' }}>
-                                                                        <div style={{textAlign:"center"}}>
-                                                                        <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/244521475_188997610021976_6826356423632131771_n.png?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHY6X33_1c8qR3rGB9K-xajuqGhOczd4MG6oaE5zN3gwVfvPdHaakhViWXQISdNPt2yq_9TelEUGbmYGFUsZ-VG&_nc_ohc=TD0fcZsq4BUAX-1uX-1&tn=x6lGwkBQsiZD79dw&_nc_ht=scontent.fmnl13-2.fna&oh=a8c3aa4bdf255ab445d8260f91a05881&oe=61A92910" />
-                                                                        </div>           
-                                                                        <Card.Body>
-                                                                            <Card.Title>Computing</Card.Title>
-                                                                            <Card.Text>Beginner Friendly, <strong>5</strong> Lessons</Card.Text>
-                                                                                
-                                                                                </Card.Body>
-                                                            </Card>            
-                                                        </Col>
                                     </Row>  
                                 </Container>
                             </section>
