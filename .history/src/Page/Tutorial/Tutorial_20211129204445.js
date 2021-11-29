@@ -136,8 +136,7 @@ class Tutorial extends Component {
                                                         </Col>
                                     </Row>
                                 </Container>
-
-                                {/* Kuya Dev */}
+                                
                                 <Container>
                                         <Card className="mt-5">
                                             <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
@@ -176,7 +175,7 @@ class Tutorial extends Component {
                                                     <Container>
                                                         <Card>
                                                             <Card.Body>
-                                                                
+                                                                <Card.Title>Videos</Card.Title>
                                                                     <div
                                                             className="video"
                                                             style={{
@@ -208,9 +207,12 @@ class Tutorial extends Component {
                                 </Container>
                                 
 
+                                {/* Kuya Dev */}
+
+
                                 {/* Josiahdoestech */}
-                                <Container>
-                                        <Card className="mt-5">
+                                <Container className="mt-5" fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                                    <Card>
                                         <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="home" title="Home">
                                                 <Row>
@@ -242,17 +244,17 @@ class Tutorial extends Component {
                                                 days
                                             </Tab>
                                         </Tabs>
-                                        </Card>   
+                                    </Card>
                                 </Container>
 
                                 {/* SDPTSolutions */}
-                                <Container>
-                                        <Card className="mt-5">
+                                <Container className="mt-5" fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                                    <Card>
                                         <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="home" title="Home">
                                                 <Row>
                                                     <Col  className="text-center m-3">
-                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/1a6f7601a64720099b1b96db9a2fb697~c5_720x720.jpeg?x-expires=1638273600&x-signature=f%2FFv3EVOkbeuE%2FjQxmbf0N0TgHc%3D" />
+                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/67075956_367757150550342_7302374547087425536_n.png?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_eui2=AeGIy2M7vE3kr9wePBdcEsF6dm7StMdbxvl2btK0x1vG-VeiW0kfQVzJU0uBaipps8B3_0AJUh1c2cEALcyJnypU&_nc_ohc=cRkkFu__j3gAX80EN_y&_nc_ht=scontent.fmnl13-2.fna&oh=358a487954c95254a20d58e9ff624248&oe=61CC50BD" />
                                                             <div className="text-center">
                                                                 <p><strong>Josiahdoestech</strong></p>
                                                                 <p>Tech reviews, Tech gadgets, Sharing my knowledge about me and what I love doing, Also Gaming.</p>
@@ -279,7 +281,7 @@ class Tutorial extends Component {
                                                 days
                                             </Tab>
                                         </Tabs>
-                                        </Card>   
+                                    </Card>
                                 </Container>
 
 

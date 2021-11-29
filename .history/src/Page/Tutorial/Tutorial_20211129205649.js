@@ -176,7 +176,7 @@ class Tutorial extends Component {
                                                     <Container>
                                                         <Card>
                                                             <Card.Body>
-                                                                
+                                                                <Card.Title>Videos</Card.Title>
                                                                     <div
                                                             className="video"
                                                             style={{

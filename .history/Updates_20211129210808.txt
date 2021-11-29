@@ -95,4 +95,4 @@ Mechanics a composition tool to assist the user in the path of the program.
 >>Lessonsconetent.js
 Introduction Video Description(ongoing)
 Adjust side navigation with tooltip and popover 
-Redesign Tutorial page and add Content form
+Redesign Tutorial page and add 
