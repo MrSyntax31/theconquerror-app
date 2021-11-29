@@ -30,7 +30,13 @@ class Tutorial extends Component {
                                     justifyContent: "center",
                                     alignItems: "center"
                                 }}>
-  
+                            <link href='https://fonts.googleapis.com/css?family=Exo:400,900' rel='stylesheet' type='text/css'  >
+                            <div class="wrapper">
+                            <div class="message">
+                                <h1>Responsive background</h1>    
+                                <p>With thanks to http://sixrevisions.com/css/responsive-background-image/ and 500px</p>
+                            </div>
+                            </div>
                                 <section className="about_area section_gap">
                                         <div className="container">
                                             <div className="row justify-content-start align-items-center">

@@ -65,8 +65,15 @@ class Tutorial extends Component {
                                 <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                                     <Row>
                                         <div className="">
-                                            <h1 className="text-center text-primary fw-bold">Some featured Video Tutorial</h1>
+                                            <h1 className="text-center text-secondary fw-bold">Welcome to the Courses Section</h1>
+                                            <h4 className="text-center text-secondary"> Experience new and better ways to learn computer programming</h4>
                                         </div>
+                                                <p className="mt-4 mb-5 text-center">
+                                                            ConquError offers various courses which cater the needs of IT and non-IT related professionals, 
+                                                            and as well as students. In this lessons, you can learn and understand the <strong>basic structures</strong>  and <strong>fundamentals of 
+                                                            computer programming</strong>, from concepts, methods, functions, and many more.
+                                                </p>
+                                            
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                                                 <div style={{textAlign:"center"}}>
@@ -109,7 +116,7 @@ class Tutorial extends Component {
                                                         </Col>
                                     </Row>  
                                 </Container>
-                            </section>
+                                </section>
 
                           
             </section>            

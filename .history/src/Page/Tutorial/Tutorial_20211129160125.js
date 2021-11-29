@@ -64,9 +64,12 @@ class Tutorial extends Component {
                             <section className="features section bg-light mt-5">
                                 <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                                     <Row>
-                                        <div className="">
-                                            <h1 className="text-center text-primary fw-bold">Some featured Video Tutorial</h1>
-                                        </div>
+                                                <p className="mt-4 mb-5 text-center">
+                                                            ConquError offers various courses which cater the needs of IT and non-IT related professionals, 
+                                                            and as well as students. In this lessons, you can learn and understand the <strong>basic structures</strong>  and <strong>fundamentals of 
+                                                            computer programming</strong>, from concepts, methods, functions, and many more.
+                                                </p>
+                                            
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                                                 <div style={{textAlign:"center"}}>

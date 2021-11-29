@@ -63,11 +63,7 @@ class Tutorial extends Component {
 
                             <section className="features section bg-light mt-5">
                                 <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                                    <Row>
-                                        <div className="">
-                                            <h1 className="text-center text-primary fw-bold">Some featured Video Tutorial</h1>
-                                        </div>
-                                                        <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                    <Row><Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                                                 <div style={{textAlign:"center"}}>
                                                                     <Card.Img variant="top" className="mt-5 w-50" src="https://img.icons8.com/color/144/000000/outline.png" />

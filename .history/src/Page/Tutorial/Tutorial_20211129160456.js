@@ -65,7 +65,7 @@ class Tutorial extends Component {
                                 <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                                     <Row>
                                         <div className="">
-                                            <h1 className="text-center text-primary fw-bold">Some featured Video Tutorial</h1>
+                                            <h1 className="text-center text-info fw-bold">Some featured Video Tutorial</h1>
                                         </div>
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', marginTop: '2rem' }}>

@@ -5,7 +5,7 @@
 .box {
 	position: fixed;
 	top: 0;
-	transform: rotate(80deg);
+	transform: rotate(0deg);
 	left: 0;
 }
 
