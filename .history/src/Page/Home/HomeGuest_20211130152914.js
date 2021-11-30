@@ -64,57 +64,57 @@ const HomeUser = () => {
   
             {/* Section for Image Carousel*/}
             <section className="">
-               <Carousel fade={true} pause={false} className="">
-                           <Carousel.Item interval={2000}>
-                           <img
-                           className="d-block w-100"
-                           src={image1}
-                           alt="First slide"
-                           />
-                           <Carousel.Caption>
-                           </Carousel.Caption>
-                           </Carousel.Item>
+            <Carousel fade={true} pause={false} className="">
+                        <Carousel.Item interval={2000}>
+                        <img
+                        className="d-block w-100"
+                        src={image1}
+                        alt="First slide"
+                        />
+                        <Carousel.Caption>
+                        </Carousel.Caption>
+                        </Carousel.Item>
 
-                           <Carousel.Item interval={2000} className="">
-                           <img
-                           className="d-block w-100  "
-                           src={image2}
-                           alt="Third slide"
-                           />
-                           <Carousel.Caption>
-                           </Carousel.Caption>
-                           </Carousel.Item>
+                        <Carousel.Item interval={2000} className="">
+                        <img
+                        className="d-block w-100  "
+                        src={image2}
+                        alt="Third slide"
+                        />
+                        <Carousel.Caption>
+                        </Carousel.Caption>
+                        </Carousel.Item>
 
-                           <Carousel.Item interval={2000} className="">
-                           <img
-                           className="d-block w-100 "
-                           src={image3}
-                           alt="Third slide"
-                           />
-                           <Carousel.Caption>
-                           </Carousel.Caption>
-                           </Carousel.Item>
+                        <Carousel.Item interval={2000} className="">
+                        <img
+                        className="d-block w-100 "
+                        src={image3}
+                        alt="Third slide"
+                        />
+                        <Carousel.Caption>
+                        </Carousel.Caption>
+                        </Carousel.Item>
 
-                           <Carousel.Item interval={2000} className="">
-                           <img
-                           className="d-block w-100 "
-                           src={image4}
-                           alt="Third slide"
-                           />
-                           <Carousel.Caption>
-                           </Carousel.Caption>
-                           </Carousel.Item>
+                        <Carousel.Item interval={2000} className="">
+                        <img
+                        className="d-block w-100 "
+                        src={image4}
+                        alt="Third slide"
+                        />
+                        <Carousel.Caption>
+                        </Carousel.Caption>
+                        </Carousel.Item>
 
-                           <Carousel.Item interval={2000} className="">
-                           <img
-                           className="d-block w-100 "
-                           src={image5}
-                           alt="Third slide"
-                           />
-                           <Carousel.Caption>
-                           </Carousel.Caption>
-                           </Carousel.Item>
-               </Carousel>
+                        <Carousel.Item interval={2000} className="">
+                        <img
+                        className="d-block w-100 "
+                        src={image5}
+                        alt="Third slide"
+                        />
+                        <Carousel.Caption>
+                        </Carousel.Caption>
+                        </Carousel.Item>
+            </Carousel>
             </section>   
 
             {/* Section for About Us*/}
@@ -572,8 +572,7 @@ const HomeUser = () => {
                   </Row>
               </Container>
             </section>
-      </div>
-
+</div>
    <a href="#top" className="scroll-top">
       <i className="fa fa-chevron-up"></i>
    </a>

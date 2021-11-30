@@ -572,7 +572,7 @@ const HomeUser = () => {
                   </Row>
               </Container>
             </section>
-      </div>
+</div>
 
    <a href="#top" className="scroll-top">
       <i className="fa fa-chevron-up"></i>
