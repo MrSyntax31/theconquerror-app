@@ -314,12 +314,12 @@ const Profile = () => {
                                             <Modal.Title>Change Password</Modal.Title>
                                           </Modal.Header>
                                           <Modal.Body>
-                                            <div className=""> Current Password: <br></br>
-                                                <input value={currentPass || ''} onChange={e => setPass1(e.target.value)}  type="password" className="form-control"></input><br></br>
+                                            <div className="form-control"> Current Password: <br></br>
+                                                <input value={currentPass || ''} onChange={e => setPass1(e.target.value)}  type="password" className="border border-secondary"></input><br></br>
                                                 New Password: <br></br>
-                                                <input value={newPass1|| ''} onChange={e => setPass2(e.target.value)}  type="password" className="form-control"></input><br></br>
+                                                <input value={newPass1|| ''} onChange={e => setPass2(e.target.value)}  type="password"></input><br></br>
                                                 Confirm New Password: <br></br>
-                                                <input value={newPass2 || ''} onChange={e => setPass3(e.target.value)}  type="password" className="form-control"></input><br></br>
+                                                <input value={newPass2 || ''} onChange={e => setPass3(e.target.value)}  type="password"></input><br></br>
                                             </div>
                                           </Modal.Body>
                                           <Modal.Footer>

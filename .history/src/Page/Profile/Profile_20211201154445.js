@@ -319,7 +319,7 @@ const Profile = () => {
                                                 New Password: <br></br>
                                                 <input value={newPass1|| ''} onChange={e => setPass2(e.target.value)}  type="password" className="form-control"></input><br></br>
                                                 Confirm New Password: <br></br>
-                                                <input value={newPass2 || ''} onChange={e => setPass3(e.target.value)}  type="password" className="form-control"></input><br></br>
+                                                <input value={newPass2 || ''} onChange={e => setPass3(e.target.value)}  type="password"></input><br></br>
                                             </div>
                                           </Modal.Body>
                                           <Modal.Footer>
