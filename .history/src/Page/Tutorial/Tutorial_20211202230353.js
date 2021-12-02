@@ -320,6 +320,7 @@ class Tutorial extends Component {
                                                         <a href="https://www.facebook.com/francojohncdev" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/facebook-new.png"  alt="facebook" /></a>
                                                         <a href="https://uniregistry.com/market/domain/startidea.co?landerid=startidea61a8be2a5d4047.07543080" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/domain.png"  alt="web"/></a>
                                                         <a href="https://www.youtube.com/c/JohnCarloFranco/playlists" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/youtube-play.png"  alt="youtube"/></a>
+                                                        
                                                     </Col>
                                                 </Row>
                                             </Tab>
