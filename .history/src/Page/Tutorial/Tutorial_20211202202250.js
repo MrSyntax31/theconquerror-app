@@ -151,9 +151,9 @@ class Tutorial extends Component {
                                                             <label className="fw-bold mb-2">Follow and Subscribe to learn more!</label>
                                                             <br/>
                                                             <h5>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Career Hack</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Podcast</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> IT Tips</Badge>
+                                                            <Badge bg="light" text="dark"><BsIcons.BsTags/> Career Hack</Badge>
+                                                            <Badge bg="light" text="dark"><BsIcons.BsTags/> Podcast</Badge>
+                                                            <Badge bg="liht" text="dark"><BsIcons.BsTags/> IT Tips</Badge>
                                                             <Badge bg="" text="dark"><BsIcons.BsTags/> GraphQL</Badge>
                                                             </h5>
                                                             

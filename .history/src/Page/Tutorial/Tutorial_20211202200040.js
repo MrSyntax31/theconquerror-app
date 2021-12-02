@@ -1,7 +1,6 @@
 import React, { Component  } from "react";
 import { Helmet } from "react-helmet";
-import { Row, Container, Col, Card, Tab, Tabs, Badge} from 'react-bootstrap';
-import * as BsIcons from 'react-icons/bs';
+import { Row, Container, Col, Card, Tab, Tabs } from 'react-bootstrap';
 import Navbar from '../../Components/Navbar/Navbar';
 import './frame.css'
 
@@ -148,14 +147,8 @@ class Tutorial extends Component {
                                                             <br/>
                                                             * <i className="fw-bold">"Kuya"</i> means "older brother" in Filipino, often used as a term of endearment.
                                                             </p>
-                                                            <label className="fw-bold mb-2">Follow and Subscribe to learn more!</label>
+                                                            <label className="fw-bold">Follow and Subscribe to learn more!</label>
                                                             <br/>
-                                                            <h5>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Career Hack</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Podcast</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> IT Tips</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> GraphQL</Badge>
-                                                            </h5>
                                                             
                                                             <a href="https://www.facebook.com/Rem.Lampa" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/facebook-new.png"  alt="facebook" /></a>
                                                             <a href="https://twitter.com/RemLampa?fbclid=IwAR2vIoBPC5VwfDY7mOQIpmA3thzEcxh7jV0gMMDtakCCjEfMTuV5Ogtg1Ps" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/twitter--v2.png"  alt="twitter"/></a>
@@ -223,14 +216,8 @@ class Tutorial extends Component {
                                                             <br/>We Started with a Goal of Teaching Filipinos Computer Programming in the most convenient way possible.
                                                                 Starting On May 29, 2019 Using our current knowledge and equipment we created video tutorials on Youtube using Tagalog Language.
                                                         </p>
-                                                        <label className="fw-bold mb-2">Follow and Subscribe to learn more!</label>
+                                                        <label className="fw-bold">Follow and Subscribe to learn more!</label>
                                                         <br/>
-                                                            <h5>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> IT Tips</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> C++ Tutorial</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Programming</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Basic Web</Badge>
-                                                            </h5>
                                                         <a href="https://www.facebook.com/SDPTSolutionsOfficial/" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/facebook-new.png"  alt="facebook" /></a>
                                                         <a href="https://sdptsolutionswebsite.web.app/" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/domain.png"  alt="web"/></a>
                                                         <a href="https://www.youtube.com/c/SDPTSolutions/featured" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/youtube-play.png"  alt="youtube"/></a>

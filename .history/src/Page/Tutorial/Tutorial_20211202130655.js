@@ -1,7 +1,6 @@
 import React, { Component  } from "react";
 import { Helmet } from "react-helmet";
-import { Row, Container, Col, Card, Tab, Tabs, Badge} from 'react-bootstrap';
-import * as BsIcons from 'react-icons/bs';
+import { Row, Container, Col, Card, Tab, Tabs } from 'react-bootstrap';
 import Navbar from '../../Components/Navbar/Navbar';
 import './frame.css'
 
@@ -51,7 +50,7 @@ class Tutorial extends Component {
                                                             It is easy to study and learn if someone is willing to help you. People that are willing to help you are called tutors. In this tutorial, you will learn how to become an independent leaner  and understand how to conquer your own problems.
                                                         </p>
                                                         <p>
-                                                            There's a lot of tutorials on the internet, but they are not meant for you. This tutorial is designed to help you understand how to become a better learner.
+                                                            There's a lot of tutorials on the internet, but they are not very good. This tutorial is designed to help you understand how to become a better learner.
                                                             It is designed to help you understand how to become a better learner. The following tutorial video shows tips, guides, insight and strategies to help you become a better learner.
                                                         </p>
                                                     </div>
@@ -101,23 +100,23 @@ class Tutorial extends Component {
                                                         </Col>
 
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                                            <Card style={{ width: '18rem', marginTop: '2rem' }}>
-                                                                        <div style={{textAlign:"center"}}>
-                                                                        <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/244521475_188997610021976_6826356423632131771_n.png?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHY6X33_1c8qR3rGB9K-xajuqGhOczd4MG6oaE5zN3gwVfvPdHaakhViWXQISdNPt2yq_9TelEUGbmYGFUsZ-VG&_nc_ohc=TD0fcZsq4BUAX-1uX-1&tn=x6lGwkBQsiZD79dw&_nc_ht=scontent.fmnl13-2.fna&oh=a8c3aa4bdf255ab445d8260f91a05881&oe=61A92910" />
-                                                                        </div>           
-                                                                        <Card.Body>
-                                                                            <Card.Title>Josiahdoestech</Card.Title>    
-                                                                        </Card.Body>
-                                                            </Card>            
-                                                        </Col>
-
-                                                        <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', height:"15rem", marginTop: '2rem' }}>
                                                                         <div style={{textAlign:"center"}}>
                                                                         <Card.Img variant="top" className="mt-5 w-50 rounded mb-3" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/149870072_4438803116146821_814614453010169425_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF7kx9PgpLqkIGIHWFawVBjeeLqseLHov554uqx4sei_hqzZSt_ndDnrRlWKaRH4bXcCit_bVVCti5grm96mMQ-&_nc_ohc=vqBDbHbLINoAX_U1AAY&_nc_ht=scontent.fmnl13-2.fna&oh=ec0d5505a0c0e7c2d6effe778f78bd15&oe=61CB7CFA" />
                                                                         </div>           
                                                                         <Card.Body>
                                                                             <Card.Title className="mt-4">John Carlo Franco</Card.Title>
+                                                                        </Card.Body>
+                                                            </Card>            
+                                                        </Col>
+
+                                                        <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                                            <Card style={{ width: '18rem', marginTop: '2rem' }}>
+                                                                        <div style={{textAlign:"center"}}>
+                                                                        <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/244521475_188997610021976_6826356423632131771_n.png?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHY6X33_1c8qR3rGB9K-xajuqGhOczd4MG6oaE5zN3gwVfvPdHaakhViWXQISdNPt2yq_9TelEUGbmYGFUsZ-VG&_nc_ohc=TD0fcZsq4BUAX-1uX-1&tn=x6lGwkBQsiZD79dw&_nc_ht=scontent.fmnl13-2.fna&oh=a8c3aa4bdf255ab445d8260f91a05881&oe=61A92910" />
+                                                                        </div>           
+                                                                        <Card.Body>
+                                                                            <Card.Title>Josiahdoestech</Card.Title>    
                                                                         </Card.Body>
                                                             </Card>            
                                                         </Col>
@@ -148,15 +147,8 @@ class Tutorial extends Component {
                                                             <br/>
                                                             * <i className="fw-bold">"Kuya"</i> means "older brother" in Filipino, often used as a term of endearment.
                                                             </p>
-                                                            <label className="fw-bold mb-2">Follow and Subscribe to learn more!</label>
+                                                            <label className="fw-bold">Follow and Subscribe to learn more!</label>
                                                             <br/>
-                                                            <h5>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Career Hack</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Podcast</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> IT Tips</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> GraphQL</Badge>
-                                                            </h5>
-                                                            
                                                             <a href="https://www.facebook.com/Rem.Lampa" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/facebook-new.png"  alt="facebook" /></a>
                                                             <a href="https://twitter.com/RemLampa?fbclid=IwAR2vIoBPC5VwfDY7mOQIpmA3thzEcxh7jV0gMMDtakCCjEfMTuV5Ogtg1Ps" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/twitter--v2.png"  alt="twitter"/></a>
                                                             <a href="https://www.youtube.com/RemLampa" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/youtube-play.png"  alt="youtube"/></a>
@@ -201,56 +193,14 @@ class Tutorial extends Component {
                                         </Card>   
                                 </Container>
                                 
-                                {/* SDPTSolutions */}
-                                <Container>
-                                        <Card className="mt-5">
-                                        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
-                                            <Tab eventKey="profile" title="Home">
-                                                <Row>
-                                                    <Col  className="text-center m-3">
-                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.6435-9/142506784_713464262646294_432244117709991327_n.png?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGeJIr6YAHBkJVN1REpNuyKfmbCiC-RHNd-ZsKIL5Ec1x0eIwb-6YsugASGlD0Lohs12fTmpjR57jQbyFmsg-Ec&_nc_ohc=K0v9hfTWhnwAX9bksAx&_nc_ht=scontent.fmnl13-1.fna&oh=e43eefff956661b3f23b3860b3a31284&oe=61C89275" />
-                                                            <div className="text-center">
-                                                                <p><strong>SDPT Solutions</strong></p>
-                                                                <p>Tech reviews, Tech gadgets, Sharing my knowledge about me and what I love doing, Also Gaming.</p>
-                                                            </div>
-                                                    </Col>
-                                                    
-                                                    <Col xs={12} md={8} className="container mb-5 m-3">
-                                                        <p className="mt-2 text-justify">
-                                                        <strong>SDPT Solutions</strong>, Is a small non-profit organization created by a Christian Couple that are creating Programming Tutorials for Filipinos to Watch. All of the knowledge you'll find here is solely from God.</p>
-                                                        <p className="mt-2 text-justify">
-                                                        <strong>How We Started</strong>
-                                                            <br/>We Started with a Goal of Teaching Filipinos Computer Programming in the most convenient way possible.
-                                                                Starting On May 29, 2019 Using our current knowledge and equipment we created video tutorials on Youtube using Tagalog Language.
-                                                        </p>
-                                                        <label className="fw-bold mb-2">Follow and Subscribe to learn more!</label>
-                                                        <br/>
-                                                            <h5>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> IT Tips</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> C++ Tutorial</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Programming</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Basic Web</Badge>
-                                                            </h5>
-                                                        <a href="https://www.facebook.com/SDPTSolutionsOfficial/" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/facebook-new.png"  alt="facebook" /></a>
-                                                        <a href="https://sdptsolutionswebsite.web.app/" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/domain.png"  alt="web"/></a>
-                                                        <a href="https://www.youtube.com/c/SDPTSolutions/featured" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/youtube-play.png"  alt="youtube"/></a>
-                                                        <a href="https://www.tiktok.com/@sdptsolutions?"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/tiktok.png"  alt="spotify"/></a>
-                                                    </Col>
-                                                </Row>
-                                            </Tab>
 
-                                            <Tab eventKey="video" title="Videos">
-                                                days
-                                            </Tab>
-                                        </Tabs>
-                                        </Card>   
-                                </Container>
+
 
                                 {/* Josiahdoestech */}
                                 <Container>
                                         <Card className="mt-5">
-                                        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
-                                            <Tab eventKey="profile" title="Profile">
+                                        <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
+                                            <Tab eventKey="home" title="Home">
                                                 <Row>
                                                     <Col  className="text-center m-3">
                                                                 <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/254989341_210506601204410_4824021128279678756_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeGaOAneZBO8BzK69vzpP0sKX2fq4l9JUC9fZ-riX0lQL34Z-rMrewMx1Wb0NGyXtleVdZjZErNtZvXumgw56Q06&_nc_ohc=PBJRx_lH5uMAX823eyL&_nc_ht=scontent.fmnl13-2.fna&oh=27e74ab9c0c5a9436c6bd1e73bc17cfa&oe=61ADCDEF" />
@@ -276,21 +226,21 @@ class Tutorial extends Component {
                                                 </Row>
                                             </Tab>
 
-                                            <Tab eventKey="video" title="Videos">
+                                            <Tab eventKey="profile" title="Profile">
                                                 days
                                             </Tab>
                                         </Tabs>
                                         </Card>   
                                 </Container>
 
-                                {/* John Carlo Franco */}
+                                {/* SDPTSolutions */}
                                 <Container>
                                         <Card className="mt-5">
-                                        <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
-                                            <Tab eventKey="profile" title="Profile">
+                                        <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
+                                            <Tab eventKey="home" title="Home">
                                                 <Row>
                                                     <Col  className="text-center m-3">
-                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/254989341_210506601204410_4824021128279678756_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=8bfeb9&_nc_eui2=AeGaOAneZBO8BzK69vzpP0sKX2fq4l9JUC9fZ-riX0lQL34Z-rMrewMx1Wb0NGyXtleVdZjZErNtZvXumgw56Q06&_nc_ohc=PBJRx_lH5uMAX823eyL&_nc_ht=scontent.fmnl13-2.fna&oh=27e74ab9c0c5a9436c6bd1e73bc17cfa&oe=61ADCDEF" />
+                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/1a6f7601a64720099b1b96db9a2fb697~c5_720x720.jpeg?x-expires=1638273600&x-signature=f%2FFv3EVOkbeuE%2FjQxmbf0N0TgHc%3D" />
                                                             <div className="text-center">
                                                                 <p><strong>Josiahdoestech</strong></p>
                                                                 <p>Tech reviews, Tech gadgets, Sharing my knowledge about me and what I love doing, Also Gaming.</p>
@@ -299,7 +249,7 @@ class Tutorial extends Component {
                                                     
                                                     <Col xs={12} md={8} className="container mb-5 m-3">
                                                         <p className="mt-2 text-justify">
-                                                        <strong>Josiah Mark Castor</strong>, Hello everyone Josiah here! I am a BSIT student from Technological Institute of the Philippines who loves to create content about Tech, gadgets, Programming, Tips and hacks to help you in your computer needs!
+                                                        <strong>Josiah Mark Castor</strong>, Hello everyone Josiah here! I am a BSIT student who loves to create content about Tech, gadgets, Programming, Tips and hacks to help you in your computer needs!
 
                                                         If you wish to contact me and have a collaboration, please do not hesitate!</p>
                                                         <label className="fw-bold">Follow and Subscribe to learn more!</label>
@@ -313,7 +263,7 @@ class Tutorial extends Component {
                                                 </Row>
                                             </Tab>
 
-                                            <Tab eventKey="video" title="Videos">
+                                            <Tab eventKey="profile" title="Profile">
                                                 days
                                             </Tab>
                                         </Tabs>

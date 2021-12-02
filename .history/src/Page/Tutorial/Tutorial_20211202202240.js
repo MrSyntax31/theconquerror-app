@@ -151,10 +151,10 @@ class Tutorial extends Component {
                                                             <label className="fw-bold mb-2">Follow and Subscribe to learn more!</label>
                                                             <br/>
                                                             <h5>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Career Hack</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Podcast</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> IT Tips</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> GraphQL</Badge>
+                                                            <Badge bg="light" text="dark"><BsIcons.BsTags/> Career Hack</Badge>
+                                                            <Badge bg="light" text="dark"><BsIcons.BsTags/> Podcast</Badge>
+                                                            <Badge bg="light" text="dark"><BsIcons.BsTags/> IT Tips</Badge>
+                                                            <Badge bg="light" text="dark"><BsIcons.BsTags/> GraphQL</Badge>
                                                             </h5>
                                                             
                                                             <a href="https://www.facebook.com/Rem.Lampa" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/facebook-new.png"  alt="facebook" /></a>
@@ -228,8 +228,8 @@ class Tutorial extends Component {
                                                             <h5>
                                                             <Badge bg="" text="dark"><BsIcons.BsTags/> IT Tips</Badge>
                                                             <Badge bg="" text="dark"><BsIcons.BsTags/> C++ Tutorial</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Programming</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Basic Web</Badge>
+                                                            <Badge bg="light" text="dark"><BsIcons.BsTags/> Programming</Badge>
+                                                            <Badge bg="light" text="dark"><BsIcons.BsTags/> Basic Web</Badge>
                                                             </h5>
                                                         <a href="https://www.facebook.com/SDPTSolutionsOfficial/" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/facebook-new.png"  alt="facebook" /></a>
                                                         <a href="https://sdptsolutionswebsite.web.app/" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/domain.png"  alt="web"/></a>
