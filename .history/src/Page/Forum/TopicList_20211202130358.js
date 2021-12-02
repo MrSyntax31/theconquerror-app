@@ -301,8 +301,8 @@ const popover = (
                                 </Offcanvas.Header>
                                 <Offcanvas.Body>
                                 A tag is a term or label that associates your question with other, comparable queries. Using the appropriate tags makes it simpler for others to discover and answer your question.
-                                <br/><br/>
-                                Please note that tags are important for the forum to work properly!
+                                <br/>
+                                Please note that tags are important for
                            
                                   <div className="mt-3">
                                     <Button variant="primary" size="sm">
