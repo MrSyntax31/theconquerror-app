@@ -28,7 +28,7 @@ const Games = () => {
                   }}>
 
     <Row>
-    <h1 className="text-center text-primary fw-bold">Welcome to Games Page</h1>                                   
+    <h1 className="text-center text-primary fw-bold">Welcome to Tutorial Page</h1>                                   
                 <h4 className="text-center text-secondary"> Play to learn programming</h4>
     <Col>
     

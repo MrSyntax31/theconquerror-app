@@ -35,7 +35,7 @@ const renderTooltip = (props) => (
           <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
               <Row>
                   <div className="">
-                    <h1 className="text-center text-primary fw-bold">Welcome to the Courses Section</h1>
+                    <h1 className="text-center text-Primary fw-bold">Welcome to the Courses Section</h1>
                     <h4 className="text-center text-secondary"> Experience new and better ways to learn computer programming</h4>
                   </div>
                           <p className="mt-4 mb-5 text-center">

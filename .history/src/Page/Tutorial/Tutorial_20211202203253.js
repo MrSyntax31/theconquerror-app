@@ -306,15 +306,16 @@ class Tutorial extends Component {
                                                     
                                                     <Col xs={12} md={8} className="container mb-5 m-3">
                                                         <p className="mt-2 text-justify">
-                                                        <strong>John Carlo Franco</strong>, is a web and mobile app developer, also, an entrepreneur and CEO of Startidea, and founder of facebook group Programmers and Developers.
-                                                        He created that group to help others student and developers in country.</p>
+                                                        <strong>Josiah Mark Castor</strong>, Hello everyone Josiah here! I am a BSIT student from Technological Institute of the Philippines who loves to create content about Tech, gadgets, Programming, Tips and hacks to help you in your computer needs!
+
+                                                        If you wish to contact me and have a collaboration, please do not hesitate!</p>
                                                         <label className="fw-bold mb-2">Follow and Subscribe to learn more!</label>
                                                             <br/>
                                                             <h5>
                                                             <Badge bg="" text="dark"><BsIcons.BsTags/> Career Hack</Badge>
                                                             <Badge bg="" text="dark"><BsIcons.BsTags/> Tech Tips</Badge>
                                                             <Badge bg="" text="dark"><BsIcons.BsTags/> Mobile Development</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Entrepreneur</Badge>
+                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Games</Badge>
                                                             </h5>
 
                                                         <a href="https://www.facebook.com/josiahmcastor.tech917" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/facebook-new.png"  alt="facebook" /></a>

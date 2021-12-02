@@ -95,7 +95,7 @@ class Tutorial extends Component {
                                                                         <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.6435-9/142506784_713464262646294_432244117709991327_n.png?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGeJIr6YAHBkJVN1REpNuyKfmbCiC-RHNd-ZsKIL5Ec1x0eIwb-6YsugASGlD0Lohs12fTmpjR57jQbyFmsg-Ec&_nc_ohc=K0v9hfTWhnwAX9bksAx&_nc_ht=scontent.fmnl13-1.fna&oh=e43eefff956661b3f23b3860b3a31284&oe=61C89275" />
                                                                         </div>           
                                                                         <Card.Body>
-                                                                            <Card.Title>SDPT Solutions</Card.Title>
+                                                                            <Card.Title>SDPTSolutions</Card.Title>
                                                                         </Card.Body>
                                                             </Card>            
                                                         </Col>
@@ -211,7 +211,7 @@ class Tutorial extends Component {
                                                                 <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.6435-9/142506784_713464262646294_432244117709991327_n.png?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGeJIr6YAHBkJVN1REpNuyKfmbCiC-RHNd-ZsKIL5Ec1x0eIwb-6YsugASGlD0Lohs12fTmpjR57jQbyFmsg-Ec&_nc_ohc=K0v9hfTWhnwAX9bksAx&_nc_ht=scontent.fmnl13-1.fna&oh=e43eefff956661b3f23b3860b3a31284&oe=61C89275" />
                                                             <div className="text-center">
                                                                 <p><strong>SDPT Solutions</strong></p>
-                                                                <p>SDPT Solutions is an Organization that Creates Video Tutorial for Programmers.</p>
+                                                                <p>Tech reviews, Tech gadgets, Sharing my knowledge about me and what I love doing, Also Gaming.</p>
                                                             </div>
                                                     </Col>
                                                     
@@ -300,21 +300,22 @@ class Tutorial extends Component {
                                                                 <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/149870072_4438803116146821_814614453010169425_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF7kx9PgpLqkIGIHWFawVBjeeLqseLHov554uqx4sei_hqzZSt_ndDnrRlWKaRH4bXcCit_bVVCti5grm96mMQ-&_nc_ohc=vqBDbHbLINoAX_U1AAY&_nc_ht=scontent.fmnl13-2.fna&oh=ec0d5505a0c0e7c2d6effe778f78bd15&oe=61CB7CFA" />
                                                             <div className="text-center">
                                                                 <p><strong>John Carlo Franco</strong></p>
-                                                                <p>Web and Mobile App Developer, Entrepreneur</p>
+                                                                <p>Tech reviews, Tech gadgets, Sharing my knowledge about me and what I love doing, Also Gaming.</p>
                                                             </div>
                                                     </Col>
                                                     
                                                     <Col xs={12} md={8} className="container mb-5 m-3">
                                                         <p className="mt-2 text-justify">
-                                                        <strong>John Carlo Franco</strong>, is a web and mobile app developer, also, an entrepreneur and CEO of Startidea, and founder of facebook group Programmers and Developers.
-                                                        He created that group to help others student and developers in country.</p>
+                                                        <strong>Josiah Mark Castor</strong>, Hello everyone Josiah here! I am a BSIT student from Technological Institute of the Philippines who loves to create content about Tech, gadgets, Programming, Tips and hacks to help you in your computer needs!
+
+                                                        If you wish to contact me and have a collaboration, please do not hesitate!</p>
                                                         <label className="fw-bold mb-2">Follow and Subscribe to learn more!</label>
                                                             <br/>
                                                             <h5>
                                                             <Badge bg="" text="dark"><BsIcons.BsTags/> Career Hack</Badge>
                                                             <Badge bg="" text="dark"><BsIcons.BsTags/> Tech Tips</Badge>
                                                             <Badge bg="" text="dark"><BsIcons.BsTags/> Mobile Development</Badge>
-                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Entrepreneur</Badge>
+                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Games</Badge>
                                                             </h5>
 
                                                         <a href="https://www.facebook.com/josiahmcastor.tech917" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/facebook-new.png"  alt="facebook" /></a>

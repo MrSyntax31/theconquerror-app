@@ -237,7 +237,7 @@ const Profile = () => {
         {/* Card for User Profile Information */}
                         <Card>
                             <Card.Body>
-                                        <h1 className="text-center text-primary fw-bold">Welcome to ConquError!</h1>
+                                        <h1 className="text-center text-primaryfw-bold">Welcome to ConquError, Warrior</h1>
                                        
                                 <Row>
                                         <h6 className="mb-2 text-primary">Personal Details</h6>

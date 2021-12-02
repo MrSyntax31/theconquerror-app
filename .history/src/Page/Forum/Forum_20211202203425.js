@@ -181,7 +181,7 @@ const popover = (
                }}>
                 <Card className="text-center mt-5 mb-5 container">
                   <Card.Body>
-                      <Card.Title>  <h1 className="text-center text-primary fw-bold">ConquErroRoom</h1>                                   
+                      <Card.Title>  <h1 className="text-center text-primary fw-bold">ConquE</h1>                                   
                         </Card.Title>
                       <Card.Text>
                       
