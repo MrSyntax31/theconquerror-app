@@ -72,7 +72,11 @@ class Tutorial extends Component {
                                                                     <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t39.30808-6/236064912_102650292134240_4791421894203825811_n.png?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXX-bmMCRJl9vXOi84gaWc9Js6cocCjdX0mzpyhwKN1cCgkTxcJBDEakrRzC8__Z1JSXzm2k4Iql9jtESPeRII&_nc_ohc=nXncSmiIFW4AX_auEd5&tn=x6lGwkBQsiZD79dw&_nc_ht=scontent.fmnl13-1.fna&oh=5e70b76fc0a3a983fc2a8346628fc231&oe=61A961B9" />
                                                                 </div>
                                                                 <Card.Body>
-                                                                <Card.Title>ConquError</Card.Title>
+                                                                <Card.Title>Programming</Card.Title>
+                                                                <Card.Text>
+                                                                    Beginner Friendly,<strong> 7</strong> Lessons
+                                                                </Card.Text>
+                                                                
                                                                 </Card.Body>
                                                             </Card>        
                                                         </Col>
@@ -84,7 +88,7 @@ class Tutorial extends Component {
                                                                         </div>           
                                                                         <Card.Body>
                                                                             <Card.Title>Kuya Dev</Card.Title>
-                                                                        </Card.Body>
+                                                                         </Card.Body>
                                                             </Card>            
                                                         </Col>
 
@@ -95,18 +99,22 @@ class Tutorial extends Component {
                                                                         </div>           
                                                                         <Card.Body>
                                                                             <Card.Title>SDPTSolutions</Card.Title>
-                                                                        </Card.Body>
+                                                                            <Card.Text>is an Organization that Creates Video Tutorial for Programmers</Card.Text>
+                                                                                
+                                                                                </Card.Body>
                                                             </Card>            
                                                         </Col>
 
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                                            <Card style={{ width: '18rem', height:"15rem", marginTop: '2rem' }}>
+                                                            <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                                                         <div style={{textAlign:"center"}}>
-                                                                        <Card.Img variant="top" className="mt-5 w-50 rounded mb-3" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/149870072_4438803116146821_814614453010169425_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF7kx9PgpLqkIGIHWFawVBjeeLqseLHov554uqx4sei_hqzZSt_ndDnrRlWKaRH4bXcCit_bVVCti5grm96mMQ-&_nc_ohc=vqBDbHbLINoAX_U1AAY&_nc_ht=scontent.fmnl13-2.fna&oh=ec0d5505a0c0e7c2d6effe778f78bd15&oe=61CB7CFA" />
+                                                                        <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/149870072_4438803116146821_814614453010169425_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF7kx9PgpLqkIGIHWFawVBjeeLqseLHov554uqx4sei_hqzZSt_ndDnrRlWKaRH4bXcCit_bVVCti5grm96mMQ-&_nc_ohc=vqBDbHbLINoAX_U1AAY&_nc_ht=scontent.fmnl13-2.fna&oh=ec0d5505a0c0e7c2d6effe778f78bd15&oe=61CB7CFA" />
                                                                         </div>           
                                                                         <Card.Body>
-                                                                            <Card.Title className="mt-4">John Carlo Franco</Card.Title>
-                                                                        </Card.Body>
+                                                                            <Card.Title>Computing</Card.Title>
+                                                                            <Card.Text>Beginner Friendly, <strong>5</strong> Lessons</Card.Text>
+                                                                                
+                                                                                </Card.Body>
                                                             </Card>            
                                                         </Col>
 
@@ -116,8 +124,10 @@ class Tutorial extends Component {
                                                                         <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t39.30808-6/244521475_188997610021976_6826356423632131771_n.png?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeHY6X33_1c8qR3rGB9K-xajuqGhOczd4MG6oaE5zN3gwVfvPdHaakhViWXQISdNPt2yq_9TelEUGbmYGFUsZ-VG&_nc_ohc=TD0fcZsq4BUAX-1uX-1&tn=x6lGwkBQsiZD79dw&_nc_ht=scontent.fmnl13-2.fna&oh=a8c3aa4bdf255ab445d8260f91a05881&oe=61A92910" />
                                                                         </div>           
                                                                         <Card.Body>
-                                                                            <Card.Title>Josiahdoestech</Card.Title>    
-                                                                        </Card.Body>
+                                                                            <Card.Title>Josiahdoestech</Card.Title>
+                                                                            <Card.Text>Beginner Friendly, <strong>5</strong> Lessons</Card.Text>
+                                                                                
+                                                                                </Card.Body>
                                                             </Card>            
                                                         </Col>
                                     </Row>
