@@ -20,6 +20,7 @@ const renderTooltip = (props) => (
 
     return (
         <>
+<body>
 
         {/* Division for Tab Page and Description*/}
         <div>
@@ -80,6 +81,7 @@ const renderTooltip = (props) => (
       <a href="#top" className="scroll-top">
         <i className="fa fa-chevron-up"></i>
       </a>
+</body>
 
    
         </>
