@@ -171,8 +171,7 @@ class Tutorial extends Component {
                                                         <Card>
                                                             <Card.Body>
                                                                 
-                                                                <h3 className="mt-2">Featured</h3>
-                                                            <div
+                                                                    <div
                                                             className="video"
                                                             style={{
                                                                 position: "relative",
@@ -181,11 +180,10 @@ class Tutorial extends Component {
                                                                 height: 0
                                                             }}
                                                             >
-                                                                <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://www.youtube.com/embed/vwzlg-wSDH0" frameBorder="0" title="vid" />
+                                                            <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://www.youtube.com/embed/vwzlg-wSDH0" frameBorder="0" title="vid" allowfullscreen/>
                                                             
                                                                 </div>
                                                                 <Container>
-                                                                    <h4 className="mt-5">Sub Contents</h4>
                                                                 <Row>
                                                                     <Col>
                                                                         <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://www.youtube.com/embed/jcYaWFhV8oY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
