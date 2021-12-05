@@ -185,7 +185,7 @@ class Tutorial extends Component {
                                                             
                                                                 </div>
                                                                 <Container>
-                                                                    <h4 className="mt-5 fw-bold">Sub Contents</h4>
+                                                                    <h4 className="mt-5 ">Sub Contents</h4>
                                                                 <Row>
                                                                     <Col>
                                                                         <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://www.youtube.com/embed/jcYaWFhV8oY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
