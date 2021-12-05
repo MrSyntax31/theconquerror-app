@@ -180,15 +180,12 @@ class Tutorial extends Component {
                                                                 height: 0
                                                             }}
                                                             >
-                                                            <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://www.youtube.com/embed/vwzlg-wSDH0" frameBorder="0" title="vid" allowfullscreen/>
-                                                            
+                                                            <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://www.youtube.com/embed/vwzlg-wSDH0" frameBorder="0" title="vid"/>
                                                                 </div>
                                                                 <Container>
                                                                 <Row>
-                                                                    <Col >
-                                                                    
-                                                                    </Col>
-                                                                    <Col >sm=4</Col>
+                                                                    <Col sm={8}>sm=8</Col>
+                                                                    <Col sm={4}>sm=4</Col>
                                                                 </Row>
                                                                 <Row>
                                                                     <Col sm>sm=true</Col>

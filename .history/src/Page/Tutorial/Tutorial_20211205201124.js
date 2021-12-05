@@ -186,7 +186,7 @@ class Tutorial extends Component {
                                                                 <Container>
                                                                 <Row>
                                                                     <Col >
-                                                                    
+                                                                    <iframe width="100" height="100" src="https://www.youtube.com/embed/szyhF3yvu3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                     </Col>
                                                                     <Col >sm=4</Col>
                                                                 </Row>

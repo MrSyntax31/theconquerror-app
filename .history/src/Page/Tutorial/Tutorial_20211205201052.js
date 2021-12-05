@@ -185,10 +185,10 @@ class Tutorial extends Component {
                                                                 </div>
                                                                 <Container>
                                                                 <Row>
-                                                                    <Col >
-                                                                    
+                                                                    <Col sm={8}>
+
                                                                     </Col>
-                                                                    <Col >sm=4</Col>
+                                                                    <Col sm={4}>sm=4</Col>
                                                                 </Row>
                                                                 <Row>
                                                                     <Col sm>sm=true</Col>

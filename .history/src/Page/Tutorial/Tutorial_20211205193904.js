@@ -70,7 +70,7 @@ class Tutorial extends Component {
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                                                 <div style={{textAlign:"center"}}>
-                                                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t39.30808-6/236064912_102650292134240_4791421894203825811_n.png?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXX-bmMCRJl9vXOi84gaWc9Js6cocCjdX0mzpyhwKN1cCgkTxcJBDEakrRzC8__Z1JSXzm2k4Iql9jtESPeRII&_nc_ohc=N3WXsGM0gZsAX_1uw5S&_nc_ht=scontent.fmnl13-1.fna&oh=6609c495890ee7bc8adf680aa7430c77&oe=61B14AB9" />
+                                                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t39.30808-6/236064912_102650292134240_4791421894203825811_n.png?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXX-bmMCRJl9vXOi84gaWc9Js6cocCjdX0mzpyhwKN1cCgkTxcJBDEakrRzC8__Z1JSXzm2k4Iql9jtESPeRII&_nc_ohc=nXncSmiIFW4AX_auEd5&tn=x6lGwkBQsiZD79dw&_nc_ht=scontent.fmnl13-1.fna&oh=5e70b76fc0a3a983fc2a8346628fc231&oe=61A961B9" />
                                                                 </div>
                                                                 <Card.Body>
                                                                 <Card.Title>ConquError</Card.Title>
@@ -180,15 +180,12 @@ class Tutorial extends Component {
                                                                 height: 0
                                                             }}
                                                             >
-                                                            <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://www.youtube.com/embed/vwzlg-wSDH0" frameBorder="0" title="vid" allowfullscreen/>
-                                                            
+                                                            <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://www.youtube.com/embed/vwzlg-wSDH0" frameBorder="0" title="vid"/>
                                                                 </div>
                                                                 <Container>
                                                                 <Row>
-                                                                    <Col >
-                                                                    
-                                                                    </Col>
-                                                                    <Col >sm=4</Col>
+                                                                    <Col sm={8}>sm=8</Col>
+                                                                    <Col sm={4}>sm=4</Col>
                                                                 </Row>
                                                                 <Row>
                                                                     <Col sm>sm=true</Col>

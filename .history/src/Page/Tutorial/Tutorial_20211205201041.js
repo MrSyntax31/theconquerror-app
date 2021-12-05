@@ -181,14 +181,14 @@ class Tutorial extends Component {
                                                             }}
                                                             >
                                                             <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://www.youtube.com/embed/vwzlg-wSDH0" frameBorder="0" title="vid" allowfullscreen/>
-                                                            
+                                                            <iframe width="100" height="100" src="https://www.youtube.com/embed/szyhF3yvu3k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                                                                 </div>
                                                                 <Container>
                                                                 <Row>
-                                                                    <Col >
-                                                                    
+                                                                    <Col sm={8}>
+
                                                                     </Col>
-                                                                    <Col >sm=4</Col>
+                                                                    <Col sm={4}>sm=4</Col>
                                                                 </Row>
                                                                 <Row>
                                                                     <Col sm>sm=true</Col>
