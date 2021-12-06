@@ -4,7 +4,7 @@ import '../../Assets/css/bootstrap.min.css';
 import '../../Assets/css/animate.css';
 import '../../Assets/css/tiny-slider.css';
 import '../../Assets/css/main.css';
-import { Carousel, Accordion, Row, Col, Container, Card } from 'react-bootstrap';
+import { Carousel, Accordion, Row, Col, Container } from 'react-bootstrap';
 import image1 from '../../Assets/images/0.jpg';
 import image2 from '../../Assets/images/2.jpg';
 import image3 from '../../Assets/images/3.jpg';
@@ -325,67 +325,32 @@ const HomeUser = () => {
 
 
             {/* Section for Video Tutorial*/}
-            <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} className="mt-5 mb-5">
-                                    <Row>
-                                        <div className="">
-                                            <h4 className="text-center text-secondary fw-bold">Some featured Content Creator</h4>
-                                        </div>
-                                                        <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                                            <Card style={{ width: '18rem', marginTop: '2rem' }}>
-                                                                <div style={{textAlign:"center"}}>
-                                                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t39.30808-6/236064912_102650292134240_4791421894203825811_n.png?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXX-bmMCRJl9vXOi84gaWc9Js6cocCjdX0mzpyhwKN1cCgkTxcJBDEakrRzC8__Z1JSXzm2k4Iql9jtESPeRII&_nc_ohc=N3WXsGM0gZsAX_1uw5S&_nc_ht=scontent.fmnl13-1.fna&oh=6609c495890ee7bc8adf680aa7430c77&oe=61B14AB9" />
-                                                                </div>
-                                                                <Card.Body>
-                                                                <Card.Title>ConquError</Card.Title>
-                                                                </Card.Body>
-                                                            </Card>        
-                                                        </Col>
+            <section id="" className="features section">
+               <Container fluid="md" style={{
+                     display: "flex",
+                     justifyContent: "center",
+                     alignItems: "center"
+                  }}>
+               
+                  <Row className="d-flex justify-content-center">
+                     <div className="col-sm-12 col-md-12 mb-2">
+                        <h3 className="text-center text-secondary mb-5">Tutorial</h3>
+                     </div>
+                     <Col className="mb-3">
+                        <div className="d-flex justify-content-center" data-wow-delay=".4s">
+                           <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://www.youtube.com/embed/jcYaWFhV8oY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                        </div>
+                     </Col>
+                     
+                     <Col className="mb-3">
+                        <div className="d-flex justify-content-center" data-wow-delay=".4s">
+                           <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://www.youtube.com/embed/jcYaWFhV8oY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                        </div>
+                     </Col>
 
-                                                        <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                                            <Card style={{ width: '18rem', marginTop: '2rem' }}>
-                                                                        <div style={{textAlign:"center"}}>
-                                                                        <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/162108690_121301806677028_8488807075884298821_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXydTM3EZ07XqXpezsDpNyw2d9yKe4opDDZ33Ip7iikJ4Mb5hSfrbJs4divK0bsoW4pLl_zqUldxKd-fXV-F1K&_nc_ohc=Deflbtpo54QAX8UoF5R&_nc_ht=scontent.fmnl13-2.fna&oh=8a34d0b958665e1297e6c9b006a9a9e7&oe=61CBC2F9" />
-                                                                        </div>           
-                                                                        <Card.Body>
-                                                                            <Card.Title>Kuya Dev</Card.Title>
-                                                                        </Card.Body>
-                                                            </Card>            
-                                                        </Col>
-
-                                                        <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                                            <Card style={{ width: '18rem', marginTop: '2rem' }}>
-                                                                        <div style={{textAlign:"center"}}>
-                                                                        <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.6435-9/142506784_713464262646294_432244117709991327_n.png?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGeJIr6YAHBkJVN1REpNuyKfmbCiC-RHNd-ZsKIL5Ec1x0eIwb-6YsugASGlD0Lohs12fTmpjR57jQbyFmsg-Ec&_nc_ohc=K0v9hfTWhnwAX9bksAx&_nc_ht=scontent.fmnl13-1.fna&oh=e43eefff956661b3f23b3860b3a31284&oe=61C89275" />
-                                                                        </div>           
-                                                                        <Card.Body>
-                                                                            <Card.Title>SDPT Solutions</Card.Title>
-                                                                        </Card.Body>
-                                                            </Card>            
-                                                        </Col>
-
-                                                        <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                                            <Card style={{ width: '18rem', marginTop: '2rem' }}>
-                                                                        <div style={{textAlign:"center"}}>
-                                                                        <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://dashboard.kleap.co/wp-content/uploads/sites/139/2021/10/08102021082041_blob.png" />
-                                                                        </div>           
-                                                                        <Card.Body>
-                                                                            <Card.Title>Josiahdoestech</Card.Title>    
-                                                                        </Card.Body>
-                                                            </Card>            
-                                                        </Col>
-
-                                                        <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                                            <Card style={{ width: '18rem', height:"15rem", marginTop: '2rem' }}>
-                                                                        <div style={{textAlign:"center"}}>
-                                                                        <Card.Img variant="top" className="mt-5 w-50 rounded mb-3" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/149870072_4438803116146821_814614453010169425_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF7kx9PgpLqkIGIHWFawVBjeeLqseLHov554uqx4sei_hqzZSt_ndDnrRlWKaRH4bXcCit_bVVCti5grm96mMQ-&_nc_ohc=vqBDbHbLINoAX_U1AAY&_nc_ht=scontent.fmnl13-2.fna&oh=ec0d5505a0c0e7c2d6effe778f78bd15&oe=61CB7CFA" />
-                                                                        </div>           
-                                                                        <Card.Body>
-                                                                            <Card.Title className="mt-4">John Carlo Franco</Card.Title>
-                                                                        </Card.Body>
-                                                            </Card>            
-                                                        </Col>
-                                    </Row>
-            </Container>
+                  </Row>
+               </Container>
+            </section>
 
          {/* Section for Chart*/}
          <section className="our-achievement section">
