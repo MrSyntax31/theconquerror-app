@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 import {  Modal, Button, Row, Col, Container, Card, Offcanvas } from 'react-bootstrap';
 import {} from 'firebase/auth'
 import { getAuth, updatePassword, reauthenticateWithCredential , EmailAuthProvider, sendPasswordResetEmail } from '@firebase/auth';
-import { collection, getFirestore, doc, setDoc  } from 'firebase/firestore';
+import { collection, getFirestore, doc, setDoc,  onSnapshot   } from 'firebase/firestore';
 import {
   AreaChart,
   ResponsiveContainer,
@@ -93,6 +93,10 @@ const Profile = () => {
   const handleCloseOff = () => setShowOff(false);
   const handleShowOff = () => setShowOff(true);
 
+  const [show5, setShow5 ] = useState(false);
+
+  const handleShow5 = ()  => setShow5(true);
+  const handleClose5 = () => setShow5(false);
 
   //declare text input for change password (inside Modal)
   const [currentPass, setPass1] = useState();
@@ -154,7 +158,11 @@ const Profile = () => {
             
     }
 
-  }
+  }     
+        //update profile
+        function edit(){
+
+        }
         //Function for Modal (Send Feedback)
         async  function sendFeedback(){
 
@@ -186,8 +194,29 @@ const Profile = () => {
 
     //to be used by showProfile Function to map the data and be visible to users      
   const [profile, setData] = useState([]);
+ // const [levelhandler, setHandler] = useState();
+  const [avatar , setAvatar] = useState([]);
+
+  function onLoad() {
+    
+    onSnapshot(doc(firestoredb, "warrioravatar", `${profile.level}` ), (doc) => {
+        const docdata = (doc.data())
+
+        if (docdata)
+        {   
+          setAvatar(docdata);
+
+        }
+        else{
+        
+          console.log("no docs")
+        }
+
+        
+    });
 
 
+}
 
 //Loads the function inside the useEffect when the component renders
   useEffect (() => {
@@ -200,11 +229,21 @@ const Profile = () => {
     const profileData = ref(realtimedb, '/users/' + userId);
     onValue(profileData, (snapshot) => {
       setData(snapshot.val());
+     // setHandler(snapshot.val().level)
   })
 }
-
+        
         showProfile();
-      
+
+        if(profile)
+        {
+          onLoad();
+        }
+        else
+        {
+          console.log("empty user data")
+        }
+       
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
 
 
@@ -296,7 +335,8 @@ const Profile = () => {
                                       <Offcanvas.Body>
                                         
                                           <div className=" d-grid gap-2 mt-3 mb-3">
-                                           
+                                            <Button variant="primary" onClick={handleShow5} className="mb-2"><AiIcons.AiFillProfile/> Update Information</Button> 
+
                                            <Button variant="primary" onClick={handleShow4} className="mb-2"><AiIcons.AiFillFileText/> Upload Files</Button> 
                                            
                                            <Button variant="primary" onClick={handleShow} className="mb-2"><AiIcons.AiFillLock/> Change Password</Button> 
@@ -362,25 +402,42 @@ const Profile = () => {
                                            
                                           </Modal.Footer>
                                     </Modal>
+
+
+                                         {/*Feedback*/}
+                                    <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
+                                          <Modal.Header closeButton>
+                                            <Modal.Title>Update Profile</Modal.Title>
+                                          </Modal.Header>
+                                          <Modal.Body>
+                                           
+                                          </Modal.Body>
+                                          <Modal.Footer>
+                                            <Button variant="secondary" onClick={handleClose5}> Close</Button>
+                                            <Button variant="primary" onClick={edit}> Update </Button>
+                                          </Modal.Footer>
+                                    </Modal>
+
                               </Card.Body>
                         </Card>
       </Container>
 
 
                               <Container className="mb-5">
-                                
+                              { profile &&
                                   <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                     <div style={{textAlign:"center"}}>
-                                      <Card.Img variant="top" className="mt-2 w-50" src="https://cdn-icons-png.flaticon.com/512/3763/3763359.png" />
+                                      <Card.Img variant="top" className="mt-2 w-50" src={avatar.img} />
                                     </div>
                                     <Card.Body>
                                       <Card.Title>My level: <strong>{profile.level}</strong> </Card.Title>
                                       <Card.Text>
-                                        Level {profile.level}: You are about to discover new programming adventures and challenges. 
+                                        Level {profile.level}: {avatar.desc}
                                       </Card.Text>
                                       <Link to="/course" style={{ textDecoration: 'none' }} className="btn btn-primary mb-4">Start your Adventure!</Link>
                                     </Card.Body>
                                   </Card>
+                                        }
                                   
                               </Container>    
 

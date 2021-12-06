@@ -1,6 +1,6 @@
 import React, {useEffect,useState} from 'react';
 import { Helmet } from "react-helmet";
-import {  Modal, Button,  OverlayTrigger, Popover, Offcanvas } from 'react-bootstrap';
+import {  Modal, Button,  OverlayTrigger, Popover, Offcanvas, Alert, ProgressBar} from 'react-bootstrap';
 import { getFirestore, collection, query, orderBy, startAfter, limit, getDocs, doc,setDoc, endBefore, limitToLast } from 'firebase/firestore';
 import {} from '../../firebase/firebase'
 import {Container,  Row,Col, Form, FormControl, Card , ButtonGroup} from 'react-bootstrap'
@@ -11,14 +11,15 @@ import * as MdIcons from 'react-icons/md';
 import './Forum.css';
 import Navbar from '../../Components/Navbar/Navbar'
 import {  Link, useHistory} from "react-router-dom"
-
+import { getStorage, ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
 export default function TopicList() {
 
          //declare firestore services
         const forumdb = getFirestore();
         const auth = getAuth();
-
+        // Create a root reference
+        const storage = getStorage();
         //get current logged-in user
         const currentUser = auth.currentUser;
 
@@ -30,6 +31,9 @@ export default function TopicList() {
 
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
+
+                     //errors are thrown here
+    const [error, setError] = useState("")
 
         //New and popular*
         const [shows, setShows] = useState(false);
@@ -46,14 +50,21 @@ export default function TopicList() {
         const [page, setPage] = useState(1);
 
         const [endLine, checkEnd] = useState(false);
+        const [tagCheck, checkTag] = useState(false);
+        
+        const [tags, setTags] = useState();
 
+        const [img, setImg] = useState("");
+        const [fileupload, setFile] = useState([]);
+        const [progbar, setProgress] = useState(0);
 
+        const handleChange = (e) => {
+        
+          setTags(e.target.getAttribute("value"));
+          checkTag(true);
+        };
 
-         //convert date which is timestamp to String
-      var timestamp = Date.now();
-      var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
-
-
+    
         const collectionRef = collection(forumdb, "topics");
         const first = query(collectionRef, orderBy("created_at","desc"), limit(5));
             
@@ -159,8 +170,76 @@ export default function TopicList() {
 
       
      
+          const changeHandler = (event) => {
+
+            setFile(event.target.files[0]);
+        
+          }
+
+          function insertCode(){
+              // Create the file metadata
+/** @type {any} */
+const metadata = {
+  contentType: 'image/jpeg'
+};
+
+
+const storageRef = ref(storage, 'Forum/' + question);
+const uploadTask = uploadBytesResumable(storageRef, fileupload, metadata);
+
+// Listen for state changes, errors, and completion of the upload.
+uploadTask.on('state_changed',
+  (snapshot) => {
+    // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+    const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+   setProgress(progress);
+    switch (snapshot.state) {
+     case 'paused':
+        setError('Upload is paused');
+        break;
+    case 'running':
+        setError('Upload is running');
+        break;
+        default:
+          // 
+    }
+  }, 
+  (error) => {
+    // A full list of error codes is available at
+    // https://firebase.google.com/docs/storage/web/handle-errors
+    switch (error.code) {
+      case 'storage/unauthorized':
+        // User doesn't have permission to access the object
+        break;
+      case 'storage/canceled':
+        // User canceled the upload
+        break;
+
+      // ...
+
+      case 'storage/unknown':
+        // Unknown error occurred, inspect error.serverResponse
+        break;
+
+        
+        default:
+          // 
+    }
+  }, 
+  () => {
+    // Upload completed successfully, now we can get the download URL
+    getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
+      setImg(downloadURL);
+      setProgress(0)
+      setError("File Upload Complete")
+    });
+  }
+);
+          }
+        
         //Function that adds a new question in the forum
-        async function addNew(){
+      async function addNew(){
+        setError("")
           //If there is no user logged-in, returns the user to Login page to continue
           if (currentUser === null)
           {
@@ -174,39 +253,57 @@ export default function TopicList() {
             }
           }
           else {
-              //if user is logged-in
-        
-              // Add a new document with a generated id
-      const newQuestion = doc(collection(forumdb, "topics"));
 
     
-        // then create the array with the data to be set inside firestore in collection "topics"
-      var data = {
+                if (tagCheck === true) {
 
-        title: question,
-        desc: description,
-        created_by: currentUser.email,
-        userid: currentUser.uid,
-        created_at: convertedDate
-      }
-       //puts the document inside the collection "topics" in firestore
-
-      await setDoc(newQuestion, data).then(() => {
+                  //if user is logged-in
+                
+                // Add a new document with a generated id
+        const newQuestion = doc(collection(forumdb, "topics"));
+  
+        //convert date which is timestamp to String
+        var timestamp = Date.now();
+        var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
         
-        alert("Question Posted!");
-      }).catch((error) =>{
-        alert(error.message)
-      }).finally(() => {
+       
+          // then create the array with the data to be set inside firestore in collection "topics"
+        var data = {
+  
+          title: question,
+          desc: description,
+          created_by: currentUser.email,
+          userid: currentUser.uid,
+          created_at: convertedDate,
+          tags: tags,
+          sampcodeimg: img
+        }
+         //puts the document inside the collection "topics" in firestore
+        
+         await setDoc(newQuestion, data).then(() => { 
+  
+          setError("")
+       
+  
+        }).catch((error) =>{
+          setError(error.message)
+        }).finally(() => {
+          setImg("")
+          setDesc("");
+          setQuestion("");
+          setError("")
+        })
+   
+  
+              }
+              else {
+                  setError("Select a Tag")
+              }
+              
 
-        setDesc("");
-        setQuestion("");
-
-      })
-    
 
               }
           }
-
           
           //this is used to fetch the data from Discussion on Topics.MAP on the forum list
         const handler = function(e){
@@ -218,7 +315,7 @@ export default function TopicList() {
       };
 
       const Discussion= topics.map((topic) => (  <div className="Discussion-Board p-3 m-3 border border-primary rounded" key={topic.id} > <p>Uploaded by: <strong>{topic.created_by}</strong> on <strong>
-      {topic.created_at}</strong></p>  <div className="heading"><ul> <li onClick={ handler}  data-id ={topic.id}>{topic.title}<br></br><strong>Description:</strong> {topic.desc} </li></ul></div></div> ))
+      {topic.created_at}</strong></p>  <div className="heading"><ul> <li onClick={ handler}  data-id ={topic.id}>{topic.title}<br></br><strong>Description:</strong> {topic.desc} <br></br><strong>Tags:</strong>{topic.tags} </li></ul></div></div> ))
     
 
     //For Popup Notice
@@ -347,67 +444,28 @@ const popover = (
                   <Modal.Title>ASK A QUESTION</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
+                {error && <Alert variant="danger">{error}</Alert>}
                     Question <br></br>
                     <input value={question || ''} onChange={e => setQuestion(e.target.value)}  type="text"  className="form-control" required></input><br></br>
                     Description <br></br>
                     <textarea value={description || ''} onChange={e => setDesc(e.target.value)} type="text" className="form-control mb-3" required></textarea>
+                    <strong>Upload a picture of your code here! (Optional)</strong>
 
-                    <p>Add Tags</p>
-                    <Form className="mt-3">
-                        {['checkbox'].map((type) => (
-                          <div key={`inline-${type}`} className="mb-2">
-                            <Form.Check
-                              inline
-                              label="Array"
-                              name="group1"
-                              type={type}
-                              id={`inline-${type}-1`}
-                            />
-                            <Form.Check
-                              inline
-                              label="C++"
-                              name="group1"
-                              type={type}
-                              id={`inline-${type}-2`}
-                            />
-                            <Form.Check
-                              inline
-                              label="Function"
-                              name="group1"
-                              type={type}
-                              id={`inline-${type}-3`}
-                            />
-                            <Form.Check
-                              inline
-                              label="Programming"
-                              name="group1"
-                              type={type}
-                              id={`inline-${type}-3`}
-                            />
-                            <Form.Check
-                              inline
-                              label="Looping"
-                              name="group1"
-                              type={type}
-                              id={`inline-${type}-3`}
-                            />
-                            <Form.Check
-                              inline
-                              label="Conditional"
-                              name="group1"
-                              type={type}
-                              id={`inline-${type}-3`}
-                            />
-                            <Form.Check
-                              inline
-                              label="CodeBlocks"
-                              name="group1"
-                              type={type}
-                              id={`inline-${type}-3`}
-                            />
-                          </div>
-                        ))}
-                    </Form>
+                    <input type="file" id="file-input" name="samplecodeimg" accept="image/jpeg" onChange={changeHandler}/> <Button variant="primary" onClick={insertCode}>Upload File</Button>
+                    Upload Progress <ProgressBar animated now={progbar} />
+                    <p>Add a Tag</p>
+
+                    <div>
+                     <input type="radio" id="Array" name="Programming" value="Array" onChange={handleChange}/>
+                    <label for="Array">Array</label>
+                    <input type="radio" id="CodeBlocks" name="Programming" value="CodeBlocks" onChange={handleChange}/>
+                    <label for="CodeBlocks">CodeBlocks</label>
+                    <input type="radio" id="C++" name="Programming" value="C++" onChange={handleChange}/>
+                    <label for="C">C++</label>
+                     </div>
+                   
+    
+
 
                 </Modal.Body>
                 <Modal.Footer>

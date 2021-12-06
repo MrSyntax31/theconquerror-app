@@ -7,6 +7,8 @@ import { Button, Row, Container, Col, Card, Offcanvas, Tab, Tabs, Accordion } fr
 import {  useHistory} from "react-router-dom"
 import { getAuth } from 'firebase/auth'
 import {  Link } from "react-router-dom"
+import { getDatabase, ref, onValue } from "firebase/database";
+
 
 //Icons for buttons
 import * as FcIcons from "react-icons/fc";
@@ -14,16 +16,17 @@ import * as FcIcons from "react-icons/fc";
 const Lessons = () => {
     //Get Firestore Service from Firebase
     const forumdb = getFirestore();
-
+    const realtimedb = getDatabase();
     const auth = getAuth();
 
     const currentUser = auth.currentUser;
     //For Routing
     const history = useHistory()
 
+  
     //declare area to throw list for forum
   const [courses, setCourse] = useState([]);
-
+  const [userData, setData] = useState([]);
 
   //Lessons Collection Side Menu
   const [show, setShow] = useState(false);
@@ -41,10 +44,27 @@ const Lessons = () => {
         setCourse(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
         
       )
+
+      if (currentUser === null ){
+        setData("");
+      }
+      else {
+        const userId = currentUser.uid;
+             //creating reference for realtimedb and fetching data from table users using the userID as reference then setting the data inside the Profile useState above
+    const profileData = ref(realtimedb, '/users/' + userId);
+    onValue(profileData, (snapshot) => {
+      setData(snapshot.val().level);
+
+  
+      
+  })
+
+    
+      }
+
       
     },[]); // eslint-disable-line react-hooks/exhaustive-deps
  
-    
 
 
   const enroll = async function(e){
@@ -110,15 +130,13 @@ const Lessons = () => {
                     
                       <Row>
                       <Col xs={6} md={4}>
+                      { userData &&
                           <Card style={{ width: '18rem' }} className="container mb-4">
-                                <div style={{textAlign:"center"}}>
-                                  <Card.Img variant="top" className="mt-2 w-50" src="https://cdn-icons-png.flaticon.com/512/3763/3763359.png" />
-                                </div>
+
                               <Card.Body>
-                                <Card.Title>My level: <strong>-</strong></Card.Title>
-                                  <Card.Text>Your journey has just begun.</Card.Text>
+                              <Card.Title>My level: <strong>{userData}</strong></Card.Title>
                               </Card.Body>
-                          </Card>
+                          </Card> }
                       </Col>
                       <Col xs={12} md={8}>
                         <p className="mt-2 text-justify">

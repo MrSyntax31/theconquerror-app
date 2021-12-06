@@ -1,6 +1,6 @@
 import React, {  useState } from 'react'
 import { Form, Button, Container, Alert, Row, Col} from 'react-bootstrap'
-import { Link } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import { Helmet } from "react-helmet";
 import {} from '../../firebase/firebase';
 import {getAuth, createUserWithEmailAndPassword,sendEmailVerification, signOut ,onAuthStateChanged} from 'firebase/auth'
@@ -22,6 +22,7 @@ import "react-datepicker/dist/react-datepicker.css";
           //errors are thrown here
     const [error, setError] = useState("")
 
+    const history = useHistory();
     var letters = /^[A-Za-z]+$/;
 
        const [occuHide, showHide1] = useState("")
@@ -135,17 +136,17 @@ import "react-datepicker/dist/react-datepicker.css";
                     showHide1("")
                     showHide2("")
                     setAddress("")
-                    signOut(auth);
-                   setError('You have Successfully Registered your Account!, Please Check your Email for Verification');
                       setHandler(false);
                       agreeTerms(false);
-  
-                  //lagay ng redirect na may timer
+                     
+           
     
                               
                    return
                    });
-      
+
+                   signOut(auth).then(() => {    history.push("/login") })
+               
                   } else {
                       
                       return

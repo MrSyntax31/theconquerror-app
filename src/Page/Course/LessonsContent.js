@@ -33,6 +33,7 @@ const LessonsContent = () => {
   const forumdb = getFirestore();
 
   const [courses, setLesson] = useState([]);
+  const [courseinfo, setCourseInfo] = useState([]);
 
   const [userlevel, fetchLevel ]= useState([]);
 
@@ -63,11 +64,14 @@ const LessonsContent = () => {
         history.push("/course")
       }
        else{
-        const docRef = doc(forumdb, "courses", lessonid);
-        const docSnap = await getDoc(docRef);
-        
-        if (docSnap.exists()) {
-         setLesson(docSnap.data())
+        const docRef1 = doc(forumdb, "courses", lessonid);
+        const docRef2 = doc(forumdb, "courses", lessonid, "courseinfo", lessonid);
+        const docSnap1 = await getDoc(docRef1);
+        const docSnap2 = await getDoc(docRef2);
+
+        if (docSnap1.exists() & docSnap2.exists()) {
+         setLesson(docSnap1.data())
+          setCourseInfo(docSnap2.data())
 
         } else {
           // doc.data() will be undefined in this case
@@ -209,7 +213,9 @@ const popover = (
                             <section id="content" className="mt-5">
                               <Container>
                                 <h1 className="fw-bold text-primary mt-5">Content Here!</h1>
-                                <p>sdhfbfhdjckdfjhre he tjghrojiretgrj rtgrjhgjrtgjn dhfgiihgiuherihgi gfdjngihgerhgiorhjghg g ghorghhrgheoghorghor ghrgghirghgihrhgghg rgiohgigheh</p>
+                                
+                                   {/* eto na */}                        
+                                <p>{courseinfo.content1}</p>
                               </Container>
                             </section>
 

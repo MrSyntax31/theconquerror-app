@@ -157,7 +157,7 @@ const Thread = () => {
         {topic.desc}<br></br>
         {topic.created_by}<br></br>
         {topic.created_at}<br></br>
-       
+        <img className="mx-auto " style={{width: '50%', height: 'auto'}} src={topic.sampcodeimg} alt={topic.title} /> 
         {showRep}
       
             { Empty ? '' :
