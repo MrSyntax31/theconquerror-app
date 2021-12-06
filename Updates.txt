@@ -96,3 +96,25 @@ Mechanics a composition tool to assist the user in the path of the program.
 Introduction Video Description(ongoing)
 Adjust side navigation with tooltip and popover 
 Redesign Tutorial page and add Content form
+
+
+--December, 6, 2021 - 9:44pm - Arllan
+
+>>Thread.js
+Na resize kona image at nalagay kona sa container image
+
+>>Forum.js
+Naka Arrange na Radio button(Packeck nalang kung tama id at value)
+Naka form-control na input box for image
+
+>>alltopics.js
+Naka lagay na mga tags 
+
+>>lessonscontent.js
+Na embebed na contents and image from firebase
+
+>>Profile.js
+Naka lagay na mga mga input box for Updates
+
+Bugs:
+1. Di nag show level image and description

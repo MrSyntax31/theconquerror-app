@@ -23,6 +23,8 @@ import * as AiIcons from 'react-icons/ai';
 import { getDatabase, ref, onValue } from "firebase/database";
 import {  Link } from "react-router-dom"
 import './Style.css'
+import DatePicker from 'react-datepicker'
+
 
 const Profile = () => {
 
@@ -430,6 +432,53 @@ const Profile = () => {
                                             <Form.Control value=""   name = "name" type="email" placeholder="Email Address"/>
                                           </Form.Group>
 
+                                          <Form.Group id="gender">
+                                            <Form.Label>Gender</Form.Label>
+                                            <Form.Select aria-label="Default select example" value="">
+                                            <option>Select Gender</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Transgender">Transgender</option>
+                                            <option value="Non-Binary">Non-Binary</option>
+                                            <option value="Not Specified">Rather not specify</option>
+                                            </Form.Select>
+                                          </Form.Group>
+                                        
+                                        <Form.Group id="bday">
+                                        <Form.Label>Birthday</Form.Label>
+                                          <DatePicker className="form-control"
+                                          dateFormat="MMMM d, yyyy"
+                                          placeholderText="Select your Birthday"
+                                        />
+                                        </Form.Group>
+
+                                        <Form.Group id="occu">
+                                        <Form.Label>Occupation</Form.Label>
+                                        <Form.Select aria-label="Default select example" value="">
+                                        <option>Select Occupation</option>
+                                        <option value="Student">Student</option>
+                                        <option value="Professor">Professor</option>
+                                        <option value="Others">Others.</option>
+                                        </Form.Select>
+                                        <Form.Control className="mt-2" value=""  name = "Occupation" type="text"  required placeholder="Please Specify"/> 
+                                        </Form.Group>
+
+                                        <Form.Group id="inst">
+                                        <Form.Label>Institution</Form.Label>
+                                        <Form.Select aria-label="Default select example" value="">
+                                        <option>Select Institution</option>
+                                        <option value="LSPU">LSPU</option>
+                                        <option value="PUP">PUP</option>
+                                        <option value="TUP">TUP</option>
+                                        <option value="BSIT">BSIT</option>
+                                        <option value="DICT">DICT</option>
+                                        <option value="DCET">DCET</option>
+                                        <option value="Others">Others.</option>
+                                        </Form.Select>
+                                        <Form.Control className="mt-2" value=""  name = "Institution" type="text"  required placeholder="Please Specify"/>
+                                        </Form.Group>
+
+
                                           </Modal.Body>
                                           <Modal.Footer>
                                             <Button variant="secondary" onClick={handleClose5}> Close</Button>
@@ -442,7 +491,7 @@ const Profile = () => {
       </Container>
 
 
-                              <Container className="mb-5">
+                              <Container className="mb-5" fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                               { profile &&
                                   <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                     <div style={{textAlign:"center"}}>
@@ -451,7 +500,8 @@ const Profile = () => {
                                     <Card.Body>
                                       <Card.Title>My level: <strong>{profile.level}</strong> </Card.Title>
                                       <Card.Text>
-                                        Level {profile.level}: {avatar.desc}
+                                        <h3 className="fw-bold">{avatar.levelname}</h3>
+                                        {avatar.desc}
                                       </Card.Text>
                                       <Link to="/course" style={{ textDecoration: 'none' }} className="btn btn-primary mb-4">Start your Adventure!</Link>
                                     </Card.Body>
