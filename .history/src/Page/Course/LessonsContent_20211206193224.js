@@ -289,7 +289,6 @@ const popover = (
               </div>
             </Offcanvas.Body>
           </Offcanvas>
-          
         {/* ScrollUp Button */}
         <a href="#top" className="scroll-top">
             <i className="fa fa-chevron-up"></i>
