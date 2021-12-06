@@ -344,7 +344,7 @@ const Profile = () => {
                                            <Button variant="primary" onClick={handleShow} className="mb-2"><AiIcons.AiFillLock/> Change Password</Button> 
                                          
                                            <Button variant="primary" onClick={handleShow2} className="mb-2"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
-                                           <h5>Join our guild!</h5>
+                                           <h3>Join on </h3>
                                            <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="350" height="500" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                                           </div>
                                       

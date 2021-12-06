@@ -325,10 +325,10 @@ const HomeUser = () => {
 
 
             {/* Section for Video Tutorial*/}
-            <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} className="mt-5 mb-5">
+            <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} className="">
                                     <Row>
                                         <div className="">
-                                            <h4 className="text-center text-secondary fw-bold">Some featured Content Creator</h4>
+                                            <h1 className="text-center text-primary fw-bold">Some featured Content Creator</h1>
                                         </div>
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', marginTop: '2rem' }}>
@@ -385,7 +385,7 @@ const HomeUser = () => {
                                                             </Card>            
                                                         </Col>
                                     </Row>
-            </Container>
+                                </Container>
 
          {/* Section for Chart*/}
          <section className="our-achievement section">

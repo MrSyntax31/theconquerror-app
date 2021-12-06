@@ -173,6 +173,7 @@ const Thread = () => {
                                 <div className=" text-right">
                                 </div>
                             </Col>
+
                             <Col sm lg="2">
                             </Col>
                         </Row>

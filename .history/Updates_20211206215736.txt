@@ -118,6 +118,7 @@ Naka lagay na mga mga input box for Updates
 
 Bugs:
 1. Di nag show level image and description
-2. Di nag update level ko sa thread kahit naka set na lvl40 ako  sa db
+2. Di nag show level image and description
+
 >>Firebase
 Na lagyan kona LevelName mga levelicon

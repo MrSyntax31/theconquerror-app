@@ -4,7 +4,7 @@ import '../../Assets/css/bootstrap.min.css';
 import '../../Assets/css/animate.css';
 import '../../Assets/css/tiny-slider.css';
 import '../../Assets/css/main.css';
-import { Carousel, Accordion, Row, Col, Container, Card } from 'react-bootstrap';
+import { Carousel, Accordion, Row, Col, Container } from 'react-bootstrap';
 import image1 from '../../Assets/images/0.jpg';
 import image2 from '../../Assets/images/2.jpg';
 import image3 from '../../Assets/images/3.jpg';
@@ -325,10 +325,10 @@ const HomeUser = () => {
 
 
             {/* Section for Video Tutorial*/}
-            <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} className="mt-5 mb-5">
+            <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                                     <Row>
                                         <div className="">
-                                            <h4 className="text-center text-secondary fw-bold">Some featured Content Creator</h4>
+                                            <h1 className="text-center text-primary fw-bold">Some featured Content Creator</h1>
                                         </div>
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', marginTop: '2rem' }}>
@@ -385,7 +385,7 @@ const HomeUser = () => {
                                                             </Card>            
                                                         </Col>
                                     </Row>
-            </Container>
+                                </Container>
 
          {/* Section for Chart*/}
          <section className="our-achievement section">

@@ -165,6 +165,8 @@ const Thread = () => {
                     <Form className="mt-2">
                         <Row>
                             <Col l="auto">
+
+                            
                                 <p className="mt-3">Comment</p>
                                 <div className="d-flex">
                                     <input type="textarea"  value={reply || ''} onChange={e => setReply(e.target.value)} className="form-control w-100 m-1"/>
@@ -173,6 +175,7 @@ const Thread = () => {
                                 <div className=" text-right">
                                 </div>
                             </Col>
+
                             <Col sm lg="2">
                             </Col>
                         </Row>

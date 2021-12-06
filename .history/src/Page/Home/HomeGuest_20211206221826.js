@@ -328,7 +328,7 @@ const HomeUser = () => {
             <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} className="mt-5 mb-5">
                                     <Row>
                                         <div className="">
-                                            <h4 className="text-center text-secondary fw-bold">Some featured Content Creator</h4>
+                                            <h1 className="text-center text-primary fw-bold">Some featured Content Creator</h1>
                                         </div>
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', marginTop: '2rem' }}>
