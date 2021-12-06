@@ -1,6 +1,6 @@
 import React, {  useState , useEffect } from 'react';
 import Helmet from 'react-helmet';
-import {  Modal, Button, Row, Col, Container, Card, Offcanvas, Form } from 'react-bootstrap';
+import {  Modal, Button, Row, Col, Container, Card, Offcanvas } from 'react-bootstrap';
 import {} from 'firebase/auth'
 import { getAuth, updatePassword, reauthenticateWithCredential , EmailAuthProvider, sendPasswordResetEmail } from '@firebase/auth';
 import { collection, getFirestore, doc, setDoc,  onSnapshot   } from 'firebase/firestore';
@@ -404,32 +404,13 @@ const Profile = () => {
                                     </Modal>
 
 
-                                         {/*Update Profile*/}
+                                         {/*Update*/}
                                     <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
                                           <Modal.Header closeButton>
                                             <Modal.Title>Update Profile</Modal.Title>
                                           </Modal.Header>
                                           <Modal.Body>
-                                          <Form.Group id="fname" className="mb-2">
-                                            <Form.Label>First Name</Form.Label>
-                                            <Form.Control value=""  name = "name" type="name" required placeholder="First Name"/>
-                                          </Form.Group>
-
-                                          <Form.Group id="lname" className="mb-2">
-                                            <Form.Label>Last Name</Form.Label>
-                                            <Form.Control value=""   name = "name" type="name" placeholder="Last Name"/>
-                                          </Form.Group>
-
-                                          <Form.Group id="" className="mb-2">
-                                            <Form.Label>Address</Form.Label>
-                                            <Form.Control value=""   name = "name" type="name" placeholder="Address"/>
-                                          </Form.Group>
-
-                                          <Form.Group id="" className="mb-2">
-                                            <Form.Label>Email</Form.Label>
-                                            <Form.Control value=""   name = "name" type="email" placeholder="Email Address"/>
-                                          </Form.Group>
-
+                                           
                                           </Modal.Body>
                                           <Modal.Footer>
                                             <Button variant="secondary" onClick={handleClose5}> Close</Button>
@@ -446,7 +427,7 @@ const Profile = () => {
                               { profile &&
                                   <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                     <div style={{textAlign:"center"}}>
-                                      <Card.Img variant="top" className="mt-5 w-50" src={avatar.img} />
+                                      <Card.Img variant="top" className="mt-2 w-50" src={avatar.img} />
                                     </div>
                                     <Card.Body>
                                       <Card.Title>My level: <strong>{profile.level}</strong> </Card.Title>

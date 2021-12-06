@@ -420,14 +420,14 @@ const Profile = () => {
                                             <Form.Control value=""   name = "name" type="name" placeholder="Last Name"/>
                                           </Form.Group>
 
-                                          <Form.Group id="" className="mb-2">
+                                          <Form.Group id="lname" className="mb-2">
                                             <Form.Label>Address</Form.Label>
                                             <Form.Control value=""   name = "name" type="name" placeholder="Address"/>
                                           </Form.Group>
 
-                                          <Form.Group id="" className="mb-2">
-                                            <Form.Label>Email</Form.Label>
-                                            <Form.Control value=""   name = "name" type="email" placeholder="Email Address"/>
+                                          <Form.Group id="lname" className="mb-2">
+                                            <Form.Label>Address</Form.Label>
+                                            <Form.Control value=""   name = "name" type="name" placeholder="EmailAddress"/>
                                           </Form.Group>
 
                                           </Modal.Body>

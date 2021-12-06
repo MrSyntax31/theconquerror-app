@@ -415,19 +415,14 @@ const Profile = () => {
                                             <Form.Control value=""  name = "name" type="name" required placeholder="First Name"/>
                                           </Form.Group>
 
-                                          <Form.Group id="lname" className="mb-2">
+                                          <Form.Group id="lname" >
                                             <Form.Label>Last Name</Form.Label>
                                             <Form.Control value=""   name = "name" type="name" placeholder="Last Name"/>
                                           </Form.Group>
 
-                                          <Form.Group id="" className="mb-2">
+                                          <Form.Group id="lname">
                                             <Form.Label>Address</Form.Label>
-                                            <Form.Control value=""   name = "name" type="name" placeholder="Address"/>
-                                          </Form.Group>
-
-                                          <Form.Group id="" className="mb-2">
-                                            <Form.Label>Email</Form.Label>
-                                            <Form.Control value=""   name = "name" type="email" placeholder="Email Address"/>
+                                            <Form.Control value=""   name = "name" type="name" placeholder="Last Name"/>
                                           </Form.Group>
 
                                           </Modal.Body>

@@ -1,6 +1,7 @@
 import React, {  useState , useEffect } from 'react';
 import Helmet from 'react-helmet';
 import {  Modal, Button, Row, Col, Container, Card, Offcanvas, Form } from 'react-bootstrap';
+import DatePicker from 'react-datepicker'
 import {} from 'firebase/auth'
 import { getAuth, updatePassword, reauthenticateWithCredential , EmailAuthProvider, sendPasswordResetEmail } from '@firebase/auth';
 import { collection, getFirestore, doc, setDoc,  onSnapshot   } from 'firebase/firestore';
@@ -404,32 +405,73 @@ const Profile = () => {
                                     </Modal>
 
 
-                                         {/*Update Profile*/}
+                                         {/*Update*/}
                                     <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
                                           <Modal.Header closeButton>
                                             <Modal.Title>Update Profile</Modal.Title>
                                           </Modal.Header>
                                           <Modal.Body>
-                                          <Form.Group id="fname" className="mb-2">
-                                            <Form.Label>First Name</Form.Label>
-                                            <Form.Control value=""  name = "name" type="name" required placeholder="First Name"/>
-                                          </Form.Group>
+                                          <div class="name">Personal Information</div>
+                            <div class="value">
+                              <Form.Group id="fname">
+                              <Form.Label>First Name</Form.Label>
+                              <Form.Control value=""  name = "name" type="name" required placeholder="First Name"/>
+                              </Form.Group>
+                              <Form.Group id="lname">
+                              <Form.Label>Last Name</Form.Label>
+                              <Form.Control value=""  name = "name" type="name" placeholder="Last Name"/>
+                              </Form.Group>
 
-                                          <Form.Group id="lname" className="mb-2">
-                                            <Form.Label>Last Name</Form.Label>
-                                            <Form.Control value=""   name = "name" type="name" placeholder="Last Name"/>
-                                          </Form.Group>
+                              <Form.Group id="gender">
+                        <Form.Label>Gender</Form.Label>
+                        <Form.Select aria-label="Default select example" value="">
+                        <option>Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Transgender">Transgender</option>
+                        <option value="Non-Binary">Non-Binary</option>
+                        <option value="Not Specified">Rather not specify</option>
+                        </Form.Select>
+                        </Form.Group>
+                        
+                        <Form.Group id="bday">
+                        <Form.Label>Birthday</Form.Label>
+                           <DatePicker className="form-control"
+                           dateFormat="MMMM d, yyyy"
+                          placeholderText="Select your Birthday"
+                      
+                        />
+                        <Form.Group id="address">
+                        <Form.Label>Address</Form.Label>
+                        <Form.Control value=""  name = "address" type="address" placeholder="Address"/>
+                        </Form.Group>
+                        </Form.Group>
+                        <Form.Group id="occu">
+                        <Form.Label>Occupation</Form.Label>
+                        <Form.Select aria-label="Default select example" value="">
+                        <option>Select Occupation</option>
+                        <option value="Student">Student</option>
+                        <option value="Professor">Professor</option>
+                        <option value="Others">Others.</option>
+                        </Form.Select>
+                        <Form.Control className="mt-2" value=""  name = "Occupation" type="text"  required placeholder="Please Specify"/> 
+                        </Form.Group>
 
-                                          <Form.Group id="" className="mb-2">
-                                            <Form.Label>Address</Form.Label>
-                                            <Form.Control value=""   name = "name" type="name" placeholder="Address"/>
-                                          </Form.Group>
-
-                                          <Form.Group id="" className="mb-2">
-                                            <Form.Label>Email</Form.Label>
-                                            <Form.Control value=""   name = "name" type="email" placeholder="Email Address"/>
-                                          </Form.Group>
-
+                        <Form.Group id="inst">
+                        <Form.Label>Institution</Form.Label>
+                        <Form.Select aria-label="Default select example" value="">
+                        <option>Select Institution</option>
+                        <option value="LSPU">LSPU</option>
+                        <option value="PUP">PUP</option>
+                        <option value="TUP">TUP</option>
+                        <option value="BSIT">BSIT</option>
+                        <option value="DICT">DICT</option>
+                        <option value="DCET">DCET</option>
+                        <option value="Others">Others.</option>
+                        </Form.Select>
+                        <Form.Control className="mt-2" value=""  name = "Institution" type="text"  required placeholder="Please Specify"/>
+                        </Form.Group>
+                            </div>
                                           </Modal.Body>
                                           <Modal.Footer>
                                             <Button variant="secondary" onClick={handleClose5}> Close</Button>
@@ -446,7 +488,7 @@ const Profile = () => {
                               { profile &&
                                   <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                     <div style={{textAlign:"center"}}>
-                                      <Card.Img variant="top" className="mt-5 w-50" src={avatar.img} />
+                                      <Card.Img variant="top" className="mt-2 w-50" src={avatar.img} />
                                     </div>
                                     <Card.Body>
                                       <Card.Title>My level: <strong>{profile.level}</strong> </Card.Title>
