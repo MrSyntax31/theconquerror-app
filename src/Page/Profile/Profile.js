@@ -276,7 +276,7 @@ const Profile = () => {
         {/* Card for User Profile Information */}
                         <Card>
                             <Card.Body>
-                                        <h1 className="text-center fw-bold">Welcome to ConquError, Warrior</h1>
+                                        <h1 className="text-center text-primary fw-bold">Welcome to ConquError!</h1>
                                        
                                 <Row>
                                         <h6 className="mb-2 text-primary">Personal Details</h6>
@@ -355,11 +355,11 @@ const Profile = () => {
                                           </Modal.Header>
                                           <Modal.Body>
                                             <div className=""> Current Password: <br></br>
-                                                <input value={currentPass || ''} onChange={e => setPass1(e.target.value)}  type="password"></input><br></br>
+                                                <input value={currentPass || ''} onChange={e => setPass1(e.target.value)}  type="password" className="form-control"></input><br></br>
                                                 New Password: <br></br>
-                                                <input value={newPass1|| ''} onChange={e => setPass2(e.target.value)}  type="password"></input><br></br>
+                                                <input value={newPass1|| ''} onChange={e => setPass2(e.target.value)}  type="password" className="form-control"></input><br></br>
                                                 Confirm New Password: <br></br>
-                                                <input value={newPass2 || ''} onChange={e => setPass3(e.target.value)}  type="password"></input><br></br>
+                                                <input value={newPass2 || ''} onChange={e => setPass3(e.target.value)}  type="password" className="form-control"></input><br></br>
                                             </div>
                                           </Modal.Body>
                                           <Modal.Footer>
@@ -370,7 +370,7 @@ const Profile = () => {
                                             <Button variant="primary" onClick={changePass }>Confirm</Button>
                                           </Modal.Footer>
                                     </Modal>
-
+                                    
                                     {/*Feedback*/}
                                     <Modal show={show2}  onHide={handleClose2} backdrop="static"  keyboard={false}  >
                                           <Modal.Header closeButton>

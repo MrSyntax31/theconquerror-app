@@ -240,7 +240,7 @@ const Lessons = () => {
 
                             <div className="cd-timeline-content">
                               <h2>Programming Concepts</h2>
-                              <div class="timeline-content-info">
+                              <div className="timeline-content-info">
                                 <span className="timeline-content-info-title">
                                   <i className="fa fa-certificate" aria-hidden="true"></i>
                                   Start Here!

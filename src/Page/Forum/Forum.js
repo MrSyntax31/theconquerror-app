@@ -282,9 +282,7 @@ const popover = (
                }}>
                 <Card className="text-center mt-5 mb-5 container">
                   <Card.Body>
-                      <Card.Title> <div className="fw-bold fs-1 text-secondary">
-                        ConquErroRoom
-                        </div>
+                      <Card.Title>  <h1 className="text-center text-primary fw-bold">ConquErroRoom</h1>                                   
                         </Card.Title>
                       <Card.Text>
                       
