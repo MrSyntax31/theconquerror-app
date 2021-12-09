@@ -46,7 +46,7 @@ const HomeUser = () => {
                         <Col>
                            <div className="hero-content">
                               <h1 className="wow fadeInLeft" data-wow-delay=".4s">Welcome to ConquError! where we Conquer Errors</h1>
-                              <p className="wow fadeInLeft" data-wow-delay=".6s">Be Part of our Learning Community, Join our Forums and Enroll on our Courses.</p>
+                              <p className="wow fadeInLeft" data-wow-delay=".6s">Be a Part of our Learning Community, Join our Forums and Enroll on our Courses.</p>
                               <div className="button wow fadeInLeft" data-wow-delay=".8s">
                                     <Link to="/login" className="btn" style={{ textDecoration: 'none' }}>Login</Link>
                                     <Link to="/register" className="btn btn-alt" style={{ textDecoration: 'none' }}>Register</Link>

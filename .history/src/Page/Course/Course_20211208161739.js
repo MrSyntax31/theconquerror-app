@@ -3,7 +3,7 @@ import Helmet from 'react-helmet';
 
 import Navbar from '../../Components/Navbar/Navbar'
 import { Row, Container, Col, Card, Button, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import {  Link } from "react-router-dom";
+import {  Link } from "react-router-dom"
 
 const Course = () => {
 
