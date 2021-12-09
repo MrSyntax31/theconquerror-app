@@ -177,9 +177,8 @@ const Lessons = () => {
                           <li>•	Artificial Intelligence</li>
                           <li>•	Arduino Application</li>
                         </ul>
-
-                        <h4 className="mb-3"><strong>How do I conquer my  error?</strong></h4>
-                        <ul className="m-3">
+                        <strong>How do I conquer my  error?</strong>
+                        <ul>
                           <li>•	Simple and Practical: I show you exactly what you need to know to perform meaningful things using C++. This entails concentrating on what may provide you with the most benefit right now.</li>
                           <li>•	Step by step: each lesson under computer programming course is divided to its sub-content and it will help you to understand piece by piece so you can adjust and motivated to go further.</li>
                           <li>•	Tutorial: we add tutorial video to help you to visualize and have an idea on how programs created, and variables use in the programming.</li>

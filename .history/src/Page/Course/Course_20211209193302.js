@@ -33,7 +33,7 @@ const renderTooltip = (props) => (
               <Row>
                   <div>
                     <h1 className="text-center text-primary fw-bold">Welcome to the Courses Section</h1>
-                    <h2 className="text-center text-secondary fw-bold"> Experience new and better ways to learn computer programming</h2>
+                    <2 className="text-center text-secondary"> Experience new and better ways to learn computer programming</2>
                   </div>
                           <p className="mt-4 mb-5 text-center">
                                     ConquError offers various courses which cater the needs of IT and non-IT related professionals, 

@@ -31,9 +31,9 @@ const renderTooltip = (props) => (
         <section className="features section bg-light mt-5">
           <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
               <Row>
-                  <div>
+                  <div className="">
                     <h1 className="text-center text-primary fw-bold">Welcome to the Courses Section</h1>
-                    <h2 className="text-center text-secondary fw-bold"> Experience new and better ways to learn computer programming</h2>
+                    <h4 className="text-center text-secondary"> Experience new and better ways to learn computer programming</h4>
                   </div>
                           <p className="mt-4 mb-5 text-center">
                                     ConquError offers various courses which cater the needs of IT and non-IT related professionals, 
@@ -47,7 +47,7 @@ const renderTooltip = (props) => (
                                             <Card.Img variant="top" className="mt-5 w-50" src="https://img.icons8.com/color/144/000000/outline.png" />
                                           </div>
                                         <Card.Body>
-                                          <Card.Title className="fw-bold">Programming</Card.Title>
+                                          <Card.Title>Programming</Card.Title>
                                           <Card.Text className="mt-3 mb-3">
                                             Beginner Friendly,<strong> 7</strong> Lessons
                                           </Card.Text>
@@ -62,7 +62,7 @@ const renderTooltip = (props) => (
                                                   <Card.Img variant="top" className="mt-5 w-50" src="https://img.icons8.com/color/144/000000/informatics.png" />
                                                 </div>           
                                                   <Card.Body>
-                                                    <Card.Title className="fw-bold">Computing</Card.Title>
+                                                    <Card.Title ><strong=Computing</Card.Title>
                                                       <Card.Text className="mt-3 mb-3">Beginner Friendly, <strong>5</strong> Lessons</Card.Text>
                                                           <OverlayTrigger placement="right" delay={{ show: 250, hide: 400 }} overlay={renderTooltip}>
                                                                 <Button style={{ textDecoration: 'none' }} className="btn btn-primary mb-4">Get Started</Button>

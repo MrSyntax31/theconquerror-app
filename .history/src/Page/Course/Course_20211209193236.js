@@ -31,9 +31,9 @@ const renderTooltip = (props) => (
         <section className="features section bg-light mt-5">
           <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
               <Row>
-                  <div>
+                  <div className="">
                     <h1 className="text-center text-primary fw-bold">Welcome to the Courses Section</h1>
-                    <h2 className="text-center text-secondary fw-bold"> Experience new and better ways to learn computer programming</h2>
+                    <h4 className="text-center text-secondary"> Experience new and better ways to learn computer programming</h4>
                   </div>
                           <p className="mt-4 mb-5 text-center">
                                     ConquError offers various courses which cater the needs of IT and non-IT related professionals, 

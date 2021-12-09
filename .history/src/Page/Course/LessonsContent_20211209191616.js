@@ -124,14 +124,15 @@ const popover = (
                 <meta name="description" content="ConquError Homepage" />
               </Helmet>
             </div>  
-        {/* End of Helmet */}
+
+
+
 
       <Navbar/>
 
       
       <div className="main" style={{marginTop: '7rem'}}>
         <div className="" style={{marginTop:'5rem',  marginBottom:'3rem'}}>
-
     <div className="sidenav">
       <p></p>
       <Link to="/lessons" style={{ textDecoration: 'none'}} data-toggle="tooltip" data-placement="top" title="Back"><FaIcons.FaArrowCircleLeft/></Link>
@@ -141,9 +142,7 @@ const popover = (
       <a href="#code" data-toggle="tooltip" data-placement="top" title="Sample Code"><AiIcons.AiFillCode/></a>
       <a href="#assess" data-toggle="tooltip" data-placement="top" title="Assessment"><MdIcons.MdQuiz/></a>
     </div>
-
     {/* <Link to="/lessons" style={{ textDecoration: 'none', marginLeft:'1rem' }} className="btn btn-primary mb-4">Return</Link> */}
-                    
                     {/* Card Contents */}
                     <Card className="m-2">
                         {/* Overview ID */}
@@ -180,7 +179,7 @@ const popover = (
                                     <Card.Text className="text-justify mt-3">
                                       {courses.courseoverview}
                                     </Card.Text>
-                                  <Button className="mb-5 btn-primary btn" data-id={courses.Directory} onClick={onView}><FaIcons.FaDownload/> Download</Button>  
+                                  <Button className="mb-5 btn-outline" variant="outline-primary" data-id={courses.Directory} onClick={onView}><FaIcons.FaDownload/> Download</Button>  
                                 </Col>
                               </Row>
 
@@ -202,7 +201,7 @@ const popover = (
                                                             height: 0
                                                           }}
                                                           >
-                                                          <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://www.youtube.com/embed/vwzlg-wSDH0" frameBorder="0" title="vid" allowFullScreen/>
+                                                          <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://www.youtube.com/embed/vwzlg-wSDH0" frameBorder="0" title="vid" allow/>
                                           </div>
                                     
                                     </Row>

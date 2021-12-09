@@ -180,7 +180,7 @@ const popover = (
                                     <Card.Text className="text-justify mt-3">
                                       {courses.courseoverview}
                                     </Card.Text>
-                                  <Button className="mb-5 btn-primary btn" data-id={courses.Directory} onClick={onView}><FaIcons.FaDownload/> Download</Button>  
+                                  <Button className="mb-5 btn-outline" data-id={courses.Directory} onClick={onView}><FaIcons.FaDownload/> Download</Button>  
                                 </Col>
                               </Row>
 

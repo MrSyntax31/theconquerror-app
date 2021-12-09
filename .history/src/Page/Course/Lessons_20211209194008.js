@@ -163,23 +163,21 @@ const Lessons = () => {
                         </p>
 
                         <h4 className="mb-3"><strong>Course Path</strong></h4>
-                        <p className="mb-3">
+                        <p >
                         The course path is composed of 7 lessons and good for 21hrs, you can learn everything from basics and fundamentals as well as watch video tutorial and programming demo from us ConquError team.
                         </p>
-                        <p className="mb-3">
+                        <p>
                           This practical C++ course will provide you with everything you need to get started. Then you'll be able to utilize this C++ foundation to learn and work in a variety of fields:
                         </p>
-
-                        <ul className="mb-3 m-3"> 
+                        <ul>
                           <li>•	Operating system</li>
                           <li>•	Desktop Application</li>
                           <li>•	Video games</li>
                           <li>•	Artificial Intelligence</li>
                           <li>•	Arduino Application</li>
                         </ul>
-
-                        <h4 className="mb-3"><strong>How do I conquer my  error?</strong></h4>
-                        <ul className="m-3">
+                        <strong>How do I conquer my  error?</strong>
+                        <ul>
                           <li>•	Simple and Practical: I show you exactly what you need to know to perform meaningful things using C++. This entails concentrating on what may provide you with the most benefit right now.</li>
                           <li>•	Step by step: each lesson under computer programming course is divided to its sub-content and it will help you to understand piece by piece so you can adjust and motivated to go further.</li>
                           <li>•	Tutorial: we add tutorial video to help you to visualize and have an idea on how programs created, and variables use in the programming.</li>

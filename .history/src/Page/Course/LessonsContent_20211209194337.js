@@ -141,9 +141,8 @@ const popover = (
       <a href="#code" data-toggle="tooltip" data-placement="top" title="Sample Code"><AiIcons.AiFillCode/></a>
       <a href="#assess" data-toggle="tooltip" data-placement="top" title="Assessment"><MdIcons.MdQuiz/></a>
     </div>
-
+    
     {/* <Link to="/lessons" style={{ textDecoration: 'none', marginLeft:'1rem' }} className="btn btn-primary mb-4">Return</Link> */}
-                    
                     {/* Card Contents */}
                     <Card className="m-2">
                         {/* Overview ID */}
@@ -180,7 +179,7 @@ const popover = (
                                     <Card.Text className="text-justify mt-3">
                                       {courses.courseoverview}
                                     </Card.Text>
-                                  <Button className="mb-5 btn-primary btn" data-id={courses.Directory} onClick={onView}><FaIcons.FaDownload/> Download</Button>  
+                                  <Button className="mb-5 btn-outline" variant="outline-primary" data-id={courses.Directory} onClick={onView}><FaIcons.FaDownload/> Download</Button>  
                                 </Col>
                               </Row>
 

@@ -44,7 +44,7 @@ class Tutorial extends Component {
 
                                                 <div className="offset-lg-1 col-lg-5 mt-3">
                                                     <div className="main_title text-left">
-                                                        <h2 className="fw-bold mb-3">let’s <br/>
+                                                        <h2 className="fw-bold ">let’s <br/>
                                                             Learn and study  <br/>
                                                             together</h2>
                                                         <p>
