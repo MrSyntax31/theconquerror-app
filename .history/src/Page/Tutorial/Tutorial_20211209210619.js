@@ -4,7 +4,6 @@ import { Row, Container, Col, Card, Tab, Tabs, Badge} from 'react-bootstrap';
 import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
 import './frame.css'
-import './slide.js'
 
 class Tutorial extends Component {
     
@@ -200,12 +199,16 @@ class Tutorial extends Component {
                                                                     <Col sm>sm=true</Col>
                                                                     <Col sm>sm=true</Col>
                                                                 </Row>
+                                                                <div class="w3-content w3-display-container">
+  <img class="mySlides" src="img_snowtops.jpg" style="width:100%"/>
+  <img class="mySlides" src="img_lights.jpg" style="width:100%"/>
+  <img class="mySlides" src="img_mountains.jpg" style="width:100%"/>
+  <img class="mySlides" src="img_forest.jpg" style="width:100%"/>
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
                                                                 </Container>
-                                                                <div id="arrow-left" class="arrow"></div>
-                                                                <div class="slide slide1"></div>
-                                                                <div class="slide slide2"></div>
-                                                                <div class="slide slide3"></div>
-                                                                <div id="arrow-right" class="arrow"></div>
                                                             </Card.Body>
                                                         </Card>
                                                     </Container>

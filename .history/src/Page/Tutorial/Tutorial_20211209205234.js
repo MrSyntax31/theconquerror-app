@@ -4,7 +4,6 @@ import { Row, Container, Col, Card, Tab, Tabs, Badge} from 'react-bootstrap';
 import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
 import './frame.css'
-import './slide.js'
 
 class Tutorial extends Component {
     
@@ -200,12 +199,8 @@ class Tutorial extends Component {
                                                                     <Col sm>sm=true</Col>
                                                                     <Col sm>sm=true</Col>
                                                                 </Row>
+                                                                
                                                                 </Container>
-                                                                <div id="arrow-left" class="arrow"></div>
-                                                                <div class="slide slide1"></div>
-                                                                <div class="slide slide2"></div>
-                                                                <div class="slide slide3"></div>
-                                                                <div id="arrow-right" class="arrow"></div>
                                                             </Card.Body>
                                                         </Card>
                                                     </Container>

@@ -200,12 +200,16 @@ class Tutorial extends Component {
                                                                     <Col sm>sm=true</Col>
                                                                     <Col sm>sm=true</Col>
                                                                 </Row>
+                                                                <div class="w3-content w3-display-container">
+  <img class="mySlides" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" style={{width:"100%"}}/>
+  <img class="mySlides" src="img_lights.jpg" style={{width:"100%"}}/>
+  <img class="mySlides" src="img_mountains.jpg" style={{width:"100%"}}/>
+  <img class="mySlides" src="img_forest.jpg" style={{width:"100%"}}/>
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
                                                                 </Container>
-                                                                <div id="arrow-left" class="arrow"></div>
-                                                                <div class="slide slide1"></div>
-                                                                <div class="slide slide2"></div>
-                                                                <div class="slide slide3"></div>
-                                                                <div id="arrow-right" class="arrow"></div>
                                                             </Card.Body>
                                                         </Card>
                                                     </Container>

@@ -201,11 +201,7 @@ class Tutorial extends Component {
                                                                     <Col sm>sm=true</Col>
                                                                 </Row>
                                                                 </Container>
-                                                                <div id="arrow-left" class="arrow"></div>
-                                                                <div class="slide slide1"></div>
-                                                                <div class="slide slide2"></div>
-                                                                <div class="slide slide3"></div>
-                                                                <div id="arrow-right" class="arrow"></div>
+                                                                
                                                             </Card.Body>
                                                         </Card>
                                                     </Container>

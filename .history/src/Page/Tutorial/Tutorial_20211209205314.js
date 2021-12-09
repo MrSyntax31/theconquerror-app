@@ -4,7 +4,6 @@ import { Row, Container, Col, Card, Tab, Tabs, Badge} from 'react-bootstrap';
 import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
 import './frame.css'
-import './slide.js'
 
 class Tutorial extends Component {
     
@@ -185,9 +184,9 @@ class Tutorial extends Component {
                                                                 <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://www.youtube.com/embed/vwzlg-wSDH0" frameBorder="0" title="vid" allowFullScreen/>
                                                             
                                                                 </div>
-                                                                <Container>
+                                                                <Container >
                                                                     <h4 className="mt-5 fw-bold">Sub Contents</h4>
-                                                                <Row>
+                                                                <Row >
                                                                     <Col>
                                                                         <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://www.youtube.com/embed/jcYaWFhV8oY" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
                                                                     </Col>
@@ -200,12 +199,8 @@ class Tutorial extends Component {
                                                                     <Col sm>sm=true</Col>
                                                                     <Col sm>sm=true</Col>
                                                                 </Row>
+                                                                
                                                                 </Container>
-                                                                <div id="arrow-left" class="arrow"></div>
-                                                                <div class="slide slide1"></div>
-                                                                <div class="slide slide2"></div>
-                                                                <div class="slide slide3"></div>
-                                                                <div id="arrow-right" class="arrow"></div>
                                                             </Card.Body>
                                                         </Card>
                                                     </Container>
