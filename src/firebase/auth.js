@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react"
 import {  } from "../../src/firebase/firebase";
-import { getAuth } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 
 //Create Context to be used by User Auth
 const AuthContext = React.createContext()
@@ -25,9 +25,34 @@ export function AuthProvider({ children }) {
       setCurrentUser(user)
       setLoading(false)
     })
+    
+    //signout users that are not verified
+    if (currentUser)
+    {
+      if (auth.currentUser.emailVerified === false) 
+      {
+        signOut(auth);
+      }
+      else {
+        
+      }
+    }
+    else
+    {
+      //
+    }
 
+    //session timer
+    if (sessionStorage.getItem('sessionKey'))
+    {
+      //do nothing
+    }
+    else
+    {
+      signOut(auth);
+    }
     return checkstate
-  }, [])
+  }, []) // eslint-disable-line react-hooks/exhaustive-deps
 
   const value = {
     currentUser

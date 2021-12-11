@@ -26,6 +26,7 @@ import { AuthProvider } from "../src/firebase/auth"
 import PrivateRoute from './routing/PrivateRoute';
 import RequestDenied from './Components/Error/RequestDenied'
 import TopicList from './Page/Forum/TopicList';
+
 const App = () => {
 
   return (

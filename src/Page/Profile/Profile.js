@@ -100,6 +100,47 @@ const Profile = () => {
   const handleShow5 = ()  => setShow5(true);
   const handleClose5 = () => setShow5(false);
 
+  const [occuHide, showHide1] = useState("")
+  const [instiHide, showHide2] = useState("")
+
+
+  const [bday, setBday] = useState();
+  const [gender, setGender] = useState();
+  const [occu, setOccu] = useState();
+  const [insti, setInsti] = useState();
+  const [address, setAddress] = useState();
+
+  function OccupationValue(e){
+
+    setOccu(e.target.value)
+
+    if(e.target.value === ""){
+      showHide1("show")
+
+
+    }
+    else{
+      showHide1("")
+      
+    }
+  }
+
+  function InstitutionValue(e){
+
+    setInsti(e.target.value)
+
+    if(e.target.value === ""){
+      showHide2("show")
+
+
+    }
+    else{
+      showHide2("")
+      
+    }
+  }
+
+
   //declare text input for change password (inside Modal)
   const [currentPass, setPass1] = useState();
   const [newPass1, setPass2] = useState();
@@ -203,11 +244,11 @@ const Profile = () => {
     
     onSnapshot(doc(firestoredb, "warrioravatar", `${profile.level}` ), (doc) => {
         const docdata = (doc.data())
-
+      
         if (docdata)
         {   
           setAvatar(docdata);
-
+            
         }
         else{
         
@@ -231,20 +272,16 @@ const Profile = () => {
     const profileData = ref(realtimedb, '/users/' + userId);
     onValue(profileData, (snapshot) => {
       setData(snapshot.val());
-     // setHandler(snapshot.val().level)
+
+      
+      
   })
 }
         
         showProfile();
-
-        if(profile)
-        {
-          onLoad();
-        }
-        else
-        {
-          console.log("empty user data")
-        }
+        onLoad();
+       
+        
        
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -414,28 +451,24 @@ const Profile = () => {
                                           </Modal.Header>
                                           <Modal.Body>
                                           <Form.Group id="fname" className="mb-2">
-                                            <Form.Label>First Name</Form.Label>
-                                            <Form.Control value=""  name = "name" type="name" required placeholder="First Name"/>
-                                          </Form.Group>
-
-                                          <Form.Group id="lname" className="mb-2">
-                                            <Form.Label>Last Name</Form.Label>
-                                            <Form.Control value=""   name = "name" type="name" placeholder="Last Name"/>
+                                            <Form.Label>Full Name</Form.Label>
+                                            <Form.Control value={profile.Name}  name = "name" type="name" disabled placeholder="Full Name"/>
                                           </Form.Group>
 
                                           <Form.Group id="" className="mb-2">
                                             <Form.Label>Address</Form.Label>
-                                            <Form.Control value=""   name = "name" type="name" placeholder="Address"/>
+                                            <Form.Control value={profile.Address}   name = "name" type="name" placeholder="Address"/>
                                           </Form.Group>
 
                                           <Form.Group id="" className="mb-2">
                                             <Form.Label>Email</Form.Label>
-                                            <Form.Control value=""   name = "name" type="email" placeholder="Email Address"/>
+                                            
+                                            <Form.Control value={profile.email}   name = "name" type="email" disabled placeholder="Email Address"/>
                                           </Form.Group>
 
                                           <Form.Group id="gender">
                                             <Form.Label>Gender</Form.Label>
-                                            <Form.Select aria-label="Default select example" value="">
+                                            <Form.Select aria-label="Default select example" value={profile.Gender || ""}>
                                             <option>Select Gender</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
@@ -450,23 +483,25 @@ const Profile = () => {
                                           <DatePicker className="form-control"
                                           dateFormat="MMMM d, yyyy"
                                           placeholderText="Select your Birthday"
+                                          value={profile.Birthday}
+                                        
                                         />
                                         </Form.Group>
 
                                         <Form.Group id="occu">
                                         <Form.Label>Occupation</Form.Label>
-                                        <Form.Select aria-label="Default select example" value="">
+                                        <Form.Select aria-label="Default select example" value={occu || profile.Occupation} onChange={e => OccupationValue(e)}>
                                         <option>Select Occupation</option>
                                         <option value="Student">Student</option>
                                         <option value="Professor">Professor</option>
                                         <option value="Others">Others.</option>
                                         </Form.Select>
-                                        <Form.Control className="mt-2" value=""  name = "Occupation" type="text"  required placeholder="Please Specify"/> 
+                                        { occuHide &&  <Form.Control  className="mt-2" value={occu } onChange={e => setOccu(e.target.value)}  name = "Occupation" type="text"  required placeholder="Please Specify"/> }
                                         </Form.Group>
 
                                         <Form.Group id="inst">
                                         <Form.Label>Institution</Form.Label>
-                                        <Form.Select aria-label="Default select example" value="">
+                                        <Form.Select aria-label="Default select example" value={insti || profile.Institution} onChange={e => InstitutionValue(e)} required>
                                         <option>Select Institution</option>
                                         <option value="LSPU">LSPU</option>
                                         <option value="PUP">PUP</option>
@@ -474,9 +509,10 @@ const Profile = () => {
                                         <option value="BSIT">BSIT</option>
                                         <option value="DICT">DICT</option>
                                         <option value="DCET">DCET</option>
-                                        <option value="Others">Others.</option>
+                                        <option value="">Others.</option>
                                         </Form.Select>
-                                        <Form.Control className="mt-2" value=""  name = "Institution" type="text"  required placeholder="Please Specify"/>
+                                        { instiHide &&  <Form.Control className="mt-2" value={insti} onChange={e => setInsti(e.target.value)}  name = "Institution" type="text"  required placeholder="Please Specify"/> }
+            
                                         </Form.Group>
 
 
