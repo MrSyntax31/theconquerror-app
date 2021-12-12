@@ -10,11 +10,10 @@
     </g>
     <g transform="matrix(1.23322,0,0,1.23322,45.2858,28.1096)">
         <g>
-            <text x="0px" y="0px" style="font-family:'TwCenMT-Bold', 'Tw Cen MT', sans-serif;font-weight:700;font-size:23px;fill:rgb(0,174,239);">Conqu</text>
-            <text x="62.172px" y="0px" style="font-family:'TwCenMT-Bold', 'Tw Cen MT', sans-serif;font-weight:700;font-size:23px;fill:white;">Er</text>
-        </g>
-        <g transform="matrix(1,0,0,1,80.848,0)">
-            <text x="0px" y="0px" style="font-family:'TwCenMT-Bold', 'Tw Cen MT', sans-serif;font-weight:700;font-size:23px;fill:white;">ror</text>
+            <g>
+                <text x="0px" y="0px" style="font-family:'TwCenMT-Bold', 'Tw Cen MT', sans-serif;font-weight:700;font-size:23px;fill:rgb(0,186,239);">Conqu</text>
+                <text x="62.172px" y="0px" style="font-family:'TwCenMT-Bold', 'Tw Cen MT', sans-serif;font-weight:700;font-size:23px;fill:white;">Er<tspan x="80.848px 88.047px " y="0px 0px ">ro</tspan>r</text>
+            </g>
         </g>
     </g>
     <defs>
