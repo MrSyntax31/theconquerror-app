@@ -918,20 +918,8 @@ class Tutorial extends Component {
                                                                                                         <div className="main_title text-left">
                                                                                                         <h5 className="fw-bold">VLOG 4 - Mahalaga bang graduate ka para maging Programmer?</h5>
                                                                                                             <p>
-                                                                                                            paano maging programmer,
-                                                                                                            paano maging magaling na programmer,
-                                                                                                            paano ba maging programmer,
-                                                                                                            paano maging computer programmer,
-                                                                                                            paano mag programming,
-                                                                                                            ano nga ba ang programming,
-                                                                                                            ano ang computer programming
-                                                                                                            programming tagalog tutorial,
-                                                                                                            programming for beginners tagalog,
-                                                                                                            computer programming tagalog,
-                                                                                                            fundamentals of programming tagalog,
-                                                                                                            programming language tagalog,
-                                                                                                            what is programming tagalog
-
+                                                                                                            Advice para maging successful sa career na napili mo.
+                                                                                                            Advice para sa hindi alam kung ano gustong maging career.
                                                                                                             </p>
                                                                                                             
                                                                                                             <br/>
@@ -955,8 +943,19 @@ class Tutorial extends Component {
                                                                                                         <div className="main_title text-left">
                                                                                                         <h5 className="fw-bold">VLOG 5 - Dalawang bagay na kaylangan mong mahanap para maging succesful</h5>
                                                                                                             <p>
-                                                                                                            Advice para maging successful sa career na napili mo.
-                                                                                                            Advice para sa hindi alam kung ano gustong maging career.
+                                                                                                            paano maging programmer,
+                                                                                                            paano maging magaling na programmer,
+                                                                                                            paano ba maging programmer,
+                                                                                                            paano maging computer programmer,
+                                                                                                            paano mag programming,
+                                                                                                            ano nga ba ang programming,
+                                                                                                            ano ang computer programming
+                                                                                                            programming tagalog tutorial,
+                                                                                                            programming for beginners tagalog,
+                                                                                                            computer programming tagalog,
+                                                                                                            fundamentals of programming tagalog,
+                                                                                                            programming language tagalog,
+                                                                                                            what is programming tagalog
 
                                                                                                             </p>
                                                                                                             

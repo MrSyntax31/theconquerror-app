@@ -903,6 +903,43 @@ class Tutorial extends Component {
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
+                                                                                    </section>
+                                                                                
+                                                                                    <section className="about_area section_gap mb-3">
+                                                                                            <div className="">
+                                                                                                <div className="row justify-content-start align-items-center">
+                                                                                                    <div className="col-lg-4">
+                                                                                                        <div className="about_img">
+                                                                                                            <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/N5StlNwcLuY?list=PLVT3i1wfhKYD9TZ6lDjHDMtn8XbFpltCE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                                                                        </div>
+                                                                                                    </div>
+
+                                                                                                    <div className="offset-lg-1 col-lg-5 mt-3">
+                                                                                                        <div className="main_title text-left">
+                                                                                                        <h5 className="fw-bold">VLOG 3 - Para sayo ba ang pagiging Programmer</h5>
+                                                                                                            <p>
+                                                                                                            paano maging programmer,
+                                                                                                            paano maging magaling na programmer,
+                                                                                                            paano ba maging programmer,
+                                                                                                            paano maging computer programmer,
+                                                                                                            paano mag programming,
+                                                                                                            ano nga ba ang programming,
+                                                                                                            ano ang computer programming
+                                                                                                            programming tagalog tutorial,
+                                                                                                            programming for beginners tagalog,
+                                                                                                            computer programming tagalog,
+                                                                                                            fundamentals of programming tagalog,
+                                                                                                            programming language tagalog,
+                                                                                                            what is programming tagalog
+
+                                                                                                            </p>
+                                                                                                            
+                                                                                                            <br/>
+                                                                                                            <span className="duration">Duration: 12 minutes, 54 seconds</span><br/>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
                                                                                     </section> 
                                                                                     
                                                                                     <section className="about_area section_gap mb-3">
@@ -910,7 +947,7 @@ class Tutorial extends Component {
                                                                                                 <div className="row justify-content-start align-items-center">
                                                                                                     <div className="col-lg-4">
                                                                                                         <div className="about_img">
-                                                                                                            <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/eQHnE-GyE3A?list=PLVT3i1wfhKYD9TZ6lDjHDMtn8XbFpltCE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                                                                            <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/N5StlNwcLuY?list=PLVT3i1wfhKYD9TZ6lDjHDMtn8XbFpltCE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
                                                                                                         </div>
                                                                                                     </div>
 
@@ -935,38 +972,12 @@ class Tutorial extends Component {
                                                                                                             </p>
                                                                                                             
                                                                                                             <br/>
-                                                                                                            <span className="duration">Duration: 12 minutes, 24 seconds</span><br/>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                    </section> 
-
-                                                                                    <section className="about_area section_gap mb-3">
-                                                                                            <div className="">
-                                                                                                <div className="row justify-content-start align-items-center">
-                                                                                                    <div className="col-lg-4">
-                                                                                                        <div className="about_img">
-                                                                                                            <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/iGr_gTsah6o?list=PLVT3i1wfhKYD9TZ6lDjHDMtn8XbFpltCE" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
-                                                                                                        </div>
-                                                                                                    </div>
-
-                                                                                                    <div className="offset-lg-1 col-lg-5 mt-3">
-                                                                                                        <div className="main_title text-left">
-                                                                                                        <h5 className="fw-bold">VLOG 5 - Dalawang bagay na kaylangan mong mahanap para maging succesful</h5>
-                                                                                                            <p>
-                                                                                                            Advice para maging successful sa career na napili mo.
-                                                                                                            Advice para sa hindi alam kung ano gustong maging career.
-
-                                                                                                            </p>
-                                                                                                            
-                                                                                                            <br/>
                                                                                                             <span className="duration">Duration: 12 minutes, 54 seconds</span><br/>
                                                                                                         </div>
                                                                                                     </div>
                                                                                                 </div>
                                                                                             </div>
-                                                                                    </section>
+                                                                                    </section> 
 
                                                                                 </div>            
                                                                         </div>
