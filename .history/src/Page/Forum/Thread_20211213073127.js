@@ -54,7 +54,7 @@ const Thread = () => {
         if (user === null){
 
             if (window.
-                swal({type: 'error', icon: 'error', title: 'You need to be logged in to comment', text: 'Please login to comment'})){
+                swal({type: 'error', icon: 'error'title: 'You need to be logged in to comment', text: 'Please login to comment'})){
                 
                 // Save it!
                history.push("/login")
