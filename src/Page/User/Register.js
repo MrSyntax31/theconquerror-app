@@ -11,7 +11,6 @@ import ReCAPTCHA from 'react-google-recaptcha';
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
 
-
     export default function Register() {
 
         //declare authentication of firebases
@@ -22,7 +21,7 @@ import "react-datepicker/dist/react-datepicker.css";
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-          //errors are thrown here
+    //errors are thrown here
     const [error, setError] = useState("")
     const [success, setSuccess] = useState("")
     const history = useHistory();
@@ -116,7 +115,7 @@ import "react-datepicker/dist/react-datepicker.css";
              
                   createUserWithEmailAndPassword(auth,email,password)
                   .then(() => {
-                    //check if user successfully created account in order to continue hehe
+                    //check if user successfully created account in order to continue
                     onAuthStateChanged(auth, (user) => {
                       if (user) {
           
@@ -181,7 +180,7 @@ import "react-datepicker/dist/react-datepicker.css";
         }
 
     }
-    
+  
    
 
     return (
@@ -211,25 +210,25 @@ import "react-datepicker/dist/react-datepicker.css";
             
             <Form noValidate validated={validated} onSubmit={handleSubmit}>
             <div className="page-wrapper  p-t-100 p-b-50">
-        <div class="wrapper wrapper--w900">
-            <div class="card card-6">
-                <div class="">
+        <div className="wrapper wrapper--w900">
+            <div className="card card-6">
+                <div className="">
                   <Row>
-                    <Col><h5 className="text-primary m-3 fw-bold fs-1 mt-5">Welcome!</h5></Col>
+                    <Col><h5 className="text-light m-3 fw-bold fs-1 mt-5">Welcome!</h5></Col>
                     <Col><img variant="top" className="mt-5 w-25" src="https://cdn-icons-png.flaticon.com/512/3763/3763359.png" alt="img-header" /></Col>
                   </Row>
 
                 </div>
-                <div class="card-body">
+                <div className="card-body">
                 <h3 className="text-center mb-4 text-primary fw-bold">Register</h3>
                         {error && <Alert variant="danger">{error}</Alert>}
                         {success && <Alert variant="success">{success}</Alert>}
                     
-                      <div class="form-row">
+                      <div className="form-row">
                             <div className="name">Email and Password</div>
                             <div className="value">
                                
-                                <Form.Group id="email">
+                                <Form.Group id="email" className="mb-3">
                                 <Form.Label>Email</Form.Label>
                                 <Form.Control  value={email || ''} onChange={e => setEmail(e.target.value)}  name = "email" type="email" autoComplete="username" required placeholder="Email Address"/>
                                 <Form.Control.Feedback type="invalid">
@@ -238,7 +237,7 @@ import "react-datepicker/dist/react-datepicker.css";
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
 
-                                <Form.Group id="password">
+                                <Form.Group id="password" className="mb-3">
                                 <Form.Label>Password</Form.Label>
                                 <Form.Control  value={password || ''} onChange={e => setPass(e.target.value)}  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name = "password" type="password" autoComplete="new-password" required placeholder="Password"/>
                                 <Form.Control.Feedback type="invalid">
@@ -247,7 +246,7 @@ import "react-datepicker/dist/react-datepicker.css";
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                                 </Form.Group>
                                 
-                                <Form.Group id="password2">
+                                <Form.Group id="password2" className="mb-3">
                                 <Form.Label>Confirm Password</Form.Label>
                                 <Form.Control  value={password2 || ''} onChange={e => setPass2(e.target.value)}  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"  name = "password" type="password" autoComplete="new-password" required placeholder="Password"/>
                                 <Form.Control.Feedback type="invalid">
@@ -263,7 +262,7 @@ import "react-datepicker/dist/react-datepicker.css";
                             <div className="name">Personal Information</div>
                             <div className="value">
 
-                              <Form.Group id="fname">
+                              <Form.Group id="fname" className="mb-3">
                               <Form.Label>First Name</Form.Label>
                                 <Form.Control  type="text" id="fname" value={fname || ''} onChange={e => setFname(e.target.value)} name="fname" pattern="[a-zA-Z\s]*" required placeholder="First Name"/>
                                 <Form.Control.Feedback type="invalid">
@@ -272,7 +271,7 @@ import "react-datepicker/dist/react-datepicker.css";
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                               </Form.Group>
 
-                              <Form.Group id="lname">
+                              <Form.Group id="lname" className="mb-3">
                               <Form.Label>Last Name</Form.Label>
                                 <Form.Control  value={lname || ''} onChange={e => setLname(e.target.value)}   name = "name" type="name" required placeholder="Last Name"/>
                                 <Form.Control.Feedback type="invalid">
@@ -281,7 +280,7 @@ import "react-datepicker/dist/react-datepicker.css";
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                               </Form.Group>
 
-                              <Form.Group id="gender">
+                              <Form.Group id="gender" className="mb-3">
                                 <Form.Label>Gender</Form.Label>
                                 <Form.Control as='select' value={gender || ''} onChange={e => setGender(e.target.value)} required >
                                 <option value="">Select Gender</option>
@@ -297,7 +296,7 @@ import "react-datepicker/dist/react-datepicker.css";
                                     <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
                               </Form.Group>
                           
-                              <Form.Group id="bday">
+                              <Form.Group id="bday" className="mb-3">
                               <Form.Label>Birthday</Form.Label>
                                 <DatePicker className="form-control"
                                 dateFormat="MMMM d, yyyy"
@@ -307,7 +306,7 @@ import "react-datepicker/dist/react-datepicker.css";
                                 placeholderText="Select your Birthday"
                                   required
                               />
-                              <Form.Group id="address">
+                              <Form.Group id="address" className="mb-3 mt-3">
                               <Form.Label>Address</Form.Label>
                               <Form.Control  value={address || ''} onChange={e => setAddress(e.target.value)}   name = "address" type="address"  required placeholder="Address"/>
                               <Form.Control.Feedback type="invalid">
@@ -317,7 +316,7 @@ import "react-datepicker/dist/react-datepicker.css";
                               </Form.Group>
                               </Form.Group>
 
-                              <Form.Group id="occu">
+                              <Form.Group id="occu" className="mb-3">
                               <Form.Label>Occupation</Form.Label>
                               <Form.Control as='select' value={occu || ''} onChange={e => OccupationValue(e)} required>
                                 <option value="">Select Occupation</option>
@@ -329,7 +328,7 @@ import "react-datepicker/dist/react-datepicker.css";
                               { occuHide &&  <Form.Control  className="mt-2" value={occu } onChange={e => setOccu(e.target.value)}  name = "Occupation" type="text"  required placeholder="Please Specify"/>  }
                               </Form.Group>
 
-                              <Form.Group id="inst">
+                              <Form.Group id="inst" className="mb-3">
                               <Form.Label>Institution</Form.Label>
                               <Form.Control as='select' value={insti || ''} onChange={e => InstitutionValue(e)} required>
                                 <option value="">Select Institution</option>
@@ -347,28 +346,28 @@ import "react-datepicker/dist/react-datepicker.css";
                             </div>
                         </div>
 
-                        <div class="form-row">
-                            <div class="name"></div>
-                            <div class="value">
+                        <div className="form-row">
+                            <div className="name"></div>
+                            <div className="value">
                             <div className="col-xs-1 mt-3" align="center">
                                     <ReCAPTCHA
                                     sitekey="6Lf0LR4dAAAAADXK477tFevARCNFk0rY-Z5ouawp"
                                     onChange={onChange}
                                     />
-                                <div class="label--desc">Prove you're not a robot.</div>
+                                <div className="label--desc">Prove you're not a robot.</div>
                                 </div>
                             </div>
                         </div>
                
                 </div>
 
-                <div class="card-footer">
+                <div className="card-footer">
                   
                 <p>By Signing-up you have already read and agree to our Terms and Conditions. </p>
                   <p>You can read it here.</p>
               
                 {/* Modal Button */}
-                <p variant="primary" type="button"  onClick={handleShow} className="text-primary text-decoration-underline mt-3 mb-3">
+                <p variant="primary"  onClick={handleShow} className="text-primary text-decoration-underline mt-3 mb-3">
                 Terms and Conditions
                 </p>
 

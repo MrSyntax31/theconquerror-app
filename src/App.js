@@ -13,7 +13,6 @@ import Certificate from './Page/Course/Certificate'
 import Games from './Page/Games/Games';
 import Hangman from './Page/Games/Hangman';
 import Quiz from './Page/Games/Quiz';
-import Puzzle from './Page/Games/Puzzle';
 import Forum from './Page/Forum/Forum';
 import Thread from './Page/Forum/Thread';
 import Tutorial from './Page/Tutorial/Tutorial';
@@ -60,8 +59,6 @@ const App = () => {
      <PrivateRoute path="/hangman" component={Hangman}/>
 
      <PrivateRoute path="/quiz" component={Quiz}/>
-
-     <PrivateRoute path="/puzzle" component={Puzzle}/>
    
      <Route path="/forgot-pass" component={ForgotPass}/>
     
