@@ -416,7 +416,7 @@ const HomeUser = () => {
                   </div>
                </Col>
             </Row>
-         </Container>
+            </Container>
          </section>
 
          {/* Section for Technojet.Dev Team*/}

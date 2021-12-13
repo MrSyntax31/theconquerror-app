@@ -415,8 +415,7 @@ const HomeUser = () => {
                      <p>Free</p> 
                   </div>
                </Col>
-            </Row>
-         </Container>
+            </Row></Container>
          </section>
 
          {/* Section for Technojet.Dev Team*/}
