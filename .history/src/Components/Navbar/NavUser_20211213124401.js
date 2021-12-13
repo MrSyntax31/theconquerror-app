@@ -16,7 +16,7 @@ export default function NavUser() {
        signOut(auth).then(() => {
       swal("Logout", "You have been logged out", "success");
       localStorage.removeItem('userProfile')
-      sessionStorage.removeItem('userlvl')
+      se
       history.push("/")
       
       }).catch((error) => {

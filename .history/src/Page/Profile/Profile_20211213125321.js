@@ -71,10 +71,10 @@ const Profile = () => {
    //fetches the id of the current logged-in user which will be used to reference the data inside the Realtime database
    const userId = auth.currentUser.uid;   
 
-    //MODALS
-    //Change Password
+  //MODALS
+  //Change Password
     const [show, setShow] = useState(false);
-    //Feedback
+ //Feedback
     const [show2, setShow2] = useState(false);
 
     //Upload Files
@@ -82,15 +82,14 @@ const Profile = () => {
     const handleShow4 = () => setShow4(true);
     const handleClose4 = () => setShow4(false);
 
-    //Change Password
+ //Change Password
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
-
-    //Feedback
+//Feedback
     const handleClose2 = () => setShow2(false);
     const handleShow2 = () => setShow2(true);
 
-  //Offcanvas for setting handlers
+//Offcanvas for setting handlers
   const [showOff, setShowOff] = useState(false);
 
   const handleCloseOff = () => setShowOff(false);
@@ -100,14 +99,6 @@ const Profile = () => {
 
   const handleShow5 = ()  => setShow5(true);
   const handleClose5 = () => setShow5(false);
-
-  //For Update
-  const [showUpdate, setShowUpdate ] = useState(false);
-
-  const handleShowUpdate = ()  => setShowUpdate(true);
-  const handleCloseUpdate = () => setShowUpdate(false);
-
-
 
   const [occuHide, showHide1] = useState("")
   const [instiHide, showHide2] = useState("")
@@ -574,7 +565,7 @@ function updateProfile(){
             
                                         </Form.Group>
 
-                                        <Button variant="primary" type="submit" className="btn btn-primary mt-3 w-100" onClick={handleClose5}> Update </Button>
+                                        <Button variant="primary" type="submit" className="btn btn-primary mt-3 w-100"> Update </Button>
                                         </Form>
 
                                           </Modal.Body>

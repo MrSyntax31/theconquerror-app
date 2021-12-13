@@ -101,13 +101,11 @@ const Profile = () => {
   const handleShow5 = ()  => setShow5(true);
   const handleClose5 = () => setShow5(false);
 
-  //For Update
-  const [showUpdate, setShowUpdate ] = useState(false);
+  //For Date Picker
+  const [show5, setShow5 ] = useState(false);
 
-  const handleShowUpdate = ()  => setShowUpdate(true);
-  const handleCloseUpdate = () => setShowUpdate(false);
-
-
+  const handleShow5 = ()  => setShow5(true);
+  const handleClose5 = () => setShow5(false);
 
   const [occuHide, showHide1] = useState("")
   const [instiHide, showHide2] = useState("")
@@ -574,7 +572,7 @@ function updateProfile(){
             
                                         </Form.Group>
 
-                                        <Button variant="primary" type="submit" className="btn btn-primary mt-3 w-100" onClick={handleClose5}> Update </Button>
+                                        <Button variant="primary" type="submit" className="btn btn-primary mt-3 w-100"> Update </Button>
                                         </Form>
 
                                           </Modal.Body>

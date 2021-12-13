@@ -574,7 +574,7 @@ function updateProfile(){
             
                                         </Form.Group>
 
-                                        <Button variant="primary" type="submit" className="btn btn-primary mt-3 w-100" onClick={handleClose5}> Update </Button>
+                                        <Button variant="primary" type="submit" className="btn btn-primary mt-3 w-100" onClick={handleCloseUpdate}> Update </Button>
                                         </Form>
 
                                           </Modal.Body>
