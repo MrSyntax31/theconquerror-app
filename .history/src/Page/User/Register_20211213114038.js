@@ -264,9 +264,8 @@ import "react-datepicker/dist/react-datepicker.css";
                                 Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters.
                                   </Form.Control.Feedback>
                                 </Form.Group>
-                                <div className="form-group mt-2 text-secondary">
-                                  <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password</i>
-                                </div>
+                                <div className="form-group mt-2 text-secondary"></</div>
+                                <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password</i>
                             </div>
                         </div>
                     

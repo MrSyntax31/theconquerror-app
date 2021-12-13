@@ -265,8 +265,9 @@ import "react-datepicker/dist/react-datepicker.css";
                                   </Form.Control.Feedback>
                                 </Form.Group>
                                 <div className="form-group mt-2 text-secondary">
-                                  <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password</i>
+                                  
                                 </div>
+                                <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password</i>
                             </div>
                         </div>
                     

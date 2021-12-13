@@ -189,10 +189,8 @@ export default function Login() {
                                       <Form.Control.Feedback type="invalid">
                                     Please enter a password.
                                   </Form.Control.Feedback>
-                                    <div className="form-group mt-2 text-secondary">
-                                      <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password</i>
-                                    </div>
-                                  
+                                  <div></div>
+                                  <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password</i>
                                   </Form.Group>
                               
                             <div className="w-100 mt-2 justify-content-right">

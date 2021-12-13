@@ -24,7 +24,7 @@ import "react-datepicker/dist/react-datepicker.css";
     //errors are thrown here
     const [error, setError] = useState("")
     const [success, setSuccess] = useState("")
-    const history = useHistory();
+    //const history = useHistory();
 
 
        const [occuHide, showHide1] = useState("")

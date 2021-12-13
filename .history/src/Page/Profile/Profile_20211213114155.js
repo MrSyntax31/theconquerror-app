@@ -223,9 +223,10 @@ const Profile = () => {
 
   }     
         //update profile
-        //function edit(){
-       // }
+        function edit(){
 
+        }
+        
         //Function for Modal (Send Feedback)
         async  function sendFeedback(){
 

@@ -224,6 +224,7 @@ const Profile = () => {
   }     
         //update profile
         //function edit(){
+
        // }
 
         //Function for Modal (Send Feedback)

@@ -14,6 +14,7 @@ import * as FaIcons from 'react-icons/fa';
 import * as SiIcons from 'react-icons/si';
 import { Link } from "react-router-dom"
 import './Home.css';
+import './count.js'
 
 import Navbar from '../../Components/Navbar/Navbar'
 
