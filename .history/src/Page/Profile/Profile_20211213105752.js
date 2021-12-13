@@ -318,7 +318,7 @@ function updateProfile(){
       Address: address,
       email: profile.email,
       Institution: insti,
-      level: profile.level
+      level: 1
     };
   
   

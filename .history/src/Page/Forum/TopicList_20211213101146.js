@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import { Helmet } from "react-helmet";
 import {  Modal, Button,  OverlayTrigger, Popover, Offcanvas, Alert, ProgressBar} from 'react-bootstrap';
-import { getFirestore, collection, query, orderBy, startAfter, limit, getDocs, doc,setDoc, endBefore, limitToLast, where } from 'firebase/firestore';
+import { getFirestore, collection, query, orderBy, startAfter, limit, getDocs, doc,setDoc, endBefore, limitToLast } from 'firebase/firestore';
 import {} from '../../firebase/firebase'
 import {Container,  Row,Col, Form, FormControl, ButtonGroup} from 'react-bootstrap'
 import { getAuth } from 'firebase/auth'
@@ -61,38 +61,19 @@ export default function TopicList() {
         const handleChange = (e) => {
         
           setTags(e.target.getAttribute("value"));
-          
+          checkTag(true);
         };
 
         const handleChangeTag = (e) => {
         
           setTags(e.target.getAttribute("value"));
-
-          if (tags === "Array") {
-
-            const Arr = query(collection(forumdb, "topics"), where("tags", "==", tags));
-
-            setRef(Arr)
-
-            fetch();
-            
-          }
-          else if (tags === "") {
-
-          }
-
-          else {
-
-          }
+        
          
         };
 
-      
+        const [collRef, setRef] = useState("topics");
 
-        const q = collection(forumdb, "topics");
-
-        const [collRef, setRef] = useState(q);
-
+        const DefaultcollectionRef = collection(forumdb, "topics");
         const first = query(collRef, orderBy("created_at","desc"), limit(5));
             
         const [validated, setValidated] = useState(false);
@@ -147,7 +128,7 @@ export default function TopicList() {
               } else{
                 try {          
                   const next =
-                  query(collRef,
+                  query(collectionRef,
                   orderBy("created_at","desc"),
                   startAfter(lastpage),
                   limit(5));
@@ -178,7 +159,7 @@ export default function TopicList() {
 
               try {          
                 const back =
-                query(collRef,
+                query(collectionRef,
                 orderBy("created_at","desc"),
                 endBefore(lastpage),
                 limitToLast(5));

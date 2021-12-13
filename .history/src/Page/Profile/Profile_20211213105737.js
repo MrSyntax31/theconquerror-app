@@ -316,9 +316,9 @@ function updateProfile(){
       Gender : gender,
       Occupation: occu,
       Address: address,
-      email: profile.email,
+      email: user.email,
       Institution: insti,
-      level: profile.level
+      level: 1
     };
   
   

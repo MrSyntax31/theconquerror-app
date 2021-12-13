@@ -74,7 +74,6 @@ export default function TopicList() {
 
             setRef(Arr)
 
-            fetch();
             
           }
           else if (tags === "") {

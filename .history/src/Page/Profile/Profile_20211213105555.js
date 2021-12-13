@@ -311,14 +311,14 @@ function updateProfile(){
   
     // A post entry.
     const postData = {  
-      Name: profile.Name,
-      Birthday: profile.Birthday,
+      Name: fname+lname,
+      Birthday: bday,
       Gender : gender,
       Occupation: occu,
       Address: address,
-      email: profile.email,
+      email: user.email,
       Institution: insti,
-      level: profile.level
+      level: 1
     };
   
   
@@ -494,10 +494,17 @@ function updateProfile(){
                                           </Modal.Header>
                                           <Modal.Body>
                                           <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                                            
 
                                           <Form.Group id="" className="mb-2">
                                             <Form.Label>Address</Form.Label>
                                             <Form.Control value={ address || profile.Address } onChange={e => setAddress(e.target.value)}  name = "name" type="name" placeholder="Address"/>
+                                          </Form.Group>
+
+                                          <Form.Group id="" className="mb-2">
+                                            <Form.Label>Email</Form.Label>
+                                            
+                                            <Form.Control value={profile.email}   name = "name" type="email" disabled placeholder="Email Address"/>
                                           </Form.Group>
 
                                           <Form.Group id="gender">

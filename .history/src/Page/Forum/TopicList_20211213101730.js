@@ -74,8 +74,6 @@ export default function TopicList() {
 
             setRef(Arr)
 
-            fetch();
-            
           }
           else if (tags === "") {
 
@@ -178,7 +176,7 @@ export default function TopicList() {
 
               try {          
                 const back =
-                query(collRef,
+                query(collectionRef,
                 orderBy("created_at","desc"),
                 endBefore(lastpage),
                 limitToLast(5));

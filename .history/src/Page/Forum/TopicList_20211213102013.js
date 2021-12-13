@@ -74,7 +74,6 @@ export default function TopicList() {
 
             setRef(Arr)
 
-            fetch();
             
           }
           else if (tags === "") {
@@ -210,7 +209,7 @@ export default function TopicList() {
          fetch();
 
           
-          },[]); // eslint-disable-line react-hooks/exhaustive-deps
+          },[handle]); // eslint-disable-line react-hooks/exhaustive-deps
 
       
      

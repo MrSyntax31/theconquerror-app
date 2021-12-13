@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import { Helmet } from "react-helmet";
 import {  Modal, Button,  OverlayTrigger, Popover, Offcanvas, Alert, ProgressBar} from 'react-bootstrap';
-import { getFirestore, collection, query, orderBy, startAfter, limit, getDocs, doc,setDoc, endBefore, limitToLast, where } from 'firebase/firestore';
+import { getFirestore, collection, query, orderBy, startAfter, limit, getDocs, doc,setDoc, endBefore, limitToLast } from 'firebase/firestore';
 import {} from '../../firebase/firebase'
 import {Container,  Row,Col, Form, FormControl, ButtonGroup} from 'react-bootstrap'
 import { getAuth } from 'firebase/auth'
@@ -61,39 +61,12 @@ export default function TopicList() {
         const handleChange = (e) => {
         
           setTags(e.target.getAttribute("value"));
-          
+          checkTag(true);
         };
 
-        const handleChangeTag = (e) => {
-        
-          setTags(e.target.getAttribute("value"));
-
-          if (tags === "Array") {
-
-            const Arr = query(collection(forumdb, "topics"), where("tags", "==", tags));
-
-            setRef(Arr)
-
-            fetch();
-            
-          }
-          else if (tags === "") {
-
-          }
-
-          else {
-
-          }
-         
-        };
-
-      
-
-        const q = collection(forumdb, "topics");
-
-        const [collRef, setRef] = useState(q);
-
-        const first = query(collRef, orderBy("created_at","desc"), limit(5));
+    
+        const collectionRef = collection(forumdb, "topics");
+        const first = query(collectionRef, orderBy("created_at","desc"), limit(5));
             
         const [validated, setValidated] = useState(false);
 
@@ -147,7 +120,7 @@ export default function TopicList() {
               } else{
                 try {          
                   const next =
-                  query(collRef,
+                  query(collectionRef,
                   orderBy("created_at","desc"),
                   startAfter(lastpage),
                   limit(5));
@@ -178,7 +151,7 @@ export default function TopicList() {
 
               try {          
                 const back =
-                query(collRef,
+                query(collectionRef,
                 orderBy("created_at","desc"),
                 endBefore(lastpage),
                 limitToLast(5));
@@ -444,47 +417,16 @@ const popover = (
                                   <br/><br/>
                                   Please note that tags are important for the forum to work properly!
                             
-                                  <Container>
-                      <Row>
-                        <Col xs={{ order: 'last' }}>
-                        <div className="form-check">
-                        <input type="radio" id="Array" name="Programming" value="Array" className="form-check-input" onChange={handleChangeTag}/>
-                        <label for="Array" className="form-check-label">Array</label>
-                        </div>
-                        <div className="form-check">
-                            <input type="radio" id="C++" name="Programming" value="C++"  className="form-check-input" onChange={handleChangeTag}/>
-                            <label for="C" className="form-check-label">C++</label>
-                        </div>
-                        <div className="form-check">
-                            <input type="radio" id="CodeBlocks" name="Programming" value="CodeBlocks" className="form-check-input" onChange={handleChangeTag}/>
-                            <label for="CodeBlocks" className="form-check-label">CodeBlocks</label>
-                        </div>
-                        </Col>
-
-                        <Col xs={{ order: 'first' }}>
-                        <div className="form-check">
-                        <input type="radio" id="Function" name="Programming" value="Function" className="form-check-input" onChange={handleChangeTag}/>
-                        <label for="Function" className="form-check-label">Function</label>
-                        </div>
-                        <div className="form-check">
-                            <input type="radio" id="Nested Condition" name="Programming" value="Nested Condition"  className="form-check-input" onChange={handleChangeTag}/>
-                            <label for="Nested Condition" className="form-check-label">Nested Condition</label>
-                        </div>
-                        <div className="form-check">
-                            <input type="radio" id="For loops" name="Programming" value="For loops" className="form-check-input" onChange={handleChangeTag}/>
-                            <label for="For loops" className="form-check-label">For loops</label>
-                        </div>
-                        <div className="form-check">
-                            <input type="radio" id="Syntaxes" name="Programming" value="Syntaxes" className="form-check-input" onChange={handleChangeTag}/>
-                            <label for="Syntaxes" className="form-check-label">Syntaxes</label>
-                        </div>
-                        <div className="form-check">
-                            <input type="radio" id="If Else Condition" name="Programming" value="If Else Condition" className="form-check-input" onChange={handleChangeTag}/>
-                            <label for="If Else Condition" className="form-check-label">If Else Condition</label>
-                        </div>
-                        </Col>
-                      </Row>
-                    </Container>
+                                    <div className="mt-3">
+                                      <Button variant="primary" size="sm" className="mb-2">Array</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">C++</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">CodeBlocks</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">For Loops</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">Functions</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">If Else Condition</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">Nested Condition</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">Syntaxes</Button>{' '}
+                                    </div>
                                 
                                   </Offcanvas.Body>
                                 </Offcanvas>
@@ -502,7 +444,7 @@ const popover = (
 
               {
                   //show next button only when we have data
-                  topics.length < 5 ? '' :
+                  topics.length <= 5 ? '' :
                   <Button onClick={() => getMore()}>Next</Button>
               }
               </ButtonGroup>

@@ -103,7 +103,8 @@ const Profile = () => {
   const [occuHide, showHide1] = useState("")
   const [instiHide, showHide2] = useState("")
 
-  const [fname, setFname] = useState({});
+  const [fname, setFname] = useState();
+  const [lname, setLname] = useState();
   const [bday, setBday] = useState();
   const [gender, setGender] = useState();
   const [occu, setOccu] = useState();
@@ -310,15 +311,15 @@ const Profile = () => {
 function updateProfile(){ 
   
     // A post entry.
-    const postData = {  
-      Name: profile.Name,
-      Birthday: profile.Birthday,
+    const postData = {
+      Name: fname+lname,
+
+      Birthday: bday,
       Gender : gender,
       Occupation: occu,
       Address: address,
-      email: profile.email,
-      Institution: insti,
-      level: profile.level
+email: user.email,
+      Institution: insti
     };
   
   
@@ -494,10 +495,20 @@ function updateProfile(){
                                           </Modal.Header>
                                           <Modal.Body>
                                           <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                                          <Form.Group id="fname" className="mb-2">
+                                            <Form.Label>Full Name</Form.Label>
+                                            <Form.Control value={profile.Name}  name = "name" type="name" disabled placeholder="Full Name"/>
+                                          </Form.Group>
 
                                           <Form.Group id="" className="mb-2">
                                             <Form.Label>Address</Form.Label>
                                             <Form.Control value={ address || profile.Address } onChange={e => setAddress(e.target.value)}  name = "name" type="name" placeholder="Address"/>
+                                          </Form.Group>
+
+                                          <Form.Group id="" className="mb-2">
+                                            <Form.Label>Email</Form.Label>
+                                            
+                                            <Form.Control value={profile.email}   name = "name" type="email" disabled placeholder="Email Address"/>
                                           </Form.Group>
 
                                           <Form.Group id="gender">

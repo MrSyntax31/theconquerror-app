@@ -69,13 +69,11 @@ export default function TopicList() {
           setTags(e.target.getAttribute("value"));
 
           if (tags === "Array") {
-
-            const Arr = query(collection(forumdb, "topics"), where("tags", "==", tags));
-
-            setRef(Arr)
-
-            fetch();
             
+            const q = query(collection(forumdb, "topics"), where("tags", "==", tags));
+
+            setRef(q)
+
           }
           else if (tags === "") {
 
@@ -89,9 +87,9 @@ export default function TopicList() {
 
       
 
-        const q = collection(forumdb, "topics");
+        const DefaultcollectionRef = collection(forumdb, "topics");
 
-        const [collRef, setRef] = useState(q);
+        const [collRef, setRef] = useState(DefaulcollectionRef);
 
         const first = query(collRef, orderBy("created_at","desc"), limit(5));
             
@@ -178,7 +176,7 @@ export default function TopicList() {
 
               try {          
                 const back =
-                query(collRef,
+                query(collectionRef,
                 orderBy("created_at","desc"),
                 endBefore(lastpage),
                 limitToLast(5));

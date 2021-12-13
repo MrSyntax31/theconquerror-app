@@ -103,29 +103,10 @@ const Profile = () => {
   const [occuHide, showHide1] = useState("")
   const [instiHide, showHide2] = useState("")
 
-  const [fname, setFname] = useState({});
-  const [bday, setBday] = useState();
   const [gender, setGender] = useState();
   const [occu, setOccu] = useState();
   const [insti, setInsti] = useState();
   const [address, setAddress] = useState();
-
-
-  const [validated, setValidated] = useState(false);
-
-          const handleSubmit = (event) => {
-            const form = event.currentTarget;
-            if (form.checkValidity() === false) {
-              event.preventDefault();
-              event.stopPropagation();
-          }
-          else{
-              updateProfile();
-              event.preventDefault();
-           }
-          setValidated(true);
-          event.preventDefault();
-          };
 
   function OccupationValue(e){
 
@@ -308,25 +289,23 @@ const Profile = () => {
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
 
 function updateProfile(){ 
+    
+    const db = getDatabase();
   
     // A post entry.
-    const postData = {  
-      Name: profile.Name,
-      Birthday: profile.Birthday,
-      Gender : gender,
+    const postData = {
+      Gender: gender,
       Occupation: occu,
       Address: address,
-      email: profile.email,
-      Institution: insti,
-      level: profile.level
+      Institution: insti
     };
   
   
-
+    // Write the new post's data simultaneously in the posts list and the user's post list.
     const updates = {};
     updates['/users/' + userId] = postData;
   
-    return update(ref(realtimedb), updates);
+    return update(ref(db), updates);
   
 }
 
@@ -493,16 +472,25 @@ function updateProfile(){
                                             <Modal.Title>Update Profile</Modal.Title>
                                           </Modal.Header>
                                           <Modal.Body>
-                                          <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                                          <Form.Group id="fname" className="mb-2">
+                                            <Form.Label>Full Name</Form.Label>
+                                            <Form.Control value={profile.Name}  name = "name" type="name" disabled placeholder="Full Name"/>
+                                          </Form.Group>
 
                                           <Form.Group id="" className="mb-2">
                                             <Form.Label>Address</Form.Label>
-                                            <Form.Control value={ address || profile.Address } onChange={e => setAddress(e.target.value)}  name = "name" type="name" placeholder="Address"/>
+                                            <Form.Control value={profile.Address} onChange={e => setAddress(e.target.value)}  name = "name" type="name" placeholder="Address"/>
+                                          </Form.Group>
+
+                                          <Form.Group id="" className="mb-2">
+                                            <Form.Label>Email</Form.Label>
+                                            
+                                            <Form.Control value={profile.email}   name = "name" type="email" disabled placeholder="Email Address"/>
                                           </Form.Group>
 
                                           <Form.Group id="gender">
                                             <Form.Label>Gender</Form.Label>
-                                            <Form.Select aria-label="Default select example" value={ gender || profile.Gender  } onChange={e => setGender(e.target.value)}>
+                                            <Form.Select aria-label="Default select example" value={profile.Gender || ""} onChange={e => setGender(e.target.value)}>
                                             <option>Select Gender</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
@@ -518,7 +506,7 @@ function updateProfile(){
                                           dateFormat="MMMM d, yyyy"
                                           placeholderText="Select your Birthday"
                                           value={profile.Birthday}
-                                          disabled
+                                        
                                         />
                                         </Form.Group>
 
@@ -549,13 +537,11 @@ function updateProfile(){
             
                                         </Form.Group>
 
-                                        <Button variant="primary" type="submit"> Update </Button>
-                                        </Form>
 
                                           </Modal.Body>
                                           <Modal.Footer>
                                             <Button variant="secondary" onClick={handleClose5}> Close</Button>
-                                          
+                                            <Button variant="primary" onClick={updateProfile}> Update </Button>
                                           </Modal.Footer>
                                     </Modal>
 

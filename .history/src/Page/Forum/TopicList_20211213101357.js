@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import { Helmet } from "react-helmet";
 import {  Modal, Button,  OverlayTrigger, Popover, Offcanvas, Alert, ProgressBar} from 'react-bootstrap';
-import { getFirestore, collection, query, orderBy, startAfter, limit, getDocs, doc,setDoc, endBefore, limitToLast, where } from 'firebase/firestore';
+import { getFirestore, collection, query, orderBy, startAfter, limit, getDocs, doc,setDoc, endBefore, limitToLast } from 'firebase/firestore';
 import {} from '../../firebase/firebase'
 import {Container,  Row,Col, Form, FormControl, ButtonGroup} from 'react-bootstrap'
 import { getAuth } from 'firebase/auth'
@@ -68,30 +68,15 @@ export default function TopicList() {
         
           setTags(e.target.getAttribute("value"));
 
-          if (tags === "Array") {
-
-            const Arr = query(collection(forumdb, "topics"), where("tags", "==", tags));
-
-            setRef(Arr)
-
-            fetch();
-            
-          }
-          else if (tags === "") {
-
-          }
-
-          else {
-
-          }
+          if (tags ===)
          
         };
 
       
 
-        const q = collection(forumdb, "topics");
+        const DefaultcollectionRef = collection(forumdb, "topics");
 
-        const [collRef, setRef] = useState(q);
+        const [collRef, setRef] = useState(DefaulcollectionRef);
 
         const first = query(collRef, orderBy("created_at","desc"), limit(5));
             
@@ -178,7 +163,7 @@ export default function TopicList() {
 
               try {          
                 const back =
-                query(collRef,
+                query(collectionRef,
                 orderBy("created_at","desc"),
                 endBefore(lastpage),
                 limitToLast(5));

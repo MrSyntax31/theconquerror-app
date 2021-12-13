@@ -312,13 +312,13 @@ function updateProfile(){
     // A post entry.
     const postData = {  
       Name: profile.Name,
-      Birthday: profile.Birthday,
+      Birthday: bday,
       Gender : gender,
       Occupation: occu,
       Address: address,
-      email: profile.email,
+      email: user.email,
       Institution: insti,
-      level: profile.level
+      level: 1
     };
   
   
