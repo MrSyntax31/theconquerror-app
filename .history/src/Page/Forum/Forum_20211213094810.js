@@ -380,8 +380,7 @@ uploadTask.on('state_changed',
                       </Row>
                     </Container>
 
-                    <Button variant="primary" type="submit" >Post</Button>
-                    </Form>
+                  
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="secondary" onClick={handleClose}>Close</Button>

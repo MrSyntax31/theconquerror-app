@@ -57,15 +57,11 @@ export default function Login() {
        if (form.checkValidity() === false) {
          event.preventDefault();
          event.stopPropagation();
-     }
-     else{
-         onLogin();
-         event.preventDefault();
-      }
-     setValidated(true);
-     event.preventDefault();
+       }
+   
+       setValidated(true);
+       onLogin();
      };
-
 
      //session id
      function sessionId(length){

@@ -34,7 +34,21 @@ const Thread = () => {
       
     const [userlevel, fetchLevel ]= useState([]);
 
-    
+    const [validated, setValidated] = useState(false);
+
+    const handleSubmit = (event) => {
+      const form = event.currentTarget;
+      if (form.checkValidity() === false) {
+        event.preventDefault();
+        event.stopPropagation();
+    }
+    else{
+        add();
+        event.preventDefault();
+     }
+    setValidated(true);
+    event.preventDefault();
+    };
     //Function that shows the profile of the user 
     function showProfile() {
    

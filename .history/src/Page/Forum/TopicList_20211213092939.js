@@ -1,25 +1,25 @@
 import React, {useEffect,useState} from 'react';
 import { Helmet } from "react-helmet";
-import {  Modal, Button, OverlayTrigger, Popover, ProgressBar, Alert } from 'react-bootstrap';
-import { onSnapshot,collection,getFirestore, doc, setDoc, query, orderBy, limit } from 'firebase/firestore';
+import {  Modal, Button,  OverlayTrigger, Popover, Offcanvas, Alert, ProgressBar} from 'react-bootstrap';
+import { getFirestore, collection, query, orderBy, startAfter, limit, getDocs, doc,setDoc, endBefore, limitToLast } from 'firebase/firestore';
 import {} from '../../firebase/firebase'
-import {  Link, useHistory} from "react-router-dom"
-import {Container,  Row,Col, Form, FormControl } from 'react-bootstrap'
+import {Container,  Row,Col, Form, FormControl, ButtonGroup} from 'react-bootstrap'
 import { getAuth } from 'firebase/auth'
 import * as GoIcons from 'react-icons/go';
+import * as BsIcons from 'react-icons/bs';
+import * as MdIcons from 'react-icons/md';
 import './Forum.css';
 import Navbar from '../../Components/Navbar/Navbar'
+import {  Link, useHistory} from "react-router-dom"
 import { getStorage, ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 
-      function Forum() {
+export default function TopicList() {
 
-        
-        //declare firestore services
+         //declare firestore services
         const forumdb = getFirestore();
         const auth = getAuth();
         // Create a root reference
         const storage = getStorage();
-         
         //get current logged-in user
         const currentUser = auth.currentUser;
 
@@ -32,23 +32,42 @@ import { getStorage, ref, getDownloadURL, uploadBytesResumable } from "firebase/
         const handleClose = () => setShow(false);
         const handleShow = () => setShow(true);
 
-                 //errors are thrown here
+                     //errors are thrown here
     const [error, setError] = useState("")
 
-        const [tagCheck, checkTag] = useState(false);
+        //New and popular*
+        const [shows, setShows] = useState(false);
+        const handleClosed = () => setShows(false);
+        const handleShowed = () => setShows(true);
+
         //declare text input for new question
         const [question, setQuestion] = useState();
         const [description, setDesc] = useState();
 
         //declare area to throw list for forum
         const [topics, setDiscussion] = useState([]);
+        const [lastpage, setLastPage] = useState([]);
+        const [page, setPage] = useState(1);
 
+        const [endLine, checkEnd] = useState(false);
+        const [tagCheck, checkTag] = useState(false);
+        
         const [tags, setTags] = useState();
 
         const [img, setImg] = useState("");
         const [fileupload, setFile] = useState([]);
         const [progbar, setProgress] = useState(0);
+
+        const handleChange = (e) => {
         
+          setTags(e.target.getAttribute("value"));
+          checkTag(true);
+        };
+
+    
+        const collectionRef = collection(forumdb, "topics");
+        const first = query(collectionRef, orderBy("created_at","desc"), limit(5));
+            
         const [validated, setValidated] = useState(false);
 
         const handleSubmit = (event) => {
@@ -58,33 +77,113 @@ import { getStorage, ref, getDownloadURL, uploadBytesResumable } from "firebase/
             event.stopPropagation();
         }
         else{
-            addNew();
+            onLogin();
             event.preventDefault();
          }
         setValidated(true);
         event.preventDefault();
         };
 
-        const handleChange = (e) => {
-        
-          setTags(e.target.getAttribute("value"));
-          checkTag(true);
+            // Query the first page of docs
+            async function fetch(){
+              //query data
+             try{
+              const documentSnapshots = await getDocs(first);
+             
+              //Pagination
+
+            //throw data to useState
+           const map =  documentSnapshots.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+           setDiscussion(map);
+
+           // Get the last visible document
+           setLastPage(documentSnapshots.docs[documentSnapshots.docs.length-1]) ;
+               
+
+             }
+             catch(error){
+            alert(error.message)
+            };
+          
+              
+          }
+
+            
+            // Construct a new query starting at the last visible document,
+            // get the next set of data
+           async function getMore(){
+
+              if (topics.length === 0){
+                    
+              checkEnd(true);
+
+              } else{
+                try {          
+                  const next =
+                  query(collectionRef,
+                  orderBy("created_at","desc"),
+                  startAfter(lastpage),
+                  limit(5));
+    
+                  const nextDocs =  await getDocs(next)
+                    const map =  nextDocs.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+    
+                    setDiscussion(map);
+                    
+                    setLastPage(nextDocs.docs[nextDocs.docs.length-1]);
+
+                    setPage(page + 1)
+
+                    checkEnd(false);
+           
+              }
+              catch (error) {
+                alert(error.message)
+              }
+              }
+             
+            }
+            
+            async function goBack(){
+
+              try {          
+                const back =
+                query(collectionRef,
+                orderBy("created_at","desc"),
+                endBefore(lastpage),
+                limitToLast(5));
+  
+                const prevDocs =  await getDocs(back)
+                  const map =  prevDocs.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+  
+                  setDiscussion(map);
+                  
+                  setLastPage(prevDocs.docs[prevDocs.docs.length-1]);
+
+                  setPage(page - 1)
+              
          
-        };
-        
-        const collectionRef = collection(forumdb, "topics");
+            }
+            catch (error) {
+              alert(error.message)
+            }
+
+            }
+
+
+          
 
         useEffect(
           () => {
-            const q = query(collectionRef,orderBy("created_at","desc"), limit(5));
-        
-            onSnapshot(q, (snapshot) =>
-              setDiscussion(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-            
-            )
-            
+           
+         
+         fetch();
+
+          
           },[]); // eslint-disable-line react-hooks/exhaustive-deps
+
       
+     
           const changeHandler = (event) => {
 
             setFile(event.target.files[0]);
@@ -99,7 +198,7 @@ const metadata = {
 };
 
 
-const storageRef = ref(storage, 'Forum/' + fileupload.name);
+const storageRef = ref(storage, 'Forum/' + question);
 const uploadTask = uploadBytesResumable(storageRef, fileupload, metadata);
 
 // Listen for state changes, errors, and completion of the upload.
@@ -196,7 +295,9 @@ uploadTask.on('state_changed',
          //puts the document inside the collection "topics" in firestore
         
          await setDoc(newQuestion, data).then(() => { 
-    
+  
+          setError("")
+       
   
         }).catch((error) =>{
           setError(error.message)
@@ -205,7 +306,6 @@ uploadTask.on('state_changed',
           setDesc("");
           setQuestion("");
           setError("")
-          setShow(false)
         })
    
   
@@ -218,7 +318,7 @@ uploadTask.on('state_changed',
 
               }
           }
-
+          
           //this is used to fetch the data from Discussion on Topics.MAP on the forum list
         const handler = function(e){
         
@@ -228,108 +328,147 @@ uploadTask.on('state_changed',
           
       };
 
-        //Maps the data inside firestore collection (topics) so that it can be visible to the user
-        const Discussion= topics.map((topic) => (  <div className="Discussion-Board p-3 m-2 border border-primary rounded" key={topic.id} > 
-        <p>Uploaded by: <strong>{topic.created_by}</strong> on <strong>
-          {topic.created_at}</strong></p>  <div className="heading"><ul> <li onClick={ handler}  data-id ={topic.id}>{topic.title}<br></br><strong>Description:</strong> {topic.desc} <br></br><strong>Tags:</strong>{topic.tags}</li></ul></div></div> ))
-        
-        //For Popup Notice
-        const popover = (
-          <Popover id="popover-basic">
-            <Popover.Header as="h3">Notice!</Popover.Header>
-            <Popover.Body>
-              This feature is <strong>under development</strong>. Please be patient.
-            </Popover.Body>
-          </Popover>
-        );
+      const Discussion= topics.map((topic) => (  <div className="Discussion-Board p-3 m-2 border border-primary rounded" key={topic.id} > <p>Uploaded by: <strong>{topic.created_by}</strong> on <strong>
+      {topic.created_at}</strong></p>  <div className="heading"><ul> <li onClick={ handler}  data-id ={topic.id}>{topic.title}<br></br><strong>Description:</strong> {topic.desc} <br></br><strong>Tags:</strong>{topic.tags} </li></ul></div></div> ))
+    
+
+    //For Popup Notice
+const popover = (
+  <Popover id="popover-basic">
+    <Popover.Header as="h3">Notice!</Popover.Header>
+    <Popover.Body>
+      This feature is <strong>under development</strong> stage. Please be patient.
+    </Popover.Body>
+  </Popover>
+);
+
+
 
  
-  return (
-            <>
-            {/* Division for Tab Name and Description*/}
+
+    return (
+        <div>
+               {/* Division for Tab Name and Description*/}
             <div>
                 <Helmet>
-                  <title>ConquError | Forum</title>
+                  <title>ConquError | All Topics </title>
                   <meta name="description" content="ConquError Forum" />
                 </Helmet>
               </div>
 
             <Navbar/>
 
-            <div className="" style={{marginTop:'6rem'}}>
+          
+
+             <div style={{marginTop:'6rem'}}>
             {/* Container for Search and Ask Question*/}
-            <Container fluid="md" style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center"
-               }}>
-
+              <Container>
               <Row>
-                <Col></Col>
-
+                   
+                <Col>
+               
+              <Link to="/forum" style={{ textDecoration: 'none', marginLeft:'3px' }} className="btn btn-primary mb-4">Back</Link>
+            
+             </Col>
                 <Col md="auto">
-                              <Form className="d-flex mt-4">
-                                  <FormControl
-                                  type="search"
-                                  placeholder="Search"
-                                  className="mr-2"
-                                  aria-label="Search"
-                                />
-                                <OverlayTrigger trigger="click" placement="right" overlay={popover}>
-                                <Button variant="btn btn-primary">Search</Button>
-                                </OverlayTrigger>
-                              </Form>
+                <Form className="d-flex mt-4">
+                <FormControl
+                type="search"
+                placeholder="Search"
+                className="mr-2"
+                aria-label="Search"
+              />
+              <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+              <Button variant="btn btn-primary">Search</Button>
+              </OverlayTrigger>
+            </Form>
                 </Col>
-
                 <Col xs lg="2">
                   <div className="NoUserMenu mt-4 ml-5">
                     <Button variant="primary" onClick={handleShow} className="mb-2"> ASK A QUESTION</Button> 
                   </div>
                 </Col>
-
               </Row>
+              </Container>
 
-            </Container>
-
+            
             {/* Division for Discussion Board*/}
-            <div>
-                <Container className="text-center mt-5 mb-5 container">
-                  <div>
-                      <h1 className="text-center text-primary fw-bold mb-4">ConquErroRoom</h1>                                   
-                            <div className=" text-start">
-                              <h3 className="fw-bold fs-m text-start container"><GoIcons.GoCommentDiscussion/> Most Recent Topics </h3>     
-                              {Discussion}
-                          </div>
-                <div className="position-end">
-                 
-               <Link to="/alltopics" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"> Show All</Link> 
-                  
-                </div>
-                      </div>
+
+              <div>
+                  <Container className="text-center mt-5 mb-5">
+                    <div>
+                        <h1 className="text-center text-primary fw-bold mb-4">ConquErroRoom</h1>
+                            <div className="text-start">
+                              <h3 className="fw-bold fs-m text-start container mb-3"><GoIcons.GoCommentDiscussion/> All Topics </h3>
+
+                                <Button variant="outline-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags</Button>
+
+                                <Offcanvas show={shows} onHide={handleClosed}>
+                                  
+                                  <Offcanvas.Header closeButton>
+                                    <Offcanvas.Title><MdIcons.MdOutlineTipsAndUpdates/> Latest Updates</Offcanvas.Title>
+                                  </Offcanvas.Header>
+
+                                  <Offcanvas.Body>
+                                  A tag is a term or label that associates your question with other, comparable queries. Using the appropriate tags makes it simpler for others to discover and answer your question.
+                                  <br/><br/>
+                                  Please note that tags are important for the forum to work properly!
+                            
+                                    <div className="mt-3">
+                                      <Button variant="primary" size="sm" className="mb-2">Array</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">C++</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">CodeBlocks</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">For Loops</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">Functions</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">If Else Condition</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">Nested Condition</Button>{' '}
+                                      <Button variant="primary" size="sm" className="mb-2">Syntaxes</Button>{' '}
+                                    </div>
+                                
+                                  </Offcanvas.Body>
+                                </Offcanvas>
+  
+                              { endLine && <h1>End of the line Warrior.</h1>  }
+                            
+                              {Discussion} 
+                            </div>
+                            <ButtonGroup>
+              {
+                  //show previous button only when we have data
+                  page === 1 ? '' : 
+                  <Button onClick={() => goBack() }>Previous</Button>
+              }
+
+              {
+                  //show next button only when we have data
+                  topics.length < 5 ? '' :
+                  <Button onClick={() => getMore()}>Next</Button>
+              }
+              </ButtonGroup>
+                  <div className="position-end">            
+                  </div>
+            
+                        </div>
                   </Container>
+              </div>
+
             </div>
 
+   
 
-                 {/* Modal for Ask Question*/}
-                 <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
+               {/* Modal for Ask Question*/}
+                <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
                 <Modal.Header closeButton>
                   <Modal.Title>ASK A QUESTION</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                 {error && <Alert variant="danger">{error}</Alert>}
-                    <Form noValidate validated={validated} onSubmit={handleSubmit}   className="">
-
-                                  <Form.Group id="Question" className="mb-3">
-                                    <Form.Label>Question</Form.Label>
-                                    <Form.Control value={question || ''} onChange={e => setQuestion(e.target.value)} name = "text" type="text" required  placeholder="Title"/>
-                                  </Form.Group>
-                                  <Form.Group id="desc" className="mb-3">
-                                    <Form.Label>Question</Form.Label>
-                                    <Form.Control as="textarea" value={description || ''} onChange={e => setDesc(e.target.value)} name = "text" type="text" required  placeholder="Description"/>
-                                  </Form.Group>
+                    Question <br></br>
+                    <input value={question || ''} onChange={e => setQuestion(e.target.value)}  type="text"  className="form-control" required></input><br></br>
+                    Description <br></br>
+                    <textarea value={description || ''} onChange={e => setDesc(e.target.value)} type="text" className="form-control mb-3" required></textarea>
                     <strong>Upload a picture of your code here! (Optional)</strong>
 
-                 
                     <input type="file" className="form-control  mt-3 mb-3" id="file-input" name="samplecodeimg" accept="image/jpeg" onChange={changeHandler}/> 
                     
                     <Button variant="primary" onClick={insertCode}>Upload File</Button>
@@ -380,24 +519,17 @@ uploadTask.on('state_changed',
                       </Row>
                     </Container>
 
-                    <Button variant="primary" type="submit" >Post</Button>
-                    </Form>
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="secondary" onClick={handleClose}>Close</Button>
-               
+                  <Button variant="primary" onClick={addNew}>Post</Button>
                 </Modal.Footer>
                 </Modal>
+              
 
-                <a href="#top" className="scroll-top">
+            <a href="#top" className="scroll-top">
                   <i className="fa fa-chevron-up"></i>
                 </a>
-
-            </div>
-            </>
-  );
+        </div>
+    )
 }
-
-
-export default Forum;
-

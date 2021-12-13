@@ -380,7 +380,7 @@ uploadTask.on('state_changed',
                       </Row>
                     </Container>
 
-                    <Button variant="primary" type="submit" >Post</Button>
+                    <Button className="text-left"|"text-center"|"text-right"variant="primary" type="submit" >Post</Button>
                     </Form>
                 </Modal.Body>
                 <Modal.Footer>

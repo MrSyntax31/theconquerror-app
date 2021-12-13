@@ -327,6 +327,8 @@ uploadTask.on('state_changed',
                                     <Form.Label>Question</Form.Label>
                                     <Form.Control as="textarea" value={description || ''} onChange={e => setDesc(e.target.value)} name = "text" type="text" required  placeholder="Description"/>
                                   </Form.Group>
+                                  <Button variant="primary" type="submit" >Post</Button>
+                    </Form>
                     <strong>Upload a picture of your code here! (Optional)</strong>
 
                  
@@ -380,8 +382,7 @@ uploadTask.on('state_changed',
                       </Row>
                     </Container>
 
-                    <Button variant="primary" type="submit" >Post</Button>
-                    </Form>
+                  
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="secondary" onClick={handleClose}>Close</Button>

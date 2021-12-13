@@ -59,7 +59,7 @@ export default function Login() {
          event.stopPropagation();
      }
      else{
-         onLogin();
+         onRegister();
          event.preventDefault();
       }
      setValidated(true);

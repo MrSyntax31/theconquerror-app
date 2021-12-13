@@ -145,7 +145,7 @@ import "react-datepicker/dist/react-datepicker.css";
                             level: 1
                         });
                       
-                          signOut(auth)
+                          signOut(auth);
         
                         .then(() => {
                         setBday("")

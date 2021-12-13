@@ -3,7 +3,7 @@ import { Form, Button, Container, Alert, Row, Col, Modal } from 'react-bootstrap
 import { Link, useHistory } from "react-router-dom"
 import { Helmet } from "react-helmet";
 import {} from '../../firebase/firebase';
-import {getAuth, createUserWithEmailAndPassword,sendEmailVerification ,onAuthStateChanged, signOut} from 'firebase/auth'
+import {getAuth, createUserWithEmailAndPassword,sendEmailVerification ,onAuthStateChanged, Sig} from 'firebase/auth'
 import { getDatabase, ref, set} from "firebase/database"
 import './Login.css'
 import './Register.css'
@@ -145,7 +145,7 @@ import "react-datepicker/dist/react-datepicker.css";
                             level: 1
                         });
                       
-                          signOut(auth)
+                          signOut(auth);
         
                         .then(() => {
                         setBday("")

@@ -57,15 +57,11 @@ export default function Login() {
        if (form.checkValidity() === false) {
          event.preventDefault();
          event.stopPropagation();
-     }
-     else{
-         onLogin();
-         event.preventDefault();
-      }
-     setValidated(true);
-     event.preventDefault();
+       }
+   
+       setValidated(true);
+       onLogin();
      };
-
 
      //session id
      function sessionId(length){
@@ -80,7 +76,7 @@ export default function Login() {
      }
      
      function sessionKey() {
-
+       
         if(sesh === true) {setKey(true)}
         else {setKey(false)}
         
@@ -205,7 +201,7 @@ export default function Login() {
 
                             {/* keep me logged in na checkbox */}
                             <div className="form-check mt-3">
-                              <input type="checkbox" onClick={"sessionKey"} className="form-check-input" id="exampleCheck1"/>
+                              <input type="checkbox" onClick={sessionKey} className="form-check-input" id="exampleCheck1"/>
                               <label className="form-check-label"  htmlFor="exampleCheck1">Keep me logged in</label>
                             </div>
                             

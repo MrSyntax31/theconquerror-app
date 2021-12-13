@@ -329,7 +329,7 @@ uploadTask.on('state_changed',
                                   </Form.Group>
                     <strong>Upload a picture of your code here! (Optional)</strong>
 
-                 
+                    </Form>
                     <input type="file" className="form-control  mt-3 mb-3" id="file-input" name="samplecodeimg" accept="image/jpeg" onChange={changeHandler}/> 
                     
                     <Button variant="primary" onClick={insertCode}>Upload File</Button>
@@ -381,7 +381,7 @@ uploadTask.on('state_changed',
                     </Container>
 
                     <Button variant="primary" type="submit" >Post</Button>
-                    </Form>
+
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="secondary" onClick={handleClose}>Close</Button>

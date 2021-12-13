@@ -64,7 +64,7 @@ import { getStorage, ref, getDownloadURL, uploadBytesResumable } from "firebase/
         setValidated(true);
         event.preventDefault();
         };
-
+        
         const handleChange = (e) => {
         
           setTags(e.target.getAttribute("value"));
@@ -310,26 +310,20 @@ uploadTask.on('state_changed',
             </div>
 
 
-                 {/* Modal for Ask Question*/}
-                 <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
+              {/* Modal for Ask Question*/}
+              <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
                 <Modal.Header closeButton>
                   <Modal.Title>ASK A QUESTION</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
-                {error && <Alert variant="danger">{error}</Alert>}
-                    <Form noValidate validated={validated} onSubmit={handleSubmit}   className="">
-
-                                  <Form.Group id="Question" className="mb-3">
-                                    <Form.Label>Question</Form.Label>
-                                    <Form.Control value={question || ''} onChange={e => setQuestion(e.target.value)} name = "text" type="text" required  placeholder="Title"/>
-                                  </Form.Group>
-                                  <Form.Group id="desc" className="mb-3">
-                                    <Form.Label>Question</Form.Label>
-                                    <Form.Control as="textarea" value={description || ''} onChange={e => setDesc(e.target.value)} name = "text" type="text" required  placeholder="Description"/>
-                                  </Form.Group>
+                  <Form>
+                    {error && <Alert variant="danger">{error}</Alert>}
+                    Question <br></br>
+                    <input value={question || ''} onChange={e => setQuestion(e.target.value)}  type="text"  className="form-control" required></input><br></br>
+                    Description <br></br>
+                    <textarea value={description || ''} onChange={e => setDesc(e.target.value)} type="text" className="form-control mb-3" required></textarea>
                     <strong>Upload a picture of your code here! (Optional)</strong>
 
-                 
                     <input type="file" className="form-control  mt-3 mb-3" id="file-input" name="samplecodeimg" accept="image/jpeg" onChange={changeHandler}/> 
                     
                     <Button variant="primary" onClick={insertCode}>Upload File</Button>
@@ -379,15 +373,15 @@ uploadTask.on('state_changed',
                         </Col>
                       </Row>
                     </Container>
+                  </Form>
+                
 
-                    <Button variant="primary" type="submit" >Post</Button>
-                    </Form>
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="secondary" onClick={handleClose}>Close</Button>
-               
+                  <Button variant="primary" onClick={addNew}>Post</Button>
                 </Modal.Footer>
-                </Modal>
+              </Modal>
 
                 <a href="#top" className="scroll-top">
                   <i className="fa fa-chevron-up"></i>

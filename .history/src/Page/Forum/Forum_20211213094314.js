@@ -317,7 +317,7 @@ uploadTask.on('state_changed',
                 </Modal.Header>
                 <Modal.Body>
                 {error && <Alert variant="danger">{error}</Alert>}
-                    <Form noValidate validated={validated} onSubmit={handleSubmit}   className="">
+                    <Form noValidate validated={validated} className="">
 
                                   <Form.Group id="Question" className="mb-3">
                                     <Form.Label>Question</Form.Label>
@@ -329,7 +329,7 @@ uploadTask.on('state_changed',
                                   </Form.Group>
                     <strong>Upload a picture of your code here! (Optional)</strong>
 
-                 
+                    </Form>
                     <input type="file" className="form-control  mt-3 mb-3" id="file-input" name="samplecodeimg" accept="image/jpeg" onChange={changeHandler}/> 
                     
                     <Button variant="primary" onClick={insertCode}>Upload File</Button>
@@ -380,12 +380,10 @@ uploadTask.on('state_changed',
                       </Row>
                     </Container>
 
-                    <Button variant="primary" type="submit" >Post</Button>
-                    </Form>
                 </Modal.Body>
                 <Modal.Footer>
                   <Button variant="secondary" onClick={handleClose}>Close</Button>
-               
+                  <Button variant="primary" onClick={handleSubmit}>Post</Button>
                 </Modal.Footer>
                 </Modal>
 
