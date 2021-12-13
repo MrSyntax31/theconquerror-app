@@ -41,12 +41,7 @@ export default function Login() {
 
      const showPass = (event) => {
 
-      if(password === "password"){
-        PWHandler("text");
-      }
-      else {
-        PWHandler("password");
-      }
+      PWHandler("text");
 
      };
 
@@ -76,9 +71,8 @@ export default function Login() {
      }
      
      function sessionKey() {
-        if(sesh === false) {setKey(true)}
-        else {setKey(false)}
-        
+
+        setKey=(true)
 
      }
 
@@ -184,7 +178,7 @@ export default function Login() {
                                       <Form.Control.Feedback type="invalid">
                                     Please enter a password.
                                   </Form.Control.Feedback>
-                                  <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password</i>
+                                  <i onClick={""} class={"" ? 'fas fa-eye-slash' : 'fas fa-eye'}>Show/Hide Password</i>
                                   </Form.Group>
                               
                             <div className="w-100 mt-2 justify-content-right">
@@ -200,7 +194,7 @@ export default function Login() {
 
                             {/* keep me logged in na checkbox */}
                             <div className="form-check mt-3">
-                              <input type="checkbox" onClick={sessionKey} className="form-check-input" id="exampleCheck1"/>
+                              <input type="checkbox" isClicked={sessionKey} className="form-check-input" id="exampleCheck1"/>
                               <label className="form-check-label"  htmlFor="exampleCheck1">Keep me logged in</label>
                             </div>
                             

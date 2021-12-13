@@ -1,6 +1,7 @@
 import React, { Component  } from "react";
 import { Helmet } from "react-helmet";
 import { Row, Container, Col, Card, Tab, Tabs, Badge} from 'react-bootstrap';
+import { Link } from "react-router-dom"
 import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
 import './frame.css'

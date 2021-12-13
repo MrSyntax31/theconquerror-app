@@ -373,7 +373,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
                 <div className="card-footer">
                   
-                <p>By clicking the Sign-up button, you agree to our <strong variant="primary"  onClick={handleShow} className="text-primary text-decoration-underline mb-3" >Terms and Conditions</strong>.</p>
+                <p>By clicking the Sign-up button, you agree to our <strong href="#" variant="primary"  onClick={handleShow} className="text-primary text-decoration-underline mb-3" >Terms and Conditions</strong>.</p>
 
                 {/* Modal */}
                   <Modal

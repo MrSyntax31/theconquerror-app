@@ -37,18 +37,7 @@ export default function Login() {
      
      }
 
-     const [password, PWHandler] = useState("password");
-
-     const showPass = (event) => {
-
-      if(password === "password"){
-        PWHandler("text");
-      }
-      else {
-        PWHandler("password");
-      }
-
-     };
+     const 
 
      const [validated, setValidated] = useState(false);
 
@@ -76,9 +65,8 @@ export default function Login() {
      }
      
      function sessionKey() {
-        if(sesh === false) {setKey(true)}
-        else {setKey(false)}
-        
+
+        setKey=(true)
 
      }
 
@@ -180,11 +168,10 @@ export default function Login() {
 
                                   <Form.Group id="password" className="mb-3">
                                     <Form.Label>Password</Form.Label>
-                                    <Form.Control type={password} ref={passwordRef}  name = "password" autoComplete="current-password" required placeholder="Password"/>
+                                    <Form.Control type="password" ref={passwordRef}  name = "password" autoComplete="current-password" required placeholder="Password"/>
                                       <Form.Control.Feedback type="invalid">
                                     Please enter a password.
                                   </Form.Control.Feedback>
-                                  <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password</i>
                                   </Form.Group>
                               
                             <div className="w-100 mt-2 justify-content-right">
@@ -200,7 +187,7 @@ export default function Login() {
 
                             {/* keep me logged in na checkbox */}
                             <div className="form-check mt-3">
-                              <input type="checkbox" onClick={sessionKey} className="form-check-input" id="exampleCheck1"/>
+                              <input type="checkbox" isClicked={sessionKey} className="form-check-input" id="exampleCheck1"/>
                               <label className="form-check-label"  htmlFor="exampleCheck1">Keep me logged in</label>
                             </div>
                             

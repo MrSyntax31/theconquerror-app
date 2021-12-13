@@ -76,9 +76,9 @@ export default function Login() {
      }
      
      function sessionKey() {
-        if(sesh === false) {setKey(true)}
-        else {setKey(false)}
-        
+        if(sesh === false) {}
+        else
+        setKey(true)
 
      }
 

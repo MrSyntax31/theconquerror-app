@@ -76,9 +76,8 @@ export default function Login() {
      }
      
      function sessionKey() {
-        if(sesh === false) {setKey(true)}
-        else {setKey(false)}
-        
+
+        setKey(true)
 
      }
 
@@ -200,7 +199,7 @@ export default function Login() {
 
                             {/* keep me logged in na checkbox */}
                             <div className="form-check mt-3">
-                              <input type="checkbox" onClick={sessionKey} className="form-check-input" id="exampleCheck1"/>
+                              <input type="checkbox" isChecked={sessionKey} className="form-check-input" id="exampleCheck1"/>
                               <label className="form-check-label"  htmlFor="exampleCheck1">Keep me logged in</label>
                             </div>
                             

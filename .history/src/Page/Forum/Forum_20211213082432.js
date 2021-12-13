@@ -181,6 +181,8 @@ uploadTask.on('state_changed',
          //puts the document inside the collection "topics" in firestore
         
          await setDoc(newQuestion, data).then(() => { 
+  
+          setError("")
     
   
         }).catch((error) =>{
@@ -190,7 +192,6 @@ uploadTask.on('state_changed',
           setDesc("");
           setQuestion("");
           setError("")
-          setShow(false)
         })
    
   

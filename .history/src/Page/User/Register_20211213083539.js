@@ -251,7 +251,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
                                 <Form.Group id="password" className="mb-3">
                                 <Form.Label>Password</Form.Label>
-                                <Form.Control  value={password || ''} onChange={e => setPass(e.target.value)}  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name = "password" type={passwordH} autoComplete="new-password" required placeholder="Password"/>
+                                <Form.Control  value={password || ''} onChange={e => setPass(e.target.value)}  pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" name = "password" type={passwordH  } autoComplete="new-password" required placeholder="Password"/>
                                 <Form.Control.Feedback type="invalid">
                                 Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters.
                                   </Form.Control.Feedback>
@@ -264,7 +264,7 @@ import "react-datepicker/dist/react-datepicker.css";
                                 Must contain at least one  number and one uppercase and lowercase letter, and at least 8 or more characters.
                                   </Form.Control.Feedback>
                                 </Form.Group>
-                                <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password</i>
+                                <i onClick={showPass} class={'fas fa-eye'}>Show/Hide Password</i>
                             </div>
                         </div>
                     
@@ -373,7 +373,7 @@ import "react-datepicker/dist/react-datepicker.css";
 
                 <div className="card-footer">
                   
-                <p>By clicking the Sign-up button, you agree to our <strong variant="primary"  onClick={handleShow} className="text-primary text-decoration-underline mb-3" >Terms and Conditions</strong>.</p>
+                <p>By clicking the Sign-up button, you agree to our <a variant="primary"  onClick={handleShow} className="text-primary text-decoration-underline mb-3" >Terms and Conditions</a>.</p>
 
                 {/* Modal */}
                   <Modal

@@ -1,6 +1,7 @@
 import React, { Component  } from "react";
 import { Helmet } from "react-helmet";
 import { Row, Container, Col, Card, Tab, Tabs, Badge} from 'react-bootstrap';
+import { Link } from "react-router-dom"
 import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
 import './frame.css'
@@ -52,7 +53,7 @@ class Tutorial extends Component {
                                                         </p>
                                                         <p> 
                                                             There are a lot of tutorials on the internet, but they are not meant for you. These tutorials are designed to help you understand how to become a better learner.
-                                                            The following tutorial shows tips, guides, insight and strategies to help you better understood computer programming..
+                                                             The following tutorial shows tips, guides, insight and strategies to help you better understood computer programming..
                                                         </p>
                                                     </div>
                                                 </div>
@@ -146,7 +147,7 @@ class Tutorial extends Component {
                                                             <br/>
                                                             He is also a co-founder and community manager of freeCodeCamp.Manila, and part of the core team of ReactJS Philippines.
                                                             <br/>
-                                                            * <i className="fw-bold mt-5">"Kuya"</i> means "older brother" in Filipino, often used as a term of endearment.
+                                                            * <i className="fw-bold n">"Kuya"</i> means "older brother" in Filipino, often used as a term of endearment.
                                                             </p>
                                                             <label className="fw-bold mb-2">Follow and Subscribe to learn more!</label>
                                                             <br/>
