@@ -27,39 +27,38 @@ class Tutorial extends Component {
                                     <h1 className="text-center text-primary fw-bold">Welcome to Tutorials</h1>                                   
                             </div>  
                         </div>
-
-                            <Container className="mb-5" fluid="md" style={{
-                                        display: "flex",
-                                        justifyContent: "center",
-                                        alignItems: "center"
-                                    }}>
-                                    <section className="about_area section_gap">
-                                            <div className="container">
-                                                <div className="row justify-content-start align-items-center">
-                                                    <div className="col-lg-5">
-                                                        <div className="about_img">
-                                                            <img className="" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Annie Spratt unsplash.com/photos/MChSQHxGZrQ"/>
-                                                        </div>
+                        <Container className="mb-5" fluid="md" style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center"
+                                }}>
+                                <section className="about_area section_gap">
+                                        <div className="container">
+                                            <div className="row justify-content-start align-items-center">
+                                                <div className="col-lg-5">
+                                                    <div className="about_img">
+                                                        <img className="" src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80" alt="Annie Spratt unsplash.com/photos/MChSQHxGZrQ"/>
                                                     </div>
+                                                </div>
 
-                                                    <div className="offset-lg-1 col-lg-5 mt-3">
-                                                        <div className="main_title text-left">
-                                                            <h2 className="fw-bold mb-3">let’s <br/>
-                                                                Learn and study  <br/>
-                                                                together</h2>
-                                                            <p className="mb-3">
-                                                                It's easy to study and learn if there is someone willing to help you. In these tutorials, you will learn how to become an independent leaner  and understand how to conquer your own problems.
-                                                            </p>
-                                                            <p> 
-                                                                There are a lot of tutorials on the internet, but they are not meant for you. These tutorials are designed to help you understand how to become a better learner.
-                                                                The following tutorial shows tips, guides, insight and strategies to help you better understood computer programming..
-                                                            </p>
-                                                        </div>
+                                                <div className="offset-lg-1 col-lg-5 mt-3">
+                                                    <div className="main_title text-left">
+                                                        <h2 className="fw-bold mb-3">let’s <br/>
+                                                            Learn and study  <br/>
+                                                            together</h2>
+                                                        <p className="mb-3">
+                                                            It's easy to study and learn if there is someone willing to help you. In these tutorials, you will learn how to become an independent leaner  and understand how to conquer your own problems.
+                                                        </p>
+                                                        <p> 
+                                                            There are a lot of tutorials on the internet, but they are not meant for you. These tutorials are designed to help you understand how to become a better learner.
+                                                            The following tutorial shows tips, guides, insight and strategies to help you better understood computer programming..
+                                                        </p>
                                                     </div>
                                                 </div>
                                             </div>
-                                    </section>
-                            </Container>
+                                        </div>
+                                </section>
+                        </Container>
 
                             <section className="features section bg-light mt-5">
                                 <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -548,7 +547,7 @@ class Tutorial extends Component {
                                                                                                     <div className="offset-lg-1 col-lg-5 mt-3">
                                                                                                         <div className="main_title text-left">
                                                                                                             <h5 className="fw-bold mb-3">C++ Tutorial #7: While and Do While Loop | Filipino | Tagalog</h5>
-                                                                                                            <p className="mb-2">
+                                                                                                            <p >
                                                                                                                 Today We are gonna learn While and Do While Looping Statements! and We will be creating a Simple One Question Quiz Game With Lives!
                                                                                                             </p>
                                                                                                                <br/>
@@ -570,8 +569,8 @@ class Tutorial extends Component {
 
                                                                                                     <div className="offset-lg-1 col-lg-5 mt-3">
                                                                                                         <div className="main_title text-left">
-                                                                                                            <h5 className="fw-bold mb-3">C++ Tutorial #8: For Loop | Filipino | Tagalog</h5>
-                                                                                                            <p className="mb-2">
+                                                                                                            <h5 className="fw-bold">C++ Tutorial #8: For Loop | Filipino | Tagalog</h5>
+                                                                                                            <p>
                                                                                                                 Today we are tackling the other type of Loop Statement which is the For Loop If ever you have any questions please drop it down on the Comment Section and we will try to answer it! 
                                                                                                             </p>
                                                                                                                <br/>
@@ -593,8 +592,8 @@ class Tutorial extends Component {
 
                                                                                                     <div className="offset-lg-1 col-lg-5 mt-3">
                                                                                                         <div className="main_title text-left">
-                                                                                                            <h5 className="fw-bold mb-3">C++ Tutorial #9: 2D Arrays + Nested For Loops | Filipino | Tagalog</h5>
-                                                                                                            <p className="mb-2">
+                                                                                                            <h5 className="fw-bold">C++ Tutorial #9: 2D Arrays + Nested For Loops | Filipino | Tagalog</h5>
+                                                                                                            <p>
                                                                                                                 Hey Guys today pagaaralan natin ang 2D Array! Please Do Comment Down below if you happen to have questions or you don't understand something!
                                                                                                             </p>
                                                                                                                <br/>
@@ -662,102 +661,102 @@ class Tutorial extends Component {
                                                             <Card.Body>
                                                                 
                                                                 <h3 className="mt-2 fw-bold">Featured</h3>
-                                                                    <div className="video"
-                                                                            style={{
-                                                                                position: "relative",
-                                                                                paddingBottom: "56.25%" /* 16:9 */,
-                                                                                paddingTop: 25,
-                                                                                height: 0 }}>
-                                                                        <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://youtube.com/embed/7ctGMOa8ems?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" title="vid" allowFullScreen/>
-                                                                    </div>
+                                                            <div className="video"
+                                                                    style={{
+                                                                        position: "relative",
+                                                                        paddingBottom: "56.25%" /* 16:9 */,
+                                                                        paddingTop: 25,
+                                                                        height: 0 }}>
+                                                                <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://youtube.com/embed/7ctGMOa8ems?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" title="vid" allowFullScreen/>
+                                                            </div>
 
-                                                                    <Container>
-                                                                            <Row>
-                                                                                <div className="mt-3">
-                                                                                    <div className="">
-                                                                                        <h1 className="fw-bold mb-3">My Experiences in being a BSIT Student || TIP-QC || Online Learning</h1>
-                                                                                            
-                                                                                            <p>What is up everyone! Here are some Questions that I answered on my experiences in being a BSIT student in TIP- QC</p>
+                                                        <Container>
+                                                                <Row>
+                                                                    <div className="mt-3">
+                                                                        <div className="">
+                                                                            <h1 className="fw-bold">My Experiences in being a BSIT Student || TIP-QC || Online Learning</h1>
+                                                                                
+                                                                                <p>What is up everyone! Here are some Questions that I answered on my experiences in being a BSIT student in TIP- QC</p>
 
+                                                                                <div>
+                                                                                    
+                                                                                    <section className="about_area section_gap mb-3">
+                                                                                            <div className="">
+                                                                                                <div className="row justify-content-start align-items-center">
+                                                                                                    <div className="col-lg-4">
+                                                                                                        <div className="about_img">
+                                                                                                            <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/iSNeOTyPALY?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                                                                        </div>
+                                                                                                    </div>
+
+                                                                                                    <div className="offset-lg-1 col-lg-5 mt-3">
+                                                                                                        <div className="main_title text-left">
+                                                                                                        <h5 className="fw-bold">A day in the life of a BSIT student |First day of online classes | online learning #josiahdoestech</h5>
+                                                                                                            <p>
+                                                                                                            Hello everyone! sorry for not posting so much lately I've been busy with my school and organization activities!  but here yah go! here's my daily routine as a BsIT student! don't forget to leave a like to this video and don't forget to subscribe!  God bless everyone and stay safe!
+                                                                                                            </p>
+                                                                                                            <p>
+                                                                                                            Hello everyone! As we all know, I am now an affiliate with StyleDoubler where you can have commissions to the purchases on online Shopping like Lazada! If you would like to support me in my journey, you can help me with these links of what is in my setup! Thanks everyone! Ryzen 5 3600
+                                                                                                            </p>
+                                                                                                            <br/>
+                                                                                                            <span className="duration">Duration: 13 minutes, 03 seconds</span><br/>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                    </section>
+
+                                                                                    <section className="about_area section_gap mb-3">
                                                                                             <div>
-                                                                                                
-                                                                                                <section className="about_area section_gap mt-3 mb-3">
-                                                                                                        <div className="">
-                                                                                                            <div className="row justify-content-start align-items-center">
-                                                                                                                <div className="col-lg-4">
-                                                                                                                    <div className="about_img">
-                                                                                                                        <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/iSNeOTyPALY?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
-                                                                                                                    </div>
-                                                                                                                </div>
-
-                                                                                                                <div className="offset-lg-1 col-lg-5 mt-3">
-                                                                                                                    <div className="main_title text-left">
-                                                                                                                    <h5 className="fw-bold mb-3">A day in the life of a BSIT student |First day of online classes | online learning #josiahdoestech</h5>
-                                                                                                                        <p className="mb-2">
-                                                                                                                        Hello everyone! sorry for not posting so much lately I've been busy with my school and organization activities!  but here yah go! here's my daily routine as a BsIT student! don't forget to leave a like to this video and don't forget to subscribe!  God bless everyone and stay safe!
-                                                                                                                        </p>
-                                                                                                                        <p className="mb-2">
-                                                                                                                        Hello everyone! As we all know, I am now an affiliate with StyleDoubler where you can have commissions to the purchases on online Shopping like Lazada! If you would like to support me in my journey, you can help me with these links of what is in my setup! Thanks everyone! Ryzen 5 3600
-                                                                                                                        </p>
-                                                                                                                        <br/>
-                                                                                                                        <span className="duration">Duration: 13 minutes, 03 seconds</span><br/>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
+                                                                                                <div className="row justify-content-start align-items-center">
+                                                                                                    <div className="col-lg-4">
+                                                                                                        <div className="about_img">
+                                                                                                        <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/WgEXIhkIWZc?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
                                                                                                         </div>
-                                                                                                </section>
+                                                                                                    </div>
 
-                                                                                                <section className="about_area section_gap mb-3">
-                                                                                                        <div>
-                                                                                                            <div className="row justify-content-start align-items-center">
-                                                                                                                <div className="col-lg-4">
-                                                                                                                    <div className="about_img">
-                                                                                                                    <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/WgEXIhkIWZc?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
-                                                                                                                    </div>
-                                                                                                                </div>
-
-                                                                                                                <div className="offset-lg-1 col-lg-5 mt-3">
-                                                                                                                    <div className="main_title text-left">
-                                                                                                                        <h5 className="fw-bold mb-3">Tips and Fundamentals of Programming | BSIT | TIPian Student (Tagalog) #JosiahDoesTech</h5>
-                                                                                                                        <p className="mb-2">
-                                                                                                                            Hello everyone! As we all know, I am now an affiliate with StyleDoubler where you can have commissions to the purchases on online Shopping like Lazada! If you would like to support me in my journey, you can help me with these links of what is in my setup! Thanks everyone! Ryzen 5 3600
-                                                                                                                        </p>
-                                                                                                                        <br/>
-                                                                                                                        <span className="duration">Duration: 12 minutes, 04 seconds</span><br/>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
+                                                                                                    <div className="offset-lg-1 col-lg-5 mt-3">
+                                                                                                        <div className="main_title text-left">
+                                                                                                            <h5 className="fw-bold">Tips and Fundamentals of Programming | BSIT | TIPian Student (Tagalog) #JosiahDoesTech</h5>
+                                                                                                            <p>
+                                                                                                            Hello everyone! As we all know, I am now an affiliate with StyleDoubler where you can have commissions to the purchases on online Shopping like Lazada! If you would like to support me in my journey, you can help me with these links of what is in my setup! Thanks everyone! Ryzen 5 3600
+                                                                                                            </p>
+                                                                                                            <br/>
+                                                                                                            <span className="duration">Duration: 12 minutes, 04 seconds</span><br/>
                                                                                                         </div>
-                                                                                                </section>
-                                                                                            
-                                                                                                <section className="about_area section_gap mb-3">
-                                                                                                        <div className="">
-                                                                                                            <div className="row justify-content-start align-items-center">
-                                                                                                                <div className="col-lg-4">
-                                                                                                                    <div className="about_img">
-                                                                                                                        <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/WdbN4_tr55o?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
-                                                                                                                    </div>
-                                                                                                                </div>
-
-                                                                                                                <div className="offset-lg-1 col-lg-5 mt-3">
-                                                                                                                    <div className="main_title text-left">
-                                                                                                                    <h5 className="fw-bold mb-3">Things I should have known when I started programming</h5>
-                                                                                                                        <p  className="mb-2">
-                                                                                                                            Hey guys! I'm back! here are some things you can ask yourself, Things that I should have known when I started programming!
-                                                                                                                        </p>
-                                                                                                                        
-                                                                                                                        <br/>
-                                                                                                                        <span className="duration">Duration: 16 minutes, 25 seconds</span><br/>
-                                                                                                                    </div>
-                                                                                                                </div>
-                                                                                                            </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                    </section>
+                                                                                
+                                                                                    <section className="about_area section_gap mb-3">
+                                                                                            <div className="">
+                                                                                                <div className="row justify-content-start align-items-center">
+                                                                                                    <div className="col-lg-4">
+                                                                                                        <div className="about_img">
+                                                                                                            <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/WdbN4_tr55o?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
                                                                                                         </div>
-                                                                                                </section> 
-                                                                                            </div>            
-                                                                                    </div>
-                                                                                </div>
-                                                                            </Row>
-                                                                    </Container>
+                                                                                                    </div>
+
+                                                                                                    <div className="offset-lg-1 col-lg-5 mt-3">
+                                                                                                        <div className="main_title text-left">
+                                                                                                        <h5 className="fw-bold">Things I should have known when I started programming</h5>
+                                                                                                            <p>
+                                                                                                                Hey guys! I'm back! here are some things you can ask yourself, Things that I should have known when I started programming!
+                                                                                                            </p>
+                                                                                                            
+                                                                                                            <br/>
+                                                                                                            <span className="duration">Duration: 16 minutes, 25 seconds</span><br/>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                    </section> 
+                                                                                </div>            
+                                                                        </div>
+                                                                    </div>
+                                                                </Row>
+                                                        </Container>
                                                                 
                                                             </Card.Body>
                                                         </Card>
@@ -820,16 +819,16 @@ class Tutorial extends Component {
                                                                 <Row>
                                                                     <div className="mt-3">
                                                                         <div className="">
-                                                                            <h1 className="fw-bold mb-3">VLOG 1 - Paano ba maging Programmer?</h1>
+                                                                            <h1 className="fw-bold">VLOG 1 - Paano ba maging Programmer?</h1>
                                                                                 
-                                                                                <p className="mb-2">paano maging programmer,
+                                                                                <p>paano maging programmer,
                                                                                     paano maging magaling na programmer,
                                                                                     paano ba maging programmer
                                                                                     </p>
 
                                                                                 <div>
                                                                                     
-                                                                                    <section className="about_area section_gap mt-3 mb-3">
+                                                                                    <section className="about_area section_gap mb-3">
                                                                                             <div className="">
                                                                                                 <div className="row justify-content-start align-items-center">
                                                                                                     <div className="col-lg-4">
@@ -840,8 +839,8 @@ class Tutorial extends Component {
 
                                                                                                     <div className="offset-lg-1 col-lg-5 mt-3">
                                                                                                         <div className="main_title text-left">
-                                                                                                        <h5 className="fw-bold mb-3">VLOG 2 - Ano ang Programming?</h5>
-                                                                                                            <p className="mb-2">
+                                                                                                        <h5 className="fw-bold">VLOG 2 - Ano ang Programming?</h5>
+                                                                                                            <p>
                                                                                                             paano maging programmer,
                                                                                                             paano maging magaling na programmer,
                                                                                                             paano ba maging programmer,
@@ -876,8 +875,8 @@ class Tutorial extends Component {
 
                                                                                                     <div className="offset-lg-1 col-lg-5 mt-3">
                                                                                                         <div className="main_title text-left">
-                                                                                                            <h5 className="fw-bold mb-3">VLOG 3 - Para sayo ba ang pagiging Programmer</h5>
-                                                                                                            <p className="mb-2">
+                                                                                                            <h5 className="fw-bold">VLOG 3 - Para sayo ba ang pagiging Programmer</h5>
+                                                                                                            <p>
                                                                                                             paano maging programmer,
                                                                                                             paano maging magaling na programmer,
                                                                                                             paano ba maging programmer,
@@ -911,8 +910,8 @@ class Tutorial extends Component {
 
                                                                                                     <div className="offset-lg-1 col-lg-5 mt-3">
                                                                                                         <div className="main_title text-left">
-                                                                                                        <h5 className="fw-bold mb-3">VLOG 4 - Mahalaga bang graduate ka para maging Programmer?</h5>
-                                                                                                            <p className="mb-2">
+                                                                                                        <h5 className="fw-bold">VLOG 4 - Mahalaga bang graduate ka para maging Programmer?</h5>
+                                                                                                            <p>
                                                                                                             paano maging programmer,
                                                                                                             paano maging magaling na programmer,
                                                                                                             paano ba maging programmer,
@@ -948,8 +947,8 @@ class Tutorial extends Component {
 
                                                                                                     <div className="offset-lg-1 col-lg-5 mt-3">
                                                                                                         <div className="main_title text-left">
-                                                                                                        <h5 className="fw-bold mb-3">VLOG 5 - Dalawang bagay na kaylangan mong mahanap para maging succesful</h5>
-                                                                                                            <p className="mb-2">
+                                                                                                        <h5 className="fw-bold">VLOG 5 - Dalawang bagay na kaylangan mong mahanap para maging succesful</h5>
+                                                                                                            <p>
                                                                                                             Advice para maging successful sa career na napili mo.
                                                                                                             Advice para sa hindi alam kung ano gustong maging career.
 

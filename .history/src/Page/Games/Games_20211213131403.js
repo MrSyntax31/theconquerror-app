@@ -37,7 +37,7 @@ const Games = () => {
                         <h3>Quiz</h3>
                         <p>
                         Play the random quiz game that test your knowledge in basic computer programming.</p>
-                        <Link to="/quiz" style={{ textDecoration: 'none' }} className="btn btn-primary  mt-4">Play</Link>
+                        <Link to="/quiz" style={{ textDecoration: 'none' }} className="btn btn-primary  mt">Play</Link>
                     </div>
             </Col>
             
@@ -48,7 +48,7 @@ const Games = () => {
                 <h3>Hangman</h3>
                 <p>Try to test and figure out programming terms and languange, in a guessing game.</p>
 
-            <Link to="/hangman" style={{ textDecoration: 'none' }} className="btn btn-primary  mt-4">Play</Link>
+            <Link to="/hangman" style={{ textDecoration: 'none' }} className="btn btn-primary">Play</Link>
             </div>
             
             </Col>

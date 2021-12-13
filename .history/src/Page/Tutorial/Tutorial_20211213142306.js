@@ -948,7 +948,7 @@ class Tutorial extends Component {
 
                                                                                                     <div className="offset-lg-1 col-lg-5 mt-3">
                                                                                                         <div className="main_title text-left">
-                                                                                                        <h5 className="fw-bold mb-3">VLOG 5 - Dalawang bagay na kaylangan mong mahanap para maging succesful</h5>
+                                                                                                        <h5 className="fw-bold">VLOG 5 - Dalawang bagay na kaylangan mong mahanap para maging succesful</h5>
                                                                                                             <p className="mb-2">
                                                                                                             Advice para maging successful sa career na napili mo.
                                                                                                             Advice para sa hindi alam kung ano gustong maging career.

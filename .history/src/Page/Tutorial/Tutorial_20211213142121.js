@@ -829,7 +829,7 @@ class Tutorial extends Component {
 
                                                                                 <div>
                                                                                     
-                                                                                    <section className="about_area section_gap mt-3 mb-3">
+                                                                                    <section className="about_area section_gap mb-3">
                                                                                             <div className="">
                                                                                                 <div className="row justify-content-start align-items-center">
                                                                                                     <div className="col-lg-4">
@@ -840,8 +840,8 @@ class Tutorial extends Component {
 
                                                                                                     <div className="offset-lg-1 col-lg-5 mt-3">
                                                                                                         <div className="main_title text-left">
-                                                                                                        <h5 className="fw-bold mb-3">VLOG 2 - Ano ang Programming?</h5>
-                                                                                                            <p className="mb-2">
+                                                                                                        <h5 className="fw-bold">VLOG 2 - Ano ang Programming?</h5>
+                                                                                                            <p>
                                                                                                             paano maging programmer,
                                                                                                             paano maging magaling na programmer,
                                                                                                             paano ba maging programmer,
@@ -876,8 +876,8 @@ class Tutorial extends Component {
 
                                                                                                     <div className="offset-lg-1 col-lg-5 mt-3">
                                                                                                         <div className="main_title text-left">
-                                                                                                            <h5 className="fw-bold mb-3">VLOG 3 - Para sayo ba ang pagiging Programmer</h5>
-                                                                                                            <p className="mb-2">
+                                                                                                            <h5 className="fw-bold">VLOG 3 - Para sayo ba ang pagiging Programmer</h5>
+                                                                                                            <p>
                                                                                                             paano maging programmer,
                                                                                                             paano maging magaling na programmer,
                                                                                                             paano ba maging programmer,
@@ -911,8 +911,8 @@ class Tutorial extends Component {
 
                                                                                                     <div className="offset-lg-1 col-lg-5 mt-3">
                                                                                                         <div className="main_title text-left">
-                                                                                                        <h5 className="fw-bold mb-3">VLOG 4 - Mahalaga bang graduate ka para maging Programmer?</h5>
-                                                                                                            <p className="mb-2">
+                                                                                                        <h5 className="fw-bold">VLOG 4 - Mahalaga bang graduate ka para maging Programmer?</h5>
+                                                                                                            <p>
                                                                                                             paano maging programmer,
                                                                                                             paano maging magaling na programmer,
                                                                                                             paano ba maging programmer,
@@ -948,8 +948,8 @@ class Tutorial extends Component {
 
                                                                                                     <div className="offset-lg-1 col-lg-5 mt-3">
                                                                                                         <div className="main_title text-left">
-                                                                                                        <h5 className="fw-bold mb-3">VLOG 5 - Dalawang bagay na kaylangan mong mahanap para maging succesful</h5>
-                                                                                                            <p className="mb-2">
+                                                                                                        <h5 className="fw-bold">VLOG 5 - Dalawang bagay na kaylangan mong mahanap para maging succesful</h5>
+                                                                                                            <p>
                                                                                                             Advice para maging successful sa career na napili mo.
                                                                                                             Advice para sa hindi alam kung ano gustong maging career.
 
