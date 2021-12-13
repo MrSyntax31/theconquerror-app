@@ -276,39 +276,27 @@ const Profile = () => {
     onValue(profileData, (snapshot) => {
       setData(snapshot.val());
 
-      sessionStorage.setItem('userlvl', profile.level)
+      
       
   })
 }
         
         showProfile();
-          
+      
         function onLoad() {
-          const lvl = sessionStorage.getItem('userlvl');
-          onSnapshot(doc(firestoredb, "warrioravatar", lvl), (doc) => {
-
-              const docdata = (doc.data())
-
-              if (docdata)
-              {   
-                  setAvatar(docdata);
-               
-
-                
-              }
-              else{
-                  
-                  console.log("No Data");
-                 
-              }
-
+          const collectionRef = collection(forumdb, "warrioravatar", profi);
+          const q = query(citiesRef, where("capital", "==", true));
+        
+          onSnapshot(q, (snapshot) =>
+            setDiscussion(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+          
+          )
+      
               
-          });
-
-
-      }
-
-      onLoad(); 
+          }); }
+      
+           onLoad()
+        
        
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
  

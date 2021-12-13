@@ -416,8 +416,7 @@ const HomeUser = () => {
                   </div>
                </Col>
             </Row>
-            <a href='https://bachelorthesiswritingservice.com/'>Ghostwriting Service Bachelor</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=c607d901808a0d27ab0c90dbbf4a575774b01b02'></script>
-            <script type="text/javascript" src="https://freevisitorcounters.com/en/home/counter/893837/t/0"></script>
+                  
             </Container>
          </section>
 

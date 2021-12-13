@@ -292,13 +292,13 @@ const Profile = () => {
               if (docdata)
               {   
                   setAvatar(docdata);
-               
+                  console.log(docdata);
 
                 
               }
               else{
                   
-                  console.log("No Data");
+                  console.log(docdata);
                  
               }
 

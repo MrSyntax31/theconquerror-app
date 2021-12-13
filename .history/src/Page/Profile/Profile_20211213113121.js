@@ -298,7 +298,7 @@ const Profile = () => {
               }
               else{
                   
-                  console.log("No Data");
+                  console.log(no data);
                  
               }
 

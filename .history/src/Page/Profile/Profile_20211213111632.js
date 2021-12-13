@@ -20,7 +20,7 @@ import {
 import Navbar from '../../Components/Navbar/Navbar'
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
-import { getDatabase, ref, onValue, update } from "firebase/database";
+import { getDatabase, ref, onValue, update, child, push } from "firebase/database";
 import {  Link } from "react-router-dom"
 import './Style.css'
 import DatePicker from 'react-datepicker'
@@ -276,41 +276,41 @@ const Profile = () => {
     onValue(profileData, (snapshot) => {
       setData(snapshot.val());
 
-      sessionStorage.setItem('userlvl', profile.level)
+      
       
   })
 }
         
         showProfile();
-          
-        function onLoad() {
-          const lvl = sessionStorage.getItem('userlvl');
-          onSnapshot(doc(firestoredb, "warrioravatar", lvl), (doc) => {
-
-              const docdata = (doc.data())
-
-              if (docdata)
-              {   
-                  setAvatar(docdata);
-               
-
-                
-              }
-              else{
-                  
-                  console.log("No Data");
-                 
-              }
-
-              
-          });
-
-
-      }
-
-      onLoad(); 
+      
+       
+        
        
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
+
+  useEffect (() => {
+
+    function onLoad() {
+    
+      onSnapshot(doc(firestoredb, "warrioravatar", `${profile.level}` ), (doc) => {
+          const docdata = (doc.data())
+        
+          if (docdata)
+          {   
+            setAvatar(docdata);
+              
+          }
+          else{
+          
+            console.log("no docs")
+          }
+  
+          
+      });
+  
+        onLoad();
+  }
+  },[profile]); // eslint-disable-line react-hooks/exhaustive-deps
  
 
 function updateProfile(){ 

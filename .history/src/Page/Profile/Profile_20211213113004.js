@@ -275,8 +275,8 @@ const Profile = () => {
     const profileData = ref(realtimedb, '/users/' + userId);
     onValue(profileData, (snapshot) => {
       setData(snapshot.val());
-
-      sessionStorage.setItem('userlvl', profile.level)
+      
+      
       
   })
 }
@@ -284,21 +284,20 @@ const Profile = () => {
         showProfile();
           
         function onLoad() {
-          const lvl = sessionStorage.getItem('userlvl');
-          onSnapshot(doc(firestoredb, "warrioravatar", lvl), (doc) => {
+          onSnapshot(doc(firestoredb, "warrioravatar", `${profile.level}`), (doc) => {
 
               const docdata = (doc.data())
 
               if (docdata)
               {   
                   setAvatar(docdata);
-               
+                  console.log(docdata);
 
                 
               }
               else{
                   
-                  console.log("No Data");
+                  console.log(docdata);
                  
               }
 

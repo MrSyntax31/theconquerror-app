@@ -276,39 +276,19 @@ const Profile = () => {
     onValue(profileData, (snapshot) => {
       setData(snapshot.val());
 
-      sessionStorage.setItem('userlvl', profile.level)
+      
       
   })
 }
         
         showProfile();
           
-        function onLoad() {
-          const lvl = sessionStorage.getItem('userlvl');
-          onSnapshot(doc(firestoredb, "warrioravatar", lvl), (doc) => {
-
-              const docdata = (doc.data())
-
-              if (docdata)
-              {   
-                  setAvatar(docdata);
-               
-
-                
-              }
-              else{
-                  
-                  console.log("No Data");
-                 
-              }
-
-              
-          });
-
-
-      }
-
-      onLoad(); 
+        const q = query(collectionRef,orderBy("created_at","desc"), limit(5));
+        
+        onSnapshot(q, (snapshot) =>
+          setDiscussion(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+        
+        ) 
        
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
  

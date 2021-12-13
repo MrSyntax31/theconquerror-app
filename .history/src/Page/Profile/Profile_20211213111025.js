@@ -20,7 +20,7 @@ import {
 import Navbar from '../../Components/Navbar/Navbar'
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
-import { getDatabase, ref, onValue, update } from "firebase/database";
+import { getDatabase, ref, onValue, update, child, push } from "firebase/database";
 import {  Link } from "react-router-dom"
 import './Style.css'
 import DatePicker from 'react-datepicker'
@@ -262,7 +262,26 @@ const Profile = () => {
  // const [levelhandler, setHandler] = useState();
   const [avatar , setAvatar] = useState([]);
 
- 
+  function onLoad() {
+    
+    onSnapshot(doc(firestoredb, "warrioravatar", `${profile.level}` ), (doc) => {
+        const docdata = (doc.data())
+      
+        if (docdata)
+        {   
+          setAvatar(docdata);
+            
+        }
+        else{
+        
+          console.log("no docs")
+        }
+
+        
+    });
+
+
+}
 
 //Loads the function inside the useEffect when the component renders
   useEffect (() => {
@@ -276,42 +295,17 @@ const Profile = () => {
     onValue(profileData, (snapshot) => {
       setData(snapshot.val());
 
-      sessionStorage.setItem('userlvl', profile.level)
+      
       
   })
 }
         
         showProfile();
-          
-        function onLoad() {
-          const lvl = sessionStorage.getItem('userlvl');
-          onSnapshot(doc(firestoredb, "warrioravatar", lvl), (doc) => {
-
-              const docdata = (doc.data())
-
-              if (docdata)
-              {   
-                  setAvatar(docdata);
-               
-
-                
-              }
-              else{
-                  
-                  console.log("No Data");
-                 
-              }
-
-              
-          });
-
-
-      }
-
-      onLoad(); 
+        onLoad();
+       
+        
        
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
- 
 
 function updateProfile(){ 
   
@@ -546,14 +540,14 @@ function updateProfile(){
                                         <Form.Group id="inst">
                                         <Form.Label>Institution</Form.Label>
                                         <Form.Select aria-label="Default select example" value={insti || ""} onChange={e => InstitutionValue(e)} required>
-                                        <option value="">Select Institution</option>
+                                        <option>Select Institution</option>
                                         <option value="LSPU">LSPU</option>
                                         <option value="PUP">PUP</option>
                                         <option value="TUP">TUP</option>
                                         <option value="BSIT">BSIT</option>
                                         <option value="DICT">DICT</option>
                                         <option value="DCET">DCET</option>
-                                        <option value="Others">Others.</option>
+                                        <option value="">Others.</option>
                                         </Form.Select>
                                         { instiHide &&  <Form.Control className="mt-2" value={insti} onChange={e => setInsti(e.target.value)}  name = "Institution" type="text"  required placeholder={profile.Institution}/> }
             
@@ -582,11 +576,9 @@ function updateProfile(){
                                     </div>
                                     <Card.Body>
                                       <Card.Title>My level: <strong>{profile.level}</strong> </Card.Title>
-                                      <br/>
+                                      <br.
                                       <Card.Text>
-                                       
-                                        <strong>{avatar.levelname}</strong>
-                                        <br/>
+                                        <label className="fw-bold">{avatar.levelname}</label>
                                         {avatar.desc}
                                       </Card.Text>
                                       <Link to="/course" style={{ textDecoration: 'none' }} className="btn btn-primary mb-4">Start your Adventure!</Link>

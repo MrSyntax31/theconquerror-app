@@ -20,7 +20,7 @@ import {
 import Navbar from '../../Components/Navbar/Navbar'
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
-import { getDatabase, ref, onValue, update } from "firebase/database";
+import { getDatabase, ref, onValue, update, child, push } from "firebase/database";
 import {  Link } from "react-router-dom"
 import './Style.css'
 import DatePicker from 'react-datepicker'
@@ -103,7 +103,7 @@ const Profile = () => {
   const [occuHide, showHide1] = useState("")
   const [instiHide, showHide2] = useState("")
 
-  
+  const [fname, setFname] = useState({});
   const [bday, setBday] = useState();
   const [gender, setGender] = useState();
   const [occu, setOccu] = useState();
@@ -131,7 +131,7 @@ const Profile = () => {
 
     setOccu(e.target.value)
 
-    if(e.target.value === "Others"){
+    if(e.target.value === ""){
       showHide1("show")
 
 
@@ -146,7 +146,7 @@ const Profile = () => {
 
     setInsti(e.target.value)
 
-    if(e.target.value === "Others"){
+    if(e.target.value === ""){
       showHide2("show")
 
 
@@ -262,7 +262,26 @@ const Profile = () => {
  // const [levelhandler, setHandler] = useState();
   const [avatar , setAvatar] = useState([]);
 
- 
+  function onLoad() {
+    
+    onSnapshot(doc(firestoredb, "warrioravatar", `${profile.level}` ), (doc) => {
+        const docdata = (doc.data())
+      
+        if (docdata)
+        {   
+          setAvatar(docdata);
+            
+        }
+        else{
+        
+          console.log("no docs")
+        }
+
+        
+    });
+
+
+}
 
 //Loads the function inside the useEffect when the component renders
   useEffect (() => {
@@ -276,42 +295,17 @@ const Profile = () => {
     onValue(profileData, (snapshot) => {
       setData(snapshot.val());
 
-      sessionStorage.setItem('userlvl', profile.level)
+      
       
   })
 }
         
         showProfile();
-          
-        function onLoad() {
-          const lvl = sessionStorage.getItem('userlvl');
-          onSnapshot(doc(firestoredb, "warrioravatar", lvl), (doc) => {
-
-              const docdata = (doc.data())
-
-              if (docdata)
-              {   
-                  setAvatar(docdata);
-               
-
-                
-              }
-              else{
-                  
-                  console.log("No Data");
-                 
-              }
-
-              
-          });
-
-
-      }
-
-      onLoad(); 
+        onLoad();
+       
+        
        
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
- 
 
 function updateProfile(){ 
   
@@ -410,7 +404,7 @@ function updateProfile(){
                                     <div className="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-12 mt-3">
                                       <div className="form-group">
                                           <label>Email</label>
-                                          <input type="text" className="form-control mt-2 mb-2" id="email" value={profile.email || ''} disabled />
+                                          <input type="text" className="form-control mt-2 mb-2" id="emailu" value={profile.email || ''} disabled />
                                       </div>
                                   </div>
 
@@ -499,18 +493,17 @@ function updateProfile(){
                                             <Modal.Title>Update Profile</Modal.Title>
                                           </Modal.Header>
                                           <Modal.Body>
-
                                           <Form noValidate validated={validated} onSubmit={handleSubmit}>
 
                                           <Form.Group id="" className="mb-2">
                                             <Form.Label>Address</Form.Label>
-                                            <Form.Control value={ address || "" } onChange={e => setAddress(e.target.value)}  name = "name" type="name" required placeholder={profile.Address}/>
+                                            <Form.Control value={ address || "" } onChange={e => setAddress(e.target.value)}  name = "name" type="name" placeholder={profile.Address}/>
                                           </Form.Group>
 
                                           <Form.Group id="gender">
                                             <Form.Label>Gender</Form.Label>
-                                            <Form.Select aria-label="Default select example" value={ gender || ""  } onChange={e => setGender(e.target.value)} required>
-                                            <option value="">Select Gender</option>
+                                            <Form.Select aria-label="Default select example" value={ gender ||""  } onChange={e => setGender(e.target.value)}>
+                                            <option>Select Gender</option>
                                             <option value="Male">Male</option>
                                             <option value="Female">Female</option>
                                             <option value="Transgender">Transgender</option>
@@ -522,40 +515,37 @@ function updateProfile(){
                                         <Form.Group id="bday">
                                         <Form.Label>Birthday</Form.Label>
                                           <DatePicker className="form-control"
-                                           dateFormat="MMMM d, yyyy"
-                                           selected={bday}
-                                           onChange={(date) => setBday(date)}
-                                           maxDate={Date.now()}
-                                           placeholderText="Select your Birthday"
-                                             required
-                                        
+                                          dateFormat="MMMM d, yyyy"
+                                          placeholderText="Select your Birthday"
+                                          value={profile.Birthday}
+                                          disabled
                                         />
                                         </Form.Group>
 
                                         <Form.Group id="occu">
                                         <Form.Label>Occupation</Form.Label>
-                                        <Form.Select aria-label="Default select example" value={occu || ""} onChange={e => OccupationValue(e)} required>
-                                        <option value="">Select Occupation</option>
+                                        <Form.Select aria-label="Default select example" value={occu || profile.Occupation} onChange={e => OccupationValue(e)}>
+                                        <option>Select Occupation</option>
                                         <option value="Student">Student</option>
                                         <option value="Professor">Professor</option>
                                         <option value="Others">Others.</option>
                                         </Form.Select>
-                                        { occuHide &&  <Form.Control  className="mt-2" value={occu } onChange={e => setOccu(e.target.value)}  name = "Occupation" type="text"  required placeholder={profile.Occupation} /> }
+                                        { occuHide &&  <Form.Control  className="mt-2" value={occu } onChange={e => setOccu(e.target.value)}  name = "Occupation" type="text"  required placeholder="Please Specify"/> }
                                         </Form.Group>
 
                                         <Form.Group id="inst">
                                         <Form.Label>Institution</Form.Label>
-                                        <Form.Select aria-label="Default select example" value={insti || ""} onChange={e => InstitutionValue(e)} required>
-                                        <option value="">Select Institution</option>
+                                        <Form.Select aria-label="Default select example" value={insti || profile.Institution} onChange={e => InstitutionValue(e)} required>
+                                        <option>Select Institution</option>
                                         <option value="LSPU">LSPU</option>
                                         <option value="PUP">PUP</option>
                                         <option value="TUP">TUP</option>
                                         <option value="BSIT">BSIT</option>
                                         <option value="DICT">DICT</option>
                                         <option value="DCET">DCET</option>
-                                        <option value="Others">Others.</option>
+                                        <option value="">Others.</option>
                                         </Form.Select>
-                                        { instiHide &&  <Form.Control className="mt-2" value={insti} onChange={e => setInsti(e.target.value)}  name = "Institution" type="text"  required placeholder={profile.Institution}/> }
+                                        { instiHide &&  <Form.Control className="mt-2" value={insti} onChange={e => setInsti(e.target.value)}  name = "Institution" type="text"  required placeholder="Please Specify"/> }
             
                                         </Form.Group>
 
@@ -582,11 +572,8 @@ function updateProfile(){
                                     </div>
                                     <Card.Body>
                                       <Card.Title>My level: <strong>{profile.level}</strong> </Card.Title>
-                                      <br/>
                                       <Card.Text>
-                                       
-                                        <strong>{avatar.levelname}</strong>
-                                        <br/>
+                                        <label className="fw-bold">{avatar.levelname}</label>
                                         {avatar.desc}
                                       </Card.Text>
                                       <Link to="/course" style={{ textDecoration: 'none' }} className="btn btn-primary mb-4">Start your Adventure!</Link>

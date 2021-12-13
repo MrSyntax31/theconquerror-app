@@ -20,7 +20,7 @@ import {
 import Navbar from '../../Components/Navbar/Navbar'
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
-import { getDatabase, ref, onValue, update } from "firebase/database";
+import { getDatabase, ref, onValue, update, child, push } from "firebase/database";
 import {  Link } from "react-router-dom"
 import './Style.css'
 import DatePicker from 'react-datepicker'
@@ -262,7 +262,26 @@ const Profile = () => {
  // const [levelhandler, setHandler] = useState();
   const [avatar , setAvatar] = useState([]);
 
- 
+  function onLoad() {
+    
+    onSnapshot(doc(firestoredb, "warrioravatar", `${profile.level}` ), (doc) => {
+        const docdata = (doc.data())
+      
+        if (docdata)
+        {   
+          setAvatar(docdata);
+            
+        }
+        else{
+        
+          console.log("no docs")
+        }
+
+        
+    });
+
+
+}
 
 //Loads the function inside the useEffect when the component renders
   useEffect (() => {
@@ -276,42 +295,17 @@ const Profile = () => {
     onValue(profileData, (snapshot) => {
       setData(snapshot.val());
 
-      sessionStorage.setItem('userlvl', profile.level)
+      
       
   })
 }
         
         showProfile();
-          
-        function onLoad() {
-          const lvl = sessionStorage.getItem('userlvl');
-          onSnapshot(doc(firestoredb, "warrioravatar", lvl), (doc) => {
-
-              const docdata = (doc.data())
-
-              if (docdata)
-              {   
-                  setAvatar(docdata);
-               
-
-                
-              }
-              else{
-                  
-                  console.log("No Data");
-                 
-              }
-
-              
-          });
-
-
-      }
-
-      onLoad(); 
+        onLoad();
+       
+        
        
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
- 
 
 function updateProfile(){ 
   
@@ -584,8 +578,8 @@ function updateProfile(){
                                       <Card.Title>My level: <strong>{profile.level}</strong> </Card.Title>
                                       <br/>
                                       <Card.Text>
-                                       
-                                        <strong>{avatar.levelname}</strong>
+                                        <strong></strong>
+                                        <label className="fw-bold">{avatar.levelname}</label>
                                         <br/>
                                         {avatar.desc}
                                       </Card.Text>
