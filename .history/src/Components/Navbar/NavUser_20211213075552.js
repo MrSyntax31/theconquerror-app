@@ -42,7 +42,7 @@ export default function NavUser() {
           title="ConquError">
 
           <Dropdown.Item href="/profile"> Profile </Dropdown.Item>
-          <Dropdown.Item  onClick={logout}>Log-Out</Dropdown.Item>
+          <Dropdown.Item  onClick={logout}>W Log-Out</Dropdown.Item>
           <Dropdown.Divider />
           <Dropdown.Item href="https://technojetdev.netlify.app">Technojet.Dev</Dropdown.Item>
         </DropdownButton>

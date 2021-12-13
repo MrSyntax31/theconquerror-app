@@ -5,7 +5,6 @@ import { getAuth, signOut } from "firebase/auth";
 import {Container,  Row,Col} from 'react-bootstrap'
 import { useHistory} from "react-router-dom"
 import swal from 'sweetalert';
-import './Nav.css'
 
 export default function NavUser() {
 
@@ -35,11 +34,12 @@ export default function NavUser() {
         <Col md="auto"></Col>
 
         <Col xs lg="4">
-        <DropdownButton className="NavBar mt-2"
+        <DropdownButton
           id="dropdown-button-dark-example2"
           variant="secondary"
           menuVariant="dark"
-          title="ConquError">
+          title="ConquError"
+          className="mt-2">
 
           <Dropdown.Item href="/profile"> Profile </Dropdown.Item>
           <Dropdown.Item  onClick={logout}>Log-Out</Dropdown.Item>

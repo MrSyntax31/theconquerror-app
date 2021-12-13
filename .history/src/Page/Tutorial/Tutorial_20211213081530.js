@@ -49,7 +49,7 @@ class Tutorial extends Component {
                                                             Learn and study  <br/>
                                                             together</h2>
                                                         <p className="mb-3">
-                                                            It's easy to study and learn if there is someone willing to help you. In these tutorials, you will learn how to become an independent leaner  and understand how to conquer your own problems.
+                                                            It's easy to study and learn if there is someone willing to help you. People that are willing to help you are called tutors. In these tutorials, you will learn how to become an independent leaner  and understand how to conquer your own problems.
                                                         </p>
                                                         <p> 
                                                             There are a lot of tutorials on the internet, but they are not meant for you. These tutorials are designed to help you understand how to become a better learner.
@@ -118,7 +118,7 @@ class Tutorial extends Component {
                                                                         <Card.Img variant="top" className="mt-5 w-50 rounded mb-3" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/149870072_4438803116146821_814614453010169425_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF7kx9PgpLqkIGIHWFawVBjeeLqseLHov554uqx4sei_hqzZSt_ndDnrRlWKaRH4bXcCit_bVVCti5grm96mMQ-&_nc_ohc=vqBDbHbLINoAX_U1AAY&_nc_ht=scontent.fmnl13-2.fna&oh=ec0d5505a0c0e7c2d6effe778f78bd15&oe=61CB7CFA" />
                                                                         </div>           
                                                                         <Card.Body>
-                                                                            <Card.Title className="mt-4 text-center">John Carlo Franco</Card.Title>
+                                                                            <Card.Title className="mt-4 ">John Carlo Franco</Card.Title>
                                                                         </Card.Body>
                                                             </Card>            
                                                         </Col>

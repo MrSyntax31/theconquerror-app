@@ -5,7 +5,7 @@ import { getAuth, signOut } from "firebase/auth";
 import {Container,  Row,Col} from 'react-bootstrap'
 import { useHistory} from "react-router-dom"
 import swal from 'sweetalert';
-import './Nav.css'
+import './NavAuth.css'
 
 export default function NavUser() {
 

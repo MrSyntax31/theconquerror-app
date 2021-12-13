@@ -16,6 +16,7 @@ import Quiz from './Page/Games/Quiz';
 import Forum from './Page/Forum/Forum';
 import Thread from './Page/Forum/Thread';
 import Tutorial from './Page/Tutorial/Tutorial';
+
 import Profile from './Page/Profile/Profile';
 import Login from './Page/User/Login';
 import Register from './Page/User/Register';

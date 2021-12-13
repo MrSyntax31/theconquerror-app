@@ -13,7 +13,7 @@ class Tutorial extends Component {
         <>
                 <div>
                     <Helmet>
-                        <title>ConquError | Tutorials</title>
+                        <title>ConquError | Tutorial</title>
                         <meta name="description" content="ConquError Register page" />
                     </Helmet>
                 </div> 
@@ -25,7 +25,7 @@ class Tutorial extends Component {
                     
                         <div>
                             <div className="col-sm-12 col-md-12 mb-4">
-                                    <h1 className="text-center text-primary fw-bold">Welcome to Tutorials</h1>                                   
+                                    <h1 className="text-center text-primary fw-bold">Welcome to Tutorial Page</h1>                                   
                             </div>  
                         </div>
                         <Container className="mb-5" fluid="md" style={{
@@ -48,12 +48,12 @@ class Tutorial extends Component {
                                                         <h2 className="fw-bold mb-3">let’s <br/>
                                                             Learn and study  <br/>
                                                             together</h2>
-                                                        <p className="mb-3">
-                                                            It's easy to study and learn if there is someone willing to help you. In these tutorials, you will learn how to become an independent leaner  and understand how to conquer your own problems.
+                                                        <p className="MB">
+                                                            It is easy to study and learn if someone is willing to help you. People that are willing to help you are called tutors. In this tutorial, you will learn how to become an independent leaner  and understand how to conquer your own problems.
                                                         </p>
-                                                        <p> 
-                                                            There are a lot of tutorials on the internet, but they are not meant for you. These tutorials are designed to help you understand how to become a better learner.
-                                                             The following tutorial shows tips, guides, insight and strategies to help you better understood computer programming..
+                                                        <p>
+                                                            There's a lot of tutorials on the internet, but they are not meant for you. This tutorial is designed to help you understand how to become a better learner.
+                                                            It is designed to help you understand how to become a better learner. The following tutorial video shows tips, guides, insight and strategies to help you become a better learner.
                                                         </p>
                                                     </div>
                                                 </div>
@@ -66,7 +66,7 @@ class Tutorial extends Component {
                                 <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                                     <Row>
                                         <div className="">
-                                            <h1 className="text-center text-primary fw-bold">Our featured Content Creators</h1>
+                                            <h1 className="text-center text-primary fw-bold">Some featured Content Creator</h1>
                                         </div>
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', marginTop: '2rem' }}>
@@ -74,7 +74,7 @@ class Tutorial extends Component {
                                                                     <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl9-3.fna.fbcdn.net/v/t39.30808-6/236064912_102650292134240_4791421894203825811_n.png?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXX-bmMCRJl9vXOi84gaWc9Js6cocCjdX0mzpyhwKN1cCgkTxcJBDEakrRzC8__Z1JSXzm2k4Iql9jtESPeRII&_nc_ohc=hdvpSnh1XYsAX-QVk9M&_nc_ht=scontent.fmnl9-3.fna&oh=49a98a2ffef38ff09f3c799292c0eb80&oe=61B933B9" />
                                                                 </div>
                                                                 <Card.Body>
-                                                                <Card.Title className="text-center">ConquError</Card.Title>
+                                                                <Card.Title>ConquError</Card.Title>
                                                                 </Card.Body>
                                                             </Card>        
                                                         </Col>
@@ -85,7 +85,7 @@ class Tutorial extends Component {
                                                                         <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/162108690_121301806677028_8488807075884298821_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXydTM3EZ07XqXpezsDpNyw2d9yKe4opDDZ33Ip7iikJ4Mb5hSfrbJs4divK0bsoW4pLl_zqUldxKd-fXV-F1K&_nc_ohc=Deflbtpo54QAX8UoF5R&_nc_ht=scontent.fmnl13-2.fna&oh=8a34d0b958665e1297e6c9b006a9a9e7&oe=61CBC2F9" />
                                                                         </div>           
                                                                         <Card.Body>
-                                                                            <Card.Title className="text-center">Kuya Dev</Card.Title>
+                                                                            <Card.Title>Kuya Dev</Card.Title>
                                                                         </Card.Body>
                                                             </Card>            
                                                         </Col>
@@ -96,7 +96,7 @@ class Tutorial extends Component {
                                                                         <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.6435-9/142506784_713464262646294_432244117709991327_n.png?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGeJIr6YAHBkJVN1REpNuyKfmbCiC-RHNd-ZsKIL5Ec1x0eIwb-6YsugASGlD0Lohs12fTmpjR57jQbyFmsg-Ec&_nc_ohc=K0v9hfTWhnwAX9bksAx&_nc_ht=scontent.fmnl13-1.fna&oh=e43eefff956661b3f23b3860b3a31284&oe=61C89275" />
                                                                         </div>           
                                                                         <Card.Body>
-                                                                            <Card.Title className="text-center">SDPT Solutions</Card.Title>
+                                                                            <Card.Title>SDPT Solutions</Card.Title>
                                                                         </Card.Body>
                                                             </Card>            
                                                         </Col>
@@ -107,7 +107,7 @@ class Tutorial extends Component {
                                                                         <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://dashboard.kleap.co/wp-content/uploads/sites/139/2021/10/08102021082041_blob.png" />
                                                                         </div>           
                                                                         <Card.Body>
-                                                                            <Card.Title className="text-center">Josiahdoestech</Card.Title>    
+                                                                            <Card.Title>Josiahdoestech</Card.Title>    
                                                                         </Card.Body>
                                                             </Card>            
                                                         </Col>
@@ -118,7 +118,7 @@ class Tutorial extends Component {
                                                                         <Card.Img variant="top" className="mt-5 w-50 rounded mb-3" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/149870072_4438803116146821_814614453010169425_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF7kx9PgpLqkIGIHWFawVBjeeLqseLHov554uqx4sei_hqzZSt_ndDnrRlWKaRH4bXcCit_bVVCti5grm96mMQ-&_nc_ohc=vqBDbHbLINoAX_U1AAY&_nc_ht=scontent.fmnl13-2.fna&oh=ec0d5505a0c0e7c2d6effe778f78bd15&oe=61CB7CFA" />
                                                                         </div>           
                                                                         <Card.Body>
-                                                                            <Card.Title className="mt-4 text-center">John Carlo Franco</Card.Title>
+                                                                            <Card.Title className="mt-4">John Carlo Franco</Card.Title>
                                                                         </Card.Body>
                                                             </Card>            
                                                         </Col>

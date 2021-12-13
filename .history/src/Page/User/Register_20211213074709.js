@@ -370,7 +370,8 @@ import "react-datepicker/dist/react-datepicker.css";
                     show={show}
                     onHide={handleClose}
                     backdrop="static"
-                    keyboard={false}>
+                    keyboard={false}
+                  >
                     <Modal.Header >
                       <Modal.Title>Terms and Conditions</Modal.Title>
                     </Modal.Header>
