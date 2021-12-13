@@ -261,32 +261,13 @@ const Profile = () => {
   const [profile, setData] = useState([]);
  // const [levelhandler, setHandler] = useState();
   const [avatar , setAvatar] = useState([]);
-                 
-        function onLoad() {
-          const lvl = sessionStorage.getItem('userlvl');
-          onSnapshot(doc(firestoredb, "warrioravatar", lvl), (doc) => {
 
-              const docdata = (doc.data())
+  const delay = ms => new Promise(res => setTimeout(res, ms));
+          const timer = async () => {
+            await delay(5000);
 
-              if (docdata)
-              {   
-                  setAvatar(docdata);
-               
-
-                
-              }
-              else{
-                  
-                  console.log("No Data");
-                 
-              }
-
-              
-          });
-
-
-      }
-
+            onLoad();
+          };
 
 //Loads the function inside the useEffect when the component renders
   useEffect (() => {
@@ -307,14 +288,8 @@ const Profile = () => {
         
         showProfile();
    
-        const delay = ms => new Promise(res => setTimeout(res, ms));
-        const timer = async () => {
-          await delay(5000);
 
-          onLoad();
-        };
-
-        timer();
+      onLoad(); 
        
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
  

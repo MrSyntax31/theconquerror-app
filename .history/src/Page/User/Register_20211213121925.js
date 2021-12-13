@@ -117,7 +117,6 @@ import "react-datepicker/dist/react-datepicker.css";
             history.push('/login')
     
           };
-          
   function onRegister  ()
   {
     setError("");
@@ -153,7 +152,7 @@ import "react-datepicker/dist/react-datepicker.css";
                             level: 1
                         });
                       
-                        sendEmailVerification(auth.currentUser)
+                        sendEmailVerification(auth.currentUser.email)
         
                         .then(() => {
                         setBday("")
@@ -170,7 +169,7 @@ import "react-datepicker/dist/react-datepicker.css";
                         setAddress("")
                           setHandler(false);
                           
-                          setSuccess("Email Verification has been sent, please check your email you will be redirected to the login page shortly")
+                          setSuccess("Email Verification has been sent, please check your email")
                           
                           timer();
                         
@@ -274,7 +273,7 @@ import "react-datepicker/dist/react-datepicker.css";
                                   </Form.Control.Feedback>
                                 </Form.Group>
                                 <div className="form-group mt-2 text-secondary">
-                                  <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password</i>
+                                  <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password </i>
                                 </div>
                             </div>
                         </div>

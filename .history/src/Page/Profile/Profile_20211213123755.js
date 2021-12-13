@@ -261,7 +261,33 @@ const Profile = () => {
   const [profile, setData] = useState([]);
  // const [levelhandler, setHandler] = useState();
   const [avatar , setAvatar] = useState([]);
-                 
+
+  const delay = ms => new Promise(res => setTimeout(res, ms));
+          const timer = async () => {
+            await delay(5000);
+
+            onLoad();
+          };
+
+//Loads the function inside the useEffect when the component renders
+  useEffect (() => {
+    
+  //Function that shows the profile of the user 
+  function showProfile() {
+   
+
+  //creating reference for realtimedb and fetching data from table users using the userID as reference then setting the data inside the Profile useState above
+    const profileData = ref(realtimedb, '/users/' + userId);
+    onValue(profileData, (snapshot) => {
+      setData(snapshot.val());
+
+      sessionStorage.setItem('userlvl', JSON.stringify(profile.level))
+      
+  })
+}
+        
+        showProfile();
+          
         function onLoad() {
           const lvl = sessionStorage.getItem('userlvl');
           onSnapshot(doc(firestoredb, "warrioravatar", lvl), (doc) => {
@@ -287,34 +313,7 @@ const Profile = () => {
 
       }
 
-
-//Loads the function inside the useEffect when the component renders
-  useEffect (() => {
-    
-  //Function that shows the profile of the user 
-  function showProfile() {
-   
-
-  //creating reference for realtimedb and fetching data from table users using the userID as reference then setting the data inside the Profile useState above
-    const profileData = ref(realtimedb, '/users/' + userId);
-    onValue(profileData, (snapshot) => {
-      setData(snapshot.val());
-
-      sessionStorage.setItem('userlvl', JSON.stringify(profile.level))
-      
-  })
-}
-        
-        showProfile();
-   
-        const delay = ms => new Promise(res => setTimeout(res, ms));
-        const timer = async () => {
-          await delay(5000);
-
-          onLoad();
-        };
-
-        timer();
+      onLoad(); 
        
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
  

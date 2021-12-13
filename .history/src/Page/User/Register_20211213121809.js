@@ -111,13 +111,7 @@ import "react-datepicker/dist/react-datepicker.css";
           }
 
           const delay = ms => new Promise(res => setTimeout(res, ms));
-          const timer = async () => {
-            await delay(5000);
-            signOut(auth);
-            history.push('/login')
-    
-          };
-          
+
   function onRegister  ()
   {
     setError("");
@@ -153,7 +147,7 @@ import "react-datepicker/dist/react-datepicker.css";
                             level: 1
                         });
                       
-                        sendEmailVerification(auth.currentUser)
+                        sendEmailVerification(auth.currentUser.email)
         
                         .then(() => {
                         setBday("")
@@ -170,11 +164,16 @@ import "react-datepicker/dist/react-datepicker.css";
                         setAddress("")
                           setHandler(false);
                           
-                          setSuccess("Email Verification has been sent, please check your email you will be redirected to the login page shortly")
+                          setSuccess("Email Verification has been sent, please check your email")
                           
-                          timer();
+                          const yourFunction = async () => {
+                            await delay(5000);
+                            signOut(auth);
+                            history.push('/login')
+                    
+                          };
                         
-                      
+                        
                        return 
                       
                        });

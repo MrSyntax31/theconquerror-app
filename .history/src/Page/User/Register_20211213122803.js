@@ -117,7 +117,6 @@ import "react-datepicker/dist/react-datepicker.css";
             history.push('/login')
     
           };
-          
   function onRegister  ()
   {
     setError("");

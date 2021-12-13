@@ -286,7 +286,12 @@ const Profile = () => {
 
 
       }
+  const delay = ms => new Promise(res => setTimeout(res, ms));
+          const timer = async () => {
+            await delay(5000);
 
+            onLoad();
+          };
 
 //Loads the function inside the useEffect when the component renders
   useEffect (() => {
@@ -307,14 +312,8 @@ const Profile = () => {
         
         showProfile();
    
-        const delay = ms => new Promise(res => setTimeout(res, ms));
-        const timer = async () => {
-          await delay(5000);
 
-          onLoad();
-        };
-
-        timer();
+      onLoad(); 
        
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
  

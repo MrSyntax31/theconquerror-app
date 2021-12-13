@@ -117,7 +117,6 @@ import "react-datepicker/dist/react-datepicker.css";
             history.push('/login')
     
           };
-          
   function onRegister  ()
   {
     setError("");
@@ -153,7 +152,7 @@ import "react-datepicker/dist/react-datepicker.css";
                             level: 1
                         });
                       
-                        sendEmailVerification(auth.currentUser)
+                        sendEmailVerification(auth.currentUser.email)
         
                         .then(() => {
                         setBday("")

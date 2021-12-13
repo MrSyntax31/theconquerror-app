@@ -313,8 +313,6 @@ const Profile = () => {
 
           onLoad();
         };
-
-        timer();
        
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
  
