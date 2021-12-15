@@ -79,10 +79,10 @@ export default function Footer() {
         </div>
         <div className="footer__col2 ">
             <ul className="list-unstyled fw-bold ">
-            <li><h4 className="text-white align-center mt-4 mb-3">Developed by</h4></li>
+            <li><h4 className="text-white align-center mt-4">Developed by</h4></li>
               <div className="rotate">
               <li className="d-flex justify-content-center">
-                <img className="inline-block align-center h-20 image-center" src="../assets/TJDev.png" alt="logo"/></li>
+                <img className="inline-block align-center h-20 image-center mt-4" src="../assets/TJDev.png" alt="logo"/></li>
               </div>
               <li className="d-flex justify-content-center">Technojet.Dev</li>  
             </ul>

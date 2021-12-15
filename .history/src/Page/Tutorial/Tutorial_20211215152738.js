@@ -70,7 +70,7 @@ class Tutorial extends Component {
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                                                 <div style={{textAlign:"center"}}>
-                                                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="../assets/WhiteLogo.png" />
+                                                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="../assets/White-logo.png" />
                                                                 </div>
                                                                 <Card.Body>
                                                                 <Card.Title className="text-center">ConquError</Card.Title>

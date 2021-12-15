@@ -70,7 +70,7 @@ class Tutorial extends Component {
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                                                 <div style={{textAlign:"center"}}>
-                                                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="../assets/WhiteLogo.png" />
+                                                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl9-3.fna.fbcdn.net/v/t39.30808-6/236064912_102650292134240_4791421894203825811_n.png?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXX-bmMCRJl9vXOi84gaWc9Js6cocCjdX0mzpyhwKN1cCgkTxcJBDEakrRzC8__Z1JSXzm2k4Iql9jtESPeRII&_nc_ohc=hdvpSnh1XYsAX-QVk9M&_nc_ht=scontent.fmnl9-3.fna&oh=49a98a2ffef38ff09f3c799292c0eb80&oe=61B933B9" />
                                                                 </div>
                                                                 <Card.Body>
                                                                 <Card.Title className="text-center">ConquError</Card.Title>
@@ -626,7 +626,7 @@ class Tutorial extends Component {
                                             <Tab eventKey="profile" title="Josiahdoestech">
                                                 <Row>
                                                     <Col  className="text-center m-3">
-                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="../assets/Joshiah.jpg" />
+                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="../assets/TJDev.png" />
                                                             <div className="text-center">
                                                                 <p><strong>Josiahdoestech</strong></p>
                                                                 <p>Tech reviews, Tech gadgets, Sharing my knowledge about me and what I love doing, Also Gaming.</p>

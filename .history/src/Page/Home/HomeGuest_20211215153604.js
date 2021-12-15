@@ -14,11 +14,11 @@ import * as FaIcons from 'react-icons/fa';
 import * as SiIcons from 'react-icons/si';
 import { Link } from "react-router-dom"
 import './Home.css';
+
 import Navbar from '../../Components/Navbar/Navbar'
 
 
 const HomeUser = () => {
-
 
 
     return (
@@ -48,8 +48,8 @@ const HomeUser = () => {
                               <h1 className="wow fadeInLeft" data-wow-delay=".4s">Welcome to ConquError! where we Conquer Errors</h1>
                               <p className="wow fadeInLeft" data-wow-delay=".6s">Be Part of our Learning Community, Join our Forums and Enroll on our Courses.</p>
                               <div className="button wow fadeInLeft" data-wow-delay=".8s">
-                                 <Link to="/course" className="btn" style={{ textDecoration: 'none' }}>Enroll!</Link>
-                                 <Link to="/forum" className="btn" style={{ textDecoration: 'none' }}>Ask Questions!</Link>
+                                    <Link to="/login" className="btn" style={{ textDecoration: 'none' }}>Login</Link>
+                                    <Link to="/register" className="btn btn-alt" style={{ textDecoration: 'none' }}>Register</Link>
                               </div>
                            </div>
                         </Col>
@@ -64,57 +64,57 @@ const HomeUser = () => {
   
             {/* Section for Image Carousel*/}
             <section className="">
-            <Carousel fade={true} pause={false} className="">
-                        <Carousel.Item interval={2000}>
-                        <img
-                        className="d-block w-100"
-                        src={image1}
-                        alt="First slide"
-                        />
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                        </Carousel.Item>
+               <Carousel fade={true} pause={false} className="">
+                           <Carousel.Item interval={2000}>
+                           <img
+                           className="d-block w-100"
+                           src={image1}
+                           alt="First slide"
+                           />
+                           <Carousel.Caption>
+                           </Carousel.Caption>
+                           </Carousel.Item>
 
-                        <Carousel.Item interval={2000} className="">
-                        <img
-                        className="d-block w-100  "
-                        src={image2}
-                        alt="Third slide"
-                        />
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                        </Carousel.Item>
+                           <Carousel.Item interval={2000} className="">
+                           <img
+                           className="d-block w-100  "
+                           src={image2}
+                           alt="Third slide"
+                           />
+                           <Carousel.Caption>
+                           </Carousel.Caption>
+                           </Carousel.Item>
 
-                        <Carousel.Item interval={2000} className="">
-                        <img
-                        className="d-block w-100 "
-                        src={image3}
-                        alt="Third slide"
-                        />
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                        </Carousel.Item>
+                           <Carousel.Item interval={2000} className="">
+                           <img
+                           className="d-block w-100 "
+                           src={image3}
+                           alt="Third slide"
+                           />
+                           <Carousel.Caption>
+                           </Carousel.Caption>
+                           </Carousel.Item>
 
-                        <Carousel.Item interval={2000} className="">
-                        <img
-                        className="d-block w-100 "
-                        src={image4}
-                        alt="Third slide"
-                        />
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                        </Carousel.Item>
+                           <Carousel.Item interval={2000} className="">
+                           <img
+                           className="d-block w-100 "
+                           src={image4}
+                           alt="Third slide"
+                           />
+                           <Carousel.Caption>
+                           </Carousel.Caption>
+                           </Carousel.Item>
 
-                        <Carousel.Item interval={2000} className="">
-                        <img
-                        className="d-block w-100 "
-                        src={image5}
-                        alt="Third slide"
-                        />
-                        <Carousel.Caption>
-                        </Carousel.Caption>
-                        </Carousel.Item>
-                     </Carousel>
+                           <Carousel.Item interval={2000} className="">
+                           <img
+                           className="d-block w-100 "
+                           src={image5}
+                           alt="Third slide"
+                           />
+                           <Carousel.Caption>
+                           </Carousel.Caption>
+                           </Carousel.Item>
+               </Carousel>
             </section>   
 
             {/* Section for About Us*/}
@@ -333,7 +333,7 @@ const HomeUser = () => {
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                                                 <div style={{textAlign:"center"}}>
-                                                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="../assets/WhiteLogo.png" />
+                                                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="" />
                                                                 </div>
                                                                 <Card.Body>
                                                                 <Card.Title>ConquError</Card.Title>
@@ -397,26 +397,28 @@ const HomeUser = () => {
             <div className="row">
                   <div className="col-lg-10 offset-lg-1 col-md-12 col-12">
                      <div className="title text-center">
-                        <h3 className="text-white">Be a ConquError Warrior, Register Now!</h3>
+                        <h1 className="text-white">Be a ConquError Warrior, Register Now!</h1>
                      </div>
                   </div>
                </div>
             <Row>
                <Col>
                   <div className="single-achievement wow fadeInUp" data-wow-delay=".2s">
-                     <h5 className="counter fw-bold text-white"><span id="secondo1" className="countup" cup-end="100">100</span>%</h5>
+                     <h2 className="counter fw-bold text-white"><span id="secondo1" className="countup" cup-end="100">100</span>%</h2>
                      <p>Satisfied</p>
                   </div>
                </Col>
 
                <Col>
                   <div className="single-achievement wow fadeInUp" data-wow-delay=".6s">
-                     <h5 className="counter fw-bold text-white"><span id="secondo2" className="countup" cup-end="100">100</span>%</h5>
+                     <h2 className="counter fw-bold text-white"><span id="secondo2" className="countup" cup-end="100">100</span>%</h2>
                      <p>Free</p> 
                   </div>
                </Col>
             </Row>
-         </Container>
+
+            </Container>
+
          </section>
 
          {/* Section for Technojet.Dev Team*/}
@@ -529,10 +531,6 @@ const HomeUser = () => {
                </Container>
             </section>
 
-               <a href="#top" className="scroll-top">
-                  <i className="fa fa-chevron-up"></i>
-               </a>
-
             {/* Section for FAQ*/}
             <section id="faq" className="faq mb-5">
               <Container fluid="md" style={{
@@ -562,7 +560,8 @@ const HomeUser = () => {
                      <Accordion.Header>What is ConquError?</Accordion.Header>
                      <Accordion.Body>
                      <strong>ConquError</strong> is a digital learning platform developed by Technojet.Dev. We are composed of creative designers, programmers, and researchers which aim to help students, professionals, and researchers in learning IT related courses.
-                                 ConquError is a learning platform and community that help students and learners to nurture by being an alternative method of understanding all about IT.          
+                                 ConquError is a learning platform and community that help students and learners to nurture by being an alternative method of understanding all about IT.
+                                       
                      </Accordion.Body>
                   </Accordion.Item>
 
@@ -609,7 +608,11 @@ const HomeUser = () => {
                   </Row>
               </Container>
             </section>
-</div>
+      </div>
+
+   <a href="#top" className="scroll-top">
+      <i className="fa fa-chevron-up"></i>
+   </a>
 </>
     )
 }
