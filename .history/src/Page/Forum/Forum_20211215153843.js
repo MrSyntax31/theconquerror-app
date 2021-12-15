@@ -383,7 +383,10 @@ uploadTask.on('state_changed',
                       <Button variant="primary" type="submit" className="mt-4 btn btn-primary w-100">Post</Button>
                     </Form>
                 </Modal.Body>
-                
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleClose}>Close</Button>
+               
+                </Modal.Footer>
                 </Modal>
 
                 <a href="#top" className="scroll-top">

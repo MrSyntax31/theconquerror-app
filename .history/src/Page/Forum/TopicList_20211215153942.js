@@ -590,6 +590,8 @@ const popover = (
                     <Button variant="primary" type="submit" className="mt-4 btn btn-primary w-100">Post</Button>
                     </Form>
                 </Modal.Body>
+                
+                </Modal>
                 </Modal>
               
 

@@ -587,9 +587,13 @@ const popover = (
                       </Row>
                     </Container>
 
-                    <Button variant="primary" type="submit" className="mt-4 btn btn-primary w-100">Post</Button>
+                    <Button variant="primary" type="submit" >Post</Button>
                     </Form>
                 </Modal.Body>
+                <Modal.Footer>
+                  <Button variant="secondary" onClick={handleClose}>Close</Button>
+               
+                </Modal.Footer>
                 </Modal>
               
 
