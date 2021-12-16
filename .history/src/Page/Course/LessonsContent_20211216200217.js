@@ -232,7 +232,7 @@ const popover = (
                                 </div>
 
                                 <br/>
-                                <iframe src={courseinfo.pptlink} width="350px" height="221px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>                    
+                                <iframe src="{}" width="350px" height="221px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>                    
                               </Container>
                             </section>
 

@@ -210,7 +210,7 @@ const popover = (
                             <section id="content" className="mt-5">
                               <Container>                                
                                 {/* Contents */}
-                                <label className="fw-bold mb-3">{courseinfo.title1}</label>    
+                                <label className="fw-bold mb-3">{courseinfo.title1}</label>                        
                                 <p>{courseinfo.content1}</p>
                                   <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.courseimg} alt={courses.Title} />
                                   <p className="text-center font-italic">{courseinfo.caption}</p>
@@ -230,9 +230,6 @@ const popover = (
                                   <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.courseimg3} alt={courses.Title} />
                                   <p className="text-center font-italic">{courseinfo.caption3}</p>
                                 </div>
-
-                                <br/>
-                                <iframe src={courseinfo.pptlink} width="350px" height="221px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>                    
                               </Container>
                             </section>
 

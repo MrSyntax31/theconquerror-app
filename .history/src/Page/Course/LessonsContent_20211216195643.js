@@ -230,9 +230,6 @@ const popover = (
                                   <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.courseimg3} alt={courses.Title} />
                                   <p className="text-center font-italic">{courseinfo.caption3}</p>
                                 </div>
-
-                                <br/>
-                                <iframe src={courseinfo.pptlink} width="350px" height="221px" frameborder="0">This is an embedded <a target="_blank" href="https://office.com">Microsoft Office</a> presentation, powered by <a target="_blank" href="https://office.com/webapps">Office</a>.</iframe>                    
                               </Container>
                             </section>
 
