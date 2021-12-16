@@ -133,7 +133,7 @@ class Tutorial extends Component {
                                                     <Row>
                                                         <Col  className="text-center">
                                                                     <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/162108690_121301806677028_8488807075884298821_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXydTM3EZ07XqXpezsDpNyw2d9yKe4opDDZ33Ip7iikJ4Mb5hSfrbJs4divK0bsoW4pLl_zqUldxKd-fXV-F1K&_nc_ohc=Deflbtpo54QAX8UoF5R&_nc_ht=scontent.fmnl13-2.fna&oh=8a34d0b958665e1297e6c9b006a9a9e7&oe=61CBC2F9" />
-                                                                <div className="text-center mt-3">
+                                                                <div className="text-center mb-3">
                                                                     <p><strong>Kuya Dev</strong></p>
                                                                     <p>Ako si Rem, ang inyong Kuya Dev.</p>
                                                                 </div>
@@ -343,7 +343,7 @@ class Tutorial extends Component {
                                                 <Row>
                                                     <Col  className="text-center m-3">
                                                                 <img alt="SDPTSolutions" variant="top" className="mt-2 w-50" src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.6435-9/142506784_713464262646294_432244117709991327_n.png?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGeJIr6YAHBkJVN1REpNuyKfmbCiC-RHNd-ZsKIL5Ec1x0eIwb-6YsugASGlD0Lohs12fTmpjR57jQbyFmsg-Ec&_nc_ohc=K0v9hfTWhnwAX9bksAx&_nc_ht=scontent.fmnl13-1.fna&oh=e43eefff956661b3f23b3860b3a31284&oe=61C89275" />
-                                                            <div className="text-center mt-3">
+                                                            <div className="text-center">
                                                                 <p><strong>SDPT Solutions</strong></p>
                                                                 <p>SDPT Solutions is an Organization that Creates Video Tutorial for Programmers.</p>
                                                             </div>
@@ -628,7 +628,7 @@ class Tutorial extends Component {
                                                 <Row>
                                                     <Col  className="text-center m-3">
                                                                 <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="../assets/Joshiah.jpg" />
-                                                            <div className="text-center mt-3">
+                                                            <div className="text-center">
                                                                 <p><strong>Josiahdoestech</strong></p>
                                                                 <p>Tech reviews, Tech gadgets, Sharing my knowledge about me and what I love doing, Also Gaming.</p>
                                                             </div>
@@ -776,7 +776,7 @@ class Tutorial extends Component {
                                                 <Row>
                                                     <Col  className="text-center m-3">
                                                                 <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/149870072_4438803116146821_814614453010169425_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF7kx9PgpLqkIGIHWFawVBjeeLqseLHov554uqx4sei_hqzZSt_ndDnrRlWKaRH4bXcCit_bVVCti5grm96mMQ-&_nc_ohc=vqBDbHbLINoAX_U1AAY&_nc_ht=scontent.fmnl13-2.fna&oh=ec0d5505a0c0e7c2d6effe778f78bd15&oe=61CB7CFA" />
-                                                            <div className="text-center  mt-3">
+                                                            <div className="text-center">
                                                                 <p><strong>John Carlo Franco</strong></p>
                                                                 <p>Web and Mobile App Developer, Entrepreneur</p>
                                                             </div>

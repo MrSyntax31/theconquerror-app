@@ -774,9 +774,9 @@ class Tutorial extends Component {
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="John Carlo Franco">
                                                 <Row>
-                                                    <Col  className="text-center m-3">
+                                                    <Col  className="text-center m-3 ">
                                                                 <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/149870072_4438803116146821_814614453010169425_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF7kx9PgpLqkIGIHWFawVBjeeLqseLHov554uqx4sei_hqzZSt_ndDnrRlWKaRH4bXcCit_bVVCti5grm96mMQ-&_nc_ohc=vqBDbHbLINoAX_U1AAY&_nc_ht=scontent.fmnl13-2.fna&oh=ec0d5505a0c0e7c2d6effe778f78bd15&oe=61CB7CFA" />
-                                                            <div className="text-center  mt-3">
+                                                            <div className="text-center">
                                                                 <p><strong>John Carlo Franco</strong></p>
                                                                 <p>Web and Mobile App Developer, Entrepreneur</p>
                                                             </div>
