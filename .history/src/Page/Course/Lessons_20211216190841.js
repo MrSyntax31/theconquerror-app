@@ -129,9 +129,9 @@ const Lessons = () => {
                     <Tab eventKey="profile" title="Overview" className=" mb-5 p-3">
                     
                       <Row>
-                      <Col xs={6} md={2}>
+                      <Col xs={6} md={4}>
                       { userData &&
-                          <div className="container mb-4">
+                          <div style={{ width: '18rem' }} className="container mb-4">
 
                               <Card.Body>
                               <Card.Title>My level: <strong>{userData}</strong></Card.Title>

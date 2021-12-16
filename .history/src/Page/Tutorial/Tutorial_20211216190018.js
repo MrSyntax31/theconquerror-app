@@ -22,11 +22,11 @@ class Tutorial extends Component {
                 <section className="features section bg-light mt-4">
 
                     
-                        <Container>
-                            <div className="mb-4">
+                        <div>
+                            <div className="col-sm-12 col-md-12 mb-4">
                                     <h1 className="text-center text-primary fw-bold">Welcome to Tutorials</h1>                                   
                             </div>  
-                        </Container>
+                        </div>
 
                             <Container className="mb-5" fluid="md" style={{
                                         display: "flex",

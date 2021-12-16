@@ -129,14 +129,14 @@ const Lessons = () => {
                     <Tab eventKey="profile" title="Overview" className=" mb-5 p-3">
                     
                       <Row>
-                      <Col xs={6} md={2}>
+                      <Col xs={6} md={4}>
                       { userData &&
-                          <div className="container mb-4">
+                          <Card style={{ width: '18rem' }} className="container mb-4">
 
                               <Card.Body>
                               <Card.Title>My level: <strong>{userData}</strong></Card.Title>
                               </Card.Body>
-                          </div> }
+                          </Card> }
                       </Col>
                       <Col xs={12} md={8}>
                         <p className="mt-2 mb-3 text-justify">

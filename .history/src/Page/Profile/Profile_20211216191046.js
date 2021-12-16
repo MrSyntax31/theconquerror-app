@@ -616,7 +616,7 @@ function updateProfile(){
               <Row>
                 <Col>
                   <div style={{ width: '100%', height: 300, marginTop:'4rem', marginBottom:'4rem' }}>
-                    <ResponsiveContainer className="textStyle">
+                    <ResponsiveContainer>
                         <AreaChart
                           data={datus}
                           margin={{

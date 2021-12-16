@@ -26,7 +26,7 @@ class Tutorial extends Component {
                             <div className="mb-4">
                                     <h1 className="text-center text-primary fw-bold">Welcome to Tutorials</h1>                                   
                             </div>  
-                        </Container>
+                        </Co>
 
                             <Container className="mb-5" fluid="md" style={{
                                         display: "flex",

@@ -360,7 +360,7 @@ function updateProfile(){
         </div>
         
        {/* Container for Card User Profile Information */}
-      <Container fluid="md" style={{
+      <Container  fluid="md" style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -373,7 +373,7 @@ function updateProfile(){
                             <Card.Body>
                                         <h1 className="text-center text-primary fw-bold">Welcome to ConquError!</h1>
                                        
-                                <Row>
+                                <Row >
                                         <h6 className="mt-3 mb-2 text-primary">Personal Details</h6>
                                        
                                         
@@ -438,7 +438,7 @@ function updateProfile(){
                                           
                                             <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
                                             <div className="fs-4 fw-bold mt-3">Join our guild !</div>
-                                            <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="500" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
+                                            <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="500" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                                           </div>
                                       
                                       </Offcanvas.Body>
@@ -616,7 +616,7 @@ function updateProfile(){
               <Row>
                 <Col>
                   <div style={{ width: '100%', height: 300, marginTop:'4rem', marginBottom:'4rem' }}>
-                    <ResponsiveContainer className="textStyle">
+                    <ResponsiveContainer>
                         <AreaChart
                           data={datus}
                           margin={{
@@ -640,7 +640,7 @@ function updateProfile(){
               <Row>
                 <Col>
                 <div style={{ width: '100%', height: 300, marginTop:'4rem', marginBottom:'4rem' }}>
-                  <ResponsiveContainer className="textStyle">
+                  <ResponsiveContainer>
                     <BarChart
                 width={500}
                 height={300}
