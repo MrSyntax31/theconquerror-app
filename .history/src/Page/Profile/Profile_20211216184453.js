@@ -430,13 +430,13 @@ function updateProfile(){
                                       <Offcanvas.Body>
                                         
                                           <div className=" d-grid gap-2 mt-3 mb-3">
-                                            <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button> 
+                                            <Button variant="primary" onClick={handleShow5} className="mb-2 w-50"><AiIcons.AiFillProfile/> Update Information</Button> 
 
-                                            <Button variant="primary" onClick={handleShow4} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillFileText/> Upload Files</Button> 
+                                            <Button variant="primary" onClick={handleShow4} className="mb-2"><AiIcons.AiFillFileText/> Upload Files</Button> 
                                             
-                                            <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
+                                            <Button variant="primary" onClick={handleShow} className="mb-2"><AiIcons.AiFillLock/> Change Password</Button> 
                                           
-                                            <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
+                                            <Button variant="primary" onClick={handleShow2} className="mb-2"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
                                             <div className="fs-4 fw-bold">Join our guild !</div>
                                             <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="500" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                                           </div>

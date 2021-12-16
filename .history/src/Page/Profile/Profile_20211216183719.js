@@ -101,6 +101,14 @@ const Profile = () => {
   const handleShow5 = ()  => setShow5(true);
   const handleClose5 = () => setShow5(false);
 
+  //For Update
+  const [showUpdate, setShowUpdate ] = useState(false);
+
+  const handleShowUpdate = ()  => setShowUpdate(true);
+  const handleCloseUpdate = () => setShowUpdate(false);
+
+
+
   const [occuHide, showHide1] = useState("")
   const [instiHide, showHide2] = useState("")
 
@@ -230,7 +238,7 @@ const Profile = () => {
         //Function for Modal (Send Feedback)
         async  function sendFeedback(){
 
-        // Rederence the Firebase Service for Firestore
+            // Rederence the Firebase Service for Firestore
         const userFeedback = doc(collection(firestoredb, "feedback"));
 
         //convert date which is timestamp to String
@@ -373,7 +381,7 @@ function updateProfile(){
                             <Card.Body>
                                         <h1 className="text-center text-primary fw-bold">Welcome to ConquError!</h1>
                                        
-                                <Row>
+                                <Row >
                                         <h6 className="mt-3 mb-2 text-primary">Personal Details</h6>
                                        
                                         
@@ -430,15 +438,15 @@ function updateProfile(){
                                       <Offcanvas.Body>
                                         
                                           <div className=" d-grid gap-2 mt-3 mb-3">
-                                            <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button> 
+                                            <Button variant="primary" onClick={handleShow5} className="mb-2"><AiIcons.AiFillProfile/> Update Information</Button> 
 
-                                            <Button variant="primary" onClick={handleShow4} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillFileText/> Upload Files</Button> 
+                                            <Button variant="primary" onClick={handleShow4} className="mb-2"><AiIcons.AiFillFileText/> Upload Files</Button> 
                                             
-                                            <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
+                                            <Button variant="primary" onClick={handleShow} className="mb-2"><AiIcons.AiFillLock/> Change Password</Button> 
                                           
-                                            <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
+                                            <Button variant="primary" onClick={handleShow2} className="mb-2"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
                                             <div className="fs-4 fw-bold">Join our guild !</div>
-                                            <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="500" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                                            <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="350" height="500" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
                                           </div>
                                       
                                       </Offcanvas.Body>
