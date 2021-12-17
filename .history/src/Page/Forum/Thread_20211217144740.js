@@ -154,20 +154,26 @@ const Thread = () => {
         <Container className="mb-5 bg-light rounded p-5">
         
         {/* Option Menu*/}
-
-        <div className="topnav-right">
-        <Dropdown>
-            <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                <BiIcons.BiMenuAltRight/>
+        <Container>
+        <Row>
+            <Col></Col>
+            <Col md="auto"></Col>
+            <Col xs lg="2">
+            <Dropdown>
+            <Dropdown.Toggle variant="success" id="dropdown-basic">
+                Dropdown Button
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Delete</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Case Close</Dropdown.Item>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
-    </div>
+            </Col>
+        </Row>
+        </Container>
+
 
         { Empty && <h1>Nothing to see here.</h1>  }  
 

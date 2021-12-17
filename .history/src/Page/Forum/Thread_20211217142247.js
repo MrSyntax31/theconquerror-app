@@ -4,18 +4,15 @@ import { Link } from "react-router-dom"
 import * as FaIcons from 'react-icons/fa';
 import Helmet from 'react-helmet';
 import Navbar from '../../Components/Navbar/Navbar'
-import {Container, Form, Row, Col, Dropdown} from 'react-bootstrap'
+import {Container, Form, Row, Col} from 'react-bootstrap'
 import './Forum.css';
 import { getAuth } from '@firebase/auth';
-import { getFirestore, doc, onSnapshot, addDoc, collection, query, orderBy } from '@firebase/firestore';
+import { getFirestore, doc, onSnapshot, addDoc, collection,query,orderBy } from '@firebase/firestore';
 import { useHistory } from 'react-router';
 import { getDatabase, ref, onValue } from "firebase/database";
 import swal from 'sweetalert';
-import * as BiIcons from 'react-icons/bi';
-
-
 const Thread = () => {
-
+    
     const auth = getAuth();
     const forumdb = getFirestore();
     
@@ -154,20 +151,7 @@ const Thread = () => {
         <Container className="mb-5 bg-light rounded p-5">
         
         {/* Option Menu*/}
-
-        <div className="topnav-right">
-        <Dropdown>
-            <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                <BiIcons.BiMenuAltRight/>
-            </Dropdown.Toggle>
-
-            <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Delete</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Case Close</Dropdown.Item>
-            </Dropdown.Menu>
-        </Dropdown>
-    </div>
+        
 
         { Empty && <h1>Nothing to see here.</h1>  }  
 

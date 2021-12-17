@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import * as FaIcons from 'react-icons/fa';
 import Helmet from 'react-helmet';
 import Navbar from '../../Components/Navbar/Navbar'
-import {Container, Form, Row, Col, Dropdown} from 'react-bootstrap'
+import {Container, Form, Row, Col, Offcanvas, Dropdown} from 'react-bootstrap'
 import './Forum.css';
 import { getAuth } from '@firebase/auth';
 import { getFirestore, doc, onSnapshot, addDoc, collection, query, orderBy } from '@firebase/firestore';
@@ -15,6 +15,12 @@ import * as BiIcons from 'react-icons/bi';
 
 
 const Thread = () => {
+
+    //Side menu Offcanvas
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
 
     const auth = getAuth();
     const forumdb = getFirestore();
@@ -154,20 +160,23 @@ const Thread = () => {
         <Container className="mb-5 bg-light rounded p-5">
         
         {/* Option Menu*/}
+        <div class="topnav">
+        <div class="topnav-right">
 
-        <div className="topnav-right">
         <Dropdown>
-            <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                <BiIcons.BiMenuAltRight/>
-            </Dropdown.Toggle>
+        <Dropdown.Toggle variant="success" id="dropdown-basic">
+            Dropdown Button
+        </Dropdown.Toggle>
 
-            <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Delete</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Case Close</Dropdown.Item>
-            </Dropdown.Menu>
+        <Dropdown.Menu>
+            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+        </Dropdown.Menu>
         </Dropdown>
-    </div>
+        </div>
+        </div>
+
 
         { Empty && <h1>Nothing to see here.</h1>  }  
 

@@ -16,6 +16,12 @@ import * as BiIcons from 'react-icons/bi';
 
 const Thread = () => {
 
+    //Side menu Offcanvas
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
+
     const auth = getAuth();
     const forumdb = getFirestore();
     
@@ -155,16 +161,16 @@ const Thread = () => {
         
         {/* Option Menu*/}
 
-        <div className="topnav-right">
+        <div class="topnav-right">
         <Dropdown>
             <Dropdown.Toggle variant="primary" id="dropdown-basic">
                 <BiIcons.BiMenuAltRight/>
             </Dropdown.Toggle>
 
             <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Delete</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Case Close</Dropdown.Item>
+                <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
     </div>

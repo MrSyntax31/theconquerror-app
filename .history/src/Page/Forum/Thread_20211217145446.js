@@ -155,7 +155,7 @@ const Thread = () => {
         
         {/* Option Menu*/}
 
-        <div className="topnav-right">
+        <div class="topnav-right">
         <Dropdown>
             <Dropdown.Toggle variant="primary" id="dropdown-basic">
                 <BiIcons.BiMenuAltRight/>
@@ -164,7 +164,7 @@ const Thread = () => {
             <Dropdown.Menu>
                 <Dropdown.Item href="#/action-1">Edit</Dropdown.Item>
                 <Dropdown.Item href="#/action-2">Delete</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Case Close</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Close</Dropdown.Item>
             </Dropdown.Menu>
         </Dropdown>
     </div>
