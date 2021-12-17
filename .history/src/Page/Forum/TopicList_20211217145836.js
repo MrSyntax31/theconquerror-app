@@ -6,7 +6,6 @@ import {} from '../../firebase/firebase'
 import {Container,  Row,Col, Form, FormControl, ButtonGroup} from 'react-bootstrap'
 import { getAuth } from 'firebase/auth'
 import * as GoIcons from 'react-icons/go';
-import * as IoIcons from 'react-icons/io5';
 import * as BsIcons from 'react-icons/bs';
 import * as MdIcons from 'react-icons/md';
 import './Forum.css';
@@ -389,18 +388,18 @@ const popover = (
 
             <Navbar/>
 
+          
+
              <div style={{marginTop:'6rem'}}>
             {/* Container for Search and Ask Question*/}
               <Container>
-
-                <Link to="/forum" style={{ textDecoration: 'none', marginLeft:'3px' }} className="mb-4"><IoIcons.IoArrowBack/> Back</Link>
-              
               <Row>
-
-                <Col >
-                      <h1 className="text-primary fw-bold mt-3">ConquErroRoom</h1>    
-                </Col>
-
+                   
+                <Col>
+               
+              <Link to="/forum" style={{ textDecoration: 'none', marginLeft:'3px' }} className="btn btn-primary mb-4">Back</Link>
+            
+             </Col>
                 <Col md="auto">
                 <Form className="d-flex mt-4">
                 <FormControl
@@ -414,13 +413,11 @@ const popover = (
               </OverlayTrigger>
             </Form>
                 </Col>
-
                 <Col xs lg="2">
                   <div className="NoUserMenu mt-4 ml-5">
                     <Button variant="primary" onClick={handleShow} className="mb-2"> ASK A QUESTION</Button> 
                   </div>
                 </Col>
-
               </Row>
               </Container>
 
@@ -430,10 +427,11 @@ const popover = (
               <div>
                   <Container className="text-center mt-5 mb-5">
                     <div>
+                        <h1 className="text-center text-primary fw-bold mb-4">ConquErroRoom</h1>
                             <div className="text-start">
                               <h3 className="fw-bold fs-m text-start container mb-3"><GoIcons.GoCommentDiscussion/> All Topics </h3>
 
-                                <Button variant="" className="text-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags</Button>
+                                <Button variant="outline-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags</Button>
 
                                 <Offcanvas show={shows} onHide={handleClosed}>
                                   
@@ -446,43 +444,46 @@ const popover = (
                                   <br/><br/>
                                   Please note that tags are important for the forum to work properly!
                             
-                                  <Container className="mt-3">
+                                  <Container>
                       
-                                    <div className="form-check">
-                                    <input type="radio" id="Array" name="Programming" value="Array" className="form-check-input" onChange={handleChangeTag}/>
-                                    <label for="Array" className="form-check-label">Array</label>
-                                    </div>
-                                    <div className="form-check">
-                                        <input type="radio" id="C++" name="Programming" value="C++"  className="form-check-input" onChange={handleChangeTag}/>
-                                        <label for="C" className="form-check-label">C++</label>
-                                    </div>
-                                    <div className="form-check">
-                                        <input type="radio" id="CodeBlocks" name="Programming" value="CodeBlocks" className="form-check-input" onChange={handleChangeTag}/>
-                                        <label for="CodeBlocks" className="form-check-label">CodeBlocks</label>
-                                    </div>   
-                                  
-                                    <div className="form-check">
-                                    <input type="radio" id="Function" name="Programming" value="Function" className="form-check-input" onChange={handleChangeTag}/>
-                                    <label for="Function" className="form-check-label">Function</label>
-                                    </div>
-                                    <div className="form-check">
-                                        <input type="radio" id="Nested Condition" name="Programming" value="Nested Condition"  className="form-check-input" onChange={handleChangeTag}/>
-                                        <label for="Nested Condition" className="form-check-label">Nested Condition</label>
-                                    </div>
-                                    <div className="form-check">
-                                        <input type="radio" id="For loops" name="Programming" value="For loops" className="form-check-input" onChange={handleChangeTag}/>
-                                        <label for="For loops" className="form-check-label">For loops</label>
-                                    </div>
-                                    <div className="form-check">
-                                        <input type="radio" id="Syntaxes" name="Programming" value="Syntaxes" className="form-check-input" onChange={handleChangeTag}/>
-                                        <label for="Syntaxes" className="form-check-label">Syntaxes</label>
-                                    </div>
-                                    <div className="form-check">
-                                        <input type="radio" id="If Else Condition" name="Programming" value="If Else Condition" className="form-check-input" onChange={handleChangeTag}/>
-                                        <label for="If Else Condition" className="form-check-label">If Else Condition</label>
-                                    </div>
-                 
-                                  </Container>
+                        <div className="form-check">
+                        <input type="radio" id="Array" name="Programming" value="Array" className="form-check-input" onChange={handleChangeTag}/>
+                        <label for="Array" className="form-check-label">Array</label>
+                        </div>
+                        <div className="form-check">
+                            <input type="radio" id="C++" name="Programming" value="C++"  className="form-check-input" onChange={handleChangeTag}/>
+                            <label for="C" className="form-check-label">C++</label>
+                        </div>
+                        <div className="form-check">
+                            <input type="radio" id="CodeBlocks" name="Programming" value="CodeBlocks" className="form-check-input" onChange={handleChangeTag}/>
+                            <label for="CodeBlocks" className="form-check-label">CodeBlocks</label>
+                        </div>
+                        </Col>
+
+                        <Col xs={{ order: 'first' }}>
+                        <div className="form-check">
+                        <input type="radio" id="Function" name="Programming" value="Function" className="form-check-input" onChange={handleChangeTag}/>
+                        <label for="Function" className="form-check-label">Function</label>
+                        </div>
+                        <div className="form-check">
+                            <input type="radio" id="Nested Condition" name="Programming" value="Nested Condition"  className="form-check-input" onChange={handleChangeTag}/>
+                            <label for="Nested Condition" className="form-check-label">Nested Condition</label>
+                        </div>
+                        <div className="form-check">
+                            <input type="radio" id="For loops" name="Programming" value="For loops" className="form-check-input" onChange={handleChangeTag}/>
+                            <label for="For loops" className="form-check-label">For loops</label>
+                        </div>
+                        <div className="form-check">
+                            <input type="radio" id="Syntaxes" name="Programming" value="Syntaxes" className="form-check-input" onChange={handleChangeTag}/>
+                            <label for="Syntaxes" className="form-check-label">Syntaxes</label>
+                        </div>
+                        <div className="form-check">
+                            <input type="radio" id="If Else Condition" name="Programming" value="If Else Condition" className="form-check-input" onChange={handleChangeTag}/>
+                            <label for="If Else Condition" className="form-check-label">If Else Condition</label>
+                        </div>
+                        </Col>
+                      </Row>
+                    </Container>
                                 
                                   </Offcanvas.Body>
                                 </Offcanvas>

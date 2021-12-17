@@ -433,7 +433,7 @@ const popover = (
                             <div className="text-start">
                               <h3 className="fw-bold fs-m text-start container mb-3"><GoIcons.GoCommentDiscussion/> All Topics </h3>
 
-                                <Button variant="" className="text-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags</Button>
+                                <Button variant="outline-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags</Button>
 
                                 <Offcanvas show={shows} onHide={handleClosed}>
                                   

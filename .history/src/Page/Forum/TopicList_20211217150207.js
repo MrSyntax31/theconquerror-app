@@ -6,7 +6,6 @@ import {} from '../../firebase/firebase'
 import {Container,  Row,Col, Form, FormControl, ButtonGroup} from 'react-bootstrap'
 import { getAuth } from 'firebase/auth'
 import * as GoIcons from 'react-icons/go';
-import * as IoIcons from 'react-icons/io5';
 import * as BsIcons from 'react-icons/bs';
 import * as MdIcons from 'react-icons/md';
 import './Forum.css';
@@ -389,17 +388,17 @@ const popover = (
 
             <Navbar/>
 
+          <Link to="/forum" style={{ textDecoration: 'none', marginLeft:'3px' }} className="btn btn-primary mb-4">Back</Link>
+
              <div style={{marginTop:'6rem'}}>
             {/* Container for Search and Ask Question*/}
               <Container>
-
-                <Link to="/forum" style={{ textDecoration: 'none', marginLeft:'3px' }} className="mb-4"><IoIcons.IoArrowBack/> Back</Link>
-              
               <Row>
 
-                <Col >
-                      <h1 className="text-primary fw-bold mt-3">ConquErroRoom</h1>    
-                </Col>
+            
+              <Col >
+                    <h1 className="text-primary fw-bold mt-3">ConquErroRoom</h1>    
+              </Col>
 
                 <Col md="auto">
                 <Form className="d-flex mt-4">
@@ -414,13 +413,11 @@ const popover = (
               </OverlayTrigger>
             </Form>
                 </Col>
-
                 <Col xs lg="2">
                   <div className="NoUserMenu mt-4 ml-5">
                     <Button variant="primary" onClick={handleShow} className="mb-2"> ASK A QUESTION</Button> 
                   </div>
                 </Col>
-
               </Row>
               </Container>
 
@@ -433,7 +430,7 @@ const popover = (
                             <div className="text-start">
                               <h3 className="fw-bold fs-m text-start container mb-3"><GoIcons.GoCommentDiscussion/> All Topics </h3>
 
-                                <Button variant="" className="text-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags</Button>
+                                <Button variant="outline-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags</Button>
 
                                 <Offcanvas show={shows} onHide={handleClosed}>
                                   
