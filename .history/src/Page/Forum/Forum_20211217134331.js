@@ -13,8 +13,10 @@ import { getStorage, ref, getDownloadURL, uploadBytesResumable } from "firebase/
 
       function Forum() {
 
-        //Modal User Info
-        const [smShow, setSmShow] = useState(false);
+
+        //Toast bootstrap
+        const [showT, setShowT] = useState(false);
+
         
         //declare firestore services
         const forumdb = getFirestore();
@@ -232,11 +234,8 @@ uploadTask.on('state_changed',
 
         //Maps the data inside firestore collection (topics) so that it can be visible to the user
         const Discussion= topics.map((topic) => (  <div className="Discussion-Board p-3 m-2 border border-primary rounded" key={topic.id} > 
-        <p>Uploaded by: <label className="text-primary" onClick={() => setSmShow(true)}>{topic.created_by}</label> on <strong>
-          {topic.created_at}</strong></p>  
-          
-          
-        <div className="heading"><ul> <li onClick={ handler}  data-id ={topic.id}>{topic.title}<br></br><strong>Description:</strong> {topic.desc} <br></br><strong>Tags:</strong>{topic.tags}</li></ul></div></div> ))
+        <p onClick={() => setShowT(true)}>Uploaded by: <strong>{topic.created_by}</strong> on <strong>
+          {topic.created_at}</strong></p>  <div className="heading"><ul> <li onClick={ handler}  data-id ={topic.id}>{topic.title}<br></br><strong>Description:</strong> {topic.desc} <br></br><strong>Tags:</strong>{topic.tags}</li></ul></div></div> ))
         
         //For Popup Notice
         const popover = (
@@ -247,6 +246,7 @@ uploadTask.on('state_changed',
             </Popover.Body>
           </Popover>
         );
+
 
         
  
@@ -306,33 +306,16 @@ uploadTask.on('state_changed',
                         <div className=" text-start">
                           <h3 className="fw-bold fs-m text-start container"><GoIcons.GoCommentDiscussion/> Most Recent Topics </h3>     
                               {Discussion}
-
-                              <Modal size="sm" show={smShow}  onHide={() => setSmShow(false)}  aria-labelledby="example-modal-sizes-title-sm">
-                                <Modal.Header closeButton>
-                                  <Modal.Title id="example-modal-sizes-title-sm">
-                                    User Name
-                                  </Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body>
-                                    <div className="text-center">
-                                      <img src="" className="rounded-circle" alt="UserLvl" width="100" height="100"/>
-                                    </div>
-                                    <div className="text-center">
-                                      <h5>Institution</h5>
-                                    </div>
-                                    <div className="text-center">
-                                      <h5>Oragnization</h5>
-                                    </div>
-                                </Modal.Body>
-                              </Modal>
                         </div>
-
-                        <div className="position-end">
-                          <Link to="/alltopics" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"> Show All</Link> 
-                        </div>
-                  </div>
-                </Container>
+                <div className="position-end">
+                 
+               <Link to="/alltopics" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"> Show All</Link> 
+                  
+                </div>
+                      </div>
+                  </Container>
             </div>
+
 
                  {/* Modal for Ask Question*/}
                  <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >

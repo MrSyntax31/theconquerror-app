@@ -315,7 +315,7 @@ uploadTask.on('state_changed',
                                 </Modal.Header>
                                 <Modal.Body>
                                     <div className="text-center">
-                                      <img src="" className="rounded-circle" alt="UserLvl" width="100" height="100"/>
+                                      <img src="" className="rounded-circle" alt="User" width="100" height="100"/>
                                     </div>
                                     <div className="text-center">
                                       <h5>Institution</h5>

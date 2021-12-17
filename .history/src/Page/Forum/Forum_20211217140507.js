@@ -310,20 +310,10 @@ uploadTask.on('state_changed',
                               <Modal size="sm" show={smShow}  onHide={() => setSmShow(false)}  aria-labelledby="example-modal-sizes-title-sm">
                                 <Modal.Header closeButton>
                                   <Modal.Title id="example-modal-sizes-title-sm">
-                                    User Name
+                                    Small Modal
                                   </Modal.Title>
                                 </Modal.Header>
-                                <Modal.Body>
-                                    <div className="text-center">
-                                      <img src="" className="rounded-circle" alt="UserLvl" width="100" height="100"/>
-                                    </div>
-                                    <div className="text-center">
-                                      <h5>Institution</h5>
-                                    </div>
-                                    <div className="text-center">
-                                      <h5>Oragnization</h5>
-                                    </div>
-                                </Modal.Body>
+                                <Modal.Body>...</Modal.Body>
                               </Modal>
                         </div>
 
