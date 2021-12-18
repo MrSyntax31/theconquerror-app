@@ -38,7 +38,7 @@ const LessonsContent = () => {
 
   const [userlevel, fetchLevel ]= useState([]);
 
-  
+  const [lessonid, setLessonData] = useState(sessionStorage.getItem('getLesson'));
 
   const currentUser = auth.currentUser;
 
@@ -56,11 +56,10 @@ const LessonsContent = () => {
       })
     }
 
+    const [userData, setData] = useState([]);
     const [courses1, setCourse] = useState([]);
 
     async function fetchLesson(){
-
-      const lessonid = sessionStorage.getItem('getLesson');
 
       if (lessonid === null)
       {
@@ -93,7 +92,22 @@ const LessonsContent = () => {
       
     )
 
- 
+    if (currentUser === null ){
+      setData("");
+    }
+    else {
+      const userId = currentUser.uid;
+           //creating reference for realtimedb and fetching data from table users using the userID as reference then setting the data inside the Profile useState above
+  const profileData = ref(realtimedb, '/users/' + userId);
+  onValue(profileData, (snapshot) => {
+    setData(snapshot.val().level);
+
+
+    
+})
+
+  
+    }
 
   
   fetchLesson();
@@ -119,7 +133,7 @@ const LessonsContent = () => {
       else
       {
         sessionStorage.setItem('getLesson',listkey)
-    
+        console.log("wews")
         fetchLesson();
       }
 };
@@ -198,7 +212,7 @@ const showCourse = courses1.map((courses1) => (
                           <Card.Header >
                             <Container>
                               <Row>
-                                <Col sm={8} style={{textAlign: 'left', fontSize: '16px'}}><AiIcons.AiFillCode/></Col>
+                                <Col sm={8} style={{textAlign: 'left', fontSize: '16px'}}><AiIcons.AiFillCode/> {lessonid}</Col>
                                 <Col sm={4} className="fw-bold">
                                   <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer" onClick={handleShow}>
                                     <GiIcons.GiBookmarklet/>Spellbook

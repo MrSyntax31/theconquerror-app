@@ -38,7 +38,7 @@ const LessonsContent = () => {
 
   const [userlevel, fetchLevel ]= useState([]);
 
-  
+  const [lessonid, setLessonData] = useState(JSON.Stringify(sessionStorage.getItem('getLesson')));
 
   const currentUser = auth.currentUser;
 
@@ -59,8 +59,6 @@ const LessonsContent = () => {
     const [courses1, setCourse] = useState([]);
 
     async function fetchLesson(){
-
-      const lessonid = sessionStorage.getItem('getLesson');
 
       if (lessonid === null)
       {
@@ -118,8 +116,9 @@ const LessonsContent = () => {
       }
       else
       {
-        sessionStorage.setItem('getLesson',listkey)
-    
+        const id = sessionStorage.setItem('getLesson',listkey)
+        setLessonData(id);
+        console.log("wews")
         fetchLesson();
       }
 };
@@ -198,7 +197,7 @@ const showCourse = courses1.map((courses1) => (
                           <Card.Header >
                             <Container>
                               <Row>
-                                <Col sm={8} style={{textAlign: 'left', fontSize: '16px'}}><AiIcons.AiFillCode/></Col>
+                                <Col sm={8} style={{textAlign: 'left', fontSize: '16px'}}><AiIcons.AiFillCode/> {lessonid}</Col>
                                 <Col sm={4} className="fw-bold">
                                   <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer" onClick={handleShow}>
                                     <GiIcons.GiBookmarklet/>Spellbook

@@ -475,11 +475,11 @@ const popover = (
                                     </div>
                                     <div className="form-check">
                                         <input type="radio" id="Syntaxes" name="Programming" value="Syntaxes" className="form-check-input" onChange={handleChangeTag}/>
-                                        <label htmlFor="Syntaxes" className="form-check-label">Syntaxes</label>
+                                        <label for="Syntaxes" className="form-check-label">Syntaxes</label>
                                     </div>
                                     <div className="form-check">
                                         <input type="radio" id="If Else Condition" name="Programming" value="If Else Condition" className="form-check-input" onChange={handleChangeTag}/>
-                                        <label htmlFor="If Else Condition" className="form-check-label">If Else Condition</label>
+                                        <label for="If Else Condition" className="form-check-label">If Else Condition</label>
                                     </div>
                  
                                   </Container>
@@ -548,38 +548,38 @@ const popover = (
                         <Col xs={{ order: 'last' }}>
                         <div className="form-check">
                         <input type="radio" id="Array" name="Programming" value="Array" className="form-check-input" onChange={handleChange}/>
-                           <label htmlFor="Array" className="form-check-label">Array</label>
+                           <label for="Array" className="form-check-label">Array</label>
                         </div>
                         <div className="form-check">
                            <input type="radio" id="C++" name="Programming" value="C++"  className="form-check-input" onChange={handleChange}/>
-                           <label htmlFor="C" className="form-check-label">C++</label>
+                           <label for="C" className="form-check-label">C++</label>
                         </div>
                         <div className="form-check">
                             <input type="radio" id="CodeBlocks" name="Programming" value="CodeBlocks" className="form-check-input" onChange={handleChange}/>
-                            <label htmlFor="CodeBlocks" className="form-check-label">CodeBlocks</label>
+                            <label for="CodeBlocks" className="form-check-label">CodeBlocks</label>
                         </div>
                         </Col>
 
                         <Col xs={{ order: 'first' }}>
                         <div className="form-check">
                         <input type="radio" id="Function" name="Programming" value="Function" className="form-check-input" onChange={handleChange}/>
-                          <label htmlFor="Function" className="form-check-label">Function</label>
+                          <label for="Function" className="form-check-label">Function</label>
                         </div>
                         <div className="form-check">
                             <input type="radio" id="Nested Condition" name="Programming" value="Nested Condition"  className="form-check-input" onChange={handleChange}/>
-                            <label htmlFor="Nested Condition" className="form-check-label">Nested Condition</label>
+                            <label for="Nested Condition" className="form-check-label">Nested Condition</label>
                         </div>
                         <div className="form-check">
                             <input type="radio" id="For loops" name="Programming" value="For loops" className="form-check-input" onChange={handleChange}/>
-                            <label htmlFor="For loops" className="form-check-label">For loops</label>
+                            <label for="For loops" className="form-check-label">For loops</label>
                         </div>
                         <div className="form-check">
                             <input type="radio" id="Syntaxes" name="Programming" value="Syntaxes" className="form-check-input" onChange={handleChange}/>
-                            <label htmlFor="Syntaxes" className="form-check-label">Syntaxes</label>
+                            <label for="Syntaxes" className="form-check-label">Syntaxes</label>
                         </div>
                         <div className="form-check">
                             <input type="radio" id="If Else Condition" name="Programming" value="If Else Condition" className="form-check-input" onChange={handleChange}/>
-                            <label htmlFor="If Else Condition" className="form-check-label">If Else Condition</label>
+                            <label for="If Else Condition" className="form-check-label">If Else Condition</label>
                         </div>
                         </Col>
                       </Row>

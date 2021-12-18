@@ -394,11 +394,11 @@ uploadTask.on('state_changed',
                         </div>
                         <div className="form-check">
                             <input type="radio" id="Syntaxes" name="Programming" value="Syntaxes" className="form-check-input" onChange={handleChange}/>
-                            <label htmlFor="Syntaxes" className="form-check-label">Syntaxes</label>
+                            <label for="Syntaxes" className="form-check-label">Syntaxes</label>
                         </div>
                         <div className="form-check">
                             <input type="radio" id="If Else Condition" name="Programming" value="If Else Condition" className="form-check-input" onChange={handleChange}/>
-                            <label htmlFor="If Else Condition" className="form-check-label">If Else Condition</label>
+                            <label for="If Else Condition" className="form-check-label">If Else Condition</label>
                         </div>
                         </Col>
                       </Row>

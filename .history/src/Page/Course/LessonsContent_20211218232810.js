@@ -61,7 +61,7 @@ const LessonsContent = () => {
     async function fetchLesson(){
 
       const lessonid = sessionStorage.getItem('getLesson');
-
+      
       if (lessonid === null)
       {
         history.push("/course")
@@ -119,7 +119,8 @@ const LessonsContent = () => {
       else
       {
         sessionStorage.setItem('getLesson',listkey)
-    
+        
+        console.log("wews")
         fetchLesson();
       }
 };
@@ -198,7 +199,7 @@ const showCourse = courses1.map((courses1) => (
                           <Card.Header >
                             <Container>
                               <Row>
-                                <Col sm={8} style={{textAlign: 'left', fontSize: '16px'}}><AiIcons.AiFillCode/></Col>
+                                <Col sm={8} style={{textAlign: 'left', fontSize: '16px'}}><AiIcons.AiFillCode/> {lessonid}</Col>
                                 <Col sm={4} className="fw-bold">
                                   <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer" onClick={handleShow}>
                                     <GiIcons.GiBookmarklet/>Spellbook
