@@ -38,7 +38,7 @@ const LessonsContent = () => {
 
   const [userlevel, fetchLevel ]= useState([]);
 
-  const [lessonid, setLessonData] = useState(sessionStorage.getItem('getLesson'));
+  const lessonid = sessionStorage.getItem('getLesson')
 
   const currentUser = auth.currentUser;
 
@@ -58,30 +58,6 @@ const LessonsContent = () => {
 
     const [userData, setData] = useState([]);
     const [courses1, setCourse] = useState([]);
-
-    async function fetchLesson(){
-
-      if (lessonid === null)
-      {
-        history.push("/course")
-      }
-       else{
-        const docRef1 = doc(forumdb, "courses", lessonid);
-        const docRef2 = doc(forumdb, "courses", lessonid, "courseinfo", lessonid);
-        const docSnap1 = await getDoc(docRef1);
-        const docSnap2 = await getDoc(docRef2);
-
-        if (docSnap1.exists() & docSnap2.exists()) {
-         setLesson(docSnap1.data())
-          setCourseInfo(docSnap2.data())
-
-        } else {
-          // doc.data() will be undefined in this case
-          console.log("No such document!");
-        }
-       } 
-    
-    }
 
   useEffect(() => {
 
@@ -109,9 +85,32 @@ const LessonsContent = () => {
   
     }
 
+    async function fetchLesson(){
+
+      if (lessonid === null)
+      {
+        history.push("/course")
+      }
+       else{
+        const docRef1 = doc(forumdb, "courses", lessonid);
+        const docRef2 = doc(forumdb, "courses", lessonid, "courseinfo", lessonid);
+        const docSnap1 = await getDoc(docRef1);
+        const docSnap2 = await getDoc(docRef2);
+
+        if (docSnap1.exists() & docSnap2.exists()) {
+         setLesson(docSnap1.data())
+          setCourseInfo(docSnap2.data())
+
+        } else {
+          // doc.data() will be undefined in this case
+          console.log("No such document!");
+        }
+       } 
+    
+    }
   
   fetchLesson();
-  showProfile();
+  showProfile() ;
 
   
   },[]);// eslint-disable-line react-hooks/exhaustive-deps 
@@ -131,9 +130,9 @@ const LessonsContent = () => {
       }
       else
       {
-        setLessonData(listkey);
+        sessionStorage.setItem('getLesson',listkey)
         console.log("wews")
-        fetchLesson();
+        window.location.reload();
       }
 };
 
@@ -166,7 +165,7 @@ const showCourse = courses1.map((courses1) => (
   <div key={courses1.id} className="card mb-5">
     <div className="single-feature wow fadeInUp m-2 p-1" data-wow-delay=".4s">
       <h1 className="text-primary fw-bold">{courses1.Difficulty}</h1>
-      <img className="w-50 mx-auto d-block" src={courses1.Image} alt={courses1.Title} />
+      <img className="w-50 mx-auto d-block" src={courses.Image} alt={courses1.Title} />
       <h3>{courses1.Title}</h3>
       <p>{courses1.Description}</p>
       <p className="mt-3 mb-4"><FcIcons.FcClock/> Duration {courses1.Duration} hrs</p>

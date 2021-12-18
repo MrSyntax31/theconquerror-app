@@ -131,7 +131,7 @@ const LessonsContent = () => {
       }
       else
       {
-        setLessonData(listkey);
+        sessionStorage.setItem('getLesson',listkey)
         console.log("wews")
         fetchLesson();
       }

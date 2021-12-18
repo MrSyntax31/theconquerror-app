@@ -14,7 +14,7 @@ import { getFirestore, doc, getDoc, onSnapshot, orderBy, query, collection } fro
 import {  useHistory} from "react-router-dom"
 import { getAuth } from '@firebase/auth';
 import { getDatabase, ref, onValue } from "firebase/database";
-import * as FcIcons from "react-icons/fc";
+
 
 
 const LessonsContent = () => {
@@ -38,9 +38,7 @@ const LessonsContent = () => {
 
   const [userlevel, fetchLevel ]= useState([]);
 
-  const [lessonid, setLessonData] = useState(sessionStorage.getItem('getLesson'));
-
-  const currentUser = auth.currentUser;
+  const lessonid = sessionStorage.getItem('getLesson')
 
   const userId = auth.currentUser.uid;
 
@@ -56,8 +54,16 @@ const LessonsContent = () => {
       })
     }
 
-    const [userData, setData] = useState([]);
     const [courses1, setCourse] = useState([]);
+
+  useEffect(() => {
+
+    const collectionRef = collection(forumdb, "courses");
+    const q = query(collectionRef,orderBy("Difficulty","asc"));
+    onSnapshot(q, (snapshot) =>
+      setCourse(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+      
+    )
 
     async function fetchLesson(){
 
@@ -82,36 +88,9 @@ const LessonsContent = () => {
        } 
     
     }
-
-  useEffect(() => {
-
-    const collectionRef = collection(forumdb, "courses");
-    const q = query(collectionRef,orderBy("Difficulty","asc"));
-    onSnapshot(q, (snapshot) =>
-      setCourse(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-      
-    )
-
-    if (currentUser === null ){
-      setData("");
-    }
-    else {
-      const userId = currentUser.uid;
-           //creating reference for realtimedb and fetching data from table users using the userID as reference then setting the data inside the Profile useState above
-  const profileData = ref(realtimedb, '/users/' + userId);
-  onValue(profileData, (snapshot) => {
-    setData(snapshot.val().level);
-
-
-    
-})
-
-  
-    }
-
   
   fetchLesson();
-  showProfile();
+  showProfile() ;
 
   
   },[]);// eslint-disable-line react-hooks/exhaustive-deps 
@@ -131,9 +110,8 @@ const LessonsContent = () => {
       }
       else
       {
-        setLessonData(listkey);
-        console.log("wews")
-        fetchLesson();
+        sessionStorage.setItem('getLesson',listkey)
+        history.push("/lessonscontent")
       }
 };
 
@@ -166,7 +144,7 @@ const showCourse = courses1.map((courses1) => (
   <div key={courses1.id} className="card mb-5">
     <div className="single-feature wow fadeInUp m-2 p-1" data-wow-delay=".4s">
       <h1 className="text-primary fw-bold">{courses1.Difficulty}</h1>
-      <img className="w-50 mx-auto d-block" src={courses1.Image} alt={courses1.Title} />
+      <img className="w-50 mx-auto d-block" src={courses.Image} alt={courses1.Title} />
       <h3>{courses1.Title}</h3>
       <p>{courses1.Description}</p>
       <p className="mt-3 mb-4"><FcIcons.FcClock/> Duration {courses1.Duration} hrs</p>

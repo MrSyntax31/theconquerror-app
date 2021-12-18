@@ -38,7 +38,7 @@ const LessonsContent = () => {
 
   const [userlevel, fetchLevel ]= useState([]);
 
-  const [lessonid, setLessonData] = useState(sessionStorage.getItem('getLesson'));
+  const lessonid = sessionStorage.getItem('getLesson')
 
   const currentUser = auth.currentUser;
 
@@ -131,7 +131,7 @@ const LessonsContent = () => {
       }
       else
       {
-        setLessonData(listkey);
+        sessionStorage.setItem('getLesson',listkey)
         console.log("wews")
         fetchLesson();
       }
@@ -166,7 +166,7 @@ const showCourse = courses1.map((courses1) => (
   <div key={courses1.id} className="card mb-5">
     <div className="single-feature wow fadeInUp m-2 p-1" data-wow-delay=".4s">
       <h1 className="text-primary fw-bold">{courses1.Difficulty}</h1>
-      <img className="w-50 mx-auto d-block" src={courses1.Image} alt={courses1.Title} />
+      <img className="w-50 mx-auto d-block" src={courses.Image} alt={courses1.Title} />
       <h3>{courses1.Title}</h3>
       <p>{courses1.Description}</p>
       <p className="mt-3 mb-4"><FcIcons.FcClock/> Duration {courses1.Duration} hrs</p>

@@ -131,7 +131,7 @@ const LessonsContent = () => {
       }
       else
       {
-        setLessonData(listkey);
+        setLessonData(listkey)
         console.log("wews")
         fetchLesson();
       }

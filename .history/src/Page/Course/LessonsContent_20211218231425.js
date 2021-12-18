@@ -38,7 +38,7 @@ const LessonsContent = () => {
 
   const [userlevel, fetchLevel ]= useState([]);
 
-  const [lessonid, setLessonData] = useState(sessionStorage.getItem('getLesson'));
+  const [lessonid, setLessonData] = useState([]) = sessionStorage.getItem('getLesson')
 
   const currentUser = auth.currentUser;
 
@@ -131,7 +131,7 @@ const LessonsContent = () => {
       }
       else
       {
-        setLessonData(listkey);
+        sessionStorage.setItem('getLesson',listkey)
         console.log("wews")
         fetchLesson();
       }
