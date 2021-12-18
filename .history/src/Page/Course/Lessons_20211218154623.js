@@ -72,9 +72,22 @@ const Lessons = () => {
     const listkey = e.target.getAttribute("data-id");
       if (currentUser === null)
       {
-        if (window.swal({type: 'error', icon: 'error', title: 'Oops', text: 'You need to be logged in to continue!'})) {
+        if (window.swal({
+          text: "Write something here:",
+          content: el,
+          buttons: {
+            confirm: {
+              /*
+               * We need to initialize the value of the button to
+               * an empty string instead of "true":
+               */
+              value: DEFAULT_INPUT_TEXT,
+            },
+          },
+        })
+        ) {
           // Save it!
-         history.push("/login")
+         //history.push("/login")
         } else {
               //nothing
         }

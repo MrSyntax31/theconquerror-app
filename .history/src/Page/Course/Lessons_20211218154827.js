@@ -72,9 +72,9 @@ const Lessons = () => {
     const listkey = e.target.getAttribute("data-id");
       if (currentUser === null)
       {
-        if (window.swal({type: 'error', icon: 'error', title: 'Oops', text: 'You need to be logged in to continue!'})) {
+        if (window.swal({type: 'error', icon: 'error', title: 'You need to be logged in to comment', text: 'Please login to comment'})) {
           // Save it!
-         history.push("/login")
+         //history.push("/login")
         } else {
               //nothing
         }

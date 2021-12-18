@@ -72,11 +72,10 @@ const Lessons = () => {
     const listkey = e.target.getAttribute("data-id");
       if (currentUser === null)
       {
-        if (window.swal({type: 'error', icon: 'error', title: 'Oops', text: 'You need to be logged in to continue!'})) {
-          // Save it!
-         history.push("/login")
-        } else {
-              //nothing
+        if (window.swal("Write something here:", {
+          content: "input",
+        })
+        ) {
         }
       }
       else

@@ -607,8 +607,6 @@ const HomeUser = () => {
                </Accordion>
                   </Row>
               </Container>
-              
-
             </section>
       </div>
 

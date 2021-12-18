@@ -529,6 +529,8 @@ const HomeUser = () => {
                      </Col>
                   </Row>
                </Container>
+
+               
             </section>
 
             {/* Section for FAQ*/}
@@ -607,8 +609,6 @@ const HomeUser = () => {
                </Accordion>
                   </Row>
               </Container>
-              
-
             </section>
       </div>
 
