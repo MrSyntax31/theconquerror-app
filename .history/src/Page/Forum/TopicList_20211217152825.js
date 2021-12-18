@@ -360,7 +360,7 @@ uploadTask.on('state_changed',
       };
 
       const Discussion= topics.map((topic) => (  <div className="Discussion-Board p-3 m-2 border border-primary rounded" key={topic.id} > <p>Uploaded by: <strong>{topic.created_by}</strong> on <strong>
-      {topic.created_at}</strong></p>  <div className="heading"><ul> <li onClick={ handler}  data-id ={topic.id}>{topic.title}<br></br><strong>Description:</strong> {topic.desc} <br></br><strong>Tags: </strong>{topic.tags} </li></ul></div></div> ))
+      {topic.created_at}</strong></p>  <div className="heading"><ul> <li onClick={ handler}  data-id ={topic.id}>{topic.title}<br></br><strong>Description:</strong> {topic.desc} <br></br><strong>Tags:</strong>{topic.tags} </li></ul></div></div> ))
     
 
     //For Popup Notice
@@ -548,11 +548,11 @@ const popover = (
                         <Col xs={{ order: 'last' }}>
                         <div className="form-check">
                         <input type="radio" id="Array" name="Programming" value="Array" className="form-check-input" onChange={handleChange}/>
-                           <label for="Array" className="form-check-label">Array</label>
+                        <label for="Array" className="form-check-label">Array</label>
                         </div>
                         <div className="form-check">
-                           <input type="radio" id="C++" name="Programming" value="C++"  className="form-check-input" onChange={handleChange}/>
-                           <label for="C" className="form-check-label">C++</label>
+                            <input type="radio" id="C++" name="Programming" value="C++"  className="form-check-input" onChange={handleChange}/>
+                            <label for="C" className="form-check-label">C++</label>
                         </div>
                         <div className="form-check">
                             <input type="radio" id="CodeBlocks" name="Programming" value="CodeBlocks" className="form-check-input" onChange={handleChange}/>
@@ -563,7 +563,7 @@ const popover = (
                         <Col xs={{ order: 'first' }}>
                         <div className="form-check">
                         <input type="radio" id="Function" name="Programming" value="Function" className="form-check-input" onChange={handleChange}/>
-                          <label for="Function" className="form-check-label">Function</label>
+                        <label for="Function" className="form-check-label">Function</label>
                         </div>
                         <div className="form-check">
                             <input type="radio" id="Nested Condition" name="Programming" value="Nested Condition"  className="form-check-input" onChange={handleChange}/>

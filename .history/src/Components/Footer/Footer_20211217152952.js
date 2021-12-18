@@ -64,7 +64,7 @@ export default function Footer() {
           <img  src="../Assets/logo.svg" className="w-50 " alt="logo" />
           <ul className="list-unstyled">
           <li  className="mt-3">
-          Learn and Develop your skills.
+          Learn and Develop your skills for free by Technojet.Dev
           </li>
           </ul>
           <div className="footer__col3">
