@@ -7,7 +7,7 @@ import Helmet from 'react-helmet'
 import Navbar from './NavBar'
 
 //Bootstrap
-import { Row, Container, Tabs, Tab, Card, Table, Form } from 'react-bootstrap';
+import { Row, Container, Tabs, Tab, Card } from 'react-bootstrap';
 
 const Admin = () => {
     return (
@@ -33,15 +33,14 @@ const Admin = () => {
                         
                                 <Row>          
                                     <div className="mt-5">
-                                        <h1 className="text-center text-primary fw-bold">Admin Console</h1>
+                                        <h1 className="text-center mt-4 text-primary fw-bold">Admin Console</h1>
                                     </div>
 
                                     <div className="col-sm-4 mb-5">
                                         <div className="card mt-4">
                                         <img className="card-img-top" src="../../../assets/Add User-rafiki.png" alt=""/>
-                                        <h3 className="card-title text-center text-primary fw-bold">Users Count</h3>
                                             <div className="card-body">
-                                                <h4 className="card-title text-center text-secondary fw-bold">User</h4>
+                                                <h4 className="card-title text-center text-secondary fw-bold">Users Info</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -49,7 +48,6 @@ const Admin = () => {
                                     <div className="col-sm-4 mb-5">
                                         <div className="card mt-4">
                                         <img className="card-img-top" src="../assets/Feedback-bro.png" alt=""/>
-                                        <h3 className="card-title text-center text-primary fw-bold">Feedback Count</h3>
                                             <div className="card-body">
                                                 <h4 className="card-title text-center text-secondary fw-bold">Feedback</h4>
                                             </div>
@@ -59,7 +57,6 @@ const Admin = () => {
                                     <div className="col-sm-4 mb-5">
                                         <div className="card mt-4">
                                         <img className="card-img-top" src="../assets/See you soon-pana.webp" alt=""/>
-                                        <h3 className="card-title text-center text-primary fw-bold">Users Count</h3>
                                             <div className="card-body">
                                                 <h4 className="card-title text-secondary text-center fw-bold">Coming Soon</h4>
                                             </div>
@@ -74,7 +71,7 @@ const Admin = () => {
                                 <Tab eventKey="home" title="User Info">
                                     <Card>
                                         <Card.Body>
-                                            <Card.Title>User Info</Card.Title>
+                                            <Card.Title>Home</Card.Title>
                                             <Card.Text>
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                                 Donec velit urna, interdum eget ipsum eu,
@@ -91,49 +88,12 @@ const Admin = () => {
                                                 Nulla facilisi.
                                             </Card.Text>
                                         </Card.Body>
-
-                                        <Form className="m-2">
-                                            <Table striped bordered hover>
-                                                <thead>
-                                                <tr>
-                                                <th>#</th>
-                                                <th>Profile Picture</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Username</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                <td>1</td>
-                                                <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                                </tr>
-                                                <tr>
-                                                <td>2</td>
-                                                <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                                </tr>
-                                                <tr>
-                                                <td>3</td>
-                                                <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
-                                                <td colSpan="2">Larry the Bird</td>
-                                                <td>@twitter</td>
-                                                </tr>
-                                                </tbody>
-                                            </Table>
-                                        </Form>
-                                        
                                     </Card>
                                 </Tab>
-                                <Tab eventKey="profile" title="Feedback">
+                                <Tab eventKey="profile" title="Profile">
                                 <Card>
                                         <Card.Body>
-                                            <Card.Title>Feedback</Card.Title>
+                                            <Card.Title>Home</Card.Title>
                                             <Card.Text>
                                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                                                 Donec velit urna, interdum eget ipsum eu,
@@ -150,43 +110,6 @@ const Admin = () => {
                                                 Nulla facilisi.
                                             </Card.Text>
                                         </Card.Body>
-
-                                        <Form className="m-2">
-                                            <Table striped bordered hover>
-                                                <thead>
-                                                <tr>
-                                                <th>#</th>
-                                                <th>Profile Picture</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Username</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                <td>1</td>
-                                                <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                                </tr>
-                                                <tr>
-                                                <td>2</td>
-                                                <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                                </tr>
-                                                <tr>
-                                                <td>3</td>
-                                                <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
-                                                <td colSpan="2">Larry the Bird</td>
-                                                <td>@twitter</td>
-                                                </tr>
-                                                </tbody>
-                                            </Table>
-                                        </Form>
-                                        
                                     </Card>
                                 </Tab>
                                 <Tab eventKey="contact" title="Contact" disabled>

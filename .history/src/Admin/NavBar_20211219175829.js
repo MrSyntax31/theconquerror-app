@@ -25,7 +25,7 @@ function NavBar () {
           height="30"
           className="d-inline-block align-top"
         />{' '}
-      ConquError
+      Conqu
       </Navbar.Brand>
         
     </Container>  

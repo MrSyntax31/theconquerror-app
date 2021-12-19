@@ -7,7 +7,7 @@ import Helmet from 'react-helmet'
 import Navbar from './NavBar'
 
 //Bootstrap
-import { Row, Container, Tabs, Tab, Card, Table, Form } from 'react-bootstrap';
+import { Row, Container, Tabs, Tab, Card, Table } from 'react-bootstrap';
 
 const Admin = () => {
     return (
@@ -92,42 +92,39 @@ const Admin = () => {
                                             </Card.Text>
                                         </Card.Body>
 
-                                        <Form className="m-2">
-                                            <Table striped bordered hover>
-                                                <thead>
-                                                <tr>
-                                                <th>#</th>
-                                                <th>Profile Picture</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Username</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                <td>1</td>
-                                                <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                                </tr>
-                                                <tr>
-                                                <td>2</td>
-                                                <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                                </tr>
-                                                <tr>
-                                                <td>3</td>
-                                                <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
-                                                <td colSpan="2">Larry the Bird</td>
-                                                <td>@twitter</td>
-                                                </tr>
-                                                </tbody>
-                                            </Table>
-                                        </Form>
-                                        
+                                        <Table striped bordered hover>
+                                            <thead>
+                                            <tr>
+                                            <th>#</th>
+                                            <th>Profile Picture</th>
+                                            <th>First Name</th>
+                                            <th>Last Name</th>
+                                            <th>Username</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                            <td>1</td>
+                                            <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
+                                            <td>Mark</td>
+                                            <td>Otto</td>
+                                            <td>@mdo</td>
+                                            </tr>
+                                            <tr>
+                                            <td>2</td>
+                                            <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
+                                            <td>Jacob</td>
+                                            <td>Thornton</td>
+                                            <td>@fat</td>
+                                            </tr>
+                                            <tr>
+                                            <td>3</td>
+                                            <td style={{width:"8rem"}}><img src="https://cdn-icons.flaticon.com/png/512/3177/premium/3177440.png?token=exp=1638010771~hmac=54c1cfbc2dab5826e67ac88187de7f1b" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
+                                            <td colSpan="2">Larry the Bird</td>
+                                            <td>@twitter</td>
+                                            </tr>
+                                            </tbody>
+                                        </Table>
                                     </Card>
                                 </Tab>
                                 <Tab eventKey="profile" title="Feedback">
@@ -150,43 +147,6 @@ const Admin = () => {
                                                 Nulla facilisi.
                                             </Card.Text>
                                         </Card.Body>
-
-                                        <Form className="m-2">
-                                            <Table striped bordered hover>
-                                                <thead>
-                                                <tr>
-                                                <th>#</th>
-                                                <th>Profile Picture</th>
-                                                <th>First Name</th>
-                                                <th>Last Name</th>
-                                                <th>Username</th>
-                                                </tr>
-                                                </thead>
-                                                <tbody>
-                                                <tr>
-                                                <td>1</td>
-                                                <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
-                                                <td>Mark</td>
-                                                <td>Otto</td>
-                                                <td>@mdo</td>
-                                                </tr>
-                                                <tr>
-                                                <td>2</td>
-                                                <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
-                                                <td>Jacob</td>
-                                                <td>Thornton</td>
-                                                <td>@fat</td>
-                                                </tr>
-                                                <tr>
-                                                <td>3</td>
-                                                <td style={{width:"8rem"}}><img src="" alt="profile" className="img-fluid mx-auto d-block"  style={{width: "3rem"}} /></td>
-                                                <td colSpan="2">Larry the Bird</td>
-                                                <td>@twitter</td>
-                                                </tr>
-                                                </tbody>
-                                            </Table>
-                                        </Form>
-                                        
                                     </Card>
                                 </Tab>
                                 <Tab eventKey="contact" title="Contact" disabled>
