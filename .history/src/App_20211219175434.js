@@ -71,7 +71,7 @@ const App = () => {
 
      <Route path="/error" component={RequestDenied}/>
 
-     <Route path="/admin" component={Admin}/>
+     <Route path="/games" component={Games}/>
 
   </Switch>
   <Footer/>

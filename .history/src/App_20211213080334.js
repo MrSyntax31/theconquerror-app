@@ -26,9 +26,6 @@ import PrivateRoute from './routing/PrivateRoute';
 import RequestDenied from './Components/Error/RequestDenied'
 import TopicList from './Page/Forum/TopicList';
 
-//Admin
-import Admin from './Admin/Admin';
-
 const App = () => {
 
   return (
@@ -70,8 +67,6 @@ const App = () => {
      <Route path="/alltopics" component={TopicList}/>
 
      <Route path="/error" component={RequestDenied}/>
-
-     <Route path="/admin" component={Admin}/>
 
   </Switch>
   <Footer/>
