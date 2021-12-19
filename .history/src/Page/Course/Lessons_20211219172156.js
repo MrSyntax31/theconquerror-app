@@ -166,7 +166,7 @@ const Lessons = () => {
                         </p>
 
                         <ul className="mb-3 m-3"> 
-                          <li className="mb-2">•	Operating system</li>
+                          <li>•	Operating system</li>
                           <li className="mb-2">•	Desktop Application</li>
                           <li className="mb-2">•	Video games</li>
                           <li className="mb-2">•	Artificial Intelligence</li>

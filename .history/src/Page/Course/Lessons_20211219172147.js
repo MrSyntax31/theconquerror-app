@@ -166,11 +166,11 @@ const Lessons = () => {
                         </p>
 
                         <ul className="mb-3 m-3"> 
-                          <li className="mb-2">•	Operating system</li>
-                          <li className="mb-2">•	Desktop Application</li>
-                          <li className="mb-2">•	Video games</li>
-                          <li className="mb-2">•	Artificial Intelligence</li>
-                          <li className="mb-2">•	Arduino Application</li>
+                          <li>•	Operating system</li>
+                          <li>•	Desktop Application</li>
+                          <li>•	Video games</li>
+                          <li>•	Artificial Intelligence</li>
+                          <li>•	Arduino Application</li>
                         </ul>
 
                         <h4 className="mb-3"><strong>How do I conquer my  error?</strong></h4>

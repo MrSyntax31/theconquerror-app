@@ -309,6 +309,7 @@ const showCourse = courses1.map((courses1) => (
             <Link to="/lessons" style={{ textDecoration: 'none' }} className="btn fs-5"><FaIcons.FaArrowLeft/></Link>
               <Offcanvas.Title>Spellbook</Offcanvas.Title>
               <br/>
+              <Link to="/lessons" style={{ textDecoration: 'none'}} data-toggle="tooltip" data-placement="top" title="Back"><FaIcons.FaArrowCircleLeft/></Link>
               <a href="#intro" data-toggle="tooltip" data-placement="top" title="Course"><ImIcons.ImFileText/></a>
               <a href="#vid" data-toggle="tooltip" data-placement="top" title="Introductory Video"><FaIcons.FaVideo/></a>
               <a href="#content" data-toggle="tooltip" data-placement="top" title="Lesson Content"><GiIcons.GiNotebook/></a>

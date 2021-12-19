@@ -121,13 +121,13 @@ const Lessons = () => {
                       </div>
                     </Col>
     
-                <Card className="mt-3">
+                <Card className="mt-5">
                   <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 mt-3">
                     <Tab eventKey="profile" title="Overview" className=" mb-5 p-3">
                     
                       <Row>
                       { userData &&
-                          <div className="container mb-2">
+                          <div className="container mb-4">
 
                               <Card.Body>
                               <Card.Title>My level: <strong>{userData}</strong></Card.Title>
@@ -166,18 +166,18 @@ const Lessons = () => {
                         </p>
 
                         <ul className="mb-3 m-3"> 
-                          <li className="mb-2">•	Operating system</li>
-                          <li className="mb-2">•	Desktop Application</li>
-                          <li className="mb-2">•	Video games</li>
-                          <li className="mb-2">•	Artificial Intelligence</li>
-                          <li className="mb-2">•	Arduino Application</li>
+                          <li>•	Operating system</li>
+                          <li>•	Desktop Application</li>
+                          <li>•	Video games</li>
+                          <li>•	Artificial Intelligence</li>
+                          <li>•	Arduino Application</li>
                         </ul>
 
                         <h4 className="mb-3"><strong>How do I conquer my  error?</strong></h4>
                         <ul className="m-3">
-                          <li className="mb-2">•	Simple and Practical: I show you exactly what you need to know to perform meaningful things using C++. This entails concentrating on what may provide you with the most benefit right now.</li>
-                          <li className="mb-2">•	Step by step: each lesson under computer programming course is divided to its sub-content and it will help you to understand piece by piece so you can adjust and motivated to go further.</li>
-                          <li className="mb-2">•	Tutorial: we add tutorial video to help you to visualize and have an idea on how programs created, and variables use in the programming.</li>
+                          <li>•	Simple and Practical: I show you exactly what you need to know to perform meaningful things using C++. This entails concentrating on what may provide you with the most benefit right now.</li>
+                          <li>•	Step by step: each lesson under computer programming course is divided to its sub-content and it will help you to understand piece by piece so you can adjust and motivated to go further.</li>
+                          <li>•	Tutorial: we add tutorial video to help you to visualize and have an idea on how programs created, and variables use in the programming.</li>
                         </ul>
                         <p>I show you exactly what you need to know to perform meaningful things using C++. This entails concentrating on what may provide you with the most benefit right now.</p>
                         <br/>

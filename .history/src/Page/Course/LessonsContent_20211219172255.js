@@ -179,7 +179,15 @@ const showCourse = courses1.map((courses1) => (
       <div className="main" style={{marginTop: '7rem'}}>
         <div className="" style={{marginTop:'5rem',  marginBottom:'3rem'}}>
 
-
+    <div className="sidenav">
+      <p></p>
+      <Link to="/lessons" style={{ textDecoration: 'none'}} data-toggle="tooltip" data-placement="top" title="Back"><FaIcons.FaArrowCircleLeft/></Link>
+      <a href="#intro" data-toggle="tooltip" data-placement="top" title="Course"><ImIcons.ImFileText/></a>
+      <a href="#vid" data-toggle="tooltip" data-placement="top" title="Introductory Video"><FaIcons.FaVideo/></a>
+      <a href="#content" data-toggle="tooltip" data-placement="top" title="Lesson Content"><GiIcons.GiNotebook/></a>
+      <a href="#code" data-toggle="tooltip" data-placement="top" title="Sample Code"><AiIcons.AiFillCode/></a>
+      <a href="#assess" data-toggle="tooltip" data-placement="top" title="Assessment"><MdIcons.MdQuiz/></a>
+    </div>
 
     {/* <Link to="/lessons" style={{ textDecoration: 'none', marginLeft:'1rem' }} className="btn btn-primary mb-4">Return</Link> */}
                     
@@ -189,11 +197,15 @@ const showCourse = courses1.map((courses1) => (
                         <section id="intro">
                           <Card.Header >
                             <Container>
-                           
-                                  <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer mt-2" onClick={handleShow}>
+                              <Row>
+                                <Col sm={4} className="fw-bold">
+                                  <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer" onClick={handleShow}>
                                     <GiIcons.GiBookmarklet/>Spellbook
                                   </label>
-
+                                  
+                                </Col>
+                                
+                              </Row>
                             </Container>
 
                         </Card.Header>
@@ -308,12 +320,6 @@ const showCourse = courses1.map((courses1) => (
             <Offcanvas.Header closeButton>
             <Link to="/lessons" style={{ textDecoration: 'none' }} className="btn fs-5"><FaIcons.FaArrowLeft/></Link>
               <Offcanvas.Title>Spellbook</Offcanvas.Title>
-              <br/>
-              <a href="#intro" data-toggle="tooltip" data-placement="top" title="Course"><ImIcons.ImFileText/></a>
-              <a href="#vid" data-toggle="tooltip" data-placement="top" title="Introductory Video"><FaIcons.FaVideo/></a>
-              <a href="#content" data-toggle="tooltip" data-placement="top" title="Lesson Content"><GiIcons.GiNotebook/></a>
-              <a href="#code" data-toggle="tooltip" data-placement="top" title="Sample Code"><AiIcons.AiFillCode/></a>
-              <a href="#assess" data-toggle="tooltip" data-placement="top" title="Assessment"><MdIcons.MdQuiz/></a>
             </Offcanvas.Header>
             <Offcanvas.Body>
             {showCourse} 

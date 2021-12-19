@@ -190,7 +190,7 @@ const showCourse = courses1.map((courses1) => (
                           <Card.Header >
                             <Container>
                            
-                                  <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer mt-2" onClick={handleShow}>
+                                  <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer" onClick={handleShow}>
                                     <GiIcons.GiBookmarklet/>Spellbook
                                   </label>
 
@@ -308,12 +308,12 @@ const showCourse = courses1.map((courses1) => (
             <Offcanvas.Header closeButton>
             <Link to="/lessons" style={{ textDecoration: 'none' }} className="btn fs-5"><FaIcons.FaArrowLeft/></Link>
               <Offcanvas.Title>Spellbook</Offcanvas.Title>
-              <br/>
-              <a href="#intro" data-toggle="tooltip" data-placement="top" title="Course"><ImIcons.ImFileText/></a>
-              <a href="#vid" data-toggle="tooltip" data-placement="top" title="Introductory Video"><FaIcons.FaVideo/></a>
-              <a href="#content" data-toggle="tooltip" data-placement="top" title="Lesson Content"><GiIcons.GiNotebook/></a>
-              <a href="#code" data-toggle="tooltip" data-placement="top" title="Sample Code"><AiIcons.AiFillCode/></a>
-              <a href="#assess" data-toggle="tooltip" data-placement="top" title="Assessment"><MdIcons.MdQuiz/></a>
+              <Link to="/lessons" style={{ textDecoration: 'none'}} data-toggle="tooltip" data-placement="top" title="Back"><FaIcons.FaArrowCircleLeft/></Link>
+      <a href="#intro" data-toggle="tooltip" data-placement="top" title="Course"><ImIcons.ImFileText/></a>
+      <a href="#vid" data-toggle="tooltip" data-placement="top" title="Introductory Video"><FaIcons.FaVideo/></a>
+      <a href="#content" data-toggle="tooltip" data-placement="top" title="Lesson Content"><GiIcons.GiNotebook/></a>
+      <a href="#code" data-toggle="tooltip" data-placement="top" title="Sample Code"><AiIcons.AiFillCode/></a>
+      <a href="#assess" data-toggle="tooltip" data-placement="top" title="Assessment"><MdIcons.MdQuiz/></a>
             </Offcanvas.Header>
             <Offcanvas.Body>
             {showCourse} 
