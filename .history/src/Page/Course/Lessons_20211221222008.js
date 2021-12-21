@@ -70,7 +70,7 @@ const Lessons = () => {
     const listkey = e.target.getAttribute("data-id");
     const difficulty = e.target.getAttribute("data-difficulty")
 
-    
+    console.log(difficulty)
       if (currentUser === null)
       {
         if (window.swal({type: 'error', icon: 'error', title: 'Oops', text: 'You need to be logged in to continue!'})) {

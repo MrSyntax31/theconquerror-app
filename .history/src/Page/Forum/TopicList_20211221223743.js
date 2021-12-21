@@ -69,7 +69,7 @@ export default function TopicList() {
         const handleChange = (e) => {
         
           setTags(e.target.getAttribute("value"));
-          checkTag(true);
+          
         };
 
         const handleChangeTag = (e) => {

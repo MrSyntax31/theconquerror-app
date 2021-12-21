@@ -124,14 +124,14 @@ const LessonsContent = () => {
       { 
         if(userlevel1 < difficulty)
         {
-         
-          swal("Oops","You Cannot Enter that Dungeon yet!","error")
+          
         
         }
         else {
-          
+          console.log(difficulty)
+          swal("Oops","You Cannot Enter that Dungeon yet!","error")
           sessionStorage.setItem('getLesson',listkey)
-          
+          console.log(difficulty)
           fetchLesson();
       }
     }

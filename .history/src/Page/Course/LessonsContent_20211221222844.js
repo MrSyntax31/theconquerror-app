@@ -103,13 +103,14 @@ const LessonsContent = () => {
   },[]);// eslint-disable-line react-hooks/exhaustive-deps 
 
   const userlevel1 = sessionStorage.getItem("userLevel");
-
+  const [courseDifficulty, setDifficulty] = useState();
 
   const enroll = async function(e){
    
     const listkey = e.target.getAttribute("data-id");
     const difficulty = e.target.getAttribute("data-difficulty")
 
+    setDifficulty(difficulty)
     
       if (currentUser === null)
       {
@@ -122,17 +123,16 @@ const LessonsContent = () => {
       }
       else
       { 
-        if(userlevel1 < difficulty)
+        if(userlevel1 >= courseDifficulty)
         {
-         
-          swal("Oops","You Cannot Enter that Dungeon yet!","error")
+          sessionStorage.setItem('getLesson',listkey)
+          console.log(courseDifficulty)
+          fetchLesson();
         
         }
         else {
-          
-          sessionStorage.setItem('getLesson',listkey)
-          
-          fetchLesson();
+          console.log(courseDifficulty)
+          swal("Oops","You Cannot Enter that Dungeon yet!","error")
       }
     }
 };
@@ -171,7 +171,7 @@ const showCourse = courses1.map((courses1) => (
       <h3>{courses1.Title}</h3>
       <p>{courses1.Description}</p>
       <p className="mt-3 mb-4"><FcIcons.FcClock/> Duration {courses1.Duration} hrs</p>
-      <Button onClick={enroll} data-difficulty={courses1.Difficulty} data-id={courses1.id} >Get Started</Button>
+      <Button onClick={enroll} data-difficulty={courses.Difficulty} data-id={courses1.id} >Get Started</Button>
     </div>
   </div>
 ))

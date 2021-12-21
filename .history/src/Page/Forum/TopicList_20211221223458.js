@@ -69,7 +69,7 @@ export default function TopicList() {
         const handleChange = (e) => {
         
           setTags(e.target.getAttribute("value"));
-          checkTag(true);
+          
         };
 
         const handleChangeTag = (e) => {
@@ -588,8 +588,8 @@ const popover = (
 
    
 
-             {/* Modal for Ask Question*/}
-             <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
+              {/* Modal for Ask Question*/}
+              <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
                 <Modal.Header closeButton>
                   <Modal.Title>ASK A QUESTION</Modal.Title>
                 </Modal.Header>
@@ -621,11 +621,11 @@ const popover = (
                         <Col xs={{ order: 'last' }}>
                         <div className="form-check">
                         <input type="radio" id="Array" name="Programming" value="Array" className="form-check-input" onChange={handleChange}/>
-                        <label htmlFor="Array" className="form-check-label">Array</label>
+                           <label htmlFor="Array" className="form-check-label">Array</label>
                         </div>
                         <div className="form-check">
-                            <input type="radio" id="C++" name="Programming" value="C++"  className="form-check-input" onChange={handleChange}/>
-                            <label htmlFor="C" className="form-check-label">C++</label>
+                           <input type="radio" id="C++" name="Programming" value="C++"  className="form-check-input" onChange={handleChange}/>
+                           <label htmlFor="C" className="form-check-label">C++</label>
                         </div>
                         <div className="form-check">
                             <input type="radio" id="CodeBlocks" name="Programming" value="CodeBlocks" className="form-check-input" onChange={handleChange}/>
@@ -636,7 +636,7 @@ const popover = (
                         <Col xs={{ order: 'first' }}>
                         <div className="form-check">
                         <input type="radio" id="Function" name="Programming" value="Function" className="form-check-input" onChange={handleChange}/>
-                        <label htmlFor="Function" className="form-check-label">Function</label>
+                          <label htmlFor="Function" className="form-check-label">Function</label>
                         </div>
                         <div className="form-check">
                             <input type="radio" id="Nested Condition" name="Programming" value="Nested Condition"  className="form-check-input" onChange={handleChange}/>
@@ -658,11 +658,11 @@ const popover = (
                       </Row>
                     </Container>
 
-                      <Button variant="primary" type="submit" className="mt-4 btn btn-primary w-100">Post</Button>
+                    <Button variant="primary" type="submit" className="mt-4 btn btn-primary w-100">Post</Button>
                     </Form>
                 </Modal.Body>
-                
                 </Modal>
+              
 
             <a href="#top" className="scroll-top">
                   <i className="fa fa-chevron-up"></i>
