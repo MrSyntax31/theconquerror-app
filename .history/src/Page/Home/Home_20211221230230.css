@@ -60,54 +60,83 @@ body {
 
 
 
-  
-.icon-bar {
-  position: fixed;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+  nav {
+    position: fixed;
+    width: 60px;
+    margin-top: 150px;
+    transition: all 0.3s linear;
+    box-shadow: 2px 2px 8px 0px rgba(0, 0, 0, .4)
 }
 
-.icon-bar a {
-  display: block;
-  text-align: center;
-  padding: 16px;
-  transition: all 0.3s ease;
-  color: white;
-  font-size: 20px;
+nav ul {
+    margin-top: 0;
+    margin-bottom: 0rem
 }
 
-.icon-bar a:hover {
-  background-color: #000;
+nav li {
+    height: 45px;
+    position: relative
 }
 
-.facebook {
-  background: #3B5998;
-  color: white;
+nav li a {
+    color: #fff !important;
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 45px;
+    padding-left: 25%;
+    border-bottom: 1px solid rgba(0, 0, 0, .4);
+    transition: all .3s linear;
+    text-decoration: none !important
 }
 
-.twitter {
-  background: #55ACEE;
-  color: white;
+nav li:nth-child(1) a {
+    background: #4267B2
 }
 
-.google {
-  background: #dd4b39;
-  color: white;
+nav li:nth-child(2) a {
+    background: #1DA1F2
 }
 
-.linkedin {
-  background: #007bb5;
-  color: white;
+nav li:nth-child(3) a {
+    background: #E1306C
 }
 
-.youtube {
-  background: #bb0000;
-  color: white;
+nav li:nth-child(4) a {
+    background: #2867B2
 }
 
-.content {
-  margin-left: 75px;
-  font-size: 30px;
+nav li:nth-child(5) a {
+    background: #333
+}
+
+nav li:nth-child(6) a {
+    background: #ff0000
+}
+
+nav li a i {
+    position: absolute;
+    top: 14px;
+    left: 24px;
+    font-size: 15px
+}
+
+ul li a span {
+    display: none;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase
+}
+
+a:hover {
+    z-index: 1;
+    width: 200px;
+    border-bottom: 1px solid rgba(0, 0, 0, .5);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, .3)
+}
+
+ul li:hover a span {
+    padding-left: 30%;
+    display: block;
+    font-size: 15px
 }

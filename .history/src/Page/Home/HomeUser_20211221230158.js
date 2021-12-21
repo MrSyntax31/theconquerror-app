@@ -33,14 +33,16 @@ const HomeUser = () => {
     
 <Navbar/>
 
-<div class="icon-bar">
-  <a href="#" class="facebook"><i class="fa fa-facebook"></i></a> 
-  <a href="#" class="twitter"><i class="fa fa-twitter"></i></a> 
-  <a href="#" class="google"><i class="fa fa-google"></i></a> 
-  <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-  <a href="#" class="youtube"><i class="fa fa-youtube"></i></a> 
-</div>
-
+<nav>
+    <ul>
+        <li><a href="#"><i class="fab fa-facebook-f"></i><span>Facebook</span></a></li>
+        <li><a href="#"><i class="fab fa-twitter"></i><span>Twitter</span></a></li>
+        <li><a href="#"><i class="fab fa-instagram"></i><span>Instagram</span></a></li>
+        <li><a href="#"><i class="fab fa-linkedin-in"></i><span>Linkedin</span></a></li>
+        <li><a href="#"><i class="fab fa-github"></i><span>Github</span></a></li>
+        <li><a href="#"><i class="fab fa-youtube"></i><span>Youtube</span></a></li>
+    </ul>
+</nav>
       <div className="bg-light"style={{marginTop:'4rem'}}>
             {/* Section for Homepage Background*/}
             <section id="home" className="hero-area">
