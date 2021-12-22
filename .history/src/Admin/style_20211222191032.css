@@ -1108,7 +1108,20 @@
     font-size: .875rem;
   }
   
-
+  .heading {
+    font-size: .95rem;
+    font-weight: 600;
+    letter-spacing: .025em;
+    text-transform: uppercase;
+  }
+  
+  .heading-small {
+    font-size: .75rem;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+  }
   
   .display-2 span {
     font-weight: 300;

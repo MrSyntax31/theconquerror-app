@@ -29,8 +29,8 @@ const Course = () => {
 
         <Navbar/>
 
-        {/* Section for Course List*/}
-        <section className=" section mt-5">
+      {/* Section for Course List*/}
+        <section className="features section mt-5">
           
           <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
               
@@ -85,11 +85,11 @@ const Course = () => {
                                                
                                   </Col>
               </Row>
-
+                
           </Container>
-
         </section>
 
+   
         </>
     )
 }

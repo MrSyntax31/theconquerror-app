@@ -665,7 +665,7 @@ const HomeUser = () => {
             </section>
 </div>
 
-   <footer className="sticky-footer">
+      <footer className="sticky-footer">
       <div>
       <FooterStyle className=" pt-10 text-white footer ">
       <div className="container d-flex align-items-center ">

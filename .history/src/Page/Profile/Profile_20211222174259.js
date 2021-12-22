@@ -507,11 +507,7 @@ function updateProfile(){
                 
               </div>
 
-              <div className="container-fluid mt--7" fluid="md" style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center"
-                                }}>
+              <div className="container-fluid mt--7">
                 <div className="row">
                   <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0">
                     <div className="card card-profile shadow">

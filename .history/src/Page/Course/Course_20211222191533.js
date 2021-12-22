@@ -29,8 +29,8 @@ const Course = () => {
 
         <Navbar/>
 
-        {/* Section for Course List*/}
-        <section className=" section mt-5">
+      {/* Section for Course List*/}
+        <section className="features section mt-5">
           
           <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
               
@@ -49,11 +49,9 @@ const Course = () => {
                                 <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                       
                                       <Card style={{ width: '18rem', marginTop: '2rem' }}>
-                                          
                                           <div style={{textAlign:"center"}}>
                                             <Card.Img variant="top" className="mt-5 w-50" src="https://img.icons8.com/color/144/000000/outline.png" />
                                           </div>
-
                                         <Card.Body>
                                           <Card.Title className="fw-bold">Programming</Card.Title>
                                           <Card.Text className="mt-3 mb-3">
@@ -61,35 +59,28 @@ const Course = () => {
                                           </Card.Text>
                                           <Link to="/lessons" style={{ textDecoration: 'none' }} className="btn btn-primary mb-4">Get Started</Link>
                                         </Card.Body>
-                                      </Card> 
-
+                                      </Card>        
                                 </Col>
 
                                   <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                      
                                       <Card style={{ width: '18rem', marginTop: '2rem' }}>
-                                            
-                                            <div style={{textAlign:"center"}}>
-                                              <Card.Img variant="top" className="mt-5 w-50" src="https://img.icons8.com/color/144/000000/informatics.png" />
-                                            </div>
-
-                                            <Card.Body>
-                                              <Card.Title className="fw-bold">Computing</Card.Title>
-                                                <Card.Text className="mt-3 mb-3">Beginner Friendly, <strong>5</strong> Lessons</Card.Text>
-                                                  <OverlayTrigger placement="right" delay={{ show: 250, hide: 400 }} overlay={renderTooltip}>
-                                                    <Button style={{ textDecoration: 'none' }} className="btn btn-primary mb-4">Get Started</Button>
-                                                  </OverlayTrigger>
-                                           </Card.Body>
-
-                                      </Card>   
-                                               
+                                                <div style={{textAlign:"center"}}>
+                                                  <Card.Img variant="top" className="mt-5 w-50" src="https://img.icons8.com/color/144/000000/informatics.png" />
+                                                </div>           
+                                                  <Card.Body>
+                                                    <Card.Title className="fw-bold">Computing</Card.Title>
+                                                      <Card.Text className="mt-3 mb-3">Beginner Friendly, <strong>5</strong> Lessons</Card.Text>
+                                                          <OverlayTrigger placement="right" delay={{ show: 250, hide: 400 }} overlay={renderTooltip}>
+                                                                <Button style={{ textDecoration: 'none' }} className="btn btn-primary mb-4">Get Started</Button>
+                                                          </OverlayTrigger>
+                                                          </Card.Body>
+                                      </Card>            
                                   </Col>
-              </Row>
-
+              </Row>  
           </Container>
-
         </section>
 
+   
         </>
     )
 }

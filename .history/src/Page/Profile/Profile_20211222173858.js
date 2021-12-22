@@ -492,7 +492,7 @@ function updateProfile(){
         {/* Container for Card User Profile Information */}
         <div className="main-content">
 
-              <div className=" pb-8 pt-5 pt-lg-8 d-flex align-items-center" style={{minHeight: "600px", backgroundImage: "url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)", backgroundSize: "cover", backgroundPosition: "center top"}}>
+              <div className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style={{minHeight: "600px", backgroundImage: "url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)", backgroundSize: "cover", backgroundPosition: "center top"}}>
 
                 <span className="mask bg-gradient-default opacity-8"></span>
 
@@ -507,11 +507,7 @@ function updateProfile(){
                 
               </div>
 
-              <div className="container-fluid mt--7" fluid="md" style={{
-                                    display: "flex",
-                                    justifyContent: "center",
-                                    alignItems: "center"
-                                }}>
+              <div className="container-fluid mt--7">
                 <div className="row">
                   <div className="col-xl-4 order-xl-2 mb-5 mb-xl-0">
                     <div className="card card-profile shadow">
