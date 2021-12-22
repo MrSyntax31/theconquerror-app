@@ -33,8 +33,10 @@ const Admin = () => {
                     <h1 className="text-center text-primary fw-bold">Admin Console</h1>
                 </div>
 
-                <div className="mt-3" fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                    
+                <div className="mt-3" fluid="md" style={{ display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center"
+                                }}>
                     <div class="row">
 
                         <div class="col-xl-3 col-sm-6 mb-3">

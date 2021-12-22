@@ -14,11 +14,9 @@ function NavBar () {
 
           <Navbar bg="dark" variant="dark" sticky="top">
             <Container>
-
-              <Navbar.Brand onClick={handleShow} style={{cursor:"pointer"}}>
+              <Navbar.Brand onClick={handleShow}>
                 <MdIcons.MdMenu/>
               </Navbar.Brand>
-
               <Navbar.Brand className="mx-auto d-block">
                 <img
                   alt=""
@@ -27,7 +25,7 @@ function NavBar () {
                   height="30"
                   className="d-inline-block align-top"
                 />{' '}
-                ConquError
+              ConquError
               </Navbar.Brand>
                 
             </Container>  

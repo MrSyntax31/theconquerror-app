@@ -27,14 +27,12 @@ const Admin = () => {
         {/* Content */}
         <Container className="mt-3 mb-5">
 
-            <main className="mt-3">
-
-                <div className="mt-5">
-                    <h1 className="text-center text-primary fw-bold">Admin Console</h1>
-                </div>
-
-                <div className="mt-3" fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                    
+            <main className="mt-3" fluid="md" style={{
+                                    display: "flex",
+                                    justifyContent: "center",
+                                    alignItems: "center"
+                                }}>
+                <div className="mt-3">
                     <div class="row">
 
                         <div class="col-xl-3 col-sm-6 mb-3">
@@ -118,6 +116,9 @@ const Admin = () => {
                                 }}>
                         
                                 <Row>          
+                                    <div className="mt-5">
+                                        <h1 className="text-center text-primary fw-bold">Admin Console</h1>
+                                    </div>
 
                                     <div className="col-sm-4 mb-5">
                                         <div className="card mt-4">
