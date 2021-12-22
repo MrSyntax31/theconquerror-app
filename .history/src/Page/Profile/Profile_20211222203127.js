@@ -588,7 +588,7 @@ function updateProfile(){
                             <div className="row">
                               <div className="col-lg-6">
                                 <div className="form-group focused">
-                                  <label className="form-control-label">Full Name</label>
+                                  <label className="form-control-label text-white">Full Name</label>
                                   <input type="text" id="input-username" className="form-control form-control-alternative" placeholder="Username" value={profile.Name || ''} disabled/>
                                 </div>
                               </div>
@@ -660,283 +660,288 @@ function updateProfile(){
               </div>
         </div>
 
-        <div className="mt-5" style={{ textAlign: "center" }}>
-            <h1>My ConquError Status</h1>
 
-            <h5 className="text-primary">This Feature is under development!!!</h5>
-            <div className="App">
-              
-              <Container>
 
-                <Row>
-                  <Col>
-                    <div style={{ width: '100%', height: 300, marginTop:'4rem', marginBottom:'4rem' }}>
-                      <ResponsiveContainer className="textStyle">
-                          <AreaChart
-                            data={datus}
-                            margin={{
-                              top: 10,
-                              right: 30,
-                              left: 0,
-                              bottom: 0,
-                            }}
-                            >
-                            <CartesianGrid strokeDasharray="3 3" />
-                              <XAxis dataKey="name" />
-                              <YAxis />
-                              <Tooltip />
-                              <Area type="monotone" dataKey="uv" stroke="#42a5f5" fill="#42a5f5" />
-                          </AreaChart>
-                      </ResponsiveContainer>
-                    </div>
-                  </Col>
-                </Row>
+      
 
-                <Row>
-                  <Col>
+      <div className="mt-5" style={{ textAlign: "center" }}>
+          <h1>My ConquError Status</h1>
+
+          <h5 className="text-primary">This Feature is under development!!!</h5>
+          <div className="App">
+            
+            <Container>
+
+              <Row>
+                <Col>
                   <div style={{ width: '100%', height: 300, marginTop:'4rem', marginBottom:'4rem' }}>
                     <ResponsiveContainer className="textStyle">
-                      <BarChart
-                  width={500}
-                  height={300}
-                  data={data}
-                  margin={{
-                    top: 5,
-                    right: 30,
-                    left: 80,
-                    bottom: 5,
-                  }}
-                  barSize={20}
-                >
-                  <XAxis
-                    dataKey="name"
-                    scale="point"
-                    padding={{ left: 10, right: 10 }}
-                  />
-                  <YAxis />
-                  <Tooltip />
-                  <Legend />
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <Bar dataKey="score" fill="#42a5f5" background={{ fill: "#eee" }} />
-                      </BarChart>
+                        <AreaChart
+                          data={datus}
+                          margin={{
+                            top: 10,
+                            right: 30,
+                            left: 0,
+                            bottom: 0,
+                          }}
+                          >
+                          <CartesianGrid strokeDasharray="3 3" />
+                            <XAxis dataKey="name" />
+                            <YAxis />
+                            <Tooltip />
+                            <Area type="monotone" dataKey="uv" stroke="#42a5f5" fill="#42a5f5" />
+                        </AreaChart>
                     </ResponsiveContainer>
                   </div>
-                  </Col>
-                </Row>
+                </Col>
+              </Row>
 
-              </Container>
-            </div>    
-
-            <Offcanvas show={showOff} onHide={handleCloseOff}>
-                                        <Offcanvas.Header closeButton>
-                                          <Offcanvas.Title><IoIcons.IoSettingsSharp/> Settings</Offcanvas.Title>
-                                        </Offcanvas.Header>
-                                        <Offcanvas.Body>
-                                          
-                                            <div className=" d-grid gap-2 mt-3 mb-3">
-                                              <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button> 
-
-                                              <Button variant="primary" onClick={handleShow4} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillFileText/> Upload Files</Button> 
-                                              
-                                              <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
-                                            
-                                              <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
-                                              
-                                            </div>
-                                        
-                                        </Offcanvas.Body>
-                                      </Offcanvas>
-
-                                      {/*Change Password*/}
-                                      <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
-                                            <Modal.Header closeButton>
-                                              <Modal.Title>Change Password</Modal.Title>
-                                            </Modal.Header>
-                                            <Modal.Body>
-                                              <div className=""> Current Password: <br></br>
-                                                  <input value={currentPass || ''} onChange={e => setPass1(e.target.value)}  type={password} className="form-control"></input><br></br>
-                                          
-                                                  New Password: <br></br>
-                                                  <input value={newPass1|| ''} onChange={e => setPass2(e.target.value)}  type={password} className="form-control"></input><br></br>
-                                                  Confirm New Password: <br></br>
-                                                  <input value={newPass2 || ''} onChange={e => setPass3(e.target.value)}  type={password} className="form-control"></input><br></br>
-
-                                                  <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password</i>
-                                              </div>
-
-                                            </Modal.Body>
-                                            <Modal.Footer>
-                                              <Button variant="secondary" onClick={handleClose}>
-                                                Close
-                                              </Button>
-                                              <Button variant="primary" onClick={forgotPass }>Forgot-Password</Button>
-                                              <Button variant="primary" onClick={changePass }>Confirm</Button>
-                                            </Modal.Footer>
-                                      </Modal>
-                                      
-                                      {/*Feedback*/}
-                                      <Modal show={show2}  onHide={handleClose2} backdrop="static"  keyboard={false}  >
-                                            <Modal.Header closeButton>
-                                              <Modal.Title>Send Feedback</Modal.Title>
-                                            </Modal.Header>
-                                            <Modal.Body>
-                                              Please Address your Issue so we can further Improve ConquError: <br></br>
-                                              <textarea value={feedback || ''} onChange={e => setFeedback(e.target.value)}  type="text" className="form-control"></textarea><br></br>
-                                            </Modal.Body>
-                                            <Modal.Footer>
-                                              <Button variant="secondary" onClick={handleClose2}> Close</Button>
-                                              <Button variant="primary" onClick={ sendFeedback }> Send</Button>
-                                            </Modal.Footer>
-                                      </Modal>
-
-
-                                          {/*Upload Files*/}
-                                          <Modal show={show4} onHide={handleClose4} backdrop="static" keyboard={false} >
-                                            <Modal.Header closeButton>
-                                              <Modal.Title>Upload Files</Modal.Title>
-                                            </Modal.Header>
-                                            <Modal.Body>
-                                            **COMING SOON**
-                                            </Modal.Body>
-                                            <Modal.Footer>
-                                              <Button variant="secondary" onClick={handleClose4}>
-                                                Close
-                                              </Button>
-                                            
-                                            </Modal.Footer>
-                                      </Modal>
-
-
-                                            {/*Update Profile*/}
-                                      <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
-                                            <Modal.Header closeButton>
-                                              <Modal.Title>Update Profile</Modal.Title>
-                                            </Modal.Header>
-                                            <Modal.Body>
-
-                                            <Form noValidate validated={validated} onSubmit={handleSubmit}>
-
-                                            <Form.Group id="" className="mb-2">
-                                              <Form.Label>Address</Form.Label>
-                                              <Form.Control ref={address}  name = "name" type="name" required placeholder="Enter Address"/>
-                                            </Form.Group>
-
-                                            <Form.Group id="gender">
-                                              <Form.Label>Gender</Form.Label>
-                                              <Form.Select aria-label="Default select example" ref={ gender }  required>
-                                                <option value={profile.Gender}>{profile.Gender}</option>
-                                              <option value="Male">Male</option>
-                                              <option value="Female">Female</option>
-                                              <option value="Transgender">Transgender</option>
-                                              <option value="Non-Binary">Non-Binary</option>
-                                              <option value="Not Specified">Rather not specify</option>
-                                              </Form.Select>
-                                            </Form.Group>
-
-                                          <Form.Group id="occu">
-                                          <Form.Label>Occupation</Form.Label>
-                                          <Form.Select aria-label="Default select example"ref={ occu } onChange={e => OccupationValue(e)}required>
-                                          <option value={profile.Occupation}>{profile.Occupation}</option>
-                                          <option value="Student">Student</option>
-                                          <option value="Professor">Professor</option>
-                                          <option value="Others">Others.</option>
-                                          </Form.Select>
-                                          { occuHide &&  <Form.Control  className="mt-2" ref={occu }   name = "Occupation" type="text"  required placeholder="Enter Occupation" /> }
-                                          </Form.Group>
-
-                                          <Form.Group id="inst">
-                                          <Form.Label>Institution</Form.Label>
-                                          <Form.Select aria-label="Default select example" ref={ insti } onChange={e => InstitutionValue(e)} required>
-                                          <option value={profile.Institution}>{profile.Institution}</option>
-                                          <option value="LSPU">LSPU</option>
-                                          <option value="PUP">PUP</option>
-                                          <option value="TUP">TUP</option>
-                                          <option value="BSIT">BSIT</option>
-                                          <option value="DICT">DICT</option>
-                                          <option value="DCET">DCET</option>
-                                          <option value="Others">Others.</option>
-                                          </Form.Select>
-                                          { instiHide &&  <Form.Control className="mt-2" ref={insti}  name = "Institution" type="text"  required placeholder="Enter Institution"/> }
-              
-                                          </Form.Group>
-
-                                          <Button variant="primary" type="submit" className="btn btn-primary mt-3 w-100" > Update </Button>
-
-                                          </Form>
-
-                                            </Modal.Body>
-                                            <Modal.Footer>
-                                              <Button variant="secondary" onClick={handleClose5}> Close</Button>
-                                            
-                                            </Modal.Footer>
-                                      </Modal>
-                  
-                  
-            <a href="#top" className="scroll-top">
-              <i className="fa fa-chevron-up"></i>
-                  
-          </a>
-        </div>
-
-        <footer className="sticky-footer">
-        <div>
-        <FooterStyle className=" pt-10 text-white footer ">
-        <div className="container d-flex align-items-center ">
-          <div className="footer__col1">
-            <img  src="../Assets/logo.svg" className="w-50 " alt="logo" />
-            <ul className="list-unstyled">
-            <li  className="mt-3">
-            Learn and Develop your skills.
-            </li>
-            </ul>
-            <div className="footer__col3">
-          <h6 className="mt-2 text-white">Follow Us on</h6>
-              <ul className="list-unstyled">
-                <li className="mb-2"><FaIcons.FaFacebook/> <a href="https://www.facebook.com/theConquErrorph" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"> theConquErrorph</a> </li>
-                <li className="mb-2"><FaIcons.FaYoutube/> <a href="https://www.youtube.com/channel/UCojmF97JXog4ITgDjNtfnqw" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"> theConquError</a></li>
-                <li className="mb-2"><FaIcons.FaDiscord/> <a href="https://discord.gg/CBHw9cAJYS" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"> ConquError</a></li>
-              </ul>
-          </div>
-          </div>
-          <div className="footer__col2 ">
-              <ul className="list-unstyled fw-bold ">
-              <li><h4 className="text-white align-center mt-4 mb-3">Developed by</h4></li>
-                <div className="rotate">
-                <li className="d-flex justify-content-center">
-                  <img className="inline-block align-center h-20 image-center" src="../assets/TJDev.png" alt="logo"/></li>
+              <Row>
+                <Col>
+                <div style={{ width: '100%', height: 300, marginTop:'4rem', marginBottom:'4rem' }}>
+                  <ResponsiveContainer className="textStyle">
+                    <BarChart
+                width={500}
+                height={300}
+                data={data}
+                margin={{
+                  top: 5,
+                  right: 30,
+                  left: 80,
+                  bottom: 5,
+                }}
+                barSize={20}
+              >
+                <XAxis
+                  dataKey="name"
+                  scale="point"
+                  padding={{ left: 10, right: 10 }}
+                />
+                <YAxis />
+                <Tooltip />
+                <Legend />
+                <CartesianGrid strokeDasharray="3 3" />
+                <Bar dataKey="score" fill="#42a5f5" background={{ fill: "#eee" }} />
+                    </BarChart>
+                  </ResponsiveContainer>
                 </div>
-                <p className="d-flex justify-content-center">Technojet.Dev</p>  
-              </ul>
-          </div>
-          <div className="footer__col3 ">
-              <ul className="list-unstyled ">
-              <h4  className="d-flex justify-content-center text-white">Contacts</h4>
-                <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaHome/> Lopez, Quezon </li>
-                <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaGoogle/> technojet.devofficial</li>
-                <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaPhoneAlt/> +63 956 528 0371</li>
-              </ul>
-          </div>
-          <div className="footer__col4">
-              <ul className="list-unstyled">
-              <h4  className="d-flex justify-content-center text-white">Built With</h4>
-                <li className="mb-2"><FaIcons.FaReact/> ReactJS</li>
-                <li className="mb-2"><FaIcons.FaGripfire/> Firebase</li>
-                <li className="mb-2"><FaIcons.FaBootstrap/> Bootstrap 5</li>
-              </ul>
-          </div>
-        </div>
-        <div className="copyright">
-          <div className="container">
+                </Col>
+              </Row>
+
+            </Container>
+          </div>    
+
+          <Offcanvas show={showOff} onHide={handleCloseOff}>
+                                      <Offcanvas.Header closeButton>
+                                        <Offcanvas.Title><IoIcons.IoSettingsSharp/> Settings</Offcanvas.Title>
+                                      </Offcanvas.Header>
+                                      <Offcanvas.Body>
+                                        
+                                          <div className=" d-grid gap-2 mt-3 mb-3">
+                                            <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button> 
+
+                                            <Button variant="primary" onClick={handleShow4} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillFileText/> Upload Files</Button> 
+                                            
+                                            <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
+                                          
+                                            <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
+                                            
+                                          </div>
+                                      
+                                      </Offcanvas.Body>
+                                    </Offcanvas>
+
+                                    {/*Change Password*/}
+                                    <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
+                                          <Modal.Header closeButton>
+                                            <Modal.Title>Change Password</Modal.Title>
+                                          </Modal.Header>
+                                          <Modal.Body>
+                                            <div className=""> Current Password: <br></br>
+                                                <input value={currentPass || ''} onChange={e => setPass1(e.target.value)}  type={password} className="form-control"></input><br></br>
+                                         
+                                                New Password: <br></br>
+                                                <input value={newPass1|| ''} onChange={e => setPass2(e.target.value)}  type={password} className="form-control"></input><br></br>
+                                                Confirm New Password: <br></br>
+                                                <input value={newPass2 || ''} onChange={e => setPass3(e.target.value)}  type={password} className="form-control"></input><br></br>
+
+                                                <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password</i>
+                                            </div>
+
+                                          </Modal.Body>
+                                          <Modal.Footer>
+                                            <Button variant="secondary" onClick={handleClose}>
+                                              Close
+                                            </Button>
+                                            <Button variant="primary" onClick={forgotPass }>Forgot-Password</Button>
+                                            <Button variant="primary" onClick={changePass }>Confirm</Button>
+                                          </Modal.Footer>
+                                    </Modal>
+                                    
+                                    {/*Feedback*/}
+                                    <Modal show={show2}  onHide={handleClose2} backdrop="static"  keyboard={false}  >
+                                          <Modal.Header closeButton>
+                                            <Modal.Title>Send Feedback</Modal.Title>
+                                          </Modal.Header>
+                                          <Modal.Body>
+                                            Please Address your Issue so we can further Improve ConquError: <br></br>
+                                            <textarea value={feedback || ''} onChange={e => setFeedback(e.target.value)}  type="text" className="form-control"></textarea><br></br>
+                                          </Modal.Body>
+                                          <Modal.Footer>
+                                            <Button variant="secondary" onClick={handleClose2}> Close</Button>
+                                            <Button variant="primary" onClick={ sendFeedback }> Send</Button>
+                                          </Modal.Footer>
+                                    </Modal>
+
+
+                                        {/*Upload Files*/}
+                                        <Modal show={show4} onHide={handleClose4} backdrop="static" keyboard={false} >
+                                          <Modal.Header closeButton>
+                                            <Modal.Title>Upload Files</Modal.Title>
+                                          </Modal.Header>
+                                          <Modal.Body>
+                                           **COMING SOON**
+                                          </Modal.Body>
+                                          <Modal.Footer>
+                                            <Button variant="secondary" onClick={handleClose4}>
+                                              Close
+                                            </Button>
+                                           
+                                          </Modal.Footer>
+                                    </Modal>
+
+
+                                           {/*Update Profile*/}
+                                    <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
+                                          <Modal.Header closeButton>
+                                            <Modal.Title>Update Profile</Modal.Title>
+                                          </Modal.Header>
+                                          <Modal.Body>
+
+                                          <Form noValidate validated={validated} onSubmit={handleSubmit}>
+
+                                          <Form.Group id="" className="mb-2">
+                                            <Form.Label>Address</Form.Label>
+                                            <Form.Control ref={address}  name = "name" type="name" required placeholder="Enter Address"/>
+                                          </Form.Group>
+
+                                          <Form.Group id="gender">
+                                            <Form.Label>Gender</Form.Label>
+                                            <Form.Select aria-label="Default select example" ref={ gender }  required>
+                                              <option value={profile.Gender}>{profile.Gender}</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                            <option value="Transgender">Transgender</option>
+                                            <option value="Non-Binary">Non-Binary</option>
+                                            <option value="Not Specified">Rather not specify</option>
+                                            </Form.Select>
+                                          </Form.Group>
+
+                                        <Form.Group id="occu">
+                                        <Form.Label>Occupation</Form.Label>
+                                        <Form.Select aria-label="Default select example"ref={ occu } onChange={e => OccupationValue(e)}required>
+                                        <option value={profile.Occupation}>{profile.Occupation}</option>
+                                        <option value="Student">Student</option>
+                                        <option value="Professor">Professor</option>
+                                        <option value="Others">Others.</option>
+                                        </Form.Select>
+                                        { occuHide &&  <Form.Control  className="mt-2" ref={occu }   name = "Occupation" type="text"  required placeholder="Enter Occupation" /> }
+                                        </Form.Group>
+
+                                        <Form.Group id="inst">
+                                        <Form.Label>Institution</Form.Label>
+                                        <Form.Select aria-label="Default select example" ref={ insti } onChange={e => InstitutionValue(e)} required>
+                                        <option value={profile.Institution}>{profile.Institution}</option>
+                                        <option value="LSPU">LSPU</option>
+                                        <option value="PUP">PUP</option>
+                                        <option value="TUP">TUP</option>
+                                        <option value="BSIT">BSIT</option>
+                                        <option value="DICT">DICT</option>
+                                        <option value="DCET">DCET</option>
+                                        <option value="Others">Others.</option>
+                                        </Form.Select>
+                                        { instiHide &&  <Form.Control className="mt-2" ref={insti}  name = "Institution" type="text"  required placeholder="Enter Institution"/> }
             
-            <p className="col-sm d-flex justify-content-center text-center">
-              &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.19.121521
-            </p>
+                                        </Form.Group>
+
+                                        <Button variant="primary" type="submit" className="btn btn-primary mt-3 w-100" > Update </Button>
+
+                                        </Form>
+
+                                          </Modal.Body>
+                                          <Modal.Footer>
+                                            <Button variant="secondary" onClick={handleClose5}> Close</Button>
+                                          
+                                          </Modal.Footer>
+                                    </Modal>
+                
+                
+          <a href="#top" className="scroll-top">
+            <i className="fa fa-chevron-up"></i>
+                
+        </a>
+      </div>
+
+
+      <footer className="sticky-footer">
+      <div>
+      <FooterStyle className=" pt-10 text-white footer ">
+      <div className="container d-flex align-items-center ">
+        <div className="footer__col1">
+          <img  src="../Assets/logo.svg" className="w-50 " alt="logo" />
+          <ul className="list-unstyled">
+          <li  className="mt-3">
+          Learn and Develop your skills.
+          </li>
+          </ul>
+          <div className="footer__col3">
+        <h6 className="mt-2 text-white">Follow Us on</h6>
+            <ul className="list-unstyled">
+              <li className="mb-2"><FaIcons.FaFacebook/> <a href="https://www.facebook.com/theConquErrorph" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"> theConquErrorph</a> </li>
+              <li className="mb-2"><FaIcons.FaYoutube/> <a href="https://www.youtube.com/channel/UCojmF97JXog4ITgDjNtfnqw" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"> theConquError</a></li>
+              <li className="mb-2"><FaIcons.FaDiscord/> <a href="https://discord.gg/CBHw9cAJYS" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"> ConquError</a></li>
+            </ul>
+        </div>
+        </div>
+        <div className="footer__col2 ">
+            <ul className="list-unstyled fw-bold ">
+            <li><h4 className="text-white align-center mt-4 mb-3">Developed by</h4></li>
+              <div className="rotate">
+              <li className="d-flex justify-content-center">
+                <img className="inline-block align-center h-20 image-center" src="../assets/TJDev.png" alt="logo"/></li>
+              </div>
+              <p className="d-flex justify-content-center">Technojet.Dev</p>  
+            </ul>
+        </div>
+        <div className="footer__col3 ">
+            <ul className="list-unstyled ">
+            <h4  className="d-flex justify-content-center text-white">Contacts</h4>
+              <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaHome/> Lopez, Quezon </li>
+              <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaGoogle/> technojet.devofficial</li>
+              <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaPhoneAlt/> +63 956 528 0371</li>
+            </ul>
+        </div>
+        <div className="footer__col4">
+            <ul className="list-unstyled">
+             <h4  className="d-flex justify-content-center text-white">Built With</h4>
+              <li className="mb-2"><FaIcons.FaReact/> ReactJS</li>
+              <li className="mb-2"><FaIcons.FaGripfire/> Firebase</li>
+              <li className="mb-2"><FaIcons.FaBootstrap/> Bootstrap 5</li>
+            </ul>
+        </div>
+      </div>
+      <div className="copyright">
+        <div className="container">
           
-          </div>
+          <p className="col-sm d-flex justify-content-center text-center">
+            &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.19.121521
+          </p>
+         
         </div>
-      </FooterStyle>
-        </div>
-        </footer>
+      </div>
+    </FooterStyle>
+      </div>
+    </footer>
     </>
     )
 }

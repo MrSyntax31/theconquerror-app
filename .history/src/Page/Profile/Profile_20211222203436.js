@@ -936,7 +936,7 @@ function updateProfile(){
         </div>
       </FooterStyle>
         </div>
-        </footer>
+      </footer>
     </>
     )
 }
