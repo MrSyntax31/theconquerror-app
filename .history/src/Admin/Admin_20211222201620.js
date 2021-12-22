@@ -15,14 +15,14 @@ import './style.css'
 const Admin = () => {
     return (
         <>
-            {/* Tab Bar Title */}
-            <Helmet>
-                <title>ConquError | Admin</title>
-            </Helmet>
+        {/* Tab Bar Title */}
+        <Helmet>
+            <title>ConquError | Admin</title>
+        </Helmet>
 
 
-            {/* Dashboard */}
-            <Navbar/>
+        {/* Dashboard */}
+        <Navbar/>
 
             {/* Content */}
             <Container className="mt-3 mb-5">

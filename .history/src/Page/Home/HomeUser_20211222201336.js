@@ -14,7 +14,6 @@ import * as FaIcons from 'react-icons/fa';
 import * as SiIcons from 'react-icons/si';
 import { Link } from "react-router-dom"
 import './Home.css';
-
 import Navbar from '../../Components/Navbar/Navbar'
 
 import styled from 'styled-components';
@@ -70,12 +69,12 @@ const FooterStyle = styled.div`
   }
 `;
 
+
 const HomeUser = () => {
 
 
     return (
         <>
-
             {/* Division for Tab Page and Description*/}
             <div>
                 <Helmet>
@@ -101,8 +100,8 @@ const HomeUser = () => {
                                     <h1 className="wow fadeInLeft" data-wow-delay=".4s">Welcome to ConquError! where we Conquer Errors</h1>
                                     <p className="wow fadeInLeft" data-wow-delay=".6s">Be Part of our Learning Community, Join our Forums and Enroll on our Courses.</p>
                                     <div className="button wow fadeInLeft" data-wow-delay=".8s">
-                                          <Link to="/login" className="btn" style={{ textDecoration: 'none' }}>Login</Link>
-                                          <Link to="/register" className="btn btn-alt" style={{ textDecoration: 'none' }}>Register</Link>
+                                       <Link to="/course" className="btn" style={{ textDecoration: 'none' }}>Enroll!</Link>
+                                       <Link to="/forum" className="btn" style={{ textDecoration: 'none' }}>Ask Questions!</Link>
                                     </div>
                                  </div>
                               </Col>
@@ -118,55 +117,55 @@ const HomeUser = () => {
                   {/* Section for Image Carousel*/}
                   <section className="">
                      <Carousel fade={true} pause={false} className="">
-                                 <Carousel.Item interval={2000}>
-                                 <img
-                                 className="d-block w-100"
-                                 src={image1}
-                                 alt="First slide"
-                                 />
-                                 <Carousel.Caption>
-                                 </Carousel.Caption>
-                                 </Carousel.Item>
+                              <Carousel.Item interval={2000}>
+                              <img
+                              className="d-block w-100"
+                              src={image1}
+                              alt="First slide"
+                              />
+                              <Carousel.Caption>
+                              </Carousel.Caption>
+                              </Carousel.Item>
 
-                                 <Carousel.Item interval={2000} className="">
-                                 <img
-                                 className="d-block w-100  "
-                                 src={image2}
-                                 alt="Third slide"
-                                 />
-                                 <Carousel.Caption>
-                                 </Carousel.Caption>
-                                 </Carousel.Item>
+                              <Carousel.Item interval={2000} className="">
+                              <img
+                              className="d-block w-100  "
+                              src={image2}
+                              alt="Third slide"
+                              />
+                              <Carousel.Caption>
+                              </Carousel.Caption>
+                              </Carousel.Item>
 
-                                 <Carousel.Item interval={2000} className="">
-                                 <img
-                                 className="d-block w-100 "
-                                 src={image3}
-                                 alt="Third slide"
-                                 />
-                                 <Carousel.Caption>
-                                 </Carousel.Caption>
-                                 </Carousel.Item>
+                              <Carousel.Item interval={2000} className="">
+                              <img
+                              className="d-block w-100 "
+                              src={image3}
+                              alt="Third slide"
+                              />
+                              <Carousel.Caption>
+                              </Carousel.Caption>
+                              </Carousel.Item>
 
-                                 <Carousel.Item interval={2000} className="">
-                                 <img
-                                 className="d-block w-100 "
-                                 src={image4}
-                                 alt="Third slide"
-                                 />
-                                 <Carousel.Caption>
-                                 </Carousel.Caption>
-                                 </Carousel.Item>
+                              <Carousel.Item interval={2000} className="">
+                              <img
+                              className="d-block w-100 "
+                              src={image4}
+                              alt="Third slide"
+                              />
+                              <Carousel.Caption>
+                              </Carousel.Caption>
+                              </Carousel.Item>
 
-                                 <Carousel.Item interval={2000} className="">
-                                 <img
-                                 className="d-block w-100 "
-                                 src={image5}
-                                 alt="Third slide"
-                                 />
-                                 <Carousel.Caption>
-                                 </Carousel.Caption>
-                                 </Carousel.Item>
+                              <Carousel.Item interval={2000} className="">
+                              <img
+                              className="d-block w-100 "
+                              src={image5}
+                              alt="Third slide"
+                              />
+                              <Carousel.Caption>
+                              </Carousel.Caption>
+                              </Carousel.Item>
                      </Carousel>
                   </section>   
 
@@ -314,7 +313,7 @@ const HomeUser = () => {
                         }}>
                      
                   
-                        <Row>
+                     <Row>
                            <div className="col-sm-12 col-md-12 ">
                               <h3 className="text-center text-secondary">Features</h3>
                               <h4 className="text-center text-secondary mt-4">Your Experience Gets Better And Better Over Time.</h4>
@@ -375,65 +374,65 @@ const HomeUser = () => {
 
                   {/* Section for Video Tutorial*/}
                   <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }} className="mt-5 mb-5">
-                                          <Row>
-                                             <div className="">
-                                                <h4 className="text-center text-secondary fw-bold">Some featured Content Creator</h4>
-                                             </div>
-                                                            <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                                                  <Card style={{ width: '18rem', marginTop: '2rem' }}>
-                                                                     <div style={{textAlign:"center"}}>
-                                                                        <Card.Img variant="top" className="mt-5 w-50 rounded" src="../assets/WhiteLogo.png" />
-                                                                     </div>
-                                                                     <Card.Body>
-                                                                     <Card.Title>ConquError</Card.Title>
-                                                                     </Card.Body>
-                                                                  </Card>        
-                                                            </Col>
+                     <Row>
+                        <div>
+                        <h4 className="text-center text-secondary fw-bold">Some featured Content Creator</h4>
+                     </div>
+                           <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                              <Card style={{ width: '18rem', marginTop: '2rem' }}>
+                                 <div style={{textAlign:"center"}}>
+                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="../assets/WhiteLogo.png" />
+                                 </div>
+                                 <Card.Body>
+                                    <Card.Title>ConquError</Card.Title>
+                                 </Card.Body>
+                              </Card>        
+                           </Col>                                   
 
-                                                            <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                                                  <Card style={{ width: '18rem', marginTop: '2rem' }}>
-                                                                              <div style={{textAlign:"center"}}>
-                                                                              <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/162108690_121301806677028_8488807075884298821_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXydTM3EZ07XqXpezsDpNyw2d9yKe4opDDZ33Ip7iikJ4Mb5hSfrbJs4divK0bsoW4pLl_zqUldxKd-fXV-F1K&_nc_ohc=Deflbtpo54QAX8UoF5R&_nc_ht=scontent.fmnl13-2.fna&oh=8a34d0b958665e1297e6c9b006a9a9e7&oe=61CBC2F9" />
-                                                                              </div>           
-                                                                              <Card.Body>
-                                                                                 <Card.Title>Kuya Dev</Card.Title>
-                                                                              </Card.Body>
-                                                                  </Card>            
-                                                            </Col>
+                           <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                              <Card style={{ width: '18rem', marginTop: '2rem' }}>
+                                 <div style={{textAlign:"center"}}>
+                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/162108690_121301806677028_8488807075884298821_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXydTM3EZ07XqXpezsDpNyw2d9yKe4opDDZ33Ip7iikJ4Mb5hSfrbJs4divK0bsoW4pLl_zqUldxKd-fXV-F1K&_nc_ohc=Deflbtpo54QAX8UoF5R&_nc_ht=scontent.fmnl13-2.fna&oh=8a34d0b958665e1297e6c9b006a9a9e7&oe=61CBC2F9" />
+                                 </div>           
+                                 <Card.Body>
+                                    <Card.Title>Kuya Dev</Card.Title>
+                                 </Card.Body>
+                              </Card>            
+                           </Col>
 
-                                                            <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                                                  <Card style={{ width: '18rem', marginTop: '2rem' }}>
-                                                                              <div style={{textAlign:"center"}}>
-                                                                              <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.6435-9/142506784_713464262646294_432244117709991327_n.png?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGeJIr6YAHBkJVN1REpNuyKfmbCiC-RHNd-ZsKIL5Ec1x0eIwb-6YsugASGlD0Lohs12fTmpjR57jQbyFmsg-Ec&_nc_ohc=K0v9hfTWhnwAX9bksAx&_nc_ht=scontent.fmnl13-1.fna&oh=e43eefff956661b3f23b3860b3a31284&oe=61C89275" />
-                                                                              </div>           
-                                                                              <Card.Body>
-                                                                                 <Card.Title>SDPT Solutions</Card.Title>
-                                                                              </Card.Body>
-                                                                  </Card>            
-                                                            </Col>
+                           <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                              <Card style={{ width: '18rem', marginTop: '2rem' }}>
+                                 <div style={{textAlign:"center"}}>
+                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.6435-9/142506784_713464262646294_432244117709991327_n.png?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGeJIr6YAHBkJVN1REpNuyKfmbCiC-RHNd-ZsKIL5Ec1x0eIwb-6YsugASGlD0Lohs12fTmpjR57jQbyFmsg-Ec&_nc_ohc=K0v9hfTWhnwAX9bksAx&_nc_ht=scontent.fmnl13-1.fna&oh=e43eefff956661b3f23b3860b3a31284&oe=61C89275" />
+                                 </div>           
+                                 <Card.Body>
+                                    <Card.Title>SDPT Solutions</Card.Title>
+                                 </Card.Body>
+                              </Card>            
+                           </Col>
 
-                                                            <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                                                  <Card style={{ width: '18rem', marginTop: '2rem' }}>
-                                                                              <div style={{textAlign:"center"}}>
-                                                                              <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://dashboard.kleap.co/wp-content/uploads/sites/139/2021/10/08102021082041_blob.png" />
-                                                                              </div>           
-                                                                              <Card.Body>
-                                                                                 <Card.Title>Josiahdoestech</Card.Title>    
-                                                                              </Card.Body>
-                                                                  </Card>            
-                                                            </Col>
+                           <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                              <Card style={{ width: '18rem', marginTop: '2rem' }}>
+                                 <div style={{textAlign:"center"}}>
+                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://dashboard.kleap.co/wp-content/uploads/sites/139/2021/10/08102021082041_blob.png" />
+                                 </div>           
+                                 <Card.Body>
+                                    <Card.Title>Josiahdoestech</Card.Title>    
+                                 </Card.Body>
+                              </Card>            
+                           </Col>
 
-                                                            <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
-                                                                  <Card style={{ width: '18rem', height:"15rem", marginTop: '2rem' }}>
-                                                                              <div style={{textAlign:"center"}}>
-                                                                              <Card.Img variant="top" className="mt-5 w-50 rounded mb-3" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/149870072_4438803116146821_814614453010169425_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF7kx9PgpLqkIGIHWFawVBjeeLqseLHov554uqx4sei_hqzZSt_ndDnrRlWKaRH4bXcCit_bVVCti5grm96mMQ-&_nc_ohc=vqBDbHbLINoAX_U1AAY&_nc_ht=scontent.fmnl13-2.fna&oh=ec0d5505a0c0e7c2d6effe778f78bd15&oe=61CB7CFA" />
-                                                                              </div>           
-                                                                              <Card.Body>
-                                                                                 <Card.Title className="mt-4">John Carlo Franco</Card.Title>
-                                                                              </Card.Body>
-                                                                  </Card>            
-                                                            </Col>
-                                          </Row>
+                           <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                              <Card style={{ width: '18rem', height:"15rem", marginTop: '2rem' }}>
+                                 <div style={{textAlign:"center"}}>
+                                    <Card.Img variant="top" className="mt-5 w-50 rounded mb-3" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/149870072_4438803116146821_814614453010169425_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF7kx9PgpLqkIGIHWFawVBjeeLqseLHov554uqx4sei_hqzZSt_ndDnrRlWKaRH4bXcCit_bVVCti5grm96mMQ-&_nc_ohc=vqBDbHbLINoAX_U1AAY&_nc_ht=scontent.fmnl13-2.fna&oh=ec0d5505a0c0e7c2d6effe778f78bd15&oe=61CB7CFA" />
+                                 </div>           
+                                 <Card.Body>
+                                    <Card.Title className="mt-4">John Carlo Franco</Card.Title>
+                                 </Card.Body>
+                              </Card>            
+                           </Col>
+                     </Row>
                   </Container>
 
                   {/* Section for Chart*/}
@@ -473,10 +472,10 @@ const HomeUser = () => {
                   {/* Section for Technojet.Dev Team*/}
                   <section className="bg-light mt-5" id="tourist">    
                      <Container fluid="md" style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center"
-               }}>
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                     }}>
                         <div className="row text-center">
                            <div className="col-sm-12 col-md-12 mb-4">
                               <h2 className="wow fadeInUp text-secondary" data-wow-delay=".4s">Meet our team <strong>Technojet.Dev</strong></h2>
@@ -554,178 +553,181 @@ const HomeUser = () => {
                   {/* Section for Technology*/}
                   <section className="section call-action">
                      <Container fluid="md" style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                        }}>
+                           <Row>
+                              <Col>
+                                 <div className="cta-content">
+                                 <h2 className="wow fadeInUp" data-wow-delay=".2s">Technology</h2>
+                                    <div className="button wow fadeInUp" data-wow-delay=".6s">
+                                       <a href="https://getbootstrap.com/" className="btn mb-1"><FaIcons.FaBootstrap/>Bootstrap 5</a>
+                                       <a href="https://www.javascript.com/" className="btn  mb-1"><SiIcons.SiJavascript/> JavaScript</a>
+                                       <a href="https://html.com/html5/" className="btn mb-1"><SiIcons.SiHtml5/> HTML5</a>
+                                       <a href="https://www.w3.org/TR/CSS/#css" className="btn mb-1"><SiIcons.SiCss3/> CSS3</a>
+                                       <a href="https://firebase.google.com/" className="btn mb-1"><SiIcons.SiFirebase/> Firebase</a>
+                                       <a href="https://reactjs.org/" className="btn mb-1"><SiIcons.SiReact/> ReactJs</a>
+                                       <a href="https://unsplash.com/" className="btn mb-1"><SiIcons.SiUnsplash/> Unsplash</a>
+                                       <a href="https://github.com/" className="btn mb-1"><SiIcons.SiGithub/> Github</a>
+                                       <a href="https://www.netlify.com/" className="btn mb-1"><SiIcons.SiNetlify/> Netlify</a>
+                                       <a href="https://www.freepik.com" className="btn mb-1"><SiIcons.SiFreebsd/> Freepik</a>
+                                       <a href="https://storyset.com/online" className="btn mb-1"><img src="../../../assets/letter-s.png" alt="img"/> Storyset</a>
+                                    </div>
+                                 </div>
+                              </Col>
+                           </Row>
+                     </Container>
+                  </section>
+
+                  <a href="#top" className="scroll-top">
+                     <i className="fa fa-chevron-up"></i>
+                  </a>
+
+                  {/* Section for FAQ*/}
+                  <section id="faq" className="faq mb-5">
+                     <Container fluid="md" style={{
                            display: "flex",
                            justifyContent: "center",
                            alignItems: "center"
                         }}>
-                        <Row>
-                           <Col>
-                              <div className="cta-content">
-                              <h2 className="wow fadeInUp" data-wow-delay=".2s">Technology</h2>
-                                 <div className="button wow fadeInUp" data-wow-delay=".6s">
-                                    <a href="https://getbootstrap.com/" className="btn mb-1"><FaIcons.FaBootstrap/>Bootstrap 5</a>
-                                    <a href="https://www.javascript.com/" className="btn  mb-1"><SiIcons.SiJavascript/> JavaScript</a>
-                                    <a href="https://html.com/html5/" className="btn mb-1"><SiIcons.SiHtml5/> HTML5</a>
-                                    <a href="https://www.w3.org/TR/CSS/#css" className="btn mb-1"><SiIcons.SiCss3/> CSS3</a>
-                                    <a href="https://firebase.google.com/" className="btn mb-1"><SiIcons.SiFirebase/> Firebase</a>
-                                    <a href="https://reactjs.org/" className="btn mb-1"><SiIcons.SiReact/> ReactJs</a>
-                                    <a href="https://unsplash.com/" className="btn mb-1"><SiIcons.SiUnsplash/> Unsplash</a>
-                                    <a href="https://github.com/" className="btn mb-1"><SiIcons.SiGithub/> Github</a>
-                                    <a href="https://www.netlify.com/" className="btn mb-1"><SiIcons.SiNetlify/> Netlify</a>
-                                    <a href="https://www.freepik.com" className="btn mb-1"><SiIcons.SiFreebsd/> Freepik</a>
-                                    <a href="https://storyset.com/online" className="btn mb-1"><img src="../../../assets/letter-s.png" alt="img"/> Storyset</a>
+                           <Row>
+                              <div className="col-12 mt-5 ">
+                                 <div className="section-title">
+                                    <h2 className="wow fadeInUp text-secondary" data-wow-delay=".4s">Frequently Asked Questions</h2>
                                  </div>
                               </div>
-                           </Col>
-                        </Row>
+                        <Accordion>
+                           <Accordion.Item eventKey="0">
+                              <Accordion.Header>What if I have Questions?</Accordion.Header>
+                              <Accordion.Body>
+                              If you have any concern or questions, please do contact ConquError and we will get in touch with you.
+                              <p className="h05">Email Us At.</p>
+                                             <ul className="list-links">
+                                                <li><a href="https://mail.google.com/mail/u/0/?tab=om#inbox">technojet.devofficial@gmail.com</a></li>
+                                             </ul>
+                              </Accordion.Body>
+                           </Accordion.Item>
+
+                           <Accordion.Item eventKey="1">
+                              <Accordion.Header>What is ConquError?</Accordion.Header>
+                              <Accordion.Body>
+                              <strong>ConquError</strong> is a digital learning platform developed by Technojet.Dev. We are composed of creative designers, programmers, and researchers which aim to help students, professionals, and researchers in learning IT related courses.
+                                          ConquError is a learning platform and community that help students and learners to nurture by being an alternative method of understanding all about IT.          
+                              </Accordion.Body>
+                           </Accordion.Item>
+
+                           <Accordion.Item eventKey="2">
+                              <Accordion.Header>How to enroll in ConquError?</Accordion.Header>
+                              <Accordion.Body>
+                              You can Enroll by Creating an Account first. <Link to="/register" style={{ textDecoration: 'none' }}>Register Here!</Link> Having an Account can give you access to all of ConquError. Oh! i forget to tell you, It's All FREE.
+                              </Accordion.Body>
+                           </Accordion.Item>
+
+                           <Accordion.Item eventKey="3">
+                              <Accordion.Header>Is ConquError free?</Accordion.Header>
+                              <Accordion.Body>
+                              Yes, you heard me right. ConquError offers its platform to its users with full time free subscriptions. ConquError let's you study without worrying from any type of payment. 
+                              </Accordion.Body>
+                           </Accordion.Item>
+
+                           <Accordion.Item eventKey="4">
+                              <Accordion.Header>What are my rights as a user?</Accordion.Header>
+                              <Accordion.Body>
+                              <strong>ConquError</strong> values and respects your right to privacy. We are committed to protect the privacy of our website visitors. We will only collect, record, store, process, and use your personal information in accordance with the Data Privacy Act of 2012, its Implementing Rules and Regulations, the issuances by the National Privacy Commission, and other pertinent laws.  
+                                          
+                                       
+                                          This Privacy Policy informs you of updates in our corporate policies regarding the collection, use, storage, disclosure, and disposal of personal information we receive and collect from our customers, and any individual who communicates, raises inquiries and concerns, as well as transacts with us through our authorized representatives. 
+                                          
+                                          We will only use your data based on the limitations set by this policy. The outline below provides the manner by which we manage the personal information that we will obtain from you if you visit our website.
+                                          
+                                          Republic Act 10173 – Data Privacy Act of 2012. Under the Data Privacy Act of 2012, you have the following rights: 
+                                          <br/>
+                                             - Right to be informed 
+                                             <br/>
+                                             - Right to access
+                                             <br/>
+                                             - Right to data erasure 
+                                             <br/>
+                                             - Right to secure data portability 
+                                             <br/>
+                                             - Right to be indemnified for damages
+                                             <br/>
+                                             - Right to file a complaint  
+                              </Accordion.Body>
+                           </Accordion.Item>
+                        </Accordion>
+                           </Row>
                      </Container>
                   </section>
+</div>
 
-                  {/* Section for FAQ*/}
-                  <section id="faq" className="faq mb-5">
-                  <Container fluid="md" style={{
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center"
-                     }}>
-                        <Row>
-                           <div className="col-12 mt-5 ">
-                              <div className="section-title">
-                                 <h2 className="wow fadeInUp text-secondary" data-wow-delay=".4s">Frequently Asked Questions</h2>
-                              </div>
-                           </div>
-                     <Accordion>
-                        <Accordion.Item eventKey="0">
-                           <Accordion.Header>What if I have Questions?</Accordion.Header>
-                           <Accordion.Body>
-                           If you have any concern or questions, please do contact ConquError and we will get in touch with you.
-                           <p className="h05">Email Us At.</p>
-                                          <ul className="list-links">
-                                             <li><a href="https://mail.google.com/mail/u/0/?tab=om#inbox">technojet.devofficial@gmail.com</a></li>
-                                          </ul>
-                           </Accordion.Body>
-                        </Accordion.Item>
-
-                        <Accordion.Item eventKey="1">
-                           <Accordion.Header>What is ConquError?</Accordion.Header>
-                           <Accordion.Body>
-                           <strong>ConquError</strong> is a digital learning platform developed by Technojet.Dev. We are composed of creative designers, programmers, and researchers which aim to help students, professionals, and researchers in learning IT related courses.
-                                       ConquError is a learning platform and community that help students and learners to nurture by being an alternative method of understanding all about IT.
-                                             
-                           </Accordion.Body>
-                        </Accordion.Item>
-
-                        <Accordion.Item eventKey="2">
-                           <Accordion.Header>How to enroll in ConquError?</Accordion.Header>
-                           <Accordion.Body>
-                           You can Enroll by Creating an Account first. <Link to="/register" style={{ textDecoration: 'none' }}>Register Here!</Link> Having an Account can give you access to all of ConquError. Oh! i forget to tell you, It's All FREE.
-                           </Accordion.Body>
-                        </Accordion.Item>
-
-                        <Accordion.Item eventKey="3">
-                           <Accordion.Header>Is ConquError free?</Accordion.Header>
-                           <Accordion.Body>
-                           Yes, you heard me right. ConquError offers its platform to its users with full time free subscriptions. ConquError let's you study without worrying from any type of payment. 
-                           </Accordion.Body>
-                        </Accordion.Item>
-
-                        <Accordion.Item eventKey="4">
-                           <Accordion.Header>What are my rights as a user?</Accordion.Header>
-                           <Accordion.Body>
-                           <strong>ConquError</strong> values and respects your right to privacy. We are committed to protect the privacy of our website visitors. We will only collect, record, store, process, and use your personal information in accordance with the Data Privacy Act of 2012, its Implementing Rules and Regulations, the issuances by the National Privacy Commission, and other pertinent laws.  
-                                       
-                                    
-                                       This Privacy Policy informs you of updates in our corporate policies regarding the collection, use, storage, disclosure, and disposal of personal information we receive and collect from our customers, and any individual who communicates, raises inquiries and concerns, as well as transacts with us through our authorized representatives. 
-                                       
-                                       We will only use your data based on the limitations set by this policy. The outline below provides the manner by which we manage the personal information that we will obtain from you if you visit our website.
-                                       
-                                       Republic Act 10173 – Data Privacy Act of 2012. Under the Data Privacy Act of 2012, you have the following rights: 
-                                       <br/>
-                                          - Right to be informed 
-                                          <br/>
-                                          - Right to access
-                                          <br/>
-                                          - Right to data erasure 
-                                          <br/>
-                                          - Right to secure data portability 
-                                          <br/>
-                                          - Right to be indemnified for damages
-                                          <br/>
-                                          - Right to file a complaint  
-                           </Accordion.Body>
-                        </Accordion.Item>
-                     </Accordion>
-                        </Row>
-                  </Container>
-                  
-
-                  </section>
-            </div>
-
-            <a href="#top" className="scroll-top">
-               <i className="fa fa-chevron-up"></i>
-            </a>
-
-            <footer className="sticky-footer">
-            <div>
+      <footer className="sticky-footer">
+         <div>
             <FooterStyle className=" pt-10 text-white footer ">
-            <div className="container d-flex align-items-center ">
-            <div className="footer__col1">
-               <img  src="../Assets/logo.svg" className="w-50 " alt="logo" />
-               <ul className="list-unstyled">
-               <li  className="mt-3">
-               Learn and Develop your skills.
-               </li>
-               </ul>
-               <div className="footer__col3">
-            <h6 className="mt-2 text-white">Follow Us on</h6>
-                  <ul className="list-unstyled">
-                  <li className="mb-2"><FaIcons.FaFacebook/> <a href="https://www.facebook.com/theConquErrorph" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"> theConquErrorph</a> </li>
-                  <li className="mb-2"><FaIcons.FaYoutube/> <a href="https://www.youtube.com/channel/UCojmF97JXog4ITgDjNtfnqw" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"> theConquError</a></li>
-                  <li className="mb-2"><FaIcons.FaDiscord/> <a href="https://discord.gg/CBHw9cAJYS" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"> ConquError</a></li>
-                  </ul>
-            </div>
-            </div>
-            <div className="footer__col2 ">
-                  <ul className="list-unstyled fw-bold ">
-                  <li><h4 className="text-white align-center mt-4 mb-3">Developed by</h4></li>
-                  <div className="rotate">
-                  <li className="d-flex justify-content-center">
-                     <img className="inline-block align-center h-20 image-center" src="../assets/TJDev.png" alt="logo"/></li>
+
+               <div className="container d-flex align-items-center ">
+                  <div className="footer__col1">
+                     <img  src="../Assets/logo.svg" className="w-50 " alt="logo" />
+                     <ul className="list-unstyled">
+                     <li  className="mt-3">
+                     Learn and Develop your skills.
+                     </li>
+                     </ul>
+                     <div className="footer__col3">
+                  <h6 className="mt-2 text-white">Follow Us on</h6>
+                        <ul className="list-unstyled">
+                        <li className="mb-2"><FaIcons.FaFacebook/> <a href="https://www.facebook.com/theConquErrorph" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"> theConquErrorph</a> </li>
+                        <li className="mb-2"><FaIcons.FaYoutube/> <a href="https://www.youtube.com/channel/UCojmF97JXog4ITgDjNtfnqw" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"> theConquError</a></li>
+                        <li className="mb-2"><FaIcons.FaDiscord/> <a href="https://discord.gg/CBHw9cAJYS" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"> ConquError</a></li>
+                        </ul>
                   </div>
-                  <p className="d-flex justify-content-center">Technojet.Dev</p>  
-                  </ul>
-            </div>
-            <div className="footer__col3 ">
-                  <ul className="list-unstyled ">
-                  <h4  className="d-flex justify-content-center text-white">Contacts</h4>
-                  <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaHome/> Lopez, Quezon </li>
-                  <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaGoogle/> technojet.devofficial</li>
-                  <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaPhoneAlt/> +63 956 528 0371</li>
-                  </ul>
-            </div>
-            <div className="footer__col4">
-                  <ul className="list-unstyled">
-                  <h4  className="d-flex justify-content-center text-white">Built With</h4>
-                  <li className="mb-2"><FaIcons.FaReact/> ReactJS</li>
-                  <li className="mb-2"><FaIcons.FaGripfire/> Firebase</li>
-                  <li className="mb-2"><FaIcons.FaBootstrap/> Bootstrap 5</li>
-                  </ul>
-            </div>
-            </div>
-            <div className="copyright">
-            <div className="container">
-               
-               <p className="col-sm d-flex justify-content-center text-center">
-                  &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.19.121521
-               </p>
-               
-            </div>
-            </div>
-         </FooterStyle>
-            </div>
-            </footer>
-      </>
+                  </div>
+
+                  <div className="footer__col2 ">
+                        <ul className="list-unstyled fw-bold ">
+                        <li><h4 className="text-white align-center mt-4 mb-3">Developed by</h4></li>
+                        <div className="rotate">
+                        <li className="d-flex justify-content-center">
+                           <img className="inline-block align-center h-20 image-center" src="../assets/TJDev.png" alt="logo"/></li>
+                        </div>
+                        <p className="d-flex justify-content-center">Technojet.Dev</p>  
+                        </ul>
+                  </div>
+
+                  <div className="footer__col3 ">
+                        <ul className="list-unstyled ">
+                        <h4  className="d-flex justify-content-center text-white">Contacts</h4>
+                        <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaHome/> Lopez, Quezon </li>
+                        <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaGoogle/> technojet.devofficial</li>
+                        <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaPhoneAlt/> +63 956 528 0371</li>
+                        </ul>
+                  </div>
+
+                  <div className="footer__col4">
+                        <ul className="list-unstyled">
+                        <h4  className="d-flex justify-content-center text-white">Built With</h4>
+                        <li className="mb-2"><FaIcons.FaReact/> ReactJS</li>
+                        <li className="mb-2"><FaIcons.FaGripfire/> Firebase</li>
+                        <li className="mb-2"><FaIcons.FaBootstrap/> Bootstrap 5</li>
+                        </ul>
+                  </div>
+               </div>
+
+               <div className="copyright">
+               <div className="container">
+                  
+                  <p className="col-sm d-flex justify-content-center text-center">
+                     &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.19.121521
+                  </p>
+                  
+               </div>
+               </div>
+
+            </FooterStyle>
+         </div>
+      </footer>
+</>
     )
 }
 

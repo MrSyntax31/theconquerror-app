@@ -727,7 +727,7 @@ const HomeUser = () => {
                   </FooterStyle>
                </div>
             </footer>
-         </>
+</>
     )
 }
 
