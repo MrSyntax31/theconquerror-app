@@ -75,7 +75,20 @@
     box-sizing: content-box;
     height: 0;
   }
- 
+  
+  h1,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+  }
+  
+  p {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
   
   address {
     font-style: normal;
@@ -184,7 +197,53 @@
   
  
   
-
+  h1,
+  h3,
+  h4,
+  h5,
+  h6,
+  .h1,
+  .h3,
+  .h4,
+  .h5,
+  .h6 {
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: .5rem;
+    color: #32325d;
+  }
+  
+  h1,
+  .h1 {
+    font-size: 1.625rem;
+  }
+  
+  h3,
+  .h3 {
+    font-size: 1.0625rem;
+  }
+  
+  h4,
+  .h4 {
+    font-size: .9375rem;
+  }
+  
+  h5,
+  .h5 {
+    font-size: .8125rem;
+  }
+  
+  h6,
+  .h6 {
+    font-size: .625rem;
+  }
+  
+  .display-2 {
+    font-size: 2.75rem;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  
   hr {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -192,7 +251,16 @@
     border-top: 1px solid rgba(0, 0, 0, .1);
   }
   
-
+  code {
+    font-size: 87.5%;
+    word-break: break-word;
+    color: #f3a4b5;
+  }
+  
+  a>code {
+    color: inherit;
+  }
+  
   .container {
     width: 100%;
     margin-right: auto;
@@ -623,6 +691,42 @@
     color: #fff;
     align-items: center;
     justify-content: center;
+  }
+  
+
+  
+  .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, .1), 0 3px 6px rgba(0, 0, 0, .08);
+  }
+  
+  .btn:not(:last-child) {
+    margin-right: .5rem;
+  }
+  
+  .btn i:not(:first-child) {
+    margin-left: .5rem;
+  }
+  
+  .btn i:not(:last-child) {
+    margin-right: .5rem;
+  }
+  
+  .input-group .btn {
+    margin-right: 0;
+    transform: translateY(0);
+  }
+  
+  .btn-sm {
+    font-size: .75rem;
+  }
+  
+  [class*='btn-outline-'] {
+    border-width: 1px;
+  }
+  
+  .card-profile-image {
+    position: relative;
   }
   
   .card-profile-image img {

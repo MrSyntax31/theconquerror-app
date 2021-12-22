@@ -168,11 +168,7 @@ class Tutorial extends Component {
                                                 </Tab>
 
                                                 <Tab eventKey="profile" title="Videos">
-                                                    <Container className="container-fluid mt-7" fluid="md" style={{
-                                                            display: "flex",
-                                                            justifyContent: "center",
-                                                            alignItems: "center"
-                                                        }}>
+                                                    <Container >
                                                         <Card>
                                                             <Card.Body>
                                                                 
@@ -378,11 +374,7 @@ class Tutorial extends Component {
                                             </Tab>
 
                                             <Tab eventKey="video" title="Videos">
-                                                    <Container className="container-fluid mt-7" fluid="md" style={{
-                                                            display: "flex",
-                                                            justifyContent: "center",
-                                                            alignItems: "center"
-                                                        }}>
+                                                    <Container>
                                                         <Card>
                                                             <Card.Body>
                                                                 
@@ -666,11 +658,7 @@ class Tutorial extends Component {
                                             </Tab>
 
                                             <Tab eventKey="video" title="Videos">
-                                                    <Container className="container-fluid mt-7" fluid="md" style={{
-                                                            display: "flex",
-                                                            justifyContent: "center",
-                                                            alignItems: "center"
-                                                        }}>
+                                                    <Container>
                                                         <Card>
                                                             <Card.Body>
                                                                 
@@ -815,11 +803,7 @@ class Tutorial extends Component {
                                             </Tab>
 
                                             <Tab eventKey="video" title="Videos">
-                                            <Container className="container-fluid mt-7" fluid="md" style={{
-                                                    display: "flex",
-                                                    justifyContent: "center",
-                                                    alignItems: "center"
-                                                }}>
+                                            <Container>
                                                         <Card>
                                                             <Card.Body>
                                                                 
@@ -992,6 +976,7 @@ class Tutorial extends Component {
                                         </Tabs>
                                         </Card>   
                                 </Container>
+
 
                             </section>
 

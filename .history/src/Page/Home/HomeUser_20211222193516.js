@@ -487,7 +487,7 @@ const HomeUser = () => {
                   <div className="col-md-4">
                      <div className="testimonial mb-5">
                         <div className="avatar mx-auto">
-                           <img src="../assets/user-05.png" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
+                           <img src="../assets/ar.png" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
                         </div>
                            <h4 className="font-weight-bold dark-grey-text mt-4">Arllan Del Espiritu Santo</h4>
                            <h6 className="font-weight-bold blue-text my-3">Project Manager</h6>
