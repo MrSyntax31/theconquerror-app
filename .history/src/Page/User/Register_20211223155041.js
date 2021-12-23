@@ -10,7 +10,6 @@ import './Register.css'
 import ReCAPTCHA from 'react-google-recaptcha';
 import DatePicker from 'react-datepicker'
 import "react-datepicker/dist/react-datepicker.css";
-import * as AiIcons from 'react-icons/ai';
 import swal from 'sweetalert';
 
     export default function Register() {
@@ -274,7 +273,7 @@ import swal from 'sweetalert';
                                   </Form.Control.Feedback>
                                 </Form.Group>
                                 <div className="form-group mt-2 text-secondary">
-                                  <i onClick={showPass} className="fs-7" style={{cursor:"pointer", fontFamily:"Raleway, sans-serif"}}><AiIcons.AiFillEye/>Show/Hide Password</i>
+                                  <i onClick={showPass} className={'fas fa-eye'} style={{cursor:"pointer",}}>Show/Hide Password</i>
                                 </div>
                             </div>
                         </div>

@@ -562,7 +562,7 @@ function updateProfile(){
                     </div>
                   </div>
 
-                  <div className="col-xl-8 order-xl-1 ">
+                  <div className="col-xl-8 order-xl-1">
                     <div className="card shadow">
                       <div className="card-header bg-white border-0">
                         <div className="row align-items-center">
@@ -572,7 +572,7 @@ function updateProfile(){
                           
                         </div>
                       </div>
-                      <div className="card-body mb-">
+                      <div className="card-body">
                         <form>
                           <h6 className="heading-small text-muted mb-4">User information</h6>
                           <div className="pl-lg-4">

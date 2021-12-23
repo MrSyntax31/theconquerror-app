@@ -541,7 +541,7 @@ function updateProfile(){
                           </div>
                         </div>
                         <div className="text-center">
-                          <h3 className="fw-bold">
+                          <h3>
                           {profile.Name || ''}
                           </h3>
                           <div className="h5 font-weight-500">
@@ -562,7 +562,7 @@ function updateProfile(){
                     </div>
                   </div>
 
-                  <div className="col-xl-8 order-xl-1 ">
+                  <div className="col-xl-8 order-xl-1">
                     <div className="card shadow">
                       <div className="card-header bg-white border-0">
                         <div className="row align-items-center">
@@ -572,11 +572,11 @@ function updateProfile(){
                           
                         </div>
                       </div>
-                      <div className="card-body mb-">
+                      <div className="card-body">
                         <form>
                           <h6 className="heading-small text-muted mb-4">User information</h6>
                           <div className="pl-lg-4">
-                            <div className="row mb-3">
+                            <div className="row mb-">
 
                               <div className="col-lg-6">
                                 <div className="form-group focused">
@@ -593,7 +593,7 @@ function updateProfile(){
                               </div>
 
                             </div>
-                            <div className="row mb-3">
+                            <div className="row">
                               <div className="col-lg-6">
                                 <div className="form-group focused">
                                   <label className="form-control-label">Birthday</label>
@@ -609,7 +609,7 @@ function updateProfile(){
                             </div>
                           </div>
                           <div className="pl-lg-4">
-                            <div className="row mb-3">
+                            <div className="row">
                               <div className="col-md-12">
                                 <div className="form-group focused">
                                   <label className="form-control-label">Address</label>

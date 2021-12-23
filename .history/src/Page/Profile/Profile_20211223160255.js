@@ -572,7 +572,7 @@ function updateProfile(){
                           
                         </div>
                       </div>
-                      <div className="card-body mb-">
+                      <div className="card-body">
                         <form>
                           <h6 className="heading-small text-muted mb-4">User information</h6>
                           <div className="pl-lg-4">

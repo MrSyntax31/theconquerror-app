@@ -5,7 +5,6 @@ import { Helmet } from "react-helmet";
 import {} from "../../firebase/firebase"
 import {getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import './Login.css'
-import * as AiIcons from 'react-icons/ai';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 

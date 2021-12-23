@@ -5,7 +5,6 @@ import { Helmet } from "react-helmet";
 import {} from "../../firebase/firebase"
 import {getAuth, signInWithEmailAndPassword, signOut } from 'firebase/auth'
 import './Login.css'
-import * as AiIcons from 'react-icons/ai';
 import ReCAPTCHA from 'react-google-recaptcha';
 
 
@@ -179,7 +178,7 @@ export default function Login() {
                                     Please enter a password.
                                   </Form.Control.Feedback>
                                     <div className="form-group mt-2 text-secondary">
-                                    <i onClick={showPass} className="fs-7" style={{cursor:"pointer", fontFamily:"Raleway, sans-serif"}}><AiIcons.AiFillEye/>Show/Hide Password</i>
+                                      <i onClick={showPass} className={'fas fa-eye'} style={{cursor:"pointer"}}>Show/Hide Password</i>
                                     </div>
                                   
                                   </Form.Group>

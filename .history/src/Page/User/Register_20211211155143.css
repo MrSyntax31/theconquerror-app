@@ -2,11 +2,18 @@
 /* ==========================================================================
    #FONT
    ========================================================================== */
-   .form-group, body, p , h1, h2, h3, h4, h5, label, textarea, select, input, li, Link, i{ 
-    margin:0;
-    padding:0;
-    font-family: 'Raleway', sans-serif;
-}
+   .font-robo {
+    font-family: "Roboto", "Arial", "Helvetica Neue", sans-serif;
+  }
+  
+  .font-poppins {
+    font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+  }
+  
+  .font-opensans {
+    font-family: "Open Sans", "Arial", "Helvetica Neue", sans-serif;
+  }
+  
   /* ==========================================================================
      #GRID
      ========================================================================== */

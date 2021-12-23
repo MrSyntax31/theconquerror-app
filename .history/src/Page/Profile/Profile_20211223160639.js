@@ -493,20 +493,11 @@ function updateProfile(){
         {/* Container for Card User Profile Information */}
         <div className="main-content">
 
-              <div className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style={{minHeight: "600px", backgroundImage: "url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)", backgroundSize: "cover", backgroundPosition: "center top"}}>
 
-                <span className="mask bg-gradient-default opacity-8"></span>
+<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+  <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4"/>
+</video>
 
-                <div className="container-fluid d-flex align-items-center">
-                  <div className="row">
-                    <div className="col-lg-7 col-md-10">
-                      <h1 className="display-2 text-white">Hello, {profile.Name || ''}</h1>
-                      <p className="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your profile information.</p>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
 
               <div className="container-fluid mt--7" fluid="md" style={{
                                     display: "flex",
@@ -572,7 +563,7 @@ function updateProfile(){
                           
                         </div>
                       </div>
-                      <div className="card-body mb-">
+                      <div className="card-body mb-4">
                         <form>
                           <h6 className="heading-small text-muted mb-4">User information</h6>
                           <div className="pl-lg-4">

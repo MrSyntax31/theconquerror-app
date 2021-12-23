@@ -541,7 +541,7 @@ function updateProfile(){
                           </div>
                         </div>
                         <div className="text-center">
-                          <h3 className="fw-bold">
+                          <h3>
                           {profile.Name || ''}
                           </h3>
                           <div className="h5 font-weight-500">
@@ -562,7 +562,7 @@ function updateProfile(){
                     </div>
                   </div>
 
-                  <div className="col-xl-8 order-xl-1 ">
+                  <div className="col-xl-8 order-xl-1">
                     <div className="card shadow">
                       <div className="card-header bg-white border-0">
                         <div className="row align-items-center">
@@ -572,28 +572,25 @@ function updateProfile(){
                           
                         </div>
                       </div>
-                      <div className="card-body mb-">
+                      <div className="card-body">
                         <form>
                           <h6 className="heading-small text-muted mb-4">User information</h6>
                           <div className="pl-lg-4">
-                            <div className="row mb-3">
-
+                            <div className="row">
                               <div className="col-lg-6">
                                 <div className="form-group focused">
                                   <label className="form-control-label">Full Name</label>
                                   <input type="text" id="input-username" className="form-control form-control-alternative" placeholder="Username" value={profile.Name || ''} disabled/>
                                 </div>
                               </div>
-
                               <div className="col-lg-6">
                                 <div className="form-group">
                                   <label className="form-control-label">Email address</label>
                                   <input type="email" id="input-email" className="form-control form-control-alternative" value={profile.email || ''} disabled />
                                 </div>
                               </div>
-
                             </div>
-                            <div className="row mb-3">
+                            <div className="row">
                               <div className="col-lg-6">
                                 <div className="form-group focused">
                                   <label className="form-control-label">Birthday</label>
@@ -609,7 +606,7 @@ function updateProfile(){
                             </div>
                           </div>
                           <div className="pl-lg-4">
-                            <div className="row mb-3">
+                            <div className="row">
                               <div className="col-md-12">
                                 <div className="form-group focused">
                                   <label className="form-control-label">Address</label>
@@ -792,68 +789,68 @@ function updateProfile(){
 
 
                                             {/*Update Profile*/}
-                                            <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
-                                                  <Modal.Header closeButton>
-                                                    <Modal.Title>Update Profile</Modal.Title>
-                                                  </Modal.Header>
-                                                  <Modal.Body>
+                                      <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
+                                            <Modal.Header closeButton>
+                                              <Modal.Title>Update Profile</Modal.Title>
+                                            </Modal.Header>
+                                            <Modal.Body>
 
-                                                  <Form noValidate validated={validated} onSubmit={handleSubmit}>
+                                            <Form noValidate validated={validated} onSubmit={handleSubmit}>
 
-                                                  <Form.Group id="" className="mb-2">
-                                                    <Form.Label>Address</Form.Label>
-                                                    <Form.Control ref={address}  name = "name" type="name" defaultValue={profile.Address} required placeholder="Enter Address"/>
-                                                  </Form.Group>
+                                            <Form.Group id="" className="mb-2">
+                                              <Form.Label>Address</Form.Label>
+                                              <Form.Control ref={address}  name = "name" type="name" defaultValue={profile.Address} required placeholder="Enter Address"/>
+                                            </Form.Group>
 
-                                                  <Form.Group id="gender">
-                                                    <Form.Label>Gender</Form.Label>
-                                                    <Form.Select aria-label="Default select example" ref={ gender }  required>
-                                                      <option value={profile.Gender}>{profile.Gender}</option>
-                                                    <option value="Male">Male</option>
-                                                    <option value="Female">Female</option>
-                                                    <option value="Transgender">Transgender</option>
-                                                    <option value="Non-Binary">Non-Binary</option>
-                                                    <option value="Not Specified">Rather not specify</option>
-                                                    </Form.Select>
-                                                  </Form.Group>
+                                            <Form.Group id="gender">
+                                              <Form.Label>Gender</Form.Label>
+                                              <Form.Select aria-label="Default select example" ref={ gender }  required>
+                                                <option value={profile.Gender}>{profile.Gender}</option>
+                                              <option value="Male">Male</option>
+                                              <option value="Female">Female</option>
+                                              <option value="Transgender">Transgender</option>
+                                              <option value="Non-Binary">Non-Binary</option>
+                                              <option value="Not Specified">Rather not specify</option>
+                                              </Form.Select>
+                                            </Form.Group>
 
-                                                <Form.Group id="occu">
-                                                <Form.Label>Occupation</Form.Label>
-                                                <Form.Select aria-label="Default select example"ref={ occu } onChange={e => OccupationValue(e)}required>
-                                                <option value={profile.Occupation}>{profile.Occupation}</option>
-                                                <option value="Student">Student</option>
-                                                <option value="Professor">Professor</option>
-                                                <option value="Others">Others.</option>
-                                                </Form.Select>
-                                                { occuHide &&  <Form.Control  className="mt-2" ref={occu }   name = "Occupation" type="text"  required placeholder="Enter Occupation" /> }
-                                                </Form.Group>
+                                          <Form.Group id="occu">
+                                          <Form.Label>Occupation</Form.Label>
+                                          <Form.Select aria-label="Default select example"ref={ occu } onChange={e => OccupationValue(e)}required>
+                                          <option value={profile.Occupation}>{profile.Occupation}</option>
+                                          <option value="Student">Student</option>
+                                          <option value="Professor">Professor</option>
+                                          <option value="Others">Others.</option>
+                                          </Form.Select>
+                                          { occuHide &&  <Form.Control  className="mt-2" ref={occu }   name = "Occupation" type="text"  required placeholder="Enter Occupation" /> }
+                                          </Form.Group>
 
-                                                <Form.Group id="inst">
-                                                <Form.Label>Institution</Form.Label>
-                                                <Form.Select aria-label="Default select example" ref={ insti } onChange={e => InstitutionValue(e)} required>
-                                                <option value={profile.Institution}>{profile.Institution}</option>
-                                                <option value="LSPU">LSPU</option>
-                                                <option value="PUP">PUP</option>
-                                                <option value="TUP">TUP</option>
-                                                <option value="BSIT">BSIT</option>
-                                                <option value="DICT">DICT</option>
-                                                <option value="DCET">DCET</option>
-                                                <option value="Others">Others.</option>
-                                                </Form.Select>
-                                                { instiHide &&  <Form.Control className="mt-2" ref={insti}  name = "Institution" type="text"  required placeholder="Enter Institution"/> }
-                    
-                                                </Form.Group>
+                                          <Form.Group id="inst">
+                                          <Form.Label>Institution</Form.Label>
+                                          <Form.Select aria-label="Default select example" ref={ insti } onChange={e => InstitutionValue(e)} required>
+                                          <option value={profile.Institution}>{profile.Institution}</option>
+                                          <option value="LSPU">LSPU</option>
+                                          <option value="PUP">PUP</option>
+                                          <option value="TUP">TUP</option>
+                                          <option value="BSIT">BSIT</option>
+                                          <option value="DICT">DICT</option>
+                                          <option value="DCET">DCET</option>
+                                          <option value="Others">Others.</option>
+                                          </Form.Select>
+                                          { instiHide &&  <Form.Control className="mt-2" ref={insti}  name = "Institution" type="text"  required placeholder="Enter Institution"/> }
+              
+                                          </Form.Group>
 
-                                                <Button variant="primary" type="submit" className="btn btn-primary mt-3 w-100" > Update </Button>
+                                          <Button variant="primary" type="submit" className="btn btn-primary mt-3 w-100" > Update </Button>
 
-                                                </Form>
+                                          </Form>
 
-                                                  </Modal.Body>
-                                                  <Modal.Footer>
-                                                    <Button variant="secondary" onClick={handleClose5}> Close</Button>
-                                                  
-                                                  </Modal.Footer>
-                                            </Modal>
+                                            </Modal.Body>
+                                            <Modal.Footer>
+                                              <Button variant="secondary" onClick={handleClose5}> Close</Button>
+                                            
+                                            </Modal.Footer>
+                                      </Modal>
                   
                   
             <a href="#top" className="scroll-top">
