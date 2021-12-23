@@ -491,24 +491,26 @@ function updateProfile(){
        <Navbar/>
         
         {/* Container for Card User Profile Information */}
-        <div className="main-content">
+        <div class="main-content">
 
-              <div className=" pb-8 pt-5 pt-lg-8 d-flex align-items-center" style={{minHeight: "600px", backgroundImage: "url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)", backgroundSize: "cover", backgroundPosition: "center top"}}>
 
-                <span className="mask bg-gradient-default opacity-8"></span>
+        <div className=" pb-8 pt-5 pt-lg-8 d-flex align-items-center" style={{minHeight: "600px", backgroundImage: "url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)", backgroundSize: "cover", backgroundPosition: "center top"}}>
 
-                <div className="container-fluid d-flex align-items-center">
-                  <div className="row">
-                    <div className="col-lg-7 col-md-10">
-                      <h1 className="display-2 text-white">Hello, {profile.Name || ''}</h1>
-                      <p className="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your profile information.</p>
-                    </div>
-                  </div>
-                </div>
-                
-              </div>
+        <span className="mask bg-gradient-default opacity-8"></span>
 
-              <div className="container-fluid mt--7" fluid="md" style={{
+        <div className="container-fluid d-flex align-items-center">
+          <div className="row">
+            <div className="col-lg-7 col-md-10">
+              <h1 className="display-2 text-white">Hello, {profile.Name || ''}</h1>
+              <p className="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your projects or assigned tasks</p>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+
+        <div className="container-fluid mt-7" fluid="md" style={{
                                     display: "flex",
                                     justifyContent: "center",
                                     alignItems: "center"
@@ -534,9 +536,17 @@ function updateProfile(){
                           <div className="col">
                             <div className="card-profile-stats d-flex justify-content-center mt-md-5">
                               <div>
-                                <span className="heading fs-2">{profile.level}</span>
-                                <span className="description">My Level</span>
-                              </div>                              
+                                <span className="heading">{profile.level}</span>
+                                <span className="description">Level</span>
+                              </div>
+                              <div>
+                                <span className="heading">10</span>
+                                <span className="description">Question</span>
+                              </div>
+                              <div>
+                                <span className="heading">89</span>
+                                <span className="description">Comments</span>
+                              </div>
                             </div>
                           </div>
                         </div>
@@ -556,7 +566,9 @@ function updateProfile(){
                           {profile.Institution || ''}
                           </div>
                           <p onClick={handleShowOff} className="btn btn-sm btn-primary mt-4"><IoIcons.IoSettingsSharp/> Settings</p>
-                          
+                          <hr className="my-4"/>
+                                <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
+                                  <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
                         </div>
                       </div>
                     </div>
@@ -605,6 +617,9 @@ function updateProfile(){
                               </div>
                             </div>
                           </div>
+                          <hr className="my-4"/>
+
+                          <h6 className="heading-small text-muted mb-4">Contact information</h6>
                           <div className="pl-lg-4">
                             <div className="row">
                               <div className="col-md-12">
@@ -721,8 +736,6 @@ function updateProfile(){
                                             
                                               <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
                                               
-                                              <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
-                                                <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
                                             </div>
                                         
                                         </Offcanvas.Body>

@@ -556,7 +556,7 @@ function updateProfile(){
                           {profile.Institution || ''}
                           </div>
                           <p onClick={handleShowOff} className="btn btn-sm btn-primary mt-4"><IoIcons.IoSettingsSharp/> Settings</p>
-                          
+                          <hr className="my-4"/>
                         </div>
                       </div>
                     </div>

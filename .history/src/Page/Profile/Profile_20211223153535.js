@@ -556,7 +556,7 @@ function updateProfile(){
                           {profile.Institution || ''}
                           </div>
                           <p onClick={handleShowOff} className="btn btn-sm btn-primary mt-4"><IoIcons.IoSettingsSharp/> Settings</p>
-                          
+                          <hr className="my-4"/>
                         </div>
                       </div>
                     </div>
@@ -721,8 +721,6 @@ function updateProfile(){
                                             
                                               <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
                                               
-                                              <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
-                                                <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
                                             </div>
                                         
                                         </Offcanvas.Body>
