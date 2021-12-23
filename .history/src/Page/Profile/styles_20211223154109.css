@@ -475,11 +475,11 @@
   }
   
   .bg-gradient-default {
-    background: linear-gradient(87deg, #10e6f594 0, #f3f3ff25 100%) !important;
+    background: linear-gradient(87deg, #172b4d 0, #1a174d 100%) !important;
   }
   
   .bg-gradient-default {
-    background: linear-gradient(87deg, #0d1a29dc 0, #07ff7721 100%) !important;
+    background: linear-gradient(87deg, #ffffff 0, #1a174d 100%) !important;
   }
 
   
@@ -547,6 +547,18 @@
     font-size: .875rem !important;
   }
   
+
+  .avatar {
+    font-size: 1rem;
+    display: inline-flex;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
   
   .card {
     position: relative;
