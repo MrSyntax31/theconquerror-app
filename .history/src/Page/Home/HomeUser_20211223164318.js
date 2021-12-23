@@ -4,8 +4,12 @@ import '../../Assets/css/bootstrap.min.css';
 import '../../Assets/css/animate.css';
 import '../../Assets/css/tiny-slider.css';
 import '../../Assets/css/main.css';
-import { Accordion, Row, Col, Container, Card } from 'react-bootstrap';
-
+import { Carousel, Accordion, Row, Col, Container, Card } from 'react-bootstrap';
+import image1 from '../../Assets/images/0.jpg';
+import image2 from '../../Assets/images/2.jpg';
+import image3 from '../../Assets/images/3.jpg';
+import image4 from '../../Assets/images/4.jpg';
+import image5 from '../../Assets/images/5.jpg';
 import * as FaIcons from 'react-icons/fa';
 import * as SiIcons from 'react-icons/si';
 import { Link } from "react-router-dom"
@@ -85,43 +89,47 @@ const HomeUser = () => {
 
                {/* Section for Homepage Background*/}
                <section id="home" className="">
-                  <header>
-                     <div className="overlay"></div>
+               <header>
 
-                     <video autoPlay="autoplay" muted="muted" loop="loop">
-                     <source src="https://assets.mixkit.co/videos/preview/mixkit-computer-code-in-the-screen-9757-large.mp4" type="video/mp4"/>
-                     </video>
 
-                     <div className="container h-100">
-                     <div className="d-flex h-100 text-center align-items-center">
-                        <div className="mt-5 mb-5">
-                        <Container fluid="md" style={{
-                                             display: "flex",
-                                             justifyContent: "center",
-                                             alignItems: "center"
-                                          }}>
-                                          <Row className="align-items-center">
-                                                <Col>
-                                                   <div className="hero-content">
-                                                      <h1 className="text-light" data-wow-delay=".4s">Welcome to ConquError! where we Conquer Errors</h1>
-                                                      <p className="text-light" data-wow-delay=".6s">Be Part of our Learning Community, Join our Forums and Enroll on our Courses.</p>
-                                                      <div className="button wow fadeInLeft" data-wow-delay=".8s">
-                                                         <Link to="/course" className="btn" style={{ textDecoration: 'none' }}>Enroll!</Link>
-                                                         <Link to="/forum" className="btn" style={{ textDecoration: 'none' }}>Ask Questions!</Link>
-                                                      </div>
-                                                   </div>
-                                                </Col>
-                                             <div className="col-lg-7 col-md-12 col-12 mb-5">
-                                                <div className="wow fadeInRight" data-wow-delay=".4s">
-                                                   <img src="https://images.unsplash.com/photo-1516886635086-2b3c423c0947?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=401&q=80" alt="imag"/>
-                                                </div>
-                                             </div>
-                                          </Row>
-                                       </Container>
+<div class="overlay"></div>
+
+
+<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+  <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4"/>
+</video>
+
+
+<div class="container h-100">
+  <div class="d-flex h-100 text-center align-items-center">
+    <div class="mt-5">
+    <Container fluid="md" style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center"
+                     }}>
+                     <Row className=" align-items-center">
+                           <Col>
+                              <div className="hero-content">
+                                 <h1 className="wow fadeInLeft" data-wow-delay=".4s">Welcome to ConquError! where we Conquer Errors</h1>
+                                 <p className="wow fadeInLeft" data-wow-delay=".6s">Be Part of our Learning Community, Join our Forums and Enroll on our Courses.</p>
+                                 <div className="button wow fadeInLeft" data-wow-delay=".8s">
+                                    <Link to="/course" className="btn" style={{ textDecoration: 'none' }}>Enroll!</Link>
+                                    <Link to="/forum" className="btn" style={{ textDecoration: 'none' }}>Ask Questions!</Link>
+                                 </div>
+                              </div>
+                           </Col>
+                        <div className="col-lg-7 col-md-12 col-12">
+                           <div className="wow fadeInRight" data-wow-delay=".4s">
+                              <img src="https://images.unsplash.com/photo-1516886635086-2b3c423c0947?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=401&q=80" alt="imag"/>
+                           </div>
                         </div>
-                     </div>
-                     </div>
-                  </header>
+                     </Row>
+                  </Container>
+    </div>
+  </div>
+</div>
+</header>
                </section>
   
 
@@ -429,33 +437,33 @@ const HomeUser = () => {
                <header>
 
 
-<div className="overlay"></div>
+<div class="overlay"></div>
 
 
-<video autoPlay="autoplay" muted="muted" loop="loop">
+<video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
   <source src="https://storage.googleapis.com/coverr-main/mp4/Mt_Baker.mp4" type="video/mp4"/>
 </video>
 
 
-<div className="container h-100">
-  <div className="d-flex h-100 text-center align-items-center">
-    <div className="w-100 text-white">
-      <h1 className="display-3">Video Header</h1>
-      <p className="lead mb-0">Using HTML5 Video and Bootstrap</p>
+<div class="container h-100">
+  <div class="d-flex h-100 text-center align-items-center">
+    <div class="w-100 text-white">
+      <h1 class="display-3">Video Header</h1>
+      <p class="lead mb-0">Using HTML5 Video and Bootstrap</p>
     </div>
   </div>
 </div>
 </header>
 
 
-<section className="my-5">
-<div className="container">
-  <div className="row">
-    <div className="col-md-8 mx-auto">
+<section class="my-5">
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
       <p>The HTML5 video element uses an mp4 video as a source. Change the source video to add in your own background! The header text is vertically centered using flex utilities that are built into Bootstrap.</p>
       <p>The overlay color and opacity can be changed by modifying the <code>background-color</code> and <code>opacity</code> properties of the <code>.overlay</code> class in the CSS.</p>
       <p>Set the mobile fallback image in the CSS by changing the background image of the header element within the media query at the bottom of the CSS snippet.</p>
-      <p className="mb-0">
+      <p class="mb-0">
         Created by <a href="https://startbootstrap.com">Start Bootstrap</a>
       </p>
     </div>

@@ -58,62 +58,47 @@ body {
   }
   
 
-
-
-
-
-
-  header {
-    position: relative;
-    background-color: black;
-    height: 75vh;
-    min-height: 25rem;
+  .row-hero {
+    height: 20rem;
     width: 100%;
+    position: relative;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
   }
+    @media(min-width: 480px) {
+      .row-hero {
+        height: 25rem;
+      }
+    }
+    @media(min-width: 720px) {
+      .row-hero {
+        height: 35rem;
+      }
+    }
   
-  header video {
+  .video {
     position: absolute;
     top: 50%;
     left: 50%;
+    height: auto;
+    width: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: 0;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
   }
   
-  header .container {
-    position: relative;
-    z-index: 2;
-  }
-  
-  header .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(29, 29, 44);
-    opacity: 0.5;
+  .video-quote {
     z-index: 1;
+    padding: .5rem 1rem;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
   }
   
-  /* Media Query for devices withi coarse pointers and no hover functionality */
   
-  /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
-  
-  @media (pointer: coarse) and (hover: none) {
-    header {
-      background: url('https://images.unsplash.com/photo-1518933165971-611dbc9c412d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80') black no-repeat center center scroll;
-    }
-  
-    header video {
-      display: none;
-    }
-  }
-  
+
+
+
+

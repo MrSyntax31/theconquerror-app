@@ -93,7 +93,7 @@ const HomeUser = () => {
                      </video>
 
                      <div className="container h-100">
-                     <div className="d-flex h-100 text-center align-items-center">
+                     <div class="d-flex h-100 text-center align-items-center">
                         <div className="mt-5 mb-5">
                         <Container fluid="md" style={{
                                              display: "flex",

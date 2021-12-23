@@ -98,7 +98,7 @@ body {
     left: 0;
     height: 100%;
     width: 100%;
-    background-color: rgb(29, 29, 44);
+    background-color: rgb(14, 13, 44);
     opacity: 0.5;
     z-index: 1;
   }
@@ -109,7 +109,7 @@ body {
   
   @media (pointer: coarse) and (hover: none) {
     header {
-      background: url('https://images.unsplash.com/photo-1518933165971-611dbc9c412d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80') black no-repeat center center scroll;
+      background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
     }
   
     header video {

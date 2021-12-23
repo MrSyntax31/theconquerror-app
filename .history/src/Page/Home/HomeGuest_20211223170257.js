@@ -4,8 +4,12 @@ import '../../Assets/css/bootstrap.min.css';
 import '../../Assets/css/animate.css';
 import '../../Assets/css/tiny-slider.css';
 import '../../Assets/css/main.css';
-import { Accordion, Row, Col, Container, Card } from 'react-bootstrap';
-
+import { Carousel, Accordion, Row, Col, Container, Card } from 'react-bootstrap';
+import image1 from '../../Assets/images/0.jpg';
+import image2 from '../../Assets/images/2.jpg';
+import image3 from '../../Assets/images/3.jpg';
+import image4 from '../../Assets/images/4.jpg';
+import image5 from '../../Assets/images/5.jpg';
 import * as FaIcons from 'react-icons/fa';
 import * as SiIcons from 'react-icons/si';
 import { Link } from "react-router-dom"
@@ -92,40 +96,87 @@ const HomeUser = () => {
                      <video autoPlay="autoplay" muted="muted" loop="loop">
                      <source src="https://assets.mixkit.co/videos/preview/mixkit-computer-code-in-the-screen-9757-large.mp4" type="video/mp4"/>
                      </video>
-
-                        <div className="container h-100">
-                           <div className="d-flex h-100 text-center align-items-center">
-                              <div className="mt-5 mb-5">
-                                    <Container fluid="md" style={{
-                                                               display: "flex",
-                                                               justifyContent: "center",
-                                                               alignItems: "center"
-                                                            }}>
-                                       <Row className=" align-items-center">
-                                             <Col>
-                                                <div className="hero-content">
-                                                   <h1 className="text-light" data-wow-delay=".4s">Welcome to ConquError! where we Conquer Errors</h1>
-                                                   <p className="text-light" data-wow-delay=".6s">Be Part of our Learning Community, Join our Forums and Enroll on our Courses.</p>
-                                                   <div className="button wow fadeInLeft" data-wow-delay=".8s">
-                                                         <Link to="/login" className="btn" style={{ textDecoration: 'none' }}>Login</Link>
-                                                         <Link to="/register" className="btn btn-alt" style={{ textDecoration: 'none' }}>Register</Link>
-                                                   </div>
-                                                </div>
-                                             </Col>
-                                          <div className="col-lg-7 col-md-12 col-12">
-                                             <div className="hero-image wow fadeInRight" data-wow-delay=".4s">
-                                                <img src="https://images.unsplash.com/photo-1516886635086-2b3c423c0947?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=401&q=80" alt="imag"/>
-                                             </div>
-                                          </div>
-                                       </Row>
-                                    </Container>
+                     </header>
+                     <Container fluid="md" style={{
+                           display: "flex",
+                           justifyContent: "center",
+                           alignItems: "center"
+                        }}>
+                        <Row className=" align-items-center">
+                              <Col>
+                                 <div className="hero-content">
+                                    <h1 className="wow fadeInLeft" data-wow-delay=".4s">Welcome to ConquError! where we Conquer Errors</h1>
+                                    <p className="wow fadeInLeft" data-wow-delay=".6s">Be Part of our Learning Community, Join our Forums and Enroll on our Courses.</p>
+                                    <div className="button wow fadeInLeft" data-wow-delay=".8s">
+                                          <Link to="/login" className="btn" style={{ textDecoration: 'none' }}>Login</Link>
+                                          <Link to="/register" className="btn btn-alt" style={{ textDecoration: 'none' }}>Register</Link>
+                                    </div>
+                                 </div>
+                              </Col>
+                           <div className="col-lg-7 col-md-12 col-12">
+                              <div className="hero-image wow fadeInRight" data-wow-delay=".4s">
+                                 <img src="https://images.unsplash.com/photo-1516886635086-2b3c423c0947?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=401&q=80" alt="imag"/>
                               </div>
                            </div>
-                        </div>
-                     </header>
-                     
+                        </Row>
+                     </Container>
                   </section>
       
+                  {/* Section for Image Carousel*/}
+                  <section className="">
+                     <Carousel fade={true} pause={false} className="">
+                                 <Carousel.Item interval={2000}>
+                                 <img
+                                 className="d-block w-100"
+                                 src={image1}
+                                 alt="First slide"
+                                 />
+                                 <Carousel.Caption>
+                                 </Carousel.Caption>
+                                 </Carousel.Item>
+
+                                 <Carousel.Item interval={2000} className="">
+                                 <img
+                                 className="d-block w-100  "
+                                 src={image2}
+                                 alt="Third slide"
+                                 />
+                                 <Carousel.Caption>
+                                 </Carousel.Caption>
+                                 </Carousel.Item>
+
+                                 <Carousel.Item interval={2000} className="">
+                                 <img
+                                 className="d-block w-100 "
+                                 src={image3}
+                                 alt="Third slide"
+                                 />
+                                 <Carousel.Caption>
+                                 </Carousel.Caption>
+                                 </Carousel.Item>
+
+                                 <Carousel.Item interval={2000} className="">
+                                 <img
+                                 className="d-block w-100 "
+                                 src={image4}
+                                 alt="Third slide"
+                                 />
+                                 <Carousel.Caption>
+                                 </Carousel.Caption>
+                                 </Carousel.Item>
+
+                                 <Carousel.Item interval={2000} className="">
+                                 <img
+                                 className="d-block w-100 "
+                                 src={image5}
+                                 alt="Third slide"
+                                 />
+                                 <Carousel.Caption>
+                                 </Carousel.Caption>
+                                 </Carousel.Item>
+                     </Carousel>
+                  </section>   
+
                   {/* Section for About Us*/}
                   <section className="bg-light" id="about" >
                      <Container fluid="md" style={{
