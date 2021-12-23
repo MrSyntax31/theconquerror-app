@@ -100,6 +100,10 @@ const HomeUser = () => {
                            <div className="w-100 text-white">
                               <h1 className="display-3 text-light">Welcome to ConquError! <br/> where we Conquer Errors</h1>
                               <p className="lead mb-0 text-light">Be Part of our Learning Community, Join our Forums and Enroll on our Courses.</p>
+                              <div className="button mt-3">
+                                    <Link to="/login" className="btn" style={{ textDecoration: 'none' }}>Login</Link>
+                                    <Link to="/register" className="btn btn-alt" style={{ textDecoration: 'none' }}>Register</Link>
+                              </div>
                            </div>
                         </div>
                      </div>

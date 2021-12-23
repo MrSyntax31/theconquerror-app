@@ -521,7 +521,7 @@ function updateProfile(){
                         <div className="col-lg-3 order-lg-2">
                           <div className="card-profile-image">
                             
-                              <img src={avatar.img} alt="levelImage" className="rounded-circle m-3"/>
+                              <img src={avatar.img} alt="levelImage" className="rounded-circle cn"/>
 
                           </div>
                         </div>

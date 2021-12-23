@@ -533,8 +533,8 @@ function updateProfile(){
                         <div className="row">
                           <div className="col">
                             <div className="card-profile-stats d-flex justify-content-center mt-md-5">
-                              <div>
-                                <span className="heading fs-2">{profile.level}</span>
+                              <div className="m-5">
+                                <span className="heading fs-2 m-5">{profile.level}</span>
                                 <span className="description">My Level</span>
                               </div>                              
                             </div>

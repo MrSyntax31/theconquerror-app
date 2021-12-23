@@ -104,6 +104,24 @@ const HomeUser = () => {
                         </div>
                      </div>
 
+                        <div className="container h-100">
+                           <div className="d-flex h-100 text-center align-items-center">
+                              <div className="mt-5 mb-5">
+                                                <div>
+                                                   <h1 className="text-light" >Welcome to ConquError! where we Conquer Errors</h1>
+                                                   <p className="text-light">Be Part of our Learning Community, Join our Forums and Enroll on our Courses.</p>
+                                                   <div className="button wow fadeInLeft" data-wow-delay=".8s">
+                                                         <Link to="/login" className="btn" style={{ textDecoration: 'none' }}>Login</Link>
+                                                         <Link to="/register" className="btn btn-alt" style={{ textDecoration: 'none' }}>Register</Link>
+                                                   </div>
+                                                </div>
+                                    
+                                      
+
+                                   
+                              </div>
+                           </div>
+                        </div>
                      </header>
                      
                   </section>

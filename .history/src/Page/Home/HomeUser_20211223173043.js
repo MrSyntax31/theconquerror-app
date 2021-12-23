@@ -406,7 +406,7 @@ const HomeUser = () => {
                </section>
 
 
-                  <header>
+               <header>
 
 
                   <div className="overlay"></div>

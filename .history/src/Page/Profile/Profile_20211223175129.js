@@ -519,9 +519,9 @@ function updateProfile(){
                     <div className="card card-profile shadow">
                       <div className="row justify-content-center">
                         <div className="col-lg-3 order-lg-2">
-                          <div className="card-profile-image">
+                          <div className="card-profile-image center-block">
                             
-                              <img src={avatar.img} alt="levelImage" className="rounded-circle m-3"/>
+                              <img src={avatar.img} alt="levelImage" className="rounded-circle center-block"/>
 
                           </div>
                         </div>
