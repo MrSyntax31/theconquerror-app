@@ -302,7 +302,7 @@ uploadTask.on('state_changed',
             {
               if (window.swal({type: 'error', icon: 'error', title: 'Oops', text: 'You need to be logged in to continue!'})) {
                 // Save it!
-        
+               history.push("/login")
               } else {
               
                 //do nothing
@@ -323,25 +323,19 @@ uploadTask.on('state_changed',
             Email: userEmail,
           dateofReport: convertedDate
           }
-          if (report === null) {
-            swal("Error","You cannot send an Empty field","error")
-          }
-          else{
           //puts the document inside the collection "feedback" in firestore
           await setDoc(userFeedback, data).then(() =>{
            
-            handleShowR(false)
+  
             //show a success message
             swal("Report Sent", "Thank you for making ConquError a healthy community.", "success");
-          
-
+            handleShowR(f)
           }).catch((error) => {
 
             swal("Something is Wrong",error.code,"warning");
           }).finally(() =>{
         
           })
-        }
         }
   
             }
@@ -436,7 +430,7 @@ uploadTask.on('state_changed',
                             <Form>
                               <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                                 <Form.Label>State your problem.</Form.Label>
-                                <Form.Control as="textarea" value={report || ""} onChange={e => ReportUser(e.target.value)} rows={3} />
+                                <Form.Control as="textarea" rows={3} />
                                 <Button className="btn w-100 mt-3 text-light" data-id={showUserEmail} onClick={sendReport}><GoIcons.GoReport/> Report</Button>
                               </Form.Group>
                             </Form>

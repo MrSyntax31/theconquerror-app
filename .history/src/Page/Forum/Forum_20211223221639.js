@@ -292,17 +292,15 @@ uploadTask.on('state_changed',
         }
 
 
-          const [report, ReportUser] = useState();      
+          const [report, ReportUser] = useState());      
             //Function for Modal (Send Feedback)
-        async  function sendReport(e){
-
-          const userEmail = e.target.getAttribute("data-id");
+        async  function sendFeedback(){
             //If there is no user logged-in, returns the user to Login page to continue
             if (currentUser === null)
             {
               if (window.swal({type: 'error', icon: 'error', title: 'Oops', text: 'You need to be logged in to continue!'})) {
                 // Save it!
-        
+               history.push("/login")
               } else {
               
                 //do nothing
@@ -319,29 +317,22 @@ uploadTask.on('state_changed',
   
           // then create the array with the data to be set inside firestore in collection "feedback"
           var data = {
-          ReportDesc: report,
-            Email: userEmail,
+          ReportDesc: feedback,
+            Email: user.email,
           dateofReport: convertedDate
           }
-          if (report === null) {
-            swal("Error","You cannot send an Empty field","error")
-          }
-          else{
           //puts the document inside the collection "feedback" in firestore
           await setDoc(userFeedback, data).then(() =>{
            
-            handleShowR(false)
+  
             //show a success message
             swal("Report Sent", "Thank you for making ConquError a healthy community.", "success");
-          
-
           }).catch((error) => {
 
             swal("Something is Wrong",error.code,"warning");
           }).finally(() =>{
         
           })
-        }
         }
   
             }
@@ -422,7 +413,7 @@ uploadTask.on('state_changed',
                                       <strong>User Level on post</strong>
                                       <h5>{showUserLevel}</h5>
                                     </div>
-                                    <Button className="btn w-100 text-light"  onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
+                                    <Button className="btn w-100 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
                                 </Modal.Body>
                               </Modal>
                         </div>
@@ -436,8 +427,8 @@ uploadTask.on('state_changed',
                             <Form>
                               <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                                 <Form.Label>State your problem.</Form.Label>
-                                <Form.Control as="textarea" value={report || ""} onChange={e => ReportUser(e.target.value)} rows={3} />
-                                <Button className="btn w-100 mt-3 text-light" data-id={showUserEmail} onClick={sendReport}><GoIcons.GoReport/> Report</Button>
+                                <Form.Control as="textarea" rows={3} />
+                                <Button className="btn w-100 mt-3 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
                               </Form.Group>
                             </Form>
                           </Modal.Body>

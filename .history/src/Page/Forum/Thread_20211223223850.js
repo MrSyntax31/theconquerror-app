@@ -172,7 +172,7 @@ const Thread = () => {
 },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
 
-    const showRep= threadList.map((threadList) =>  <div key={threadList.id}>  <br></br> {threadList.reply} <br></br><p className="text-primary" data-email={threadList.email} onClick={fetchEmailOpenModal} style={{cursor:"pointer"}}>{threadList.email}</p>Level: <strong>{threadList.level}</strong></div>)
+    const showRep= threadList.map((threadList) =>  <div key={threadList.id}>  <br></br> {threadList.reply} <br></br><p className="text-primary" onClick={handleShowR} style={{cursor:"pointer"}}>{threadList.email}</p>Level: <strong>{threadList.level}</strong></div>)
 
   async function DeletePost(e) {
 
@@ -265,14 +265,9 @@ const Thread = () => {
   event.preventDefault();
   };
 
-    const [userEmail, setUserEmail] = useState();
-    const [report, ReportUser] = useState();      
 
-    function fetchEmailOpenModal(e){
-
-        setUserEmail(e.target.getAttribute("data-email"))
-        setShowR(true)
-    }
+  const [report, ReportUser] = useState();      
+  
 //Function for Modal (Send Feedback)
 async  function sendReport(){
 
@@ -282,7 +277,7 @@ if (user === null)
 {
   if (window.swal({type: 'error', icon: 'error', title: 'Oops', text: 'You need to be logged in to continue!'})) {
     // Save it!
-
+   history.push("/login")
   } else {
   
     //do nothing

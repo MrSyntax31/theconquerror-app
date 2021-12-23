@@ -420,8 +420,8 @@ const HomeUser = () => {
                   <div className="container h-100">
                   <div className="d-flex h-100 text-center align-items-center">
                      <div className="w-100 text-white">
-                     <h1 className="display-3 text-light">Conquer your Error</h1>
-                        <p className="lead mb-0">A move that can change your life!</p>
+                        <h1 className="display-3">Video Header</h1>
+                        <p className="lead mb-0">Using HTML5 Video and Bootstrap</p>
                      </div>
                   </div>
                   </div>
@@ -432,16 +432,12 @@ const HomeUser = () => {
                   <div className="container">
                   <div className="row">
                      <div className="col-md-8 mx-auto">
-                        
-                        <p>The Technojet.Dev Team has been working on ConquError since its inception. We are a team of five students from the Technojet.Dev program. We are currently working on ConquError as a team. We are looking forward to working with you to build a community of developers and enthusiasts.</p>
-                        
-                        <p>
-                           Technojet.Dev believes in the power of technology and we are committed to making it a part of our daily lives.
-                           We are happy to share this project with you, and we hope you enjoy it.
-
-                        </p>
+                        <p>ConquError is a community for non-IT and IT enthusiasts to share and learn about computer programming. We believe that everyone deserves to learn computer programming. ConquError was created by five young IT students to educate and inspire future generations.</p>
+                        <p>The Technojet.Dev Team is dedicated 
+                            </p>
+                        <p>Set the mobile fallback image in the CSS by changing the background image of the header element within the media query at the bottom of the CSS snippet.</p>
                         <p className="mb-0">
-                        Follow us on our facebook <a href="https://www.facebook.com/theConquErrorph">theConquerrorph</a>
+                        Created by <a href="https://startbootstrap.com">Start Bootstrap</a>
                         </p>
                      </div>
                   </div>

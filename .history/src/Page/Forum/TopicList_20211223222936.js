@@ -425,7 +425,7 @@ if (currentUser === null)
 {
   if (window.swal({type: 'error', icon: 'error', title: 'Oops', text: 'You need to be logged in to continue!'})) {
     // Save it!
-
+   history.push("/login")
   } else {
   
     //do nothing
@@ -545,20 +545,19 @@ swal("Something is Wrong",error.code,"warning");
                               </Modal>
 
                               <Modal show={showR} onHide={handleCloseR}>
-                          <Modal.Header closeButton>
-                            <Modal.Title>Report User</Modal.Title>
-                          </Modal.Header>
-                          <Modal.Body>
-                            <Form>
-                              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>State your problem.</Form.Label>
-                                <Form.Control as="textarea" value={report || ""} onChange={e => ReportUser(e.target.value)} rows={3} />
-                                <Button className="btn w-100 mt-3 text-light" data-id={showUserEmail} onClick={sendReport}><GoIcons.GoReport/> Report</Button>
-                              </Form.Group>
-                            </Form>
-                          </Modal.Body>
-                        </Modal>
-
+                                <Modal.Header closeButton>
+                                  <Modal.Title>Report User</Modal.Title>
+                                </Modal.Header>
+                                <Modal.Body>
+                                  <Form>
+                                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                      <Form.Label>State your problem.</Form.Label>
+                                      <Form.Control as="textarea" rows={3} />
+                                      <Button className="btn w-100 mt-3 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
+                                    </Form.Group>
+                                  </Form>
+                                </Modal.Body>
+                              </Modal>
 
             {/* Division for Discussion Board*/}
 

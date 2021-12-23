@@ -420,8 +420,8 @@ const HomeUser = () => {
                   <div className="container h-100">
                   <div className="d-flex h-100 text-center align-items-center">
                      <div className="w-100 text-white">
-                     <h1 className="display-3 text-light">Conquer your Error</h1>
-                        <p className="lead mb-0">A move that can change your life!</p>
+                        <h1 className="display-3">Video Header</h1>
+                        <p className="lead mb-0">Using HTML5 Video and Bootstrap</p>
                      </div>
                   </div>
                   </div>

@@ -420,8 +420,8 @@ const HomeUser = () => {
                   <div className="container h-100">
                   <div className="d-flex h-100 text-center align-items-center">
                      <div className="w-100 text-white">
-                     <h1 className="display-3 text-light">Conquer your Error</h1>
-                        <p className="lead mb-0">A move that can change your life!</p>
+                        <h1 className="display-3">Video Header</h1>
+                        <p className="lead mb-0">Using HTML5 Video and Bootstrap</p>
                      </div>
                   </div>
                   </div>
@@ -437,11 +437,11 @@ const HomeUser = () => {
                         
                         <p>
                            Technojet.Dev believes in the power of technology and we are committed to making it a part of our daily lives.
-                           We are happy to share this project with you, and we hope you enjoy it.
+                           We are happy to share this project with you
 
                         </p>
                         <p className="mb-0">
-                        Follow us on our facebook <a href="https://www.facebook.com/theConquErrorph">theConquerrorph</a>
+                        Created by <a href="https://startbootstrap.com">Start Bootstrap</a>
                         </p>
                      </div>
                   </div>

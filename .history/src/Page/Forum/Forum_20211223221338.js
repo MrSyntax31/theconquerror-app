@@ -1,7 +1,7 @@
 import React, {useEffect,useState} from 'react';
 import { Helmet } from "react-helmet";
 import {  Modal, Button, OverlayTrigger, Popover, ProgressBar, Alert } from 'react-bootstrap';
-import { onSnapshot,collection,getFirestore, doc,  query, orderBy, limit, addDoc, setDoc } from 'firebase/firestore';
+import { onSnapshot,collection,getFirestore, doc,  query, orderBy, limit, addDoc } from 'firebase/firestore';
 import {} from '../../firebase/firebase'
 import {  Link, useHistory} from "react-router-dom"
 import {Container,  Row,Col, Form, FormControl } from 'react-bootstrap'
@@ -292,26 +292,12 @@ uploadTask.on('state_changed',
         }
 
 
-          const [report, ReportUser] = useState();      
-            //Function for Modal (Send Feedback)
-        async  function sendReport(e){
-
-          const userEmail = e.target.getAttribute("data-id");
-            //If there is no user logged-in, returns the user to Login page to continue
-            if (currentUser === null)
-            {
-              if (window.swal({type: 'error', icon: 'error', title: 'Oops', text: 'You need to be logged in to continue!'})) {
-                // Save it!
         
-              } else {
-              
-                //do nothing
-                
-              }
-            }
-            else {
+        //Function for Modal (Send Feedback)
+        async  function sendFeedback(){
+
           // Rederence the Firebase Service for Firestore
-          const userFeedback = doc(collection(forumdb, "reports"));
+          const userFeedback = doc(collection(firestoredb, "feedback"));
   
           //convert date which is timestamp to String
           var timestamp = Date.now();
@@ -319,30 +305,22 @@ uploadTask.on('state_changed',
   
           // then create the array with the data to be set inside firestore in collection "feedback"
           var data = {
-          ReportDesc: report,
-            Email: userEmail,
-          dateofReport: convertedDate
+          Feedback: feedback,
+            sender: user.email,
+          sent_at: convertedDate
           }
-          if (report === null) {
-            swal("Error","You cannot send an Empty field","error")
-          }
-          else{
           //puts the document inside the collection "feedback" in firestore
           await setDoc(userFeedback, data).then(() =>{
-           
-            handleShowR(false)
+            setFeedback("");
+  
             //show a success message
-            swal("Report Sent", "Thank you for making ConquError a healthy community.", "success");
-          
-
+            swal("Feedback Sent", "Thank you for your feedback", "success");
           }).catch((error) => {
-
             swal("Something is Wrong",error.code,"warning");
           }).finally(() =>{
         
           })
-        }
-        }
+         
   
             }
 
@@ -422,7 +400,7 @@ uploadTask.on('state_changed',
                                       <strong>User Level on post</strong>
                                       <h5>{showUserLevel}</h5>
                                     </div>
-                                    <Button className="btn w-100 text-light"  onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
+                                    <Button className="btn w-100 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
                                 </Modal.Body>
                               </Modal>
                         </div>
@@ -436,8 +414,8 @@ uploadTask.on('state_changed',
                             <Form>
                               <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
                                 <Form.Label>State your problem.</Form.Label>
-                                <Form.Control as="textarea" value={report || ""} onChange={e => ReportUser(e.target.value)} rows={3} />
-                                <Button className="btn w-100 mt-3 text-light" data-id={showUserEmail} onClick={sendReport}><GoIcons.GoReport/> Report</Button>
+                                <Form.Control as="textarea" rows={3} />
+                                <Button className="btn w-100 mt-3 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
                               </Form.Group>
                             </Form>
                           </Modal.Body>

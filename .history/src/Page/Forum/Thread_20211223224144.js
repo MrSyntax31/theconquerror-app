@@ -282,7 +282,7 @@ if (user === null)
 {
   if (window.swal({type: 'error', icon: 'error', title: 'Oops', text: 'You need to be logged in to continue!'})) {
     // Save it!
-
+   history.push("/login")
   } else {
   
     //do nothing

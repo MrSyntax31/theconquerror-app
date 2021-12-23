@@ -302,7 +302,7 @@ uploadTask.on('state_changed',
             {
               if (window.swal({type: 'error', icon: 'error', title: 'Oops', text: 'You need to be logged in to continue!'})) {
                 // Save it!
-        
+               history.push("/login")
               } else {
               
                 //do nothing
@@ -323,10 +323,7 @@ uploadTask.on('state_changed',
             Email: userEmail,
           dateofReport: convertedDate
           }
-          if (report === null) {
-            swal("Error","You cannot send an Empty field","error")
-          }
-          else{
+          if (report )
           //puts the document inside the collection "feedback" in firestore
           await setDoc(userFeedback, data).then(() =>{
            
@@ -341,7 +338,6 @@ uploadTask.on('state_changed',
           }).finally(() =>{
         
           })
-        }
         }
   
             }

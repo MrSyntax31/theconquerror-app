@@ -423,7 +423,7 @@ const HomeUser = () => {
                   <div className="d-flex h-100 text-center align-items-center">
                      <div className="w-100 text-white">
                         <h1 className="display-3 text-light">Conquer your Error</h1>
-                        <p className="lead mb-0">A move that can change your life!</p>
+                        <p className="lead mb-0"></p>
                      </div>
                   </div>
                   </div>
