@@ -179,10 +179,10 @@ uploadTask.on('state_changed',
 
 
       
-        const [avatar, setAvatar] = useState([]);
+      const [avatar, setAvatar] = useState([]);
     
-        const [showUserEmail, setUserEmail] = useState([]);
-        const [showUserLevel, setUserLevel] = useState([]);
+    const [showUserEmail, setUserEmail] = useState([]);
+    const [showUserLevel, setUserLevel] = useState([]);
 
         const showProfile = function(e) {
 
@@ -373,19 +373,19 @@ uploadTask.on('state_changed',
                         </div>
 
 
-                        <Modal show={showR} onHide={handleCloseR}>
+                        <Modal show={showR} onHide={handleClose}>
                           <Modal.Header closeButton>
-                            <Modal.Title>Report User</Modal.Title>
+                            <Modal.Title>Modal heading</Modal.Title>
                           </Modal.Header>
-                          <Modal.Body>
-                            <Form>
-                              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>State your problem.</Form.Label>
-                                <Form.Control as="textarea" rows={3} />
-                                <Button className="btn w-100 mt-3 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
-                              </Form.Group>
-                            </Form>
-                          </Modal.Body>
+                          <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
+                          <Modal.Footer>
+                            <Button variant="secondary" onClick={handleClose}>
+                              Close
+                            </Button>
+                            <Button variant="primary" onClick={handleClose}>
+                              Save Changes
+                            </Button>
+                          </Modal.Footer>
                         </Modal>
 
                         <div className="position-end">

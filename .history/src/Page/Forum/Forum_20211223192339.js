@@ -179,10 +179,10 @@ uploadTask.on('state_changed',
 
 
       
-        const [avatar, setAvatar] = useState([]);
+      const [avatar, setAvatar] = useState([]);
     
-        const [showUserEmail, setUserEmail] = useState([]);
-        const [showUserLevel, setUserLevel] = useState([]);
+    const [showUserEmail, setUserEmail] = useState([]);
+    const [showUserLevel, setUserLevel] = useState([]);
 
         const showProfile = function(e) {
 
@@ -380,7 +380,7 @@ uploadTask.on('state_changed',
                           <Modal.Body>
                             <Form>
                               <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>State your problem.</Form.Label>
+                                <Form.Label>State your </Form.Label>
                                 <Form.Control as="textarea" rows={3} />
                                 <Button className="btn w-100 mt-3 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
                               </Form.Group>

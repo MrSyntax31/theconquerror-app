@@ -492,19 +492,19 @@ const popover = (
                               </Modal>
 
                               <Modal show={showR} onHide={handleCloseR}>
-                                <Modal.Header closeButton>
-                                  <Modal.Title>Report User</Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body>
-                                  <Form>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                      <Form.Label>State your problem.</Form.Label>
-                                      <Form.Control as="textarea" rows={3} />
-                                      <Button className="btn w-100 mt-3 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
-                                    </Form.Group>
-                                  </Form>
-                                </Modal.Body>
-                              </Modal>
+                          <Modal.Header closeButton>
+                            <Modal.Title>Report User</Modal.Title>
+                          </Modal.Header>
+                          <Modal.Body>
+                            <Form>
+                              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                <Form.Label>State your problem.</Form.Label>
+                                <Form.Control as="textarea" rows={3} />
+                                <Button className="btn w-100 mt-3 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
+                              </Form.Group>
+                            </Form>
+                          </Modal.Body>
+                        </Modal>
 
             {/* Division for Discussion Board*/}
 

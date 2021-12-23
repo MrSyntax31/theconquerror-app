@@ -172,7 +172,7 @@ const Thread = () => {
 },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
 
-    const showRep= threadList.map((threadList) =>  <div key={threadList.id}>  <br></br> {threadList.reply} <br></br><p className="text-primary" onClick={handleShowR} style={{cursor:"pointer"}}>{threadList.email}</p>Level: <strong>{threadList.level}</strong></div>)
+    const showRep= threadList.map((threadList) =>  <div key={threadList.id}>  <br></br> {threadList.reply} <br></br><p className="text-primary" onClick={handleShowR} style={{cursor:"pointer">{threadList.email}</p>Level: <strong>{threadList.level}</strong></div>)
 
   async function DeletePost(e) {
 
@@ -276,11 +276,11 @@ const Thread = () => {
 
         <Navbar/>
 
-        <div className="mt-5 mb-1">
+        <div className="mt-5 mb-5">
             <Link to="/forum" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"><FaIcons.FaArrowLeft/> Back</Link>
         </div>
         
-        <Container className="mb-5 rounded p-5">
+        <Container className="mb-5 bg-light rounded p-5">
         
         {/* Option Menu*/}
         { hider && 

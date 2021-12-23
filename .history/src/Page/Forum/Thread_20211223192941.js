@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import * as FaIcons from 'react-icons/fa';
 import Helmet from 'react-helmet';
 import Navbar from '../../Components/Navbar/Navbar'
-import {Container, Form, Row, Col, Dropdown, Modal, Button } from 'react-bootstrap'
+import {Container, Form, Row, Col, Dropdown, Modal } from 'react-bootstrap'
 import './Forum.css';
 import { getAuth } from '@firebase/auth';
 import { getFirestore, doc, onSnapshot, addDoc, collection, query, orderBy , deleteDoc, updateDoc} from '@firebase/firestore';
@@ -12,7 +12,6 @@ import { useHistory } from 'react-router';
 import { getDatabase, ref, onValue } from "firebase/database";
 import swal from 'sweetalert';
 import * as BiIcons from 'react-icons/bi';
-import * as GoIcons from 'react-icons/go';
 
 
 const Thread = () => {
@@ -39,11 +38,7 @@ const Thread = () => {
       
     const [userlevel, fetchLevel ]= useState([]);
 
-    //Reports
-    const [showR, setShowR] = useState(false);
-
-    const handleCloseR = () => setShowR(false);
-    const handleShowR = () => setShowR(true);
+   
     
     //Function that shows the profile of the user 
     function showProfile() {
@@ -172,7 +167,7 @@ const Thread = () => {
 },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
 
-    const showRep= threadList.map((threadList) =>  <div key={threadList.id}>  <br></br> {threadList.reply} <br></br><p className="text-primary" onClick={handleShowR} style={{cursor:"pointer"}}>{threadList.email}</p>Level: <strong>{threadList.level}</strong></div>)
+    const showRep= threadList.map((threadList) =>  <div key={threadList.id}>  <br></br> {threadList.reply} <br></br><p className="text-primary" >{threadList.email}</p>Level: <strong>{threadList.level}</strong></div>)
 
   async function DeletePost(e) {
 
@@ -276,11 +271,11 @@ const Thread = () => {
 
         <Navbar/>
 
-        <div className="mt-5 mb-1">
+        <div className="mt-5 mb-5">
             <Link to="/forum" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"><FaIcons.FaArrowLeft/> Back</Link>
         </div>
         
-        <Container className="mb-5 rounded p-5">
+        <Container className="mb-5 bg-light rounded p-5">
         
         {/* Option Menu*/}
         { hider && 
@@ -342,21 +337,6 @@ const Thread = () => {
                     </Form>
                     } 
         </Container>
-
-        <Modal show={showR} onHide={handleCloseR}>
-                          <Modal.Header closeButton>
-                            <Modal.Title>Report User</Modal.Title>
-                          </Modal.Header>
-                          <Modal.Body>
-                            <Form>
-                              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>State your problem.</Form.Label>
-                                <Form.Control as="textarea" rows={3} />
-                                <Button className="btn w-100 mt-3 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
-                              </Form.Group>
-                            </Form>
-                          </Modal.Body>
-                        </Modal>
         </div>
     
   }

@@ -276,7 +276,7 @@ const Thread = () => {
 
         <Navbar/>
 
-        <div className="mt-5 mb-1">
+        <div className="mt-5 mb-5">
             <Link to="/forum" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"><FaIcons.FaArrowLeft/> Back</Link>
         </div>
         

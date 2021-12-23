@@ -46,11 +46,7 @@ export default function TopicList() {
         const [question, setQuestion] = useState();
         const [description, setDesc] = useState();
 
-        //Reports
-        const [showR, setShowR] = useState(false);
 
-        const handleCloseR = () => setShowR(false);
-        const handleShowR = () => setShowR(true);
 
         //Function for User Information
         const [showP, setShowP] = useState(false);
@@ -402,7 +398,7 @@ uploadTask.on('state_changed',
             {topic.created_at}</strong></p>  
             
             
-          <div className="heading"  style={{cursor:"pointer"}}><ul> <li onClick={ handler}  data-id ={topic.id}>{topic.title}<br></br><strong>Description:</strong> {topic.desc} <br></br><strong>Tags: </strong>{topic.tags}</li></ul></div></div> ))
+          <div className="heading"><ul> <li onClick={ handler}  data-id ={topic.id}>{topic.title}<br></br><strong>Description:</strong> {topic.desc} <br></br><strong>Tags: </strong>{topic.tags}</li></ul></div></div> ))
           
     //For Popup Notice
 const popover = (
@@ -487,24 +483,11 @@ const popover = (
                                       <strong>User Level on post</strong>
                                       <h5>{showUserLevel}</h5>
                                     </div>
-                                    <Button className="btn w-100 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
+                                
                                 </Modal.Body>
                               </Modal>
 
-                              <Modal show={showR} onHide={handleCloseR}>
-                                <Modal.Header closeButton>
-                                  <Modal.Title>Report User</Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body>
-                                  <Form>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                      <Form.Label>State your problem.</Form.Label>
-                                      <Form.Control as="textarea" rows={3} />
-                                      <Button className="btn w-100 mt-3 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
-                                    </Form.Group>
-                                  </Form>
-                                </Modal.Body>
-                              </Modal>
+
 
             {/* Division for Discussion Board*/}
 

@@ -17,12 +17,6 @@ import swal from 'sweetalert';
 
         //Modal User Info
         const [smShow, setSmShow] = useState(false);
-
-        //Reports
-        const [showR, setShowR] = useState(false);
-
-        const handleCloseR = () => setShowR(false);
-        const handleShowR = () => setShowR(true);
         
         //declare firestore services
         const forumdb = getFirestore();
@@ -179,10 +173,10 @@ uploadTask.on('state_changed',
 
 
       
-        const [avatar, setAvatar] = useState([]);
+      const [avatar, setAvatar] = useState([]);
     
-        const [showUserEmail, setUserEmail] = useState([]);
-        const [showUserLevel, setUserLevel] = useState([]);
+    const [showUserEmail, setUserEmail] = useState([]);
+    const [showUserLevel, setUserLevel] = useState([]);
 
         const showProfile = function(e) {
 
@@ -215,11 +209,11 @@ uploadTask.on('state_changed',
 
         //Maps the data inside firestore collection (topics) so that it can be visible to the user
         const Discussion= topics.map((topic) => (  <div className="Discussion-Board p-3 m-2 border border-primary rounded" key={topic.id} > 
-        <p>Uploaded by: <label className="text-primary" style={{cursor:"pointer"}} data-id ={topic.created_by} data-lvl ={topic.userlvl} onClick={ showProfile }>{topic.created_by}</label> on <strong>
+        <p>Uploaded bye: <label className="text-primary" data-id ={topic.created_by} data-lvl ={topic.userlvl} onClick={ showProfile }>{topic.created_by}</label> on <strong>
           {topic.created_at}</strong></p>  
           
           
-        <div className="heading" style={{cursor:"pointer"}}><ul> <li onClick={ handler}  data-id ={topic.id}>{topic.title}<br></br><strong>Description:</strong> {topic.desc} <br></br><strong>Tags: </strong>{topic.tags}</li></ul></div></div> ))
+        <div className="heading"><ul> <li onClick={ handler}  data-id ={topic.id}>{topic.title}<br></br><strong>Description:</strong> {topic.desc} <br></br><strong>Tags: </strong>{topic.tags}</li></ul></div></div> ))
         
         //For Popup Notice
         const popover = (
@@ -367,26 +361,10 @@ uploadTask.on('state_changed',
                                       <strong>User Level on post</strong>
                                       <h5>{showUserLevel}</h5>
                                     </div>
-                                    <Button className="btn w-100 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
+                                
                                 </Modal.Body>
                               </Modal>
                         </div>
-
-
-                        <Modal show={showR} onHide={handleCloseR}>
-                          <Modal.Header closeButton>
-                            <Modal.Title>Report User</Modal.Title>
-                          </Modal.Header>
-                          <Modal.Body>
-                            <Form>
-                              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                <Form.Label>State your problem.</Form.Label>
-                                <Form.Control as="textarea" rows={3} />
-                                <Button className="btn w-100 mt-3 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
-                              </Form.Group>
-                            </Form>
-                          </Modal.Body>
-                        </Modal>
 
                         <div className="position-end">
                           <Link to="/alltopics" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"> Show All</Link> 
