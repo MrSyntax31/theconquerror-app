@@ -21,15 +21,8 @@ import swal from 'sweetalert';
         //Reports
         const [showR, setShowR] = useState(false);
 
-        function showReportModal() {
-
-          setShowR(true);
-          setSmShow(false);
-
-        }
-
         const handleCloseR = () => setShowR(false);
-       
+        const handleShowR = () => setShowR(true);
         
         //declare firestore services
         const forumdb = getFirestore();

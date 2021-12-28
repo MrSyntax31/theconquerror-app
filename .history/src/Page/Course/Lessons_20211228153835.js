@@ -202,7 +202,19 @@ const Lessons = () => {
                         
                         <Container>
                         <Row>
+                        <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
+                                      
+                                      <Card style={{ , marginTop: '2rem' }}>
+                                         <Card.Body>
+                                        <img className="w-50" src="https://img.icons8.com/color/720/000000/adventures--v3.png" alt="quiz" />
+                                        <h3>Quiz</h3>
+                                        <p>
+                                        Play the random quiz game that test your knowledge in basic computer programming.</p>
+                                        <Link to="/quiz" style={{ textDecoration: 'none' }} className="btn btn-primary  mt-4">Play</Link>
+                                      </Card.Body> 
+                                    </Card> 
 
+                                </Col>
                           <Col>
                             <Card style={{ width: '18rem', marginTop: '2rem' }} className="container mb-4">
                                   <div style={{textAlign:"center"}}>
@@ -240,7 +252,7 @@ const Lessons = () => {
                       </Container>
                       <Container>
                         <h3>My Course Timeline</h3>
-                        <section id="cd-timeline" className=" rounded">
+                        <section id="cd-timeline" className="cd-container rounded">
                           <div className="cd-timeline-block">
                             <div className="cd-timeline-img cd-picture">
                             </div>

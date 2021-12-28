@@ -240,7 +240,7 @@ const Lessons = () => {
                       </Container>
                       <Container>
                         <h3>My Course Timeline</h3>
-                        <section id="cd-timeline" className=" rounded">
+                        <section id="cd-timeline" className= rounded">
                           <div className="cd-timeline-block">
                             <div className="cd-timeline-img cd-picture">
                             </div>

@@ -202,7 +202,6 @@ const Lessons = () => {
                         
                         <Container>
                         <Row>
-
                           <Col>
                             <Card style={{ width: '18rem', marginTop: '2rem' }} className="container mb-4">
                                   <div style={{textAlign:"center"}}>
@@ -210,7 +209,7 @@ const Lessons = () => {
                                   </div>
                                 <Card.Body>
                                   <Card.Title><strong>Explore Course </strong></Card.Title>
-                                    <Card.Text>Begin your journey and explore the world of computer programming.</Card.Text>
+                                    <p>Begin your journey and explore the world of computer programming.</p>
                                 </Card.Body>
                             </Card>
                           </Col>
@@ -240,7 +239,7 @@ const Lessons = () => {
                       </Container>
                       <Container>
                         <h3>My Course Timeline</h3>
-                        <section id="cd-timeline" className=" rounded">
+                        <section id="cd-timeline" className="cd-container rounded">
                           <div className="cd-timeline-block">
                             <div className="cd-timeline-img cd-picture">
                             </div>

@@ -24,10 +24,8 @@ import swal from 'sweetalert';
         function showReportModal() {
 
           setShowR(true);
-          setSmShow(false);
-
+          setSmShow(fa)
         }
-
         const handleCloseR = () => setShowR(false);
        
         

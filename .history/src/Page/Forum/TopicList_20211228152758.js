@@ -630,8 +630,9 @@ swal("Something is Wrong",error.code,"warning");
                                   </Offcanvas.Body>
                                 </Offcanvas>
   
-                              { endLine && <strong> Seems like everybody is doing great! #ProblemFreeCoding</strong> }
-
+                              { endLine && <h1>End of the line Warrior.</h1> 
+                            }
+                            
                               {Discussion} 
                             </div>
                             <ButtonGroup>

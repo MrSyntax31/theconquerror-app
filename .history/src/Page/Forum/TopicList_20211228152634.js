@@ -630,8 +630,9 @@ swal("Something is Wrong",error.code,"warning");
                                   </Offcanvas.Body>
                                 </Offcanvas>
   
-                              { endLine && <strong> Seems like everybody is doing great! #ProblemFreeCoding</strong> }
-
+                              { endLine && <h1>End of the line Warrior.</h1> 
+                              <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FForum%2FDeadend.png?alt=media&token=3b6a39ae-273b-4c87-a081-1eba46127f6d" alt="deadEndPic"></img> }
+                            
                               {Discussion} 
                             </div>
                             <ButtonGroup>

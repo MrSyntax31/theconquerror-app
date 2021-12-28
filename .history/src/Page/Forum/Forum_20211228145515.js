@@ -25,9 +25,8 @@ import swal from 'sweetalert';
 
           setShowR(true);
           setSmShow(false);
-
         }
-
+        
         const handleCloseR = () => setShowR(false);
        
         

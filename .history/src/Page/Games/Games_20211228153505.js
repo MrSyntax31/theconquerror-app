@@ -2,7 +2,7 @@ import Helmet from 'react-helmet';
 import { Link } from "react-router-dom"
 import { Container, Row, Col, Card} from 'react-bootstrap'
 import Navbar from '../../Components/Navbar/Navbar'
-//import { ca } from 'date-fns/locale';
+import { ca } from 'date-fns/locale';
 
 const Games = () => {
 

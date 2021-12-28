@@ -2,7 +2,7 @@ import Helmet from 'react-helmet';
 import { Link } from "react-router-dom"
 import { Container, Row, Col, Card} from 'react-bootstrap'
 import Navbar from '../../Components/Navbar/Navbar'
-//import { ca } from 'date-fns/locale';
+import { ca } from 'date-fns/locale';
 
 const Games = () => {
 
@@ -51,10 +51,11 @@ const Games = () => {
                                       
                                       <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                             <Card.Body>
-                                                <img className="w-32" src="../Assets/Choice-cuate.png" alt="think man" />
-                                                <h3>Hangman</h3>
-                                                <p>Try to test and figure out programming terms and languange, in a guessing game.</p>
-                                                <Link to="/hangman" style={{ textDecoration: 'none' }} className="btn btn-primary  mt-4">Play</Link>
+                                            <img className="w-32" src="../Assets/Choice-cuate.png" alt="think man" />
+                                        <h3>Hangman</h3>
+                                        <p>Try to test and figure out programming terms and languange, in a guessing game.</p>
+
+                                        <Link to="/hangman" style={{ textDecoration: 'none' }} className="btn btn-primary  mt-4">Play</Link>
                                             </Card.Body>
                                       </Card>   
                                                

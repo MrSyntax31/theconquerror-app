@@ -46,20 +46,14 @@ export default function TopicList() {
         const [question, setQuestion] = useState();
         const [description, setDesc] = useState();
 
-        //Modal User Info
-        const [smShow, setSmShow] = useState(false);
-
         //Reports
         const [showR, setShowR] = useState(false);
 
-        function showReportModal() {
-
-          setShowR(true);
-          setSmShow(false);
-
-        }
-
         const handleCloseR = () => setShowR(false);
+        const handleShowR = () => setShowR(true);
+
+        //Function for User Information
+        const [showP, setShowP] = useState(false);
 
 
         //declare area to throw list for forum
@@ -389,12 +383,12 @@ uploadTask.on('state_changed',
                 {   
                     setAvatar(docdata);
                  
-                    setSmShow(true);  
+                    setShowP(true);  
                 }
                 else{
                     
                   swal("Something is Wrong","No Data Found","warning");
-                  setSmShow(false);
+                  setShowP(false);
                 }
         
                 
@@ -459,7 +453,7 @@ else{
 //puts the document inside the collection "feedback" in firestore
 await setDoc(userFeedback, data).then(() =>{
 
-
+handleShowR(false)
 //show a success message
 swal("Report Sent", "Thank you for making ConquError a healthy community.", "success");
 
@@ -528,7 +522,7 @@ swal("Something is Wrong",error.code,"warning");
 
               {/* Division for User Modal Info*/}
           
-                              <Modal size="sm" show={smShow}  onHide={() => setSmShow(false)}  aria-labelledby="example-modal-sizes-title-sm">
+                              <Modal size="sm" show={showP}  onHide={() => setShowP(false)}  aria-labelledby="example-modal-sizes-title-sm">
                                 <Modal.Header closeButton>
                                   <Modal.Title id="example-modal-sizes-title-sm">
                                     User Information
@@ -546,24 +540,24 @@ swal("Something is Wrong",error.code,"warning");
                                       <strong>User Level on post</strong>
                                       <h5>{showUserLevel}</h5>
                                     </div>
-                                    <Button className="btn w-100 text-light"  onClick={showReportModal}><GoIcons.GoReport/> Report</Button>
+                                    <Button className="btn w-100 text-light" onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
                                 </Modal.Body>
                               </Modal>
 
                               <Modal show={showR} onHide={handleCloseR}>
-                                <Modal.Header closeButton>
-                                  <Modal.Title>Report User</Modal.Title>
-                                </Modal.Header>
-                                <Modal.Body>
-                                  <Form>
-                                    <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                      <Form.Label>State your problem.</Form.Label>
-                                      <Form.Control as="textarea" value={report || ""} onChange={e => ReportUser(e.target.value)} rows={3} />
-                                      <Button className="btn w-100 mt-3 text-light" data-id={showUserEmail} onClick={sendReport}><GoIcons.GoReport/> Report</Button>
-                                    </Form.Group>
-                                  </Form>
-                                </Modal.Body>
-                              </Modal>
+                          <Modal.Header closeButton>
+                            <Modal.Title>Report User</Modal.Title>
+                          </Modal.Header>
+                          <Modal.Body>
+                            <Form>
+                              <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                <Form.Label>State your problem.</Form.Label>
+                                <Form.Control as="textarea" value={report || ""} onChange={e => ReportUser(e.target.value)} rows={3} />
+                                <Button className="btn w-100 mt-3 text-light" data-id={showUserEmail} onClick={sendReport}><GoIcons.GoReport/> Report</Button>
+                              </Form.Group>
+                            </Form>
+                          </Modal.Body>
+                        </Modal>
 
 
             {/* Division for Discussion Board*/}
@@ -630,8 +624,8 @@ swal("Something is Wrong",error.code,"warning");
                                   </Offcanvas.Body>
                                 </Offcanvas>
   
-                              { endLine && <strong> Seems like everybody is doing great! #ProblemFreeCoding</strong> }
-
+                              { endLine && <h1>End of the line Warrior.</h1>  }
+                            
                               {Discussion} 
                             </div>
                             <ButtonGroup>

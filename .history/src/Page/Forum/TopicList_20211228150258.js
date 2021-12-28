@@ -394,7 +394,7 @@ uploadTask.on('state_changed',
                 else{
                     
                   swal("Something is Wrong","No Data Found","warning");
-                  setSmShow(false);
+                  setShowP(false);
                 }
         
                 
@@ -459,7 +459,7 @@ else{
 //puts the document inside the collection "feedback" in firestore
 await setDoc(userFeedback, data).then(() =>{
 
-
+handleShowR(false)
 //show a success message
 swal("Report Sent", "Thank you for making ConquError a healthy community.", "success");
 
@@ -630,8 +630,8 @@ swal("Something is Wrong",error.code,"warning");
                                   </Offcanvas.Body>
                                 </Offcanvas>
   
-                              { endLine && <strong> Seems like everybody is doing great! #ProblemFreeCoding</strong> }
-
+                              { endLine && <h1>End of the line Warrior.</h1>  }
+                            
                               {Discussion} 
                             </div>
                             <ButtonGroup>

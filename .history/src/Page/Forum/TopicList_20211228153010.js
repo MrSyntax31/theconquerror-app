@@ -630,7 +630,7 @@ swal("Something is Wrong",error.code,"warning");
                                   </Offcanvas.Body>
                                 </Offcanvas>
   
-                              { endLine && <strong> Seems like everybody is doing great! #ProblemFreeCoding</strong> }
+                              { endLine && <strong>Seems like everybody is doing great!<strong/>  }
 
                               {Discussion} 
                             </div>

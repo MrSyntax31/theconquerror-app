@@ -200,9 +200,9 @@ const Lessons = () => {
                         <h1 className="fw-bold text-primary mb-2">Learn to Code and Conquer your error!</h1>
                         <h3 className="text-justify fw-bold">What’s your goal?</h3>
                         
-                        <Container>
+                        <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                    
                         <Row>
-
                           <Col>
                             <Card style={{ width: '18rem', marginTop: '2rem' }} className="container mb-4">
                                   <div style={{textAlign:"center"}}>
@@ -240,7 +240,7 @@ const Lessons = () => {
                       </Container>
                       <Container>
                         <h3>My Course Timeline</h3>
-                        <section id="cd-timeline" className=" rounded">
+                        <section id="cd-timeline" className="cd-container rounded">
                           <div className="cd-timeline-block">
                             <div className="cd-timeline-img cd-picture">
                             </div>

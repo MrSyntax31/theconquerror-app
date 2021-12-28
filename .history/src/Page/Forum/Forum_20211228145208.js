@@ -21,15 +21,8 @@ import swal from 'sweetalert';
         //Reports
         const [showR, setShowR] = useState(false);
 
-        function showReportModal() {
-
-          setShowR(true);
-          setSmShow(false);
-
-        }
-
         const handleCloseR = () => setShowR(false);
-       
+        const handleShowR = () => setShowR(true);
         
         //declare firestore services
         const forumdb = getFirestore();
@@ -430,7 +423,7 @@ uploadTask.on('state_changed',
                                       <strong>User Level on post</strong>
                                       <h5>{showUserLevel}</h5>
                                     </div>
-                                    <Button className="btn w-100 text-light"  onClick={showReportModal}><GoIcons.GoReport/> Report</Button>
+                                    <Button className="btn w-100 text-light"  onClick={handleShowR}><GoIcons.GoReport/> Report</Button>
                                 </Modal.Body>
                               </Modal>
                         </div>
