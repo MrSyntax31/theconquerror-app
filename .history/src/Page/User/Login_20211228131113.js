@@ -197,7 +197,7 @@ export default function Login() {
 
                             <div className="col-xs-1 mt-3" align="center">
                             <ReCAPTCHA
-                            sitekey={process.env.REACT_APP_SITEKEY}
+                            sitekey=process.env.REACT_APP_SITEKEY
                             onChange={onChange}
                             />
                             </div>

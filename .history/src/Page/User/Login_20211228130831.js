@@ -31,7 +31,7 @@ export default function Login() {
     const [recaptchaHandler, setHandler] = useState(false);
 
     function onChange(value) {
-
+      
       if(value !== null)
       {
         setHandler(true)
@@ -197,7 +197,7 @@ export default function Login() {
 
                             <div className="col-xs-1 mt-3" align="center">
                             <ReCAPTCHA
-                            sitekey={process.env.REACT_APP_SITEKEY}
+                            sitekey="6Lf0LR4dAAAAADXK477tFevARCNFk0rY-Z5ouawp"
                             onChange={onChange}
                             />
                             </div>

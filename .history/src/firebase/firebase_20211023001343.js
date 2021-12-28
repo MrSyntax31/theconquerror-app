@@ -6,13 +6,13 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_FirebaseAPI,
-  authDomain: process.env.REACT_APP_FirebaseDomain,
-  databaseURL: process.env.REACT_APP_databaseURL,
-  projectId: process.env.REACT_APP_ProjectID,
-  storageBucket: process.env.REACT_APP_storageBucket,
-  messagingSenderId: process.env.REACT_APP_messagingSenderID,
-  appId: process.env.REACT_APP_APPID
+  apiKey: "AIzaSyB62o9TVBi5XtzC46bn6DvzqtYrZEkRbbA",
+  authDomain: "conquerror-development.firebaseapp.com",
+  databaseURL: "https://conquerror-development-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "conquerror-development",
+  storageBucket: "conquerror-development.appspot.com",
+  messagingSenderId: "38953137703",
+  appId: "1:38953137703:web:0f87f50e6ad52ad6410002"
 };
 
 // Initialize Firebase

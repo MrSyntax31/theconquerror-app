@@ -35,15 +35,7 @@ import swal from 'sweetalert';
 
         function onChange(value) {
     
-         
-      if(value !== null)
-      {
-        setHandler(true)
-      
-      }
-      else{
-        setHandler(false)
-      }
+           setHandler(true);
          
          }
 
