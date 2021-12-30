@@ -401,17 +401,7 @@ const HomeUser = () => {
                      </Col>
                   </Row>
 
-
                   </Container>
-
-                  <div className="mt-4">
-
-                  <h1 id="liveVisitTitle" style={{textAlign: "center"}} className="text-light"><span class="montBlack">Live</span> Visit Count</h1>
-                  <p id="liveVisitDescription" style={{textAlign: "center"}} className="text-light">Total Number of Individuals Visiting the Website.</p>
-                  <center style={{margin: 0}}>
-                     <h2 id="liveVisitCount" className="text-light">0</h2>
-                  </center>
-                  </div>
 
                </section>
 

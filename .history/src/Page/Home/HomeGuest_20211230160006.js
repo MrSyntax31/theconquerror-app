@@ -342,7 +342,7 @@ const HomeUser = () => {
                                                             <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                                   <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                                                               <div style={{textAlign:"center"}}>
-                                                                              <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FCreator%2F142506784_713464262646294_432244117709991327_n.png?alt=media&token=a8893ce5-d0b6-4d28-b0ba-509fe0338a18" />
+                                                                              <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-1.fna.fbcdn.net/v/t1.6435-9/142506784_713464262646294_432244117709991327_n.png?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeGeJIr6YAHBkJVN1REpNuyKfmbCiC-RHNd-ZsKIL5Ec1x0eIwb-6YsugASGlD0Lohs12fTmpjR57jQbyFmsg-Ec&_nc_ohc=K0v9hfTWhnwAX9bksAx&_nc_ht=scontent.fmnl13-1.fna&oh=e43eefff956661b3f23b3860b3a31284&oe=61C89275" />
                                                                               </div>           
                                                                               <Card.Body>
                                                                                  <Card.Title>SDPT Solutions</Card.Title>

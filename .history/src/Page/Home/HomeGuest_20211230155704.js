@@ -342,7 +342,7 @@ const HomeUser = () => {
                                                             <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                                   <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                                                               <div style={{textAlign:"center"}}>
-                                                                              <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FCreator%2F142506784_713464262646294_432244117709991327_n.png?alt=media&token=a8893ce5-d0b6-4d28-b0ba-509fe0338a18" />
+                                                                              <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://sdptsolutionswebsite.web.app/img/sdptlogo.png" />
                                                                               </div>           
                                                                               <Card.Body>
                                                                                  <Card.Title>SDPT Solutions</Card.Title>

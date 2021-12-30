@@ -404,7 +404,7 @@ const HomeUser = () => {
 
                   </Container>
 
-                  <div className="mt-4">
+                  <div className="mt-">
 
                   <h1 id="liveVisitTitle" style={{textAlign: "center"}} className="text-light"><span class="montBlack">Live</span> Visit Count</h1>
                   <p id="liveVisitDescription" style={{textAlign: "center"}} className="text-light">Total Number of Individuals Visiting the Website.</p>

@@ -284,7 +284,7 @@ const showCourse = courses1.map((courses1) => (
                                   <h5 className="fw-bold mb-3">{courseinfo.bpstitle1}</h5>
                                   <h4 className="fw-bold mb-3">{courseinfo.cstitle1}</h4>
                                   <h5 className="fw-bold mb-3">{courseinfo.cstitle2}</h5> 
- 
+                                   
 
                                   <p>{courseinfo.content7}</p>
                                   <p>{courseinfo.bpscontent2}</p>
@@ -317,8 +317,7 @@ const showCourse = courses1.map((courses1) => (
                                   <img className="mx-auto d-block mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.csimage5} alt={courses.Title} />
                                   <h5 className="fw-bold mb-3">{courseinfo.cstitle10}</h5> 
                                   <p>{courseinfo.cscontent11}</p>
-                                  
-                                  <h5 className="fw-bold mb-3">{courseinfo.ncstitle1}</h5>
+
                                   <p>{courseinfo.ncscontent1}</p>
 
                                   <p>{courseinfo.content8}</p>

@@ -404,12 +404,12 @@ const HomeUser = () => {
 
                   </Container>
 
-                  <div className="mt-4">
+                  <div id="liveVisitContainer">
 
                   <h1 id="liveVisitTitle" style={{textAlign: "center"}} className="text-light"><span class="montBlack">Live</span> Visit Count</h1>
-                  <p id="liveVisitDescription" style={{textAlign: "center"}} className="text-light">Total Number of Individuals Visiting the Website.</p>
+                  <p id="liveVisitDescription" style={{textAlign: "center"}} class="montRegular headerSize white">Total Number of Individuals Visiting the Website.</p>
                   <center style={{margin: 0}}>
-                     <h2 id="liveVisitCount" className="text-light">0</h2>
+                     <h2 id="liveVisitCount" class="veryLargeSize white montBlack bigSeparatorTop hiddenCenter">0</h2>
                   </center>
                   </div>
 

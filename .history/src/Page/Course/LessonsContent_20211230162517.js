@@ -284,7 +284,6 @@ const showCourse = courses1.map((courses1) => (
                                   <h5 className="fw-bold mb-3">{courseinfo.bpstitle1}</h5>
                                   <h4 className="fw-bold mb-3">{courseinfo.cstitle1}</h4>
                                   <h5 className="fw-bold mb-3">{courseinfo.cstitle2}</h5> 
- 
 
                                   <p>{courseinfo.content7}</p>
                                   <p>{courseinfo.bpscontent2}</p>
@@ -293,33 +292,7 @@ const showCourse = courses1.map((courses1) => (
                                   <p>{courseinfo.bpscontent5}</p>
                                   <p>{courseinfo.bpscontent6}</p>
 
-                                  <p>{courseinfo.cscontent1}</p>
-                                  <h5 className="fw-bold mb-3">{courseinfo.cstitle3}</h5> 
-                                  <p>{courseinfo.cscontent2}</p>
-                                  <img className="mx-auto d-block mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.csimage1} alt={courses.Title} />
-                                  <h5 className="fw-bold mb-3">{courseinfo.cstitle4}</h5> 
-                                  <p>{courseinfo.cscontent3}</p>
-                                  <img className="mx-auto d-block mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.csimage2} alt={courses.Title} />
-                                  <h5 className="fw-bold mb-3">{courseinfo.cstitle5}</h5> 
-                                  <p>{courseinfo.cscontent4}</p>
-                                  <h5 className="fw-bold mb-3">{courseinfo.cstitle6}</h5> 
-                                  <p>{courseinfo.cscontent5}</p> 
-                                  <p>{courseinfo.cscontent6}</p> 
-                                  <p>{courseinfo.cscontent7}</p> 
-                                  <img className="mx-auto d-block mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.csimage3} alt={courses.Title} />
-                                  <h5 className="fw-bold mb-3">{courseinfo.cstitle7}</h5> 
-                                  <p>{courseinfo.cscontent8}</p>
-                                  <h5 className="fw-bold mb-3">{courseinfo.cstitle8}</h5> 
-                                  <p>{courseinfo.cscontent9}</p>
-                                  <img className="mx-auto d-block mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.csimage4} alt={courses.Title} />
-                                  <h5 className="fw-bold mb-3">{courseinfo.cstitle9}</h5> 
-                                  <p>{courseinfo.cscontent10}</p>
-                                  <img className="mx-auto d-block mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.csimage5} alt={courses.Title} />
-                                  <h5 className="fw-bold mb-3">{courseinfo.cstitle10}</h5> 
-                                  <p>{courseinfo.cscontent11}</p>
-                                  
-                                  <h5 className="fw-bold mb-3">{courseinfo.ncstitle1}</h5>
-                                  <p>{courseinfo.ncscontent1}</p>
+                                  <p>{courseinfo.bpscontent6}</p>
 
                                   <p>{courseinfo.content8}</p>
                                   <p>{courseinfo.content9}</p>
