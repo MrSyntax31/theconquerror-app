@@ -351,32 +351,9 @@ const showCourse = courses1.map((courses1) => (
                                   <code>{courseinfo.ncscode15}</code><br/>
                                   <code>{courseinfo.ncscode16}</code><br/>
                                   <code>{courseinfo.ncscode17}</code><br/>
-                                  <code>{courseinfo.ncscode18}</code><br/>
-                                  <code>{courseinfo.ncscode19}</code><br/>
-                                  <code>{courseinfo.ncscode20}</code><br/>
-                                  <code>{courseinfo.ncscode21}</code><br/>
-                                  <code>{courseinfo.ncscode22}</code><br/>
-                                  <code>{courseinfo.ncscode23}</code><br/>
-                                  <code>{courseinfo.ncscode24}</code><br/>
-                                  <code>{courseinfo.ncscode25}</code><br/>
-                                  <code>{courseinfo.ncscode26}</code><br/>
-                                  <code>{courseinfo.ncscode27}</code><br/>
-                                  <h5 className="fw-bold mt-3 mb-3">{courseinfo.ncstitle3}</h5>
-                                  <p>{courseinfo.ncscontent16}</p>
-                                  <p>{courseinfo.ncscontent17}</p>
-                                  <p>{courseinfo.ncscontent18}</p>
-                                  <p>{courseinfo.ncscontent19}</p>
-                                  <p>{courseinfo.ncscontent20}</p>
-                                  <p>{courseinfo.ncscontent21}</p>
-                                  <p>{courseinfo.ncscontent22}</p>
-                                  <p>{courseinfo.ncscontent23}</p>
-                                  <p>{courseinfo.ncscontent24}</p>
-                                  <p>{courseinfo.ncscontent25}</p>
-                                  <p>{courseinfo.ncscontent26}</p>
-                                  <p>{courseinfo.ncscontent27}</p>
-                                  <p>{courseinfo.ncscontent28}</p>
-                                  <p>{courseinfo.ncscontent29}</p>
-                                  
+                                  <code>{courseinfo.ncscode18}</code><br/>  
+
+
 
 
                                   <p>{courseinfo.content8}</p>

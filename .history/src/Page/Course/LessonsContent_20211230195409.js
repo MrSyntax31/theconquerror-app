@@ -373,9 +373,6 @@ const showCourse = courses1.map((courses1) => (
                                   <p>{courseinfo.ncscontent24}</p>
                                   <p>{courseinfo.ncscontent25}</p>
                                   <p>{courseinfo.ncscontent26}</p>
-                                  <p>{courseinfo.ncscontent27}</p>
-                                  <p>{courseinfo.ncscontent28}</p>
-                                  <p>{courseinfo.ncscontent29}</p>
                                   
 
 

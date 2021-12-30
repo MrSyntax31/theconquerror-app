@@ -330,54 +330,7 @@ const showCourse = courses1.map((courses1) => (
                                   <p>{courseinfo.ncscontent9}</p>
                                   <p>{courseinfo.ncscontent10}</p>
                                   <h5 className="fw-bold mb-3">{courseinfo.ncstitle2}</h5>
-                                  <code>{courseinfo.ncscode1}</code>{courseinfo.ncscontent11}<br/>
-                                  <code>{courseinfo.ncscode2}</code><br/>
-                                  <code>{courseinfo.ncscode3}</code><br/>
-                                  <code>{courseinfo.ncscode4}</code><br/>
-                                  <code>{courseinfo.ncscode5}</code><br/>
-                                  <code>{courseinfo.ncscode6}</code>{courseinfo.ncscontent12}<br/>
-                                  <code>{courseinfo.ncscode7}</code><br/>
-                                  <p>{courseinfo.ncscontent13}</p>
-                                  <h5 className="fw-bold mb-3">{courseinfo.ncstitle2}</h5>
-                                  <p>{courseinfo.ncscontent14}</p>
-                                  <p>{courseinfo.ncscontent15}</p>
-                                  <code>{courseinfo.ncscode8}</code><br/>
-                                  <code>{courseinfo.ncscode9}</code><br/>
-                                  <code>{courseinfo.ncscode10}</code><br/>
-                                  <code>{courseinfo.ncscode11}</code><br/>
-                                  <code>{courseinfo.ncscode12}</code><br/>
-                                  <code>{courseinfo.ncscode13}</code><br/>
-                                  <code>{courseinfo.ncscode14}</code><br/>
-                                  <code>{courseinfo.ncscode15}</code><br/>
-                                  <code>{courseinfo.ncscode16}</code><br/>
-                                  <code>{courseinfo.ncscode17}</code><br/>
-                                  <code>{courseinfo.ncscode18}</code><br/>
-                                  <code>{courseinfo.ncscode19}</code><br/>
-                                  <code>{courseinfo.ncscode20}</code><br/>
-                                  <code>{courseinfo.ncscode21}</code><br/>
-                                  <code>{courseinfo.ncscode22}</code><br/>
-                                  <code>{courseinfo.ncscode23}</code><br/>
-                                  <code>{courseinfo.ncscode24}</code><br/>
-                                  <code>{courseinfo.ncscode25}</code><br/>
-                                  <code>{courseinfo.ncscode26}</code><br/>
-                                  <code>{courseinfo.ncscode27}</code><br/>
-                                  <h5 className="fw-bold mt-3 mb-3">{courseinfo.ncstitle3}</h5>
-                                  <p>{courseinfo.ncscontent16}</p>
-                                  <p>{courseinfo.ncscontent17}</p>
-                                  <p>{courseinfo.ncscontent18}</p>
-                                  <p>{courseinfo.ncscontent19}</p>
-                                  <p>{courseinfo.ncscontent20}</p>
-                                  <p>{courseinfo.ncscontent21}</p>
-                                  <p>{courseinfo.ncscontent22}</p>
-                                  <p>{courseinfo.ncscontent23}</p>
-                                  <p>{courseinfo.ncscontent24}</p>
-                                  <p>{courseinfo.ncscontent25}</p>
-                                  <p>{courseinfo.ncscontent26}</p>
-                                  <p>{courseinfo.ncscontent27}</p>
-                                  <p>{courseinfo.ncscontent28}</p>
-                                  <p>{courseinfo.ncscontent29}</p>
-                                  
-
+                                  <code>{courseinfo.ncscode}</code>
 
                                   <p>{courseinfo.content8}</p>
                                   <p>{courseinfo.content9}</p>
