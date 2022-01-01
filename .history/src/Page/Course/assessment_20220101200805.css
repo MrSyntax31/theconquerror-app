@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+
+.containers {
+    background-color: #555;
+    color: #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    max-width: 700px
+}
+
+.containers>p {
+    font-size: 32px
+}
+
+.question {
+    width: 100%
+}
+
+
+@media(max-width:576px) {
+    .question {
+        width: 100%;
+        word-spacing: 2px
+    }
+}
+  
+  .assessment {
+    display: grid;
+    place-items: center;
+    background:
+      linear-gradient(to bottom right, #3C4BBD 15%, transparent),
+      radial-gradient(circle at 100% 0%, rgba(255,255,255,.2) 10%, transparent 20%) center center / 15px 15px,
+      linear-gradient(to bottom right, #3C4BBD, #57ADD8);
+  }
