@@ -492,21 +492,8 @@ const showCourse = courses1.map((courses1) => (
                                   <p>{courseinfo.ncscontent35}</p>
                                   <h5 className="fw-bold mt-3 mb-3">{courseinfo.ncstitle7}</h5>
                                   <p>{courseinfo.ncscontent36}</p>
-                                  <code>{courseinfo.ncscode34}</code><br/>
-                                  <code>{courseinfo.ncscode35}</code><br/>
-                                  <code>{courseinfo.ncscode36}</code><br/>
-                                  <code>{courseinfo.ncscode37}</code><br/>
-                                  <code>{courseinfo.ncscode38}</code><br/>
-                                  <code>{courseinfo.ncscode39}</code><br/>
-                                  <code>{courseinfo.ncscode40}</code><br/>
                                   <h5 className="fw-bold mt-3 mb-3">{courseinfo.ncstitle8}</h5>
-                                  <p>{courseinfo.ncscontent37}</p>
-                                  <code>{courseinfo.ncscode28}</code><br/>
-                                  <code>{courseinfo.ncscode29}</code><br/>
-                                  <code>{courseinfo.ncscode30}</code><br/>
-                                  <code>{courseinfo.ncscode31}</code><br/>
-                                  <code>{courseinfo.ncscode32}</code><br/>
-                                  <code>{courseinfo.ncscode33}</code><br/>
+                                  <p>{courseinfo.ncscontent36}</p>
 
 
                                   
