@@ -209,7 +209,7 @@ const showCourse = courses1.map((courses1) => (
                               <Container >
                               <Row  xs={2} md={4}>
                                 <Col xs={6} md={4}>
-                                  <img className="mx-auto " style={{width: '75%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
+                                  <img className="mx-auto " style={{width: '50%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
                                 </Col>
                                 <Col xs={12} md={8}>
                                   <h2 className="text-primary fw-bold " style={{display: "table-cell",

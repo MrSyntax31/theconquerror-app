@@ -209,7 +209,7 @@ const showCourse = courses1.map((courses1) => (
                               <Container >
                               <Row  xs={2} md={4}>
                                 <Col xs={6} md={4}>
-                                  <img className="mx-auto " style={{width: '75%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
+                                  <img className="mx-auto " style={{width: '50%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
                                 </Col>
                                 <Col xs={12} md={8}>
                                   <h2 className="text-primary fw-bold " style={{display: "table-cell",
@@ -265,20 +265,20 @@ const showCourse = courses1.map((courses1) => (
                                 <p className="text-center font-italic mb-3">{courseinfo.Imgdesc2}</p>
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle4}</h4>
                                 <p className="text-justify mb-3">{courseinfo.Content6}</p>
-                                <code className="mt-2 mb-2">{courseinfo.Code2}</code><br/>
                                 <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img3} alt={courses.Title} />
                                 <p className="text-center font-italic mb-3">{courseinfo.Imgdesc3}</p>
                                 <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img4} alt={courses.Title} />
                                 <p className="text-center font-italic mb-3">{courseinfo.Imgdesc4}</p>
+                                <code className="mt-2 mb-2">{courseinfo.Code2}</code><br/>
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle5}</h4>
                                 <p className="text-justify mb-3">{courseinfo.Content7}</p>
                                 <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img5} alt={courses.Title} />
                                 <p className="text-center font-italic mb-3">{courseinfo.Imgdesc5}</p>
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle6}</h4>
                                 <p className="text-justify mb-3">{courseinfo.Content8}</p>
-                                <code className="mt-2 mb-2">{courseinfo.Code3}</code><br/>
                                 <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img6} alt={courses.Title} />
                                 <p className="text-center font-italic mb-3">{courseinfo.Imgdesc6}</p>
+                                <code className="mt-2 mb-2">{courseinfo.Code3}</code><br/>
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle7}</h4>
                                 <p className="text-justify mb-3">{courseinfo.Content9}</p>
                                 <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img7} alt={courses.Title} />
@@ -346,7 +346,7 @@ const showCourse = courses1.map((courses1) => (
                                 <p className="text-justify mb-3">{courseinfo.Content25}</p>
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle25}</h4>
                                 <p className="text-justify mb-3">{courseinfo.Content26}</p>
-                                <a href={courseinfo.weblink} className="mb-5">{courseinfo.linktitle}</a>
+                                <a href={courseinfo.weblink} className="btn btn-primary btn-lg btn-block mb-5">see info here!</a>
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle26}</h4>
                                 <p className="text-justify mb-3">{courseinfo.Content27}</p>
                                 <p className="text-justify mb-3">{courseinfo.Content28}</p>
@@ -363,26 +363,8 @@ const showCourse = courses1.map((courses1) => (
                                 <p className="text-center font-italic mb-3">{courseinfo.Imgdesc24}</p>
                                 <p className="text-justify mb-3">{courseinfo.Content32}</p>
                                 <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img25} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc25}</p>
 
-                                <h2 className="fw-bold mb-3 mt-2 text-primary">{courseinfo.Title3}</h2>  
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle27}</h4>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img26} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc26}</p>
-                                <p className="text-justify mb-3">{courseinfo.Content33}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle28}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content34}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img27} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc27}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle29}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content35}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle30}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content36}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle31}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content37}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle32}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content38}</p>
-                                                      
+                                                                
                                 
                               </Container>
                             </section>

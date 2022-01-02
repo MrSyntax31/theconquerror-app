@@ -209,7 +209,7 @@ const showCourse = courses1.map((courses1) => (
                               <Container >
                               <Row  xs={2} md={4}>
                                 <Col xs={6} md={4}>
-                                  <img className="mx-auto " style={{width: '75%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
+                                  <img className="mx-auto " style={{width: '50%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
                                 </Col>
                                 <Col xs={12} md={8}>
                                   <h2 className="text-primary fw-bold " style={{display: "table-cell",
@@ -276,9 +276,9 @@ const showCourse = courses1.map((courses1) => (
                                 <p className="text-center font-italic mb-3">{courseinfo.Imgdesc5}</p>
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle6}</h4>
                                 <p className="text-justify mb-3">{courseinfo.Content8}</p>
-                                <code className="mt-2 mb-2">{courseinfo.Code3}</code><br/>
                                 <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img6} alt={courses.Title} />
                                 <p className="text-center font-italic mb-3">{courseinfo.Imgdesc6}</p>
+                                <code className="mt-2 mb-2">{courseinfo.Code3}</code><br/>
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle7}</h4>
                                 <p className="text-justify mb-3">{courseinfo.Content9}</p>
                                 <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img7} alt={courses.Title} />
