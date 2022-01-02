@@ -342,11 +342,7 @@ const showCourse = courses1.map((courses1) => (
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle22}</h4>
                                 <p className="text-justify mb-3">{courseinfo.Content24}</p>
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle23}</h4>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle24}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content25}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle25}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content26}</p>
-                                <a href={courseinfo.weblink} className="btn btn-primary btn-lg btn-block mb-5">see info here!</a>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle22}</h4>
                                 
 
 

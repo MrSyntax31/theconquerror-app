@@ -251,102 +251,24 @@ const showCourse = courses1.map((courses1) => (
                                 {/* Contents */}
                                 <h2 className="fw-bold mb-3 text-primary">{courseinfo.Title1}</h2>    
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle1}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content1}</p>
-                                <code className="mt-2 mb-2">{courseinfo.Code1}</code><br/>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img1} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc1}</p>
-                                <p className="text-justify mb-3">{courseinfo.Content2}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle2}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content3}</p>
-                                <p className="text-justify mb-3">{courseinfo.Content4}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle3}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content5}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img2} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc2}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle4}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content6}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img3} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc3}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img4} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc4}</p>
-                                <code className="mt-2 mb-2">{courseinfo.Code2}</code><br/>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle5}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content7}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img5} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc5}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle6}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content8}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img6} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc6}</p>
-                                <code className="mt-2 mb-2">{courseinfo.Code3}</code><br/>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle7}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content9}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img7} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc7}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle8}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content10}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img8} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc8}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle9}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content11}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img9} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc9}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle10}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content12}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img10} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc10}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle11}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content13}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img11} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc11}</p>
+                                <p className="fw-bold m">{courseinfo.Content1}</p>
 
-                                <h2 className="fw-bold mb-3 mt-2 text-primary">{courseinfo.Title2}</h2>  
-                                <p className="text-justify mb-3">{courseinfo.Content14}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img12} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc12}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle12}</h4>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle13}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content15}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img13} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc13}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle14}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content16}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img14} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc14}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle15}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content17}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img15} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc15}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle16}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content18}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img16} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc16}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle17}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content19}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img17} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc17}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle18}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content20}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img18} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc18}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle19}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content21}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img19} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc19}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle20}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content22}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img20} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc20}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle21}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content23}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle22}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content24}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle23}</h4>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle24}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content25}</p>
-                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle25}</h4>
-                                <p className="text-justify mb-3">{courseinfo.Content26}</p>
-                                <a href={courseinfo.weblink} className="btn btn-primary btn-lg btn-block mb-5">see info here!</a>
+                                <p>{courseinfo.content2}</p>
+                                <p>{courseinfo.content3}</p>
+                                <h6 className="fw-bold mb-3">{courseinfo.title2}</h6>             
+                                <p>{courseinfo.content4}</p>
+                                <h6 className="fw-bold mb-3">{courseinfo.title3}</h6> 
+                                <p>{courseinfo.content5}</p>
+                                <h6 className="fw-bold mb-3">{courseinfo.title4}</h6> 
+                                <p>{courseinfo.content6}</p>
+                                <div className="mt-3 mb-3">
+                                  <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.courseimg1} alt={courses.Title} />
+                                  <p className="text-center font-italic">{courseinfo.caption1}</p>
+                                  <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.courseimg2} alt={courses.Title} />
+                                  <p className="text-center font-italic">{courseinfo.caption2}</p>
+                                  <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.courseimg3} alt={courses.Title} />
+                                  <p className="text-center font-italic">{courseinfo.caption3}</p>
+                                </div>
                                 
 
 
