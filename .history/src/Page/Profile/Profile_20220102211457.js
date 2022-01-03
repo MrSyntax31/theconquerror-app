@@ -903,16 +903,16 @@ function updateProfile(){
           <div className="footer__col4">
               <ul className="list-unstyled">
               <h4  className="d-flex justify-content-center text-white">Built With</h4>
-                <li className="mb-2 text-light"><FaIcons.FaReact/> ReactJS</li>
-                <li className="mb-2 text-light"><FaIcons.FaGripfire/> Firebase</li>
-                <li className="mb-2 text-light"><FaIcons.FaBootstrap/> Bootstrap 5</li>
+                <li className="mb-2 "><FaIcons.FaReact/> ReactJS</li>
+                <li className="mb-2"><FaIcons.FaGripfire/> Firebase</li>
+                <li className="mb-2"><FaIcons.FaBootstrap/> Bootstrap 5</li>
               </ul>
           </div>
         </div>
         <div className="copyright">
           <div className="container">
             
-            <p className="col-sm d-flex justify-content-center text-center text-light">
+            <p className="col-sm d-flex justify-content-center text-center">
               &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.19.121521
             </p>
           
