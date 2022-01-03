@@ -70,6 +70,7 @@ const Lessons = () => {
     const listkey = e.target.getAttribute("data-id");
     const difficulty = e.target.getAttribute("data-difficulty")
 
+
     
       if (currentUser === null)
       {
@@ -81,14 +82,15 @@ const Lessons = () => {
         }
       }
       else
-      { 
-        if(userlevel < difficulty)
+      {   
+        if( userlevel >= difficulty)
         {
-         swal("Oops","You Cannot Enter that Dungeon yet!","error")
+          sessionStorage.setItem('getLesson',listkey)
+          history.push("/lessonscontent")
         }
         else {
-          sessionStorage.setItem('getLesson',listkey)
-        history.push("/lessonscontent")
+          swal("Oops","You Cannot Enter that Dungeon yet!","error")
+         
         }
        
       }

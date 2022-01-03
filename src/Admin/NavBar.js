@@ -2,12 +2,46 @@ import React, { useState} from 'react'
 import { Container, Navbar, Button, Offcanvas } from 'react-bootstrap'
 import * as MdIcons from 'react-icons/md';
 
+//Routing
+import {  useHistory} from "react-router-dom"
+
+//Authentication
+import { getAuth, signOut } from "firebase/auth";
+
+//Alert
+import swal from 'sweetalert';
+
 function NavBar () {
+           const auth = getAuth(); 
+          const history = useHistory();
 
-        const [show, setShow] = useState(false);
+      
+          const [show, setShow] = useState(false);
 
-        const handleClose = () => setShow(false);
-        const handleShow = () => setShow(true);
+          const handleClose = () => setShow(false);
+          const handleShow = () => setShow(true);
+
+
+          const back = (event) => {
+
+          history.push("/profile")
+           }
+
+           const logout = (event) => {
+
+            signOut(auth).then(() => {
+
+              swal("Logout", "You have been logged out", "success");
+              sessionStorage.removeItem('userLevel')
+              sessionStorage.removeItem('sessionKey')
+            
+              sessionStorage.removeItem('UpdateKey')
+              sessionStorage.removeItem('changePassKey')
+        
+              history.push("/login")
+
+            }).catch((error) => { swal('Error',error,'error')})
+           }
 
     return (
         <>
@@ -28,8 +62,9 @@ function NavBar () {
                   className="d-inline-block align-top"
                 />{' '}
                 ConquError
-              </Navbar.Brand>
                 
+              </Navbar.Brand>
+              <Button onClick={back}>Back</Button>
             </Container>  
           </Navbar>
 
@@ -38,10 +73,9 @@ function NavBar () {
           <Offcanvas.Title>Sidebar</Offcanvas.Title>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc.
+          "Edi Wow"
         </Offcanvas.Body>
-        <Button className="text-light"><MdIcons.MdOutlineLogout/> Logout</Button>
+        <Button onClick={logout} className="text-light"><MdIcons.MdOutlineLogout/> Logout</Button>
       </Offcanvas>
 </>
     )

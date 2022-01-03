@@ -41,7 +41,7 @@ import {
 
 //Navbar
 import Navbar from '../../Components/Navbar/Navbar'
-import {  useHistory} from "react-router-dom"
+
 
 
 const FooterStyle = styled.div`
@@ -101,7 +101,6 @@ const Profile = () => {
   const firestoredb = getFirestore();
   const auth = getAuth();
   const realtimedb = getDatabase();
-  const history = useHistory();
 
   //For Graphs (Data and Datus)
   const data = [
@@ -341,21 +340,18 @@ charactersLength));
       const timer = async () => {
 
         await delay(1000);
-     
+        
         const userlvl = sessionStorage.getItem("userLevel");
         if(userlvl){
 
           onLoad();
-         
         }
        else{
           //do nothing
        }
 
       };
-      
-     
-      const [AdminCheck,AdminPermission] = useState(false);
+
 //Loads the function inside the useEffect when the component renders
   useEffect (() => {
     
@@ -368,22 +364,19 @@ charactersLength));
     onValue(profileData, (snapshot) => {
       setData(snapshot.val());
       sessionStorage.setItem("userLevel",(JSON.stringify(snapshot.val().level)))
+     
       
   })
 }
         
         showProfile();
-    
-      
 
       timer();
     
-    
+     
        
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
-  
-
-
+ 
   function onLoad() {
 
     const level = sessionStorage.getItem("userLevel")
@@ -483,22 +476,7 @@ function updateProfile(){
 
   };
 
-  useEffect(() => {
 
-    if(profile.Permission === "Admin"){
-      AdminPermission(true)
-
-    }
-    else{
-      AdminPermission(false)
-  
-    }
-
-  }, [profile])
-  
-  function AdminPanel()  {
-    history.push("/admin")
-  }
 
     return (
         <>
@@ -577,8 +555,8 @@ function updateProfile(){
                           <div>
                           {profile.Institution || ''}
                           </div>
-                          <p onClick={handleShowOff} className="btn btn-sm btn-primary mt-4"><IoIcons.IoSettingsSharp/> Settings</p> <br></br>
-                         { AdminCheck && <p onClick={AdminPanel} className="btn btn-sm btn-primary mt-4"><IoIcons.IoBarChart/> Admin</p> }
+                          <p onClick={handleShowOff} className="btn btn-sm btn-primary mt-4"><IoIcons.IoSettingsSharp/> Settings</p>
+                          
                         </div>
                       </div>
                     </div>
@@ -934,7 +912,7 @@ function updateProfile(){
         <div className="copyright">
           <div className="container">
             
-            <p className="col-sm d-flex justify-content-center text-center text-light">
+            <p className="col-sm d-flex justify-content-center text-center">
               &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.19.121521
             </p>
           

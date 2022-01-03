@@ -159,7 +159,8 @@ import swal from 'sweetalert';
                           Address:address,
                             Institution: insti,
                             email: email,
-                            level: 1
+                            level: 1,
+                            Permission: "User"
                         });
                       
                         sendEmailVerification(auth.currentUser)
@@ -179,7 +180,7 @@ import swal from 'sweetalert';
                         setAddress("")
                           setHandler(false);
                           
-                          swal("Email Verification has been sent","Please check your email you will be redirected to the login page shortly","success")
+                          swal("Email Verification has been sent","Please check your email, you will be redirected to the login page shortly","success")
                           
                           timer();
                         
@@ -205,6 +206,7 @@ import swal from 'sweetalert';
          
         } 
         else {
+          
           setError("Please verify using Recaptcha")
   
         }

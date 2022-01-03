@@ -72,9 +72,9 @@ const App = () => {
 
      <Route path="/error" component={RequestDenied}/>
 
-     <Route path="/admin" component={Admin}/>
+     <PrivateRoute path="/admin" component={Admin}/>
 
-     <Route path="/assessment" component={Assessment}/>
+     <PrivateRoute path="/assessment" component={Assessment}/>
   </Switch>
  
 </AuthProvider>

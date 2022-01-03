@@ -12,7 +12,24 @@ import { Row, Container, Tabs, Tab, Card, Table, Form } from 'react-bootstrap';
 import './style.css'
 
 
+//Firebase
+import {} from 'firebase/auth'
+import { getAuth } from '@firebase/auth';
+import { getDatabase, ref, onValue } from "firebase/database";
+
+
+
 const Admin = () => {
+
+    const auth = getAuth();
+    const realtimedb = getDatabase();
+  
+
+        
+   
+
+
+
     return (
         <>
             {/* Tab Bar Title */}
