@@ -124,7 +124,7 @@ export default function Login() {
             .catch((error) => {
               //if user fails to log-in, an error message is set
               const errorMessage = error.code;
-              setError(errorMessage+"\n"+"If problem persist please contact us! ")
+              setError(errorMessage+/n+"If problem persist please contact us! ")
             
               
             });
