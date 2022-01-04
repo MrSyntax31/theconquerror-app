@@ -687,15 +687,15 @@ const HomeUser = () => {
                   <ul className="list-unstyled">
                   <h4  className="d-flex justify-content-center text-white">Built With</h4>
                   <li className="mb-2 text-white"><FaIcons.FaReact/> ReactJS</li>
-                  <li className="mb-2 text-white"><FaIcons.FaGripfire/> Firebase</li>
-                  <li className="mb-2 text-white"><FaIcons.FaBootstrap/> Bootstrap 5</li>
+                  <li className="mb-2 "><FaIcons.FaGripfire/> Firebase</li>
+                  <li className="mb-2"><FaIcons.FaBootstrap/> Bootstrap 5</li>
                   </ul>
             </div>
             </div>
             <div className="copyright">
             <div className="container">
                
-               <p className="col-sm d-flex justify-content-center text-center text-white">
+               <p className="col-sm d-flex justify-content-center text-center">
                   &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.19.121521
                </p>
                

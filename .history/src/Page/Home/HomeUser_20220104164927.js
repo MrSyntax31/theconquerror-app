@@ -680,25 +680,25 @@ const HomeUser = () => {
                               <li className="d-flex justify-content-center">
                                  <img className="inline-block align-center h-20 image-center" src="../assets/TJDev.png" alt="logo"/></li>
                               </div>
-                              <p className="d-flex justify-content-center text-white">Technojet.Dev</p>  
+                              <p className="d-flex justify-content-center">Technojet.Dev</p>  
                               </ul>
                         </div>
 
                         <div className="footer__col3 ">
                               <ul className="list-unstyled ">
                               <h4  className="d-flex justify-content-center text-white">Contacts</h4>
-                              <li className="mb-2 text-white justify-content-center align-items-center"><FaIcons.FaHome/> Lopez, Quezon </li>
-                              <li className="mb-2 text-white justify-content-center align-items-center"><FaIcons.FaGoogle/> technojet.devofficial</li>
-                              <li className="mb-2 text-white justify-content-center align-items-center"><FaIcons.FaPhoneAlt/> +63 956 528 0371</li>
+                              <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaHome/> Lopez, Quezon </li>
+                              <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaGoogle/> technojet.devofficial</li>
+                              <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaPhoneAlt/> +63 956 528 0371</li>
                               </ul>
                         </div>
 
                         <div className="footer__col4">
                               <ul className="list-unstyled">
                               <h4  className="d-flex justify-content-center text-white">Built With</h4>
-                              <li className="mb-2 text-white"><FaIcons.FaReact/> ReactJS</li>
-                              <li className="mb-2 text-white"><FaIcons.FaGripfire/> Firebase</li>
-                              <li className="mb-2 text-white"><FaIcons.FaBootstrap/> Bootstrap 5</li>
+                              <li className="mb-2"><FaIcons.FaReact/> ReactJS</li>
+                              <li className="mb-2"><FaIcons.FaGripfire/> Firebase</li>
+                              <li className="mb-2"><FaIcons.FaBootstrap/> Bootstrap 5</li>
                               </ul>
                         </div>
                      </div>
@@ -706,7 +706,7 @@ const HomeUser = () => {
                      <div className="copyright">
                      <div className="container">
                         
-                        <p className="col-sm d-flex justify-content-center text-center text-white">
+                        <p className="col-sm d-flex justify-content-center text-center">
                            &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.19.121521
                         </p>
                         

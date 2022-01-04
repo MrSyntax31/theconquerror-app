@@ -695,7 +695,7 @@ const HomeUser = () => {
             <div className="copyright">
             <div className="container">
                
-               <p className="col-sm d-flex justify-content-center text-center text-white">
+               <p className="col-sm d-flex justify-content-center text-center">
                   &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.19.121521
                </p>
                

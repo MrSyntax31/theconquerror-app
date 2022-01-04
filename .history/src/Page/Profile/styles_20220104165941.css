@@ -596,6 +596,16 @@
     position: relative;
   }
   
+  .main-content .navbar-top {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    background-color: transparent;
+  }
   
   @media (min-width: 768px) {
     .main-content .container-fluid {

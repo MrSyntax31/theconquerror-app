@@ -688,8 +688,8 @@ const HomeUser = () => {
                               <ul className="list-unstyled ">
                               <h4  className="d-flex justify-content-center text-white">Contacts</h4>
                               <li className="mb-2 text-white justify-content-center align-items-center"><FaIcons.FaHome/> Lopez, Quezon </li>
-                              <li className="mb-2 text-white justify-content-center align-items-center"><FaIcons.FaGoogle/> technojet.devofficial</li>
-                              <li className="mb-2 text-white justify-content-center align-items-center"><FaIcons.FaPhoneAlt/> +63 956 528 0371</li>
+                              <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaGoogle/> technojet.devofficial</li>
+                              <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaPhoneAlt/> +63 956 528 0371</li>
                               </ul>
                         </div>
 
@@ -706,7 +706,7 @@ const HomeUser = () => {
                      <div className="copyright">
                      <div className="container">
                         
-                        <p className="col-sm d-flex justify-content-center text-center text-white">
+                        <p className="col-sm d-flex justify-content-center text-center">
                            &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.19.121521
                         </p>
                         
