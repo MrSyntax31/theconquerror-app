@@ -268,8 +268,9 @@ uploadTask.on('state_changed',
           tags: tags,
           sampcodeimg: img,
           userlvl: userlevel,
-          case_status: "unsolved"
-        
+          case_status: "unsolved",
+          bar: word1 ,
+          foo: word2
           });
         
             setImg("")

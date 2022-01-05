@@ -41,14 +41,13 @@ useEffect (() => {
       onValue(profileData, (snapshot) => {
         setData(snapshot.val().Permission);
         
-       
         
     })
   }
           
           showProfile();
       
-            size();
+       
       
       
          
@@ -57,36 +56,18 @@ useEffect (() => {
    
 useEffect (() => {
 
-    if(profile){
-        if (profile === "Admin")
-        {
-            swal("Welcome","You are now in the Admin Panel","success")
-        }
-        else
-        {
-            history.push('/login')
-            swal("Oops","You're not supposed to be there","error")
-        }
+    if(profile)
+    if (profile === "Admin")
+    {
+        swal("Welcome","You are now in the Admin Panel","success")
     }
-    else{
-
+    else
+    {
+        history.push('/login')
+        swal("Oops","You're not supposed to be there","error")
     }
-
 },[profile]); // eslint-disable-line react-hooks/exhaustive-deps
 
-    const [user, setSize] = useState();
-function size(){
-
-
-    
-    //creating reference for realtimedb and fetching data from table users using the userID as reference then setting the data inside the Profile useState above
-    const profileData = ref(realtimedb, '/users');
-    onValue(profileData, (snapshot) => {
-        setSize(snapshot.size);
-      
-
-})
-}
 
     return (
         <>
@@ -171,7 +152,7 @@ function size(){
                                             <img className="card-img-top" src="../../../assets/Add User-rafiki.png" alt=""/>
                                             <h3 className="card-title text-center text-primary fw-bold">Users Count</h3>
                                                 <div className="card-body">
-                                                    <h4 className="card-title text-center text-secondary fw-bold">{user}</h4>
+                                                    <h4 className="card-title text-center text-secondary fw-bold">User</h4>
                                                 </div>
                                             </div>
                                         </div>

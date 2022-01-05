@@ -112,8 +112,8 @@ export default function TopicList() {
         const [search, lookFor] = useState();
 
         async function searchQ(){
-
-         const searchQ = query(collection(forumdb, "topics"),where('desc', '<=', search + '\uf8ff'),orderBy("desc"));
+       
+         const searchQ = query(collection(forumdb, "topics"),where('bar', '>=',search ),where(, '<=', 'foo'search));
 
          if(search === "")
          {
@@ -361,6 +361,12 @@ uploadTask.on('state_changed',
       
                   if (tagCheck === true) {
   
+                    const descBar = description;
+                    let word1 = descBar.split(" ")[0]
+  
+                    const descFoo = description;
+                    let word2 = descFoo.split(" ").splice(-1)
+  
                     //if user is logged-in
                   const userlevel = sessionStorage.getItem("userLevel")
                  //convert date which is timestamp to String
@@ -378,7 +384,9 @@ uploadTask.on('state_changed',
             tags: tags,
             sampcodeimg: img,
             userlvl: userlevel,
-            case_status: "unsolved"
+            case_status: "unsolved",
+            bar: word1 ,
+            foo: word2
             });
           
               setImg("")
@@ -514,7 +522,7 @@ swal("Something is Wrong",error.code,"warning");
     <Popover id="popover-basic">
       <Popover.Header as="h3">Heads Up!</Popover.Header>
       <Popover.Body>
-        This feature is still <strong>under development</strong>. It may not work as intended.
+        This feature is still<strong>under development</strong>. It may not work as intended.
       </Popover.Body>
     </Popover>
   );

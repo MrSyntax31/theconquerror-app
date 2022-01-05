@@ -514,7 +514,7 @@ swal("Something is Wrong",error.code,"warning");
     <Popover id="popover-basic">
       <Popover.Header as="h3">Heads Up!</Popover.Header>
       <Popover.Body>
-        This feature is still <strong>under development</strong>. It may not work as intended.
+        This feature is still<strong>under development</strong>. It may not work as intended.
       </Popover.Body>
     </Popover>
   );

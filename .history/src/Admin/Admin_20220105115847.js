@@ -171,7 +171,7 @@ function size(){
                                             <img className="card-img-top" src="../../../assets/Add User-rafiki.png" alt=""/>
                                             <h3 className="card-title text-center text-primary fw-bold">Users Count</h3>
                                                 <div className="card-body">
-                                                    <h4 className="card-title text-center text-secondary fw-bold">{user}</h4>
+                                                    <h4 className="card-title text-center text-secondary fw-bold">User</h4>
                                                 </div>
                                             </div>
                                         </div>

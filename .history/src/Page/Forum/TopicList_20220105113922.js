@@ -112,8 +112,8 @@ export default function TopicList() {
         const [search, lookFor] = useState();
 
         async function searchQ(){
-
-         const searchQ = query(collection(forumdb, "topics"),where('desc', '<=', search + '\uf8ff'),orderBy("desc"));
+       
+         const searchQ = query(collection(forumdb, "topics"),where(search, '>=', 'bar'),where(search, '<=', 'foo'));
 
          if(search === "")
          {
@@ -361,25 +361,33 @@ uploadTask.on('state_changed',
       
                   if (tagCheck === true) {
   
-                    //if user is logged-in
-                  const userlevel = sessionStorage.getItem("userLevel")
-                 //convert date which is timestamp to String
-          var timestamp = Date.now();
-          var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
-          
-         
-                        // Add a new document with a generated id.
-            const docRef = await addDoc(collection(forumdb, "topics"), {
-              title: question,
-            desc: description,
-            created_by: currentUser.email,
-            userid: currentUser.uid,
-            created_at: convertedDate,
-            tags: tags,
-            sampcodeimg: img,
-            userlvl: userlevel,
-            case_status: "unsolved"
-            });
+                  const descBar = description;
+                  let word1 = descBar.split(" ")[0]
+
+                  const descFoo = description;
+                  let word2 = descFoo.split(" ").splice(-1)
+
+                  //if user is logged-in
+                const userlevel = sessionStorage.getItem("userLevel")
+               //convert date which is timestamp to String
+        var timestamp = Date.now();
+        var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
+        
+       
+                      // Add a new document with a generated id.
+          const docRef = await addDoc(collection(forumdb, "topics"), {
+            title: question,
+          desc: description,
+          created_by: currentUser.email,
+          userid: currentUser.uid,
+          created_at: convertedDate,
+          tags: tags,
+          sampcodeimg: img,
+          userlvl: userlevel,
+          case_status: "unsolved",
+          bar: word1 ,
+          foo: word2
+          });
           
               setImg("")
               setDesc("");
@@ -514,7 +522,7 @@ swal("Something is Wrong",error.code,"warning");
     <Popover id="popover-basic">
       <Popover.Header as="h3">Heads Up!</Popover.Header>
       <Popover.Body>
-        This feature is still <strong>under development</strong>. It may not work as intended.
+        This feature is still<strong>under development</strong>. It may not work as intended.
       </Popover.Body>
     </Popover>
   );
