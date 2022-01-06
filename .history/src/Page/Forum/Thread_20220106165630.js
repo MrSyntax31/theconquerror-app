@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import * as FaIcons from 'react-icons/fa';
 import Helmet from 'react-helmet';
 import Navbar from '../../Components/Navbar/Navbar'
-import {Container, Form, Row, Col, Dropdown, Modal, Button , Alert, OverlayTrigger, Tooltip} from 'react-bootstrap'
+import {Container, Form, Row, Col, Dropdown, Modal, Button , Alert, OverlayTrigger} from 'react-bootstrap'
 import './Forum.css';
 import { getAuth , signOut, signInWithEmailAndPassword} from '@firebase/auth';
 import { getFirestore, doc, onSnapshot, addDoc, collection, query, orderBy , deleteDoc, updateDoc, setDoc} from '@firebase/firestore';
@@ -174,7 +174,7 @@ const Thread = () => {
 },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
 
-    const showRep= threadList.map((threadList) =>  <div key={threadList.id}>  <br></br> {threadList.reply} <br></br><OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Report User!</Tooltip>}><p className="text-primary d-inline-block" data-email={threadList.email} onClick={askReport} style={{cursor:"pointer"}}>{threadList.email}</p></OverlayTrigger> <br></br> Level: <strong>{threadList.level}</strong></div> )
+    const showRep= threadList.map((threadList) =>  <div key={threadList.id}>  <br></br> {threadList.reply} <br></br><p className="text-primary" data-email={threadList.email} onClick={askReport} style={{cursor:"pointer"}}>{threadList.email}</p>Level: <strong>{threadList.level}</strong></div> )
 
   async function DeletePost(e) {
 

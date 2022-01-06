@@ -174,7 +174,7 @@ const Thread = () => {
 },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
 
-    const showRep= threadList.map((threadList) =>  <div key={threadList.id}>  <br></br> {threadList.reply} <br></br><OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Report User!</Tooltip>}><p className="text-primary d-inline-block" data-email={threadList.email} onClick={askReport} style={{cursor:"pointer"}}>{threadList.email}</p></OverlayTrigger> <br></br> Level: <strong>{threadList.level}</strong></div> )
+    const showRep= threadList.map((threadList) =>  <div key={threadList.id}>  <br></br> {threadList.reply} <br></br><OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Report !</Tooltip>}><p className="text-primary d-inline-block" data-email={threadList.email} onClick={askReport} style={{cursor:"pointer"}}>{threadList.email}</p></OverlayTrigger> <br></br> Level: <strong>{threadList.level}</strong></div> )
 
   async function DeletePost(e) {
 
