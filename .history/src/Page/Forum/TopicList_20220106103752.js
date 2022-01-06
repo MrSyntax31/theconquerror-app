@@ -681,6 +681,11 @@ swal("Something is Wrong",error.code,"warning");
             </Form>
                 </Col>
 
+                <Col xs lg="2">
+                  <div className="NoUserMenu mt-4 ml-5">
+                    <Button variant="primary" onClick={AskQuestion} className="mb-2"> ASK A QUESTION</Button> 
+                  </div>
+                </Col>
 
               </Row>
               </Container>
@@ -733,7 +738,7 @@ swal("Something is Wrong",error.code,"warning");
                   <Container className="text-center mt-5 mb-5">
                     <div>
                             <div className="text-start">
-                              <h3 className="fw-bold fs-m text-start container mb-3"><GoIcons.GoCommentDiscussion/> All Topics <Button variant="primary" onClick={AskQuestion} className="mb-2"> Ask a Question</Button> </h3>
+                              <h3 className="fw-bold fs-m text-start container mb-3"><GoIcons.GoCommentDiscussion/> All Topics <Button variant="primary" onClick={AskQuestion} className="mb-2"> Ask a </Button> </h3>
 
                                 <Button variant="" className="text-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags</Button><br/>
 

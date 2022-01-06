@@ -883,7 +883,7 @@ swal("Something is Wrong",error.code,"warning");
                     <strong>Upload a picture of your code here! (Optional)</strong>
 
                  
-                    <input type="file" className="form-control  mt-3 mb-3" id="file-input" name="samplecodeimg" accept="image/jpeg" onChange={changeHandler}/> 
+                    <input type="file" className="  mt-3 mb-3" id="file-input" name="samplecodeimg" accept="image/jpeg" onChange={changeHandler}/> 
                     
                     <Button variant="primary" onClick={insertCode}>Upload File</Button>
 

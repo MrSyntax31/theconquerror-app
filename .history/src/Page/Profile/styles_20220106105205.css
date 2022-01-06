@@ -501,41 +501,6 @@
 
 
 
-  .card-profile-image img {
-    position: absolute;
-    left: 50%;
-    max-width: 180px;
-    transition: all .15s ease;
-    transform: translate(-50%, -30%);
-    border-radius: .375rem;
-  }
-
-  
-  .card-profile-stats {
-    padding: 1rem 0;
-  }
-  
-  .card-profile-stats>div {
-    margin-right: 1rem;
-    padding: .875rem;
-    text-align: center;
-  }
-  
-  .card-profile-stats>div:last-child {
-    margin-right: 0;
-  }
-  
-  .card-profile-stats>div .heading {
-    font-size: 1.1rem;
-    font-weight: bold;
-    display: block;
-  }
-  
-  .card-profile-stats>div .description {
-    font-size: .875rem;
-    color: #adb5bd;
-  }
-  
   .main-content {
     position: relative;
   }
@@ -571,7 +536,18 @@
   .dropdown-menu a.media>div:first-child {
     line-height: 1;
   }
+  
+  .dropdown-menu a.media p {
+    color: #8898aa;
+  }
+  
 
+  .form-control-label {
+    font-size: .875rem;
+    font-weight: 600;
+    color: #525f7f;
+  }
+  
   .form-control {
     font-size: .875rem;
   }
@@ -604,7 +580,16 @@
     resize: horizontal !important;
   }
   
-
+  .form-control-alternative {
+    transition: box-shadow .15s ease;
+    border: 0;
+    box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
+  }
+  
+  .form-control-alternative:focus {
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+  }
+  
   .input-group {
     transition: all .15s ease;
     border-radius: .375rem;

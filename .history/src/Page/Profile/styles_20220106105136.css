@@ -499,6 +499,22 @@
   }
   
 
+  
+  .card>hr {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  
+  .card-body {
+    padding: 1.5rem;
+    flex: 1 1 auto;
+  }
+
+  .card-header:first-child {
+    border-radius: calc(.375rem - 1px) calc(.375rem - 1px) 0 0;
+  }
+
+
 
 
   .card-profile-image img {
@@ -571,7 +587,18 @@
   .dropdown-menu a.media>div:first-child {
     line-height: 1;
   }
+  
+  .dropdown-menu a.media p {
+    color: #8898aa;
+  }
+  
 
+  .form-control-label {
+    font-size: .875rem;
+    font-weight: 600;
+    color: #525f7f;
+  }
+  
   .form-control {
     font-size: .875rem;
   }
@@ -604,7 +631,16 @@
     resize: horizontal !important;
   }
   
-
+  .form-control-alternative {
+    transition: box-shadow .15s ease;
+    border: 0;
+    box-shadow: 0 1px 3px rgba(50, 50, 93, .15), 0 1px 0 rgba(0, 0, 0, .02);
+  }
+  
+  .form-control-alternative:focus {
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+  }
+  
   .input-group {
     transition: all .15s ease;
     border-radius: .375rem;

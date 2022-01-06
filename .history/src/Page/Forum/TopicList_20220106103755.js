@@ -681,6 +681,11 @@ swal("Something is Wrong",error.code,"warning");
             </Form>
                 </Col>
 
+                <Col xs lg="2">
+                  <div className="NoUserMenu mt-4 ml-5">
+                    <Button variant="primary" onClick={AskQuestion} className="mb-2"> ASK A QUESTION</Button> 
+                  </div>
+                </Col>
 
               </Row>
               </Container>

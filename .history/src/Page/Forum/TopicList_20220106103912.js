@@ -676,11 +676,16 @@ swal("Something is Wrong",error.code,"warning");
                 onChange={e => lookFor(e.target.value)}
               />
              <OverlayTrigger trigger="click" placement="right" overlay={popover}>
-              <Button  onClick={searchQ} variant="btn btn-primary">Search</Button>
+              <Button  onClick={searchQ} variant=" btn-primary">Search</Button>
               </OverlayTrigger>
             </Form>
                 </Col>
 
+                <Col xs lg="2">
+                  <div className="NoUserMenu mt-4 ml-5">
+                    <Button variant="primary" onClick={AskQuestion} className="mb-2"> ASK A QUESTION</Button> 
+                  </div>
+                </Col>
 
               </Row>
               </Container>
