@@ -7,7 +7,7 @@ import {  Link, useHistory} from "react-router-dom"
 import {Container,  Row,Col, Form } from 'react-bootstrap'
 import { getAuth, signOut, signInWithEmailAndPassword } from 'firebase/auth'
 import * as GoIcons from 'react-icons/go';
-import './Forum.css';
+
 import Navbar from '../../Components/Navbar/Navbar'
 import { getStorage, ref, getDownloadURL, uploadBytesResumable } from "firebase/storage";
 import swal from 'sweetalert';

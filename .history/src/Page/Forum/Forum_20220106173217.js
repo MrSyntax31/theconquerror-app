@@ -335,7 +335,7 @@ uploadTask.on('state_changed',
 
         //Maps the data inside firestore collection (topics) so that it can be visible to the user
         const Discussion= topics.map((topic) => (  <div className="Discussion-Board p-3 m-2 border border-primary rounded" key={topic.id} > 
-        <p>Uploaded by: <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Report User!</Tooltip>}><label className="text-primary" style={{cursor:"pointer"}} data-id ={topic.created_by} data-lvl ={topic.userlvl} onClick={ showProfile }>{topic.created_by}</label></OverlayTrigger> on <strong>
+        <p>Uploaded by: <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Report User!</Tooltip>}></OverlayTrigger><label className="text-primary" style={{cursor:"pointer"}} data-id ={topic.created_by} data-lvl ={topic.userlvl} onClick={ showProfile }>{topic.created_by}</label> on <strong>
           {topic.created_at}</strong></p>  
           
           
