@@ -2,17 +2,16 @@ import React, {useState, useEffect} from 'react'
 import {Container} from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import {} from '../../firebase/firebase'
-import { getFirestore, doc,  getDoc, setDoc} from 'firebase/firestore';
+import { getFirestore, doc,  getDoc} from 'firebase/firestore';
 import {} from 'firebase/database'
 import swal from 'sweetalert'
-import { getAuth } from 'firebase/auth'
 
 import './assessment.css'
 
 export default function Assessment() {
 
-        const AUTH = getAuth();  
-        
+          
+
         const assessmentdb = getFirestore();
 
         const [quiz, setQuiz] = useState([]);
@@ -21,13 +20,9 @@ export default function Assessment() {
         const [opt, chooseAnswer] = useState();
         const [Question, setQuestion] = useState(1);
 
-        const [Empty, checkEmpty] = useState(true);
-        const [Empty1, checkEmpty1] = useState(false);
-
-        const userid = AUTH.currentUser.uid
 
         const coursecode = sessionStorage.getItem("getLesson")
-        const [result, setResult] = useState();
+    
 
         async function sample(){
 
@@ -53,12 +48,11 @@ export default function Assessment() {
             {
                 setScore(score+1)
                 setQuestion(Question+1)
-                chooseAnswer("");
              }
             else{
 
                 setQuestion(Question+1)
-                chooseAnswer("");
+
             }
             
           
@@ -74,17 +68,8 @@ export default function Assessment() {
             }
             else{
 
-
-                if(score < 7)
-                {
-                    setResult("Fail")
-                   
-                }
-                else {
-                    setResult("Passed")
-                }
-                checkEmpty(false);
-                checkEmpty1(true);
+                swal("Assessment","FINISHED!","success");
+                AssessmentDone()
             }
 
           },[score,opt,Question]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -93,25 +78,9 @@ export default function Assessment() {
     
         async function AssessmentDone() {
 
-                        //convert date which is timestamp to String
-            var timestamp = Date.now();
-            var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
-        
-              // Add a new document with a generated id.
-              await setDoc(doc(assessmentdb, "courses",coursecode,"enrollees",userid), {
-                ScoreOnTest: score,
-                finished_at: convertedDate,
-                AssessmentStatus : result
-                }).then(() =>{  
-                  
-                    swal("Assessment","FINISHED!","success");
-                    
-                    //Choose kung download now ung cert or later
-            
-             }).catch((error) => {
-                       alert(error.message)
-               })
-            
+                //EDI WOW ARMAN
+
+
            }
         
 
@@ -134,11 +103,11 @@ export default function Assessment() {
 
                                 <div className="assessment-options">
                                     <div className="assessment-option">
-                                        <input type="radio" id="Option1" name="Quiz" className="form-check-input"  onChange={e => chooseAnswer(e.target.value)} value={quiz.Opt1} />
+                                        <input type="radio" id="Option1" name="Quiz" className="form-check-input" onChange={e => chooseAnswer(e.target.value)} value={quiz.Opt1} />
                                         <label htmlFor="Option1">&nbsp;{quiz.Opt1}</label>
                                     </div>
                                     <div className="assessment-option">
-                                        <input type="radio" id="Option2" name="Quiz"  className="form-check-input" onChange={e => chooseAnswer(e.target.value)} value={quiz.Opt2} />
+                                        <input type="radio" id="Option2" name="Quiz"  className="form-check-input" onClick={e => chooseAnswer(e.target.value)} value={quiz.Opt2} />
                                         <label htmlFor="Option2">&nbsp;{quiz.Opt2}</label>
                                     </div>
                                     <div className="assessment-option">
@@ -152,11 +121,7 @@ export default function Assessment() {
                                 </div>
                             </div>
                             <div className="d-flex align-items-center pt-3">
-
-                                {Empty1 ? '': 
-                                <div className="ml-auto mr-sm-5"> <button className="btn btn-primary" onClick={next}>Next</button> </div>}
-                                { Empty ? '' :
-                                <div className="ml-auto mr-sm-5"> <button className="btn btn-primary" onClick={AssessmentDone}>Finish</button> </div> }
+                                <div className="ml-auto mr-sm-5"> <button className="btn btn-primary" onClick={next}>Next</button> </div>
                             </div>
                         </div>
                       </div>
