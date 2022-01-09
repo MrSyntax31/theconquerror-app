@@ -328,7 +328,7 @@ const HomeUser = () => {
                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                            <Card style={{ width: '18rem', marginTop: '2rem' }}>
                               <div style={{textAlign:"center"}}>
-                                 <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FCreator%2F162108690_121301806677028_8488807075884298821_n.jpg?alt=media&token=7ea53e45-dee7-4a61-bb98-407b21d24f94" />
+                                 <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/162108690_121301806677028_8488807075884298821_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeEXydTM3EZ07XqXpezsDpNyw2d9yKe4opDDZ33Ip7iikJ4Mb5hSfrbJs4divK0bsoW4pLl_zqUldxKd-fXV-F1K&_nc_ohc=Deflbtpo54QAX8UoF5R&_nc_ht=scontent.fmnl13-2.fna&oh=8a34d0b958665e1297e6c9b006a9a9e7&oe=61CBC2F9" />
                               </div>           
                               <Card.Body>
                                  <Card.Title>Kuya Dev</Card.Title>
@@ -361,7 +361,7 @@ const HomeUser = () => {
                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                            <Card style={{ width: '18rem', height:"15rem", marginTop: '2rem' }}>
                               <div style={{textAlign:"center"}}>
-                                 <Card.Img variant="top" className="mt-5 w-50 rounded mb-3" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FCreator%2F149870072_4438803116146821_814614453010169425_n.jpg?alt=media&token=bb9aa651-9f9d-4b9c-bca7-420d7125bc76" />
+                                 <Card.Img variant="top" className="mt-5 w-50 rounded mb-3" src="https://scontent.fmnl13-2.fna.fbcdn.net/v/t1.6435-9/149870072_4438803116146821_814614453010169425_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF7kx9PgpLqkIGIHWFawVBjeeLqseLHov554uqx4sei_hqzZSt_ndDnrRlWKaRH4bXcCit_bVVCti5grm96mMQ-&_nc_ohc=vqBDbHbLINoAX_U1AAY&_nc_ht=scontent.fmnl13-2.fna&oh=ec0d5505a0c0e7c2d6effe778f78bd15&oe=61CB7CFA" />
                               </div>           
                               <Card.Body>
                                  <Card.Title className="mt-4">John Carlo Franco</Card.Title>
@@ -703,7 +703,7 @@ const HomeUser = () => {
                         </div>
                      </div>
 
-
+s
                      <div className="copyright">
                      <div className="container">
                         
