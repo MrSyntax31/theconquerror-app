@@ -733,7 +733,7 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                           <div>
                           {profile.Institution || ''}
                           </div>
-                          <p onClick={handleShowOff} className="btn btn-sm btn-primary mt-4"><IoIcons.IoSettingsSharp/> Settings</p> {''}
+                          <p onClick={handleShowOff} className="btn btn-sm btn-primary mt-4"><IoIcons.IoSettingsSharp/> Settings</p> <br></br>
                          { AdminCheck && <p onClick={AdminPanel} className="btn btn-sm btn-primary mt-4"><IoIcons.IoBarChart/> Admin</p> }
                         </div>
                       </div>
@@ -751,10 +751,10 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                         </div>
                       </div>
                           {NotVerif &&
-                          <div className="col-8">
-                            <label>Verified Status:</label> <em className="text-primary">{verifstat.verifiedstatus}</em>
+                          <div>
+                            <label>Verified Status:</label> <label>{verifstat.verifiedstatus}</label>
                           </div>
-                          }
+                        }
                       <div className="card-body mb-">
                         <form>
                           <h6 className="heading-small text-muted mb-4">User information</h6>

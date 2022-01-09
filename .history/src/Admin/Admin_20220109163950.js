@@ -7,7 +7,7 @@ import Helmet from 'react-helmet'
 import Navbar from './NavBar'
 
 //Bootstrap
-import { Container, Tabs, Tab, Card, Table, Form } from 'react-bootstrap';
+import { Row, Container, Tabs, Tab, Card, Table, Form } from 'react-bootstrap';
 
 
 //Firebase

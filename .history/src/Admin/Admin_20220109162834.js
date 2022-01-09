@@ -7,7 +7,7 @@ import Helmet from 'react-helmet'
 import Navbar from './NavBar'
 
 //Bootstrap
-import { Container, Tabs, Tab, Card, Table, Form } from 'react-bootstrap';
+import { Row, Container, Tabs, Tab, Card, Table, Form } from 'react-bootstrap';
 
 
 //Firebase
@@ -103,9 +103,6 @@ function size(){
             <Container className="mt-3 mb-5">
 
                             <main className="mt-3">
-                            <div className="mt-5">
-                                            <h1 className="text-center text-primary fw-bold">Admin Console</h1>
-                                        </div>
                                 <div className="mt-3" fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
                                     <div className="row">
 
@@ -158,6 +155,50 @@ function size(){
                                 </div>
                             </main>
 
+                            <section className="" id="destinations">   
+                                <Container fluid="md" style={{
+                                        display: "flex",
+                                        justifyContent: "center",
+                                        alignItems: "center"
+                                    }}>
+                            
+                                    <Row>          
+                                        <div className="mt-5">
+                                            <h1 className="text-center text-primary fw-bold">Admin Console</h1>
+                                        </div>
+
+                                        <div className="col-sm-4 mb-5">
+                                            <div className="card mt-4">
+                                            <img className="card-img-top" src="../../../assets/Add User-rafiki.png" alt=""/>
+                                            <h3 className="card-title text-center text-primary fw-bold">Users Count</h3>
+                                                <div className="card-body">
+                                                    <h4 className="card-title text-center text-secondary fw-bold">{user}</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="col-sm-4 mb-5">
+                                            <div className="card mt-4">
+                                            <img className="card-img-top" src="../assets/Feedback-bro.png" alt=""/>
+                                            <h3 className="card-title text-center text-primary fw-bold">Feedback Count</h3>
+                                                <div className="card-body">
+                                                    <h4 className="card-title text-center text-secondary fw-bold">Feedback</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="col-sm-4 mb-5">
+                                            <div className="card mt-4">
+                                            <img className="card-img-top" src="../assets/See you soon-pana.webp" alt=""/>
+                                            <h3 className="card-title text-center text-primary fw-bold">Users Count</h3>
+                                                <div className="card-body">
+                                                    <h4 className="card-title text-secondary text-center fw-bold">Coming Soon</h4>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Row>
+                                </Container>
+                            </section>
 
                             <section className="mt-5 mb-5">
                                 <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3">

@@ -733,7 +733,7 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                           <div>
                           {profile.Institution || ''}
                           </div>
-                          <p onClick={handleShowOff} className="btn btn-sm btn-primary mt-4"><IoIcons.IoSettingsSharp/> Settings</p> {''}
+                          <p onClick={handleShowOff} className="btn btn-sm btn-primary mt-4"><IoIcons.IoSettingsSharp/> Settings</p> <br></br>
                          { AdminCheck && <p onClick={AdminPanel} className="btn btn-sm btn-primary mt-4"><IoIcons.IoBarChart/> Admin</p> }
                         </div>
                       </div>

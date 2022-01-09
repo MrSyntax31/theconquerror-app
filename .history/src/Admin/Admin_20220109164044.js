@@ -4,7 +4,7 @@ import React , {useState, useEffect}from 'react'
 import Helmet from 'react-helmet'
 
 //Navbar
-import Navbar from './NavBar'
+
 
 //Bootstrap
 import { Container, Tabs, Tab, Card, Table, Form } from 'react-bootstrap';

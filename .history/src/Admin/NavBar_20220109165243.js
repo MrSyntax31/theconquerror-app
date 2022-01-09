@@ -48,6 +48,10 @@ function NavBar () {
           <Navbar bg="dark" variant="dark" sticky="top">
             <Container>
 
+              <Navbar.Brand onClick={handleShow} style={{cursor:"pointer"}}>
+                <MdIcons.MdMenu/>
+              </Navbar.Brand>
+
               <Navbar.Brand className="mx-auto d-block">
                 <img
                   alt=""
@@ -59,7 +63,7 @@ function NavBar () {
                 ConquError
                 
               </Navbar.Brand>
-              <Button onClick={back}>Return to Home</Button>
+              <Button onClick={back}>Back</Button>
             </Container>  
           </Navbar>
 

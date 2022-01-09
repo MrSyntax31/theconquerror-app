@@ -3,8 +3,6 @@ import React , {useState, useEffect}from 'react'
 //Taskbar title
 import Helmet from 'react-helmet'
 
-//Navbar
-import Navbar from './NavBar'
 
 //Bootstrap
 import { Container, Tabs, Tab, Card, Table, Form } from 'react-bootstrap';

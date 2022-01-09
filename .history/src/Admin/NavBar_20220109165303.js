@@ -59,7 +59,7 @@ function NavBar () {
                 ConquError
                 
               </Navbar.Brand>
-              <Button onClick={back}>Return to Home</Button>
+              <Button onClick={back}>Return </Button>
             </Container>  
           </Navbar>
 

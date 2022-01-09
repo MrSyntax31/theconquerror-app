@@ -3,9 +3,6 @@ import React , {useState, useEffect}from 'react'
 //Taskbar title
 import Helmet from 'react-helmet'
 
-//Navbar
-import Navbar from './NavBar'
-
 //Bootstrap
 import { Container, Tabs, Tab, Card, Table, Form } from 'react-bootstrap';
 
@@ -95,9 +92,6 @@ function size(){
                 <title>ConquError | Admin</title>
             </Helmet>
 
-
-            {/* Navbar */}
-            <Navbar/>
 
             {/* Content */}
             <Container className="mt-3 mb-5">
