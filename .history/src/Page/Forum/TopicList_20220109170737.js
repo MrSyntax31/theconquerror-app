@@ -749,7 +749,7 @@ swal("Something is Wrong",error.code,"warning");
                                   Please note that tags are important for the forum to work properly!
                             
                                   <Container className="mt-3">
-                                  <strong className="mb-5">Filter By Topic:</strong>
+                                  <strong className="mb-3">Filter By Topic:</strong>
                                     <div className="form-check">
                                     <input type="radio" id="Array" name="Programming" className="form-check-input" onClick={handleChangeTag} value="Array" />
                                     <label htmlFor="Array" className="form-check-label">Array</label>
@@ -783,9 +783,9 @@ swal("Something is Wrong",error.code,"warning");
                                         <input type="radio" id="If Else Condition" name="Programming"  className="form-check-input" onClick={handleChangeTag} value="If Else Condition"/>
                                         <label htmlFor="If Else Condition" className="form-check-label">If Else Condition</label>
                                     </div>
+                                    <Button onClick={tagReset}>Reset Tags</Button>
 
                                   </Container>
-                                    <Button onClick={tagReset}>Reset Tags</Button>
                                 
                                   </Offcanvas.Body>
                                 </Offcanvas>

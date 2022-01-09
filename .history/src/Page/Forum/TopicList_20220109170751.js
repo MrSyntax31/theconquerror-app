@@ -783,9 +783,9 @@ swal("Something is Wrong",error.code,"warning");
                                         <input type="radio" id="If Else Condition" name="Programming"  className="form-check-input" onClick={handleChangeTag} value="If Else Condition"/>
                                         <label htmlFor="If Else Condition" className="form-check-label">If Else Condition</label>
                                     </div>
+                                    <Button onClick={tagReset}>Reset Tags</Button>
 
                                   </Container>
-                                    <Button onClick={tagReset}>Reset Tags</Button>
                                 
                                   </Offcanvas.Body>
                                 </Offcanvas>

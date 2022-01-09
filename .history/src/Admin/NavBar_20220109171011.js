@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { useState} from 'react'
 import { Container, Navbar, Button } from 'react-bootstrap'
-import * as MdIcons from 'react-icons/md';
 
 //Routing
 import {  useHistory} from "react-router-dom"
@@ -14,6 +13,7 @@ import swal from 'sweetalert';
 function NavBar () {
            const auth = getAuth(); 
           const history = useHistory();
+
 
 
           const back = (event) => {
@@ -42,7 +42,6 @@ function NavBar () {
           <Navbar bg="dark" variant="dark" sticky="top">
             <Container>
 
-
               <Navbar.Brand className="mx-auto d-block">
                 <img
                   alt=""
@@ -54,10 +53,11 @@ function NavBar () {
                 ConquError
                 
               </Navbar.Brand>
-              <Button className="btn btn-primary" onClick={back}>Back</Button>{''}{''}
-              <Button onClick={logout} className="btn btn-primary text-light"><MdIcons.MdOutlineLogout/> Logout</Button>
+              <Button onClick={back}>Return to Home</Button>
             </Container>  
           </Navbar>
+
+
 </>
     )
 }

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Container, Navbar, Button } from 'react-bootstrap'
+import React, { useState} from 'react'
+import { Container, Navbar, Button, Offcanvas } from 'react-bootstrap'
 import * as MdIcons from 'react-icons/md';
 
 //Routing
@@ -14,6 +14,12 @@ import swal from 'sweetalert';
 function NavBar () {
            const auth = getAuth(); 
           const history = useHistory();
+
+      
+          const [show, setShow] = useState(false);
+
+          const handleClose = () => setShow(false);
+          const handleShow = () => setShow(true);
 
 
           const back = (event) => {
@@ -42,6 +48,9 @@ function NavBar () {
           <Navbar bg="dark" variant="dark" sticky="top">
             <Container>
 
+              <Navbar.Brand onClick={handleShow} style={{cursor:"pointer"}}>
+                <MdIcons.MdMenu/>
+              </Navbar.Brand>
 
               <Navbar.Brand className="mx-auto d-block">
                 <img
@@ -54,10 +63,19 @@ function NavBar () {
                 ConquError
                 
               </Navbar.Brand>
-              <Button className="btn btn-primary" onClick={back}>Back</Button>{''}{''}
-              <Button onClick={logout} className="btn btn-primary text-light"><MdIcons.MdOutlineLogout/> Logout</Button>
+              <Button onClick={back}>Back</Button>
             </Container>  
           </Navbar>
+
+  <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Sidebar</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          "Edi Wow"
+        </Offcanvas.Body>
+        <Button onClick={logout} className="text-light"><MdIcons.MdOutlineLogout/> Logout</Button>
+      </Offcanvas>
 </>
     )
 }

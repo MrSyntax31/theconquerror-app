@@ -1,5 +1,5 @@
-import React from 'react'
-import { Container, Navbar, Button } from 'react-bootstrap'
+import React, { useState} from 'react'
+import { Container, Navbar, Button, Offcanvas } from 'react-bootstrap'
 import * as MdIcons from 'react-icons/md';
 
 //Routing
@@ -14,6 +14,12 @@ import swal from 'sweetalert';
 function NavBar () {
            const auth = getAuth(); 
           const history = useHistory();
+
+      
+          const [show, setShow] = useState(false);
+
+          const handleClose = () => setShow(false);
+          const handleShow = () => setShow(true);
 
 
           const back = (event) => {
@@ -58,6 +64,16 @@ function NavBar () {
               <Button onClick={logout} className="btn btn-primary text-light"><MdIcons.MdOutlineLogout/> Logout</Button>
             </Container>  
           </Navbar>
+
+  <Offcanvas show={show} onHide={handleClose}>
+        <Offcanvas.Header closeButton>
+          <Offcanvas.Title>Sidebar</Offcanvas.Title>
+        </Offcanvas.Header>
+        <Offcanvas.Body>
+          "Edi Wow"
+        </Offcanvas.Body>
+        <Button onClick={logout} className="text-light"><MdIcons.MdOutlineLogout/> Logout</Button>
+      </Offcanvas>
 </>
     )
 }

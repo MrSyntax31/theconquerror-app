@@ -745,7 +745,7 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                       <div className="card-header bg-white border-0">
                         <div className="row align-items-center">
                           <div className="col-8">
-                            <h3 className="mb-0 mt-4">My account</h3>
+                            <h3 className="mb-0">My account</h3>
                           </div>
                           
                         </div>
