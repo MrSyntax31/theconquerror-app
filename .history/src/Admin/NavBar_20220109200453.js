@@ -55,7 +55,7 @@ function NavBar () {
                 
               </Navbar.Brand>
               <p className="btn btn-primary" onClick={back}>Back</p>{'  '}
-              <p onClick={logout} className="btn text-light"><MdIcons.MdOutlineLogout/> Logout</p>
+              <p onClick={logout} className="btn btn- text-light"><MdIcons.MdOutlineLogout/> Logout</p>
             </Container>  
           </Navbar>
 </>
