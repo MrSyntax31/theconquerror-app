@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Navbar, Button } from 'react-bootstrap'
+import { Container, Navbar, Button, Dropdown, DropdownButton, Row, Col } from 'react-bootstrap'
 import * as MdIcons from 'react-icons/md';
 
 //Routing
@@ -54,7 +54,7 @@ function NavBar () {
                 ConquError
                 
               </Navbar.Brand>
-              <p className="btn btn-primary" onClick={back}>Back</p>{'  '}
+              <Button className="btn btn-primary" onClick={back}>Back</Button>{''}{''}
               <p onClick={logout} className="btn text-light"><MdIcons.MdOutlineLogout/> Logout</p>
             </Container>  
           </Navbar>

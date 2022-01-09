@@ -42,7 +42,26 @@ function NavBar () {
           <Navbar bg="dark" variant="dark" sticky="top">
             <Container>
 
+            <Row>
+        <Col></Col>
 
+        <Col md="auto"></Col>
+
+        <Col xs lg="4">
+        <DropdownButton className="NavBar mt-2"
+          id="dropdown-button-dark-example2"
+          variant="secondary"
+          menuVariant="dark"
+          title="ConquError">
+
+          <Dropdown.Item href="/profile"> Profile </Dropdown.Item>
+          <Dropdown.Item  onClick={logout}>Log-Out</Dropdown.Item>
+          <Dropdown.Divider />
+          <Dropdown.Item href="https://technojetdev.netlify.app">Technojet.Dev</Dropdown.Item>
+        </DropdownButton>
+    </Col>
+  </Row>
+  
               <Navbar.Brand className="mx-auto d-block">
                 <img
                   alt=""
@@ -54,7 +73,7 @@ function NavBar () {
                 ConquError
                 
               </Navbar.Brand>
-              <p className="btn btn-primary" onClick={back}>Back</p>{'  '}
+              <Button className="btn btn-primary" onClick={back}>Back</Button>{''}{''}
               <p onClick={logout} className="btn text-light"><MdIcons.MdOutlineLogout/> Logout</p>
             </Container>  
           </Navbar>

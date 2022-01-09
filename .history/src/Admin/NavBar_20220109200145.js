@@ -54,8 +54,8 @@ function NavBar () {
                 ConquError
                 
               </Navbar.Brand>
-              <p className="btn btn-primary" onClick={back}>Back</p>{'  '}
-              <p onClick={logout} className="btn text-light"><MdIcons.MdOutlineLogout/> Logout</p>
+              <Button className="btn btn-primary" onClick={back}>Back</Button>{''}
+              <Button onClick={logout} className="btn text-light"><MdIcons.MdOutlineLogout/> Logout</Button>
             </Container>  
           </Navbar>
 </>

@@ -42,7 +42,7 @@ function NavBar () {
           <Navbar bg="dark" variant="dark" sticky="top">
             <Container>
 
-
+              
               <Navbar.Brand className="mx-auto d-block">
                 <img
                   alt=""
@@ -54,7 +54,7 @@ function NavBar () {
                 ConquError
                 
               </Navbar.Brand>
-              <p className="btn btn-primary" onClick={back}>Back</p>{'  '}
+              <Button className="btn btn-primary" onClick={back}>Back</Button>{''}{''}
               <p onClick={logout} className="btn text-light"><MdIcons.MdOutlineLogout/> Logout</p>
             </Container>  
           </Navbar>
