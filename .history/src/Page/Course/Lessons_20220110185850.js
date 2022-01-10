@@ -260,7 +260,7 @@ const Lessons = () => {
                   <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 mt-3">
                     <Tab eventKey="profile" title="Overview" className=" mb-5 p-3">
                     
-              
+                      <Row>
                       { userData &&
                           <div className="container mb-2">
 

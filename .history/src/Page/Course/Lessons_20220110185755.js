@@ -260,7 +260,7 @@ const Lessons = () => {
                   <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 mt-3">
                     <Tab eventKey="profile" title="Overview" className=" mb-5 p-3">
                     
-              
+                      <Row>
                       { userData &&
                           <div className="container mb-2">
 
@@ -280,7 +280,7 @@ const Lessons = () => {
                           <Col className="mb-2"><div variant="light"><FcIcons.FcVideoCall/> 7 Tutorials</div></Col>
                         </Row>
 
-                  
+                      </Row>
                         
                         <h4 className="mb-3 mt-5"><strong>Why start in this course?</strong></h4>
                         <p>

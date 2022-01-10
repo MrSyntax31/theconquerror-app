@@ -260,7 +260,7 @@ const Lessons = () => {
                   <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 mt-3">
                     <Tab eventKey="profile" title="Overview" className=" mb-5 p-3">
                     
-              
+                      <Row>
                       { userData &&
                           <div className="container mb-2">
 
@@ -269,18 +269,18 @@ const Lessons = () => {
                               </Card.Body>
                           </div> }
                      
-                        
-                        <Row xs="auto">
                         <p className="mt-2 mb-3 text-justify">
                           Hello Warrior, we know you’re new to computer programming, and you want to be ready and prepared to the upcoming battle.  This Course is design to help you and boost your knowledge in basic and fundamentals of C++ programming. 
                         </p>
+                        
+                        <Row xs="auto">
                           <Col className="mb-2"><div variant="light"><FcIcons.FcReading/> 7 Lessons</div></Col>
                           <Col className="mb-2"><div variant="light"><FcIcons.FcQuestions/> 7 Assessment</div></Col>
                           <Col className="mb-2"><div variant="light"><FcIcons.FcClock/> 21 Hours</div></Col>
                           <Col className="mb-2"><div variant="light"><FcIcons.FcVideoCall/> 7 Tutorials</div></Col>
                         </Row>
 
-                  
+                      </Row>
                         
                         <h4 className="mb-3 mt-5"><strong>Why start in this course?</strong></h4>
                         <p>
