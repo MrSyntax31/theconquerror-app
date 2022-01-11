@@ -168,7 +168,7 @@ useEffect(
                                             <div className="card text-white bg-primary o-hidden h-100 ">
                                                 <div className="card-body">
                                                 <div className="card-body-icon">
-                                                    <i className="fa fa-fw fa-address-book"></i>{' '}<strong>Registered Users</strong>
+                                                    <i className="fa fa-fw fa-address-book"></i>{' '}<strong>Registered Users:</strong>
                                                 </div>
                                                 
                                                 <div className="mr-5">{user}</div>

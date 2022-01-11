@@ -7,7 +7,7 @@ import Helmet from 'react-helmet'
 import Navbar from './NavBar'
 
 //Bootstrap
-import { Container, Tabs, Tab, Card, Table, Form , Button} from 'react-bootstrap';
+import { Row, Container, Tabs, Tab, Card, Table, Form , Button} from 'react-bootstrap';
 
 
 //Firebase
@@ -168,7 +168,7 @@ useEffect(
                                             <div className="card text-white bg-primary o-hidden h-100 ">
                                                 <div className="card-body">
                                                 <div className="card-body-icon">
-                                                    <i className="fa fa-fw fa-address-book"></i>{' '}<strong>Registered Users</strong>
+                                                    <i className="fa fa-fw fa-address-book"></i>{' '}<strong>Registered Users:</strong>
                                                 </div>
                                                 
                                                 <div className="mr-5">{user}</div>
@@ -180,7 +180,7 @@ useEffect(
                                             <div className="card text-white bg-warning o-hidden h-100">
                                                 <div className="card-body">
                                                 <div className="card-body-icon">
-                                                    <i className="fa fa-fw fa-list"></i>{' '}<strong className="mr-5">New Tasks!</strong>
+                                                    <i className="fa fa-fw fa-list"></i><div className="mr-5">11 New Tasks!</div>
                                                 </div>
                                                 
                                                 </div>
@@ -191,7 +191,7 @@ useEffect(
                                             <div className="card text-white bg-success o-hidden h-100">
                                                 <div className="card-body">
                                                 <div className="card-body-icon">
-                                                    <i className="fa fa-fw fa-shopping-cart"></i>{' '}<strong className="mr-5">123 New Orders!</strong>
+                                                    <i className="fa fa-fw fa-shopping-cart"></i>{' '}<div className="mr-5">123 New Orders!</div>
                                                 </div>
                                                 
                                                 </div>
