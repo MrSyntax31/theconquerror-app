@@ -308,7 +308,7 @@ useEffect(
             {/* Navbar */}
             <Navbar/>
                 
-                <p className="mt-5 text-primary text-center"> <em> *NOTE: ALL DECISIONS SHOULD BE DISCUSSED ON OUR DISCORD SERVER</em></p>
+                <h5 className="mt-5 text-primary text"> <em> *NOTE: ALL DECISIONS SHOULD BE DISCUSSED ON OUR DISCORD SERVER</em></h5>
             {/* Content */}
             <Container className="mt-3 mb-5">
 

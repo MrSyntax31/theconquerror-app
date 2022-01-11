@@ -307,8 +307,7 @@ useEffect(
 
             {/* Navbar */}
             <Navbar/>
-                
-                <p className="mt-5 text-primary text-center"> <em> *NOTE: ALL DECISIONS SHOULD BE DISCUSSED ON OUR DISCORD SERVER</em></p>
+            <h1> <strong>NOTE: ALL DECISIONS SHOULD BE DISCUSSED ON OUR DISCORD SERVER</strong></h1>
             {/* Content */}
             <Container className="mt-3 mb-5">
 
@@ -320,9 +319,10 @@ useEffect(
                                             <div className="card text-white bg-primary o-hidden h-100 ">
                                                 <div className="card-body">
                                                 <div className="card-body-icon">
-                                                    <i className="fa fa-fw fa-address-book"></i>
+                                                    <i className="fa fa-fw fa-address-book"></i><strong>Registered Users:</strong>
                                                 </div>
-                                                <strong>{user} Registered Users </strong>
+                                                
+                                                <div className="mr-5">{user}</div>
                                                 </div>
                                             </div>
                                         </div>
