@@ -332,7 +332,7 @@ useEffect(
                                                 <div className="card-body-icon">
                                                     <i className="fa fa-fw fa-list"></i>
                                                 </div>
-                                                <div className="mr-5">11 New Tasks</div>
+                                                <div className="mr-5">11 New Tasks!</div>
                                                 </div>
                                             </div>
                                         </div>
