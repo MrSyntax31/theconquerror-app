@@ -930,42 +930,37 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             <h5 className="text-primary">This Feature is under development!!!</h5>
             <div className="App">
               
+              <Container>
 
-              <Container className="mb-5" fluid="md" style={{
-                     display: "flex",
-                     justifyContent: "center",
-                     alignItems: "center"
-                  }}>
-                        <Card>
-                          <Card.Body>
-                            <Card.Title>
-                              <h3>
-                               
-                                <span className="text-primary">ConquError Status</span>
-                              </h3>
-                            </Card.Title>
-          
-                            <div style={{ width: '100%', height: 600, marginTop:'4rem', marginBottom:'4rem' }}>
+                <Row>
+                  <Col>
+                  <div style={{ width: '100%', height: 300, marginTop:'4rem', marginBottom:'4rem' }}>
                  
-                          <ResponsiveContainer width="100%" height="100%">
-                            <RadarChart cx={300} cy={250} outerRadius={150} width={500} height={500} data={data}>
-                              <PolarGrid />
-                              <PolarAngleAxis dataKey="subject" />
-                              <PolarRadiusAxis />
-                              <Radar
-                                name="Mike"
-                                dataKey="A"
-                                stroke="#0466c8"
-                                fill="#0466c8"
-                                fillOpacity={0.6}
-                              />
-                            </RadarChart>
-                          </ResponsiveContainer>
-                          
-                        </div>
-
-                            </Card.Body>
-                        </Card>
+                  <ResponsiveContainer width="100%" height="100%">
+                  <RadarChart
+                    cx={300}
+                    cy={250}
+                    outerRadius={150}
+                    width={500}
+                    height={500}
+                    data={data}
+                  >
+                    <PolarGrid />
+                    <PolarAngleAxis dataKey="subject" />
+                    <PolarRadiusAxis />
+                    <Radar
+                      name="Mike"
+                      dataKey="A"
+                      stroke="#0466c8"
+                      fill="#0466c8"
+                      fillOpacity={0.6}
+                    />
+                  </RadarChart>
+                </ResponsiveContainer>
+                 
+                  </div>
+                  </Col>
+                </Row>
 
               </Container>
             </div>    
@@ -979,17 +974,17 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                       <div className=" d-grid gap-2 mt-3 mb-3">
                           <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button> 
 
-                          <Button variant="primary" onClick={UploadFile} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillFileText/> Upload Files</Button> 
+                                              <Button variant="primary" onClick={UploadFile} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillFileText/> Upload Files</Button> 
                                               
-                          <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
+                                              <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
                                             
-                          <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
+                                              <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
                                                                   
-                          <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
-                            <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
-                          </div>
+                                              <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
+                                                <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
+                                            </div>
                                         
-                    </Offcanvas.Body>
+                                        </Offcanvas.Body>
             </Offcanvas>
 
                                       {/*Change Password*/}
@@ -1044,7 +1039,7 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                                            <input type="file" accept="image/png, image/gif, image/jpeg"
                                           onChange={changeHandler}/>
                                                <ProgressBar animated now={progbar} className="progress"/>
-                                         
+                                            <button>
                                             </Modal.Body>
                                             <Modal.Footer>
                                               <Button variant="secondary" onClick={handleClose6}>

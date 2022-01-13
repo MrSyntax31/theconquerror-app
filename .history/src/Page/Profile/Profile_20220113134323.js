@@ -24,14 +24,25 @@ import { getAuth, updatePassword, reauthenticateWithCredential , EmailAuthProvid
 import { collection, getFirestore, doc, setDoc,  onSnapshot   } from 'firebase/firestore';
 import { getDatabase, ref, onValue, update } from "firebase/database";
 import { getStorage, uploadBytesResumable, getDownloadURL} from 'firebase/storage'
-
 //Sample Charts
-import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import {
+  AreaChart,
+  ResponsiveContainer,
+  Area,
+  Tooltip,
+  BarChart,
+  XAxis,
+  YAxis,
+  Legend,
+  CartesianGrid,
+  Bar,
+} from "recharts";
 
 
 //Navbar
 import Navbar from '../../Components/Navbar/Navbar'
 import {  useHistory} from "react-router-dom"
+
 
 const FooterStyle = styled.div`
   background-color: var(--deep-dark);
@@ -83,7 +94,6 @@ const FooterStyle = styled.div`
 `;
 
 
-
 const Profile = () => {
 
 
@@ -97,49 +107,33 @@ const Profile = () => {
 
   //For Graphs (Data and Datus)
   const data = [
-    {
-      subject: "Math",
-      A: 120,
-      B: 110,
-      fullMark: 150
-    },
-    {
-      subject: "Chinese",
-      A: 98,
-      B: 130,
-      fullMark: 150
-    },
-    {
-      subject: "English",
-      A: 86,
-      B: 130,
-      fullMark: 150
-    },
-    {
-      subject: "Geography",
-      A: 99,
-      B: 100,
-      fullMark: 150
-    },
-    {
-      subject: "Physics",
-      A: 85,
-      B: 90,
-      fullMark: 150
-    },
-    {
-      subject: "History",
-      A: 65,
-      B: 85,
-      fullMark: 150
-    },{
-      subject: "Chemistry",
-      A: 65,
-      B: 85,
-      fullMark: 150
-    }
+    { name: "Arrays", score: 7 },
+    { name: "Basic Programming", score: 10 },
+    { name: "Functions", score: 1 },
+    { name: "Programming Concepts", score: 5 },
+ 
   ];
 
+  const datus = [
+    {
+      name: 'Conditional Structures',
+      uv: 4,
+      pv: 2400,
+      amt: 2400,
+    },
+    {
+      name: 'Looping Constructs',
+      uv: 8,
+      pv: 1398,
+      amt: 2210,
+    },
+    {
+      name: 'Nested Condition',
+      uv: 2,
+      pv: 9800,
+      amt: 2290,
+    },  
+  ];
 
  
  
@@ -181,8 +175,7 @@ const Profile = () => {
   const [occuHide, showHide1] = useState("")
   const [instiHide, showHide2] = useState("")
 
- const[show6, setShow6] = useState(false);
- const handleClose6 = () => setShow6(false);
+ 
 
 
   const [validated, setValidated] = useState(false);
@@ -558,7 +551,24 @@ function updateProfile(){
 
   })
 }
-  
+    async function requestVerif(){
+      //convert date which is timestamp to String
+var timestamp = Date.now();
+var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
+
+      var data = {
+        verifiedstatus: "Pending",
+        created_at: convertedDate,
+        img: ""
+        }
+      await setDoc(doc(firestoredb, "verifiedteachers", userId), data).then(() => {
+        swal("Awesome!, Verification can take up to 1 day Please be Patient!", {
+          icon: "success",
+      }).catch((error) => {
+          alert("Error",error.code,"error")
+      })
+    })
+  }
     
     //Teacher Verification
     function UploadFile(){
@@ -587,8 +597,9 @@ function updateProfile(){
                   swal("Oops!","You've already sent a request, Please be patient.","warning")
                 }
                 else{
-                  setShow6(true);
+                  requestVerif();
                 }
+                
               
               } else {
                 swal("Aw!","Your help is always needed! Come back if you changed your mind.","info");
@@ -607,38 +618,15 @@ function updateProfile(){
     const changeHandler = (event) => {
 
       setFile(event.target.files[0]);
-      
+  
     }
 
     const [progbar, setProgress] = useState(0);
-    const [teachcreds, setCredentials] = useState("");
 
-    async function requestVerif(){
-      //convert date which is timestamp to String
-var timestamp = Date.now();
-var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
-
-      var data = {
-        verifiedstatus: "Pending",
-        created_at: convertedDate,
-        img: teachcreds
-        }
-      await setDoc(doc(firestoredb, "verifiedteachers", userId), data).then(() => {
-        swal("Awesome!, Verification can take up to 1 day Please be Patient!", {
-          icon: "success",
-      }).catch((error) => {
-          alert("Error",error.code,"error")
-      })
-    })
-  }
-    function uploadCred(){
-                 // Create the file metadata
-/** @type {any} */
-const metadata = {
-  contentType: "image/png, image/gif, image/jpeg"
-}
-const storageRef = ref(storage, 'TeacherCredentials/' + userId);
-const uploadTask = uploadBytesResumable(storageRef, file,metadata);
+    function insertFiles(){
+   
+const storageRef = ref(storage, 'TeacherUploads/' + userId);
+const uploadTask = uploadBytesResumable(storageRef, file);
 
 // Listen for state changes, errors, and completion of the upload.
 uploadTask.on('state_changed',
@@ -685,75 +673,10 @@ case 'storage/unknown':
 // Upload completed successfully, now we can get the download URL
 getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
 
-  setCredentials(downloadURL);
- 
-  setShow6(false);
-
 });
 }
 );
     }
-
-
-    const [description, setDescription] = useState("");
-
-
-    function uploadFiles(){
-   
-      const storageRef = ref(storage, 'TeacherUploads/' + description);
-      const uploadTask = uploadBytesResumable(storageRef, file);
-      
-      // Listen for state changes, errors, and completion of the upload.
-      uploadTask.on('state_changed',
-      (snapshot) => {
-      // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
-      const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-      setProgress(progress);
-      switch (snapshot.state) {
-      case 'paused':
-        //
-        break;
-      case 'running':
-      //
-        break;
-        default:
-          // 
-      }
-      }, 
-      (error) => {
-      // A full list of error codes is available at
-      // https://firebase.google.com/docs/storage/web/handle-errors
-      switch (error.code) {
-      case 'storage/unauthorized':
-        swal("Warning!","Un-authorized Upload","error")
-        break;
-      case 'storage/canceled':
-        swal("Canceled","Upload Canceled","warning")
-        // User canceled the upload
-        break;
-      
-      // ...
-      
-      case 'storage/unknown':
-        // Unknown error occurred, inspect error.serverResponse
-        swal("Unknown Error","Inspect error.serverResponse","error")
-        break;
-      
-        
-        default:
-          // 
-      }
-      }, 
-      () => {
-      // Upload completed successfully, now we can get the download URL
-      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
-      
-      });
-      }
-      );
-          }
-          
-
 
     return (
         <>
@@ -930,66 +853,63 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             <h5 className="text-primary">This Feature is under development!!!</h5>
             <div className="App">
               
+              <Container>
 
-              <Container className="mb-5" fluid="md" style={{
-                     display: "flex",
-                     justifyContent: "center",
-                     alignItems: "center"
-                  }}>
-                        <Card>
-                          <Card.Body>
-                            <Card.Title>
-                              <h3>
-                               
-                                <span className="text-primary">ConquError Status</span>
-                              </h3>
-                            </Card.Title>
-          
-                            <div style={{ width: '100%', height: 600, marginTop:'4rem', marginBottom:'4rem' }}>
-                 
-                          <ResponsiveContainer width="100%" height="100%">
-                            <RadarChart cx={300} cy={250} outerRadius={150} width={500} height={500} data={data}>
-                              <PolarGrid />
-                              <PolarAngleAxis dataKey="subject" />
-                              <PolarRadiusAxis />
-                              <Radar
-                                name="Mike"
-                                dataKey="A"
-                                stroke="#0466c8"
-                                fill="#0466c8"
-                                fillOpacity={0.6}
-                              />
-                            </RadarChart>
-                          </ResponsiveContainer>
-                          
-                        </div>
-
-                            </Card.Body>
-                        </Card>
+                <Row>
+                  <Col>
+                  <div style={{ width: '100%', height: 300, marginTop:'4rem', marginBottom:'4rem' }}>
+                    <ResponsiveContainer className="textStyle">
+                      <BarChart
+                  width={500}
+                  height={300}
+                  data={data}
+                  margin={{
+                    top: 5,
+                    right: 30,
+                    left: 80,
+                    bottom: 5,
+                  }}
+                  barSize={10}
+                >
+                  <XAxis
+                    dataKey="name"
+                    scale="point"
+                    padding={{ left: 10, right: 10 }}
+                  />
+                  <YAxis />
+                  <Tooltip />
+                  <Legend />
+                  <CartesianGrid strokeDasharray="3 3" />
+                  <Bar dataKey="score" fill="#42a5f5" background={{ fill: "#eee" }} />
+                      </BarChart>
+                    </ResponsiveContainer>
+                  </div>
+                  </Col>
+                </Row>
 
               </Container>
             </div>    
 
             <Offcanvas show={showOff} onHide={handleCloseOff}>
-                <Offcanvas.Header closeButton>
-                  <Offcanvas.Title><IoIcons.IoSettingsSharp/> Settings</Offcanvas.Title>
-                </Offcanvas.Header>
-                    <Offcanvas.Body>
+                                        <Offcanvas.Header closeButton>
+                                          <Offcanvas.Title><IoIcons.IoSettingsSharp/> Settings</Offcanvas.Title>
+                                        </Offcanvas.Header>
+                                        <Offcanvas.Body>
                                           
-                      <div className=" d-grid gap-2 mt-3 mb-3">
-                          <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button> 
+                                            <div className=" d-grid gap-2 mt-3 mb-3">
+                                              <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button> 
 
-                          <Button variant="primary" onClick={UploadFile} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillFileText/> Upload Files</Button> 
+                                              <Button variant="primary" onClick={UploadFile} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillFileText/> Upload Files</Button> 
                                               
-                          <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
+                                              <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
                                             
-                          <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
-                                                                  
-                          <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
-                            <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
-                          </div>
+                                              <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
+                                              
+                                              <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
+                                                <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
+                                            </div>
                                         
-                    </Offcanvas.Body>
+                                        </Offcanvas.Body>
             </Offcanvas>
 
                                       {/*Change Password*/}
@@ -1034,29 +954,6 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                                             </Modal.Footer>
                                       </Modal>
 
-                                               {/*Upload Cred*/}
-                                               <Modal show={show6} onHide={handleClose6} backdrop="static" keyboard={false} >
-                                            <Modal.Header closeButton>
-                                              <Modal.Title>Upload Credentials</Modal.Title>
-                                            </Modal.Header>
-                                            <Modal.Body>
-                                              <strong>Please Upload any Picture of Credentials that will Prove that you are Qualified to Provide Learning Materials</strong>
-                                           <input type="file" accept="image/png, image/gif, image/jpeg"
-                                          onChange={changeHandler}/>
-                                               <ProgressBar animated now={progbar} className="progress"/>
-                                         
-                                            </Modal.Body>
-                                            <Modal.Footer>
-                                              <Button variant="secondary" onClick={handleClose6}>
-                                                Close
-                                              </Button>
-                                              <Button variant="secondary" onClick={requestVerif}>
-                                                Upload
-                                              </Button>
-                                            </Modal.Footer>
-                                          </Modal>
-
-
 
                                           {/*Upload Files*/}
                                           <Modal show={show4} onHide={handleClose4} backdrop="static" keyboard={false} >
@@ -1064,8 +961,6 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                                               <Modal.Title>Upload Files</Modal.Title>
                                             </Modal.Header>
                                             <Modal.Body>
-                                              <label>File Description</label>
-                                            <input type="text" onChange={e => setDescription(e.target.value)}/>
                                            <input type="file" accept=
                                           "application/msword, application/vnd.ms-powerpoint, application/pdf"
                                           onChange={changeHandler}/>
@@ -1076,7 +971,7 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                                               <Button variant="secondary" onClick={handleClose4}>
                                                 Close
                                               </Button>
-                                              <Button variant="secondary" onClick={uploadFiles}>
+                                              <Button variant="secondary" onClick={insertFiles}>
                                                 Upload
                                               </Button>
                                             </Modal.Footer>

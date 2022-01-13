@@ -930,42 +930,37 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             <h5 className="text-primary">This Feature is under development!!!</h5>
             <div className="App">
               
+              <Container>
 
-              <Container className="mb-5" fluid="md" style={{
-                     display: "flex",
-                     justifyContent: "center",
-                     alignItems: "center"
-                  }}>
-                        <Card>
-                          <Card.Body>
-                            <Card.Title>
-                              <h3>
-                               
-                                <span className="text-primary">ConquError Status</span>
-                              </h3>
-                            </Card.Title>
-          
-                            <div style={{ width: '100%', height: 600, marginTop:'4rem', marginBottom:'4rem' }}>
+                <Row>
+                  <Col>
+                  <div style={{ width: '100%', height: 300, marginTop:'4rem', marginBottom:'4rem' }}>
                  
-                          <ResponsiveContainer width="100%" height="100%">
-                            <RadarChart cx={300} cy={250} outerRadius={150} width={500} height={500} data={data}>
-                              <PolarGrid />
-                              <PolarAngleAxis dataKey="subject" />
-                              <PolarRadiusAxis />
-                              <Radar
-                                name="Mike"
-                                dataKey="A"
-                                stroke="#0466c8"
-                                fill="#0466c8"
-                                fillOpacity={0.6}
-                              />
-                            </RadarChart>
-                          </ResponsiveContainer>
-                          
-                        </div>
-
-                            </Card.Body>
-                        </Card>
+                  <ResponsiveContainer width="100%" height="100%">
+                  <RadarChart
+                    cx={300}
+                    cy={250}
+                    outerRadius={150}
+                    width={500}
+                    height={500}
+                    data={data}
+                  >
+                    <PolarGrid />
+                    <PolarAngleAxis dataKey="subject" />
+                    <PolarRadiusAxis />
+                    <Radar
+                      name="Mike"
+                      dataKey="A"
+                      stroke="#0466c8"
+                      fill="#0466c8"
+                      fillOpacity={0.6}
+                    />
+                  </RadarChart>
+                </ResponsiveContainer>
+                 
+                  </div>
+                  </Col>
+                </Row>
 
               </Container>
             </div>    
@@ -989,7 +984,7 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                             <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
                           </div>
                                         
-                    </Offcanvas.Body>
+                                        </Offcanvas.Body>
             </Offcanvas>
 
                                       {/*Change Password*/}

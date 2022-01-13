@@ -931,11 +931,7 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             <div className="App">
               
 
-              <Container className="mb-5" fluid="md" style={{
-                     display: "flex",
-                     justifyContent: "center",
-                     alignItems: "center"
-                  }}>
+              <Container>
                         <Card>
                           <Card.Body>
                             <Card.Title>
@@ -948,7 +944,12 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                             <div style={{ width: '100%', height: 600, marginTop:'4rem', marginBottom:'4rem' }}>
                  
                           <ResponsiveContainer width="100%" height="100%">
-                            <RadarChart cx={300} cy={250} outerRadius={150} width={500} height={500} data={data}>
+                            <RadarChart
+                              cx={300} cy={250} outerRadius={150}
+                              width={500}
+                              height={500}
+                              data={data}
+                            >
                               <PolarGrid />
                               <PolarAngleAxis dataKey="subject" />
                               <PolarRadiusAxis />

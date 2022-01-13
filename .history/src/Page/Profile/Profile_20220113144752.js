@@ -931,41 +931,51 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             <div className="App">
               
 
-              <Container className="mb-5" fluid="md" style={{
-                     display: "flex",
-                     justifyContent: "center",
-                     alignItems: "center"
-                  }}>
+              <Container>
                         <Card>
                           <Card.Body>
                             <Card.Title>
                               <h3>
-                               
+                                <IoIcons.IoIosPodium />
                                 <span className="text-primary">ConquError Status</span>
                               </h3>
                             </Card.Title>
-          
-                            <div style={{ width: '100%', height: 600, marginTop:'4rem', marginBottom:'4rem' }}>
-                 
-                          <ResponsiveContainer width="100%" height="100%">
-                            <RadarChart cx={300} cy={250} outerRadius={150} width={500} height={500} data={data}>
-                              <PolarGrid />
-                              <PolarAngleAxis dataKey="subject" />
-                              <PolarRadiusAxis />
-                              <Radar
-                                name="Mike"
-                                dataKey="A"
-                                stroke="#0466c8"
-                                fill="#0466c8"
-                                fillOpacity={0.6}
-                              />
-                            </RadarChart>
-                          </ResponsiveContainer>
-                          
-                        </div>
-
-                            </Card.Body>
+                            <Card.Text>
+                              <p>
+                                <IoIcons.IoIosPodium />
+                                <span className="text-primary">ConquError Status</span>
+                              </p>
+                              
                         </Card>
+                <Row>
+                  <Col>
+                  <div style={{ width: '100%', height: 600, marginTop:'4rem', marginBottom:'4rem' }}>
+                 
+                  <ResponsiveContainer width="100%" height="100%">
+                  <RadarChart
+                    cx={300}
+                    cy={250}
+                    outerRadius={150}
+                    width={500}
+                    height={500}
+                    data={data}
+                  >
+                    <PolarGrid />
+                    <PolarAngleAxis dataKey="subject" />
+                    <PolarRadiusAxis />
+                    <Radar
+                      name="Mike"
+                      dataKey="A"
+                      stroke="#0466c8"
+                      fill="#0466c8"
+                      fillOpacity={0.6}
+                    />
+                  </RadarChart>
+                </ResponsiveContainer>
+                 
+                  </div>
+                  </Col>
+                </Row>
 
               </Container>
             </div>    

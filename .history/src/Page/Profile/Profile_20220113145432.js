@@ -931,11 +931,7 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             <div className="App">
               
 
-              <Container className="mb-5" fluid="md" style={{
-                     display: "flex",
-                     justifyContent: "center",
-                     alignItems: "center"
-                  }}>
+              <Container >
                         <Card>
                           <Card.Body>
                             <Card.Title>
