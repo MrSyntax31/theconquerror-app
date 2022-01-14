@@ -355,14 +355,8 @@ useEffect(
 
             {/* Navbar */}
             <Navbar/>
-                <h1 className="text-center text-primary fw-bold mt-3"><img
-                  alt=""
-                  src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgeDE9IjE0LjI1ODA4IiB5MT0iMTQuMjU4MDgiIHgyPSIxMjEuMjY3MTciIHkyPSIxMjEuMjY3MTciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBpZD0iY29sb3ItMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjM2NhMGUxIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIwLjU4NyIgc3RvcC1jb2xvcj0iIzQ1OTlkMiI+PC9zdG9wPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzIwNjhlNSI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0idXJsKCNjb2xvci0xKSI+PHBhdGggZD0iTTEwOS44MTQ4MywxNDUuNjQ4MTdsLTE1LjM4MzI1LC0xNS4zODMyNWMtMC42OTg3NSwtMC42OTg3NSAtMC42OTg3NSwtMS44MzQ2NyAwLC0yLjUzMzQybDguMjE2NTgsLTguMjE2NThjMC42OTg3NSwtMC42OTg3NSAxLjgzNDY3LC0wLjY5ODc1IDIuNTMzNDIsMGw0LjYzMzI1LDQuNjMzMjVjMC42OTg3NSwwLjY5ODc1IDEuODM0NjcsMC42OTg3NSAyLjUzMzQyLDBsMzYuODgzMjUsLTM2Ljg4MzI1YzAuNjk4NzUsLTAuNjk4NzUgMC42OTg3NSwtMS44MzQ2NyAwLC0yLjUzMzQybC0zNi44Nzk2NywtMzYuODc5NjdjLTAuNjk4NzUsLTAuNjk4NzUgLTEuODM0NjcsLTAuNjk4NzUgLTIuNTMzNDIsMGwtMTEuNzk5OTIsMTEuNzk5OTJjLTAuNjk4NzUsMC42OTg3NSAtMC42OTg3NSwxLjgzNDY3IDAsMi41MzM0MmwyMi41NDk5MiwyMi41NDk5MmMwLjY5ODc1LDAuNjk4NzUgMC42OTg3NSwxLjgzNDY3IDAsMi41MzM0MmwtOC4yMTY1OCw4LjIxNjU4Yy0wLjY5ODc1LDAuNjk4NzUgLTEuODM0NjcsMC42OTg3NSAtMi41MzM0MiwwbC0zMy4yOTk5MiwtMzMuMjk5OTJjLTAuNjk4NzUsLTAuNjk4NzUgLTAuNjk4NzUsLTEuODM0NjcgMCwtMi41MzM0MmwzMy4yOTk5MiwtMzMuMjk5OTJjMC42OTg3NSwtMC42OTg3NSAxLjgzNDY3LC0wLjY5ODc1IDIuNTMzNDIsMGw1OC4zODMyNSw1OC4zODMyNWMwLjY5ODc1LDAuNjk4NzUgMC42OTg3NSwxLjgzNDY3IDAsMi41MzM0MmwtNTguMzgzMjUsNTguMzc5NjdjLTAuNzAyMzMsMC43MDIzMyAtMS44MzQ2NywwLjcwMjMzIC0yLjUzNywwek05NS40ODE1LDEwOS44MTQ4M2wtMzMuMjk5OTIsLTMzLjI5OTkyYy0wLjY5ODc1LC0wLjY5ODc1IC0xLjgzNDY3LC0wLjY5ODc1IC0yLjUzMzQyLDBsLTguMjE2NTgsOC4yMTY1OGMtMC42OTg3NSwwLjY5ODc1IC0wLjY5ODc1LDEuODM0NjcgMCwyLjUzMzQybDIyLjU0OTkyLDIyLjU0OTkyYzAuNjk4NzUsMC42OTg3NSAwLjY5ODc1LDEuODM0NjcgMCwyLjUzMzQybC0xMS43OTk5MiwxMS43OTk5MmMtMC42OTg3NSwwLjY5ODc1IC0xLjgzNDY3LDAuNjk4NzUgLTIuNTMzNDIsMGwtMzYuODc5NjcsLTM2Ljg3OTY3Yy0wLjY5ODc1LC0wLjY5ODc1IC0wLjY5ODc1LC0xLjgzNDY3IDAsLTIuNTMzNDJsMzYuODgzMjUsLTM2Ljg4MzI1YzAuNjk4NzUsLTAuNjk4NzUgMS44MzQ2NywtMC42OTg3NSAyLjUzMzQyLDBsNC42MzMyNSw0LjYzMzI1YzAuNjk4NzUsMC42OTg3NSAxLjgzNDY3LDAuNjk4NzUgMi41MzM0MiwwbDguMjE2NTgsLTguMjE2NThjMC42OTg3NSwtMC42OTg3NSAwLjY5ODc1LC0xLjgzNDY3IDAsLTIuNTMzNDJsLTE1LjM4MzI1LC0xNS4zODMyNWMtMC42OTg3NSwtMC42OTg3NSAtMS44MzQ2NywtMC42OTg3NSAtMi41MzM0MiwwbC01OC4zODMyNSw1OC4zNzk2N2MtMC42OTg3NSwwLjY5ODc1IC0wLjY5ODc1LDEuODM0NjcgMCwyLjUzMzQybDU4LjM4MzI1LDU4LjM4MzI1YzAuNjk4NzUsMC42OTg3NSAxLjgzNDY3LDAuNjk4NzUgMi41MzM0MiwwbDMzLjI5OTkyLC0zMy4yOTk5MmMwLjY5ODc1LC0wLjY5ODc1IDAuNjk4NzUsLTEuODMxMDggLTAuMDAzNTgsLTIuNTMzNDJ6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4="
-                  width="50"
-                  height="50"
-                  className="d-inline-block align-top"
-                />{' '}ConquError Console</h1>
-                <p className="text-primary text-center"> <em> *NOTE: ALL DECISIONS SHOULD BE DISCUSSED ON OUR DISCORD SERVER</em></p>
+                
+                <p className="mt-5 text-primary text-center"> <em> *NOTE: ALL DECISIONS SHOULD BE DISCUSSED ON OUR DISCORD SERVER</em></p>
             {/* Content */}
             <Container className="mt-3 mb-5">
 
@@ -419,43 +413,214 @@ useEffect(
                             </main>
 
                             <section>
-                                <h1 className="text-center text-primary fw-bold mt-3">My ConquError Status</h1>
+                            <div className="mt-5" style={{ textAlign: "center" }}>
+            <h1>My ConquError Status</h1>
 
-                                <h5 className="text-primary text-center">This Feature is under development!!!</h5>
+            <h5 className="text-primary">This Feature is under development!!!</h5>
 
-                                <div className="App">
-                                
-                                        <div style={{ width: '100%', height: 500, marginTop:'4rem', marginBottom:'4rem' }}>
-                                        <ResponsiveContainer>
-                                        <LineChart
-                                            width={500}
-                                            height={300}
-                                            data={data}
-                                            margin={{
-                                                top: 5,
-                                                right: 30,
-                                                left: 20,
-                                                bottom: 5
-                                            }}
-                                            >
-                                            <CartesianGrid strokeDasharray="3 3" />
-                                            <XAxis dataKey="name" />
-                                            <YAxis />
-                                            <Tooltip />
-                                            <Legend />
-                                            <Line
-                                                type="monotone"
-                                                dataKey="pv"
-                                                stroke="#8884d8"
-                                                activeDot={{ r: 8 }}
-                                            />
-                                            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-                                            </LineChart>
-                                        </ResponsiveContainer>
-                                        </div>
-                                </div>     
+            <div className="App">
+              
+                    <div style={{ width: '100%', height: 500, marginTop:'4rem', marginBottom:'4rem' }}>
+                      <ResponsiveContainer>
+                        <BarChart   data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                            <CartesianGrid strokeDasharray="3 3" />
+                              <XAxis dataKey="name" />
+                              <YAxis />
+                              <Tooltip />
+                              <Legend />
+                             
+                              <Bar dataKey="pv" fill="#3a86ff" />
+                        </BarChart>
+                      </ResponsiveContainer>
+                    </div>
+            </div>    
+
+
+            <Offcanvas show={showOff} onHide={handleCloseOff}>
+                <Offcanvas.Header closeButton>
+                  <Offcanvas.Title><IoIcons.IoSettingsSharp/> Settings</Offcanvas.Title>
+                </Offcanvas.Header>
+                    <Offcanvas.Body>
+                                          
+                      <div className=" d-grid gap-2 mt-3 mb-3">
+                          <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button> 
+
+                          <Button variant="primary" onClick={UploadFile} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillFileText/> Upload Files</Button> 
+                                              
+                          <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
+                                            
+                          <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
+                                                                  
+                          <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
+                            <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
+                          </div>
+                                        
+                    </Offcanvas.Body>
+            </Offcanvas>
+
+                                      {/*Change Password*/}
+                                      <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
+                                            <Modal.Header closeButton>
+                                              <Modal.Title>Change Password</Modal.Title>
+                                            </Modal.Header>
+                                            <Modal.Body>
+                                              <div className=""> Current Password: <br></br>
+                                                  <input value={currentPass || ''} onChange={e => setPass1(e.target.value)}  type={password} className="form-control"></input><br></br>
+                                          
+                                                  New Password: <br></br>
+                                                  <input value={newPass1|| ''} onChange={e => setPass2(e.target.value)}  type={password} className="form-control"></input><br></br>
+                                                  Confirm New Password: <br></br>
+                                                  <input value={newPass2 || ''} onChange={e => setPass3(e.target.value)}  type={password} className="form-control"></input><br></br>
+
+                                                  <i onClick={showPass} className={'fas fa-eye'}>Show/Hide Password</i>
+                                              </div>
+
+                                            </Modal.Body>
+                                            <Modal.Footer>
+                                              <Button variant="secondary" onClick={handleClose}>
+                                                Close
+                                              </Button>
+                                              <Button variant="primary" onClick={forgotPass }>Forgot-Password</Button>
+                                              <Button variant="primary" onClick={changePass }>Confirm</Button>
+                                            </Modal.Footer>
+                                      </Modal>
+                                      
+                                      {/*Feedback*/}
+                                      <Modal show={show2}  onHide={handleClose2} backdrop="static"  keyboard={false}  >
+                                            <Modal.Header closeButton>
+                                              <Modal.Title>Send Feedback</Modal.Title>
+                                            </Modal.Header>
+                                            <Modal.Body>
+                                              Please Address your Issue so we can further Improve ConquError: <br></br>
+                                              <textarea value={feedback || ''} onChange={e => setFeedback(e.target.value)}  type="text" className="form-control"></textarea><br></br>
+                                            </Modal.Body>
+                                            <Modal.Footer>
+                                              <Button variant="secondary" onClick={handleClose2}> Close</Button>
+                                              <Button variant="primary" onClick={ sendFeedback }> Send</Button>
+                                            </Modal.Footer>
+                                      </Modal>
+
+                                               {/*Upload Cred*/}
+                                               <Modal show={show6} onHide={handleClose6} backdrop="static" keyboard={false} >
+                                            <Modal.Header closeButton>
+                                              <Modal.Title>Upload Credentials</Modal.Title>
+                                            </Modal.Header>
+                                            <Modal.Body>
+                                              <strong>Please Upload any Picture of Credentials that will Prove that you are Qualified to Provide Learning Materials</strong>
+                                           <input type="file" accept="image/png, image/gif, image/jpeg"
+                                          onChange={changeHandler}/>
+                                               <ProgressBar animated now={progbar} className="progress"/>
+                                         
+                                            </Modal.Body>
+                                            <Modal.Footer>
+                                              <Button variant="secondary" onClick={handleClose6}>
+                                                Close
+                                              </Button>
+                                              <Button variant="secondary" onClick={requestVerif}>
+                                                Upload
+                                              </Button>
+                                            </Modal.Footer>
+                                          </Modal>
+
+
+
+                                          {/*Upload Files*/}
+                                          <Modal show={show4} onHide={handleClose4} backdrop="static" keyboard={false} >
+                                            <Modal.Header closeButton>
+                                              <Modal.Title>Upload Files</Modal.Title>
+                                            </Modal.Header>
+                                            <Modal.Body>
+                                              <label>File Description</label>
+                                            <input type="text" onChange={e => setDescription(e.target.value)}/>
+                                           <input type="file" accept=
+                                          "application/msword, application/vnd.ms-powerpoint, application/pdf"
+                                          onChange={changeHandler}/>
+                                               <ProgressBar animated now={progbar} className="progress"/>
+
+                                            </Modal.Body>
+                                            <Modal.Footer>
+                                              <Button variant="secondary" onClick={handleClose4}>
+                                                Close
+                                              </Button>
+                                              <Button variant="secondary" onClick={uploadFiles}>
+                                                Upload
+                                              </Button>
+                                            </Modal.Footer>
+                                          </Modal>
+
+
+                                            {/*Update Profile*/}
+                                            <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
+                                                  <Modal.Header closeButton>
+                                                    <Modal.Title>Update Profile</Modal.Title>
+                                                  </Modal.Header>
+                                                  <Modal.Body>
+
+                                                  <Form noValidate validated={validated} onSubmit={handleSubmit}>
+
+                                                  <Form.Group id="" className="mb-2">
+                                                    <Form.Label>Address</Form.Label>
+                                                    <Form.Control ref={address}  name = "name" type="name" defaultValue={profile.Address} required placeholder="Enter Address"/>
+                                                  </Form.Group>
+
+                                                  <Form.Group id="gender">
+                                                    <Form.Label>Gender</Form.Label>
+                                                    <Form.Select aria-label="Default select example" ref={ gender }  required>
+                                                      <option value={profile.Gender}>{profile.Gender}</option>
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                    <option value="Transgender">Transgender</option>
+                                                    <option value="Non-Binary">Non-Binary</option>
+                                                    <option value="Not Specified">Rather not specify</option>
+                                                    </Form.Select>
+                                                  </Form.Group>
+
+                                                <Form.Group id="occu">
+                                                <Form.Label>Occupation</Form.Label>
+                                                <Form.Select aria-label="Default select example"ref={ occu } onChange={e => OccupationValue(e)}required>
+                                                <option value={profile.Occupation}>{profile.Occupation}</option>
+                                                <option value="Student">Student</option>
+                                                <option value="Professor">Professor</option>
+                                                <option value="Others">Others.</option>
+                                                </Form.Select>
+                                                { occuHide &&  <Form.Control  className="mt-2" ref={occu }   name = "Occupation" type="text"  required placeholder="Enter Occupation" /> }
+                                                </Form.Group>
+
+                                                <Form.Group id="inst">
+                                                <Form.Label>Institution</Form.Label>
+                                                <Form.Select aria-label="Default select example" ref={ insti } onChange={e => InstitutionValue(e)} required>
+                                                <option value={profile.Institution}>{profile.Institution}</option>
+                                                <option value="LSPU">LSPU</option>
+                                                <option value="PUP">PUP</option>
+                                                <option value="TUP">TUP</option>
+                                                <option value="BSIT">BSIT</option>
+                                                <option value="DICT">DICT</option>
+                                                <option value="DCET">DCET</option>
+                                                <option value="Others">Others.</option>
+                                                </Form.Select>
+                                                { instiHide &&  <Form.Control className="mt-2" ref={insti}  name = "Institution" type="text"  required placeholder="Enter Institution"/> }
+                    
+                                                </Form.Group>
+
+                                                <Button variant="primary" type="submit" className="btn btn-primary mt-3 w-100" > Update </Button>
+
+                                                </Form>
+
+                                                  </Modal.Body>
+                                                  <Modal.Footer>
+                                                    <Button variant="secondary" onClick={handleClose5}> Close</Button>
+                                                  
+                                                  </Modal.Footer>
+                                            </Modal>
+                  
+                  
+            <a href="#top" className="scroll-top">
+              <i className="fa fa-chevron-up"></i>
+                  
+          </a>
+        </div> 
                             </section>
-                            
+
                             <section className="mt-5 mb-5">
                                 <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3">
                                     <Tab eventKey="home" title="Request Verification">

@@ -1,4 +1,4 @@
-import React , {useState, useEffect, PureComponent}from 'react'
+import React , {useState, useEffect, }from 'react'
 
 //Taskbar title
 import Helmet from 'react-helmet'
@@ -21,51 +21,6 @@ import swal from 'sweetalert';
 //Charts
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-
-const data = [
-    {
-      name: 'Page A',
-      uv: 4000,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: 'Page B',
-      uv: 3000,
-      pv: 1398,
-      amt: 2210,
-    },
-    {
-      name: 'Page C',
-      uv: 2000,
-      pv: 9800,
-      amt: 2290,
-    },
-    {
-      name: 'Page D',
-      uv: 2780,
-      pv: 3908,
-      amt: 2000,
-    },
-    {
-      name: 'Page E',
-      uv: 1890,
-      pv: 4800,
-      amt: 2181,
-    },
-    {
-      name: 'Page F',
-      uv: 2390,
-      pv: 3800,
-      amt: 2500,
-    },
-    {
-      name: 'Page G',
-      uv: 3490,
-      pv: 4300,
-      amt: 2100,
-    },
-  ];
 
 const Admin = () => {
 
@@ -355,14 +310,8 @@ useEffect(
 
             {/* Navbar */}
             <Navbar/>
-                <h1 className="text-center text-primary fw-bold mt-3"><img
-                  alt=""
-                  src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHZpZXdCb3g9IjAgMCAxNzIgMTcyIj48ZGVmcz48bGluZWFyR3JhZGllbnQgeDE9IjE0LjI1ODA4IiB5MT0iMTQuMjU4MDgiIHgyPSIxMjEuMjY3MTciIHkyPSIxMjEuMjY3MTciIGdyYWRpZW50VW5pdHM9InVzZXJTcGFjZU9uVXNlIiBpZD0iY29sb3ItMSI+PHN0b3Agb2Zmc2V0PSIwIiBzdG9wLWNvbG9yPSIjM2NhMGUxIj48L3N0b3A+PHN0b3Agb2Zmc2V0PSIwLjU4NyIgc3RvcC1jb2xvcj0iIzQ1OTlkMiI+PC9zdG9wPjxzdG9wIG9mZnNldD0iMSIgc3RvcC1jb2xvcj0iIzIwNjhlNSI+PC9zdG9wPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxnIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0ibm9uemVybyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxwYXRoIGQ9Ik0wLDE3MnYtMTcyaDE3MnYxNzJ6IiBmaWxsPSJub25lIj48L3BhdGg+PGcgZmlsbD0idXJsKCNjb2xvci0xKSI+PHBhdGggZD0iTTEwOS44MTQ4MywxNDUuNjQ4MTdsLTE1LjM4MzI1LC0xNS4zODMyNWMtMC42OTg3NSwtMC42OTg3NSAtMC42OTg3NSwtMS44MzQ2NyAwLC0yLjUzMzQybDguMjE2NTgsLTguMjE2NThjMC42OTg3NSwtMC42OTg3NSAxLjgzNDY3LC0wLjY5ODc1IDIuNTMzNDIsMGw0LjYzMzI1LDQuNjMzMjVjMC42OTg3NSwwLjY5ODc1IDEuODM0NjcsMC42OTg3NSAyLjUzMzQyLDBsMzYuODgzMjUsLTM2Ljg4MzI1YzAuNjk4NzUsLTAuNjk4NzUgMC42OTg3NSwtMS44MzQ2NyAwLC0yLjUzMzQybC0zNi44Nzk2NywtMzYuODc5NjdjLTAuNjk4NzUsLTAuNjk4NzUgLTEuODM0NjcsLTAuNjk4NzUgLTIuNTMzNDIsMGwtMTEuNzk5OTIsMTEuNzk5OTJjLTAuNjk4NzUsMC42OTg3NSAtMC42OTg3NSwxLjgzNDY3IDAsMi41MzM0MmwyMi41NDk5MiwyMi41NDk5MmMwLjY5ODc1LDAuNjk4NzUgMC42OTg3NSwxLjgzNDY3IDAsMi41MzM0MmwtOC4yMTY1OCw4LjIxNjU4Yy0wLjY5ODc1LDAuNjk4NzUgLTEuODM0NjcsMC42OTg3NSAtMi41MzM0MiwwbC0zMy4yOTk5MiwtMzMuMjk5OTJjLTAuNjk4NzUsLTAuNjk4NzUgLTAuNjk4NzUsLTEuODM0NjcgMCwtMi41MzM0MmwzMy4yOTk5MiwtMzMuMjk5OTJjMC42OTg3NSwtMC42OTg3NSAxLjgzNDY3LC0wLjY5ODc1IDIuNTMzNDIsMGw1OC4zODMyNSw1OC4zODMyNWMwLjY5ODc1LDAuNjk4NzUgMC42OTg3NSwxLjgzNDY3IDAsMi41MzM0MmwtNTguMzgzMjUsNTguMzc5NjdjLTAuNzAyMzMsMC43MDIzMyAtMS44MzQ2NywwLjcwMjMzIC0yLjUzNywwek05NS40ODE1LDEwOS44MTQ4M2wtMzMuMjk5OTIsLTMzLjI5OTkyYy0wLjY5ODc1LC0wLjY5ODc1IC0xLjgzNDY3LC0wLjY5ODc1IC0yLjUzMzQyLDBsLTguMjE2NTgsOC4yMTY1OGMtMC42OTg3NSwwLjY5ODc1IC0wLjY5ODc1LDEuODM0NjcgMCwyLjUzMzQybDIyLjU0OTkyLDIyLjU0OTkyYzAuNjk4NzUsMC42OTg3NSAwLjY5ODc1LDEuODM0NjcgMCwyLjUzMzQybC0xMS43OTk5MiwxMS43OTk5MmMtMC42OTg3NSwwLjY5ODc1IC0xLjgzNDY3LDAuNjk4NzUgLTIuNTMzNDIsMGwtMzYuODc5NjcsLTM2Ljg3OTY3Yy0wLjY5ODc1LC0wLjY5ODc1IC0wLjY5ODc1LC0xLjgzNDY3IDAsLTIuNTMzNDJsMzYuODgzMjUsLTM2Ljg4MzI1YzAuNjk4NzUsLTAuNjk4NzUgMS44MzQ2NywtMC42OTg3NSAyLjUzMzQyLDBsNC42MzMyNSw0LjYzMzI1YzAuNjk4NzUsMC42OTg3NSAxLjgzNDY3LDAuNjk4NzUgMi41MzM0MiwwbDguMjE2NTgsLTguMjE2NThjMC42OTg3NSwtMC42OTg3NSAwLjY5ODc1LC0xLjgzNDY3IDAsLTIuNTMzNDJsLTE1LjM4MzI1LC0xNS4zODMyNWMtMC42OTg3NSwtMC42OTg3NSAtMS44MzQ2NywtMC42OTg3NSAtMi41MzM0MiwwbC01OC4zODMyNSw1OC4zNzk2N2MtMC42OTg3NSwwLjY5ODc1IC0wLjY5ODc1LDEuODM0NjcgMCwyLjUzMzQybDU4LjM4MzI1LDU4LjM4MzI1YzAuNjk4NzUsMC42OTg3NSAxLjgzNDY3LDAuNjk4NzUgMi41MzM0MiwwbDMzLjI5OTkyLC0zMy4yOTk5MmMwLjY5ODc1LC0wLjY5ODc1IDAuNjk4NzUsLTEuODMxMDggLTAuMDAzNTgsLTIuNTMzNDJ6Ij48L3BhdGg+PC9nPjwvZz48L3N2Zz4="
-                  width="50"
-                  height="50"
-                  className="d-inline-block align-top"
-                />{' '}ConquError Console</h1>
-                <p className="text-primary text-center"> <em> *NOTE: ALL DECISIONS SHOULD BE DISCUSSED ON OUR DISCORD SERVER</em></p>
+                
+                <p className="mt-5 text-primary text-center"> <em> *NOTE: ALL DECISIONS SHOULD BE DISCUSSED ON OUR DISCORD SERVER</em></p>
             {/* Content */}
             <Container className="mt-3 mb-5">
 
@@ -418,44 +367,7 @@ useEffect(
                                 </div>
                             </main>
 
-                            <section>
-                                <h1 className="text-center text-primary fw-bold mt-3">My ConquError Status</h1>
 
-                                <h5 className="text-primary text-center">This Feature is under development!!!</h5>
-
-                                <div className="App">
-                                
-                                        <div style={{ width: '100%', height: 500, marginTop:'4rem', marginBottom:'4rem' }}>
-                                        <ResponsiveContainer>
-                                        <LineChart
-                                            width={500}
-                                            height={300}
-                                            data={data}
-                                            margin={{
-                                                top: 5,
-                                                right: 30,
-                                                left: 20,
-                                                bottom: 5
-                                            }}
-                                            >
-                                            <CartesianGrid strokeDasharray="3 3" />
-                                            <XAxis dataKey="name" />
-                                            <YAxis />
-                                            <Tooltip />
-                                            <Legend />
-                                            <Line
-                                                type="monotone"
-                                                dataKey="pv"
-                                                stroke="#8884d8"
-                                                activeDot={{ r: 8 }}
-                                            />
-                                            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
-                                            </LineChart>
-                                        </ResponsiveContainer>
-                                        </div>
-                                </div>     
-                            </section>
-                            
                             <section className="mt-5 mb-5">
                                 <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3">
                                     <Tab eventKey="home" title="Request Verification">

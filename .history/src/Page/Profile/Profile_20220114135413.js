@@ -924,9 +924,9 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
 
             <div className="App">
               
-                    <div style={{ width: '100%', height: 500, marginTop:'4rem', marginBottom:'4rem' }}>
+                    <div style={{ width: '50%', height: 300, marginTop:'4rem', marginBottom:'4rem' }}>
                       <ResponsiveContainer>
-                        <BarChart   data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
+                        <BarChart  width={300} height={300} data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                             <CartesianGrid strokeDasharray="3 3" />
                               <XAxis dataKey="name" />
                               <YAxis />

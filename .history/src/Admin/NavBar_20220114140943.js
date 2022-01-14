@@ -42,7 +42,7 @@ function NavBar () {
           <Navbar bg="dark" variant="dark" sticky="top">
             <Container>
 
-              <p className="btn btn-primary" onClick={back}><MdIcons.MdArrowBack/> Back</p>{'  '}
+              <p className="btn btn-primary" onClick={back}><MdIcons.MdLeftIcon/> Back</p>{'  '}
               <p onClick={logout} className="btn text-light"><MdIcons.MdOutlineLogout/> Logout</p>
             </Container>  
           </Navbar>
