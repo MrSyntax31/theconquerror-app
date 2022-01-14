@@ -25,16 +25,11 @@ import { collection, getFirestore, doc, setDoc,  onSnapshot   } from 'firebase/f
 import { getDatabase, ref, onValue, update } from "firebase/database";
 import { getStorage, uploadBytesResumable, getDownloadURL} from 'firebase/storage'
 
-//Charts
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend
-} from "recharts";
+//Sample Charts
+//import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import 'C:\Users\Arllan\Downloads\LatestUpdate\theconquerror-app\node_modules\react-vis\dist\style.css';
+import {XYPlot, LineSeries} from 'react-vis';
+
 
 //Navbar
 import Navbar from '../../Components/Navbar/Navbar'
@@ -104,43 +99,17 @@ const Profile = () => {
 
   //For Graphs (Data)
   const data = [
-    {
-      name: "Page A",
-      pv: 2400,
-      amt: 2400
-    },
-    {
-      name: "Page B",
-      pv: 1398,
-      amt: 2210
-    },
-    {
-      name: "Page C",
-      pv: 9800,
-      amt: 2290
-    },
-    {
-      name: "Page D",
-      pv: 3908,
-      amt: 2000
-    },
-    {
-      name: "Page E",
-      pv: 4800,
-      amt: 2181
-    },
-    {
-      name: "Page F",
-      pv: 3800,
-      amt: 2500
-    },
-    {
-      name: "Page G",
-      pv: 4300,
-      amt: 2100
-    }
+    {x: 0, y: 8},
+    {x: 1, y: 5},
+    {x: 2, y: 4},
+    {x: 3, y: 9},
+    {x: 4, y: 1},
+    {x: 5, y: 7},
+    {x: 6, y: 6},
+    {x: 7, y: 3},
+    {x: 8, y: 2},
+    {x: 9, y: 0}
   ];
-  
  
   //Fetch Data of current Logged-in User 
   const user = auth.currentUser;
@@ -936,24 +905,12 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                      alignItems: "center"
                   }}>
 
-                <BarChart
-                      width={500}
-                      height={300}
-                      data={data}
-                      margin={{
-                        top: 5,
-                        right: 30,
-                        left: 20,
-                        bottom: 5
-                      }}
-                    >
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <Tooltip />
-                      <Legend />
-                      <Bar dataKey="pv" fill="#8884d8" />
-                    </BarChart>
+              <div className="App">
+                      <XYPlot height={300} width={300}>
+                        <LineSeries data={data} />
+                      </XYPlot>
+                    </div>
+
 
               </Container>
             </div>    

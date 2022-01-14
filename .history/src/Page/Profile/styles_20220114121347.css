@@ -766,8 +766,14 @@
  
 
 
-  .App {
-    font-family: sans-serif;
-    text-align: center;
+  canvas {
+    border: 1px dotted rgb(0, 102, 255);
+  }
+  
+  .chart-container {
+    position: relative;
+    margin: auto;
+    height: 80vh;
+    width: 80vw;
   }
   

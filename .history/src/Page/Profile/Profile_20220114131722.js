@@ -25,16 +25,20 @@ import { collection, getFirestore, doc, setDoc,  onSnapshot   } from 'firebase/f
 import { getDatabase, ref, onValue, update } from "firebase/database";
 import { getStorage, uploadBytesResumable, getDownloadURL} from 'firebase/storage'
 
-//Charts
+//Sample Charts
+//import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import './../../../node_modules/react-vis/dist/style.css';
+//import {XYPlot, LineSeries} from 'react-vis';
 import {
-  BarChart,
-  Bar,
+  XYPlot,
   XAxis,
   YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend
-} from "recharts";
+  VerticalGridLines,
+  HorizontalGridLines,
+  VerticalBarSeries,
+  VerticalBarSeriesCanvas,
+  DiscreteColorLegend
+} from 'react-vis';
 
 //Navbar
 import Navbar from '../../Components/Navbar/Navbar'
@@ -89,6 +93,9 @@ const FooterStyle = styled.div`
   }
 `;
 
+state = {
+  useCanvas: false
+};
 
 
 const Profile = () => {
@@ -103,43 +110,15 @@ const Profile = () => {
  
 
   //For Graphs (Data)
-  const data = [
-    {
-      name: "Page A",
-      pv: 2400,
-      amt: 2400
-    },
-    {
-      name: "Page B",
-      pv: 1398,
-      amt: 2210
-    },
-    {
-      name: "Page C",
-      pv: 9800,
-      amt: 2290
-    },
-    {
-      name: "Page D",
-      pv: 3908,
-      amt: 2000
-    },
-    {
-      name: "Page E",
-      pv: 4800,
-      amt: 2181
-    },
-    {
-      name: "Page F",
-      pv: 3800,
-      amt: 2500
-    },
-    {
-      name: "Page G",
-      pv: 4300,
-      amt: 2100
-    }
-  ];
+  const greenData = [{x: 'A', y: 10}, {x: 'B', y: 5}, {x: 'C', y: 15}];
+
+  const blueData = [{x: 'A', y: 12}, {x: 'B', y: 2}, {x: 'C', y: 11}];
+  
+  const labelData = greenData.map((d, idx) => ({
+    x: d.x,
+    y: Math.max(greenData[idx].y, blueData[idx].y)
+  }));
+
   
  
   //Fetch Data of current Logged-in User 
@@ -936,24 +915,10 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                      alignItems: "center"
                   }}>
 
-                <BarChart
-                      width={500}
-                      height={300}
-                      data={data}
-                      margin={{
-                        top: 5,
-                        right: 30,
-                        left: 20,
-                        bottom: 5
-                      }}
-                    >
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <Tooltip />
-                      <Legend />
-                      <Bar dataKey="pv" fill="#8884d8" />
-                    </BarChart>
+              <div className="App">
+                      
+                    </div>
+
 
               </Container>
             </div>    

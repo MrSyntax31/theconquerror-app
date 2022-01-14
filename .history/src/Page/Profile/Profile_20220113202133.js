@@ -25,16 +25,10 @@ import { collection, getFirestore, doc, setDoc,  onSnapshot   } from 'firebase/f
 import { getDatabase, ref, onValue, update } from "firebase/database";
 import { getStorage, uploadBytesResumable, getDownloadURL} from 'firebase/storage'
 
-//Charts
-import {
-  BarChart,
-  Bar,
-  XAxis,
-  YAxis,
-  CartesianGrid,
-  Tooltip,
-  Legend
-} from "recharts";
+//Sample Charts
+import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, ResponsiveContainer } from 'recharts';
+import { MDBContainer } from "mdbreact";
+import { Radar } from "react-chartjs-2";
 
 //Navbar
 import Navbar from '../../Components/Navbar/Navbar'
@@ -102,45 +96,21 @@ const Profile = () => {
   const storage = getStorage();
  
 
-  //For Graphs (Data)
-  const data = [
-    {
-      name: "Page A",
-      pv: 2400,
-      amt: 2400
-    },
-    {
-      name: "Page B",
-      pv: 1398,
-      amt: 2210
-    },
-    {
-      name: "Page C",
-      pv: 9800,
-      amt: 2290
-    },
-    {
-      name: "Page D",
-      pv: 3908,
-      amt: 2000
-    },
-    {
-      name: "Page E",
-      pv: 4800,
-      amt: 2181
-    },
-    {
-      name: "Page F",
-      pv: 3800,
-      amt: 2500
-    },
-    {
-      name: "Page G",
-      pv: 4300,
-      amt: 2100
-    }
-  ];
-  
+  //For Graphs (Data and Datus)
+  const data = {
+    labels: ["Sunday", "Monday", "Tuesday", 
+    "Wednesday", "Thursday", "Friday", "Saturday"],
+    datasets: [
+      {
+        label: "Hours Studied in Geeksforgeeks",
+        data: [8, 5, 6, 7, 5, 3, 8],
+        backgroundColor: "rgba(6, 156,51, .3)",
+        borderColor: "#02b844",
+      }
+    ]
+  }
+
+ 
  
   //Fetch Data of current Logged-in User 
   const user = auth.currentUser;
@@ -927,37 +897,20 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
             <h1>My ConquError Status</h1>
 
             <h5 className="text-primary">This Feature is under development!!!</h5>
-
             <div className="App">
               
-              <Container fluid="md" style={{
-                     display: "flex",
-                     justifyContent: "center",
-                     alignItems: "center"
-                  }}>
 
-                <BarChart
-                      width={500}
-                      height={300}
-                      data={data}
-                      margin={{
-                        top: 5,
-                        right: 30,
-                        left: 20,
-                        bottom: 5
-                      }}
-                    >
-                      <CartesianGrid strokeDasharray="3 3" />
-                      <XAxis dataKey="name" />
-                      <YAxis />
-                      <Tooltip />
-                      <Legend />
-                      <Bar dataKey="pv" fill="#8884d8" />
-                    </BarChart>
+              <Container style={{ width: '100%', height: 600, marginTop:'4rem', marginBottom:'4rem' }}>
 
+                          <MDBContainer>
+                            <Radar data={data} style={{ maxHeight: '600px' }}/>
+                          </MDBContainer>
+
+                          
+
+                   
               </Container>
             </div>    
-
 
             <Offcanvas show={showOff} onHide={handleCloseOff}>
                 <Offcanvas.Header closeButton>
