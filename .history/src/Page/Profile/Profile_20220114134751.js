@@ -4,7 +4,7 @@ import React, {  useState , useEffect, useRef } from 'react';
 import Helmet from 'react-helmet';
 
 //Styles & Libraries
-import {  Modal, Button, Card, Offcanvas, Form, ProgressBar } from 'react-bootstrap';
+import {  Modal, Button, Row, Col, Container, Card, Offcanvas, Form, ProgressBar } from 'react-bootstrap';
 
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
@@ -932,7 +932,7 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                               <YAxis />
                               <Tooltip />
                               <Legend />
-                             
+                              <
                               <Bar dataKey="pv" fill="#3a86ff" />
                         </BarChart>
                       </ResponsiveContainer>

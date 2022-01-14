@@ -4,7 +4,7 @@ import React, {  useState , useEffect, useRef } from 'react';
 import Helmet from 'react-helmet';
 
 //Styles & Libraries
-import {  Modal, Button, Card, Offcanvas, Form, ProgressBar } from 'react-bootstrap';
+import {  Modal, Button, Row, Col, Container, Card, Offcanvas, Form, ProgressBar } from 'react-bootstrap';
 
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
@@ -33,8 +33,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend,
-  ResponsiveContainer
+  Legend
 } from "recharts";
 
 //Navbar
@@ -924,19 +923,34 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
 
             <div className="App">
               
+              <Container fluid="md" style={{
+                     display: "flex",
+                     justifyContent: "center",
+                     alignItems: "center"
+                  }}>
                     <div style={{ width: '100%', height: 300, marginTop:'4rem', marginBottom:'4rem' }}>
-                      <ResponsiveContainer>
-                        <BarChart  width={500} height={300} data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
-                            <CartesianGrid strokeDasharray="3 3" />
-                              <XAxis dataKey="name" />
-                              <YAxis />
-                              <Tooltip />
-                              <Legend />
-                             
-                              <Bar dataKey="pv" fill="#3a86ff" />
-                        </BarChart>
-                      </ResponsiveContainer>
+                    <BarChart
+                                          width={500}
+                                          height={100}
+                                          data={data}
+                                          margin={{
+                                            top: 5,
+                                            right: 30,
+                                            left: 20,
+                                            bottom: 5
+                                          }}
+                                        >
+                                          <CartesianGrid strokeDasharray="3 3" />
+                                          <XAxis dataKey="name" />
+                                          <YAxis />
+                                          <Tooltip />
+                                          <Legend />
+                                          <Bar dataKey="pv" fill="#3a86ff" />
+                                        </BarChart>
                     </div>
+                    
+
+              </Container>
             </div>    
 
 
