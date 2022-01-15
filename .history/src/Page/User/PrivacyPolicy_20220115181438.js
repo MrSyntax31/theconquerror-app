@@ -252,11 +252,7 @@ const PrivacyPolicy = () => {
                                                                 For any questions or concerns regarding your privacy, you may contact us using the following details:
                                                             </p>
 
-                                                            <ul className="list-unstyled ">
-                                                                <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaHome/> Lopez, Quezon </li>
-                                                                <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaGoogle/> technojet.devofficial</li>
-                                                                <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaPhoneAlt/> +63 956 528 0371</li>
-                                                            </ul>
+                                                            
                                                             
                                                     </div>
                                                 </div>

@@ -3,11 +3,9 @@ import { Link } from "react-router-dom";
 import { Container, Navbar} from 'react-bootstrap';
 import { Helmet } from "react-helmet";
 
-import styled from 'styled-components';
-import * as FaIcons from 'react-icons/fa';
-import 'csshake';
+const PrivacyPolicy = () => {
 
-const FooterStyle = styled.div`
+    const FooterStyle = styled.div`
   background-color: var(--deep-dark);
   padding-top: 1.8rem;
   .container {
@@ -56,9 +54,7 @@ const FooterStyle = styled.div`
   }
 `;
 
-const PrivacyPolicy = () => {
 
-    
     return (
         <>
              <div>
@@ -251,12 +247,6 @@ const PrivacyPolicy = () => {
                                                             <p> 
                                                                 For any questions or concerns regarding your privacy, you may contact us using the following details:
                                                             </p>
-
-                                                            <ul className="list-unstyled ">
-                                                                <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaHome/> Lopez, Quezon </li>
-                                                                <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaGoogle/> technojet.devofficial</li>
-                                                                <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaPhoneAlt/> +63 956 528 0371</li>
-                                                            </ul>
                                                             
                                                     </div>
                                                 </div>

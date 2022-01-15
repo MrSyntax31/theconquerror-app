@@ -3,59 +3,6 @@ import { Link } from "react-router-dom";
 import { Container, Navbar} from 'react-bootstrap';
 import { Helmet } from "react-helmet";
 
-import styled from 'styled-components';
-import * as FaIcons from 'react-icons/fa';
-import 'csshake';
-
-const FooterStyle = styled.div`
-  background-color: var(--deep-dark);
-  padding-top: 1.8rem;
-  .container {
-    display: flex;
-    gap: 1.5rem;
-  }
-  .footer__col1 {
-    flex: 2;
-  }
-  .footer__col2,
-  .footer__col3,
-  .footer__col4 {
-    flex: 1;
-  }
-  .footer__col1__title {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-  }
-  .copyright {
-    background-color: var(--dark-bg);
-    text-align: left;
-    padding: 1rem 0;
-    margin-top: 3rem;
-    .para {
-      margin-left: 0;
-    }
-  }
-  @media only screen and (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      gap: 0rem;
-      & > div {
-        margin-top: 3.5rem;
-      }
-    }
-    .footer__col1 .para {
-      max-width: 100%;
-    }
-    .copyright {
-      .container {
-        div {
-          margin-top: 0;
-        }
-      }
-    }
-  }
-`;
-
 const PrivacyPolicy = () => {
 
     
@@ -251,12 +198,6 @@ const PrivacyPolicy = () => {
                                                             <p> 
                                                                 For any questions or concerns regarding your privacy, you may contact us using the following details:
                                                             </p>
-
-                                                            <ul className="list-unstyled ">
-                                                                <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaHome/> Lopez, Quezon </li>
-                                                                <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaGoogle/> technojet.devofficial</li>
-                                                                <li className="mb-2  justify-content-center align-items-center"><FaIcons.FaPhoneAlt/> +63 956 528 0371</li>
-                                                            </ul>
                                                             
                                                     </div>
                                                 </div>
