@@ -227,10 +227,23 @@ const PrivacyPolicy = () => {
                                                     <h3 className="mt-3 mb-3 fw-bold">Restrictions</h3>
                                                             <p> 
                                                                 You always retain the right to withhold personal information from us, with the understanding that your experience of our website may be affected. We will not discriminate against you for exercising any of your rights over your personal information. If you do provide us with personal information, you understand that we will collect, hold, use, and disclose it by this privacy policy. You retain the right to request details of any personal information we hold about you.
-                                                            </p>  
-                                                            <ul>
-                                                                <li>Any unpoliteness post </li>    
-                                                            </ul>                                                         
+                                                            </p>
+                                                            
+                                                            <p>
+                                                                If we receive personal information about you from a third party, we will protect it as set out in this privacy policy. If you are a third party providing personal information about somebody else, you represent and warrant that you have such person’s consent to provide the personal information to us.
+                                                            </p>
+
+                                                            <p>
+                                                                If you have previously agreed to us using your personal information for direct marketing purposes, you may change your mind at any time. We will provide you with the ability to unsubscribe from our email database or opt out of communications. Please be aware we may need to request specific information from you to help us confirm your identity.
+                                                            </p>
+
+                                                            <p>
+                                                                If you believe that any information, we hold about you is inaccurate, out of date, incomplete, irrelevant, or misleading, please contact us using the details provided in this privacy policy. We will take reasonable steps to correct any information found to be inaccurate, incomplete, misleading, or out of date.
+                                                            </p>
+
+                                                            <p>
+                                                                If you believe that we have breached a relevant data protection law and wish to make a complaint, please contact us using the details below and provide us with full details of the alleged breach. We will promptly investigate your complaint and respond to you, in writing, setting out the outcome of our investigation and the steps we will take to deal with your complaint. You also have the right to contact a regulatory body or data protection authority about your complaint.
+                                                            </p>
                                                     </div>
                                                 </div>
                                             </div>

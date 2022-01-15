@@ -228,9 +228,7 @@ const PrivacyPolicy = () => {
                                                             <p> 
                                                                 You always retain the right to withhold personal information from us, with the understanding that your experience of our website may be affected. We will not discriminate against you for exercising any of your rights over your personal information. If you do provide us with personal information, you understand that we will collect, hold, use, and disclose it by this privacy policy. You retain the right to request details of any personal information we hold about you.
                                                             </p>  
-                                                            <ul>
-                                                                <li>Any unpoliteness post </li>    
-                                                            </ul>                                                         
+                                                                                                                     
                                                     </div>
                                                 </div>
                                             </div>
