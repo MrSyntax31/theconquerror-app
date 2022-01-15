@@ -241,7 +241,7 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
         
 <>
 
-  <div>
+<div>
       <Helmet>
         <title>ConquError | Register</title>
         <meta name="description" content="ConquError Register page" />
@@ -425,7 +425,7 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
                     size="lg"
                     keyboard={false}>
                     <Modal.Header >
-                      <Modal.Title className="fw-bold">Terms and Conditions</Modal.Title>
+                      <Modal.Title >Terms and Conditions</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                     <p ><strong>ConquError</strong> values and respects your right to privacy. We are committed to protect the privacy of our website visitors. We will only collect, record, store, process, and use your personal information in accordance with the <a href="https://www.privacy.gov.ph/data-privacy-act/">Data Privacy Act of 2012</a>, its Implementing Rules and Regulations, the issuances by the National Privacy Commission, and other pertinent laws.
@@ -447,10 +447,6 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
                               <li>• Institution</li>
                               <li>• Birthday</li>
                             </ul>
-
-                            <div className="w-100 text-center mt-5 mb-1">
-                              See full details here! <Link to="/privacypolicy" style={{ textDecoration: 'none' }}>Privacy Policy</Link>
-                            </div>
                         </main>
                     </Modal.Body>
                     <Modal.Footer> 

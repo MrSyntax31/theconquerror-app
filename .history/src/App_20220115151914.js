@@ -19,7 +19,7 @@ import Tutorial from './Page/Tutorial/Tutorial';
 import Profile from './Page/Profile/Profile';
 import Login from './Page/User/Login';
 import Register from './Page/User/Register';
-import Policy from './Page/User/PrivacyPolicy';
+import Policy from './Page/User/Login';
 import ForgotPass from './Page/User/ForgotPass';
 //import Footer from './Components/Footer/Footer';
 import { AuthProvider } from "../src/firebase/auth"
@@ -60,8 +60,6 @@ const App = () => {
      <Route path="/videocollection" component={Tutorial}/>
 
      <Route path="/register" component={Register} />
-
-      <Route path="/privacypolicy" component={Policy} />
 
      <PrivateRoute path="/hangman" component={Hangman}/>
 

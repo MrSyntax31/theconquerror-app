@@ -61,7 +61,7 @@ const App = () => {
 
      <Route path="/register" component={Register} />
 
-      <Route path="/privacypolicy" component={Policy} />
+      <Route path="/privacypolicy" component={Login} />
 
      <PrivateRoute path="/hangman" component={Hangman}/>
 

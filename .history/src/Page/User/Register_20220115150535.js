@@ -241,7 +241,7 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
         
 <>
 
-  <div>
+<div>
       <Helmet>
         <title>ConquError | Register</title>
         <meta name="description" content="ConquError Register page" />
@@ -425,32 +425,27 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
                     size="lg"
                     keyboard={false}>
                     <Modal.Header >
-                      <Modal.Title className="fw-bold">Terms and Conditions</Modal.Title>
+                      <Modal.Title>Terms and Conditions</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
                     <p ><strong>ConquError</strong> values and respects your right to privacy. We are committed to protect the privacy of our website visitors. We will only collect, record, store, process, and use your personal information in accordance with the <a href="https://www.privacy.gov.ph/data-privacy-act/">Data Privacy Act of 2012</a>, its Implementing Rules and Regulations, the issuances by the National Privacy Commission, and other pertinent laws.
                         </p>
 
-                        <p>This Privacy Policy informs you of updates in our corporate policies regarding the collection, use, storage, disclosure, and disposal of personal information we receive and collect from our customers, and any individual who communicates, raises inquiries and concerns, as well as transacts with us through our authorized representatives. We will only use your data based on the limitations set by this policy. We  only once to collect and stored your information, this policy will allow you to be  protected, and any update with regards of your current information will be done via request to the admin. The user will be notified of the changes.</p>
-                   
-                        <main>
+                        <p>This Privacy Policy informs you of updates in our corporate policies regarding the collection, use, storage, disclosure, and disposal of personal information we receive and collect from our customers, and any individual who communicates, raises inquiries and concerns, as well as transacts with us through our authorized representatives.
 
+                        We will only use your data based on the limitations set by this policy.
+                        </p>
+                        <br/>
+                        <p>We  only once to collect and stored your information, this policy will allow you to be  protected, and any update with regards of your current information will be done via request to the admin. The user will be notified of the changes.</p>
+                        <br/>
+                        <main>
+                          <h3 className="mb-3 fw-bold">Privacy Policy</h3>
+                          <p>Your privacy is extremely important to us. ConquError's policy is to respect your privacy and to adhere to all applicable laws and regulations regarding the personal information we may collect about you, including on our website, https://theconquerror.netlify.app/, and other sites we own and control.
+                            This policy is in force as of January 10, of this year and was last modified on January 10, 2022.
+                          </p>
                           <h3 className="mt-3 mb-3 fw-bold">Information We Collect</h3>
                           <p>We gather the information that you intentionally and actively supply us when using or participating in any of our services and promotions, as well as information that your devices begin sending us when using our products and services.</p>
-                          <h3 className="mt-3 mb-3 fw-bold">Personal Information</h3>
-                          <p>We may ask for personal information which may include one or more of the following:</p>
-                            <ul>
-                              <li>• Name</li>
-                              <li>• Address</li>
-                              <li>• Email Address</li>
-                              <li>• Occupation</li>
-                              <li>• Institution</li>
-                              <li>• Birthday</li>
-                            </ul>
-
-                            <div className="w-100 text-center mt-5 mb-1">
-                              See full details here! <Link to="/privacypolicy" style={{ textDecoration: 'none' }}>Privacy Policy</Link>
-                            </div>
+                          
                         </main>
                     </Modal.Body>
                     <Modal.Footer> 

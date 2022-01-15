@@ -449,7 +449,7 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
                             </ul>
 
                             <div className="w-100 text-center mt-5 mb-1">
-                              See full details here! <Link to="/privacypolicy" style={{ textDecoration: 'none' }}>Privacy Policy</Link>
+                              See full details here! <Link to="/policy" style={{ textDecoration: 'none' }}>Privacy Policy</Link>
                             </div>
                         </main>
                     </Modal.Body>
