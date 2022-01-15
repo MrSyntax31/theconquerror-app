@@ -386,7 +386,7 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
                                 <option value="">Select Institution</option>
                                 <option value="Laguna State Polytechnic University">Laguna State Polytechnic University</option>
                                 <option value="Polytechnic University of the Philippines">Polytechnic University of the Philippines</option>
-                                <option value="Technological University of the Philippines">Technological University of the Philippines</option>
+                                <option value="Technological University of the P">TUP</option>
                                 <option value="Others">Others.</option>
                               </Form.Control>
                               { instiHide &&  <Form.Control className="mt-2" value={insti} onChange={e => setInsti(e.target.value)}  name = "Institution" type="text"  required placeholder="Please Specify"/> }

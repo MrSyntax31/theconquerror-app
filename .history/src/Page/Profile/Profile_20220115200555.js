@@ -942,6 +942,8 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
         <div className="mt-5" style={{ textAlign: "center" }}>
             <h1>My ConquError Status</h1>
 
+            
+
             <div className="App">
               
                     <div style={{ width: '100%', height: 500, marginTop:'4rem', marginBottom:'4rem' }}>
