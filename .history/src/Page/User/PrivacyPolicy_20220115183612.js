@@ -77,7 +77,7 @@ const PrivacyPolicy = () => {
                   height="30"
                   className="d-inline-block align-top"
                 />{' '}ConquError</h4>
-            <Link to="/register" className="text-light" style={{ textDecoration: 'none' }}>Back</Link>
+            <Link to="/register" style={{ textDecoration: 'none' }}></Link>
             </Container>  
           </Navbar>
             <section className="features section ">

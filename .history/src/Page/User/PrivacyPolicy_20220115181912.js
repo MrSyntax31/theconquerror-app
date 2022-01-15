@@ -69,15 +69,9 @@ const PrivacyPolicy = () => {
             </div> 
             <Navbar bg="dark" variant="dark" sticky="top">
             <Container>
-            <h4 className="text-center text-light fw-bold mt-3">
-                  <img
-                  alt="icon"
-                  src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FConquErrorT.png?alt=media&token=3c73abe9-0cce-403d-991f-89fa536280ef"
-                  width="30"
-                  height="30"
-                  className="d-inline-block align-top"
-                />{' '}ConquError</h4>
-            <Link to="/register" className="text-light" style={{ textDecoration: 'none' }}>Back</Link>
+
+            <Link to="/login" style={{ textDecoration: 'none' }}>Log In</Link>
+              <p className="btn text-light">Logout</p>
             </Container>  
           </Navbar>
             <section className="features section ">
