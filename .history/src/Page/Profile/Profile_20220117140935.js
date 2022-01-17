@@ -953,7 +953,7 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
                               <Tooltip />
                               <Legend />
                              
-                              <Bar dataKey="score" fill="#3a86ff" />
+                              <Bar dataKey="pv" fill="#3a86ff" />
                         </BarChart>
                       </ResponsiveContainer>
                     </div>
