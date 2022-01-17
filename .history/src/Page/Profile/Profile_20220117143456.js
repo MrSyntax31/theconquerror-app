@@ -943,7 +943,7 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
         <div className="mt-5" style={{ textAlign: "center" }}>
             <h1>My ConquError Status</h1>
             <div className="w-100 mt-2 mb-2 text-center text-secondary">
-              Wanna boost your skills? Go to Course! <Link to="/lessons" style={{ textDecoration: 'none' }}>Course</Link>
+              Wanna  <Link to="/register" style={{ textDecoration: 'none' }}>Register</Link>
             </div>
             <div className="App">
               

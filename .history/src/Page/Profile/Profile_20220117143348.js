@@ -2,7 +2,6 @@ import React, {  useState , useEffect, useRef } from 'react';
 
 //Dependencies
 import Helmet from 'react-helmet';
-import { Link } from "react-router-dom"
 
 //Styles & Libraries
 import {  Modal, Button, Card, Offcanvas, Form, ProgressBar } from 'react-bootstrap';
@@ -942,9 +941,7 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
 
         <div className="mt-5" style={{ textAlign: "center" }}>
             <h1>My ConquError Status</h1>
-            <div className="w-100 mt-2 mb-2 text-center text-secondary">
-              Wanna boost your skills? Go to Course! <Link to="/lessons" style={{ textDecoration: 'none' }}>Course</Link>
-            </div>
+                          
             <div className="App">
               
                     <div style={{ width: '100%', height: 500, marginTop:'4rem', marginBottom:'4rem' }}>
