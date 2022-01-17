@@ -1005,11 +1005,11 @@ class Tutorial extends Component {
                                                     <Table striped bordered hover>
                                                         <thead>
                                                         <tr>
-                                                        <th>File name</th>
-                                                        <th>Uploaded By</th>
-                                                        <th>Date</th>
-                                                        <th>File Type</th>
-                                                        <th>Size</th>
+                                                        <th>User ID</th>
+                                                        <th>Proof</th>
+                                                        <th>Date Of Request</th>
+                                                        <th>Status</th>
+                                                        <th>Approve</th>
                                                         </tr>
                                                         </thead>
                                                         

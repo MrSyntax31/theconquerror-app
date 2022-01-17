@@ -1011,10 +1011,10 @@ class Tutorial extends Component {
                                                         <th>File Type</th>
                                                         <th>Size</th>
                                                         </tr>
+                                                        <Button >Show More</Button>
                                                         </thead>
                                                         
                                                     </Table>
-                                                        <Button >Show More</Button>
                                             </Form> 
                                 </Card.Body>
                             </Card>

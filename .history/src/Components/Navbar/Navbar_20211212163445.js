@@ -35,9 +35,9 @@ function App() {
               <MdIcons.MdGames/> Games
               </NavLink>
             </li>
-            <li className="nav-item" style={{width: "7rem"}}>
-              <NavLink className="nav-link" to="/tutorials" exact>
-              <MdIcons.MdVideoLibrary/> Tutorials
+            <li className="nav-item" style={{width: "6rem"}}>
+              <NavLink className="nav-link" to="/videocollection" exact>
+              <MdIcons.MdVideoLibrary/> Videos
               </NavLink>
             </li>
             <li className="nav-item" style={{width: "6rem"}}>

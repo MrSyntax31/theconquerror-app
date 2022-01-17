@@ -1,6 +1,6 @@
 import React, { Component  } from "react";
 import { Helmet } from "react-helmet";
-import { Row, Container, Col, Card, Tab, Tabs, Badge, Form, Table, Button} from 'react-bootstrap';
+import { Row, Container, Col, Card, Tab, Tabs, Badge, For, } from 'react-bootstrap';
 import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
 
@@ -1005,16 +1005,16 @@ class Tutorial extends Component {
                                                     <Table striped bordered hover>
                                                         <thead>
                                                         <tr>
-                                                        <th>File name</th>
-                                                        <th>Uploaded By</th>
-                                                        <th>Date</th>
-                                                        <th>File Type</th>
-                                                        <th>Size</th>
+                                                        <th>User ID</th>
+                                                        <th>Proof</th>
+                                                        <th>Date Of Request</th>
+                                                        <th>Status</th>
+                                                        <th>Approve</th>
                                                         </tr>
                                                         </thead>
-                                                        
+                                                        {ReqVerfi}
                                                     </Table>
-                                                        <Button >Show More</Button>
+                                                        <Button onClick={getMoreRequests}>Show More</Button>
                                             </Form> 
                                 </Card.Body>
                             </Card>

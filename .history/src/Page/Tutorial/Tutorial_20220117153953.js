@@ -1,6 +1,6 @@
 import React, { Component  } from "react";
 import { Helmet } from "react-helmet";
-import { Row, Container, Col, Card, Tab, Tabs, Badge, Form, Table, Button} from 'react-bootstrap';
+import { Row, Container, Col, Card, Tab, Tabs, Badge} from 'react-bootstrap';
 import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
 
@@ -1000,23 +1000,8 @@ class Tutorial extends Component {
                                             <p>You may need software to open, view and print the files in this page:  Microsoft Excel Online or Microsoft Word Online. Most modern browsers and devices can open PDF and ZIP files.</p>
                                         </div>
                             <Card className="mt-5">
-                                <Card.Body>
-                                            <Form className="m-2"  >
-                                                    <Table striped bordered hover>
-                                                        <thead>
-                                                        <tr>
-                                                        <th>File name</th>
-                                                        <th>Uploaded By</th>
-                                                        <th>Date</th>
-                                                        <th>File Type</th>
-                                                        <th>Size</th>
-                                                        </tr>
-                                                        </thead>
-                                                        
-                                                    </Table>
-                                                        <Button >Show More</Button>
-                                            </Form> 
-                                </Card.Body>
+                                <Card.Body></Card.Body>
+                              
                             </Card>
                         </Container>
                              

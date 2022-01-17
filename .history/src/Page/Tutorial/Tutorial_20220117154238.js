@@ -1009,7 +1009,7 @@ class Tutorial extends Component {
                                                         <th>Uploaded By</th>
                                                         <th>Date</th>
                                                         <th>File Type</th>
-                                                        <th>Size</th>
+                                                        <th>Approve</th>
                                                         </tr>
                                                         </thead>
                                                         

@@ -1,6 +1,6 @@
 import React, { Component  } from "react";
 import { Helmet } from "react-helmet";
-import { Row, Container, Col, Card, Tab, Tabs, Badge, Form, Table, Button} from 'react-bootstrap';
+import { Row, Container, Col, Card, Tab, Tabs, Badge} from 'react-bootstrap';
 import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
 
@@ -994,32 +994,216 @@ class Tutorial extends Component {
 
                             </section>
 
-                        <Container>
-                                        <div className="">
-                                            <h1 className="text-center text-primary fw-bold">Downloads for Students</h1>
-                                            <p>You may need software to open, view and print the files in this page:  Microsoft Excel Online or Microsoft Word Online. Most modern browsers and devices can open PDF and ZIP files.</p>
-                                        </div>
                             <Card className="mt-5">
-                                <Card.Body>
-                                            <Form className="m-2"  >
-                                                    <Table striped bordered hover>
-                                                        <thead>
-                                                        <tr>
-                                                        <th>File name</th>
-                                                        <th>Uploaded By</th>
-                                                        <th>Date</th>
-                                                        <th>File Type</th>
-                                                        <th>Size</th>
-                                                        </tr>
-                                                        </thead>
+                                            <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
+                                                <Tab eventKey="home" title="Kuya Dev">
+                                                    <Row>
+                                                        <Col  className="text-center">
+                                                                    <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FCreator%2F162108690_121301806677028_8488807075884298821_n.jpg?alt=media&token=7ea53e45-dee7-4a61-bb98-407b21d24f94" />
+                                                                <div className="text-center mt-3">
+                                                                    <p><strong>Kuya Dev</strong></p>
+                                                                    <p>Ako si Rem, ang inyong Kuya Dev.</p>
+                                                                </div>
+                                                        </Col>
                                                         
-                                                    </Table>
-                                                        <Button >Show More</Button>
-                                            </Form> 
-                                </Card.Body>
-                            </Card>
-                        </Container>
-                             
+                                                        <Col xs={12} md={8} className="container mb-5 m-3">
+                                                            <p className="mt-2 text-justify">
+                                                                <strong>Rem Lampa</strong> is Kuya Dev. He is a podcaster, web developer, speaker, and tech community leader.
+                                                            <br/>
+                                                            Formerly an electrical engineer, he is currently a Senior JS Engineer at Prosple, specialized in ReactJS and ExpressJS.
+                                                            <br/>
+                                                            He is also a co-founder and community manager of freeCodeCamp.Manila, and part of the core team of ReactJS Philippines.
+                                                            <br/>
+                                                            * <i className="fw-bold mt-5">"Kuya"</i> means "older brother" in Filipino, often used as a term of endearment.
+                                                            </p>
+                                                            <label className="fw-bold mb-2">Follow and Subscribe to learn more!</label>
+                                                            <br/>
+                                                            <h5>
+                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Career Hack</Badge>
+                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> Podcast</Badge>
+                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> IT Tips</Badge>
+                                                            <Badge bg="" text="dark"><BsIcons.BsTags/> GraphQL</Badge>
+                                                            </h5>
+                                                            
+                                                            <a href="https://www.facebook.com/Rem.Lampa" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/facebook-new.png"  alt="facebook" /></a>
+                                                            <a href="https://twitter.com/RemLampa?fbclid=IwAR2vIoBPC5VwfDY7mOQIpmA3thzEcxh7jV0gMMDtakCCjEfMTuV5Ogtg1Ps" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/twitter--v2.png"  alt="twitter"/></a>
+                                                            <a href="https://www.youtube.com/RemLampa" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/youtube-play.png"  alt="youtube"/></a>
+                                                            <a href="https://open.spotify.com/show/1w3LK7ABhxOcv5uHppyE0Z?fbclid=IwAR2QNWUbj4MdY70Fcaf-GHt8FzctPYebLmKayxinJ0q_Tv5jigp23S5Eus8" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/spotify--v3.png"  alt="spotify"/></a>
+                                                            <a href="https://github.com/RemLampa?fbclid=IwAR0l8U3KlN39PEYtg9aNgTMPu2E6C7823GEy85RXg6oAe6WwvGS8ce5F_Js" className="text-decoration-none text-white" target="_blank" rel="noopener noreferrer"><img className="mt-2"style={{width:"50px"}} src="https://img.icons8.com/color/50/000000/github.png"  alt="github"/></a>
+                                                        </Col>
+                                                    </Row>
+                                                </Tab>
+
+                                                <Tab eventKey="profile" title="Videos">
+                                                    <Container className="container-fluid mt-7" fluid="md" style={{
+                                                            display: "flex",
+                                                            justifyContent: "center",
+                                                            alignItems: "center"
+                                                        }}>
+                                                        <Card>
+                                                            <Card.Body>
+                                                                
+                                                                <h3 className="mt-2 fw-bold">Featured</h3>
+                                                            <div className="video" style={{
+                                                                position: "relative",
+                                                                paddingBottom: "56.25%" /* 16:9 */,
+                                                                paddingTop: 25,
+                                                                height: 0 }} >
+                                                                    <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://www.youtube.com/embed/O7jCPAOt53U?list=PLh6-IXduASC_QtCU7Dnn3IdLyhsshNtEv" frameBorder="0" title="vid" allowFullScreen/>
+                                                            </div>
+
+                                                            <Container>
+                                                                    <Row>
+                                                                        <div className="mt-3">
+                                                                            <div className="">
+                                                                                <h1 className="fw-bold">Kuya Dev Tidbits Podcast Season 2</h1>
+                                                                                    
+                                                                                    <p>Mga kuro-kuro ni Kuya Dev ukol sa pagbuo ng Career sa Pinoy Tech at Startup industry, at iba pang aspeto ng buhay.</p>
+                                                                                    <p>Minsan nag-i-Ingles rin. Mapraktis lang ba.</p>
+                                                                                    <p>Kuya Dev Tidbits Podcast: New episodes every Saturday at 8AM PHT.</p>
+                                                                                    <div>
+
+                                                
+                                                                                        <section className="about_area section_gap mb-3 mt-3">
+                                                                                                <div className="">
+                                                                                                    <div className="row justify-content-start align-items-center">
+                                                                                                        <div className="col-lg-4">
+                                                                                                            <div className="about_img">
+                                                                                                                <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://www.youtube.com/embed/I2rbRmt4r8g?list=PLh6-IXduASC_QtCU7Dnn3IdLyhsshNtEv" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                                                                            </div>
+                                                                                                        </div>
+
+                                                                                                        <div className="offset-lg-1 col-lg-5 mt-3">
+                                                                                                            <div className="main_title text-left">
+                                                                                                            <h5 className="fw-bold mb-3">S2E2 | Bakit Di Umubra ang Work From Home sa Ibang Kumpanya?</h5>
+                                                                                                                <p className="mb-2">
+                                                                                                                What I think went wrong in companies that failed adopting remote working setup during the pandemic.
+                                                                                                                </p>
+                                                                                                                    ABOUT KUYA DEV TIDBITS PODCAST
+                                                                                                                <p className="mb-2">
+                                                                                                                    Mga kuro-kuro ni Kuya Dev ukol sa pagbuo ng Career sa Pinoy Tech at Startup industry, at iba pang aspeto ng buhay.
+                                                                                                                </p>
+                                                                                                                <p className="mb-2">
+                                                                                                                    Minsan nag-i-Ingles rin. Mapraktis lang ba.
+                                                                                                                </p>
+                                                                                                                <p className="mb-2">
+                                                                                                                    Kuya Dev Tidbits Podcast: New episodes every Saturday at 8AM PHT.
+                                                                                                                </p>
+                                                                                                                <span className="duration">Duration: 16 minutes, 06 seconds</span><br/>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                        </section>
+
+                                                                                        <section className="about_area section_gap mb-3">
+                                                                                                <div className="">
+                                                                                                    <div className="row justify-content-start align-items-center">
+                                                                                                        <div className="col-lg-4">
+                                                                                                            <div className="about_img">
+                                                                                                            <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://www.youtube.com/embed/z2xadp8e9Xs?list=PLh6-IXduASC_QtCU7Dnn3IdLyhsshNtEv" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                                                                            </div>
+                                                                                                        </div>
+
+                                                                                                        <div className="offset-lg-1 col-lg-5 mt-3">
+                                                                                                            <div className="main_title text-left">
+                                                                                                                <h5 className="fw-bold mb-3">S2E3 | Career Hack: The More Entries You Send, The More Chances of Winning</h5>
+                                                                                                                <p className="mb-2">
+                                                                                                                Talakayin natin ang isa sa mga mabisang paraan para mapalaki ang tiyansa na makakuha ng tech job.
+                                                                                                                </p>
+                                                                                                                    ABOUT KUYA DEV TIDBITS PODCAST
+                                                                                                                <p className="mb-2">
+                                                                                                                    Mga kuro-kuro ni Kuya Dev ukol sa pagbuo ng Career sa Pinoy Tech at Startup industry, at iba pang aspeto ng buhay.
+                                                                                                                </p>
+                                                                                                                <p className="mb-2">
+                                                                                                                    Minsan nag-i-Ingles rin. Mapraktis lang ba.
+                                                                                                                </p>
+                                                                                                                <p className="mb-2">
+                                                                                                                    Kuya Dev Tidbits Podcast: New episodes every Saturday at 8AM PHT.
+                                                                                                                </p>
+                                                                                                                <span className="duration">Duration: 13 minutes, 41 seconds</span><br/>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                        </section>
+                                                                                        
+                                                                                        <section className="about_area section_gap mb-3">
+                                                                                                <div className="">
+                                                                                                    <div className="row justify-content-start align-items-center">
+                                                                                                        <div className="col-lg-4">
+                                                                                                            <div className="about_img">
+                                                                                                            <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://www.youtube.com/embed/rMiDze5Nguc?list=PLh6-IXduASC_QtCU7Dnn3IdLyhsshNtEv" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                                                                            </div>
+                                                                                                        </div>
+
+                                                                                                        <div className="offset-lg-1 col-lg-5 mt-3">
+                                                                                                        <h5 className="fw-bold mb-3">S2E4 | College vs. Bootcamp vs. Self-Study: Alin Nga Ba ang Pinaka-Effective?</h5>
+                                                                                                            <div className="main_title text-left">
+                                                                                                                <p className="mb-2">
+                                                                                                                My perspective on the differences between different paths to acquiring skills for a tech career.
+                                                                                                                </p>
+                                                                                                                    ABOUT KUYA DEV TIDBITS PODCAST
+                                                                                                                <p className="mb-2">
+                                                                                                                    Mga kuro-kuro ni Kuya Dev ukol sa pagbuo ng Career sa Pinoy Tech at Startup industry, at iba pang aspeto ng buhay.
+                                                                                                                </p>
+                                                                                                                <p className="mb-2">
+                                                                                                                    Minsan nag-i-Ingles rin. Mapraktis lang ba.
+                                                                                                                </p>
+                                                                                                                <p className="mb-2">
+                                                                                                                    Kuya Dev Tidbits Podcast: New episodes every Saturday at 8AM PHT.
+                                                                                                                </p>
+                                                                                                                <span className="duration">Duration: 30 minutes, 35 seconds</span><br/>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                        </section>
+
+                                                                                        <section className="about_area section_gap mb-3">
+                                                                                                <div className="">
+                                                                                                    <div className="row justify-content-start align-items-center">
+                                                                                                        <div className="col-lg-4">
+                                                                                                            <div className="about_img">
+                                                                                                            <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://www.youtube.com/embed/rMiDze5Nguc?list=PLh6-IXduASC_QtCU7Dnn3IdLyhsshNtEv" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                                                                            </div>
+                                                                                                        </div>
+
+                                                                                                        <div className="offset-lg-1 col-lg-5 mt-3">
+                                                                                                            <div className="main_title text-left">
+                                                                                                                <h5 className="fw-bold mb-3">S2E5 | Should Everyone Invest in Cryptocurrencies?</h5>
+                                                                                                                <p className="mb-2">
+                                                                                                                My take on the cryptocurrency craze. Is it worth throwing money in?
+                                                                                                                </p>
+                                                                                                                    ABOUT KUYA DEV TIDBITS PODCAST
+                                                                                                                <p className="mb-2">
+                                                                                                                    Mga kuro-kuro ni Kuya Dev ukol sa pagbuo ng Career sa Pinoy Tech at Startup industry, at iba pang aspeto ng buhay.
+                                                                                                                </p>
+                                                                                                                <p className="mb-2">
+                                                                                                                    Minsan nag-i-Ingles rin. Mapraktis lang ba.
+                                                                                                                </p>
+                                                                                                                <p className="mb-2">
+                                                                                                                    Kuya Dev Tidbits Podcast: New episodes every Saturday at 8AM PHT.
+                                                                                                                </p>
+                                                                                                                <span className="duration">Duration: 31 minutes, 38 seconds</span><br/>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                        </section>
+
+                                                                                    </div>            
+                                                                            </div>
+                                                                        </div>
+                                                                    </Row>
+                                                            </Container>
+                                                                
+                                                            </Card.Body>
+                                                        </Card>
+                                                    </Container>
+                                                </Tab>
+                                            </Tabs>
+                                        </Card> 
 
                           
             </section>       

@@ -1013,8 +1013,8 @@ class Tutorial extends Component {
                                                         </tr>
                                                         </thead>
                                                         
-                                                    </Table>
                                                         <Button >Show More</Button>
+                                                    </Table>
                                             </Form> 
                                 </Card.Body>
                             </Card>
