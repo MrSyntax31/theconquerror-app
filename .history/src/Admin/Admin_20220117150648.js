@@ -392,7 +392,7 @@ const data =  [
   },
   {
     name:'Female',
-    Gender: female.length
+    Gene: female.length
   }
 ];
 
@@ -499,7 +499,7 @@ const data =  [
                                                 stroke="#8884d8"
                                                 activeDot={{ r: 8 }}
                                             />
-                                            <Line type="monotone" dataKey="Gender" stroke="#82ca9d" />
+                                            <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
                                             
                                             </LineChart>
                                         </ResponsiveContainer>
