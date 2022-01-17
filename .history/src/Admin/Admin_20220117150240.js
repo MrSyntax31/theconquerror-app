@@ -470,9 +470,9 @@ const data =  [
                             </main>
 
                             <section>
-                                <h3 className="text-center text-primary fw-bold mt-3">Gender Statistics</h3>
+                                <h1 className="text-center text-primary fw-bold mt-3">My ConquError Status</h1>
 
-                            
+                                <h5 className="text-primary text-center">This Feature is under development!!!</h5>
                                 <div className="App">
                                 
                                         <div style={{ width: '100%', height: 500, marginTop:'4rem', marginBottom:'4rem' }}>

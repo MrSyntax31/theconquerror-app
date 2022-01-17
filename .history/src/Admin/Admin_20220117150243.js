@@ -470,7 +470,7 @@ const data =  [
                             </main>
 
                             <section>
-                                <h3 className="text-center text-primary fw-bold mt-3">Gender Statistics</h3>
+                                <h1 className="text-center text-primary fw-bold mt-3">My ConquError Status</h1>
 
                             
                                 <div className="App">
