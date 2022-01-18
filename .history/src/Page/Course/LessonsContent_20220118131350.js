@@ -343,15 +343,15 @@ const showCourse = courses1.map((courses1) => (
 
       <Navbar/>
 
-      <Container fluid="md" className="mt-5 mb-5" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           {/* Card Contents */}
-          <Card className="mt-5">
+          <Card className="m-2">
                         {/* Overview ID */}
                         <section id="intro">
                           <Card.Header >
                             <Container>
                            
-                                  <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer mt-5" onClick={handleShow}>
+                                  <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer mt-2" onClick={handleShow}>
                                     <GiIcons.GiBookmarklet/>Spellbook
                                   </label>
 
@@ -566,10 +566,241 @@ const showCourse = courses1.map((courses1) => (
                             
                           </Card.Body>
                             
-          </Card>
+                    </Card>
       </Container>
       
-                {/* Modal Login*/}
+      <div className="main" style={{marginTop: '7rem'}}>
+        <div className="" style={{marginTop:'5rem',  marginBottom:'3rem'}}>
+
+
+                    
+                    {/* Card Contents */}
+                    <Card className="m-2">
+                        {/* Overview ID */}
+                        <section id="intro">
+                          <Card.Header >
+                            <Container>
+                           
+                                  <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer mt-2" onClick={handleShow}>
+                                    <GiIcons.GiBookmarklet/>Spellbook
+                                  </label>
+
+                            </Container>
+
+                        </Card.Header>
+                        </section>
+                     
+                          <Card.Body>
+                            
+                              <Container >
+                              <Row  xs={2} md={4}>
+                                <Col xs={6} md={4}>
+                                  <img className="mx-auto " style={{width: '75%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
+                                </Col>
+                                <Col xs={12} md={8}>
+                                  <h2 className="text-primary fw-bold " style={{display: "table-cell",
+                                    width: "500px",
+                                    height: "10px",
+                                    verticalAlign: "middle"}}>{courses.Title}</h2>
+                                    <Card.Text className="text-justify mt-3">
+                                      {courses.courseoverview}
+                                    </Card.Text>
+                                  <Button className="mb-5 btn-primary btn" data-id={courses.Directory} onClick={onView}><FaIcons.FaDownload/> Download</Button>  
+                                </Col>
+                              </Row>
+
+                              </Container>
+                            
+                            {/* Video ID */}
+                            <section id="vid">
+                              <Container>
+                                    <Row>
+                                      <Col>
+                                          <p>{courseinfo.viddesc}</p>
+                                      </Col>
+                                          <div className="video"
+                                              style={{
+                                                position: "relative",
+                                                paddingBottom: "56.25%" /* 16:9 */,
+                                                paddingTop: 25,
+                                                height: 0
+                                                    }}>
+                                                      <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src={courseinfo.vidLink} frameBorder="0" title="vid" allowFullScreen/>
+                                          </div>
+                                    </Row>
+                              </Container>                  
+                            </section>
+
+                            {/* Content ID */}
+                            <section id="content" className="mt-5">
+                              <Container>                                
+                                {/* Contents */}
+                                <h2 className="fw-bold mb-3 text-primary">{courseinfo.Title1}</h2>    
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle1}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content1}</p>
+                                <code className="mt-2 mb-2">{courseinfo.Code1}</code><br/>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img1} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc1}</p>
+                                <p className="text-justify mb-3">{courseinfo.Content2}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle2}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content3}</p>
+                                <p className="text-justify mb-3">{courseinfo.Content4}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle3}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content5}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img2} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc2}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle4}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content6}</p>
+                                <code className="mt-2 mb-2">{courseinfo.Code2}</code><br/>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img3} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc3}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img4} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc4}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle5}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content7}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img5} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc5}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle6}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content8}</p>
+                                <code className="mt-2 mb-2">{courseinfo.Code3}</code><br/>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img6} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc6}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle7}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content9}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img7} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc7}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle8}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content10}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img8} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc8}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle9}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content11}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img9} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc9}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle10}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content12}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img10} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc10}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle11}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content13}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img11} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc11}</p>
+
+                                <h2 className="fw-bold mb-3 mt-2 text-primary">{courseinfo.Title2}</h2>  
+                                <p className="text-justify mb-3">{courseinfo.Content14}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img12} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc12}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle12}</h4>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle13}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content15}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img13} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc13}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle14}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content16}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img14} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc14}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle15}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content17}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img15} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc15}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle16}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content18}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img16} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc16}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle17}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content19}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img17} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc17}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle18}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content20}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img18} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc18}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle19}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content21}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img19} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc19}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle20}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content22}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img20} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc20}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle21}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content23}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle22}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content24}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle23}</h4>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle24}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content25}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle25}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content26}</p>
+                                <a href={courseinfo.weblink} className="mb-5">{courseinfo.linktitle}</a>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle26}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content27}</p>
+                                <p className="text-justify mb-3">{courseinfo.Content28}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img21} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc21}</p>
+                                <p className="text-justify mb-3">{courseinfo.Content29}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img22} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc22}</p>
+                                <p className="text-justify mb-3">{courseinfo.Content30}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img23} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc23}</p>
+                                <p className="text-justify mb-3">{courseinfo.Content31}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img24} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc24}</p>
+                                <p className="text-justify mb-3">{courseinfo.Content32}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img25} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc25}</p>
+
+                                <h2 className="fw-bold mb-3 mt-2 text-primary">{courseinfo.Title3}</h2>  
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle27}</h4>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img26} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc26}</p>
+                                <p className="text-justify mb-3">{courseinfo.Content33}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle28}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content34}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img27} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc27}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle29}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content35}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle30}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content36}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle31}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content37}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle32}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content38}</p>
+                                                      
+                                
+                              </Container>
+                            </section>
+
+                              
+                              {/*Code ID */}
+                              <section id="code">
+                               <div>
+                                <h1 className="fw-bold text-primary mt-5">Sample Code!</h1>
+                                  <iframe title="compilerFrame" width="100%" height="850px" src={courses.sampcode} className="mx-auto d-block"></iframe>
+                                </div>  
+                              </section>
+
+
+
+                          {/* Assessment Button */}
+                          <section id="assess">
+                            <div className="mt-2 mb-2 container">
+                              <h3>Take Assessment</h3>
+                         
+                                  <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="btn btn-primary fs-5">Assessment</Button>
+
+                            </div>
+                          </section>
+                            
+                          </Card.Body>
+                            
+                    </Card>
+
+                  </div> 
+      </div>
+                      {/* Modal Login*/}
                 <Modal show={showMl} onHide={handleCloseMl}>
                     <Modal.Header closeButton>
                       <Modal.Title>Log-in</Modal.Title>
@@ -618,29 +849,30 @@ const showCourse = courses1.map((courses1) => (
                                 Don't have an account? <Link to="/register" style={{ textDecoration: 'none' }}>Register</Link>
                             </div>
                     </Modal.Footer>
-                </Modal>
+                  </Modal>
 
-                {/*Off Canvas Content Instructions */}
-                <Offcanvas show={show} onHide={handleClose}>
-                  <Offcanvas.Header closeButton>
-                  <Link to="/lessons" style={{ textDecoration: 'none' }} className="btn fs-5"><FaIcons.FaArrowLeft/></Link>
-                    <Offcanvas.Title>Spellbook</Offcanvas.Title>
-                    <br/>
-                    <a href="#intro" data-toggle="tooltip" data-placement="top" title="Course"><ImIcons.ImFileText/></a>
-                    <a href="#vid" data-toggle="tooltip" data-placement="top" title="Introductory Video"><FaIcons.FaVideo/></a>
-                    <a href="#content" data-toggle="tooltip" data-placement="top" title="Lesson Content"><GiIcons.GiNotebook/></a>
-                    <a href="#code" data-toggle="tooltip" data-placement="top" title="Sample Code"><AiIcons.AiFillCode/></a>
-                    <a href="#assess" data-toggle="tooltip" data-placement="top" title="Assessment"><MdIcons.MdQuiz/></a>
-                  </Offcanvas.Header>
-                  <Offcanvas.Body>
-                  {showCourse} 
-                  </Offcanvas.Body>
-                </Offcanvas>
+
+        {/*Off Canvas Content Instructions */}
+          <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas.Header closeButton>
+            <Link to="/lessons" style={{ textDecoration: 'none' }} className="btn fs-5"><FaIcons.FaArrowLeft/></Link>
+              <Offcanvas.Title>Spellbook</Offcanvas.Title>
+              <br/>
+              <a href="#intro" data-toggle="tooltip" data-placement="top" title="Course"><ImIcons.ImFileText/></a>
+              <a href="#vid" data-toggle="tooltip" data-placement="top" title="Introductory Video"><FaIcons.FaVideo/></a>
+              <a href="#content" data-toggle="tooltip" data-placement="top" title="Lesson Content"><GiIcons.GiNotebook/></a>
+              <a href="#code" data-toggle="tooltip" data-placement="top" title="Sample Code"><AiIcons.AiFillCode/></a>
+              <a href="#assess" data-toggle="tooltip" data-placement="top" title="Assessment"><MdIcons.MdQuiz/></a>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+            {showCourse} 
+            </Offcanvas.Body>
+          </Offcanvas>
           
-                {/* ScrollUp Button */}
-                <a href="#top" className="scroll-top">
-                    <i className="fa fa-chevron-up"></i>
-                </a>
+        {/* ScrollUp Button */}
+        <a href="#top" className="scroll-top">
+            <i className="fa fa-chevron-up"></i>
+        </a>
 
         
         </>

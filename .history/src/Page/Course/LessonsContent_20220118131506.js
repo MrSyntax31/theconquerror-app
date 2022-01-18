@@ -343,15 +343,15 @@ const showCourse = courses1.map((courses1) => (
 
       <Navbar/>
 
-      <Container fluid="md" className="mt-5 mb-5" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           {/* Card Contents */}
-          <Card className="mt-5">
+          <Card className="m-2">
                         {/* Overview ID */}
                         <section id="intro">
                           <Card.Header >
                             <Container>
                            
-                                  <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer mt-5" onClick={handleShow}>
+                                  <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer mt-2" onClick={handleShow}>
                                     <GiIcons.GiBookmarklet/>Spellbook
                                   </label>
 
@@ -637,10 +637,10 @@ const showCourse = courses1.map((courses1) => (
                   </Offcanvas.Body>
                 </Offcanvas>
           
-                {/* ScrollUp Button */}
-                <a href="#top" className="scroll-top">
-                    <i className="fa fa-chevron-up"></i>
-                </a>
+        {/* ScrollUp Button */}
+        <a href="#top" className="scroll-top">
+            <i className="fa fa-chevron-up"></i>
+        </a>
 
         
         </>

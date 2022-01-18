@@ -343,9 +343,9 @@ const showCourse = courses1.map((courses1) => (
 
       <Navbar/>
 
-      <Container fluid="md" className="mt-5 mb-5" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <Container fluid="md" className="mt-5" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           {/* Card Contents */}
-          <Card className="mt-5">
+          <Card className="m-2 mt-5">
                         {/* Overview ID */}
                         <section id="intro">
                           <Card.Header >

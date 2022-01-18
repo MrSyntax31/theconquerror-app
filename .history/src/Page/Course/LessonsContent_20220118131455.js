@@ -343,15 +343,15 @@ const showCourse = courses1.map((courses1) => (
 
       <Navbar/>
 
-      <Container fluid="md" className="mt-5 mb-5" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           {/* Card Contents */}
-          <Card className="mt-5">
+          <Card className="m-2">
                         {/* Overview ID */}
                         <section id="intro">
                           <Card.Header >
                             <Container>
                            
-                                  <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer mt-5" onClick={handleShow}>
+                                  <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer mt-2" onClick={handleShow}>
                                     <GiIcons.GiBookmarklet/>Spellbook
                                   </label>
 
@@ -620,27 +620,27 @@ const showCourse = courses1.map((courses1) => (
                     </Modal.Footer>
                 </Modal>
 
-                {/*Off Canvas Content Instructions */}
-                <Offcanvas show={show} onHide={handleClose}>
-                  <Offcanvas.Header closeButton>
-                  <Link to="/lessons" style={{ textDecoration: 'none' }} className="btn fs-5"><FaIcons.FaArrowLeft/></Link>
-                    <Offcanvas.Title>Spellbook</Offcanvas.Title>
-                    <br/>
-                    <a href="#intro" data-toggle="tooltip" data-placement="top" title="Course"><ImIcons.ImFileText/></a>
-                    <a href="#vid" data-toggle="tooltip" data-placement="top" title="Introductory Video"><FaIcons.FaVideo/></a>
-                    <a href="#content" data-toggle="tooltip" data-placement="top" title="Lesson Content"><GiIcons.GiNotebook/></a>
-                    <a href="#code" data-toggle="tooltip" data-placement="top" title="Sample Code"><AiIcons.AiFillCode/></a>
-                    <a href="#assess" data-toggle="tooltip" data-placement="top" title="Assessment"><MdIcons.MdQuiz/></a>
-                  </Offcanvas.Header>
-                  <Offcanvas.Body>
-                  {showCourse} 
-                  </Offcanvas.Body>
-                </Offcanvas>
+        {/*Off Canvas Content Instructions */}
+          <Offcanvas show={show} onHide={handleClose}>
+            <Offcanvas.Header closeButton>
+            <Link to="/lessons" style={{ textDecoration: 'none' }} className="btn fs-5"><FaIcons.FaArrowLeft/></Link>
+              <Offcanvas.Title>Spellbook</Offcanvas.Title>
+              <br/>
+              <a href="#intro" data-toggle="tooltip" data-placement="top" title="Course"><ImIcons.ImFileText/></a>
+              <a href="#vid" data-toggle="tooltip" data-placement="top" title="Introductory Video"><FaIcons.FaVideo/></a>
+              <a href="#content" data-toggle="tooltip" data-placement="top" title="Lesson Content"><GiIcons.GiNotebook/></a>
+              <a href="#code" data-toggle="tooltip" data-placement="top" title="Sample Code"><AiIcons.AiFillCode/></a>
+              <a href="#assess" data-toggle="tooltip" data-placement="top" title="Assessment"><MdIcons.MdQuiz/></a>
+            </Offcanvas.Header>
+            <Offcanvas.Body>
+            {showCourse} 
+            </Offcanvas.Body>
+          </Offcanvas>
           
-                {/* ScrollUp Button */}
-                <a href="#top" className="scroll-top">
-                    <i className="fa fa-chevron-up"></i>
-                </a>
+        {/* ScrollUp Button */}
+        <a href="#top" className="scroll-top">
+            <i className="fa fa-chevron-up"></i>
+        </a>
 
         
         </>
