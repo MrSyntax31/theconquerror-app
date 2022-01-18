@@ -8,7 +8,7 @@ import Navbar from './NavBar'
 
 //Bootstrap
 import {  Container, Tabs, Tab, Card, Table, Form , Button} from 'react-bootstrap';
-import * as MdIcons from "react-icons/md";
+import * as GiIcons from "react-icons/gi";
 
 //Firebase
 import {getAuth} from 'firebase/auth'
@@ -401,7 +401,7 @@ const data =  [
                                             <div className="card text-white bg-warning o-hidden h-100">
                                                 <div className="card-body">
                                                 <div className="card-body-icon">
-                                                    <MdIcons.MdAccountCircle/>
+                                                    <GiIcons.GiBookmarklet/>
                                                 </div>
                                                 <div className="mr-5"><strong>{student.length} Students</strong></div>
                                                 </div>
@@ -412,7 +412,7 @@ const data =  [
                                             <div className="card text-white bg-success o-hidden h-100">
                                                 <div className="card-body">
                                                 <div className="card-body-icon">
-                                                <MdIcons.MdAssignmentInd/>
+                                                    <i className="fa fa-fw fa-shopping-cart"></i>
                                                 </div>
                                                 <div className="mr-5"><strong>{instructor.length} Instructors</strong></div>
                                                 </div>
@@ -423,7 +423,7 @@ const data =  [
                                             <div className="card text-white bg-danger o-hidden h-100">
                                                 <div className="card-body">
                                                 <div className="card-body-icon">
-                                                <MdIcons.MdOutlinePeople/>
+                                                    <i className="fa fa-fw fa-support"></i>
                                                 </div>
                                                 <div className="mr-5"><strong>{institution.length} Enrolled/Working in PUP</strong></div>
                                                 </div>

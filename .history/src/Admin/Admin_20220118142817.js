@@ -423,7 +423,7 @@ const data =  [
                                             <div className="card text-white bg-danger o-hidden h-100">
                                                 <div className="card-body">
                                                 <div className="card-body-icon">
-                                                <MdIcons.MdOutlinePeople/>
+                                                <MdIcons.MdAssignmentInd/>
                                                 </div>
                                                 <div className="mr-5"><strong>{institution.length} Enrolled/Working in PUP</strong></div>
                                                 </div>

@@ -401,7 +401,7 @@ const data =  [
                                             <div className="card text-white bg-warning o-hidden h-100">
                                                 <div className="card-body">
                                                 <div className="card-body-icon">
-                                                    <MdIcons.MdAccountCircle/>
+                                                    <MdIcons.MdAssignmentInd/>
                                                 </div>
                                                 <div className="mr-5"><strong>{student.length} Students</strong></div>
                                                 </div>
@@ -423,7 +423,7 @@ const data =  [
                                             <div className="card text-white bg-danger o-hidden h-100">
                                                 <div className="card-body">
                                                 <div className="card-body-icon">
-                                                <MdIcons.MdOutlinePeople/>
+                                                    <i className="fa fa-fw fa-support"></i>
                                                 </div>
                                                 <div className="mr-5"><strong>{institution.length} Enrolled/Working in PUP</strong></div>
                                                 </div>
