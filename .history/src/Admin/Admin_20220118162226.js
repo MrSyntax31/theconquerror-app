@@ -380,7 +380,7 @@ const data =  [
                 />{' '}ConquError Console</h1>
                 <p className="text-secondary text-center"> <em> *NOTE: ALL DECISIONS SHOULD BE DISCUSSED ON OUR DISCORD SERVER</em></p>
             {/* Content */}
-            <section className="mt-3 mb-5 m-5">
+            <section className="mt-3 mb-5">
 
                             <main className="mt-3">
                                 <div className="mt-3" fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center"}}>
@@ -563,7 +563,7 @@ const data =  [
                             </section>
             
                 
-            </section>
+            </Container>
 
         </>
     )
