@@ -156,22 +156,11 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
       ))
     
 
-    async function DeleteFeedback(e){
+    async function DeleteFeedback(){
 
       const docid = e.target.getAttribute("data-id")
 
       await deleteDoc(doc(admindb, "feedback", docid));
-
-      swal("Deleted","Feedback has been Deleted","warning")
-    }
-
-    async function DeleteReports(e){
-
-      const docid = e.target.getAttribute("data-id")
-
-      await deleteDoc(doc(admindb, "reports", docid));
-
-      swal("Deleted","Report has been Deleted","warning")
     }
 
 
@@ -214,7 +203,7 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
         <td>{fback.Feedback} </td>
         <td>{fback.sent_at}</td>
         <td>{fback.sender}</td>
-        <td><Button data-id={fback.id} onClick={DeleteFeedback}>Delete</Button></td> 
+        <td><Button onClick={""}>Delete</Button></td> 
         </tr>
         </tbody>
       ))
@@ -258,7 +247,7 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
         <td>{reports.ReportDesc} </td>
         <td>{reports.dateofReport}</td>
         <td>{reports.Email}</td>
-        <td><Button data-id={reports.id} onClick={DeleteReports}>Delete</Button></td>
+        <td><Button onClick={""}>Delete</Button></td>
         </tr>
         </tbody>
       ))

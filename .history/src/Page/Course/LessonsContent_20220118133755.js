@@ -568,7 +568,7 @@ const showCourse = courses1.map((courses1) => (
                           </Card.Body>
                             
           </Card>
-      </div>
+      </Container>
       
                 {/* Modal Login*/}
                 <Modal show={showMl} onHide={handleCloseMl}>

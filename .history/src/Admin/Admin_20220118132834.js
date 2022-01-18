@@ -12,7 +12,7 @@ import {  Container, Tabs, Tab, Card, Table, Form , Button} from 'react-bootstra
 
 //Firebase
 import {getAuth} from 'firebase/auth'
-import { getFirestore, query, collection, where, limit,  getDocs, updateDoc, doc, orderBy , onSnapshot, deleteDoc } from 'firebase/firestore';
+import { getFirestore, query, collection, where, limit,  getDocs, updateDoc, doc, orderBy, startAfter , onSnapshot} from 'firebase/firestore';
 import { getDatabase, ref, onValue } from "firebase/database";
 
 import {  useHistory} from "react-router-dom"
@@ -93,7 +93,7 @@ function size(){
 }
 
 const [VerifReq, setVerifReq] = useState([]);
-
+const [LastPage, setLastPage] = useState([]);
 
 
 const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedstatus", "==", "Pending"),limit(5));
@@ -110,6 +110,7 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
     if(!isEmpty)
     {     //throw data to useState
       const map =  documentSnapshots.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setLastPage(documentSnapshots.docs[documentSnapshots.docs.length-1]) ;
       setVerifReq(map);
         }       
     else{
@@ -156,24 +157,6 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
       ))
     
 
-    async function DeleteFeedback(e){
-
-      const docid = e.target.getAttribute("data-id")
-
-      await deleteDoc(doc(admindb, "feedback", docid));
-
-      swal("Deleted","Feedback has been Deleted","warning")
-    }
-
-    async function DeleteReports(e){
-
-      const docid = e.target.getAttribute("data-id")
-
-      await deleteDoc(doc(admindb, "reports", docid));
-
-      swal("Deleted","Report has been Deleted","warning")
-    }
-
 
       const [feedback, setFeedback] = useState([]);
 
@@ -191,7 +174,7 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
           if(!isEmpty)
           {     //throw data to useState
             const map =  documentSnapshots.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-          
+            setLastPage(documentSnapshots.docs[documentSnapshots.docs.length-1]) ;
             setFeedback(map);
               }       
           else{
@@ -214,7 +197,6 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
         <td>{fback.Feedback} </td>
         <td>{fback.sent_at}</td>
         <td>{fback.sender}</td>
-        <td><Button data-id={fback.id} onClick={DeleteFeedback}>Delete</Button></td> 
         </tr>
         </tbody>
       ))
@@ -235,7 +217,7 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
           if(!isEmpty)
           {     //throw data to useState
             const map =  documentSnapshots.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-          
+            setLastPage(documentSnapshots.docs[documentSnapshots.docs.length-1]) ;
             setReport(map);
               }       
           else{
@@ -258,7 +240,6 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
         <td>{reports.ReportDesc} </td>
         <td>{reports.dateofReport}</td>
         <td>{reports.Email}</td>
-        <td><Button data-id={reports.id} onClick={DeleteReports}>Delete</Button></td>
         </tr>
         </tbody>
       ))

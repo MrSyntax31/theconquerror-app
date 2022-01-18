@@ -1,72 +1,49 @@
-import React, {useEffect,useState} from 'react';
+import React, { Component  } from "react";
 import { Helmet } from "react-helmet";
 import { Row, Container, Col, Card, Tab, Tabs, Badge, Form, Table, Button} from 'react-bootstrap';
 import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
-import {  collection, getFirestore,  query, getDocs } from 'firebase/firestore';
-import * as IoIcons from 'react-icons/io5';
-import { Link } from "react-router-dom"
+import { getFirestore, query, collection, where, limit,  getDocs, doc, orderBy , onSnapshot} from 'firebase/firestore';
 
-function Tutorial() {
-
-    const docsdb = getFirestore();
+class Tutorial extends Component {
 
 
-    const [Docs, setDocs] = useState([])
+    render(){
 
-const collRef = query(collection(docsdb, "docs"));
-
+const docsdb = getFirestore();
+        
+const collRef = query(collection(docsdb, "docs"),orderBy());
+ 
 // Query the first page of docs
 async function fetch(){
-//query data
+  //query data
 
-try{
-const documentSnapshots = await getDocs(collRef);
+ try{
+  const documentSnapshots = await getDocs(collRef);
 
-const isEmpty = documentSnapshots.size === 0;
-//Pagination
-if(!isEmpty)
-{     //throw data to useState
-const map =  documentSnapshots.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-setDocs(map);
-  }       
-else{
-//No DATA
+  const isEmpty = documentSnapshots.size === 0;
+  //Pagination
+  if(!isEmpty)
+  {     //throw data to useState
+    const map =  documentSnapshots.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+    setVerifReq(map);
+      }       
+  else{
+   //No DATA
 
-}
+  }
 
-}
-catch(error){
-console.log(error.message)
+ }
+ catch(error){
+swal('Error',error.message,'error')
 
 };
 
 }
 
-
-useEffect(
-    () => {
-
-     fetch()
-
-    },[]); // eslint-disable-line react-hooks/exhaustive-deps
-
-
-const docsfile = Docs.map((documents) => (
-
-    <tbody key={documents.id}>
-    <tr >
-    <td>{documents.Description}</td>
-    <td>{documents.Topic} </td>
-    <td>{documents.Owner}</td>
-    <td>  <Link to={documents.FileLink} style={{ textDecoration: 'none', marginLeft:'3px' }} className="mb-4"><IoIcons.IoArrowBack/>Download</Link></td>
-    </tr>
-    </tbody>
-)
-)
-    return (
+        return (
         <>
-        <div>
+                <div>
                     <Helmet>
                         <title>ConquError | Tutorials</title>
                         <meta name="description" content="ConquError Register page" />
@@ -1062,13 +1039,14 @@ const docsfile = Docs.map((documents) => (
                                                     <Table striped bordered hover>
                                                         <thead>
                                                         <tr>
-                                                        <th>Description</th>
-                                                        <th>Topic</th>
-                                                        <th>Ownerate</th>
-                                                        <th>Download Link</th>
+                                                        <th>File name</th>
+                                                        <th>Uploaded By</th>
+                                                        <th>Date</th>
+                                                        <th>File Type</th>
+                                                        <th>Size</th>
                                                         </tr>
                                                         </thead>
-                                                            {docsfile}
+                                                        
                                                     </Table>
                                                         <Button >Show More</Button>
                                             </Form> 
@@ -1084,11 +1062,11 @@ const docsfile = Docs.map((documents) => (
         <a href="#top" className="scroll-top">
             <i className="fa fa-chevron-up"></i>
         </a>     
-                     
+                                
         </>
-     
     )
     }
+    
+}
 
-
-export default Tutorial;
+export default Tutorial

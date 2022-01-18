@@ -996,7 +996,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                 <Form.Select aria-label="Default select example"ref={ occu } onChange={e => OccupationValue(e)}required>
                                                 <option value={profile.Occupation}>{profile.Occupation}</option>
                                                 <option value="Student">Student</option>
-                                                <option value="Professor">Instructor</option>
+                                                <option value="Professor">Professor</option>
                                                 <option value="Others">Others.</option>
                                                 </Form.Select>
                                                 { occuHide &&  <Form.Control  className="mt-2" ref={occu }   name = "Occupation" type="text"  required placeholder="Enter Occupation" /> }
@@ -1011,7 +1011,6 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                 <option value="Technological University of the Philippines">Technological University of the Philippines</option>
                                                 <option value="Others">Others.</option>
                                                 </Form.Select>
-
                                                 { instiHide &&  <Form.Control className="mt-2" ref={insti}  name = "Institution" type="text"  required placeholder="Enter Institution"/> }
                     
                                                 </Form.Group>

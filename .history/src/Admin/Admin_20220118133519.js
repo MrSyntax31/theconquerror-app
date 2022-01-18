@@ -258,7 +258,7 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
         <td>{reports.ReportDesc} </td>
         <td>{reports.dateofReport}</td>
         <td>{reports.Email}</td>
-        <td><Button data-id={reports.id} onClick={DeleteReports}>Delete</Button></td>
+        <td><Button onClick={DeleteReports}>Delete</Button></td>
         </tr>
         </tbody>
       ))

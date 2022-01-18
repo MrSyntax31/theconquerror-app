@@ -6,7 +6,6 @@ import Navbar from '../../Components/Navbar/Navbar';
 import {  collection, getFirestore,  query, getDocs } from 'firebase/firestore';
 import * as IoIcons from 'react-icons/io5';
 import { Link } from "react-router-dom"
-
 function Tutorial() {
 
     const docsdb = getFirestore();

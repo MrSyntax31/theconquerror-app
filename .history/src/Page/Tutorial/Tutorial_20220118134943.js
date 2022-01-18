@@ -4,8 +4,7 @@ import { Row, Container, Col, Card, Tab, Tabs, Badge, Form, Table, Button} from 
 import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
 import {  collection, getFirestore,  query, getDocs } from 'firebase/firestore';
-import * as IoIcons from 'react-icons/io5';
-import { Link } from "react-router-dom"
+
 
 function Tutorial() {
 
@@ -52,18 +51,7 @@ useEffect(
     },[]); // eslint-disable-line react-hooks/exhaustive-deps
 
 
-const docsfile = Docs.map((documents) => (
-
-    <tbody key={documents.id}>
-    <tr >
-    <td>{documents.Description}</td>
-    <td>{documents.Topic} </td>
-    <td>{documents.Owner}</td>
-    <td>  <Link to={documents.FileLink} style={{ textDecoration: 'none', marginLeft:'3px' }} className="mb-4"><IoIcons.IoArrowBack/>Download</Link></td>
-    </tr>
-    </tbody>
-)
-)
+const fi
     return (
         <>
         <div>
@@ -1062,13 +1050,14 @@ const docsfile = Docs.map((documents) => (
                                                     <Table striped bordered hover>
                                                         <thead>
                                                         <tr>
-                                                        <th>Description</th>
-                                                        <th>Topic</th>
-                                                        <th>Ownerate</th>
-                                                        <th>Download Link</th>
+                                                        <th>File name</th>
+                                                        <th>Uploaded By</th>
+                                                        <th>Date</th>
+                                                        <th>File Type</th>
+                                                        <th>Size</th>
                                                         </tr>
                                                         </thead>
-                                                            {docsfile}
+                                                        
                                                     </Table>
                                                         <Button >Show More</Button>
                                             </Form> 

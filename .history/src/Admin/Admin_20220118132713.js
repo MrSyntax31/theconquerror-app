@@ -12,7 +12,7 @@ import {  Container, Tabs, Tab, Card, Table, Form , Button} from 'react-bootstra
 
 //Firebase
 import {getAuth} from 'firebase/auth'
-import { getFirestore, query, collection, where, limit,  getDocs, updateDoc, doc, orderBy , onSnapshot, deleteDoc } from 'firebase/firestore';
+import { getFirestore, query, collection, where, limit,  getDocs, updateDoc, doc, orderBy, startAfter , onSnapshot} from 'firebase/firestore';
 import { getDatabase, ref, onValue } from "firebase/database";
 
 import {  useHistory} from "react-router-dom"
@@ -93,7 +93,7 @@ function size(){
 }
 
 const [VerifReq, setVerifReq] = useState([]);
-
+const [LastPage, setLastPage] = useState([]);
 
 
 const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedstatus", "==", "Pending"),limit(5));
@@ -110,6 +110,7 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
     if(!isEmpty)
     {     //throw data to useState
       const map =  documentSnapshots.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+      setLastPage(documentSnapshots.docs[documentSnapshots.docs.length-1]) ;
       setVerifReq(map);
         }       
     else{
@@ -156,24 +157,6 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
       ))
     
 
-    async function DeleteFeedback(e){
-
-      const docid = e.target.getAttribute("data-id")
-
-      await deleteDoc(doc(admindb, "feedback", docid));
-
-      swal("Deleted","Feedback has been Deleted","warning")
-    }
-
-    async function DeleteReports(e){
-
-      const docid = e.target.getAttribute("data-id")
-
-      await deleteDoc(doc(admindb, "reports", docid));
-
-      swal("Deleted","Report has been Deleted","warning")
-    }
-
 
       const [feedback, setFeedback] = useState([]);
 
@@ -191,7 +174,7 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
           if(!isEmpty)
           {     //throw data to useState
             const map =  documentSnapshots.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-          
+            setLastPage(documentSnapshots.docs[documentSnapshots.docs.length-1]) ;
             setFeedback(map);
               }       
           else{
@@ -214,7 +197,6 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
         <td>{fback.Feedback} </td>
         <td>{fback.sent_at}</td>
         <td>{fback.sender}</td>
-        <td><Button data-id={fback.id} onClick={DeleteFeedback}>Delete</Button></td> 
         </tr>
         </tbody>
       ))
@@ -235,7 +217,7 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
           if(!isEmpty)
           {     //throw data to useState
             const map =  documentSnapshots.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-          
+            setLastPage(documentSnapshots.docs[documentSnapshots.docs.length-1]) ;
             setReport(map);
               }       
           else{
@@ -258,7 +240,6 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
         <td>{reports.ReportDesc} </td>
         <td>{reports.dateofReport}</td>
         <td>{reports.Email}</td>
-        <td><Button data-id={reports.id} onClick={DeleteReports}>Delete</Button></td>
         </tr>
         </tbody>
       ))
@@ -272,6 +253,59 @@ useEffect(
       getReports()
     },[]); // eslint-disable-line react-hooks/exhaustive-deps
   
+    async function getMoreRequests(){
+    
+        if (VerifReq.length === 0){
+              
+            swal("Oops!","Seems like you've reached the end!","info")
+
+        } else{
+          try {   
+               
+            const next =
+            query(collRef,
+            orderBy("created_at","desc"),
+            startAfter(LastPage),
+            limit(5));
+
+            const nextDocs =  await getDocs(next)
+            
+            const isEmpty = nextDocs.size === 0;
+            if(!isEmpty){
+
+              const map =  nextDocs.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+
+              
+              setVerifReq((verification) =>[...verification, ...map]);
+
+             
+                setLastPage(nextDocs.docs[nextDocs.docs.length-1]);
+              
+          
+            
+            }
+            else{
+              swal("Sorry","There are no more Data left to show you","warning")
+            
+            }
+             
+           
+        
+     
+        }
+        catch (error) {
+          swal('Error!',error.message,'error')
+        }
+        }
+       
+      }
+
+
+
+
+
+
+
 
 
     //Data for Gender
@@ -496,7 +530,7 @@ const data =  [
                                             </thead>
                                             {ReqVerfi}
                                             </Table>
-                                         
+                                            <Button onClick={getMoreRequests}>Show More</Button>
                                             </Form>                                
                                         </Card>
                                     </Tab>
@@ -518,7 +552,6 @@ const data =  [
                                             <th>Message</th>
                                             <th>Date</th>
                                             <th>Email</th>
-                                            <th>Delete</th>
                                             </tr>
                                             </thead>
                                                     {feedbackMap}
@@ -548,13 +581,12 @@ const data =  [
                                             <th>Description</th>
                                             <th>Date</th>
                                             <th>Email of Violator</th>
-                                            <th>Delete Report</th>
                                             </tr>
                                             </thead>
                                                 {reportMap}
                                               
                                                 </Table>
-                                              
+                                                <Button>Show More</Button>
                                             </Form>
                                             
                                         </Card>

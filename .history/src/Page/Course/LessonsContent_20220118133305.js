@@ -343,8 +343,8 @@ const showCourse = courses1.map((courses1) => (
 
       <Navbar/>
 
-      <div style={{marginTop:"5rem"}}></div>
-      <div fluid="md" className="mt-2 mb-5" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+      <div style={{marginTop:""}}></div>
+      <Container fluid="md" className="mt-5 mb-5" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
           {/* Card Contents */}
           <Card className="mt-5">
                         {/* Overview ID */}
@@ -568,7 +568,7 @@ const showCourse = courses1.map((courses1) => (
                           </Card.Body>
                             
           </Card>
-      </div>
+      </Container>
       
                 {/* Modal Login*/}
                 <Modal show={showMl} onHide={handleCloseMl}>

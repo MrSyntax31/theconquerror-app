@@ -996,7 +996,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                 <Form.Select aria-label="Default select example"ref={ occu } onChange={e => OccupationValue(e)}required>
                                                 <option value={profile.Occupation}>{profile.Occupation}</option>
                                                 <option value="Student">Student</option>
-                                                <option value="Professor">Instructor</option>
+                                                <option value="Professor">Professor</option>
                                                 <option value="Others">Others.</option>
                                                 </Form.Select>
                                                 { occuHide &&  <Form.Control  className="mt-2" ref={occu }   name = "Occupation" type="text"  required placeholder="Enter Occupation" /> }
@@ -1006,12 +1006,12 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                 <Form.Label>Institution</Form.Label>
                                                 <Form.Select aria-label="Default select example" ref={ insti } onChange={e => InstitutionValue(e)} required>
                                                 <option value={profile.Institution}>{profile.Institution}</option>
-                                                <option value="Laguna State Polytechnic University">Laguna State Polytechnic University</option>
-                                                <option value="Polytechnic University of the Philippines">Polytechnic University of the Philippines</option>
-                                                <option value="Technological University of the Philippines">Technological University of the Philippines</option>
-                                                <option value="Others">Others.</option>
+                                                <option value="">Select Institution</option>
+                                <option value="Laguna State Polytechnic University">Laguna State Polytechnic University</option>
+                                <option value="Polytechnic University of the Philippines">Polytechnic University of the Philippines</option>
+                                <option value="Technological University of the Philippines">Technological University of the Philippines</option>
+                                <option value="Others">Others.</option>
                                                 </Form.Select>
-
                                                 { instiHide &&  <Form.Control className="mt-2" ref={insti}  name = "Institution" type="text"  required placeholder="Enter Institution"/> }
                     
                                                 </Form.Group>

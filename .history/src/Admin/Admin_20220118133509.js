@@ -171,7 +171,7 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
 
       await deleteDoc(doc(admindb, "reports", docid));
 
-      swal("Deleted","Report has been Deleted","warning")
+      swal("Deleted","Feedback has been Deleted","warning")
     }
 
 
@@ -258,7 +258,7 @@ const collRef = query(collection(admindb, "verifiedteachers"), where("verifiedst
         <td>{reports.ReportDesc} </td>
         <td>{reports.dateofReport}</td>
         <td>{reports.Email}</td>
-        <td><Button data-id={reports.id} onClick={DeleteReports}>Delete</Button></td>
+        <td><Button onClick={""}>Delete</Button></td>
         </tr>
         </tbody>
       ))

@@ -1,11 +1,10 @@
 import React, {useEffect,useState} from 'react';
 import { Helmet } from "react-helmet";
-import { Row, Container, Col, Card, Tab, Tabs, Badge, Form, Table, Button} from 'react-bootstrap';
+import { Row, Container, Col, Card, Tab, Tabs, Badge, Form, Table, Button, Link} from 'react-bootstrap';
 import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
 import {  collection, getFirestore,  query, getDocs } from 'firebase/firestore';
 import * as IoIcons from 'react-icons/io5';
-import { Link } from "react-router-dom"
 
 function Tutorial() {
 
@@ -1064,8 +1063,9 @@ const docsfile = Docs.map((documents) => (
                                                         <tr>
                                                         <th>Description</th>
                                                         <th>Topic</th>
-                                                        <th>Ownerate</th>
-                                                        <th>Download Link</th>
+                                                        <th>Date</th>
+                                                        <th>File Type</th>
+                                                        <th>Size</th>
                                                         </tr>
                                                         </thead>
                                                             {docsfile}

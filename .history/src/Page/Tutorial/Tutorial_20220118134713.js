@@ -3,9 +3,7 @@ import { Helmet } from "react-helmet";
 import { Row, Container, Col, Card, Tab, Tabs, Badge, Form, Table, Button} from 'react-bootstrap';
 import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
-import {  collection, getFirestore,  query, getDocs } from 'firebase/firestore';
-import * as IoIcons from 'react-icons/io5';
-import { Link } from "react-router-dom"
+import { onSnapshot,collection,getFirestore, doc,  query } from 'firebase/firestore';
 
 function Tutorial() {
 
@@ -28,7 +26,7 @@ const isEmpty = documentSnapshots.size === 0;
 if(!isEmpty)
 {     //throw data to useState
 const map =  documentSnapshots.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
-setDocs(map);
+setVerifReq(map);
   }       
 else{
 //No DATA
@@ -37,33 +35,12 @@ else{
 
 }
 catch(error){
-console.log(error.message)
+swal('Error',error.message,'error')
 
 };
 
 }
 
-
-useEffect(
-    () => {
-
-     fetch()
-
-    },[]); // eslint-disable-line react-hooks/exhaustive-deps
-
-
-const docsfile = Docs.map((documents) => (
-
-    <tbody key={documents.id}>
-    <tr >
-    <td>{documents.Description}</td>
-    <td>{documents.Topic} </td>
-    <td>{documents.Owner}</td>
-    <td>  <Link to={documents.FileLink} style={{ textDecoration: 'none', marginLeft:'3px' }} className="mb-4"><IoIcons.IoArrowBack/>Download</Link></td>
-    </tr>
-    </tbody>
-)
-)
     return (
         <>
         <div>
@@ -1062,13 +1039,14 @@ const docsfile = Docs.map((documents) => (
                                                     <Table striped bordered hover>
                                                         <thead>
                                                         <tr>
-                                                        <th>Description</th>
-                                                        <th>Topic</th>
-                                                        <th>Ownerate</th>
-                                                        <th>Download Link</th>
+                                                        <th>File name</th>
+                                                        <th>Uploaded By</th>
+                                                        <th>Date</th>
+                                                        <th>File Type</th>
+                                                        <th>Size</th>
                                                         </tr>
                                                         </thead>
-                                                            {docsfile}
+                                                        
                                                     </Table>
                                                         <Button >Show More</Button>
                                             </Form> 
