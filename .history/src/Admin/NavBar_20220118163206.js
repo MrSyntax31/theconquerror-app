@@ -6,7 +6,7 @@ import * as MdIcons from 'react-icons/md';
 import {  useHistory} from "react-router-dom"
 
 //Authentication
-//import { getAuth, signOut } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 
 //Alert
 //import swal from 'sweetalert';
@@ -42,7 +42,7 @@ function NavBar () {
 
           <Navbar bg="dark" variant="dark" sticky="top">
             <div>
-              {'  '}<p className="btn text-light" onClick={back}><MdIcons.MdArrowBack/> Back</p>
+              <p className="btn btn-primary" onClick={back}><MdIcons.MdArrowBack/> Back</p>{'  '}
               {/* 
               <p onClick={logout} className="btn text-light"><MdIcons.MdOutlineLogout/> Logout</p>*/}
             </div>  

@@ -1,18 +1,18 @@
 import React from 'react'
-import { Navbar } from 'react-bootstrap'
+import { Container, Navbar } from 'react-bootstrap'
 import * as MdIcons from 'react-icons/md';
 
 //Routing
 import {  useHistory} from "react-router-dom"
 
 //Authentication
-//import { getAuth, signOut } from "firebase/auth";
+import { getAuth, signOut } from "firebase/auth";
 
 //Alert
-//import swal from 'sweetalert';
+import swal from 'sweetalert';
 
 function NavBar () {
-           //const auth = getAuth(); 
+           const auth = getAuth(); 
           const history = useHistory();
 
 
@@ -21,7 +21,6 @@ function NavBar () {
           history.push("/profile")
            }
 
-           /*
            const logout = (event) => {
 
             signOut(auth).then(() => {
@@ -35,16 +34,16 @@ function NavBar () {
               history.push("/login")
 
             }).catch((error) => { swal('Error',error,'error')})
-           }*/
+           }
 
     return (
         <>
 
           <Navbar bg="dark" variant="dark" sticky="top">
             <div>
-              {'  '}<p className="btn text-light" onClick={back}><MdIcons.MdArrowBack/> Back</p>
-              {/* 
-              <p onClick={logout} className="btn text-light"><MdIcons.MdOutlineLogout/> Logout</p>*/}
+              <p className="btn btn-primary" onClick={back}><MdIcons.MdArrowBack/> Back</p>{'  '}
+              {/** /}
+              <p onClick={logout} className="btn text-light"><MdIcons.MdOutlineLogout/> Logout</p>
             </div>  
           </Navbar>
 </>
