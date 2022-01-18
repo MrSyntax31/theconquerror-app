@@ -213,7 +213,7 @@ export default function Assessment() {
                         {EmptyQ ? '' :
                             <div className="assessment-question">   
                                 <h2>{quiz.Question}</h2>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={quiz.Imgquiz} alt={coursecode} />
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={quiz.Imgquiz} alt={quiz.Title} />
                                 <div className="assessment-options">
                                     <div className="assessment-option">
                                         <input type="radio" id="Option1" name="Quiz" className="form-check-input"  onChange={e => chooseAnswer(e.target.value)} value={quiz.Opt1} />
