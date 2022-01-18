@@ -126,7 +126,7 @@ const docsfile = Docs.map((documents) => (
                             </Container>
 
                             <section className="features section bg-light mt-5">
-                                <section fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                                <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                                     <Row>
                                         <div className="">
                                             <h1 className="text-center text-primary fw-bold">Our featured Content Creators</h1>
@@ -186,10 +186,10 @@ const docsfile = Docs.map((documents) => (
                                                             </Card>            
                                                         </Col>
                                     </Row>
-                                </section>
+                                </Container>
 
                                 {/* Kuya Dev */}
-                                <section className="m-5">
+                                <Container>
                                         <Card className="mt-5">
                                             <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                                 <Tab eventKey="home" title="Kuya Dev">
@@ -400,10 +400,10 @@ const docsfile = Docs.map((documents) => (
                                                 </Tab>
                                             </Tabs>
                                         </Card>   
-                                </section>
+                                </Container>
                                 
                                 {/* SDPTSolutions */}
-                                <section className="m-5">
+                                <Container>
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="SDPT Solutions">
@@ -689,10 +689,10 @@ const docsfile = Docs.map((documents) => (
                                             </Tab>
                                         </Tabs>
                                         </Card>   
-                                </section>
+                                </Container>
 
                                 {/* Josiahdoestech */}
-                                <section className="m-5">
+                                <Container>
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="Josiahdoestech">
@@ -841,10 +841,10 @@ const docsfile = Docs.map((documents) => (
                                             </Tab>
                                         </Tabs>
                                         </Card>   
-                                </section>
+                                </Container>
 
                                 {/* John Carlo Franco */}
-                                <section className="m-5">
+                                <Container>
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="John Carlo Franco">
@@ -1054,7 +1054,7 @@ const docsfile = Docs.map((documents) => (
                                             </Tab>
                                         </Tabs>
                                         </Card>   
-                                </section>
+                                </Container>
 
                             </section>
 

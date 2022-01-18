@@ -189,7 +189,7 @@ const docsfile = Docs.map((documents) => (
                                 </section>
 
                                 {/* Kuya Dev */}
-                                <section className="m-5">
+                                <section className=>
                                         <Card className="mt-5">
                                             <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                                 <Tab eventKey="home" title="Kuya Dev">
@@ -403,7 +403,7 @@ const docsfile = Docs.map((documents) => (
                                 </section>
                                 
                                 {/* SDPTSolutions */}
-                                <section className="m-5">
+                                <section>
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="SDPT Solutions">
@@ -692,7 +692,7 @@ const docsfile = Docs.map((documents) => (
                                 </section>
 
                                 {/* Josiahdoestech */}
-                                <section className="m-5">
+                                <section>
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="Josiahdoestech">
@@ -844,7 +844,7 @@ const docsfile = Docs.map((documents) => (
                                 </section>
 
                                 {/* John Carlo Franco */}
-                                <section className="m-5">
+                                <section>
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="John Carlo Franco">

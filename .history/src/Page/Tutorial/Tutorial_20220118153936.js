@@ -692,7 +692,7 @@ const docsfile = Docs.map((documents) => (
                                 </section>
 
                                 {/* Josiahdoestech */}
-                                <section className="m-5">
+                                <section >
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="Josiahdoestech">
@@ -844,7 +844,7 @@ const docsfile = Docs.map((documents) => (
                                 </section>
 
                                 {/* John Carlo Franco */}
-                                <section className="m-5">
+                                <section>
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="John Carlo Franco">
