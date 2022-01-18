@@ -1055,7 +1055,9 @@ const docsfile = Docs.map((documents) => (
                                         </Card>   
                                 </section>
 
-                        <section className="m-3 container">
+                            </section>
+
+                        <section className="m-3">
                                         <div className=" text-center m-2">
                                             <h1 className="text-center text-primary fw-bold">Downloads for Students</h1>
                                             <p>You may need specific softwares to open, view and print the files in this page:  Microsoft Excel Online or Microsoft Word Online. Most modern browsers and devices can open PDF and ZIP files.</p>
@@ -1079,8 +1081,6 @@ const docsfile = Docs.map((documents) => (
                                 </Card.Body>
                             </Card>
                         </section>
-                            </section>
-
                              
 
                           
