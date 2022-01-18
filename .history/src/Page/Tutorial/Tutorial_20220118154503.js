@@ -850,7 +850,7 @@ const docsfile = Docs.map((documents) => (
                                             <Tab eventKey="profile" title="John Carlo Franco">
                                                 <Row>
                                                     <Col  className="text-center m-3">
-                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-25" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FCreator%2F149870072_4438803116146821_814614453010169425_n.jpg?alt=media&token=bb9aa651-9f9d-4b9c-bca7-420d7125bc76" />
+                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FCreator%2F149870072_4438803116146821_814614453010169425_n.jpg?alt=media&token=bb9aa651-9f9d-4b9c-bca7-420d7125bc76" />
                                                             <div className="text-center  mt-3">
                                                                 <p><strong>John Carlo Franco</strong></p>
                                                                 <p>Web and Mobile App Developer, Entrepreneur</p>

@@ -409,7 +409,7 @@ const docsfile = Docs.map((documents) => (
                                             <Tab eventKey="profile" title="SDPT Solutions">
                                                 <Row>
                                                     <Col  className="text-center m-3">
-                                                                <img alt="SDPTSolutions" variant="top" className="mt-2 w-25" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FCreator%2F142506784_713464262646294_432244117709991327_n.png?alt=media&token=a8893ce5-d0b6-4d28-b0ba-509fe0338a18" />
+                                                                <img alt="SDPTSolutions" variant="top" className="mt-2 w-50" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FCreator%2F142506784_713464262646294_432244117709991327_n.png?alt=media&token=a8893ce5-d0b6-4d28-b0ba-509fe0338a18" />
                                                             <div className="text-center mt-3">
                                                                 <p><strong>SDPT Solutions</strong></p>
                                                                 <p>SDPT Solutions is an Organization that Creates Video Tutorial for Programmers.</p>
@@ -698,7 +698,7 @@ const docsfile = Docs.map((documents) => (
                                             <Tab eventKey="profile" title="Josiahdoestech">
                                                 <Row>
                                                     <Col  className="text-center m-3">
-                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-25" src="../assets/Joshiah.jpg" />
+                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="../assets/Joshiah.jpg" />
                                                             <div className="text-center mt-3">
                                                                 <p><strong>Josiahdoestech</strong></p>
                                                                 <p>Tech reviews, Tech gadgets, Sharing my knowledge about me and what I love doing, Also Gaming.</p>
@@ -850,7 +850,7 @@ const docsfile = Docs.map((documents) => (
                                             <Tab eventKey="profile" title="John Carlo Franco">
                                                 <Row>
                                                     <Col  className="text-center m-3">
-                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-25" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FCreator%2F149870072_4438803116146821_814614453010169425_n.jpg?alt=media&token=bb9aa651-9f9d-4b9c-bca7-420d7125bc76" />
+                                                                <img alt="KuyaDev" variant="top" className="mt-2 w-50" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FCreator%2F149870072_4438803116146821_814614453010169425_n.jpg?alt=media&token=bb9aa651-9f9d-4b9c-bca7-420d7125bc76" />
                                                             <div className="text-center  mt-3">
                                                                 <p><strong>John Carlo Franco</strong></p>
                                                                 <p>Web and Mobile App Developer, Entrepreneur</p>
