@@ -263,8 +263,9 @@ const Lessons = () => {
                       { userData &&
                           <div className="mb-2">
 
+                              <Card.Body>
                               <h2>My current level: <strong>{userData}</strong></h2>
-                              
+                              </Card.Body>
                           </div> }
                         <Row xs="auto">
                         <p className="mt-2 mb-3 text-justify">

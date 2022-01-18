@@ -261,10 +261,11 @@ const Lessons = () => {
                     <Tab eventKey="profile" title="Overview" className=" mb-5 p-3">
 
                       { userData &&
-                          <div className="mb-2">
+                          <div className=" mb-2">
 
-                              <h2>My current level: <strong>{userData}</strong></h2>
-                              
+                              <Card.Body>
+                              <Card.Title>My current level: <strong>{userData}</strong></Card.Title>
+                              </Card.Body>
                           </div> }
                         <Row xs="auto">
                         <p className="mt-2 mb-3 text-justify">

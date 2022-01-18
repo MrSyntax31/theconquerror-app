@@ -531,12 +531,10 @@ const showCourse = courses1.map((courses1) => (
                                 <p className="text-justify mb-3">{courseinfo.Content36}</p>
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle31}</h4>
                                 <p className="text-justify mb-3">{courseinfo.Content37}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img28} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc28}</p>
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle32}</h4>
                                 <p className="text-justify mb-3">{courseinfo.Content38}</p>
-                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img29} alt={courses.Title} />
-                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc29}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img27} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc27}</p>
 
                             </section>
 

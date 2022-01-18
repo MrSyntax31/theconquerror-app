@@ -263,6 +263,7 @@ const Lessons = () => {
                       { userData &&
                           <div className="mb-2">
 
+                              
                               <h2>My current level: <strong>{userData}</strong></h2>
                               
                           </div> }
