@@ -431,7 +431,7 @@ const HomeUser = () => {
                   <div className="d-flex h-100 text-center align-items-center">
                      <div className="w-100 text-white">
                      <h1 className="display-3 text-light">Conquer your Error</h1>
-                        <p className="lead mb-0 text-light">A move that can change your life!</p>
+                        <p className="lead mb-0">A move that can change your life!</p>
                      </div>
                   </div>
                   </div>
@@ -439,9 +439,9 @@ const HomeUser = () => {
 
 
                   <section className="my-5">
-               
+                  >
                   <div className="row">
-                     <div className="col-md-8 mx-auto text-center">
+                     <div className="col-md-8 mx-auto">
                         
                         <p>The Technojet.Dev Team has been working on ConquError since its inception. We are a team of five students from the Technojet.Dev program. We are currently working on ConquError as a team. We are looking forward to working with you to build a community of developers and enthusiasts.</p>
                         
@@ -455,7 +455,7 @@ const HomeUser = () => {
                         </p>
                      </div>
                   </div>
-                
+                  </>
                   </section>
 
                {/* Section for Technojet.Dev Team*/}

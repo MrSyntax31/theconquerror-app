@@ -430,9 +430,9 @@ const HomeUser = () => {
                   </header>
 
                   <section className="my-5">
-               
+                  <div className="container">
                   <div className="row">
-                     <div className="col-md-8 mx-auto text-center">
+                     <div className="col-md-8 mx-auto">
                         
                         <p>The Technojet.Dev Team has been working on ConquError since its inception. We are a team of five students from the Technojet.Dev program. We are currently working on ConquError as a team. We are looking forward to working with you to build a community of developers and enthusiasts.</p>
                         
@@ -446,7 +446,7 @@ const HomeUser = () => {
                         </p>
                      </div>
                   </div>
-                
+                  </div>
                   </section>
 
                   {/* Section for Technojet.Dev Team*/}
