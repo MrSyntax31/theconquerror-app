@@ -642,7 +642,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
   //For Graphs (Data)
   
 
-
+  
   const data =  graphdata.map((analytics) => ( 
     {
       name: analytics.id,
@@ -650,19 +650,12 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
     }
   ))
 
-  async function DownloadCert(e){
-
-    const certid = e.target.getAttribute("data-id")
-
-    await window.open(certid)
-
-  }
 
   const cert = certificateData.map((certData) => (
    
     <div key={certData.id}>
     <strong>{certData.id}</strong>
-    <Button data-id={certData.Link} onClick={DownloadCert} style={{ textDecoration: 'none', marginLeft:'3px' }} className="mb-4"><IoIcons.IoDownload/>Download</Button>
+    <Link to={certData.Link} style={{ textDecoration: 'none', marginLeft:'3px' }} className="mb-4"><IoIcons.IoArrowBack/>Download</Link>
     </div>
   
   ))

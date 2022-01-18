@@ -662,7 +662,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
    
     <div key={certData.id}>
     <strong>{certData.id}</strong>
-    <Button data-id={certData.Link} onClick={DownloadCert} style={{ textDecoration: 'none', marginLeft:'3px' }} className="mb-4"><IoIcons.IoDownload/>Download</Button>
+    <Button data-id={certData.Link} onClick={DownloadCert} style={{ textDecoration: 'none', marginLeft:'3px' }} className="mb-4"><IoIcons.IoArrowBack/>Download</Button>
     </div>
   
   ))

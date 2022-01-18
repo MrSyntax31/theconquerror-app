@@ -51,12 +51,11 @@ useEffect(
 
     },[]); // eslint-disable-line react-hooks/exhaustive-deps
 
-async function download(e){
+function download(e){
     
     const doclink = e.target.getAttribute("data-id")
-
-   await window.open(doclink)
-
+   
+   window.open(doclink)
 }
 
 const docsfile = Docs.map((documents) => (
@@ -1061,7 +1060,7 @@ const docsfile = Docs.map((documents) => (
                         <Container>
                                         <div className="">
                                             <h1 className="text-center text-primary fw-bold">Downloads for Students</h1>
-                                            <p>You may need specific softwares to open, view and print the files in this page:  Microsoft Excel Online or Microsoft Word Online. Most modern browsers and devices can open PDF and ZIP files.</p>
+                                            <p>You may need software to open, view and print the files in this page:  Microsoft Excel Online or Microsoft Word Online. Most modern browsers and devices can open PDF and ZIP files.</p>
                                         </div>
                             <Card className="mt-5">
                                 <Card.Body>
@@ -1077,7 +1076,7 @@ const docsfile = Docs.map((documents) => (
                                                         </thead>
                                                             {docsfile}
                                                     </Table>
-                                                    
+                                                        <Button >Show More</Button>
                                             </Form> 
                                 </Card.Body>
                             </Card>
