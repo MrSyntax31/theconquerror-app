@@ -1,7 +1,7 @@
 import React, {useEffect,useState, useRef} from 'react';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import {Card, Button, Row, Col, Offcanvas, Modal, Form, Alert} from 'react-bootstrap';
+import {Card, Button, Container, Row, Col, Offcanvas, Modal, Form, Alert} from 'react-bootstrap';
 import * as AiIcons from 'react-icons/ai';
 import * as GiIcons from "react-icons/gi";
 import * as FaIcons from "react-icons/fa";
@@ -372,7 +372,7 @@ const showCourse = courses1.map((courses1) => (
                                       <Card.Text className="text-justify mt-3">
                                         {courses.courseoverview}
                                       </Card.Text>
-                                    <Button className="mt-3 mb-5 btn-primary btn" data-id={courses.Directory} onClick={onView}><FaIcons.FaDownload/> Download</Button>  
+                                    <Button className="mb-5 btn-primary btn" data-id={courses.Directory} onClick={onView}><FaIcons.FaDownload/> Download</Button>  
                                  
                               </section>
                             
