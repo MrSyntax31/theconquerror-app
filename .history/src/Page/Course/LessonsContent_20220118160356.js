@@ -539,7 +539,7 @@ const showCourse = courses1.map((courses1) => (
                                 <p className="text-justify mb-3">{courseinfo.Content38}</p>
                                                       
                                 
-                              </div>
+                              </Container>
                             </section>
 
                               
@@ -555,7 +555,7 @@ const showCourse = courses1.map((courses1) => (
 
                           {/* Assessment Button */}
                           <section id="assess">
-                            <div className="mt-2 mb-2 m-3">
+                            <div className="mt-2 mb-2 container">
                               <h3>Take Assessment</h3>
                          
                                   <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="btn btn-primary fs-5">Assessment</Button>

@@ -362,27 +362,28 @@ const showCourse = courses1.map((courses1) => (
                      
                           <Card.Body>
                             
-                              <section >
-                                <Row  xs={2} md={4}>
-                                  <Col xs={6} md={4}>
-                                    <img className="mx-auto " style={{width: '75%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
-                                  </Col>
-                                  <Col xs={12} md={8}>
-                                    <h2 className="text-primary fw-bold " style={{display: "table-cell",
-                                      width: "500px",
-                                      height: "10px",
-                                      verticalAlign: "middle"}}>{courses.Title}</h2>
-                                      <Card.Text className="text-justify mt-3">
-                                        {courses.courseoverview}
-                                      </Card.Text>
-                                    <Button className="mb-5 btn-primary btn" data-id={courses.Directory} onClick={onView}><FaIcons.FaDownload/> Download</Button>  
-                                  </Col>
-                                </Row>
-                              </section>
+                              <Container >
+                              <Row  xs={2} md={4}>
+                                <Col xs={6} md={4}>
+                                  <img className="mx-auto " style={{width: '75%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
+                                </Col>
+                                <Col xs={12} md={8}>
+                                  <h2 className="text-primary fw-bold " style={{display: "table-cell",
+                                    width: "500px",
+                                    height: "10px",
+                                    verticalAlign: "middle"}}>{courses.Title}</h2>
+                                    <Card.Text className="text-justify mt-3">
+                                      {courses.courseoverview}
+                                    </Card.Text>
+                                  <Button className="mb-5 btn-primary btn" data-id={courses.Directory} onClick={onView}><FaIcons.FaDownload/> Download</Button>  
+                                </Col>
+                              </Row>
+
+                              </Container>
                             
                             {/* Video ID */}
                             <section id="vid">
-                          
+                              <Container>
                                     <Row>
                                       <Col>
                                           <p>{courseinfo.viddesc}</p>
@@ -397,12 +398,12 @@ const showCourse = courses1.map((courses1) => (
                                                       <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src={courseinfo.vidLink} frameBorder="0" title="vid" allowFullScreen/>
                                           </div>
                                     </Row>
-                                             
+                              </Container>                  
                             </section>
 
                             {/* Content ID */}
                             <section id="content" className="mt-5">
-                              <div className="container">                                
+                              <Container>                                
                                 {/* Contents */}
                                 <h2 className="fw-bold mb-3 text-primary">{courseinfo.Title1}</h2>    
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle1}</h4>
@@ -539,7 +540,7 @@ const showCourse = courses1.map((courses1) => (
                                 <p className="text-justify mb-3">{courseinfo.Content38}</p>
                                                       
                                 
-                              </div>
+                              </Container>
                             </section>
 
                               
@@ -555,7 +556,7 @@ const showCourse = courses1.map((courses1) => (
 
                           {/* Assessment Button */}
                           <section id="assess">
-                            <div className="mt-2 mb-2 m-3">
+                            <div className="mt-2 mb-2 container">
                               <h3>Take Assessment</h3>
                          
                                   <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="btn btn-primary fs-5">Assessment</Button>
@@ -565,7 +566,7 @@ const showCourse = courses1.map((courses1) => (
                             
                           </Card.Body>
                             
-          </section>
+          </Card>
       </div>
       
                 {/* Modal Login*/}

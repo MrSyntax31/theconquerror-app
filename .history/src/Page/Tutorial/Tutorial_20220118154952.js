@@ -91,7 +91,7 @@ const docsfile = Docs.map((documents) => (
                             </div>  
                         </div>
 
-                            <Container fluid="md" style={{
+                            <Container className="" fluid="md" style={{
                                         display: "flex",
                                         justifyContent: "center",
                                         alignItems: "center"
