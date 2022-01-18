@@ -339,8 +339,8 @@ const showCourse = courses1.map((courses1) => (
                 <meta name="description" content="ConquError Homepage" />
               </Helmet>
             </div>  
+        {/* End of Helmet */}
 
-        {/* NavBar */}
       <Navbar/>
 
       <div style={{marginTop:"5rem"}}></div>
@@ -350,7 +350,8 @@ const showCourse = courses1.map((courses1) => (
                         {/* Overview ID */}
                         <section id="intro">
                           <Card.Header >
-
+                           
+                           
                                   <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer mt-3 mb-3" onClick={handleShow}>
                                     <GiIcons.GiBookmarklet/>Spellbook
                                   </label>

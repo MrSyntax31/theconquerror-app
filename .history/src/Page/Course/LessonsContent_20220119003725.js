@@ -339,8 +339,9 @@ const showCourse = courses1.map((courses1) => (
                 <meta name="description" content="ConquError Homepage" />
               </Helmet>
             </div>  
+            
+        {/* End of Helmet */}
 
-        {/* NavBar */}
       <Navbar/>
 
       <div style={{marginTop:"5rem"}}></div>

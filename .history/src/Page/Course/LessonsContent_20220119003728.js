@@ -340,7 +340,7 @@ const showCourse = courses1.map((courses1) => (
               </Helmet>
             </div>  
 
-        {/* NavBar */}
+        {/* End of Helmet */}
       <Navbar/>
 
       <div style={{marginTop:"5rem"}}></div>
