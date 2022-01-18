@@ -259,14 +259,8 @@ const Lessons = () => {
                 <Card className="mt-3">
                   <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 mt-3">
                     <Tab eventKey="profile" title="Overview" className=" mb-5 p-3">
-
-                      { userData &&
-                          <div className="container mb-2">
-
-                              <Card.Body>
-                              <Card.Title>My current level: <strong>{userData}</strong></Card.Title>
-                              </Card.Body>
-                          </div> }
+                     
+                        
                         <Row xs="auto">
                         <p className="mt-2 mb-3 text-justify">
                           Hello Warrior, we know you’re new to computer programming, and you want to be ready and prepared to the upcoming battle.  This Course is design to help you and boost your knowledge in basic and fundamentals of C++ programming. 

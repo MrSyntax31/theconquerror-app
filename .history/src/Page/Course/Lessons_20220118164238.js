@@ -259,12 +259,15 @@ const Lessons = () => {
                 <Card className="mt-3">
                   <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 mt-3">
                     <Tab eventKey="profile" title="Overview" className=" mb-5 p-3">
-
+                    
+              
+                     
+                        
                       { userData &&
                           <div className="container mb-2">
 
                               <Card.Body>
-                              <Card.Title>My current level: <strong>{userData}</strong></Card.Title>
+                              <Card.Title>My level: <strong>{userData}</strong></Card.Title>
                               </Card.Body>
                           </div> }
                         <Row xs="auto">

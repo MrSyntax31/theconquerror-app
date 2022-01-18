@@ -27,7 +27,7 @@ const Lessons = () => {
   
     //declare area to throw list for forum
     const [courses, setCourse] = useState([]);
-    const [userData, setData] = useState([]);
+    //const [userData, setData] = useState([]);
 
     //Lessons Collection Side Menu
     const [show, setShow] = useState(false);
@@ -258,15 +258,8 @@ const Lessons = () => {
     
                 <Card className="mt-3">
                   <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 mt-3">
-                    <Tab eventKey="profile" title="Overview" className=" mb-5 p-3">
-
-                      { userData &&
-                          <div className="container mb-2">
-
-                              <Card.Body>
-                              <Card.Title>My current level: <strong>{userData}</strong></Card.Title>
-                              </Card.Body>
-                          </div> }
+                    <Tab eventKey="profile" title="Overview" className=" mb-5 p-3">                     
+                        
                         <Row xs="auto">
                         <p className="mt-2 mb-3 text-justify">
                           Hello Warrior, we know you’re new to computer programming, and you want to be ready and prepared to the upcoming battle.  This Course is design to help you and boost your knowledge in basic and fundamentals of C++ programming. 
@@ -275,9 +268,7 @@ const Lessons = () => {
                           <Col className="mb-2"><div variant="light"><FcIcons.FcQuestions/> 7 Assessment</div></Col>
                           <Col className="mb-2"><div variant="light"><FcIcons.FcClock/> 21 Hours</div></Col>
                           <Col className="mb-2"><div variant="light"><FcIcons.FcVideoCall/> 7 Tutorials</div></Col>
-                        </Row>
-
-                  
+                        </Row>                
                         
                         <h4 className="mb-3 mt-5"><strong>Why start in this course?</strong></h4>
                         <p>
@@ -319,7 +310,7 @@ const Lessons = () => {
                         <h1 className="fw-bold text-primary mb-2">Learn to Code and Conquer your error!</h1>
                         <h3 className="text-justify fw-bold">What’s your goal?</h3>
                         
-                        <Container>
+                        <section>
                         <Row>
 
                           <Col>
@@ -356,8 +347,8 @@ const Lessons = () => {
                             </Card>
                           </Col>
                         </Row>
-                      </Container>
-                      <Container>
+                      </section>
+                      <section>
                         <h3>My Course Timeline</h3>
                         <section id="cd-timeline" className=" rounded">
                           <div className="cd-timeline-block">
@@ -444,7 +435,7 @@ const Lessons = () => {
                             </div> 
                           </div> 
                         </section> 
-                      </Container>
+                      </section>
                       <Container className="mb-5">
                         <Accordion defaultActiveKey="0">
                           <Accordion.Item eventKey="1">

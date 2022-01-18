@@ -264,7 +264,7 @@ const Lessons = () => {
                           <div className="container mb-2">
 
                               <Card.Body>
-                              <Card.Title>My current level: <strong>{userData}</strong></Card.Title>
+                              <Card.Title>My level: <strong>{userData}</strong></Card.Title>
                               </Card.Body>
                           </div> }
                         <Row xs="auto">
