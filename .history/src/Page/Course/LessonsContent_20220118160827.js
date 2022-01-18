@@ -362,9 +362,12 @@ const showCourse = courses1.map((courses1) => (
                      
                           <Card.Body>
                             
-                              <section className="m-5">
-                                    <img className="mx-auto d-block" style={{width: '25%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
-                              
+                              <section >
+                                    <img className="mx-auto " style={{width: '75%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
+                                <Row  xs={2} md={4}>
+                                  <Col xs={6} md={4}>
+                                  </Col>
+                                  <Col xs={12} md={8}>
                                     <h2 className="text-primary fw-bold " style={{display: "table-cell",
                                       width: "500px",
                                       height: "10px",
@@ -373,11 +376,12 @@ const showCourse = courses1.map((courses1) => (
                                         {courses.courseoverview}
                                       </Card.Text>
                                     <Button className="mb-5 btn-primary btn" data-id={courses.Directory} onClick={onView}><FaIcons.FaDownload/> Download</Button>  
-                                 
+                                  </Col>
+                                </Row>
                               </section>
                             
                             {/* Video ID */}
-                            <section id="vid" className="m-5 mb-2">
+                            <section id="vid">
                           
                                     <Row>
                                       <Col>
@@ -397,8 +401,8 @@ const showCourse = courses1.map((courses1) => (
                             </section>
 
                             {/* Content ID */}
-                            <section id="content" className="mt-5 m-5">
-                                                            
+                            <section id="content" className="mt-5">
+                              <div className="container">                                
                                 {/* Contents */}
                                 <h2 className="fw-bold mb-3 text-primary">{courseinfo.Title1}</h2>    
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle1}</h4>
@@ -533,7 +537,9 @@ const showCourse = courses1.map((courses1) => (
                                 <p className="text-justify mb-3">{courseinfo.Content37}</p>
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle32}</h4>
                                 <p className="text-justify mb-3">{courseinfo.Content38}</p>
-
+                                                      
+                                
+                              </div>
                             </section>
 
                               

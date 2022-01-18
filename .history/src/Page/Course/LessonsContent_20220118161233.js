@@ -362,7 +362,7 @@ const showCourse = courses1.map((courses1) => (
                      
                           <Card.Body>
                             
-                              <section className="m-5">
+                              <section className="m-3">
                                     <img className="mx-auto d-block" style={{width: '25%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
                               
                                     <h2 className="text-primary fw-bold " style={{display: "table-cell",
@@ -397,7 +397,7 @@ const showCourse = courses1.map((courses1) => (
                             </section>
 
                             {/* Content ID */}
-                            <section id="content" className="mt-5 m-5">
+                            <section id="content" className="mt-5">
                                                             
                                 {/* Contents */}
                                 <h2 className="fw-bold mb-3 text-primary">{courseinfo.Title1}</h2>    

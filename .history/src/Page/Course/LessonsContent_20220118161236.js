@@ -397,7 +397,7 @@ const showCourse = courses1.map((courses1) => (
                             </section>
 
                             {/* Content ID */}
-                            <section id="content" className="mt-5 m-5">
+                            <section id="content" className="mt-5">
                                                             
                                 {/* Contents */}
                                 <h2 className="fw-bold mb-3 text-primary">{courseinfo.Title1}</h2>    
