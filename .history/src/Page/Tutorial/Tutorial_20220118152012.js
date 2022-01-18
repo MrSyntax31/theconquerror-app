@@ -1055,8 +1055,6 @@ const docsfile = Docs.map((documents) => (
                                         </Card>   
                                 </section>
 
-                            </section>
-
                                 <section className="m-3">
                                                 <div className=" text-center m-2">
                                                     <h1 className="text-center text-primary fw-bold">Downloads for Students</h1>
@@ -1080,7 +1078,12 @@ const docsfile = Docs.map((documents) => (
                                                     </Form> 
                                         </Card.Body>
                                     </Card>
-                                </section>        
+                                </section>
+                            </section>
+
+                             
+
+                          
                 </section>       
 
                 {/* ScrollUp Button */}

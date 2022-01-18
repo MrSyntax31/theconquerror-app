@@ -187,8 +187,8 @@ const docsfile = Docs.map((documents) => (
                                     </Row>
                                 </Container>
                                 {/* Kuya Dev */}
-                                <section className="m-3 ">
-                                        <Card className="mt-5 container">
+                                <section className="m-3 container">
+                                        <Card className="mt-5">
                                             <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                                 <Tab eventKey="home" title="Kuya Dev">
                                                     <Row>
@@ -403,7 +403,7 @@ const docsfile = Docs.map((documents) => (
                                 
                                 {/* SDPTSolutions */}
                                 <section className="m-3">
-                                        <Card className="mt-5 container">
+                                        <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="SDPT Solutions">
                                                 <Row>
@@ -692,7 +692,7 @@ const docsfile = Docs.map((documents) => (
 
                                 {/* Josiahdoestech */}
                                 <section className="m-3">
-                                        <Card className="mt-5 container">
+                                        <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="Josiahdoestech">
                                                 <Row>
@@ -844,7 +844,7 @@ const docsfile = Docs.map((documents) => (
 
                                 {/* John Carlo Franco */}
                                 <section className="m-3">
-                                        <Card className="mt-5 container">
+                                        <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="John Carlo Franco">
                                                 <Row>
@@ -1057,30 +1057,33 @@ const docsfile = Docs.map((documents) => (
 
                             </section>
 
-                                <section className="m-3">
-                                                <div className=" text-center m-2">
-                                                    <h1 className="text-center text-primary fw-bold">Downloads for Students</h1>
-                                                    <p>You may need specific softwares to open, view and print the files in this page:  Microsoft Excel Online or Microsoft Word Online. Most modern browsers and devices can open PDF and ZIP files.</p>
-                                                </div>
-                                    <Card className="mt-3 m-2 ">
-                                        <Card.Body>
-                                                    <Form className="m-1 "  >
-                                                            <Table striped bordered hover>
-                                                                <thead>
-                                                                <tr>
-                                                                <th>Description</th>
-                                                                <th>Topic</th>
-                                                                <th>Owner</th>
-                                                                <th>Download Link</th>
-                                                                </tr>
-                                                                </thead>
-                                                                    {docsfile}
-                                                            </Table>
-                                                            
-                                                    </Form> 
-                                        </Card.Body>
-                                    </Card>
-                                </section>        
+                        <section className="m-3">
+                                        <div className=" text-center m-2">
+                                            <h1 className="text-center text-primary fw-bold">Downloads for Students</h1>
+                                            <p>You may need specific softwares to open, view and print the files in this page:  Microsoft Excel Online or Microsoft Word Online. Most modern browsers and devices can open PDF and ZIP files.</p>
+                                        </div>
+                            <Card className="mt-3 m-2">
+                                <Card.Body>
+                                            <Form className="m-1"  >
+                                                    <Table striped bordered hover>
+                                                        <thead>
+                                                        <tr>
+                                                        <th>Description</th>
+                                                        <th>Topic</th>
+                                                        <th>Owner</th>
+                                                        <th>Download Link</th>
+                                                        </tr>
+                                                        </thead>
+                                                            {docsfile}
+                                                    </Table>
+                                                    
+                                            </Form> 
+                                </Card.Body>
+                            </Card>
+                        </section>
+                             
+
+                          
                 </section>       
 
                 {/* ScrollUp Button */}
