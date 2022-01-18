@@ -5,6 +5,7 @@ import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
 import {  collection, getFirestore,  query, getDocs } from 'firebase/firestore';
 import * as IoIcons from 'react-icons/io5';
+import { Link } from "react-router-dom"
 
 function Tutorial() {
 
@@ -72,7 +73,7 @@ const docsfile = Docs.map((documents) => (
 )
     return (
         <>
-                <div>
+        <div>
                     <Helmet>
                         <title>ConquError | Tutorials</title>
                         <meta name="description" content="ConquError Register page" />
@@ -90,7 +91,7 @@ const docsfile = Docs.map((documents) => (
                             </div>  
                         </div>
 
-                            <section className="mb-5" fluid="md" style={{
+                            <Container className="mb-5" fluid="md" style={{
                                         display: "flex",
                                         justifyContent: "center",
                                         alignItems: "center"
@@ -122,7 +123,7 @@ const docsfile = Docs.map((documents) => (
                                                 </div>
                                             </div>
                                     </section>
-                            </section>
+                            </Container>
 
                             <section className="features section bg-light mt-5">
                                 <Container fluid="md" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
@@ -188,7 +189,7 @@ const docsfile = Docs.map((documents) => (
                                 </Container>
 
                                 {/* Kuya Dev */}
-                                <section className="m-3">
+                                <section >
                                         <Card className="mt-5">
                                             <Tabs defaultActiveKey="home" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                                 <Tab eventKey="home" title="Kuya Dev">
@@ -402,7 +403,7 @@ const docsfile = Docs.map((documents) => (
                                 </section>
                                 
                                 {/* SDPTSolutions */}
-                                <section className="m-3">
+                                <Container>
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="SDPT Solutions">
@@ -688,10 +689,10 @@ const docsfile = Docs.map((documents) => (
                                             </Tab>
                                         </Tabs>
                                         </Card>   
-                                </section>
+                                </Container>
 
                                 {/* Josiahdoestech */}
-                                <section className="m-3">
+                                <Container>
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="Josiahdoestech">
@@ -840,10 +841,10 @@ const docsfile = Docs.map((documents) => (
                                             </Tab>
                                         </Tabs>
                                         </Card>   
-                                </section>
+                                </Container>
 
                                 {/* John Carlo Franco */}
-                                <section className="m-3">
+                                <Container>
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="John Carlo Franco">
@@ -1053,11 +1054,11 @@ const docsfile = Docs.map((documents) => (
                                             </Tab>
                                         </Tabs>
                                         </Card>   
-                                </section>
+                                </Container>
 
                             </section>
 
-                        <section className="m-3">
+                        <div>
                                         <div className=" text-center m-2">
                                             <h1 className="text-center text-primary fw-bold">Downloads for Students</h1>
                                             <p>You may need specific softwares to open, view and print the files in this page:  Microsoft Excel Online or Microsoft Word Online. Most modern browsers and devices can open PDF and ZIP files.</p>
@@ -1080,16 +1081,16 @@ const docsfile = Docs.map((documents) => (
                                             </Form> 
                                 </Card.Body>
                             </Card>
-                        </section>
+                        </div>
                              
 
                           
-                </section>       
+            </section>       
 
-                {/* ScrollUp Button */}
-                <a href="#top" className="scroll-top">
-                    <i className="fa fa-chevron-up"></i>
-                </a>     
+        {/* ScrollUp Button */}
+        <a href="#top" className="scroll-top">
+            <i className="fa fa-chevron-up"></i>
+        </a>     
                      
         </>
      

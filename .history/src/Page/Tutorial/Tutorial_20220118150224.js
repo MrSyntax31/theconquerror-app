@@ -72,7 +72,7 @@ const docsfile = Docs.map((documents) => (
 )
     return (
         <>
-                <div>
+        <div>
                     <Helmet>
                         <title>ConquError | Tutorials</title>
                         <meta name="description" content="ConquError Register page" />
@@ -1084,12 +1084,12 @@ const docsfile = Docs.map((documents) => (
                              
 
                           
-                </section>       
+            </section>       
 
-                {/* ScrollUp Button */}
-                <a href="#top" className="scroll-top">
-                    <i className="fa fa-chevron-up"></i>
-                </a>     
+        {/* ScrollUp Button */}
+        <a href="#top" className="scroll-top">
+            <i className="fa fa-chevron-up"></i>
+        </a>     
                      
         </>
      
