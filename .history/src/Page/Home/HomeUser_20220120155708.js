@@ -403,6 +403,8 @@ const HomeUser = () => {
 
 
                   </Container>
+
+
                </section>
 
 
@@ -551,7 +553,7 @@ const HomeUser = () => {
                                     <a href="https://github.com/" className="btn mb-1"><SiIcons.SiGithub/> Github</a>
                                     <a href="https://www.netlify.com/" className="btn mb-1"><SiIcons.SiNetlify/> Netlify</a>
                                     <a href="https://www.freepik.com" className="btn mb-1"><SiIcons.SiFreebsd/> Freepik</a>
-                                    <a href="https://storyset.com/online" className="btn mb-1"><img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2Fletter-s.png?alt=media&token=4583f97a-e4c5-4990-981b-988e1bb440a7" alt="img"/> Storyset</a>
+                                    <a href="https://storyset.com/online" className="btn mb-1"><img src=".https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2Fletter-s.png?alt=media&token=4583f97a-e4c5-4990-981b-988e1bb440a7" alt="img"/> Storyset</a>
                                  </div>
                               </div>
                            </Col>
