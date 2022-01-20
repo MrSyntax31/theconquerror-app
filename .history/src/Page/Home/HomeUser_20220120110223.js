@@ -166,7 +166,7 @@ const HomeUser = () => {
 
                         <div className="col-sm-4 mb-5">
                            <div className="card mt-4">
-                              <img className="card-img-top" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2FSee%20you%20soon-pana.webp?alt=media&token=fd238021-f33b-413a-b350-2be0892beb52" alt=""/>
+                              <img className="card-img-top" src="../assets/See you soon-pana.webp" alt=""/>
                                  <div className="card-body">
                                     <h4 className="card-title text-secondary">Coming Soon</h4>
                                     <p className="card-text text-secondary">In the coming months the ConquError will soon to offer other learning material for web design, data structures and algorithm, and database.</p>
@@ -317,7 +317,7 @@ const HomeUser = () => {
                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                            <Card style={{ width: '18rem', marginTop: '2rem' }}>
                               <div style={{textAlign:"center"}}>
-                                 <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2FWhiteLogo.png?alt=media&token=10a31905-0a4e-49ab-be93-a987c5969d70" />
+                                 <Card.Img variant="top" className="mt-5 w-50 rounded" src="../assets/WhiteLogo.png" />
                               </div>
                               <Card.Body>
                                  <Card.Title>ConquError</Card.Title>
@@ -473,7 +473,7 @@ const HomeUser = () => {
                         <div className="col-md-4">
                            <div className="testimonial mb-5">
                               <div className="avatar mx-auto">
-                                 <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2Fuser-05.png?alt=media&token=df81febe-6593-4f1b-a087-2c643557afaf" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
+                                 <img src="../assets/user-05.png" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
                               </div>
                                  <h4 className="font-weight-bold dark-grey-text mt-4">Arllan Del Espiritu Santo</h4>
                                  <h6 className="font-weight-bold blue-text my-3">Project Manager</h6>
@@ -484,7 +484,7 @@ const HomeUser = () => {
                         <div className="col-md-4">
                            <div className="testimonial mb-5">
                               <div className="avatar mx-auto">
-                                 <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2Fuser-03.jpg?alt=media&token=89091ad7-2977-4fd3-806d-0f947791ff83" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
+                                 <img src="../assets/user-03.jpg" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
                               </div>
                                  <h4 className="font-weight-bold dark-grey-text mt-4">Denmark Louie Irog</h4>
                                  <h6 className="font-weight-bold blue-text my-3">Lead Programmer</h6>
@@ -506,7 +506,7 @@ const HomeUser = () => {
                         <div className="col-md-4">
                            <div className="testimonial mb-5">
                               <div className="avatar mx-auto">
-                                 <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2FLRM_EXPORT_1149756444144939_20191001_172047249-removebg-preview.png?alt=media&token=151696aa-189f-4418-81c0-123b8fd1c62e" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
+                                 <img src="../assets/user-01.jpg" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
                               </div>
                                  <h4 className="font-weight-bold dark-grey-text mt-4">Paul Lemuel Niverio</h4>
                                  <h6 className="font-weight-bold blue-text my-3">Researcher</h6>
@@ -517,7 +517,7 @@ const HomeUser = () => {
                         <div className="col-md-4">
                            <div className="testimonial mb-5">
                               <div className="avatar mx-auto">
-                                 <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2Fintel.png?alt=media&token=97aaf866-39f3-4ef2-a246-eda99eda00e0" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
+                                 <img src="../assets/user-02.jpg" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
                               </div>
                                  <h4 className="font-weight-bold dark-grey-text mt-4">Christeel Ann Yambot</h4>
                                  <h6 className="font-weight-bold blue-text my-3">Researcher</h6>
@@ -528,7 +528,7 @@ const HomeUser = () => {
                         <div className="col-md-4">
                            <div className="testimonial mb-5">
                               <div className="avatar mx-auto">
-                                 <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2FTJDev.png?alt=media&token=e3f6d151-99c7-4c31-96ad-506b6fff9ff1" className="rotate rounded-circle z-depth-1 img-fluid" alt="developer" id=""/>
+                                 <img src="../assets/TJDev.png" className="rotate rounded-circle z-depth-1 img-fluid" alt="developer" id=""/>
                               </div>
                                  <h4 className="font-weight-bold dark-grey-text mt-4">Technojet.Dev</h4>
                                  <h6 className="font-weight-bold blue-text my-3">Organization</h6>
@@ -561,7 +561,7 @@ const HomeUser = () => {
                                     <a href="https://github.com/" className="btn mb-1"><SiIcons.SiGithub/> Github</a>
                                     <a href="https://www.netlify.com/" className="btn mb-1"><SiIcons.SiNetlify/> Netlify</a>
                                     <a href="https://www.freepik.com" className="btn mb-1"><SiIcons.SiFreebsd/> Freepik</a>
-                                    <a href="https://storyset.com/online" className="btn mb-1"><img src=".https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2Fletter-s.png?alt=media&token=4583f97a-e4c5-4990-981b-988e1bb440a7" alt="img"/> Storyset</a>
+                                    <a href="https://storyset.com/online" className="btn mb-1"><img src="../../../assets/letter-s.png" alt="img"/> Storyset</a>
                                  </div>
                               </div>
                            </Col>
@@ -678,7 +678,7 @@ const HomeUser = () => {
                               <li><h4 className="text-white align-center mt-4 mb-3">Developed by</h4></li>
                               <div className="rotate">
                               <li className="d-flex justify-content-center">
-                                 <img className="inline-block align-center h-20 image-center" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2FTJDev.png?alt=media&token=e3f6d151-99c7-4c31-96ad-506b6fff9ff1" alt="logo"/></li>
+                                 <img className="inline-block align-center h-20 image-center" src="../assets/TJDev.png" alt="logo"/></li>
                               </div>
                               <p className="d-flex justify-content-center text-white">Technojet.Dev</p>  
                               </ul>

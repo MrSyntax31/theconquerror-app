@@ -134,7 +134,7 @@ const docsfile = Docs.map((documents) => (
                                                         <Col style={{width: "200px", display: "flex", justifyContent: "center", alignItems: "center"}}>
                                                             <Card style={{ width: '18rem', marginTop: '2rem' }}>
                                                                 <div style={{textAlign:"center"}}>
-                                                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2FWhiteLogo.png?alt=media&token=10a31905-0a4e-49ab-be93-a987c5969d70" />
+                                                                    <Card.Img variant="top" className="mt-5 w-50 rounded" src="" />
                                                                 </div>
                                                                 <Card.Body>
                                                                 <Card.Title className="text-center">ConquError</Card.Title>

@@ -506,7 +506,7 @@ const HomeUser = () => {
                         <div className="col-md-4">
                            <div className="testimonial mb-5">
                               <div className="avatar mx-auto">
-                                 <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2FLRM_EXPORT_1149756444144939_20191001_172047249-removebg-preview.png?alt=media&token=151696aa-189f-4418-81c0-123b8fd1c62e" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
+                                 <img src="../assets/user-01.jpg" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
                               </div>
                                  <h4 className="font-weight-bold dark-grey-text mt-4">Paul Lemuel Niverio</h4>
                                  <h6 className="font-weight-bold blue-text my-3">Researcher</h6>
@@ -517,7 +517,7 @@ const HomeUser = () => {
                         <div className="col-md-4">
                            <div className="testimonial mb-5">
                               <div className="avatar mx-auto">
-                                 <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2Fintel.png?alt=media&token=97aaf866-39f3-4ef2-a246-eda99eda00e0" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
+                                 <img src="../assets/user-02.jpg" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
                               </div>
                                  <h4 className="font-weight-bold dark-grey-text mt-4">Christeel Ann Yambot</h4>
                                  <h6 className="font-weight-bold blue-text my-3">Researcher</h6>
@@ -561,7 +561,7 @@ const HomeUser = () => {
                                     <a href="https://github.com/" className="btn mb-1"><SiIcons.SiGithub/> Github</a>
                                     <a href="https://www.netlify.com/" className="btn mb-1"><SiIcons.SiNetlify/> Netlify</a>
                                     <a href="https://www.freepik.com" className="btn mb-1"><SiIcons.SiFreebsd/> Freepik</a>
-                                    <a href="https://storyset.com/online" className="btn mb-1"><img src=".https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2Fletter-s.png?alt=media&token=4583f97a-e4c5-4990-981b-988e1bb440a7" alt="img"/> Storyset</a>
+                                    <a href="https://storyset.com/online" className="btn mb-1"><img src="../../../assets/letter-s.png" alt="img"/> Storyset</a>
                                  </div>
                               </div>
                            </Col>

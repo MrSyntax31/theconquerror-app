@@ -537,7 +537,7 @@ const HomeUser = () => {
                                     <a href="https://github.com/" className="btn mb-1"><SiIcons.SiGithub/> Github</a>
                                     <a href="https://www.netlify.com/" className="btn mb-1"><SiIcons.SiNetlify/> Netlify</a>
                                     <a href="https://www.freepik.com" className="btn mb-1"><SiIcons.SiFreebsd/> Freepik</a>
-                                    <a href="https://storyset.com/online" className="btn mb-1"><img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2Fletter-s.png?alt=media&token=4583f97a-e4c5-4990-981b-988e1bb440a7" alt="img"/> Storyset</a>
+                                    <a href="https://storyset.com/online" className="btn mb-1"><img src="../../../assets/letter-s.png" alt="img"/> Storyset</a>
                                  </div>
                               </div>
                            </Col>
@@ -655,7 +655,7 @@ const HomeUser = () => {
                   <li><h4 className="text-white align-center mt-4 mb-3">Developed by</h4></li>
                   <div className="rotate">
                   <li className="d-flex justify-content-center">
-                     <img className="inline-block align-center h-20 image-center" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2FTJDev.png?alt=media&token=e3f6d151-99c7-4c31-96ad-506b6fff9ff1" alt="logo"/></li>
+                     <img className="inline-block align-center h-20 image-center" src="../assets/TJDev.png" alt="logo"/></li>
                   </div>
                   <p className="d-flex justify-content-center text-white">Technojet.Dev</p>  
                   </ul>
@@ -664,6 +664,7 @@ const HomeUser = () => {
                   <ul className="list-unstyled ">
                   <h4  className="d-flex justify-content-center text-white">Contacts</h4>
                   <li className="mb-2 text-white justify-content-center align-items-center"><FaIcons.FaHome/> Lopez, Quezon </li>
+                  <li className="mb-2 text-white justify-content-center align-items-center"><FaIcons.FaGoogle/> technojet.devofficial</li>
                   <li className="mb-2 text-white justify-content-center align-items-center"><FaIcons.FaPhoneAlt/> +63 956 528 0371</li>
                   </ul>
             </div>
