@@ -496,7 +496,7 @@ const HomeUser = () => {
                         <div className="col-md-4">
                            <div className="testimonial mb-5">
                               <div className="avatar mx-auto">
-                                 <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2F1x1.png?alt=media&token=afb524c9-0e73-430d-9998-916dc3b5f333" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
+                                 <img src="<meta name="description" content="Welcome to ConquError Tutorial page, watch and learn from the latest tutorial and content creator across the IT industry." />" className="rounded-circle z-depth-1 img-fluid" alt="developer"/>
                               </div>
                                  <h4 className="font-weight-bold dark-grey-text mt-4">Paul Lemuel Niverio</h4>
                                  <h6 className="font-weight-bold blue-text my-3">Researcher</h6>
