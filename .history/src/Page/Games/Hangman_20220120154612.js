@@ -89,7 +89,7 @@ class Hangman extends Component {
 
         <Navbar/>
         
-        <div style={{marginTop:'5rem'}}></div>
+        <div style={{marginTop:}}></div>
         <Link to="/games" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '10px' }} className="mt-5"><FaIcons.FaArrowLeft/> Back</Link>
         
 

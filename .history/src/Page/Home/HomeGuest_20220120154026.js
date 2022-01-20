@@ -680,7 +680,7 @@ const HomeUser = () => {
             <div className="container">
                
                <p className="col-sm d-flex justify-content-center text-center text-white">
-                  &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.21.012022
+                  &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.21.01
                </p>
                
             </div>

@@ -98,9 +98,9 @@ const Quiz = () => {
         <Navbar/>
         
 
-        <div style={{marginTop:'5rem'}}></div>
-        <Link to="/games" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5rem' }}><FaIcons.FaArrowLeft/> Back</Link>
+
         <QuizWindow>
+        <Link to="/games" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5rem' }}><FaIcons.FaArrowLeft/> Back</Link>
 
         <h1 className="text-center text-secondary fw-bold mb-5">ConQuiz</h1>
             { quiz[number] &&

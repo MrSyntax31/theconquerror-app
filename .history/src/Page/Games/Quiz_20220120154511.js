@@ -98,7 +98,7 @@ const Quiz = () => {
         <Navbar/>
         
 
-        <div style={{marginTop:'5rem'}}></div>
+        
         <Link to="/games" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5rem' }}><FaIcons.FaArrowLeft/> Back</Link>
         <QuizWindow>
 
