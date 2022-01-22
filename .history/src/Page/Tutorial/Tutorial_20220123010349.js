@@ -87,7 +87,7 @@ const docsfile = Docs.map((documents) => (
                     
                         <div>
                             <div className="mb-4">
-                                    <h2 className="text-center text-primary fw-bold mt-3">Welcome to Tutorials</h2>                                   
+                                    <h1 className="text-center text-primary fw-bold">Welcome to Tutorials</h1>                                   
                             </div>  
                         </div>
 
