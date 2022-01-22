@@ -1,7 +1,7 @@
 import React, {useEffect,useState, useRef} from 'react';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import {Card, Button, Row, Col, Offcanvas, Modal, Form, Alert} from 'react-bootstrap';
+import {Card, Button, Row, Col, Offcanvas, Modal, Form, Alert, Accordion} from 'react-bootstrap';
 import * as AiIcons from 'react-icons/ai';
 import * as GiIcons from "react-icons/gi";
 import * as FaIcons from "react-icons/fa";
@@ -395,6 +395,72 @@ const showCourse = courses1.map((courses1) => (
                             </section>
 
                             {/* Content ID */}
+
+                            <Accordion>
+                              <Accordion.Item eventKey="0">
+                                <Accordion.Header>{courseinfo.Title1}</Accordion.Header>
+                                <Accordion.Body>
+                                  {/* Contents */}
+                                <h2 className="fw-bold mb-3 text-primary">{courseinfo.Title1}</h2>    
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle1}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content1}</p>
+                                <code className="mt-2 mb-2">{courseinfo.Code1}</code><br/>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img1} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc1}</p>
+                                <p className="text-justify mb-3">{courseinfo.Content2}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle2}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content3}</p>
+                                <p className="text-justify mb-3">{courseinfo.Content4}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle3}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content5}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img2} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc2}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle4}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content6}</p>
+                                <code className="mt-2 mb-2">{courseinfo.Code2}</code><br/>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img3} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc3}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img4} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc4}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle5}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content7}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img5} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc5}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle6}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content8}</p>
+                                <code className="mt-2 mb-2">{courseinfo.Code3}</code><br/>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img6} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc6}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle7}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content9}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img7} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc7}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle8}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content10}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img8} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc8}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle9}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content11}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img9} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc9}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle10}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content12}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img10} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc10}</p>
+                                <h4 className="fw-bold mb-3">{courseinfo.Subtitle11}</h4>
+                                <p className="text-justify mb-3">{courseinfo.Content13}</p>
+                                <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img11} alt={courses.Title} />
+                                <p className="text-center font-italic mb-3">{courseinfo.Imgdesc11}</p>
+                                </Accordion.Body>
+                              </Accordion.Item>
+                              <Accordion.Item eventKey="1">
+                                <Accordion.Header>Accordion Item #2</Accordion.Header>
+                                <Accordion.Body>
+                                  
+                                </Accordion.Body>
+                              </Accordion.Item>
+                            </Accordion>
+
                             <section id="content" className="mt-5 m-5">
                                                             
                                 {/* Contents */}
@@ -554,7 +620,7 @@ const showCourse = courses1.map((courses1) => (
                             <div className="mt-2 mb-2 m-3">
                               <h3>Take Assessment</h3>
                          
-                                  <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="mt-3 btn btn-primary fs-5">Assessment</Button>
+                                  <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="btn btn-primary fs-5">Assessment</Button>
 
                             </div>
                           </section>

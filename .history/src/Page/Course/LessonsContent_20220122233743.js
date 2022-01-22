@@ -1,7 +1,7 @@
 import React, {useEffect,useState, useRef} from 'react';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import {Card, Button, Row, Col, Offcanvas, Modal, Form, Alert} from 'react-bootstrap';
+import {Card, Button, Row, Col, Offcanvas, Modal, Form, Alert, Accordion} from 'react-bootstrap';
 import * as AiIcons from 'react-icons/ai';
 import * as GiIcons from "react-icons/gi";
 import * as FaIcons from "react-icons/fa";
@@ -395,6 +395,34 @@ const showCourse = courses1.map((courses1) => (
                             </section>
 
                             {/* Content ID */}
+
+                            <Accordion>
+  <Accordion.Item eventKey="0">
+    <Accordion.Header>Accordion Item #1</Accordion.Header>
+    <Accordion.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="1">
+    <Accordion.Header>Accordion Item #2</Accordion.Header>
+    <Accordion.Body>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+      velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+      cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
+      est laborum.
+    </Accordion.Body>
+  </Accordion.Item>
+</Accordion>
+
                             <section id="content" className="mt-5 m-5">
                                                             
                                 {/* Contents */}
@@ -554,7 +582,7 @@ const showCourse = courses1.map((courses1) => (
                             <div className="mt-2 mb-2 m-3">
                               <h3>Take Assessment</h3>
                          
-                                  <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="mt-3 btn btn-primary fs-5">Assessment</Button>
+                                  <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="btn btn-primary fs-5">Assessment</Button>
 
                             </div>
                           </section>

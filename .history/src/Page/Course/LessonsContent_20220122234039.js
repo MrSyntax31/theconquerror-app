@@ -1,7 +1,7 @@
 import React, {useEffect,useState, useRef} from 'react';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import {Card, Button, Row, Col, Offcanvas, Modal, Form, Alert} from 'react-bootstrap';
+import {Card, Button, Row, Col, Offcanvas, Modal, Form, Alert, Accordion} from 'react-bootstrap';
 import * as AiIcons from 'react-icons/ai';
 import * as GiIcons from "react-icons/gi";
 import * as FaIcons from "react-icons/fa";
@@ -395,9 +395,12 @@ const showCourse = courses1.map((courses1) => (
                             </section>
 
                             {/* Content ID */}
-                            <section id="content" className="mt-5 m-5">
-                                                            
-                                {/* Contents */}
+
+                            <Accordion>
+                              <Accordion.Item eventKey="0">
+                                <Accordion.Header>{courseinfo.Title1}</Accordion.Header>
+                                <Accordion.Body>
+                                  {/* Contents */}
                                 <h2 className="fw-bold mb-3 text-primary">{courseinfo.Title1}</h2>    
                                 <h4 className="fw-bold mb-3">{courseinfo.Subtitle1}</h4>
                                 <p className="text-justify mb-3">{courseinfo.Content1}</p>
@@ -448,7 +451,11 @@ const showCourse = courses1.map((courses1) => (
                                 <p className="text-justify mb-3">{courseinfo.Content13}</p>
                                 <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img11} alt={courses.Title} />
                                 <p className="text-center font-italic mb-3">{courseinfo.Imgdesc11}</p>
-
+                                </Accordion.Body>
+                              </Accordion.Item>
+                              <Accordion.Item eventKey="1">
+                                <Accordion.Header>{courseinfo.Title2}</Accordion.Header>
+                                <Accordion.Body>
                                 <h2 className="fw-bold mb-3 mt-2 text-primary">{courseinfo.Title2}</h2>  
                                 <p className="text-justify mb-3">{courseinfo.Content14}</p>
                                 <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img12} alt={courses.Title} />
@@ -535,8 +542,10 @@ const showCourse = courses1.map((courses1) => (
                                 <p className="text-justify mb-3">{courseinfo.Content38}</p>
                                 <img className="mx-auto d-block mt-3 mb-3" style={{width: '50%', height: 'auto'}} src={courseinfo.Img29} alt={courses.Title} />
                                 <p className="text-center font-italic mb-3">{courseinfo.Imgdesc29}</p>
+                                </Accordion.Body>
+                              </Accordion.Item>
+                            </Accordion>
 
-                            </section>
 
                               
                               {/*Code ID */}
@@ -554,7 +563,7 @@ const showCourse = courses1.map((courses1) => (
                             <div className="mt-2 mb-2 m-3">
                               <h3>Take Assessment</h3>
                          
-                                  <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="mt-3 btn btn-primary fs-5">Assessment</Button>
+                                  <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="btn btn-primary fs-5">Assessment</Button>
 
                             </div>
                           </section>

@@ -554,7 +554,7 @@ const showCourse = courses1.map((courses1) => (
                             <div className="mt-2 mb-2 m-3">
                               <h3>Take Assessment</h3>
                          
-                                  <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="mt-3 btn btn-primary fs-5">Assessment</Button>
+                                  <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="btn btn-primary fs-5">Assessment</Button>
 
                             </div>
                           </section>

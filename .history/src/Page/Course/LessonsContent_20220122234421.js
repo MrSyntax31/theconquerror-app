@@ -1,7 +1,7 @@
 import React, {useEffect,useState, useRef} from 'react';
 import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
-import {Card, Button, Row, Col, Offcanvas, Modal, Form, Alert} from 'react-bootstrap';
+import {Card, Button, Row, Col, Offcanvas, Modal, Form, Alert, Accordion} from 'react-bootstrap';
 import * as AiIcons from 'react-icons/ai';
 import * as GiIcons from "react-icons/gi";
 import * as FaIcons from "react-icons/fa";
@@ -395,7 +395,13 @@ const showCourse = courses1.map((courses1) => (
                             </section>
 
                             {/* Content ID */}
-                            <section id="content" className="mt-5 m-5">
+
+                            <Accordion>
+                              <Accordion.Item eventKey="0">
+                                <Accordion.Header>{courseinfo.Title1}</Accordion.Header>
+                                <Accordion.Body>
+                                  {/* Contents */}
+                                <section id="content" className="mt-5 m-5">
                                                             
                                 {/* Contents */}
                                 <h2 className="fw-bold mb-3 text-primary">{courseinfo.Title1}</h2>    
@@ -537,6 +543,11 @@ const showCourse = courses1.map((courses1) => (
                                 <p className="text-center font-italic mb-3">{courseinfo.Imgdesc29}</p>
 
                             </section>
+                                </Accordion.Body>
+                              </Accordion.Item>
+                            </Accordion>
+
+                            
 
                               
                               {/*Code ID */}
@@ -554,7 +565,7 @@ const showCourse = courses1.map((courses1) => (
                             <div className="mt-2 mb-2 m-3">
                               <h3>Take Assessment</h3>
                          
-                                  <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="mt-3 btn btn-primary fs-5">Assessment</Button>
+                                  <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="btn btn-primary fs-5">Assessment</Button>
 
                             </div>
                           </section>
