@@ -86,8 +86,8 @@ const docsfile = Docs.map((documents) => (
 
                     
                         <div>
-                            <div className="mb-5">
-                                    <h2 className="text-center text-primary mb-2 fw-bold">Welcome to Tutorials</h2>                                   
+                            <div className="mb-4">
+                                    <h2 className="text-center text-primary fw-bold">Welcome to Tutorials</h2>                                   
                             </div>  
                         </div>
 
@@ -1060,33 +1060,30 @@ const docsfile = Docs.map((documents) => (
 
                             </section>
 
-                                    <div>
+                        <div>
                                         <div className=" text-center m-2">
-                                            <h1 className="text-center text-primary fw-bold">Available Resources for Students</h1>
+                                            <h1 className="text-center text-primary fw-bold">Downloads for Students</h1>
                                             <p>You may need specific softwares to open, view and print the files in this page:  Microsoft Excel Online or Microsoft Word Online. Most modern browsers and devices can open PDF and ZIP files.</p>
-                                            <em className="text-danger">Hide this when user is guest! </em>
                                         </div>
-                                        <Card className="mt- m-2">
-                                            <Card.Body>
-                                                        <Form className="m-1"  >
-                                                                <Table striped bordered hover>
-                                                                    <thead>
-                                                                    <tr>
-                                                                    <th>Title</th>
-                                                                    <th>Description</th>
-                                                                    <th>Topic</th>
-                                                                    <th>Owner</th>
-                                                                    <th>Tags</th>
-                                                                    <th>Download Link</th>
-                                                                    </tr>
-                                                                    </thead>
-                                                                        {docsfile}
-                                                                </Table>
-                                                                
-                                                        </Form> 
-                                            </Card.Body>
-                                        </Card>
-                                    </div>
+                            <Card className="mt- m-2">
+                                <Card.Body>
+                                            <Form className="m-1"  >
+                                                    <Table striped bordered hover>
+                                                        <thead>
+                                                        <tr>
+                                                        <th>Description</th>
+                                                        <th>Topic</th>
+                                                        <th>Owner</th>
+                                                        <th>Download Link</th>
+                                                        </tr>
+                                                        </thead>
+                                                            {docsfile}
+                                                    </Table>
+                                                    
+                                            </Form> 
+                                </Card.Body>
+                            </Card>
+                        </div>
                              
 
                           

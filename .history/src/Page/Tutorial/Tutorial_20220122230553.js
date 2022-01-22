@@ -1064,7 +1064,7 @@ const docsfile = Docs.map((documents) => (
                                         <div className=" text-center m-2">
                                             <h1 className="text-center text-primary fw-bold">Available Resources for Students</h1>
                                             <p>You may need specific softwares to open, view and print the files in this page:  Microsoft Excel Online or Microsoft Word Online. Most modern browsers and devices can open PDF and ZIP files.</p>
-                                            <em className="text-danger">Hide this when user is guest! </em>
+                                            <em>Hide this when user is guest </em>
                                         </div>
                                         <Card className="mt- m-2">
                                             <Card.Body>
