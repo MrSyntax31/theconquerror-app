@@ -231,12 +231,12 @@ const docsfile = Docs.map((documents) => (
                                                 </Tab>
 
                                                 <Tab eventKey="profile" title="Videos">
-                                                    <section className="container-fluid mt-7" fluid="md" style={{
+                                                    <Container className="container-fluid mt-7" fluid="md" style={{
                                                             display: "flex",
                                                             justifyContent: "center",
                                                             alignItems: "center"
                                                         }}>
-                                                        <Card className="mb-3">
+                                                        <Card>
                                                             <Card.Body>
                                                                 
                                                                 <h3 className="mt-2 fw-bold">Featured</h3>
@@ -248,7 +248,7 @@ const docsfile = Docs.map((documents) => (
                                                                     <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://www.youtube.com/embed/O7jCPAOt53U?list=PLh6-IXduASC_QtCU7Dnn3IdLyhsshNtEv" frameBorder="0" title="vid" allowFullScreen/>
                                                             </div>
 
-                                                            <section className="mb-3">
+                                                            <section>
                                                                     <Row>
                                                                         <div className="mt-3">
                                                                             <div className="">
@@ -396,7 +396,7 @@ const docsfile = Docs.map((documents) => (
                                                                 
                                                             </Card.Body>
                                                         </Card>
-                                                    </section>
+                                                    </Container>
                                                 </Tab>
                                             </Tabs>
                                         </Card>   

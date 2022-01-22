@@ -1,0 +1,1 @@
+int co, gurU99, GuRu99, GURU99;

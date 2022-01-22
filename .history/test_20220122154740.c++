@@ -1,0 +1,1 @@
+int conquerror21, conquError21, GuRu99, GURU99;

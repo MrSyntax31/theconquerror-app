@@ -231,12 +231,12 @@ const docsfile = Docs.map((documents) => (
                                                 </Tab>
 
                                                 <Tab eventKey="profile" title="Videos">
-                                                    <section className="container-fluid mt-7" fluid="md" style={{
+                                                    <section className="container-fluid mt-7 " fluid="md" style={{
                                                             display: "flex",
                                                             justifyContent: "center",
                                                             alignItems: "center"
                                                         }}>
-                                                        <Card className="mb-3">
+                                                        <Card>
                                                             <Card.Body>
                                                                 
                                                                 <h3 className="mt-2 fw-bold">Featured</h3>

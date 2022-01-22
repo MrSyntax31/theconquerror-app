@@ -236,7 +236,7 @@ const docsfile = Docs.map((documents) => (
                                                             justifyContent: "center",
                                                             alignItems: "center"
                                                         }}>
-                                                        <Card className="mb-3">
+                                                        <Card >
                                                             <Card.Body>
                                                                 
                                                                 <h3 className="mt-2 fw-bold">Featured</h3>

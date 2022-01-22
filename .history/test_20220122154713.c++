@@ -1,0 +1,1 @@
+int conquerr, gurU99, GuRu99, GURU99;
