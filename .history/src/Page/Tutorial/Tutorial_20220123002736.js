@@ -628,14 +628,13 @@ const docsfile = Docs.map((documents) => (
                                                                                     </div>
                                                                                 </div>
                                                                         </section>
-
                                                                         <section className="about_area section_gap mb-3">
                                                                                 <div className="">
                                                                                     <div className="row justify-content-start align-items-center">
                                                                                         <div className="col-lg-4">
                                                                                             <div className="about_img">
-                                                                                            <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/GeMEHNBOUkU?list=PLVnJhHoKgEmrAk6XdaioMlfmpD_ahnA-B" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
-                                                                                                        </div>
+                                                                                            <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://www.youtube.com/embed/7ltB_Hfegzs?list=PLVnJhHoKgEmrAk6XdaioMlfmpD_ahnA-B" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                                                            </div>
                                                                                         </div>
 
                                                                                         <div className="offset-lg-1 col-lg-5 mt-3">
@@ -651,29 +650,6 @@ const docsfile = Docs.map((documents) => (
                                                                                     </div>
                                                                                 </div>
                                                                         </section>
-
-                                                                        <section className="about_area section_gap mb-3">
-                                                                                            <div className="">
-                                                                                                <div className="row justify-content-start align-items-center">
-                                                                                                    <div className="col-lg-4">
-                                                                                                        <div className="about_img">
-                                                                                                            <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/XgU7y3XdaqM?list=PLVnJhHoKgEmrAk6XdaioMlfmpD_ahnA-B" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
-                                                                                                        </div>
-                                                                                                    </div>
-
-                                                                                                    <div className="offset-lg-1 col-lg-5 mt-3">
-                                                                                                        <div className="main_title text-left">
-                                                                                                            <h5 className="fw-bold mb-3">C++ Tutorial #9: 2D Arrays + Nested For Loops | Filipino | Tagalog</h5>
-                                                                                                            <p className="mb-2">
-                                                                                                                Hey Guys today pagaaralan natin ang 2D Array! Please Do Comment Down below if you happen to have questions or you don't understand something!
-                                                                                                            </p>
-                                                                                                               <br/>
-                                                                                                            <span className="duration">Duration: 10 minutes, 36 seconds</span><br/>
-                                                                                                        </div>
-                                                                                                    </div>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                    </section>
 
 
 
@@ -693,7 +669,7 @@ const docsfile = Docs.map((documents) => (
                                 </section>
 
                                 {/* Josiahdoestech */}
-                                <section className="m-2">
+                                <section className="m-5">
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="Josiahdoestech">
@@ -730,58 +706,62 @@ const docsfile = Docs.map((documents) => (
                                             </Tab>
 
                                             <Tab eventKey="video" title="Videos">
-                                            <section className="container-fluid mt-7" fluid="md" style={{
-                    display: "flex",
-                    justifyContent: "center",
-                    alignItems: "center"
-                }}>
-                <div className="mb-3">
-                   
-                        
-                        <h3 className="mt-2 fw-bold">Featured</h3>
-                    <div className="video" style={{
-                        position: "relative",
-                        paddingBottom: "56.25%" /* 16:9 */,
-                        paddingTop: 25,
-                        height: 0 }} >
-                            <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://youtube.com/embed/7ctGMOa8ems?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" title="vid" allowFullScreen/>
-                    </div>
-
-                    <section>
-                            <Row>
-                                <div className="mt-3">
-                                    <div className="">
-                                    <h1 className="fw-bold mb-3">My Experiences in being a BSIT Student || TIP-QC || Online Learning</h1>
-                                    <p>What is up everyone! Here are some Questions that I answered on my experiences in being a BSIT student in TIP- QC</p>
-
-                                            <div>
-
-        
-                                                <section className="about_area section_gap mb-3 mt-3">
-                                                        <div className="">
-                                                            <div className="row justify-content-start align-items-center">
-                                                                <div className="col-lg-4">
-                                                                    <div className="about_img">
-                                                                    <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/iSNeOTyPALY?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
-                                                                        </div>
-                                                                </div>
-
-                                                                <div className="offset-lg-1 col-lg-5 mt-3">
-                                                                    <div className="main_title text-left">
-                                                                    <h5 className="fw-bold mb-3">A day in the life of a BSIT student |First day of online classes | online learning #josiahdoestech</h5>
-                                                                        <p className="mb-2">
-                                                                        Hello everyone! sorry for not posting so much lately I've been busy with my school and organization activities!
-                                                                        </p>
-                                                                        <br/>
-                                                                        <span className="duration">Duration: 13 minutes, 03 seconds</span><br/>
+                                                    <Container className="container-fluid mt-7" fluid="md" style={{
+                                                            display: "flex",
+                                                            justifyContent: "center",
+                                                            alignItems: "center"
+                                                        }}>
+                                                        <Card>
+                                                            <Card.Body>
+                                                                
+                                                                <h3 className="mt-2 fw-bold">Featured</h3>
+                                                                    <div className="video"
+                                                                            style={{
+                                                                                position: "relative",
+                                                                                paddingBottom: "56.25%" /* 16:9 */,
+                                                                                paddingTop: 25,
+                                                                                height: 0 }}>
+                                                                        <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://youtube.com/embed/7ctGMOa8ems?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" title="vid" allowFullScreen/>
                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                </section>
 
-                                                <section className="about_area section_gap mb-3">
-                                                    <div>
+                                                                    <Container>
+                                                                            <Row>
+                                                                                <div className="mt-3">
+                                                                                    <div className="">
+                                                                                        <h1 className="fw-bold mb-3">My Experiences in being a BSIT Student || TIP-QC || Online Learning</h1>
+                                                                                            
+                                                                                            <p>What is up everyone! Here are some Questions that I answered on my experiences in being a BSIT student in TIP- QC</p>
+
+                                                                                            <div>
+                                                                                                
+                                                                                                <section className="about_area section_gap mt-3 mb-3">
+                                                                                                        <div className="">
+                                                                                                            <div className="row justify-content-start align-items-center">
+                                                                                                                <div className="col-lg-4">
+                                                                                                                    <div className="about_img">
+                                                                                                                        <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/iSNeOTyPALY?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                                                                                    </div>
+                                                                                                                </div>
+
+                                                                                                                <div className="offset-lg-1 col-lg-5 mt-3">
+                                                                                                                    <div className="main_title text-left">
+                                                                                                                    <h5 className="fw-bold mb-3">A day in the life of a BSIT student |First day of online classes | online learning #josiahdoestech</h5>
+                                                                                                                        <p className="mb-2">
+                                                                                                                        Hello everyone! sorry for not posting so much lately I've been busy with my school and organization activities!  but here yah go! here's my daily routine as a BsIT student! don't forget to leave a like to this video and don't forget to subscribe!  God bless everyone and stay safe!
+                                                                                                                        </p>
+                                                                                                                        <p className="mb-2">
+                                                                                                                        Hello everyone! As we all know, I am now an affiliate with StyleDoubler where you can have commissions to the purchases on online Shopping like Lazada! If you would like to support me in my journey, you can help me with these links of what is in my setup! Thanks everyone! Ryzen 5 3600
+                                                                                                                        </p>
+                                                                                                                        <br/>
+                                                                                                                        <span className="duration">Duration: 13 minutes, 03 seconds</span><br/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                </section>
+
+                                                                                                <section className="about_area section_gap mb-3">
+                                                                                                        <div>
                                                                                                             <div className="row justify-content-start align-items-center">
                                                                                                                 <div className="col-lg-4">
                                                                                                                     <div className="about_img">
@@ -793,17 +773,17 @@ const docsfile = Docs.map((documents) => (
                                                                                                                     <div className="main_title text-left">
                                                                                                                         <h5 className="fw-bold mb-3">Tips and Fundamentals of Programming | BSIT | TIPian Student (Tagalog) #JosiahDoesTech</h5>
                                                                                                                         <p className="mb-2">
-                                                                                                                            Hello everyone! As we all know, I am now an affiliate with StyleDoubler where you can have commissions to the purchases on online Shopping like Lazada! 
+                                                                                                                            Hello everyone! As we all know, I am now an affiliate with StyleDoubler where you can have commissions to the purchases on online Shopping like Lazada! If you would like to support me in my journey, you can help me with these links of what is in my setup! Thanks everyone! Ryzen 5 3600
                                                                                                                         </p>
                                                                                                                         <br/>
                                                                                                                         <span className="duration">Duration: 12 minutes, 04 seconds</span><br/>
                                                                                                                     </div>
                                                                                                                 </div>
                                                                                                             </div>
-                                                    </div>
-                                                </section>
+                                                                                                        </div>
+                                                                                                </section>
                                                                                             
-                                                <section className="about_area section_gap mb-3">
+                                                                                                <section className="about_area section_gap mb-3">
                                                                                                         <div className="">
                                                                                                             <div className="row justify-content-start align-items-center">
                                                                                                                 <div className="col-lg-4">
@@ -825,25 +805,23 @@ const docsfile = Docs.map((documents) => (
                                                                                                                 </div>
                                                                                                             </div>
                                                                                                         </div>
-                                                </section>
-
-                                            </div>            
-                                    </div>
-                                </div>
-                            </Row>
-                    </section>
-                        
-                   
-                </div>
-            </section>
+                                                                                                </section> 
+                                                                                            </div>            
+                                                                                    </div>
+                                                                                </div>
+                                                                            </Row>
+                                                                    </Container>
+                                                                
+                                                            </Card.Body>
+                                                        </Card>
+                                                    </Container>
                                             </Tab>
-                                            
                                         </Tabs>
                                         </Card>   
                                 </section>
 
                                 {/* John Carlo Franco */}
-                                <section className="m-2">
+                                <section className="m-5">
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="John Carlo Franco">
@@ -877,12 +855,12 @@ const docsfile = Docs.map((documents) => (
                                             </Tab>
 
                                             <Tab eventKey="video" title="Videos">
-                                            <section className="container-fluid mt-7" fluid="md" style={{
+                                            <Container className="container-fluid mt-7" fluid="md" style={{
                                                     display: "flex",
                                                     justifyContent: "center",
                                                     alignItems: "center"
                                                 }}>
-                                                        <div className="mb-3">
+                                                        <Card>
                                                             <Card.Body>
                                                                 
                                                                 <h3 className="mt-2 fw-bold">Featured</h3>
@@ -895,7 +873,7 @@ const docsfile = Docs.map((documents) => (
                                                                 <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://youtube.com/embed/oqxOTQ8dfP0?list=PLVT3i1wfhKYD9TZ6lDjHDMtn8XbFpltCE" frameBorder="0" title="vid" allowFullScreen/>
                                                             </div>
 
-                                                        <section>
+                                                        <Container>
                                                                 <Row>
                                                                     <div className="mt-3">
                                                                         <div className="">
@@ -903,7 +881,7 @@ const docsfile = Docs.map((documents) => (
                                                                                 
                                                                                 <p className="mb-2">paano maging programmer,
                                                                                     paano maging magaling na programmer,
-                                                                                    
+                                                                                    paano ba maging programmer
                                                                                     </p>
 
                                                                                 <div>
@@ -921,9 +899,19 @@ const docsfile = Docs.map((documents) => (
                                                                                                         <div className="main_title text-left">
                                                                                                         <h5 className="fw-bold mb-3">VLOG 2 - Ano ang Programming?</h5>
                                                                                                             <p className="mb-2">
-                                                                                                            
+                                                                                                            paano maging programmer,
                                                                                                             paano maging magaling na programmer,
-                                                                                                            
+                                                                                                            paano ba maging programmer,
+                                                                                                            paano maging computer programmer,
+                                                                                                            paano mag programming,
+                                                                                                            ano nga ba ang programming,
+                                                                                                            ano ang computer programming
+                                                                                                            programming tagalog tutorial,
+                                                                                                            programming for beginners tagalog,
+                                                                                                            computer programming tagalog,
+                                                                                                            fundamentals of programming tagalog,
+                                                                                                            programming language tagalog,
+                                                                                                            what is programming tagalog,
                                                                                                             </p>
                                                                                                             
                                                                                                             <br/>
@@ -948,8 +936,18 @@ const docsfile = Docs.map((documents) => (
                                                                                                             <h5 className="fw-bold mb-3">VLOG 3 - Para sayo ba ang pagiging Programmer</h5>
                                                                                                             <p className="mb-2">
                                                                                                             paano maging programmer,
-                                                                                                            
-                                                                                                            
+                                                                                                            paano maging magaling na programmer,
+                                                                                                            paano ba maging programmer,
+                                                                                                            paano maging computer programmer,
+                                                                                                            paano mag programming,
+                                                                                                            ano nga ba ang programming,
+                                                                                                            ano ang computer programming
+                                                                                                            programming tagalog tutorial,
+                                                                                                            programming for beginners tagalog,
+                                                                                                            computer programming tagalog,
+                                                                                                            fundamentals of programming tagalog,
+                                                                                                            programming language tagalog,
+                                                                                                            what is programming tagalog
                                                                                                             </p>
                                                                                                             <br/>
                                                                                                             <span className="duration">Duration: 12 minutes, 54 seconds</span><br/>
@@ -974,8 +972,18 @@ const docsfile = Docs.map((documents) => (
                                                                                                             <p className="mb-2">
                                                                                                             paano maging programmer,
                                                                                                             paano maging magaling na programmer,
-                                                                                                           
-                                                                                                            
+                                                                                                            paano ba maging programmer,
+                                                                                                            paano maging computer programmer,
+                                                                                                            paano mag programming,
+                                                                                                            ano nga ba ang programming,
+                                                                                                            ano ang computer programming
+                                                                                                            programming tagalog tutorial,
+                                                                                                            programming for beginners tagalog,
+                                                                                                            computer programming tagalog,
+                                                                                                            fundamentals of programming tagalog,
+                                                                                                            programming language tagalog,
+                                                                                                            what is programming tagalog
+
                                                                                                             </p>
                                                                                                             
                                                                                                             <br/>
@@ -1000,7 +1008,7 @@ const docsfile = Docs.map((documents) => (
                                                                                                         <h5 className="fw-bold mb-3">VLOG 5 - Dalawang bagay na kaylangan mong mahanap para maging succesful</h5>
                                                                                                             <p className="mb-2">
                                                                                                             Advice para maging successful sa career na napili mo.
-                                                                                                    
+                                                                                                            Advice para sa hindi alam kung ano gustong maging career.
                                                                                                             </p>
                                                                                                             
                                                                                                             <br/>
@@ -1015,11 +1023,11 @@ const docsfile = Docs.map((documents) => (
                                                                         </div>
                                                                     </div>
                                                                 </Row>
-                                                        </section>
+                                                        </Container>
                                                                 
                                                             </Card.Body>
-                                                        </div>
-                                                    </section>
+                                                        </Card>
+                                                    </Container>
                                             </Tab>
                                         </Tabs>
                                         </Card>   

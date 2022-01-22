@@ -619,7 +619,7 @@ uploadTask.on('state_changed',
                                         <Form.Control value={question || ''} onChange={e => setQuestion(e.target.value)} name = "text" type="text" required  placeholder="Title"/>
                                       </Form.Group>
                                       <Form.Group id="desc" className="mb-3">
-                                        <Form.Label>Description</Form.Label>
+                                        <Form.Label>Desc</Form.Label>
                                         <Form.Control as="textarea" value={description || ''} onChange={e => setDesc(e.target.value)} name = "text" type="text" required  placeholder="Description"/>
                                       </Form.Group>
                         <strong>Upload a picture of your code here! (Optional)</strong>
