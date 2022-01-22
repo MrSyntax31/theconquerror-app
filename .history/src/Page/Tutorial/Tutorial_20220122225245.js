@@ -405,7 +405,7 @@ const docsfile = Docs.map((documents) => (
                                 </section>
                                 
                                 {/* SDPTSolutions */}
-                                <section className="m-2">
+                                <section className="m-5">
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="SDPT Solutions">
@@ -461,7 +461,7 @@ const docsfile = Docs.map((documents) => (
                                                                 <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://www.youtube.com/embed/sPTZNXbSrqY" frameBorder="0" title="vid" allowFullScreen/>
                                                             </div>
 
-                                                        <Container>
+                                                        <section>
                                                                 <Row>
                                                                     <div className="mt-3">
                                                                         <div className="">
@@ -683,7 +683,7 @@ const docsfile = Docs.map((documents) => (
                                                                         </div>
                                                                     </div>
                                                                 </Row>
-                                                        </Container>
+                                                        </section>
                                                                 
                                                             </div>
                                                         </div>
@@ -694,7 +694,7 @@ const docsfile = Docs.map((documents) => (
                                 </section>
 
                                 {/* Josiahdoestech */}
-                                <section className="m-2">
+                                <section className="m-5">
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="Josiahdoestech">
@@ -731,13 +731,13 @@ const docsfile = Docs.map((documents) => (
                                             </Tab>
 
                                             <Tab eventKey="video" title="Videos">
-                                                    <section className="container-fluid mt-7" fluid="md" style={{
+                                                    <Container className="container-fluid mt-7" fluid="md" style={{
                                                             display: "flex",
                                                             justifyContent: "center",
                                                             alignItems: "center"
                                                         }}>
-                                                        <div className="mb-3">
-                                                            <div>
+                                                        <Card>
+                                                            <Card.Body>
                                                                 
                                                                 <h3 className="mt-2 fw-bold">Featured</h3>
                                                                     <div className="video"
@@ -837,16 +837,16 @@ const docsfile = Docs.map((documents) => (
                                                                             </Row>
                                                                     </Container>
                                                                 
-                                                            </div>
-                                                        </div>
-                                                    </section>
+                                                            </Card.Body>
+                                                        </Card>
+                                                    </Container>
                                             </Tab>
                                         </Tabs>
                                         </Card>   
                                 </section>
 
                                 {/* John Carlo Franco */}
-                                <section className="m-2">
+                                <section className="m-5">
                                         <Card className="mt-5">
                                         <Tabs defaultActiveKey="profile" id="uncontrolled-tab-example" className="mb-3 p-2 m-2">
                                             <Tab eventKey="profile" title="John Carlo Franco">
@@ -880,13 +880,13 @@ const docsfile = Docs.map((documents) => (
                                             </Tab>
 
                                             <Tab eventKey="video" title="Videos">
-                                            <section className="container-fluid mt-7" fluid="md" style={{
+                                            <Container className="container-fluid mt-7" fluid="md" style={{
                                                     display: "flex",
                                                     justifyContent: "center",
                                                     alignItems: "center"
                                                 }}>
-                                                        <div className="mb-3">
-                                                            <div>
+                                                        <Card>
+                                                            <Card.Body>
                                                                 
                                                                 <h3 className="mt-2 fw-bold">Featured</h3>
                                                             <div className="video"
@@ -1050,9 +1050,9 @@ const docsfile = Docs.map((documents) => (
                                                                 </Row>
                                                         </Container>
                                                                 
-                                                            </div>
-                                                        </div>
-                                                    </section>
+                                                            </Card.Body>
+                                                        </Card>
+                                                    </Container>
                                             </Tab>
                                         </Tabs>
                                         </Card>   
