@@ -735,9 +735,8 @@ swal("Something is Wrong",error.code,"warning");
                             <div className="text-start">
                               <h3 className="fw-bold fs-m text-start container mb-3"><GoIcons.GoCommentDiscussion/> All Topics </h3>
 
-                              <Button variant="primary" onClick={AskQuestion} className="mt-2 mb-2"> Ask a Question</Button>{' '}
-                              <Button variant="primary"  className="mt-2 mb-2"> My Question</Button>
-                                <br/>
+                              <Button variant="primary" onClick={AskQuestion} className="mt-2 mb-2"> Ask a Question</Button>{' '}<Button variant="primary"  className="mt-2 mb-2"> My Question</Button>
+                                </
                                 <em>To sort discussion please click</em>
                                 <Button variant="" className="text-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags!</Button><br/>
 

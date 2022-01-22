@@ -737,7 +737,7 @@ swal("Something is Wrong",error.code,"warning");
 
                               <Button variant="primary" onClick={AskQuestion} className="mt-2 mb-2"> Ask a Question</Button>{' '}
                               <Button variant="primary"  className="mt-2 mb-2"> My Question</Button>
-                                <br/>
+                                </br>
                                 <em>To sort discussion please click</em>
                                 <Button variant="" className="text-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags!</Button><br/>
 

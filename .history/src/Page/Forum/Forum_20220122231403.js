@@ -495,63 +495,59 @@ uploadTask.on('state_changed',
 
             </Container>
 
-                    {/* Division for Discussion Board*/}
-                    <div>
-                        <section className="text-center mt-5 mb-5 container">
-                          <div>                                  
-                                <div className=" text-start">
-                                  <h3 className="fw-bold fs-m text-start container"><GoIcons.GoCommentDiscussion/> Most Recent Topics <Button variant="primary" onClick={AskQuestion} className="mt-4 mb-2"> Ask a Question</Button> </h3>     
-                                      {Discussion}
+                {/* Division for Discussion Board*/}
+                <div>
+                    <Container className="text-center mt-5 mb-5 container">
+                      <div>                                  
+                            <div className=" text-start">
+                              <h3 className="fw-bold fs-m text-start container"><GoIcons.GoCommentDiscussion/> Most Recent Topics <Button variant="primary" onClick={AskQuestion} className="mb-2"> Ask a Question</Button> </h3>     
+                                  {Discussion}
 
-                                      <Modal size="sm" show={smShow}  onHide={() => setSmShow(false)}  aria-labelledby="example-modal-sizes-title-sm">
-                                        <Modal.Header closeButton>
-                                          <Modal.Title id="example-modal-sizes-title-sm">
-                                            User Information
-                                          </Modal.Title>
-                                        </Modal.Header>
-                                        <Modal.Body>
-                                            <div className="text-center">
-                                              <img src={avatar.img} className="rounded-circle" alt="UserLvl" width="100" height="100"/>
-                                            </div>
-                                            <div className="text-center">
-                                            <strong>Email</strong>
-                                              <h6>{showUserEmail}</h6>
-                                              </div>
-                                            <div className="text-center">
-                                              <strong>User Level on post</strong>
-                                              <h5>{showUserLevel}</h5>
-                                            </div>
-                                            <Button className="btn w-100 text-light"  onClick={askReport}><GoIcons.GoReport/> Report</Button>
-                                        </Modal.Body>
-                                      </Modal>
-                                </div>
-
-
-                                <Modal show={showR} onHide={handleCloseR}>
-                                  <Modal.Header closeButton>
-                                    <Modal.Title>Report User</Modal.Title>
-                                  </Modal.Header>
-                                  <Modal.Body>
-                                    <Form>
-                                      <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
-                                        <Form.Label>State your problem.</Form.Label>
-                                        <Form.Control as="textarea" value={report || ""} onChange={e => ReportUser(e.target.value)} rows={3} />
-                                        <Button className="btn w-100 mt-3 text-light" data-id={showUserEmail} onClick={sendReport}><GoIcons.GoReport/> Report</Button>
-                                      </Form.Group>
-                                    </Form>
-                                  </Modal.Body>
-                                </Modal>
+                                  <Modal size="sm" show={smShow}  onHide={() => setSmShow(false)}  aria-labelledby="example-modal-sizes-title-sm">
+                                    <Modal.Header closeButton>
+                                      <Modal.Title id="example-modal-sizes-title-sm">
+                                        User Information
+                                      </Modal.Title>
+                                    </Modal.Header>
+                                    <Modal.Body>
+                                        <div className="text-center">
+                                          <img src={avatar.img} className="rounded-circle" alt="UserLvl" width="100" height="100"/>
+                                        </div>
+                                        <div className="text-center">
+                                        <strong>Email</strong>
+                                          <h6>{showUserEmail}</h6>
+                                          </div>
+                                        <div className="text-center">
+                                          <strong>User Level on post</strong>
+                                          <h5>{showUserLevel}</h5>
+                                        </div>
+                                        <Button className="btn w-100 text-light"  onClick={askReport}><GoIcons.GoReport/> Report</Button>
+                                    </Modal.Body>
+                                  </Modal>
+                            </div>
 
 
-                                <div className="position-end">
-                                
-                                  <em> Click to see more discussions.</em>
-                               
-                                  <Link to="/alltopics" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"> Show All</Link> 
-                                </div>
-                          </div>
-                        </section>
-                    </div>
+                            <Modal show={showR} onHide={handleCloseR}>
+                              <Modal.Header closeButton>
+                                <Modal.Title>Report User</Modal.Title>
+                              </Modal.Header>
+                              <Modal.Body>
+                                <Form>
+                                  <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+                                    <Form.Label>State your problem.</Form.Label>
+                                    <Form.Control as="textarea" value={report || ""} onChange={e => ReportUser(e.target.value)} rows={3} />
+                                    <Button className="btn w-100 mt-3 text-light" data-id={showUserEmail} onClick={sendReport}><GoIcons.GoReport/> Report</Button>
+                                  </Form.Group>
+                                </Form>
+                              </Modal.Body>
+                            </Modal>
+
+                            <div className="position-end">
+                              <Link to="/alltopics" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"> Show All</Link> 
+                            </div>
+                      </div>
+                    </Container>
+                </div>
 
                      {/* Modal Login*/}
                     <Modal show={showMl} onHide={handleCloseMl}>

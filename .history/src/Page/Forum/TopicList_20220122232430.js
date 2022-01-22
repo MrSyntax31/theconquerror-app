@@ -733,11 +733,8 @@ swal("Something is Wrong",error.code,"warning");
                   <Container className="text-center mt-5 mb-5">
                     <div>
                             <div className="text-start">
-                              <h3 className="fw-bold fs-m text-start container mb-3"><GoIcons.GoCommentDiscussion/> All Topics </h3>
+                              <h3 className="fw-bold fs-m text-start container mb-3"><GoIcons.GoCommentDiscussion/> All Topics <Button variant="primary" onClick={AskQuestion} className="mt-4 mb-2"> Ask a Question</Button> </h3>
 
-                              <Button variant="primary" onClick={AskQuestion} className="mt-2 mb-2"> Ask a Question</Button>{' '}
-                              <Button variant="primary"  className="mt-2 mb-2"> My Question</Button>
-                                <br/>
                                 <em>To sort discussion please click</em>
                                 <Button variant="" className="text-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags!</Button><br/>
 
@@ -799,10 +796,10 @@ swal("Something is Wrong",error.code,"warning");
                             </div>
                               { endLine && <strong className="text-center"> Seems like everybody is doing great! #ProblemFreeCoding</strong> } <br/>
                             <br/>
-                                <em> Click to see more discussions.</em> <br/>
                             <ButtonGroup>
 
                                 {fetching && <strong>Fetching more Problems.....</strong>}
+                                <em> Click to see more discussions.</em>
                               {!fetching && 
                               
                                     <Button onClick={() => getMore()}>Show More</Button>
@@ -817,132 +814,132 @@ swal("Something is Wrong",error.code,"warning");
 
             </div>
 
-                  {/* Modal Login*/}
-                  <Modal show={showMl} onHide={handleCloseMl}>
-                      <Modal.Header closeButton>
-                        <Modal.Title>Log-in</Modal.Title>
-                      </Modal.Header>
-                      <Modal.Body>Please Log-in to Continue!
-                      {error1 && <Alert variant="danger">{error1}</Alert>}
-                      <Form noValidate validated={validated1} className="">
-                                    <Form.Group id="email" className="mb-3">
-                                      <Form.Label>Email</Form.Label>
-                                      <Form.Control ref={emailRef}  name = "email"  type="email" required autoComplete="username" placeholder="Email Address"/>
+                 {/* Modal Login*/}
+                 <Modal show={showMl} onHide={handleCloseMl}>
+                    <Modal.Header closeButton>
+                      <Modal.Title>Log-in</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>Please Log-in to Continue!
+                    {error1 && <Alert variant="danger">{error1}</Alert>}
+                    <Form noValidate validated={validated1} className="">
+                                  <Form.Group id="email" className="mb-3">
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control ref={emailRef}  name = "email"  type="email" required autoComplete="username" placeholder="Email Address"/>
+                                    <Form.Control.Feedback type="invalid">
+                                    Please double check your email.
+                                  </Form.Control.Feedback>
+                                  </Form.Group>
+
+                                  <Form.Group id="password" className="mb-3">
+                                    <Form.Label>Password</Form.Label>
+                                    <Form.Control type={password} ref={passwordRef}  name = "password" autoComplete="current-password" required placeholder="Password"/>
                                       <Form.Control.Feedback type="invalid">
-                                      Please double check your email.
-                                    </Form.Control.Feedback>
-                                    </Form.Group>
-
-                                    <Form.Group id="password" className="mb-3">
-                                      <Form.Label>Password</Form.Label>
-                                      <Form.Control type={password} ref={passwordRef}  name = "password" autoComplete="current-password" required placeholder="Password"/>
-                                        <Form.Control.Feedback type="invalid">
-                                      Please enter a password.
-                                    </Form.Control.Feedback>
-                                      <div className="form-group mt-2 text-secondary">
-                                      <i onClick={showPass} className="fs-7" style={{cursor:"pointer", fontFamily:"Raleway, sans-serif"}}><AiIcons.AiFillEye/>Show/Hide Password</i>
-                                      </div>
-                                    
-                                    </Form.Group>
-                                
-                              <div className="w-100 mt-2 justify-content-right">
-                                <Link to="/forgot-pass" style={{ textDecoration: 'none' }}>Forgot Password</Link>
-                              </div>
-
-                              <div className="col-xs-1 mt-3" align="center">
-                              <ReCAPTCHA
-                              sitekey={process.env.REACT_APP_SITEKEY}
-                              onChange={onChange}
-                              />
-                              </div>
+                                    Please enter a password.
+                                  </Form.Control.Feedback>
+                                    <div className="form-group mt-2 text-secondary">
+                                    <i onClick={showPass} className="fs-7" style={{cursor:"pointer", fontFamily:"Raleway, sans-serif"}}><AiIcons.AiFillEye/>Show/Hide Password</i>
+                                    </div>
+                                  
+                                  </Form.Group>
                               
-                              <Button onClick={handleSubmitLogin} className="w-100 mt-3 mb-3"  >Login</Button>
-                            
-                                  </Form>
+                            <div className="w-100 mt-2 justify-content-right">
+                              <Link to="/forgot-pass" style={{ textDecoration: 'none' }}>Forgot Password</Link>
+                            </div>
 
-                      </Modal.Body>
-                      <Modal.Footer>
-                      <div className="w-100 mt-2 mb-2 text-center text-secondary">
-                                  Don't have an account? <Link to="/register" style={{ textDecoration: 'none' }}>Register</Link>
-                              </div>
-                      </Modal.Footer>
+                            <div className="col-xs-1 mt-3" align="center">
+                            <ReCAPTCHA
+                            sitekey={process.env.REACT_APP_SITEKEY}
+                            onChange={onChange}
+                            />
+                            </div>
+                            
+                            <Button onClick={handleSubmitLogin} className="w-100 mt-3 mb-3"  >Login</Button>
+                          
+                                </Form>
+
+                    </Modal.Body>
+                    <Modal.Footer>
+                    <div className="w-100 mt-2 mb-2 text-center text-secondary">
+                                Don't have an account? <Link to="/register" style={{ textDecoration: 'none' }}>Register</Link>
+                            </div>
+                    </Modal.Footer>
                   </Modal>                    
 
-                  {/* Modal for Ask Question*/}
-                  <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
-                      <Modal.Header closeButton>
-                        <Modal.Title>ASK A QUESTION</Modal.Title>
-                      </Modal.Header>
-                      <Modal.Body>
-                      {error && <Alert variant="danger">{error}</Alert>}
-                          <Form noValidate validated={validated} onSubmit={handleSubmit}   className="">
+             {/* Modal for Ask Question*/}
+             <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
+                <Modal.Header closeButton>
+                  <Modal.Title>ASK A QUESTION</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                {error && <Alert variant="danger">{error}</Alert>}
+                    <Form noValidate validated={validated} onSubmit={handleSubmit}   className="">
 
-                                        <Form.Group id="Question" className="mb-3">
-                                          <Form.Label>Question</Form.Label>
-                                          <Form.Control value={question || ''} onChange={e => setQuestion(e.target.value)} name = "text" type="text" required  placeholder="Title"/>
-                                        </Form.Group>
-                                        <Form.Group id="desc" className="mb-3">
-                                          <Form.Label>Question</Form.Label>
-                                          <Form.Control as="textarea" value={description || ''} onChange={e => setDesc(e.target.value)} name = "text" type="text" required  placeholder="Description"/>
-                                        </Form.Group>
-                          <strong>Upload a picture of your code here! (Optional)</strong>
+                                  <Form.Group id="Question" className="mb-3">
+                                    <Form.Label>Question</Form.Label>
+                                    <Form.Control value={question || ''} onChange={e => setQuestion(e.target.value)} name = "text" type="text" required  placeholder="Title"/>
+                                  </Form.Group>
+                                  <Form.Group id="desc" className="mb-3">
+                                    <Form.Label>Question</Form.Label>
+                                    <Form.Control as="textarea" value={description || ''} onChange={e => setDesc(e.target.value)} name = "text" type="text" required  placeholder="Description"/>
+                                  </Form.Group>
+                    <strong>Upload a picture of your code here! (Optional)</strong>
 
-                      
-                          <input type="file" className="form-control  mt-3 mb-3" id="file-input" name="samplecodeimg" accept="image/jpeg" onChange={changeHandler}/> 
-                          
-                          <Button variant="primary" onClick={insertCode}>Upload File</Button>
+                 
+                    <input type="file" className="form-control  mt-3 mb-3" id="file-input" name="samplecodeimg" accept="image/jpeg" onChange={changeHandler}/> 
+                    
+                    <Button variant="primary" onClick={insertCode}>Upload File</Button>
 
-                          <p className="mt-2">Upload Progress</p> 
-                          <ProgressBar animated now={progbar} className="progress"/>
-                          <p className="mt-2 fw-bold">Add a Tag</p>
+                    <p className="mt-2">Upload Progress</p> 
+                    <ProgressBar animated now={progbar} className="progress"/>
+                    <p className="mt-2 fw-bold">Add a Tag</p>
 
-                          <Container>
-                            <Row>
-                              <Col xs={{ order: 'last' }}>
-                              <div className="form-check">
-                              <input type="radio" id="Array" name="Programming" value="Array" className="form-check-input" onChange={handleChange}/>
-                              <label htmlFor="Array" className="form-check-label">Array</label>
-                              </div>
-                              <div className="form-check">
-                                  <input type="radio" id="C++" name="Programming" value="C++"  className="form-check-input" onChange={handleChange}/>
-                                  <label htmlFor="C" className="form-check-label">C++</label>
-                              </div>
-                              <div className="form-check">
-                                  <input type="radio" id="CodeBlocks" name="Programming" value="CodeBlocks" className="form-check-input" onChange={handleChange}/>
-                                  <label htmlFor="CodeBlocks" className="form-check-label">CodeBlocks</label>
-                              </div>
-                              </Col>
+                    <Container>
+                      <Row>
+                        <Col xs={{ order: 'last' }}>
+                        <div className="form-check">
+                        <input type="radio" id="Array" name="Programming" value="Array" className="form-check-input" onChange={handleChange}/>
+                        <label htmlFor="Array" className="form-check-label">Array</label>
+                        </div>
+                        <div className="form-check">
+                            <input type="radio" id="C++" name="Programming" value="C++"  className="form-check-input" onChange={handleChange}/>
+                            <label htmlFor="C" className="form-check-label">C++</label>
+                        </div>
+                        <div className="form-check">
+                            <input type="radio" id="CodeBlocks" name="Programming" value="CodeBlocks" className="form-check-input" onChange={handleChange}/>
+                            <label htmlFor="CodeBlocks" className="form-check-label">CodeBlocks</label>
+                        </div>
+                        </Col>
 
-                              <Col xs={{ order: 'first' }}>
-                              <div className="form-check">
-                              <input type="radio" id="Function" name="Programming" value="Function" className="form-check-input" onChange={handleChange}/>
-                              <label htmlFor="Function" className="form-check-label">Function</label>
-                              </div>
-                              <div className="form-check">
-                                  <input type="radio" id="Nested Condition" name="Programming" value="Nested Condition"  className="form-check-input" onChange={handleChange}/>
-                                  <label htmlFor="Nested Condition" className="form-check-label">Nested Condition</label>
-                              </div>
-                              <div className="form-check">
-                                  <input type="radio" id="For loops" name="Programming" value="For loops" className="form-check-input" onChange={handleChange}/>
-                                  <label htmlFor="For loops" className="form-check-label">For loops</label>
-                              </div>
-                              <div className="form-check">
-                                  <input type="radio" id="Syntaxes" name="Programming" value="Syntaxes" className="form-check-input" onChange={handleChange}/>
-                                  <label htmlFor="Syntaxes" className="form-check-label">Syntaxes</label>
-                              </div>
-                              <div className="form-check">
-                                  <input type="radio" id="If Else Condition" name="Programming" value="If Else Condition" className="form-check-input" onChange={handleChange}/>
-                                  <label htmlFor="If Else Condition" className="form-check-label">If Else Condition</label>
-                              </div>
-                              </Col>
-                            </Row>
-                          </Container>
+                        <Col xs={{ order: 'first' }}>
+                        <div className="form-check">
+                        <input type="radio" id="Function" name="Programming" value="Function" className="form-check-input" onChange={handleChange}/>
+                        <label htmlFor="Function" className="form-check-label">Function</label>
+                        </div>
+                        <div className="form-check">
+                            <input type="radio" id="Nested Condition" name="Programming" value="Nested Condition"  className="form-check-input" onChange={handleChange}/>
+                            <label htmlFor="Nested Condition" className="form-check-label">Nested Condition</label>
+                        </div>
+                        <div className="form-check">
+                            <input type="radio" id="For loops" name="Programming" value="For loops" className="form-check-input" onChange={handleChange}/>
+                            <label htmlFor="For loops" className="form-check-label">For loops</label>
+                        </div>
+                        <div className="form-check">
+                            <input type="radio" id="Syntaxes" name="Programming" value="Syntaxes" className="form-check-input" onChange={handleChange}/>
+                            <label htmlFor="Syntaxes" className="form-check-label">Syntaxes</label>
+                        </div>
+                        <div className="form-check">
+                            <input type="radio" id="If Else Condition" name="Programming" value="If Else Condition" className="form-check-input" onChange={handleChange}/>
+                            <label htmlFor="If Else Condition" className="form-check-label">If Else Condition</label>
+                        </div>
+                        </Col>
+                      </Row>
+                    </Container>
 
-                            <Button variant="primary" type="submit" className="mt-4 btn btn-primary w-100">Post</Button>
-                          </Form>
-                      </Modal.Body>
-                      
-                  </Modal>
+                      <Button variant="primary" type="submit" className="mt-4 btn btn-primary w-100">Post</Button>
+                    </Form>
+                </Modal.Body>
+                
+                </Modal>
 
             <a href="#top" className="scroll-top">
                   <i className="fa fa-chevron-up"></i>

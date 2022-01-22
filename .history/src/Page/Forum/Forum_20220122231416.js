@@ -497,10 +497,10 @@ uploadTask.on('state_changed',
 
                     {/* Division for Discussion Board*/}
                     <div>
-                        <section className="text-center mt-5 mb-5 container">
+                        <Container className="text-center mt-5 mb-5 container">
                           <div>                                  
                                 <div className=" text-start">
-                                  <h3 className="fw-bold fs-m text-start container"><GoIcons.GoCommentDiscussion/> Most Recent Topics <Button variant="primary" onClick={AskQuestion} className="mt-4 mb-2"> Ask a Question</Button> </h3>     
+                                  <h3 className="fw-bold fs-m text-start container"><GoIcons.GoCommentDiscussion/> Most Recent Topics <Button variant="primary" onClick={AskQuestion} className="mb-2"> Ask a Question</Button> </h3>     
                                       {Discussion}
 
                                       <Modal size="sm" show={smShow}  onHide={() => setSmShow(false)}  aria-labelledby="example-modal-sizes-title-sm">
@@ -542,15 +542,11 @@ uploadTask.on('state_changed',
                                   </Modal.Body>
                                 </Modal>
 
-
                                 <div className="position-end">
-                                
-                                  <em> Click to see more discussions.</em>
-                               
                                   <Link to="/alltopics" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"> Show All</Link> 
                                 </div>
                           </div>
-                        </section>
+                        </Container>
                     </div>
 
                      {/* Modal Login*/}

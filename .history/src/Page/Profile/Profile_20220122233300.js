@@ -755,7 +755,6 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                           {profile.Institution || ''}
                           </div>
                           <p onClick={handleShowOff} className="btn btn-sm btn-primary mt-4"><IoIcons.IoSettingsSharp/> Settings</p> {''}
-                          <p onClick={UploadFile} className="btn btn-sm btn-primary mt-4"><AiIcons.AiFillFileText/> Upload Files</p> {''}
                          { AdminCheck && <p onClick={AdminPanel} className="btn btn-sm btn-primary mt-4"><IoIcons.IoBarChart/> Admin</p> }
                         </div>
                       </div>
@@ -877,7 +876,10 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                     <Offcanvas.Body>
                                           
                       <div className=" d-grid gap-2 mt-3 mb-3">
-                          <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button>                     
+                          <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button> 
+
+                        
+                    
                                
                           <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
                                             

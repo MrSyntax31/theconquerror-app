@@ -733,11 +733,8 @@ swal("Something is Wrong",error.code,"warning");
                   <Container className="text-center mt-5 mb-5">
                     <div>
                             <div className="text-start">
-                              <h3 className="fw-bold fs-m text-start container mb-3"><GoIcons.GoCommentDiscussion/> All Topics </h3>
+                              <h3 className="fw-bold fs-m text-start container mb-3"><GoIcons.GoCommentDiscussion/> All Topics <Button variant="primary" onClick={AskQuestion} className="mt-4 mb-2"> Ask a Question</Button> </h3>
 
-                              <Button variant="primary" onClick={AskQuestion} className="mt-2 mb-2"> Ask a Question</Button>{' '}
-                              <Button variant="primary"  className="mt-2 mb-2"> My Question</Button>
-                                <br/>
                                 <em>To sort discussion please click</em>
                                 <Button variant="" className="text-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags!</Button><br/>
 
@@ -866,7 +863,7 @@ swal("Something is Wrong",error.code,"warning");
                                   Don't have an account? <Link to="/register" style={{ textDecoration: 'none' }}>Register</Link>
                               </div>
                       </Modal.Footer>
-                  </Modal>                    
+                    </Modal>                    
 
                   {/* Modal for Ask Question*/}
                   <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >

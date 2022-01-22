@@ -733,11 +733,8 @@ swal("Something is Wrong",error.code,"warning");
                   <Container className="text-center mt-5 mb-5">
                     <div>
                             <div className="text-start">
-                              <h3 className="fw-bold fs-m text-start container mb-3"><GoIcons.GoCommentDiscussion/> All Topics </h3>
+                              <h3 className="fw-bold fs-m text-start container mb-3"><GoIcons.GoCommentDiscussion/> All Topics <Button variant="primary" onClick={AskQuestion} className="mt-4 mb-2"> Ask a Question</Button> </h3>
 
-                              <Button variant="primary" onClick={AskQuestion} className="mt-2 mb-2"> Ask a Question</Button>{' '}
-                              <Button variant="primary"  className="mt-2 mb-2"> My Question</Button>
-                                <br/>
                                 <em>To sort discussion please click</em>
                                 <Button variant="" className="text-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags!</Button><br/>
 
@@ -817,55 +814,55 @@ swal("Something is Wrong",error.code,"warning");
 
             </div>
 
-                  {/* Modal Login*/}
-                  <Modal show={showMl} onHide={handleCloseMl}>
-                      <Modal.Header closeButton>
-                        <Modal.Title>Log-in</Modal.Title>
-                      </Modal.Header>
-                      <Modal.Body>Please Log-in to Continue!
-                      {error1 && <Alert variant="danger">{error1}</Alert>}
-                      <Form noValidate validated={validated1} className="">
-                                    <Form.Group id="email" className="mb-3">
-                                      <Form.Label>Email</Form.Label>
-                                      <Form.Control ref={emailRef}  name = "email"  type="email" required autoComplete="username" placeholder="Email Address"/>
+                 {/* Modal Login*/}
+                 <Modal show={showMl} onHide={handleCloseMl}>
+                    <Modal.Header closeButton>
+                      <Modal.Title>Log-in</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>Please Log-in to Continue!
+                    {error1 && <Alert variant="danger">{error1}</Alert>}
+                    <Form noValidate validated={validated1} className="">
+                                  <Form.Group id="email" className="mb-3">
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control ref={emailRef}  name = "email"  type="email" required autoComplete="username" placeholder="Email Address"/>
+                                    <Form.Control.Feedback type="invalid">
+                                    Please double check your email.
+                                  </Form.Control.Feedback>
+                                  </Form.Group>
+
+                                  <Form.Group id="password" className="mb-3">
+                                    <Form.Label>Password</Form.Label>
+                                    <Form.Control type={password} ref={passwordRef}  name = "password" autoComplete="current-password" required placeholder="Password"/>
                                       <Form.Control.Feedback type="invalid">
-                                      Please double check your email.
-                                    </Form.Control.Feedback>
-                                    </Form.Group>
-
-                                    <Form.Group id="password" className="mb-3">
-                                      <Form.Label>Password</Form.Label>
-                                      <Form.Control type={password} ref={passwordRef}  name = "password" autoComplete="current-password" required placeholder="Password"/>
-                                        <Form.Control.Feedback type="invalid">
-                                      Please enter a password.
-                                    </Form.Control.Feedback>
-                                      <div className="form-group mt-2 text-secondary">
-                                      <i onClick={showPass} className="fs-7" style={{cursor:"pointer", fontFamily:"Raleway, sans-serif"}}><AiIcons.AiFillEye/>Show/Hide Password</i>
-                                      </div>
-                                    
-                                    </Form.Group>
-                                
-                              <div className="w-100 mt-2 justify-content-right">
-                                <Link to="/forgot-pass" style={{ textDecoration: 'none' }}>Forgot Password</Link>
-                              </div>
-
-                              <div className="col-xs-1 mt-3" align="center">
-                              <ReCAPTCHA
-                              sitekey={process.env.REACT_APP_SITEKEY}
-                              onChange={onChange}
-                              />
-                              </div>
+                                    Please enter a password.
+                                  </Form.Control.Feedback>
+                                    <div className="form-group mt-2 text-secondary">
+                                    <i onClick={showPass} className="fs-7" style={{cursor:"pointer", fontFamily:"Raleway, sans-serif"}}><AiIcons.AiFillEye/>Show/Hide Password</i>
+                                    </div>
+                                  
+                                  </Form.Group>
                               
-                              <Button onClick={handleSubmitLogin} className="w-100 mt-3 mb-3"  >Login</Button>
-                            
-                                  </Form>
+                            <div className="w-100 mt-2 justify-content-right">
+                              <Link to="/forgot-pass" style={{ textDecoration: 'none' }}>Forgot Password</Link>
+                            </div>
 
-                      </Modal.Body>
-                      <Modal.Footer>
-                      <div className="w-100 mt-2 mb-2 text-center text-secondary">
-                                  Don't have an account? <Link to="/register" style={{ textDecoration: 'none' }}>Register</Link>
-                              </div>
-                      </Modal.Footer>
+                            <div className="col-xs-1 mt-3" align="center">
+                            <ReCAPTCHA
+                            sitekey={process.env.REACT_APP_SITEKEY}
+                            onChange={onChange}
+                            />
+                            </div>
+                            
+                            <Button onClick={handleSubmitLogin} className="w-100 mt-3 mb-3"  >Login</Button>
+                          
+                                </Form>
+
+                    </Modal.Body>
+                    <Modal.Footer>
+                    <div className="w-100 mt-2 mb-2 text-center text-secondary">
+                                Don't have an account? <Link to="/register" style={{ textDecoration: 'none' }}>Register</Link>
+                            </div>
+                    </Modal.Footer>
                   </Modal>                    
 
                   {/* Modal for Ask Question*/}
@@ -942,7 +939,7 @@ swal("Something is Wrong",error.code,"warning");
                           </Form>
                       </Modal.Body>
                       
-                  </Modal>
+                    </Modal>
 
             <a href="#top" className="scroll-top">
                   <i className="fa fa-chevron-up"></i>
