@@ -478,8 +478,8 @@ uploadTask.on('state_changed',
 
               <Navbar/>
 
-              <section className="m-3">
-               
+              <section>
+                <div className="m-5">
                     <Card>
                       <Card.Header>
                         <div className="header mb-2">
@@ -705,7 +705,7 @@ uploadTask.on('state_changed',
 
                       </Card.Body>
                     </Card>
-                
+                </div>
               </section>
             </>
   );

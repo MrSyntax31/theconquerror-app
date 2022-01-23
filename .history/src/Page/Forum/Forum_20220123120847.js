@@ -478,9 +478,9 @@ uploadTask.on('state_changed',
 
               <Navbar/>
 
-              <section className="m-3">
+              <section>
                
-                    <Card>
+                    <Card >
                       <Card.Header>
                         <div className="header mb-2">
                           <h3 className="text-center mb-3">Forum</h3>

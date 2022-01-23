@@ -653,8 +653,8 @@ swal("Something is Wrong",error.code,"warning");
 
               <Navbar/>
 
-              <section className="m-3">
-                
+              <section className="w-100">
+                <div className="m-2">
                     <Card>
                       <Card.Header>
                         <div className="header mb-2">
@@ -825,7 +825,7 @@ swal("Something is Wrong",error.code,"warning");
                          
                       </Card.Body>
                     </Card>
-              
+                </div>
               </section>
 
                   {/* Modal Login*/}
