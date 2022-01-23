@@ -73,7 +73,7 @@ const docsfile = Docs.map((documents) => (
 )
     return (
         <>
-                <div>
+        <div>
                     <Helmet>
                         <title>ConquError | Tutorials</title>
                         <meta name="description" content="Welcome to ConquError Tutorial page, watch and learn from the latest tutorial and content creator across the IT industry." />
@@ -252,7 +252,7 @@ const docsfile = Docs.map((documents) => (
                                                                     <Row>
                                                                         <div className="mt-3">
                                                                             <div className="">
-                                                                                <h3 className="fw-bold">Kuya Dev Tidbits Podcast Season 2</h3>
+                                                                                <h1 className="fw-bold">Kuya Dev Tidbits Podcast Season 2</h1>
                                                                                     
                                                                                     <p>Mga kuro-kuro ni Kuya Dev ukol sa pagbuo ng Career sa Pinoy Tech at Startup industry, at iba pang aspeto ng buhay.</p>
                                                                                     <p>Minsan nag-i-Ingles rin. Mapraktis lang ba.</p>
@@ -462,7 +462,7 @@ const docsfile = Docs.map((documents) => (
                                                     <Row>
                                                         <div className="mt-3">
                                                             <div className="">
-                                                                <h3 className="fw-bold mb-3">SDPTSolutions | The Greatest Programmer | Tagalog | Filipino</h3>
+                                                                <h1 className="fw-bold mb-3">SDPTSolutions | The Greatest Programmer | Tagalog | Filipino</h1>
                                                                 <p>A  Basic In Depth Tutorial for C++ learn C++ without any knowledge in Programming!</p>
                                                                     <div>
 
@@ -686,7 +686,7 @@ const docsfile = Docs.map((documents) => (
                         
                    
                 </div>
-                                            </section>
+            </section>
                                             </Tab>
                                         </Tabs>
                                         </Card>   
@@ -731,111 +731,111 @@ const docsfile = Docs.map((documents) => (
 
                                             <Tab eventKey="video" title="Videos">
                                             <section className="container-fluid mt-7" fluid="md" style={{
-                                                display: "flex",
-                                                justifyContent: "center",
-                                                alignItems: "center"
-                                            }}>
-                                            <div className="mb-3">
-                                            
-                                                    
-                                                    <h3 className="mt-2 fw-bold">Featured</h3>
-                                                        <div className="video" style={{
-                                                            position: "relative",
-                                                            paddingBottom: "56.25%" /* 16:9 */,
-                                                            paddingTop: 25,
-                                                            height: 0 }} >
-                                                                <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://youtube.com/embed/7ctGMOa8ems?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" title="vid" allowFullScreen/>
-                                                        </div>
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center"
+                }}>
+                <div className="mb-3">
+                   
+                        
+                        <h3 className="mt-2 fw-bold">Featured</h3>
+                    <div className="video" style={{
+                        position: "relative",
+                        paddingBottom: "56.25%" /* 16:9 */,
+                        paddingTop: 25,
+                        height: 0 }} >
+                            <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src="https://youtube.com/embed/7ctGMOa8ems?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" title="vid" allowFullScreen/>
+                    </div>
 
-                                                <section>
-                                                        <Row>
-                                                            <div className="mt-3">
-                                                                <div className="">
-                                                                <h3 className="fw-bold mb-3">My Experiences in being a BSIT Student || TIP-QC || Online Learning</h3>
-                                                                <p>What is up everyone! Here are some Questions that I answered on my experiences in being a BSIT student in TIP- QC</p>
+                    <section>
+                            <Row>
+                                <div className="mt-3">
+                                    <div className="">
+                                    <h1 className="fw-bold mb-3">My Experiences in being a BSIT Student || TIP-QC || Online Learning</h1>
+                                    <p>What is up everyone! Here are some Questions that I answered on my experiences in being a BSIT student in TIP- QC</p>
 
-                                                                        <div>
+                                            <div>
 
-                                    
-                                                                            <section className="about_area section_gap mb-3 mt-3">
-                                                                                    <div className="">
-                                                                                        <div className="row justify-content-start align-items-center">
-                                                                                            <div className="col-lg-4">
-                                                                                                <div className="about_img">
-                                                                                                <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/iSNeOTyPALY?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
-                                                                                                    </div>
-                                                                                            </div>
+        
+                                                <section className="about_area section_gap mb-3 mt-3">
+                                                        <div className="">
+                                                            <div className="row justify-content-start align-items-center">
+                                                                <div className="col-lg-4">
+                                                                    <div className="about_img">
+                                                                    <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/iSNeOTyPALY?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                                        </div>
+                                                                </div>
 
-                                                                                            <div className="offset-lg-1 col-lg-5 mt-3">
-                                                                                                <div className="main_title text-left">
-                                                                                                <h5 className="fw-bold mb-3">A day in the life of a BSIT student |First day of online classes | online learning #josiahdoestech</h5>
-                                                                                                    <p className="mb-2">
-                                                                                                    Hello everyone! sorry for not posting so much lately I've been busy with my school and organization activities!
-                                                                                                    </p>
-                                                                                                    <br/>
-                                                                                                    <span className="duration">Duration: 13 minutes, 03 seconds</span><br/>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                            </section>
-
-                                                                            <section className="about_area section_gap mb-3">
-                                                                                <div>
-                                                                                                                                        <div className="row justify-content-start align-items-center">
-                                                                                                                                            <div className="col-lg-4">
-                                                                                                                                                <div className="about_img">
-                                                                                                                                                <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/WgEXIhkIWZc?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-
-                                                                                                                                            <div className="offset-lg-1 col-lg-5 mt-3">
-                                                                                                                                                <div className="main_title text-left">
-                                                                                                                                                    <h5 className="fw-bold mb-3">Tips and Fundamentals of Programming | BSIT | TIPian Student (Tagalog) #JosiahDoesTech</h5>
-                                                                                                                                                    <p className="mb-2">
-                                                                                                                                                        Hello everyone! As we all know, I am now an affiliate with StyleDoubler where you can have commissions to the purchases on online Shopping like Lazada! 
-                                                                                                                                                    </p>
-                                                                                                                                                    <br/>
-                                                                                                                                                    <span className="duration">Duration: 12 minutes, 04 seconds</span><br/>
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-                                                                                                                                        </div>
-                                                                                </div>
-                                                                            </section>
-                                                                                                                        
-                                                                            <section className="about_area section_gap mb-3">
-                                                                                                                                    <div className="">
-                                                                                                                                        <div className="row justify-content-start align-items-center">
-                                                                                                                                            <div className="col-lg-4">
-                                                                                                                                                <div className="about_img">
-                                                                                                                                                    <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/WdbN4_tr55o?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-
-                                                                                                                                            <div className="offset-lg-1 col-lg-5 mt-3">
-                                                                                                                                                <div className="main_title text-left">
-                                                                                                                                                <h5 className="fw-bold mb-3">Things I should have known when I started programming</h5>
-                                                                                                                                                    <p  className="mb-2">
-                                                                                                                                                        Hey guys! I'm back! here are some things you can ask yourself, Things that I should have known when I started programming!
-                                                                                                                                                    </p>
-                                                                                                                                                    
-                                                                                                                                                    <br/>
-                                                                                                                                                    <span className="duration">Duration: 16 minutes, 25 seconds</span><br/>
-                                                                                                                                                </div>
-                                                                                                                                            </div>
-                                                                                                                                        </div>
-                                                                                                                                    </div>
-                                                                            </section>
-
-                                                                        </div>            
+                                                                <div className="offset-lg-1 col-lg-5 mt-3">
+                                                                    <div className="main_title text-left">
+                                                                    <h5 className="fw-bold mb-3">A day in the life of a BSIT student |First day of online classes | online learning #josiahdoestech</h5>
+                                                                        <p className="mb-2">
+                                                                        Hello everyone! sorry for not posting so much lately I've been busy with my school and organization activities!
+                                                                        </p>
+                                                                        <br/>
+                                                                        <span className="duration">Duration: 13 minutes, 03 seconds</span><br/>
+                                                                    </div>
                                                                 </div>
                                                             </div>
-                                                        </Row>
+                                                        </div>
                                                 </section>
-                                                    
-                                            
-                                            </div>
-                                    </section>
+
+                                                <section className="about_area section_gap mb-3">
+                                                    <div>
+                                                                                                            <div className="row justify-content-start align-items-center">
+                                                                                                                <div className="col-lg-4">
+                                                                                                                    <div className="about_img">
+                                                                                                                    <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/WgEXIhkIWZc?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                                                                                    </div>
+                                                                                                                </div>
+
+                                                                                                                <div className="offset-lg-1 col-lg-5 mt-3">
+                                                                                                                    <div className="main_title text-left">
+                                                                                                                        <h5 className="fw-bold mb-3">Tips and Fundamentals of Programming | BSIT | TIPian Student (Tagalog) #JosiahDoesTech</h5>
+                                                                                                                        <p className="mb-2">
+                                                                                                                            Hello everyone! As we all know, I am now an affiliate with StyleDoubler where you can have commissions to the purchases on online Shopping like Lazada! 
+                                                                                                                        </p>
+                                                                                                                        <br/>
+                                                                                                                        <span className="duration">Duration: 12 minutes, 04 seconds</span><br/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                    </div>
+                                                </section>
+                                                                                            
+                                                <section className="about_area section_gap mb-3">
+                                                                                                        <div className="">
+                                                                                                            <div className="row justify-content-start align-items-center">
+                                                                                                                <div className="col-lg-4">
+                                                                                                                    <div className="about_img">
+                                                                                                                        <iframe title= "Video1" className="d-flex justify-content-center" width="315" height="315" src="https://youtube.com/embed/WdbN4_tr55o?list=PLnTAO3B4QEUsch8tj3CWyt2uZiIjaOA-8" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen ></iframe>
+                                                                                                                    </div>
+                                                                                                                </div>
+
+                                                                                                                <div className="offset-lg-1 col-lg-5 mt-3">
+                                                                                                                    <div className="main_title text-left">
+                                                                                                                    <h5 className="fw-bold mb-3">Things I should have known when I started programming</h5>
+                                                                                                                        <p  className="mb-2">
+                                                                                                                            Hey guys! I'm back! here are some things you can ask yourself, Things that I should have known when I started programming!
+                                                                                                                        </p>
+                                                                                                                        
+                                                                                                                        <br/>
+                                                                                                                        <span className="duration">Duration: 16 minutes, 25 seconds</span><br/>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                </section>
+
+                                            </div>            
+                                    </div>
+                                </div>
+                            </Row>
+                    </section>
+                        
+                   
+                </div>
+            </section>
                                             </Tab>
                                             
                                         </Tabs>
@@ -885,7 +885,7 @@ const docsfile = Docs.map((documents) => (
                                                         <div className="mb-3">
                                                             <Card.Body>
                                                                 
-                                                            <h3 className="mt-2 fw-bold">Featured</h3>
+                                                                <h3 className="mt-2 fw-bold">Featured</h3>
                                                             <div className="video"
                                                                     style={{
                                                                         position: "relative",
@@ -899,7 +899,7 @@ const docsfile = Docs.map((documents) => (
                                                                 <Row>
                                                                     <div className="mt-3">
                                                                         <div className="">
-                                                                            <h3 className="fw-bold mb-3">VLOG 1 - Paano ba maging Programmer?</h3>
+                                                                            <h1 className="fw-bold mb-3">VLOG 1 - Paano ba maging Programmer?</h1>
                                                                                 
                                                                                 <p className="mb-2">paano maging programmer,
                                                                                     paano maging magaling na programmer,
@@ -1028,15 +1028,13 @@ const docsfile = Docs.map((documents) => (
                             </section>
 
                         <section>
-                            <Card className="mt-2">
-                                <Card.Header className="text-center">
-                                    <h3 className="text-center text-primary mt-2 fw-bold">Available Resources for Students</h3>
-                                    <p>
-                                        You may need specific softwares to open, view and print the files in this page. Most modern browsers and devices can open PDF and ZIP files.
-                                    </p>
-                                </Card.Header>
+                            <Card className="mt- m-2">
+                                        <div className=" text-center m-2">
+                                            <h3 className="text-center text-primary fw-bold">Available Resources for Students</h3>
+                                            <p>You may need specific softwares to open, view and print the files in this page:  Microsoft Excel Online or Microsoft Word Online. Most modern browsers and devices can open PDF and ZIP files.</p>
+                                        </div>
                                 <Card.Body>
-                                            <Form>
+                                            <Form className="m-1"  >
                                                     <Table striped bordered hover>
                                                         <thead>
                                                         <tr>
@@ -1057,12 +1055,12 @@ const docsfile = Docs.map((documents) => (
                              
 
                           
-                </section>       
+            </section>       
 
-                {/* ScrollUp Button */}
-                <a href="#top" className="scroll-top">
-                    <i className="fa fa-chevron-up"></i>
-                </a>     
+        {/* ScrollUp Button */}
+        <a href="#top" className="scroll-top">
+            <i className="fa fa-chevron-up"></i>
+        </a>     
                      
         </>
      

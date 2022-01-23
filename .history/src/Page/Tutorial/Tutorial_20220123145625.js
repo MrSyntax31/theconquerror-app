@@ -73,7 +73,7 @@ const docsfile = Docs.map((documents) => (
 )
     return (
         <>
-                <div>
+        <div>
                     <Helmet>
                         <title>ConquError | Tutorials</title>
                         <meta name="description" content="Welcome to ConquError Tutorial page, watch and learn from the latest tutorial and content creator across the IT industry." />

@@ -73,7 +73,7 @@ const docsfile = Docs.map((documents) => (
 )
     return (
         <>
-                <div>
+        <div>
                     <Helmet>
                         <title>ConquError | Tutorials</title>
                         <meta name="description" content="Welcome to ConquError Tutorial page, watch and learn from the latest tutorial and content creator across the IT industry." />
@@ -252,7 +252,7 @@ const docsfile = Docs.map((documents) => (
                                                                     <Row>
                                                                         <div className="mt-3">
                                                                             <div className="">
-                                                                                <h3 className="fw-bold">Kuya Dev Tidbits Podcast Season 2</h3>
+                                                                                <h1 className="fw-bold">Kuya Dev Tidbits Podcast Season 2</h1>
                                                                                     
                                                                                     <p>Mga kuro-kuro ni Kuya Dev ukol sa pagbuo ng Career sa Pinoy Tech at Startup industry, at iba pang aspeto ng buhay.</p>
                                                                                     <p>Minsan nag-i-Ingles rin. Mapraktis lang ba.</p>
@@ -462,7 +462,7 @@ const docsfile = Docs.map((documents) => (
                                                     <Row>
                                                         <div className="mt-3">
                                                             <div className="">
-                                                                <h3 className="fw-bold mb-3">SDPTSolutions | The Greatest Programmer | Tagalog | Filipino</h3>
+                                                                <h1 className="fw-bold mb-3">SDPTSolutions | The Greatest Programmer | Tagalog | Filipino</h1>
                                                                 <p>A  Basic In Depth Tutorial for C++ learn C++ without any knowledge in Programming!</p>
                                                                     <div>
 
@@ -686,7 +686,7 @@ const docsfile = Docs.map((documents) => (
                         
                    
                 </div>
-                                            </section>
+            </section>
                                             </Tab>
                                         </Tabs>
                                         </Card>   
@@ -1057,12 +1057,12 @@ const docsfile = Docs.map((documents) => (
                              
 
                           
-                </section>       
+            </section>       
 
-                {/* ScrollUp Button */}
-                <a href="#top" className="scroll-top">
-                    <i className="fa fa-chevron-up"></i>
-                </a>     
+        {/* ScrollUp Button */}
+        <a href="#top" className="scroll-top">
+            <i className="fa fa-chevron-up"></i>
+        </a>     
                      
         </>
      
