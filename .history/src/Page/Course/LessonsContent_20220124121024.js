@@ -365,14 +365,13 @@ const showCourse = courses1.map((courses1) => (
           
           {/* Card Contents */}
           <section className="mt-5">
-            
                         {/* Overview ID */}
                         <section id="intro">
                           <Card.Header >
 
                             <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer mt-3 mb-3" onClick={handleShow}>
-                              <GiIcons.GiBookmarklet/>Spellbook
-                            </label>
+                                    <GiIcons.GiBookmarklet/>Spellbook
+                                  </label>
 
                         </Card.Header>
                         </section>
