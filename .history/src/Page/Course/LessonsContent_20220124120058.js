@@ -378,7 +378,7 @@ const showCourse = courses1.map((courses1) => (
                      
 
                             
-                              <section className="m-3">
+                              <section className="m-5">
                                     <img className="mx-auto d-block" style={{width: '25%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
                               
                                     <h2 className="text-primary fw-bold " style={{display: "table-cell",
@@ -393,9 +393,9 @@ const showCourse = courses1.map((courses1) => (
                               </section>
                             
                               {/* Video ID */}
-                              <section id="vid" className="m-3 mb-2 ">
+                              <section id="vid" className="m-5 mb-2">
                             
-                                      <Row className="mx-auto d-block">
+                                      <Row>
                                         <Col>
                                             <p className="mb-3">{courseinfo.viddesc}</p>
                                         </Col>
@@ -406,14 +406,14 @@ const showCourse = courses1.map((courses1) => (
                                                   paddingTop: 25,
                                                   height: 0
                                                       }}>
-                                                        <iframe className="mx-auto d-block" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src={courseinfo.vidLink} frameBorder="0" title="vid" allowFullScreen/>
+                                                        <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src={courseinfo.vidLink} frameBorder="0" title="vid" allowFullScreen/>
                                             </div>
                                       </Row>
                                               
                               </section>
 
                               {/* Content ID */}
-                              <section id="content" className="mt-5 m-3">
+                              <section id="content" className="mt-5 m-2">
                                                               
                                   {/* Contents */}
                                   <h2 className="fw-bold mb-3 text-primary">{courseinfo.Title1}</h2>    

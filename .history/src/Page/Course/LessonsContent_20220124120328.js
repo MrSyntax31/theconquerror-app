@@ -378,7 +378,7 @@ const showCourse = courses1.map((courses1) => (
                      
 
                             
-                              <section className="m-3">
+                              <section className="m-5">
                                     <img className="mx-auto d-block" style={{width: '25%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
                               
                                     <h2 className="text-primary fw-bold " style={{display: "table-cell",
@@ -395,7 +395,7 @@ const showCourse = courses1.map((courses1) => (
                               {/* Video ID */}
                               <section id="vid" className="m-3 mb-2 ">
                             
-                                      <Row className="mx-auto d-block">
+                                      <Row>
                                         <Col>
                                             <p className="mb-3">{courseinfo.viddesc}</p>
                                         </Col>

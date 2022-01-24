@@ -378,7 +378,7 @@ const showCourse = courses1.map((courses1) => (
                      
 
                             
-                              <section className="m-3">
+                              <section className="m-5">
                                     <img className="mx-auto d-block" style={{width: '25%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
                               
                                     <h2 className="text-primary fw-bold " style={{display: "table-cell",

@@ -378,7 +378,7 @@ const showCourse = courses1.map((courses1) => (
                      
 
                             
-                              <section className="m-3">
+                              <section className="m-5">
                                     <img className="mx-auto d-block" style={{width: '25%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
                               
                                     <h2 className="text-primary fw-bold " style={{display: "table-cell",
@@ -395,18 +395,18 @@ const showCourse = courses1.map((courses1) => (
                               {/* Video ID */}
                               <section id="vid" className="m-3 mb-2 ">
                             
-                                      <Row className="mx-auto d-block">
+                                      <Row>
                                         <Col>
                                             <p className="mb-3">{courseinfo.viddesc}</p>
                                         </Col>
-                                            <div className="video"
+                                            <div className="video mx-auto d-block"
                                                 style={{
                                                   position: "relative",
                                                   paddingBottom: "56.25%" /* 16:9 */,
                                                   paddingTop: 25,
                                                   height: 0
                                                       }}>
-                                                        <iframe className="mx-auto d-block" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src={courseinfo.vidLink} frameBorder="0" title="vid" allowFullScreen/>
+                                                        <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src={courseinfo.vidLink} frameBorder="0" title="vid" allowFullScreen/>
                                             </div>
                                       </Row>
                                               
