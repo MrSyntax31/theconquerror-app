@@ -652,10 +652,10 @@ swal("Something is Wrong",error.code,"warning");
 
               <Navbar/>
 
-              <section className="m-1">
+              <section className="m-2">
                 
                     <Card>
-                      <section>
+                    <section>
                         <div className="headers mb-2">
                           <h3 className="text-center" style={{marginBottom:'5rem'}}>Forum</h3>
                           <h2  className="text-light fw-bold ml-2" style={{marginTop:'4rem'}}>ConquErroRoom</h2>
@@ -813,7 +813,7 @@ swal("Something is Wrong",error.code,"warning");
                                               {fetching && <strong>Fetching more Problems.....</strong>}
                                             {!fetching && 
                                             
-                                                  <p className="text-primary" onClick={() => getMore()}>Show More</p>
+                                                  <Button onClick={() => getMore()}>Show More</Button>
                                               }
                                           </ButtonGroup>
                                 

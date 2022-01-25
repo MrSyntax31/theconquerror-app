@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import * as FaIcons from 'react-icons/fa';
 import Helmet from 'react-helmet';
 import Navbar from '../../Components/Navbar/Navbar'
-import {Form, Row, Col, Dropdown, Modal, Button , Alert, OverlayTrigger, Tooltip} from 'react-bootstrap'
+import {Container, Form, Row, Col, Dropdown, Modal, Button , Alert, OverlayTrigger, Tooltip} from 'react-bootstrap'
 import './Forum.css';
 import { getAuth , signOut, signInWithEmailAndPassword} from '@firebase/auth';
 import { getFirestore, doc, onSnapshot, addDoc, collection, query, orderBy , deleteDoc, updateDoc, setDoc} from '@firebase/firestore';
@@ -460,7 +460,7 @@ swal("Something is Wrong",error.code,"warning");
 
         <Navbar/>        
         
-        <section className="mb-5 rounded p-5">
+        <section className="mb-5 card rounded m-3 p-5">
 
           <div className="mt-5 mb-5">
               <Link to="/forum" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"><FaIcons.FaArrowLeft/> Back</Link>
@@ -562,27 +562,27 @@ swal("Something is Wrong",error.code,"warning");
               </Modal>                    
 
 
-              {showRep}
-          
-              { Empty ? '' :
-                    <Form noValidate validated={validated} onSubmit={handleSubmit}   className="">
+            {showRep}
+        
+            { Empty ? '' :
+                   <Form noValidate validated={validated} onSubmit={handleSubmit}   className="">
 
-                          <Row>
-                              <Col l="auto">
-                                
-                                  <p className="mt-3">Comment</p>
-                                  <div className="d-flex">
-                                    <input type="textarea"  value={reply || ''} disabled={closed}  onChange={e => setReply(e.target.value)} className="form-control w-100 m-1" required/>
-                                      <button type="submit" disabled={closed}  className="btn btn-primary m-1 text-right pull-right">Reply</button>   
-                                  </div>
-                                  <div className=" text-right">
-                                  </div> 
-                              </Col>
-                              <Col sm lg="2">
-                              </Col>
-                          </Row>
+                        <Row>
+                            <Col l="auto">
+                               
+                                <p className="mt-3">Comment</p>
+                                <div className="d-flex">
+                                  <input type="textarea"  value={reply || ''} disabled={closed}  onChange={e => setReply(e.target.value)} className="form-control w-100 m-1" required/>
+                                    <button type="submit" disabled={closed}  className="btn btn-primary m-1 text-right pull-right">Reply</button>   
+                                </div>
+                                <div className=" text-right">
+                                </div> 
+                            </Col>
+                            <Col sm lg="2">
+                            </Col>
+                        </Row>
                     </Form>
-              } 
+            } 
         </section>
 
         <Modal show={showR} onHide={handleCloseR}>
@@ -598,7 +598,7 @@ swal("Something is Wrong",error.code,"warning");
                               </Form.Group>
                             </Form>
                           </Modal.Body>
-        </Modal>
+                        </Modal>
 
         </div>
     

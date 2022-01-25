@@ -129,7 +129,7 @@
 
 .headers {
   height: 25vh;
-  min-height: 240px;
+  min-height: 250px;
   background-image: url('https://images.unsplash.com/photo-1609705024873-7add858e3036?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80');
   background-position: center center;
   background-repeat: no-repeat;

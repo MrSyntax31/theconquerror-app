@@ -652,7 +652,8 @@ swal("Something is Wrong",error.code,"warning");
 
               <Navbar/>
 
-              <section className="m-1">
+              <section className="m-1
+              ">
                 
                     <Card>
                       <section>
@@ -813,7 +814,7 @@ swal("Something is Wrong",error.code,"warning");
                                               {fetching && <strong>Fetching more Problems.....</strong>}
                                             {!fetching && 
                                             
-                                                  <p className="text-primary" onClick={() => getMore()}>Show More</p>
+                                                  <Button onClick={() => getMore()}>Show More</Button>
                                               }
                                           </ButtonGroup>
                                 

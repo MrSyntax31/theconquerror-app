@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import * as FaIcons from 'react-icons/fa';
 import Helmet from 'react-helmet';
 import Navbar from '../../Components/Navbar/Navbar'
-import {Form, Row, Col, Dropdown, Modal, Button , Alert, OverlayTrigger, Tooltip} from 'react-bootstrap'
+import {Container, Form, Row, Col, Dropdown, Modal, Button , Alert, OverlayTrigger, Tooltip} from 'react-bootstrap'
 import './Forum.css';
 import { getAuth , signOut, signInWithEmailAndPassword} from '@firebase/auth';
 import { getFirestore, doc, onSnapshot, addDoc, collection, query, orderBy , deleteDoc, updateDoc, setDoc} from '@firebase/firestore';
@@ -466,125 +466,118 @@ swal("Something is Wrong",error.code,"warning");
               <Link to="/forum" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"><FaIcons.FaArrowLeft/> Back</Link>
           </div>
 
-            {/* Option Menu*/}
+        {/* Option Menu*/}
+        { hider && 
+        <div className="topnav-right">
+        <Dropdown>
+            <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                <BiIcons.BiMenuAltRight/>
+            </Dropdown.Toggle>
 
-            { hider && 
-            <div className="topnav-right">
-              <Dropdown>
-                  <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                      <BiIcons.BiMenuAltRight/>
-                  </Dropdown.Toggle>
+            <Dropdown.Menu>
+                <Dropdown.Item onClick={DeletePost}>Delete</Dropdown.Item>
+                <Dropdown.Item onClick={caseClosed}>Case Close</Dropdown.Item>
+            </Dropdown.Menu>
+        </Dropdown>
+        </div>
+    }
+        { Empty && <h1>The Post probably went on a journey.</h1>  } 
+        <strong>{topic.title}</strong><br></br>
+        {topic.desc}<br></br>
+        <p className="text-primary">{topic.created_by}</p><br></br>
+        {topic.created_at}<br></br>
+        <div className="border border-primary mt-3">
 
-                  <Dropdown.Menu>
-                      <Dropdown.Item onClick={DeletePost}>Delete</Dropdown.Item>
-                      <Dropdown.Item onClick={caseClosed}>Case Close</Dropdown.Item>
-                  </Dropdown.Menu>
-              </Dropdown>
-            </div>
-            }
+        { topic.sampcodeimg &&  <img className="mx-auto d-block img-fluid mt-3 mb-3 image-preview image-preview-js" style={{width: '25%', height: 'auto'}} src={topic.sampcodeimg} alt={topic.title} onClick={handleShow}/>  }
 
-            { Empty && <h1>The Post probably went on a journey.</h1>  } 
-            <strong>{topic.title}</strong><br></br>
-            {topic.desc}<br></br>
-            <p className="text-primary">{topic.created_by}</p><br></br>
-            {topic.created_at}<br></br>
+
+        </div>
+
+        <Modal size="lg" show={show} onHide={handleClose} keyboard={false}>
+            <Modal.Header closeButton>
+            <Modal.Title><strong>{topic.title}</strong></Modal.Title>
+            <br/>
+            </Modal.Header>
             
-            <div className="border border-primary mt-3">
+            <Modal.Body>
+                <img className="mx-auto d-block img-fluid mt-3 mb-3 image-preview image-preview-js" style={{width: '100%', height: 'auto'}} src={topic.sampcodeimg} alt={topic.title} />
+            </Modal.Body>
+        </Modal>
 
-              { topic.sampcodeimg &&  <img className="mx-auto d-block img-fluid mt-3 mb-3 image-preview image-preview-js" style={{width: '25%', height: 'auto'}} src={topic.sampcodeimg} alt={topic.title} onClick={handleShow}/>  }
+           {/* Modal Login*/}
+           <Modal show={showMl} onHide={handleCloseMl}>
+                    <Modal.Header closeButton>
+                      <Modal.Title>Log-in</Modal.Title>
+                    </Modal.Header>
+                    <Modal.Body>Please Log-in to Continue!
+                    {error1 && <Alert variant="danger">{error1}</Alert>}
+                    <Form noValidate validated={validated1} className="">
+                                  <Form.Group id="email" className="mb-3">
+                                    <Form.Label>Email</Form.Label>
+                                    <Form.Control ref={emailRef}  name = "email"  type="email" required autoComplete="username" placeholder="Email Address"/>
+                                    <Form.Control.Feedback type="invalid">
+                                    Please double check your email.
+                                  </Form.Control.Feedback>
+                                  </Form.Group>
 
-
-            </div>
-
-            <Modal size="lg" show={show} onHide={handleClose} keyboard={false}>
-                <Modal.Header closeButton>
-                <Modal.Title><strong>{topic.title}</strong></Modal.Title>
-                <br/>
-                </Modal.Header>
-                
-                <Modal.Body>
-                    <img className="mx-auto d-block img-fluid mt-3 mb-3 image-preview image-preview-js" style={{width: '100%', height: 'auto'}} src={topic.sampcodeimg} alt={topic.title} />
-                </Modal.Body>
-            </Modal>
-
-              {/* Modal Login*/}
-              <Modal show={showMl} onHide={handleCloseMl}>
-
-                      <Modal.Header closeButton>
-                        <Modal.Title>Log-in</Modal.Title>
-                      </Modal.Header>
-
-                      <Modal.Body>Please Log-in to Continue!
-                      {error1 && <Alert variant="danger">{error1}</Alert>}
-
-                                <Form noValidate validated={validated1} className="">
-                                    <Form.Group id="email" className="mb-3">
-                                      <Form.Label>Email</Form.Label>
-                                      <Form.Control ref={emailRef}  name = "email"  type="email" required autoComplete="username" placeholder="Email Address"/>
+                                  <Form.Group id="password" className="mb-3">
+                                    <Form.Label>Password</Form.Label>
+                                    <Form.Control type={password} ref={passwordRef}  name = "password" autoComplete="current-password" required placeholder="Password"/>
                                       <Form.Control.Feedback type="invalid">
-                                      Please double check your email.
-                                    </Form.Control.Feedback>
-                                    </Form.Group>
-
-                                    <Form.Group id="password" className="mb-3">
-                                      <Form.Label>Password</Form.Label>
-                                      <Form.Control type={password} ref={passwordRef}  name = "password" autoComplete="current-password" required placeholder="Password"/>
-                                        <Form.Control.Feedback type="invalid">
-                                      Please enter a password.
-                                    </Form.Control.Feedback>
-                                      <div className="form-group mt-2 text-secondary">
-                                      <i onClick={showPass} className="fs-7" style={{cursor:"pointer", fontFamily:"Raleway, sans-serif"}}><AiIcons.AiFillEye/>Show/Hide Password</i>
-                                      </div>
-                                    </Form.Group>
-                                
-                                    <div className="w-100 mt-2 justify-content-right">
-                                      <Link to="/forgot-pass" style={{ textDecoration: 'none' }}>Forgot Password</Link>
+                                    Please enter a password.
+                                  </Form.Control.Feedback>
+                                    <div className="form-group mt-2 text-secondary">
+                                    <i onClick={showPass} className="fs-7" style={{cursor:"pointer", fontFamily:"Raleway, sans-serif"}}><AiIcons.AiFillEye/>Show/Hide Password</i>
                                     </div>
-
-                                    <div className="col-xs-1 mt-3" align="center">
-                                      <ReCAPTCHA
-                                      sitekey={process.env.REACT_APP_SITEKEY}
-                                      onChange={onChange}
-                                      />
-                                    </div>
+                                  
+                                  </Form.Group>
                               
-                                    <Button onClick={handleSubmitLogin} className="w-100 mt-3 mb-3"  >Login</Button>
+                            <div className="w-100 mt-2 justify-content-right">
+                              <Link to="/forgot-pass" style={{ textDecoration: 'none' }}>Forgot Password</Link>
+                            </div>
+
+                            <div className="col-xs-1 mt-3" align="center">
+                            <ReCAPTCHA
+                            sitekey={process.env.REACT_APP_SITEKEY}
+                            onChange={onChange}
+                            />
+                            </div>
+                            
+                            <Button onClick={handleSubmitLogin} className="w-100 mt-3 mb-3"  >Login</Button>
+                          
                                 </Form>
 
-                      </Modal.Body>
-
-                      <Modal.Footer>
-                          <div className="w-100 mt-2 mb-2 text-center text-secondary">
-                            Don't have an account? <Link to="/register" style={{ textDecoration: 'none' }}>Register</Link>
-                          </div>
-                      </Modal.Footer>
-
-              </Modal>                    
+                    </Modal.Body>
+                    <Modal.Footer>
+                    <div className="w-100 mt-2 mb-2 text-center text-secondary">
+                                Don't have an account? <Link to="/register" style={{ textDecoration: 'none' }}>Register</Link>
+                            </div>
+                    </Modal.Footer>
+                  </Modal>                    
 
 
-              {showRep}
-          
-              { Empty ? '' :
-                    <Form noValidate validated={validated} onSubmit={handleSubmit}   className="">
+        {showRep}
+        
+            { Empty ? '' :
+                   <Form noValidate validated={validated} onSubmit={handleSubmit}   className="">
 
-                          <Row>
-                              <Col l="auto">
-                                
-                                  <p className="mt-3">Comment</p>
-                                  <div className="d-flex">
-                                    <input type="textarea"  value={reply || ''} disabled={closed}  onChange={e => setReply(e.target.value)} className="form-control w-100 m-1" required/>
-                                      <button type="submit" disabled={closed}  className="btn btn-primary m-1 text-right pull-right">Reply</button>   
-                                  </div>
-                                  <div className=" text-right">
-                                  </div> 
-                              </Col>
-                              <Col sm lg="2">
-                              </Col>
-                          </Row>
+                        <Row>
+                            <Col l="auto">
+                               
+                                <p className="mt-3">Comment</p>
+                                <div className="d-flex">
+                                  <input type="textarea"  value={reply || ''} disabled={closed}  onChange={e => setReply(e.target.value)} className="form-control w-100 m-1" required/>
+                                    <button type="submit" disabled={closed}  className="btn btn-primary m-1 text-right pull-right">Reply</button>   
+                                </div>
+                                <div className=" text-right">
+                                </div> 
+                            </Col>
+                            <Col sm lg="2">
+                            </Col>
+                        </Row>
                     </Form>
-              } 
+                    } 
         </section>
-
         <Modal show={showR} onHide={handleCloseR}>
                           <Modal.Header closeButton>
                             <Modal.Title>Report User</Modal.Title>
@@ -598,7 +591,7 @@ swal("Something is Wrong",error.code,"warning");
                               </Form.Group>
                             </Form>
                           </Modal.Body>
-        </Modal>
+                        </Modal>
 
         </div>
     

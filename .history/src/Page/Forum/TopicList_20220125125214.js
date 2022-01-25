@@ -813,7 +813,7 @@ swal("Something is Wrong",error.code,"warning");
                                               {fetching && <strong>Fetching more Problems.....</strong>}
                                             {!fetching && 
                                             
-                                                  <p className="text-primary" onClick={() => getMore()}>Show More</p>
+                                                  <Button onClick={() => getMore()}>Show More</Button>
                                               }
                                           </ButtonGroup>
                                 

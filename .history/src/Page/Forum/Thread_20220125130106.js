@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import * as FaIcons from 'react-icons/fa';
 import Helmet from 'react-helmet';
 import Navbar from '../../Components/Navbar/Navbar'
-import {Form, Row, Col, Dropdown, Modal, Button , Alert, OverlayTrigger, Tooltip} from 'react-bootstrap'
+import {Container, Form, Row, Col, Dropdown, Modal, Button , Alert, OverlayTrigger, Tooltip} from 'react-bootstrap'
 import './Forum.css';
 import { getAuth , signOut, signInWithEmailAndPassword} from '@firebase/auth';
 import { getFirestore, doc, onSnapshot, addDoc, collection, query, orderBy , deleteDoc, updateDoc, setDoc} from '@firebase/firestore';
@@ -449,7 +449,7 @@ swal("Something is Wrong",error.code,"warning");
           
               }
 
-    return <div className="commentSection">
+    return < className="commentSection">
 
         <div>
             <Helmet>
@@ -460,7 +460,7 @@ swal("Something is Wrong",error.code,"warning");
 
         <Navbar/>        
         
-        <section className="mb-5 rounded p-5">
+        <section className="mb-5 card rounded m-3 p-5">
 
           <div className="mt-5 mb-5">
               <Link to="/forum" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"><FaIcons.FaArrowLeft/> Back</Link>
@@ -581,7 +581,7 @@ swal("Something is Wrong",error.code,"warning");
                               <Col sm lg="2">
                               </Col>
                           </Row>
-                    </Form>
+                      </Form>
               } 
         </section>
 
@@ -600,7 +600,7 @@ swal("Something is Wrong",error.code,"warning");
                           </Modal.Body>
         </Modal>
 
-        </div>
+        </>
     
   }
 

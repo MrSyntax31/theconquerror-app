@@ -481,12 +481,12 @@ uploadTask.on('state_changed',
               <section className="m-1">
                
                     <Card>
-                      <section>
+                      <Card.Header>
                         <div className="headers mb-2">
                           <h3 className="text-center" style={{marginBottom:'5rem'}}>Forum</h3>
                           <h2  className="text-light fw-bold ml-2" style={{marginTop:'4rem'}}>ConquErroRoom</h2>
                         </div>
-                      </section>
+                      </Card.Header>
                       <Card.Body>
                         <Card.Title>
                         <div className="row">

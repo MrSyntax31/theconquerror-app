@@ -460,7 +460,7 @@ swal("Something is Wrong",error.code,"warning");
 
         <Navbar/>        
         
-        <section className="mb-5 rounded p-5">
+        <section className="mb-5 card rounded p-5">
 
           <div className="mt-5 mb-5">
               <Link to="/forum" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"><FaIcons.FaArrowLeft/> Back</Link>
@@ -581,7 +581,7 @@ swal("Something is Wrong",error.code,"warning");
                               <Col sm lg="2">
                               </Col>
                           </Row>
-                    </Form>
+                      </Form>
               } 
         </section>
 
