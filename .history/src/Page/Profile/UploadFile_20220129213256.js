@@ -63,8 +63,7 @@ const UploadFile = () => {
                 <hr/>
                     <button type="submit" className="btn btn-primary m-4">Submit</button>
                 </form>
-
-                <Link to="/profile" style={{ textDecoration: 'none', marginLeft: '10px', marginTop: '5rem' }}><FaIcons.FaArrowLeft/> Return</Link>
+                <Link to="/profile" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5rem' }}><FaIcons.FaArrowLeft/> Return</Link>
             
     </div> 
     
