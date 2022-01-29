@@ -29,11 +29,13 @@ const UploadFile = () => {
                 <br/>
         
                 <form className="card">
-                    <h2>Upload your Files here!</h2>
-
-                    <p className="text-center">
-                        Please upload documents only in 'pdf', 'docx', 'rtf', 'jpg', 'jpeg', 'png' & 'text' format.
+                <header>
+                    <p>
+                        <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                        <span class="up">up</span>
+                        <span class="load">load</span>
                     </p>
+                </header>
 
                 <div className="form-group m-4">
                     <label htmlFor="exampleInputName">Title</label>
