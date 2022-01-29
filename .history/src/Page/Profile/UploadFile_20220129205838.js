@@ -33,15 +33,15 @@ const UploadFile = () => {
                     <label htmlFor="exampleInputName">Title</label>
                     <input type="text" name="title" className="form-control" id="exampleInputName" placeholder="Title" required="required"/>
                 </div>
-                <div className="form-group m-4">
+                <div clasclassNames="form-group m-4">
                     <label htmlFor="exampleInputEmail1" required="required">Description</label>
                     <input type="email" name="description" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Description"/>
                 </div>
-                <div className="form-group m-4">
+                <div class="form-group m-4">
                     <label htmlFor="exampleInputEmail1" required="required">Owner</label>
                     <input type="email" name="owner" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Owner"/>
                 </div>
-                <div className="form-group m-4">
+                <div class="form-group m-4">
                     <label htmlFor="exampleFormControlSelect1">Tags</label>
                     <select className="form-control" id="exampleFormControlSelect1" name="platform" required="required">
                     <option>Programming</option>
