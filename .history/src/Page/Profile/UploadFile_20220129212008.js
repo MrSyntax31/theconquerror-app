@@ -29,9 +29,9 @@ const UploadFile = () => {
                 <br/>
         
                 <form className="card">
-                    <h2 className="mt-3 fw-bold text-primary text-center">Upload your Files here!</h2>
+                    <h2 className="mt-3 m-3">Upload your Files here!</h2>
 
-                    <p className="text-center mt-2">
+                    <p className="text-center">
                         Please upload documents only in 'pdf', 'docx', 'rtf', 'jpg', 'jpeg', 'png' & 'text' format.
                     </p>
 
