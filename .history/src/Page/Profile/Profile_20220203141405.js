@@ -873,11 +873,11 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
             </div>    
           
             <section>
-                            <Card className="mt-5 mb-5">
+                            <Card className="mt-2">
                                 <Card.Header className="text-center">
                                     <h3 className="text-center mt-5 fw-bold">Lesson's Time Table</h3>
                                     <p>
-                                        This shows the different lesson's time table and status of your current lesson.
+                                        You may need specific softwares to open, view and print the files in this page. Most modern browsers and devices can open PDF and ZIP files.
                                     </p>
                                 </Card.Header>
                                 <Card.Body>

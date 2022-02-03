@@ -873,11 +873,11 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
             </div>    
           
             <section>
-                            <Card className="mt-5 mb-5">
+                            <Card className="mt-2">
                                 <Card.Header className="text-center">
                                     <h3 className="text-center mt-5 fw-bold">Lesson's Time Table</h3>
                                     <p>
-                                        This shows the different lesson's time table and status of your current lesson.
+                                        This shows the different 
                                     </p>
                                 </Card.Header>
                                 <Card.Body>
