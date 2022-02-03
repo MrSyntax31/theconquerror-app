@@ -872,7 +872,6 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                     </div>
             </div>    
           
-            {/*Time Table*/}
             <section>
                             <Card className="mt-5 mb-5">
                                 <Card.Header className="text-center">
@@ -885,7 +884,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                             <Form>
                                                     <Table striped bordered hover>
                                                         <thead>
-                                                        <tr className="text-primary fw-bold">
+                                                        <tr className="text-primary fw-bold ">
                                                         <th>Lessons</th>
                                                         <th>Status</th>
                                                         <th>Score</th>
@@ -906,29 +905,29 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                             </Form> 
                                 </Card.Body>
                             </Card>
-            </section>
+                        </section>
 
-                                      <Offcanvas show={showOff} onHide={handleCloseOff}>
-                                          <Offcanvas.Header closeButton>
-                                            <Offcanvas.Title><IoIcons.IoSettingsSharp/> Settings</Offcanvas.Title>
-                                          </Offcanvas.Header>
-                                              <Offcanvas.Body>
-                                                                    
-                                                <div className=" d-grid gap-2 mt-3 mb-3">
-                                                    <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button>                     
-                                                        
-                                                    <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
-                                                                      
-                                                    <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
+            <Offcanvas show={showOff} onHide={handleCloseOff}>
+                <Offcanvas.Header closeButton>
+                  <Offcanvas.Title><IoIcons.IoSettingsSharp/> Settings</Offcanvas.Title>
+                </Offcanvas.Header>
+                    <Offcanvas.Body>
+                                          
+                      <div className=" d-grid gap-2 mt-3 mb-3">
+                          <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button>                     
+                               
+                          <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
+                                            
+                          <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
 
-                                                    <Button variant="primary" onClick={handleShowC} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillSafetyCertificate/> Certificates</Button> 
-                                                                                            
-                                                    <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
-                                                      <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
-                                                    </div>
+                          <Button variant="primary" onClick={handleShowC} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillSafetyCertificate/> Certificates</Button> 
                                                                   
-                                              </Offcanvas.Body>
-                                      </Offcanvas>
+                          <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
+                            <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
+                          </div>
+                                        
+                    </Offcanvas.Body>
+            </Offcanvas>
 
                                       {/*Change Password*/}
                                       <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
@@ -987,8 +986,8 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                       </Modal>
 
 
-                                      {/*Upload Files*/}
-                                      <Modal show={show4} onHide={handleClose4} backdrop="static" keyboard={false} >
+                                          {/*Upload Files*/}
+                                          <Modal show={show4} onHide={handleClose4} backdrop="static" keyboard={false} >
                                             <Modal.Header closeButton>
                                               <Modal.Title>Upload Files</Modal.Title>
                                             </Modal.Header>
@@ -1006,11 +1005,11 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                               </Button>
                                               </OverlayTrigger>
                                             </Modal.Footer>
-                                      </Modal>
+                                          </Modal>
 
 
-                                      {/*Update Profile*/}
-                                      <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
+                                            {/*Update Profile*/}
+                                            <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
                                                   <Modal.Header closeButton>
                                                     <Modal.Title>Update Profile</Modal.Title>
                                                   </Modal.Header>
@@ -1069,7 +1068,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                     <Button variant="secondary" onClick={handleClose5}> Close</Button>
                                                   
                                                   </Modal.Footer>
-                                      </Modal>
+                                            </Modal>
                   
                   
             <a href="#top" className="scroll-top">

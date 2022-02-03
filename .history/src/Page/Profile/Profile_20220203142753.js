@@ -872,7 +872,6 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                     </div>
             </div>    
           
-            {/*Time Table*/}
             <section>
                             <Card className="mt-5 mb-5">
                                 <Card.Header className="text-center">
@@ -987,8 +986,8 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                       </Modal>
 
 
-                                      {/*Upload Files*/}
-                                      <Modal show={show4} onHide={handleClose4} backdrop="static" keyboard={false} >
+                                          {/*Upload Files*/}
+                                          <Modal show={show4} onHide={handleClose4} backdrop="static" keyboard={false} >
                                             <Modal.Header closeButton>
                                               <Modal.Title>Upload Files</Modal.Title>
                                             </Modal.Header>
@@ -1006,11 +1005,11 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                               </Button>
                                               </OverlayTrigger>
                                             </Modal.Footer>
-                                      </Modal>
+                                          </Modal>
 
 
-                                      {/*Update Profile*/}
-                                      <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
+                                            {/*Update Profile*/}
+                                            <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
                                                   <Modal.Header closeButton>
                                                     <Modal.Title>Update Profile</Modal.Title>
                                                   </Modal.Header>
@@ -1069,7 +1068,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                     <Button variant="secondary" onClick={handleClose5}> Close</Button>
                                                   
                                                   </Modal.Footer>
-                                      </Modal>
+                                            </Modal>
                   
                   
             <a href="#top" className="scroll-top">
