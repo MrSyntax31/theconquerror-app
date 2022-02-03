@@ -892,11 +892,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                         <th>Tries</th>
                                                         </tr>
                                                         <tr>
-                                                        <th>Lesson 1</th>
-                                                        <th>Pass</th>
-                                                        <th>9</th>
-                                                        <th>02/01/2022, 09:44:21 PM</th>
-                                                        <th>1</th>
+                                                          
                                                         </tr>
                                                         </thead>
                                                            
