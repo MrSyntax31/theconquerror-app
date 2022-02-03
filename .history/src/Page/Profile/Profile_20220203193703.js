@@ -923,33 +923,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                 <article className="card-a">
                    
                         <picture className="thumbnail">
-                            <img className="w-25" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FLessonPics%2FPROG-PC101.png?alt=media&token=48e72af7-35ca-4f83-8a88-b0ec9f241557" alt="A banana that looks like a bird"/>
-                        </picture>
-                        <div className="card-content">
-
-                            <h2>Lessons Title</h2>
-                            <p>gh</p>
-                        </div>
-                    
-                </article>
-
-                <article className="card-a">
-                   
-                        <picture className="thumbnail">
-                            <img className="w-25" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FLessonPics%2FPROG-PC101.png?alt=media&token=48e72af7-35ca-4f83-8a88-b0ec9f241557" alt="A banana that looks like a bird"/>
-                        </picture>
-                        <div className="card-content">
-
-                            <h2>Lessons Title</h2>
-                            <p>gh</p>
-                        </div>
-                    
-                </article>
-
-                <article className="card-a">
-                   
-                        <picture className="thumbnail">
-                            <img className="w-25" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FLessonPics%2FPROG-PC101.png?alt=media&token=48e72af7-35ca-4f83-8a88-b0ec9f241557" alt="A banana that looks like a bird"/>
+                            <img className="" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FLessonPics%2FPROG-PC101.png?alt=media&token=48e72af7-35ca-4f83-8a88-b0ec9f241557" alt="A banana that looks like a bird"/>
                         </picture>
                         <div className="card-content">
 
