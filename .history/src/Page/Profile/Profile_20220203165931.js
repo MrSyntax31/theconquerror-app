@@ -911,10 +911,10 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
     {/*Lessons take by the user*/}
     <main className="main-area m-1">
 
-        <h3 className="text-center mt-5 fw-bold">My Spell Books</h3>
-          <p>
-            This shows my collection of lessons that I have taken.
-          </p>
+                                    <h3 className="text-center mt-5 fw-bold">My Spell Books</h3>
+                                    <p>
+                                        This shows the 
+                                    </p>
         
         <div className="centered">
 

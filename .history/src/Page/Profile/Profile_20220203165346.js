@@ -910,11 +910,6 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
 
     {/*Lessons take by the user*/}
     <main className="main-area m-1">
-
-        <h3 className="text-center mt-5 fw-bold">My Spell Books</h3>
-          <p>
-            This shows my collection of lessons that I have taken.
-          </p>
         
         <div className="centered">
 
@@ -927,8 +922,8 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                         </picture>
                         <div className="card-content">
 
-                            <h2>Lessons Title</h2>
-                            <p>gh</p>
+                            <h2>{Vacation Image 01}</h2>
+                            <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but market-facing.</p>
                         </div>
                     
                 </article>

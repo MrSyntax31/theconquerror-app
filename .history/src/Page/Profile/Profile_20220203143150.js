@@ -908,37 +908,6 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                             </Card>
             </section>
 
-    {/*Lessons take by the user*/}
-    <main className="main-area m-1">
-
-        <h3 className="text-center mt-5 fw-bold">My Spell Books</h3>
-          <p>
-            This shows my collection of lessons that I have taken.
-          </p>
-        
-        <div className="centered">
-
-            <div className="cards">
-                
-                <article className="card">
-                   
-                        <picture className="thumbnail">
-                            <img src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-01.jpg" alt="A banana that looks like a bird"/>
-                        </picture>
-                        <div className="card-content">
-
-                            <h2>Lessons Title</h2>
-                            <p>gh</p>
-                        </div>
-                    
-                </article>
-
-            </div>
-           
-        </div>
-        
-    </main>
-
                                       <Offcanvas show={showOff} onHide={handleCloseOff}>
                                           <Offcanvas.Header closeButton>
                                             <Offcanvas.Title><IoIcons.IoSettingsSharp/> Settings</Offcanvas.Title>

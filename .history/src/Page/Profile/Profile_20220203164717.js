@@ -908,31 +908,61 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                             </Card>
             </section>
 
-    {/*Lessons take by the user*/}
-    <main className="main-area m-1">
-
-        <h3 className="text-center mt-5 fw-bold">My Spell Books</h3>
-          <p>
-            This shows my collection of lessons that I have taken.
-          </p>
+    <main className="main-area">
         
         <div className="centered">
 
             <div className="cards">
                 
                 <article className="card">
-                   
+                    <p>
                         <picture className="thumbnail">
                             <img src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-01.jpg" alt="A banana that looks like a bird"/>
                         </picture>
-                        <div className="card-content">
+                        <div class="card-content">
 
-                            <h2>Lessons Title</h2>
-                            <p>gh</p>
+                            <h2>Vacation Image 01</h2>
+                            <p>TUX re-inventing the wheel, and move the needle. Feature creep dogpile that but diversify kpis but market-facing.</p>
                         </div>
-                    
+                    </p>
                 </article>
 
+                <article class="card">
+                    <p>
+                        <picture class="thumbnail">
+                            <img src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-02.jpg" alt="Norwegian boller"/>
+                        </picture>
+                        <div class="card-content">
+                            <h2>Vacation Image 02</h2>
+                            <p>Staff engagement synergize productive mindfulness and waste of resources cross sabers, or forcing function shotgun approach drink the Kool-aid.</p>
+                            <p>Execute are we in agreeance what do you feel you would bring to the table if you were hired for this position, nor closer to the metal goalposts, are there any leftovers in the kitchen?.</p>
+                        </div>
+                    </p>
+                </article>
+
+                <article class="card">
+                    <p>
+                        <picture class="thumbnail">
+                            <img src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-03.jpg" alt="A dinosaur wearing an aluminium jacket"/>
+                        </picture>
+                        <div class="card-content">
+                            <h2>Vacation Image 03</h2>
+                            <p>Viral engagement anti-pattern back of the net, for meeting assassin horsehead offer. Loop back design thinking drop-dead date. </p>
+                        </div>
+                    </p>
+                </article>
+
+                <article class="card">
+                    <p>
+                        <picture class="thumbnail">
+                            <img src="http://www.abbeyjfitzgerald.com/wp-content/uploads/2017/02/image-example-04.jpg" alt="Chocolate filled boller"/>
+                        </picture>
+                        <div class="card-content">
+                            <h2>Vacation Image 04</h2>
+                            <p>We need a paradigm shift get all your ducks in a row. I just wanted to give you a heads-up we need distributors to evangelize the new line to local markets when does this sunset? so waste of resources, yet fire up your browser, or touch base closing these latest prospects is like putting socks on an octopus.</p>
+                        </div>
+                    </p>
+                </article>
             </div>
            
         </div>
