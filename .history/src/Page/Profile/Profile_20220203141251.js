@@ -875,7 +875,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
             <section>
                             <Card className="mt-2">
                                 <Card.Header className="text-center">
-                                    <h3 className="text-center text-primary mt-5 fw-bold">Lesson's Time Table</h3>
+                                    <h3 className="text-center text-primary mt-2 fw-bold">Lesson's </h3>
                                     <p>
                                         You may need specific softwares to open, view and print the files in this page. Most modern browsers and devices can open PDF and ZIP files.
                                     </p>

@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import { Link } from "react-router-dom"
 
 //Styles & Libraries
-import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger, Table } from 'react-bootstrap';
+import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger } from 'react-bootstrap';
 
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
@@ -871,34 +871,95 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                       </ResponsiveContainer>
                     </div>
             </div>    
-          
-            <section>
-                            <Card className="mt-2">
-                                <Card.Header className="text-center">
-                                    <h3 className="text-center text-primary mt-5 fw-bold">Lesson's Time Table</h3>
-                                    <p>
-                                        You may need specific softwares to open, view and print the files in this page. Most modern browsers and devices can open PDF and ZIP files.
-                                    </p>
-                                </Card.Header>
-                                <Card.Body>
-                                            <Form>
-                                                    <Table striped bordered hover>
-                                                        <thead>
-                                                        <tr>
-                                                        <th>Lessons</th>
-                                                        <th>Status</th>
-                                                        <th>Score</th>
-                                                        <th>Finished At</th>
-                                                        <th>Tries</th>
-                                                        </tr>
-                                                        </thead>
-                                                           
-                                                    </Table>
-                                                    
-                                            </Form> 
-                                </Card.Body>
-                            </Card>
-                        </section>
+
+            <Container>
+                        <h3>My Course Timeline</h3>
+                        <section id="cd-timeline" className=" rounded">
+                          <div className="cd-timeline-block">
+                            <div className="cd-timeline-img cd-picture">
+                            </div>
+
+                            <div className="cd-timeline-content">
+                              <h2>Programming Concepts</h2>
+                              <div className="timeline-content-info">
+                                <span className="timeline-content-info-title">
+                                  <i className="fa fa-certificate" aria-hidden="true"></i>
+                                  Start Here!
+                                </span>
+                              
+                              </div>
+                              <p>Begin your journey by exploring the basic fundamentals of computer programming course.</p>
+                              <ul className="content-skills">
+                              <li>Variables</li>
+                              <li>Conditions</li>
+                              <li>Introductions</li>
+                              <li>Fundamentals</li>
+                              <li>Core</li>
+                              </ul>
+                            </div> 
+                          </div> 
+
+                          <div className="cd-timeline-block">
+                            <div className="cd-timeline-img cd-movie">
+                            </div> 
+
+                            <div className="cd-timeline-content">
+                              <h2>Basic Programming Structures</h2>
+                              <p>Programming structures defines the set of fundamentals that needs to be learned first to be able to understand the programming environment and create a well construct algorithm.</p>
+                            </div> 
+                          </div> 
+
+                          <div className="cd-timeline-block">
+                            <div className="cd-timeline-img cd-picture">
+                            </div> 
+
+                            <div className="cd-timeline-content">
+                              <h2>Conditional Structures</h2>
+                              <p>Conditional structures are computer programming that allows developer to set a conditional flow to a program using a set of conditions like if, if else, nested if, while and do while.Conditional structures are computer programming that allows developer to set a conditional flow to a program using a set of conditions like if, if else, nested if, while and do while.</p>
+                            </div> 
+                          </div> 
+
+                          <div className="cd-timeline-block">
+                            <div className="cd-timeline-img cd-location">
+                            </div> 
+
+                            <div className="cd-timeline-content">
+                              <h2>Nested Condition</h2>
+                              <p>A nested condition is the use of a condition in a condition. This way you can create a cascade of conditions: a certain paragraph will be displayed only if a certain condition is true.</p>
+                            </div> 
+                          </div> 
+
+                          <div className="cd-timeline-block">
+                            <div className="cd-timeline-img cd-location">
+                            </div> 
+
+                            <div className="cd-timeline-content">
+                              <h2>Looping Constructs</h2>
+                              <p>In programming Looping constructors is useful to determine the program directions and assess the conditions created, it is being done using a for loop, and do while loop.</p>
+                            </div>
+                          </div> 
+
+                          <div className="cd-timeline-block">
+                            <div className="cd-timeline-img cd-movie">
+                            </div>
+
+                            <div className="cd-timeline-content">
+                              <h2>Functions</h2>
+                              <p>Functions allow to structure programs in segments of code to perform individual tasks. In C++, a function is a group of statements that is given a name, and which can be called from some point of the program.</p>
+                            </div> 
+                          </div> 
+
+                          <div className="cd-timeline-block">
+                            <div className="cd-timeline-img cd-movie">
+                            </div>
+
+                            <div className="cd-timeline-content">
+                              <h2>Arrays</h2>
+                              <p>Array is a form of solutions that allows the program to have a sequence and orderly arrange execution and results base on the conditions in the array form.</p>
+                            </div> 
+                          </div> 
+                        </section> 
+                      </Container>
 
             <Offcanvas show={showOff} onHide={handleCloseOff}>
                 <Offcanvas.Header closeButton>

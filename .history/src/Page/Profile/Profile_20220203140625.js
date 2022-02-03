@@ -871,34 +871,37 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                       </ResponsiveContainer>
                     </div>
             </div>    
-          
-            <section>
-                            <Card className="mt-2">
-                                <Card.Header className="text-center">
-                                    <h3 className="text-center text-primary mt-5 fw-bold">Lesson's Time Table</h3>
-                                    <p>
-                                        You may need specific softwares to open, view and print the files in this page. Most modern browsers and devices can open PDF and ZIP files.
-                                    </p>
-                                </Card.Header>
-                                <Card.Body>
-                                            <Form>
-                                                    <Table striped bordered hover>
-                                                        <thead>
-                                                        <tr>
-                                                        <th>Lessons</th>
-                                                        <th>Status</th>
-                                                        <th>Score</th>
-                                                        <th>Finished At</th>
-                                                        <th>Tries</th>
-                                                        </tr>
-                                                        </thead>
-                                                           
-                                                    </Table>
-                                                    
-                                            </Form> 
-                                </Card.Body>
-                            </Card>
-                        </section>
+
+            <Table responsive>
+              <thead>
+                <tr>
+                  <th>#</th>
+                  {Array.from({ length: 6 }).map((_, index) => (
+                    <th key={index}>Table heading</th>
+                  ))}
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  {Array.from({ length: 6 }).map((_, index) => (
+                    <td key={index}>Table cell {index}</td>
+                  ))}
+                </tr>
+                <tr>
+                  <td>2</td>
+                  {Array.from({ length: 12 }).map((_, index) => (
+                    <td key={index}>Table cell {index}</td>
+                  ))}
+                </tr>
+                <tr>
+                  <td>3</td>
+                  {Array.from({ length: 12 }).map((_, index) => (
+                    <td key={index}>Table cell {index}</td>
+                  ))}
+                </tr>
+              </tbody>
+            </Table>
 
             <Offcanvas show={showOff} onHide={handleCloseOff}>
                 <Offcanvas.Header closeButton>

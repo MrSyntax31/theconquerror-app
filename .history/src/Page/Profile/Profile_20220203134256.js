@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import { Link } from "react-router-dom"
 
 //Styles & Libraries
-import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger, Table } from 'react-bootstrap';
+import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger } from 'react-bootstrap';
 
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
@@ -871,34 +871,59 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                       </ResponsiveContainer>
                     </div>
             </div>    
-          
-            <section>
-                            <Card className="mt-2">
-                                <Card.Header className="text-center">
-                                    <h3 className="text-center text-primary mt-5 fw-bold">Lesson's Time Table</h3>
-                                    <p>
-                                        You may need specific softwares to open, view and print the files in this page. Most modern browsers and devices can open PDF and ZIP files.
-                                    </p>
-                                </Card.Header>
-                                <Card.Body>
-                                            <Form>
-                                                    <Table striped bordered hover>
-                                                        <thead>
-                                                        <tr>
-                                                        <th>Lessons</th>
-                                                        <th>Status</th>
-                                                        <th>Score</th>
-                                                        <th>Finished At</th>
-                                                        <th>Tries</th>
-                                                        </tr>
-                                                        </thead>
-                                                           
-                                                    </Table>
-                                                    
-                                            </Form> 
-                                </Card.Body>
-                            </Card>
-                        </section>
+
+            <div class="container">
+              <div class="wrapper">
+                <h1> A day in my 'sleepy' life 😅</h1>
+                <ul class="sessions">
+                  <li>
+                    <div class="time">09:00 AM</div>
+                    <p>How is it already 9:00? Just how??? 🤯🤯</p>
+                  </li>
+                  <li>
+                    <div class="time">09:05 AM</div>
+                    <p>Few more minutes of sleep won't do anyone any harm 🤷..</p>
+                  </li>
+                  <li>
+                    <div class="time">09:30 AM</div>
+                    <p>Get up 🙄</p>
+                  </li>
+                  <li>
+                    <div class="time">1:00 PM</div>
+                    <p>How can I feel sleepy again?😵</p>
+                  </li>
+                  <li>
+                    <div class="time">01:30 PM</div>
+                    <p>Lunch time after which sleep just doesn't want to let go of me. 🤝</p>
+                  </li>
+                  <li>
+                    <div class="time">3:30 PM</div>
+                    <p>Drink the magical chai, it will ward off sleep they said. 🤷‍</p>
+                  </li>
+                  <li>
+                    <div class="time">4:30 PM </div>
+                    <p>The only time I don't feel sleepy cause it's work out time. I mean walking time. 😹</p>
+                  </li>
+                  <li>
+                    <div class="time">07:00 PM </div>
+                    <p>Food my tummy needs, sleep my body needs.👿</p>
+                  </li>
+                  <li>
+                    <div class="time">07:30 PM </div>
+                    <p>My tummy's happy time 🍝</p>
+                  </li>
+                  <li>
+                    <div class="time">10:00 PM </div>
+                    <p>uh oh!!! fuel low, get some snacks but wait should I just take a quick nap?🤓 </p>
+                  </li>
+                  <li>
+                    <div class="time">2:30 PM </div>
+                    <p>All hail! The time to sleep has finally arrived.😴😴😴😴😴 </p>
+                  </li>
+                </ul>
+              </div>
+            </div> 
+
 
             <Offcanvas show={showOff} onHide={handleCloseOff}>
                 <Offcanvas.Header closeButton>

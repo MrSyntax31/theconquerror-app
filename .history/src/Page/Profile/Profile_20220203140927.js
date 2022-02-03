@@ -875,7 +875,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
             <section>
                             <Card className="mt-2">
                                 <Card.Header className="text-center">
-                                    <h3 className="text-center text-primary mt-5 fw-bold">Lesson's Time Table</h3>
+                                    <h3 className="text-center text-primary mt-2 fw-bold">Available Resources for Students</h3>
                                     <p>
                                         You may need specific softwares to open, view and print the files in this page. Most modern browsers and devices can open PDF and ZIP files.
                                     </p>
@@ -885,14 +885,14 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                     <Table striped bordered hover>
                                                         <thead>
                                                         <tr>
-                                                        <th>Lessons</th>
-                                                        <th>Status</th>
-                                                        <th>Score</th>
-                                                        <th>Finished At</th>
-                                                        <th>Tries</th>
+                                                        <th>Title</th>
+                                                        <th>Description</th>
+                                                        <th>Tags</th>
+                                                        <th>Owner</th>
+                                                        <th>Download Link</th>
                                                         </tr>
                                                         </thead>
-                                                           
+                                                            {docsfile}
                                                     </Table>
                                                     
                                             </Form> 

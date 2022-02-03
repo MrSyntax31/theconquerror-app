@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import { Link } from "react-router-dom"
 
 //Styles & Libraries
-import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger, Table } from 'react-bootstrap';
+import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger } from 'react-bootstrap';
 
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
@@ -871,34 +871,74 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                       </ResponsiveContainer>
                     </div>
             </div>    
-          
-            <section>
-                            <Card className="mt-2">
-                                <Card.Header className="text-center">
-                                    <h3 className="text-center text-primary mt-5 fw-bold">Lesson's Time Table</h3>
-                                    <p>
-                                        You may need specific softwares to open, view and print the files in this page. Most modern browsers and devices can open PDF and ZIP files.
-                                    </p>
-                                </Card.Header>
-                                <Card.Body>
-                                            <Form>
-                                                    <Table striped bordered hover>
-                                                        <thead>
-                                                        <tr>
-                                                        <th>Lessons</th>
-                                                        <th>Status</th>
-                                                        <th>Score</th>
-                                                        <th>Finished At</th>
-                                                        <th>Tries</th>
-                                                        </tr>
-                                                        </thead>
-                                                           
-                                                    </Table>
-                                                    
-                                            </Form> 
-                                </Card.Body>
-                            </Card>
-                        </section>
+
+            <div class="uk-container uk-padding">
+    <div class="uk-timeline">
+        <div class="uk-timeline-item">
+            <div class="uk-timeline-icon">
+                <span class="uk-badge"><span uk-icon="check"></span></span>
+            </div>
+            <div class="uk-timeline-content">
+                <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <h3 class="uk-card-title"><time datetime="2020-07-08">July 8</time></h3>
+                            <span class="uk-label uk-label-success uk-margin-auto-left">Feature</span>
+                        </div>
+                    </div>
+                    <div class="uk-card-body">
+											<p class="uk-text-success">Fully responsive timeline you can add to your UIkit 3 project
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uk-timeline-item">
+            <div class="uk-timeline-icon">
+                <span class="uk-badge"><span uk-icon="check"></span></span>
+            </div>
+            <div class="uk-timeline-content">
+                <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <h3 class="uk-card-title"><time datetime="2020-07-07">July 7</time></h3>
+                            <span class="uk-label uk-label-warning uk-margin-auto-left">Test</span>
+                        </div>
+                    </div>
+                    <div class="uk-card-body">
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                        </p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                        </p>
+											<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+				<div class="uk-timeline-item">
+            <div class="uk-timeline-icon">
+                <span class="uk-badge"><span uk-icon="check"></span></span>
+            </div>
+            <div class="uk-timeline-content">
+                <div class="uk-card uk-card-default uk-margin-medium-bottom uk-overflow-auto">
+                    <div class="uk-card-header">
+                        <div class="uk-grid-small uk-flex-middle" uk-grid>
+                            <h3 class="uk-card-title"><time datetime="2020-07-06">July 6</time></h3>
+                            <span class="uk-label uk-label-danger uk-margin-auto-left">Fix</span>
+                        </div>
+                    </div>
+                    <div class="uk-card-body">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+                        </p>
+                    </div>
+                </div>
+								<p><span class="uk-margin-small-right" uk-icon="triangle-down"></span>Load more</p>
+            </div>
+        </div>
+    </div>
+</div>
+
 
             <Offcanvas show={showOff} onHide={handleCloseOff}>
                 <Offcanvas.Header closeButton>
