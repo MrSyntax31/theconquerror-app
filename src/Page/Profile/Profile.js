@@ -908,63 +908,6 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                             </Card>
             </section>
 
-    {/*Lessons take by the user*/}
-    <main className="main-area m-1">
-
-        <h3 className="text-center mt-5 fw-bold">My Spell Books</h3>
-          <p>
-            This shows my collection of lessons that I have taken.
-          </p>
-        
-        <div className="centered">
-
-            <div className="cards-a">
-                
-                <article className="card-a">
-                   
-                        <picture className="thumbnail">
-                            <img className="w-25" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FLessonPics%2FPROG-PC101.png?alt=media&token=48e72af7-35ca-4f83-8a88-b0ec9f241557" alt="A banana that looks like a bird"/>
-                        </picture>
-                        <div className="card-content">
-
-                            <h2>Lessons Title</h2>
-                            <p>gh</p>
-                        </div>
-                    
-                </article>
-
-                <article className="card-a">
-                   
-                        <picture className="thumbnail">
-                            <img className="w-25" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FLessonPics%2FPROG-PC101.png?alt=media&token=48e72af7-35ca-4f83-8a88-b0ec9f241557" alt="A banana that looks like a bird"/>
-                        </picture>
-                        <div className="card-content">
-
-                            <h2>Lessons Title</h2>
-                            <p>gh</p>
-                        </div>
-                    
-                </article>
-
-                <article className="card-a">
-                   
-                        <picture className="thumbnail">
-                            <img className="w-25" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Images%2FLessonPics%2FPROG-PC101.png?alt=media&token=48e72af7-35ca-4f83-8a88-b0ec9f241557" alt="A banana that looks like a bird"/>
-                        </picture>
-                        <div className="card-content">
-
-                            <h2>Lessons Title</h2>
-                            <p>gh</p>
-                        </div>
-                    
-                </article>
-
-            </div>
-           
-        </div>
-        
-    </main>
-
                                       <Offcanvas show={showOff} onHide={handleCloseOff}>
                                           <Offcanvas.Header closeButton>
                                             <Offcanvas.Title><IoIcons.IoSettingsSharp/> Settings</Offcanvas.Title>

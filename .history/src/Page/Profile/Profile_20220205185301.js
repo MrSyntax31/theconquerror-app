@@ -2,9 +2,10 @@ import React, {  useState , useEffect, useRef } from 'react';
 
 //Dependencies
 import Helmet from 'react-helmet';
+import { Link } from "react-router-dom"
 
 //Styles & Libraries
-import {  Modal, Button, Row, Col, Container, Card, Offcanvas, Form } from 'react-bootstrap';
+import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger, Table } from 'react-bootstrap';
 
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
@@ -17,32 +18,29 @@ import * as FaIcons from 'react-icons/fa';
 import 'csshake';
 
 import './Footer.css'
+import './timeline.scss'
 
 //Firebase Database
 import {} from 'firebase/auth'
 import { getAuth, updatePassword, reauthenticateWithCredential , EmailAuthProvider, sendPasswordResetEmail } from '@firebase/auth';
-import { collection, getFirestore, doc, setDoc,  onSnapshot   } from 'firebase/firestore';
+import { collection, getFirestore, doc, setDoc,  onSnapshot, query   } from 'firebase/firestore';
 import { getDatabase, ref, onValue, update } from "firebase/database";
 
-//Sample Charts
+//Charts
 import {
-  AreaChart,
-  ResponsiveContainer,
-  Area,
-  Tooltip,
   BarChart,
+  Bar,
   XAxis,
   YAxis,
-  Legend,
   CartesianGrid,
-  Bar,
+  Tooltip,
+  Legend,
+  ResponsiveContainer
 } from "recharts";
-
 
 //Navbar
 import Navbar from '../../Components/Navbar/Navbar'
 import {  useHistory} from "react-router-dom"
-
 
 const FooterStyle = styled.div`
   background-color: var(--deep-dark);
@@ -94,6 +92,7 @@ const FooterStyle = styled.div`
 `;
 
 
+
 const Profile = () => {
 
 
@@ -102,37 +101,6 @@ const Profile = () => {
   const auth = getAuth();
   const realtimedb = getDatabase();
   const history = useHistory();
-
-  //For Graphs (Data and Datus)
-  const data = [
-    { name: "Arrays", score: 200 },
-    { name: "Basic Programming", score: 110 },
-    { name: "Functions", score: 100 },
-    { name: "HTML", score: 50 },
-  ];
-
-  const datus = [
-    {
-      name: 'Logic',
-      uv: 40,
-      pv: 2400,
-      amt: 2400,
-    },
-    {
-      name: 'Execution',
-      uv: 80,
-      pv: 1398,
-      amt: 2210,
-    },
-    {
-      name: 'Analysis',
-      uv: 20,
-      pv: 9800,
-      amt: 2290,
-    },
-  ];
-
- 
  
   //Fetch Data of current Logged-in User 
   const user = auth.currentUser;
@@ -146,9 +114,11 @@ const Profile = () => {
     //Feedback
     const [show2, setShow2] = useState(false);
 
+    //Feedback
+    const [showC, setShowC] = useState(false);
+
     //Upload Files
     const [show4, setShow4] = useState(false);
-    const handleShow4 = () => setShow4(true);
     const handleClose4 = () => setShow4(false);
 
     //Change Password
@@ -158,6 +128,10 @@ const Profile = () => {
     //Feedback
     const handleClose2 = () => setShow2(false);
     const handleShow2 = () => setShow2(true);
+
+    //Cerificate
+    const handleCloseC = () => setShowC(false);
+    const handleShowC = () => setShowC(true);
 
   //Offcanvas for setting handlers
   const [showOff, setShowOff] = useState(false);
@@ -172,8 +146,6 @@ const Profile = () => {
 
   const [occuHide, showHide1] = useState("")
   const [instiHide, showHide2] = useState("")
-
- 
 
 
   const [validated, setValidated] = useState(false);
@@ -294,9 +266,7 @@ charactersLength));
     
 
   }  
-        //update profile
-        //function edit(){
-       // }
+
 
         //Function for Modal (Send Feedback)
         async  function sendFeedback(){
@@ -373,8 +343,8 @@ charactersLength));
 }
         
         showProfile();
-    
-      
+        verificationStatus();
+       
 
       timer();
     
@@ -384,32 +354,56 @@ charactersLength));
   
 
 
+ 
   function onLoad() {
 
-    const level = sessionStorage.getItem("userLevel")
+    const level1 = sessionStorage.getItem("userLevel")
 
-    onSnapshot(doc(firestoredb, "warrioravatar", level), (doc) => {
+    if(level1 > 15)
+    {
+      onSnapshot(doc(firestoredb, "warrioravatar", "15"), (doc) => {
 
         const docdata = (doc.data())
 
         if (docdata)
         {   
             setAvatar(docdata);
-        
+            
           
         }
         else{
             
-          swal("Something is Wrong","No Data Found","warning");
+          swal("Something is Wrong","Cannot Load Avatar","warning");
            
         }
 
         
     });
+    }
+    else{
+      onSnapshot(doc(firestoredb, "warrioravatar", level1), (doc) => {
+
+        const docdata = (doc.data())
+
+        if (docdata)
+        {   
+            setAvatar(docdata);
+            
+          
+        }
+        else{
+            
+          swal("Something is Wrong","Cannot Load Avatar","warning");
+           
+        }
+
+        
+    });
+    }
+ 
 
 
 }
-
 const gender = useRef();
 const occu = useRef();
 const insti  = useRef();
@@ -500,13 +494,197 @@ function updateProfile(){
     history.push("/admin")
   }
 
+
+  
+  const [verifstat, setStatus] = useState("");
+  const [NotVerif, isNotVerified] =useState(false);
+
+  useEffect(() => {
+   
+      if (profile.Occupation === "Instructor")
+      {
+        if (verifstat.verifiedstatus === "Approved")
+        {
+          isNotVerified(true)
+       
+        }
+        else
+        {
+          isNotVerified(false)
+        }
+
+      }
+      else{
+        isNotVerified(false)
+      }
+ 
+  }, [verifstat,profile]) // eslint-disable-line react-hooks/exhaustive-deps
+
+ 
+  const [Applied, isApplied] = useState(false);
+  function verificationStatus(){
+    onSnapshot(doc(firestoredb, "verifiedteachers", userId), (doc) => {
+
+        const docdata = (doc.data())
+
+        if (docdata)
+        {   
+          setStatus(docdata);
+ 
+          if(docdata.verifiedstatus === "Pending"){
+            isApplied(true)
+          }
+          else
+          {isApplied(false)}
+        }
+        else{
+            
+          setStatus("Unverified")
+      
+        }
+
+  })
+}
+  
+    
+    //Teacher Verification
+    function UploadFile(){
+      if(profile.Occupation !== "Instructor")
+      { 
+       
+        swal('Denied','This Feature are for Instructors Only',"error")
+
+      }
+      else
+      { 
+          if(verifstat.verifiedstatus === "Approved"){
+            setShow4(true);
+          }
+          else{
+            swal({
+              title: "Do you want to help the members of the Guild?",
+              text: "By pressing Ok, you will send a Verification Request",
+              icon: "info",
+              buttons: true
+            })
+            .then((willHelp) => {
+              if (willHelp) {
+                //OPEN MODAL WITH UPLOAD PICTURE OF ID OR ANY SUPPORTING PAPERS
+                if(Applied === true){
+                  swal("Oops!","You've already sent a request, Please be patient.","warning")
+                }
+                else{
+                  requestVerif()
+                }
+              
+              } else {
+                swal("Aw!","Your help is always needed! Come back if you changed your mind.","info");
+              }
+            });
+          }
+      
+     
+       
+      }
+   
+    }
+
+
+    async function requestVerif(){
+      //convert date which is timestamp to String
+var timestamp = Date.now();
+var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
+
+      var data = {
+        verifiedstatus: "Pending",
+        created_at: convertedDate
+        }
+      await setDoc(doc(firestoredb, "verifiedteachers", userId), data).then(() => {
+        swal("Awesome!, Verification can take up to 1 day Please be Patient!", {
+          icon: "success",
+      }).catch((error) => {
+          alert("Error",error.code,"error")
+      })
+    })
+  }
+
+
+          const [graphdata, setGraphData] = useState([]);
+
+    function Analytics(){
+
+      const collectionRef = collection(firestoredb, "userdata",userId,"coursesfinished");
+    const q = query(collectionRef);
+    onSnapshot(q, (snapshot) =>
+    setGraphData(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+
+    )
+  }
+
+  
+  const [certificateData, setCertificate] = useState([]);
+
+  function Certificate(){
+
+    const collectionRef = collection(firestoredb, "userdata",userId,"Certificates");
+  const q = query(collectionRef);
+  onSnapshot(q, (snapshot) =>
+  setCertificate(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+
+  )
+}
+  useEffect(() => {
+  
+
+    Analytics()
+    Certificate()
+
+  },[]); // eslint-disable-line react-hooks/exhaustive-deps
+  //For Graphs (Data)
+  
+
+
+  const data =  graphdata.map((analytics) => ( 
+    {
+      name: analytics.id,
+      score: analytics.ScoreOnTest,
+    }
+  ))
+
+  async function DownloadCert(e){
+
+    const certid = e.target.getAttribute("data-id")
+
+    await window.open(certid)
+
+  }
+
+  const cert = certificateData.map((certData) => (
+   
+    <div key={certData.id}>
+    <strong>{certData.id}</strong>
+    <Button data-id={certData.Link} onClick={DownloadCert} style={{ textDecoration: 'none', marginLeft:'3px' }} className="mb-4"><IoIcons.IoDownload/>Download</Button>
+    </div>
+  
+  ))
+
+   //For Popup Notice
+   const popover = (
+    <Popover id="popover-basic">
+      <Popover.Header as="h3">Heads Up!</Popover.Header>
+      <Popover.Body>
+        This feature has been temporarily <strong>Disabled</strong>. It may not work as intended.
+      </Popover.Body>
+    </Popover>
+  );
+
     return (
         <>
         {/* Division for Tab Page and Description*/}
         <div>
             <Helmet>
               <title>ConquError | Profile</title>
-              <meta name="description" content="ConquError Homepage" />
+              <meta name="description" content="This is your user profile description." />
             </Helmet>
         </div>
 
@@ -577,23 +755,29 @@ function updateProfile(){
                           <div>
                           {profile.Institution || ''}
                           </div>
-                          <p onClick={handleShowOff} className="btn btn-sm btn-primary mt-4"><IoIcons.IoSettingsSharp/> Settings</p> <br></br>
+                          <p onClick={handleShowOff} className="btn btn-sm btn-primary mt-4"><IoIcons.IoSettingsSharp/> Settings</p> {''}
+                          <p onClick={UploadFile} className="btn btn-sm btn-primary mt-4"><AiIcons.AiFillFileText/> Upload Files</p> {''}
                          { AdminCheck && <p onClick={AdminPanel} className="btn btn-sm btn-primary mt-4"><IoIcons.IoBarChart/> Admin</p> }
                         </div>
                       </div>
                     </div>
                   </div>
 
-                  <div className="col-xl-8 order-xl-1 ">
+                  <div className="col-xl-8 order-xl-1">
                     <div className="card shadow">
                       <div className="card-header bg-white border-0">
                         <div className="row align-items-center">
                           <div className="col-8">
-                            <h3 className="mb-0">My account</h3>
+                            <h3 className="mb-0 mt-4">My account</h3>
                           </div>
                           
                         </div>
                       </div>
+                          {NotVerif &&
+                          <div className="col-8">
+                            <label>Verified Status:</label> <em className="text-primary">{verifstat.verifiedstatus}</em>
+                          </div>
+                          }
                       <div className="card-body mb-">
                         <form>
                           <h6 className="heading-small text-muted mb-4">User information</h6>
@@ -665,93 +849,86 @@ function updateProfile(){
         </div>
 
         <div className="mt-5" style={{ textAlign: "center" }}>
-            <h1>My ConquError Status</h1>
+            <h1 className="fw-bold">My ConquError Status</h1>
 
-            <h5 className="text-primary">This Feature is under development!!!</h5>
+            <div className="w-100 mt-2 mb-2 text-center text-secondary">
+              Wanna boost your skills? Go to Course! <Link to="/lessons" style={{ textDecoration: 'none' }}>Course</Link>
+            </div>
+
             <div className="App">
               
-              <Container>
-
-                <Row>
-                  <Col>
-                    <div style={{ width: '100%', height: 300, marginTop:'4rem', marginBottom:'4rem' }}>
-                      <ResponsiveContainer className="textStyle">
-                          <AreaChart
-                            data={datus}
-                            margin={{
-                              top: 10,
-                              right: 30,
-                              left: 0,
-                              bottom: 0,
-                            }}
-                            >
+                    <div style={{ width: '100%', height: 500, marginTop:'4rem', marginBottom:'4rem' }}>
+                      <ResponsiveContainer>
+                        <BarChart   data={data} margin={{ top: 5, right: 30, left: 20, bottom: 5 }}>
                             <CartesianGrid strokeDasharray="3 3" />
                               <XAxis dataKey="name" />
                               <YAxis />
                               <Tooltip />
-                              <Area type="monotone" dataKey="uv" stroke="#42a5f5" fill="#42a5f5" />
-                          </AreaChart>
+                              <Legend />
+                             
+                              <Bar dataKey="score" fill="#3a86ff" />
+                        </BarChart>
                       </ResponsiveContainer>
                     </div>
-                  </Col>
-                </Row>
-
-                <Row>
-                  <Col>
-                  <div style={{ width: '100%', height: 300, marginTop:'4rem', marginBottom:'4rem' }}>
-                    <ResponsiveContainer className="textStyle">
-                      <BarChart
-                  width={500}
-                  height={300}
-                  data={data}
-                  margin={{
-                    top: 5,
-                    right: 30,
-                    left: 80,
-                    bottom: 5,
-                  }}
-                  barSize={10}
-                >
-                  <XAxis
-                    dataKey="name"
-                    scale="point"
-                    padding={{ left: 10, right: 10 }}
-                  />
-                  <YAxis />
-                  <Tooltip />
-                  <Legend />
-                  <CartesianGrid strokeDasharray="3 3" />
-                  <Bar dataKey="score" fill="#42a5f5" background={{ fill: "#eee" }} />
-                      </BarChart>
-                    </ResponsiveContainer>
-                  </div>
-                  </Col>
-                </Row>
-
-              </Container>
             </div>    
+          
+            {/*Time Table*/}
+            <section>
+                            <Card className="mt-5 mb-5">
+                                <Card.Header className="text-center">
+                                    <h3 className="text-center mt-5 fw-bold">Lesson's Time Table</h3>
+                                    <p>
+                                        This shows the different lesson's time table and status of your current lesson.
+                                    </p>
+                                </Card.Header>
+                                <Card.Body>
+                                            <Form>
+                                                    <Table striped bordered hover>
+                                                        <thead>
+                                                        <tr className="text-primary fw-bold">
+                                                        <th>Lessons</th>
+                                                        <th>Status</th>
+                                                        <th>Score</th>
+                                                        <th>Finished At</th>
+                                                        <th>Tries</th>
+                                                        </tr>
+                                                        <tr>
+                                                        <th>Lesson 1</th>
+                                                        <th>Pass</th>
+                                                        <th>9</th>
+                                                        <th>02/01/2022, 09:44:21 PM</th>
+                                                        <th>1</th>
+                                                        </tr>
+                                                        </thead>
+                                                           
+                                                    </Table>
+                                                    
+                                            </Form> 
+                                </Card.Body>
+                            </Card>
+            </section>
 
-            <Offcanvas show={showOff} onHide={handleCloseOff}>
-                                        <Offcanvas.Header closeButton>
-                                          <Offcanvas.Title><IoIcons.IoSettingsSharp/> Settings</Offcanvas.Title>
-                                        </Offcanvas.Header>
-                                        <Offcanvas.Body>
-                                          
-                                            <div className=" d-grid gap-2 mt-3 mb-3">
-                                              <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button> 
+                                      <Offcanvas show={showOff} onHide={handleCloseOff}>
+                                          <Offcanvas.Header closeButton>
+                                            <Offcanvas.Title><IoIcons.IoSettingsSharp/> Settings</Offcanvas.Title>
+                                          </Offcanvas.Header>
+                                              <Offcanvas.Body>
+                                                                    
+                                                <div className=" d-grid gap-2 mt-3 mb-3">
+                                                    <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button>                     
+                                                        
+                                                    <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
+                                                                      
+                                                    <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
 
-                                              <Button variant="primary" onClick={handleShow4} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillFileText/> Upload Files</Button> 
-                                              
-                                              <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
-                                            
-                                              <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
-                                              
-                                              <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
-                                                <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
-                                            </div>
-                                        
-                                        </Offcanvas.Body>
-            </Offcanvas>
+                                                    <Button variant="primary" onClick={handleShowC} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillSafetyCertificate/> Certificates</Button> 
+                                                                                            
+                                                    <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
+                                                      <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
+                                                    </div>
+                                                                  
+                                              </Offcanvas.Body>
+                                      </Offcanvas>
 
                                       {/*Change Password*/}
                                       <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
@@ -795,26 +972,45 @@ function updateProfile(){
                                             </Modal.Footer>
                                       </Modal>
 
+                                      {/*Feedback*/}
+                                      <Modal show={showC}  onHide={handleCloseC} backdrop="static"  keyboard={false}  >
+                                            <Modal.Header closeButton>
+                                              <Modal.Title>Download Certificate</Modal.Title>
+                                            </Modal.Header>
+                                            <Modal.Body>
+                                              Please wait for your certificate to be available. <br></br>
+                                                {cert}
+                                            </Modal.Body>
+                                            <Modal.Footer>
+                                              <Button variant="secondary" onClick={handleCloseC}> Close</Button>
+                                            </Modal.Footer>
+                                      </Modal>
 
-                                          {/*Upload Files*/}
-                                          <Modal show={show4} onHide={handleClose4} backdrop="static" keyboard={false} >
+
+                                      {/*Upload Files*/}
+                                      <Modal show={show4} onHide={handleClose4} backdrop="static" keyboard={false} >
                                             <Modal.Header closeButton>
                                               <Modal.Title>Upload Files</Modal.Title>
                                             </Modal.Header>
                                             <Modal.Body>
-                                            **COMING SOON**
+                                              <label>UNDER DEVELOPMENT</label>
+
                                             </Modal.Body>
                                             <Modal.Footer>
                                               <Button variant="secondary" onClick={handleClose4}>
                                                 Close
                                               </Button>
-                                            
+                                              <OverlayTrigger trigger="click" placement="right" overlay={popover}>
+                                              <Button variant="secondary">
+                                                Upload
+                                              </Button>
+                                              </OverlayTrigger>
                                             </Modal.Footer>
-                                          </Modal>
+                                      </Modal>
 
 
-                                            {/*Update Profile*/}
-                                            <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
+                                      {/*Update Profile*/}
+                                      <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
                                                   <Modal.Header closeButton>
                                                     <Modal.Title>Update Profile</Modal.Title>
                                                   </Modal.Header>
@@ -844,7 +1040,7 @@ function updateProfile(){
                                                 <Form.Select aria-label="Default select example"ref={ occu } onChange={e => OccupationValue(e)}required>
                                                 <option value={profile.Occupation}>{profile.Occupation}</option>
                                                 <option value="Student">Student</option>
-                                                <option value="Professor">Professor</option>
+                                                <option value="Professor">Instructor</option>
                                                 <option value="Others">Others.</option>
                                                 </Form.Select>
                                                 { occuHide &&  <Form.Control  className="mt-2" ref={occu }   name = "Occupation" type="text"  required placeholder="Enter Occupation" /> }
@@ -854,14 +1050,12 @@ function updateProfile(){
                                                 <Form.Label>Institution</Form.Label>
                                                 <Form.Select aria-label="Default select example" ref={ insti } onChange={e => InstitutionValue(e)} required>
                                                 <option value={profile.Institution}>{profile.Institution}</option>
-                                                <option value="LSPU">LSPU</option>
-                                                <option value="PUP">PUP</option>
-                                                <option value="TUP">TUP</option>
-                                                <option value="BSIT">BSIT</option>
-                                                <option value="DICT">DICT</option>
-                                                <option value="DCET">DCET</option>
+                                                <option value="Laguna State Polytechnic University">Laguna State Polytechnic University</option>
+                                                <option value="Polytechnic University of the Philippines">Polytechnic University of the Philippines</option>
+                                                <option value="Technological University of the Philippines">Technological University of the Philippines</option>
                                                 <option value="Others">Others.</option>
                                                 </Form.Select>
+
                                                 { instiHide &&  <Form.Control className="mt-2" ref={insti}  name = "Institution" type="text"  required placeholder="Enter Institution"/> }
                     
                                                 </Form.Group>
@@ -875,7 +1069,7 @@ function updateProfile(){
                                                     <Button variant="secondary" onClick={handleClose5}> Close</Button>
                                                   
                                                   </Modal.Footer>
-                                            </Modal>
+                                      </Modal>
                   
                   
             <a href="#top" className="scroll-top">
@@ -909,7 +1103,7 @@ function updateProfile(){
               <li><h4 className="text-white align-center mt-4 mb-3">Developed by</h4></li>
                 <div className="rotate">
                 <li className="d-flex justify-content-center">
-                  <img className="inline-block align-center h-20 image-center" src="../assets/TJDev.png" alt="logo"/></li>
+                  <img className="inline-block align-center h-20 image-center" src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2FTJDev.png?alt=media&token=e3f6d151-99c7-4c31-96ad-506b6fff9ff1" alt="logo"/></li>
                 </div>
                 <p className="d-flex justify-content-center text-light">Technojet.Dev</p>  
               </ul>
@@ -918,7 +1112,6 @@ function updateProfile(){
               <ul className="list-unstyled ">
               <h4  className="d-flex justify-content-center text-white">Contacts</h4>
                 <li className="mb-2  justify-content-center align-items-center text-light"><FaIcons.FaHome/> Lopez, Quezon </li>
-                <li className="mb-2  justify-content-center align-items-center text-light"><FaIcons.FaGoogle/> technojet.devofficial</li>
                 <li className="mb-2  justify-content-center align-items-center text-light"><FaIcons.FaPhoneAlt/> +63 956 528 0371</li>
               </ul>
           </div>
@@ -935,7 +1128,7 @@ function updateProfile(){
           <div className="container">
             
             <p className="col-sm d-flex justify-content-center text-center text-light">
-              &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.19.121521
+              &copy;{new Date().getFullYear()} Technojet.Dev | Design by PSIX | Beta v1.21.012022
             </p>
           
           </div>
