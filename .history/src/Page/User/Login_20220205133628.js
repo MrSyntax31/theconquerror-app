@@ -209,8 +209,9 @@ export default function Login() {
                   </Container>
 
                     <div className="mb-5">
+                    <div class="label-text">Feedback</div>
                       <a href="https://www.facebook.com/theConquErrorph" className="float">
-                        <i className="fa fa-bug my-float"></i>
+                        <i className="fa fa-envelope my-float"></i>
                       </a>
                     </div>
 

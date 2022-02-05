@@ -210,7 +210,7 @@ export default function Login() {
 
                     <div className="mb-5">
                       <a href="https://www.facebook.com/theConquErrorph" className="float">
-                        <i className="fa fa-bug my-float"></i>
+                        <AiIcons.AiFillEye/>
                       </a>
                     </div>
 

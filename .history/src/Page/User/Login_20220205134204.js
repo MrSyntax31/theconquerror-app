@@ -12,6 +12,9 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 export default function Login() {
 
+
+    //Facebook Tooltip shortcut
+
     //Firebase Auth Service (responsible for anything user related)
     const auth = getAuth();
 
@@ -210,7 +213,7 @@ export default function Login() {
 
                     <div className="mb-5">
                       <a href="https://www.facebook.com/theConquErrorph" className="float">
-                        <i className="fa fa-bug my-float"></i>
+                        <i className="fa fa-envelope my-float"></i>
                       </a>
                     </div>
 

@@ -166,7 +166,7 @@
 	height:60px;
 	bottom:10px;
 	right:40px;
-	background-color:#00a8e8;
+	background-color:#0C9;
 	color:#FFF;
 	border-radius:50px;
 	text-align:center;
@@ -177,3 +177,11 @@
 	margin-top:22px;
 }
 
+
+@keyframes bounce {
+  0% {margin-top:0;}
+  50% {margin-top:-15px; margin-bottom:15px;}
+  100% {margin-top:0;}
+}
+  
+  

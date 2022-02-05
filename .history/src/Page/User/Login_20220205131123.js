@@ -209,11 +209,21 @@ export default function Login() {
                   </Container>
 
                     <div className="mb-5">
-                      <a href="https://www.facebook.com/theConquErrorph" className="float">
-                        <i className="fa fa-bug my-float"></i>
+                      <a href="#" className="float">
+                        <i className="fa fa-plus my-float"></i>
                       </a>
                     </div>
 
+                    <div class="container">
+                    <i class="fa fa-bars" title="Click me!"></i>
+                    <ul>
+                      <li><a href="#">home</a></li>
+                      <li><a href="#">about</a></li>
+                      <li><a href="#">portfolio</a></li>
+                      <li><a href="#">blog</a></li>
+                      <li><a href="#">contact</a></li>
+                    </ul>
+                  </div>
               </div>
 
         </>

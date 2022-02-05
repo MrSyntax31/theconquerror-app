@@ -1,5 +1,5 @@
 import React, {useState, useRef} from 'react'
-import { Form, Button, Card, Container , Alert} from 'react-bootstrap'
+import { Form, Button, Card, Container, Alert, Overlay, Tooltip} from 'react-bootstrap'
 import { Link , useHistory} from "react-router-dom"
 import { Helmet } from "react-helmet";
 import {} from "../../firebase/firebase"
@@ -11,6 +11,11 @@ import ReCAPTCHA from 'react-google-recaptcha';
 
 
 export default function Login() {
+
+
+    //Facebook Tooltip shortcut
+    const [show, setShow] = useState(false);
+    const target = useRef(null);
 
     //Firebase Auth Service (responsible for anything user related)
     const auth = getAuth();
@@ -209,10 +214,18 @@ export default function Login() {
                   </Container>
 
                     <div className="mb-5">
-                      <a href="https://www.facebook.com/theConquErrorph" className="float">
-                        <i className="fa fa-bug my-float"></i>
+                      <a href="https://www.facebook.com/theConquErrorph" className="float" ref={target} onClick={() => setShow(!show)}>
+                        <i className="fa fa-envelope my-float"></i>
                       </a>
                     </div>
+
+                    <Overlay target={target.current} show={show} placement="right">
+                      {(props) => (
+                        <Tooltip id="overlay-example" {...props}>
+                          My Tooltip
+                        </Tooltip>
+                      )}
+                    </Overlay>
 
               </div>
 

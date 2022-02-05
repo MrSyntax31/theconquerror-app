@@ -209,8 +209,8 @@ export default function Login() {
                   </Container>
 
                     <div className="mb-5">
-                      <a href="https://www.facebook.com/theConquErrorph" className="float">
-                        <i className="fa fa-bug my-float"></i>
+                      <a href="https://www.facebook.com/theConquErrorph" className="float" style={{ textDecoration: 'none' }}>
+                        <i className="fa fa-envelope my-float"></i>
                       </a>
                     </div>
 
