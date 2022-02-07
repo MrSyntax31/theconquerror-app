@@ -174,61 +174,7 @@ import './leaderboard.scss'
             <article className="leaderboard">
                 <div className="headerTop">
                 <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2F1872241.png?alt=media&token=b52fe0c2-374e-4cf1-8639-96ff4c3a99bd" alt="Trophy" className="leaderboard__icon"/>
-                    <h1 className="leaderboard__title"><span className="leaderboard__title--top text-light">Looping <br/> Constructs </span><span className="leaderboard__title--bottom text-light">Leaderboard</span></h1>
-                </div>
-                
-                <main className="leaderboard__profiles">
-                    <article className="leaderboard__profile">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mark Zuckerberg" className="leaderboard__picture"/>
-                    <span className="leaderboard__name">Mark Zuckerberg</span>
-                    <span className="leaderboard__value">1<span>B</span></span>
-                    </article>
-                    
-                    <article className="leaderboard__profile">
-                    <img src="https://randomuser.me/api/portraits/men/97.jpg" alt="Dustin Moskovitz" className="leaderboard__picture"/>
-                    <span className="leaderboard__name">Dustin Moskovitz</span>
-                    <span className="leaderboard__value">2<span>B</span></span>
-                    </article>
-                    
-
-                </main>
-
-            </article>
-
-        </div>
-
-        <div className="bodies m-2">
-            <article className="leaderboard">
-                <div className="headerTop">
-                <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2F1872241.png?alt=media&token=b52fe0c2-374e-4cf1-8639-96ff4c3a99bd" alt="Trophy" className="leaderboard__icon"/>
-                    <h1 className="leaderboard__title"><span className="leaderboard__title--top text-light">Functions </span><span className="leaderboard__title--bottom text-light">Leaderboard</span></h1>
-                </div>
-                
-                <main className="leaderboard__profiles">
-                    <article className="leaderboard__profile">
-                    <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Mark Zuckerberg" className="leaderboard__picture"/>
-                    <span className="leaderboard__name">Mark Zuckerberg</span>
-                    <span className="leaderboard__value">1<span>B</span></span>
-                    </article>
-                    
-                    <article className="leaderboard__profile">
-                    <img src="https://randomuser.me/api/portraits/men/97.jpg" alt="Dustin Moskovitz" className="leaderboard__picture"/>
-                    <span className="leaderboard__name">Dustin Moskovitz</span>
-                    <span className="leaderboard__value">2<span>B</span></span>
-                    </article>
-                    
-
-                </main>
-
-            </article>
-
-        </div>
-
-        <div className="bodies m-2">
-            <article className="leaderboard">
-                <div className="headerTop">
-                <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2F1872241.png?alt=media&token=b52fe0c2-374e-4cf1-8639-96ff4c3a99bd" alt="Trophy" className="leaderboard__icon"/>
-                    <h1 className="leaderboard__title"><span className="leaderboard__title--top text-light">Arrays </span><span className="leaderboard__title--bottom text-light">Leaderboard</span></h1>
+                    <h1 className="leaderboard__title"><span className="leaderboard__title--top text-light">Nested <br/> Condition</span><span className="leaderboard__title--bottom text-light">Leaderboard</span></h1>
                 </div>
                 
                 <main className="leaderboard__profiles">
