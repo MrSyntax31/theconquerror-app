@@ -227,7 +227,7 @@ import './leaderboard.scss'
         <div className="bodies m-2">
             <article className="leaderboard">
                 <div className="headerTop">
-                <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2F1774128.png?alt=media&token=2980a55d-8bff-4e48-8e88-c5a7817fcd64" alt="Trophy" className="leaderboard__icon"/>
+                <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2F1872241.png?alt=media&token=b52fe0c2-374e-4cf1-8639-96ff4c3a99bd" alt="Trophy" className="leaderboard__icon"/>
                     <h1 className="leaderboard__title"><span className="leaderboard__title--top text-light">Arrays </span><span className="leaderboard__title--bottom text-light">Leaderboard</span></h1>
                 </div>
                 
