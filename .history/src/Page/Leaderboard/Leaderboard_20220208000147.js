@@ -20,7 +20,7 @@ import './leaderboard.scss'
 
     <div>
       <Helmet>
-        <title>ConquError | 🏆Leaderboard</title>
+        <title>ConquError | 🏆Leaderboards</title>
         <meta name="description" content="Welcome to the ConquError Leaderboard page. " />
       </Helmet>
     </div> 

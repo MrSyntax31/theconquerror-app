@@ -7,7 +7,7 @@
       --start: 15%;
       
       height: 130px;
-      background-image: repeating-radial-gradient(circle at var(--start), transparent 0%, transparent 10%, rgba(8, 61, 255, 0.33) 10%, rgba(54, 89, 219, .33) 17%), linear-gradient(to right, #5b7cfa, #3659db);
+      background-image: repeating-radial-gradient(circle at var(--start), transparent 0%, transparent 10%, rgb(255, 255, 255) 10%, rgba(54, 89, 219, .33) 17%), linear-gradient(to right, #5b7cfa, #3659db);
       color: #fff;
       position: relative;
       border-radius: 12px 12px 0 0;
