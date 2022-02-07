@@ -28,7 +28,7 @@ import RequestDenied from './Components/Error/RequestDenied'
 import TopicList from './Page/Forum/TopicList';
 import Assessment from './Page/Course/Assessment';
 import UploadFile from './Page/Profile/UploadFile';
-import Leaderboard from './Page/Leaderboard/Leaderboard';
+import Leader from './Page/Profile/UploadFile';
 
 //Admin
 import Admin from './Admin/Admin';
@@ -78,8 +78,6 @@ const App = () => {
      <Route path="/error" component={RequestDenied}/>
 
      <Route path="/UploadFile" component={UploadFile}/>
-
-     <Route path="/leaderboard" component={Leaderboard}/>
 
      <PrivateRoute path="/admin" component={Admin}/>
 

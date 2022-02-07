@@ -79,8 +79,6 @@ const App = () => {
 
      <Route path="/UploadFile" component={UploadFile}/>
 
-     <Route path="/leaderboard" component={Leaderboard}/>
-
      <PrivateRoute path="/admin" component={Admin}/>
 
      <PrivateRoute path="/assessment" component={Assessment}/>

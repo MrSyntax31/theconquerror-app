@@ -79,7 +79,7 @@ const App = () => {
 
      <Route path="/UploadFile" component={UploadFile}/>
 
-     <Route path="/leaderboard" component={Leaderboard}/>
+     <Route path="/<Route path="/UploadFile" component={UploadFile}/>" component={UploadFile}/>
 
      <PrivateRoute path="/admin" component={Admin}/>
 

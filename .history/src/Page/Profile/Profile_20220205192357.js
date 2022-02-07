@@ -865,6 +865,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                               <YAxis />
                               <Tooltip />
                               <Legend />
+                             
                               <Bar dataKey="score" fill="#3a86ff" />
                         </BarChart>
                       </ResponsiveContainer>

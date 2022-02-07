@@ -855,7 +855,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
               Wanna boost your skills? Go to Course! <Link to="/lessons" style={{ textDecoration: 'none' }}>Course</Link>
             </div>
 
-            <div className="App">
+           
               
                     <div style={{ width: '100%', height: 500, marginTop:'4rem', marginBottom:'4rem' }}>
                       <ResponsiveContainer>
@@ -865,11 +865,12 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                               <YAxis />
                               <Tooltip />
                               <Legend />
+                             
                               <Bar dataKey="score" fill="#3a86ff" />
                         </BarChart>
                       </ResponsiveContainer>
                     </div>
-            </div>    
+              
           
             {/*Time Table*/}
             <section>
