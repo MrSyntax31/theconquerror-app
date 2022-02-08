@@ -48,7 +48,7 @@ function App() {
             </li>
             <li className="nav-item" style={{width: "9rem"}}>
               <NavLink className="nav-link" to="/leaderboard" exact>
-              <GiIcons.GiLaurelsTrophy/> Leaderboard
+              <GiIcons.GiTrophy/> Leaderboard
               </NavLink>
             </li>
           </Nav>

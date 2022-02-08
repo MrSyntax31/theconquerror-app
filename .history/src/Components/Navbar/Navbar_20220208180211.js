@@ -46,7 +46,7 @@ function App() {
               <MdIcons.MdForum/> Forum
               </NavLink>
             </li>
-            <li className="nav-item" style={{width: "9rem"}}>
+            <li className="nav-item" style={{width: "8rem"}}>
               <NavLink className="nav-link" to="/leaderboard" exact>
               <GiIcons.GiLaurelsTrophy/> Leaderboard
               </NavLink>
