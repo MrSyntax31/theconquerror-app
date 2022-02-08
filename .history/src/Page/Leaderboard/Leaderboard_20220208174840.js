@@ -1,10 +1,11 @@
 import React from 'react'
-
-
+//import { Form, Button, Card, Container} from 'react-bootstrap'
+import { Link } from "react-router-dom"
 import { Helmet } from "react-helmet";
 import {} from '../../firebase/firebase';
 import Navbar from '../../Components/Navbar/Navbar'
 
+import './Login.css'
 import './leaderboard.scss'
 
 
@@ -33,10 +34,10 @@ import './leaderboard.scss'
                   <div id='stars3'></div>
                   <div id='title'></div>
 
-        
+        <Link to="/" style={{ textDecoration: 'none' }}><img to="/home" src="../Assets/white-logo.svg" className="Headerlogo mt-2" alt="logo" style={{width: "190px",paddingLeft: "20px"}}/></Link>
 
-            <div className="mb-5" style={{marginTop: '7rem'}}></div>
             <h1 className="mt-5 text-light fw-bold text-center">ConquError Top Leaderboard</h1>
+
         <div className="bodies m-2">
             <article className="leaderboard">
                 <div className="headerTop">

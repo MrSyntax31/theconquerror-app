@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import {} from '../../firebase/firebase';
 import Navbar from '../../Components/Navbar/Navbar'
 
+import './Login.css'
 import './leaderboard.scss'
 
 
@@ -35,8 +36,8 @@ import './leaderboard.scss'
 
         
 
-            <div className="mb-5" style={{marginTop: '7rem'}}></div>
             <h1 className="mt-5 text-light fw-bold text-center">ConquError Top Leaderboard</h1>
+
         <div className="bodies m-2">
             <article className="leaderboard">
                 <div className="headerTop">

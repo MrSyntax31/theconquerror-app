@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import {} from '../../firebase/firebase';
 import Navbar from '../../Components/Navbar/Navbar'
 
+
 import './leaderboard.scss'
 
 

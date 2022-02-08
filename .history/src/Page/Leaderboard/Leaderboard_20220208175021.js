@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet";
 import {} from '../../firebase/firebase';
 import Navbar from '../../Components/Navbar/Navbar'
 
+import './Login.css'
 import './leaderboard.scss'
 
 
@@ -35,9 +36,9 @@ import './leaderboard.scss'
 
         
 
-            <div className="mb-5" style={{marginTop: '7rem'}}></div>
-            <h1 className="mt-5 text-light fw-bold text-center">ConquError Top Leaderboard</h1>
+
         <div className="bodies m-2">
+            <h1 className="mt-5 text-light fw-bold text-center">ConquError Top Leaderboard</h1>
             <article className="leaderboard">
                 <div className="headerTop">
                 <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2F1872241.png?alt=media&token=b52fe0c2-374e-4cf1-8639-96ff4c3a99bd" alt="Trophy" className="leaderboard__icon"/>
