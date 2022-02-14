@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import { Link } from "react-router-dom"
 
 //Styles & Libraries
-import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger, Table, Container, Row, Col } from 'react-bootstrap';
+import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger, Table, Container, Row, C } from 'react-bootstrap';
 
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
@@ -880,54 +880,57 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                     </div>
             </div>    
 
-            {/*Pie Graph*/}
+            <div className="App">
+              <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
+                <ResponsiveContainer>
+                  <PieChart>
+                            <Pie
+                              dataKey="value"
+                              isAnimationActive={false}
+                              data={pie}
+                              cx={200}
+                              cy={200}
+                              outerRadius={80}
+                              fill="#00bbf9"
+                              label
+                            />
+                            <Tooltip />
+                    </PieChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+
+            <div className="App">
+              <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
+                <ResponsiveContainer>
+                  <PieChart>
+                            <Pie
+                              dataKey="value"
+                              isAnimationActive={false}
+                              data={pie}
+                              cx={200}
+                              cy={200}
+                              outerRadius={80}
+                              fill="#00bbf9"
+                              label
+                            />
+                            <Tooltip />
+                    </PieChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+
             <Container>
               <Row>
-                <Col sm={4}>
-                <div className="App">
-              <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
-                <ResponsiveContainer>
-                  <PieChart>
-                            <Pie
-                              dataKey="value"
-                              isAnimationActive={false}
-                              data={pie}
-                              cx={200}
-                              cy={200}
-                              outerRadius={80}
-                              fill="#00bbf9"
-                              label
-                            />
-                            <Tooltip />
-                    </PieChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-                </Col>
-                <Col sm={4}>
-                <div className="App">
-              <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
-                <ResponsiveContainer>
-                  <PieChart>
-                            <Pie
-                              dataKey="value"
-                              isAnimationActive={false}
-                              data={pie}
-                              cx={200}
-                              cy={200}
-                              outerRadius={80}
-                              fill="#00bbf9"
-                              label
-                            />
-                            <Tooltip />
-                    </PieChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-                </Col>
+                <Col sm={8}>sm=8</Col>
+                <Col sm={4}>sm=4</Col>
+              </Row>
+              <Row>
+                <Col sm>sm=true</Col>
+                <Col sm>sm=true</Col>
+                <Col sm>sm=true</Col>
               </Row>
             </Container>
-
             {/*Time Table*/}
             <section>
                             <Card className="mt-5 mb-5">

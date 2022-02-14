@@ -880,7 +880,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                     </div>
             </div>    
 
-            {/*Pie Graph*/}
+            {/*Time Table*/}
             <Container>
               <Row>
                 <Col sm={4}>

@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import { Link } from "react-router-dom"
 
 //Styles & Libraries
-import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger, Table, Container, Row, Col } from 'react-bootstrap';
+import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger, Table } from 'react-bootstrap';
 
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
@@ -36,7 +36,7 @@ import {
   Tooltip,
   Legend,
   ResponsiveContainer,
-  PieChart, Pie
+  PieChart, Pie, Sector, Cell
 } from "recharts";
 
 //Navbar
@@ -670,12 +670,25 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
   ))
 
 
-  // Sample data
-    const pie = [
-      { name: "Group A", value: 400 },
-      { name: "Group B", value: 300 },
-      { name: "Group C", value: 300 }
-    ];
+  const data01 = [
+    { name: 'Group A', value: 400 },
+    { name: 'Group B', value: 300 },
+    { name: 'Group C', value: 300 },
+    { name: 'Group D', value: 200 },
+  ];
+  const data02 = [
+    { name: 'A1', value: 100 },
+    { name: 'A2', value: 300 },
+    { name: 'B1', value: 100 },
+    { name: 'B2', value: 80 },
+    { name: 'B3', value: 40 },
+    { name: 'B4', value: 30 },
+    { name: 'B5', value: 50 },
+    { name: 'C1', value: 100 },
+    { name: 'C2', value: 200 },
+    { name: 'D1', value: 150 },
+    { name: 'D2', value: 50 },
+  ];
 
    //For Popup Notice
    const popover = (
@@ -878,56 +891,14 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                         </BarChart>
                       </ResponsiveContainer>
                     </div>
+
             </div>    
-
-            {/*Pie Graph*/}
-            <Container>
-              <Row>
-                <Col sm={4}>
-                <div className="App">
-              <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
-                <ResponsiveContainer>
-                  <PieChart>
-                            <Pie
-                              dataKey="value"
-                              isAnimationActive={false}
-                              data={pie}
-                              cx={200}
-                              cy={200}
-                              outerRadius={80}
-                              fill="#00bbf9"
-                              label
-                            />
-                            <Tooltip />
-                    </PieChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-                </Col>
-                <Col sm={4}>
-                <div className="App">
-              <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
-                <ResponsiveContainer>
-                  <PieChart>
-                            <Pie
-                              dataKey="value"
-                              isAnimationActive={false}
-                              data={pie}
-                              cx={200}
-                              cy={200}
-                              outerRadius={80}
-                              fill="#00bbf9"
-                              label
-                            />
-                            <Tooltip />
-                    </PieChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-                </Col>
-              </Row>
-            </Container>
-
+                    <div style={{ width: '100%', height: 500, marginTop:'4rem', marginBottom:'4rem' }}>
+                      <ResponsiveContainer>
+                        <h1 className="fw-bold">Performance Scale</h1>
+                      </ResponsiveContainer>
+                    </div>
+          
             {/*Time Table*/}
             <section>
                             <Card className="mt-5 mb-5">

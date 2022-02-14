@@ -880,7 +880,46 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                     </div>
             </div>    
 
-            {/*Pie Graph*/}
+            <div className="App">
+              <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
+                <ResponsiveContainer>
+                  <PieChart>
+                            <Pie
+                              dataKey="value"
+                              isAnimationActive={false}
+                              data={pie}
+                              cx={200}
+                              cy={200}
+                              outerRadius={80}
+                              fill="#00bbf9"
+                              label
+                            />
+                            <Tooltip />
+                    </PieChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+
+            <div className="App">
+              <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
+                <ResponsiveContainer>
+                  <PieChart>
+                            <Pie
+                              dataKey="value"
+                              isAnimationActive={false}
+                              data={pie}
+                              cx={200}
+                              cy={200}
+                              outerRadius={80}
+                              fill="#00bbf9"
+                              label
+                            />
+                            <Tooltip />
+                    </PieChart>
+                </ResponsiveContainer>
+              </div>
+            </div>
+
             <Container>
               <Row>
                 <Col sm={4}>
@@ -927,7 +966,6 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                 </Col>
               </Row>
             </Container>
-
             {/*Time Table*/}
             <section>
                             <Card className="mt-5 mb-5">
