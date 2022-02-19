@@ -173,13 +173,13 @@ const Graphs = () => {
                         </div>
                     </div>
 
-                                <div className="text-center">
-                                    <h3 className="text-center mt-5 fw-bold">Graph Title</h3>
+                    <div className="App">
+                    <Card.Header className="text-center">
+                                    <h3 className="text-center mt-5 fw-bold">Lesson's Time Table</h3>
                                     <p>
                                         This shows the different lesson's time table and status of your current lesson.
                                     </p>
-                                </div>
-                    <div className="App">
+                                </Card.Header>
                         <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
                             <ResponsiveContainer width="100%" height="100%">
                                 <RadarChart cx="50%" cy="50%" outerRadius="80%" data={datas}>

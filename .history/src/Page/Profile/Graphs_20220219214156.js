@@ -174,7 +174,7 @@ const Graphs = () => {
                     </div>
 
                                 <div className="text-center">
-                                    <h3 className="text-center mt-5 fw-bold">Graph Title</h3>
+                                    <h3 className="text-center mt-5 fw-bold">Graph Name</h3>
                                     <p>
                                         This shows the different lesson's time table and status of your current lesson.
                                     </p>

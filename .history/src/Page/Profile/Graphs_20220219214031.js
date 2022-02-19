@@ -140,13 +140,13 @@ const Graphs = () => {
 
             <Card>
                 <Container>
-                                <div className="text-center">
-                                    <h3 className="text-center mt-5 fw-bold">Graph Title</h3>
+                    <div className="App">
+                    <div className="text-center">
+                                    <h3 className="text-center mt-5 fw-bold">Lesson's Time Table</h3>
                                     <p>
                                         This shows the different lesson's time table and status of your current lesson.
                                     </p>
                                 </div>
-                    <div className="App">
                         <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
                         <ResponsiveContainer>
                             <ComposedChart
@@ -173,12 +173,6 @@ const Graphs = () => {
                         </div>
                     </div>
 
-                                <div className="text-center">
-                                    <h3 className="text-center mt-5 fw-bold">Graph Title</h3>
-                                    <p>
-                                        This shows the different lesson's time table and status of your current lesson.
-                                    </p>
-                                </div>
                     <div className="App">
                         <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
                             <ResponsiveContainer width="100%" height="100%">
