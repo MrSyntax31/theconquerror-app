@@ -129,7 +129,7 @@ const Graphs = () => {
                 <div className="row">
                 <div className="col-lg-7 col-md-10">
                     <h1 className="display-2 text-white">Hello, Arman </h1>
-                    <p className="text-white mt-0 mb-5">Welcome to your graphical data center. Monitor your data and performance.</p>
+                    <p className="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your profile information.</p>
                 </div>
                 </div>
             </div>

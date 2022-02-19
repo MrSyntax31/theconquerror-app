@@ -94,7 +94,7 @@ const FooterStyle = styled.div`
 
 
 
-const Profile = () => {
+const Graphs = () => {
 
 
   //Services of Firebase (Authentication, Firestore, and Realtime Database)
@@ -961,11 +961,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                     
                                             </Form> 
                                 </Card.Body>
-                                <div className="text-center">
-                                  <Link to="/graphs" style={{ textDecoration: 'none', marginLeft: '10px', marginTop: '5px' }} className="mb-5"> Show All Graphs</Link> 
-                                </div>
                             </Card>
-
             </section>
 
                                       <Offcanvas show={showOff} onHide={handleCloseOff}>
@@ -1200,4 +1196,4 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
     )
 }
 
-export default Profile
+export default Graphs

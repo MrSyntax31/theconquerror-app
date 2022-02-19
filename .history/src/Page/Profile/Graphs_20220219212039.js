@@ -5,7 +5,7 @@ import Helmet from 'react-helmet';
 import { Link } from "react-router-dom"
 
 //Styles & Libraries
-import { Card, Container } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 
 import Navbar from '../../Components/Navbar/Navbar'
 
@@ -19,6 +19,7 @@ import {
     CartesianGrid,
     Tooltip,
     Legend,
+    Scatter,
     ResponsiveContainer,
   } from 'recharts';
   
@@ -30,39 +31,44 @@ import {
       uv: 590,
       pv: 800,
       amt: 1400,
+      cnt: 490,
     },
     {
       name: 'Page B',
       uv: 868,
       pv: 967,
       amt: 1506,
+      cnt: 590,
     },
     {
       name: 'Page C',
       uv: 1397,
       pv: 1098,
       amt: 989,
+      cnt: 350,
     },
     {
       name: 'Page D',
       uv: 1480,
       pv: 1200,
       amt: 1228,
+      cnt: 480,
     },
     {
       name: 'Page E',
       uv: 1520,
       pv: 1108,
       amt: 1100,
+      cnt: 460,
     },
     {
       name: 'Page F',
       uv: 1400,
       pv: 680,
       amt: 1700,
+      cnt: 380,
     },
   ];
-  
 
   const datas = [
     {
@@ -117,43 +123,61 @@ const Graphs = () => {
         <Navbar/>
         
         {/* Container for Card User Profile Information */}
-        <section>
+        <section className="m-1">
                
-        <div className="main-content">
+                    <Card>
+                      <section>
+                        <div className="headers mb-2">
+                          <h3 className="text-center" style={{marginBottom:'5rem'}}>Graphs</h3>
+                          <h2  className="text-light fw-bold ml-2" style={{marginTop:'4rem'}}>ConquErroRoom</h2>
+                        </div>
+                      </section>
+                      <Card.Body>
+                        <Card.Title>
+                        <div className="row">
+                          <h3 className="text-primary fw-bold">Forum</h3>
+                        </div>
+                        </Card.Title>
 
-            <div className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style={{minHeight: "600px", backgroundImage: "url(https://images.unsplash.com/photo-1495592822108-9e6261896da8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)", backgroundSize: "cover", backgroundPosition: "center top"}}>
+                        <Card.Text>
+                      
+                            <strong>ConquError</strong> is a community of users who are interested in learning and sharing their knowledge and experience with each other. The forum is open source and is available for everyone to contribute to and learn from the community.
+                            If you have any questions or concerns, please feel free to ask them in the forum. Just click on the "Ask Questions" button and fill in the form.
+                            ConquError is a free flat-forum bulletin board solution that can be used to communicate with a small group of people or to share their knowledge.
+                          
+                          <br/>
+                          
 
-            <span className="mask bg-gradient-default opacity-8"></span>
+                  
+                        </Card.Text>
 
-            <div className="container-fluid d-flex align-items-center">
-                <div className="row">
-                <div className="col-lg-7 col-md-10">
-                    <h1 className="display-2 text-white">Hello, Arman </h1>
-                    <p className="text-white mt-0 mb-5">Welcome to your graphical data center. Monitor your data and performance.</p>
-                </div>
-                </div>
-            </div>
-            
-            </div>
+                              <div style={{marginTop:'2rem'}}>
+                          
+                                  <a href="#top" className="scroll-top">
+                                    <i className="fa fa-chevron-up"></i>
+                                  </a>
 
-        </div>
+                              </div>
 
-            <Card>
-                <Container>
-                    <div className="App">
-                        <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
-                        <ResponsiveContainer>
-                            <ComposedChart
+
+                      </Card.Body>
+                    </Card>
+
+            <Container>
+                <div className="App">
+                    <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
+                            <ResponsiveContainer width="100%" height="100%">
+                                <ComposedChart
                                 width={500}
                                 height={400}
                                 data={data}
                                 margin={{
-                                top: 20,
-                                right: 20,
-                                bottom: 20,
-                                left: 20,
+                                    top: 20,
+                                    right: 20,
+                                    bottom: 20,
+                                    left: 20,
                                 }}
-                            >
+                                >
                                 <CartesianGrid stroke="#f5f5f5" />
                                 <XAxis dataKey="name" scale="band" />
                                 <YAxis />
@@ -162,25 +186,12 @@ const Graphs = () => {
                                 <Area type="monotone" dataKey="amt" fill="#8884d8" stroke="#8884d8" />
                                 <Bar dataKey="pv" barSize={20} fill="#413ea0" />
                                 <Line type="monotone" dataKey="uv" stroke="#ff7300" />
-                            </ComposedChart>
-                        </ResponsiveContainer>
-                        </div>
-                    </div>
-
-                    <div className="App">
-                        <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
-                            <ResponsiveContainer width="100%" height="100%">
-                                <RadarChart cx="50%" cy="50%" outerRadius="80%" data={datas}>
-                                <PolarGrid />
-                                <PolarAngleAxis dataKey="subject" />
-                                <PolarRadiusAxis />
-                                <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6} />
-                                </RadarChart>
+                                <Scatter dataKey="cnt" fill="red" />
+                                </ComposedChart>
                             </ResponsiveContainer>
-                        </div>
-                    </div>
-                </Container>
-            </Card>
+              </div>
+                </div>
+           </Container>
                 
               </section>
  

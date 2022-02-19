@@ -961,11 +961,14 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                     
                                             </Form> 
                                 </Card.Body>
-                                <div className="text-center">
-                                  <Link to="/graphs" style={{ textDecoration: 'none', marginLeft: '10px', marginTop: '5px' }} className="mb-5"> Show All Graphs</Link> 
-                                </div>
                             </Card>
 
+                                <Card.Header className="text-center">
+                                    <h3 className="text-center mt-5 fw-bold">Lesson's Time Table</h3>
+                                    <p>
+                                        This shows the different lesson's time table and status of your current lesson.
+                                    </p>
+                                </Card.Header>
             </section>
 
                                       <Offcanvas show={showOff} onHide={handleCloseOff}>

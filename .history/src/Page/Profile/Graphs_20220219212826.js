@@ -117,24 +117,24 @@ const Graphs = () => {
         <Navbar/>
         
         {/* Container for Card User Profile Information */}
-        <section>
+        <section className="m-1">
                
         <div className="main-content">
 
-            <div className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style={{minHeight: "600px", backgroundImage: "url(https://images.unsplash.com/photo-1495592822108-9e6261896da8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)", backgroundSize: "cover", backgroundPosition: "center top"}}>
+        <div className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style={{minHeight: "600px", backgroundImage: "url(https://images.unsplash.com/photo-1495592822108-9e6261896da8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80)", backgroundSize: "cover", backgroundPosition: "center top"}}>
 
-            <span className="mask bg-gradient-default opacity-8"></span>
+        <span className="mask bg-gradient-default opacity-8"></span>
 
-            <div className="container-fluid d-flex align-items-center">
-                <div className="row">
-                <div className="col-lg-7 col-md-10">
-                    <h1 className="display-2 text-white">Hello, Arman </h1>
-                    <p className="text-white mt-0 mb-5">Welcome to your graphical data center. Monitor your data and performance.</p>
-                </div>
-                </div>
+        <div className="container-fluid d-flex align-items-center">
+            <div className="row">
+            <div className="col-lg-7 col-md-10">
+                <h1 className="display-2 text-white">Hello, </h1>
+                <p className="text-white mt-0 mb-5">This is your profile page. You can see the progress you've made with your work and manage your profile information.</p>
             </div>
-            
             </div>
+        </div>
+        
+        </div>
 
         </div>
 

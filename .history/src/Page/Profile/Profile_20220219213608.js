@@ -961,11 +961,11 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                     
                                             </Form> 
                                 </Card.Body>
-                                <div className="text-center">
-                                  <Link to="/graphs" style={{ textDecoration: 'none', marginLeft: '10px', marginTop: '5px' }} className="mb-5"> Show All Graphs</Link> 
-                                </div>
                             </Card>
 
+                                <div className="text-center">
+                                <Link to="/alltopics" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"> Show All</Link> 
+                                </div>
             </section>
 
                                       <Offcanvas show={showOff} onHide={handleCloseOff}>
