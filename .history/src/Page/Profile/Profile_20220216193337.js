@@ -964,6 +964,8 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                             </Card>
             </section>
 
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScE4qZQSKsFos_yZ2gKQU0agioYG31OiMgi6sRplhFwfgSDoA/viewform?embedded=true" width="640" height="9590" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
                                       <Offcanvas show={showOff} onHide={handleCloseOff}>
                                           <Offcanvas.Header closeButton>
                                             <Offcanvas.Title><IoIcons.IoSettingsSharp/> Settings</Offcanvas.Title>

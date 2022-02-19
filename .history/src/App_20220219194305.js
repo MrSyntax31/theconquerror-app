@@ -30,7 +30,7 @@ import Assessment from './Page/Course/Assessment';
 import UploadFile from './Page/Profile/UploadFile';
 import Leaderboard from './Page/Leaderboard/Leaderboard';
 
-import Graphs from './Page/Profile/Graphs';
+import Graphs from ./Page/Profile/Profile';
 
 //Admin
 import Admin from './Admin/Admin';
@@ -82,8 +82,6 @@ const App = () => {
      <Route path="/UploadFile" component={UploadFile}/>
 
      <Route path="/leaderboard" component={Leaderboard}/>
-
-     <Route path="/graphs" component={Graphs}/>
 
      <PrivateRoute path="/admin" component={Admin}/>
 

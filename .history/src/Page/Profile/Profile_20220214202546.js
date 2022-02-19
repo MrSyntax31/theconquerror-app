@@ -883,10 +883,10 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
             {/*Pie Graph*/}
             <Container>
               <Row>
-                <Col sm={4} className="mx-auto d-block">
+                <Col sm={4}>
                 <div className="App">
               <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
-                <ResponsiveContainer>
+                <ResponsiveContainer className="mx-auto d-block">
                   <PieChart>
                             <Pie
                               dataKey="value"
@@ -904,10 +904,10 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
               </div>
             </div>
                 </Col>
-                <Col sm={4}  className="mx-auto d-block">
+                <Col sm={4}>
                 <div className="App">
               <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
-                <ResponsiveContainer>
+                <ResponsiveContainer >
                   <PieChart>
                             <Pie
                               dataKey="value"

@@ -83,8 +83,6 @@ const App = () => {
 
      <Route path="/leaderboard" component={Leaderboard}/>
 
-     <Route path="/graphs" component={Graphs}/>
-
      <PrivateRoute path="/admin" component={Admin}/>
 
      <PrivateRoute path="/assessment" component={Assessment}/>
