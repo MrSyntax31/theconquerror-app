@@ -555,7 +555,11 @@ swal("Something is Wrong",error.code,"warning");
             { Empty && <h1>The Post probably went on a journey.</h1>  } 
             <strong>{topic.title}</strong><br></br>
             {topic.desc}<br></br>
+<<<<<<< HEAD
             <p className="text-primary">{topic.Name}</p><br></br>
+=======
+            <p className="text-primary">{topic.created_by}</p><br></br>
+>>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
             {topic.created_at}<br></br>
             
             <div className="border border-primary mt-3">
@@ -564,6 +568,7 @@ swal("Something is Wrong",error.code,"warning");
 
 
             </div>
+<<<<<<< HEAD
 
             <Modal size="lg" show={show} onHide={handleClose} keyboard={false}>
                 <Modal.Header closeButton>
@@ -579,6 +584,23 @@ swal("Something is Wrong",error.code,"warning");
               {/* Modal Login*/}
               <Modal show={showMl} onHide={handleCloseMl}>
 
+=======
+
+            <Modal size="lg" show={show} onHide={handleClose} keyboard={false}>
+                <Modal.Header closeButton>
+                <Modal.Title><strong>{topic.title}</strong></Modal.Title>
+                <br/>
+                </Modal.Header>
+                
+                <Modal.Body>
+                    <img className="mx-auto d-block img-fluid mt-3 mb-3 image-preview image-preview-js" style={{width: '100%', height: 'auto'}} src={topic.sampcodeimg} alt={topic.title} />
+                </Modal.Body>
+            </Modal>
+
+              {/* Modal Login*/}
+              <Modal show={showMl} onHide={handleCloseMl}>
+
+>>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
                       <Modal.Header closeButton>
                         <Modal.Title>Log-in</Modal.Title>
                       </Modal.Header>

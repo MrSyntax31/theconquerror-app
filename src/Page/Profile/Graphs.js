@@ -2,7 +2,11 @@ import React from 'react';
 
 //Dependencies
 import Helmet from 'react-helmet';
+<<<<<<< HEAD
 
+=======
+import { Link } from "react-router-dom"
+>>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
 
 //Styles & Libraries
 import { Card, Container } from 'react-bootstrap';
@@ -24,12 +28,15 @@ import {
   
   import { Radar, RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis } from 'recharts';
 
+<<<<<<< HEAD
 
 const Graphs = () => {
 
 
 
 
+=======
+>>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
   const data = [
     {
       name: 'Page A',
@@ -109,6 +116,10 @@ const Graphs = () => {
     },
   ];
 
+<<<<<<< HEAD
+=======
+const Graphs = () => {
+>>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
   return (
     <>
         {/* Division for Tab Page and Description*/}

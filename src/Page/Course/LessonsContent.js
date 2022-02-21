@@ -394,20 +394,19 @@ const showCourse = courses1.map((courses1) => (
           
           {/* Card Contents */}
           <section className="mt-5">
+            
                         {/* Overview ID */}
                         <section id="intro">
                           <Card.Header >
 
-                                  <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer mt-3 mb-3" onClick={handleShow}>
-                                    <GiIcons.GiBookmarklet/>Spellbook
-                                  </label>
+                            <label style={{textAlign: 'left', fontSize: '16px'}} className="shake-little shake-constant shake-constant--hover cursor-pointer mt-3 mb-3" onClick={handleShow}>
+                              <GiIcons.GiBookmarklet/>Spellbook
+                            </label>
 
                         </Card.Header>
                         </section>
-                     
-                          <Card.Body>
-                            
-                              <section className="m-5">
+
+                              <section className="m-3">
                                     <img className="mx-auto d-block" style={{width: '25%', height: 'auto'}} src={courses.Image} alt={courses.Title} />
                               
                                     <h2 className="text-primary fw-bold " style={{display: "table-cell",
@@ -422,9 +421,9 @@ const showCourse = courses1.map((courses1) => (
                               </section>
                             
                               {/* Video ID */}
-                              <section id="vid" className="m-5 mb-2">
+                              <section id="vid" className="m-3 mb-2 ">
                             
-                                      <Row>
+                                      <Row className="mx-auto d-block">
                                         <Col>
                                             <p className="mb-3">{courseinfo.viddesc}</p>
                                         </Col>
@@ -435,14 +434,14 @@ const showCourse = courses1.map((courses1) => (
                                                   paddingTop: 25,
                                                   height: 0
                                                       }}>
-                                                        <iframe style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src={courseinfo.vidLink} frameBorder="0" title="vid" allowFullScreen/>
+                                                        <iframe className="mx-auto d-block" style={{ position: "absolute", top: 0, left: 0, width: "100%", height: "100%" }} src={courseinfo.vidLink} frameBorder="0" title="vid" allowFullScreen/>
                                             </div>
                                       </Row>
                                               
                               </section>
 
                               {/* Content ID */}
-                              <section id="content" className="mt-5 m-5">
+                              <section id="content" className="mt-5 m-3">
                                                               
                                   {/* Contents */}
                                   <h2 className="fw-bold mb-3 text-primary">{courseinfo.Title1}</h2>    
@@ -588,7 +587,7 @@ const showCourse = courses1.map((courses1) => (
                               {/*Code ID */}
                               <section id="code">
                                <div>
-                                <h2 className="fw-bold text-primary mt-5">Sample Code!</h2>
+                                <h2 className="fw-bold text-primary mt-5 ml-2">Sample Code!</h2>
                                   <iframe title="compilerFrame" width="100%" height="850px" src={courses.sampcode} className="mx-auto d-block"></iframe>
                                 </div>  
                               </section>
@@ -608,14 +607,14 @@ const showCourse = courses1.map((courses1) => (
                                 <div className="mt-2 mb-2 m-3">
                                   <h2 className="fw-bold text-primary mt-5">Assessment</h2>
                                   <br/> 
-                                  <p>Let's level up your skills and knowledge in {courses.Title}, take the assessment and face the challenge. If you successfully withstand with the challenge you will be promoted to a new level. Good luck young warrior.</p>
+                                  <p className="mb-3">Let's level up your skills and knowledge in {courses.Title}, take the assessment and face the challenge. If you successfully withstand with the challenge you will be promoted to a new level. Good luck young warrior.</p>
                                   <Button variant="primary" onClick={handleShowA}>Launch Assessment</Button>
                                       
 
                                 </div>
                               </section>
                             
-                          </Card.Body>
+                 
                             
           </section>
       </div>
