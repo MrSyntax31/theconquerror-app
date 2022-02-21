@@ -1,7 +1,7 @@
 import React, {useEffect,useState, useRef} from 'react';
 import { Helmet } from "react-helmet";
 import {  Card, Modal, Button,  ProgressBar, Alert, Badge, OverlayTrigger, Tooltip } from 'react-bootstrap';
-import { onSnapshot,collection,getFirestore, doc,  query, orderBy, limit, addDoc, setDoc } from 'firebase/firestore';
+import { onSnapshot,collection,getFirestore, doc,  query, orderBy, limit, addDoc, setDoc , updateDoc} from 'firebase/firestore';
 import {} from '../../firebase/firebase'
 import {  Link, useHistory} from "react-router-dom"
 import {Container,  Row,Col, Form } from 'react-bootstrap'
@@ -303,14 +303,16 @@ uploadTask.on('state_changed',
     
         const [showUserEmail, setUserEmail] = useState([]);
         const [showUserLevel, setUserLevel] = useState([]);
-
+        const [userName, setUsername] = useState([]);     
         const showProfile = function(e) {
 
           const dataemail = e.target.getAttribute("data-id");
           const datalvl = e.target.getAttribute("data-lvl");
+          const username = e.target.getAttribute("user-name")
 
           setUserEmail(dataemail)
           setUserLevel(datalvl)
+          setUsername(username)
 
           onSnapshot(doc(forumdb, "warrioravatar", `${datalvl}`), (doc) => {
       
@@ -335,7 +337,7 @@ uploadTask.on('state_changed',
 
         //Maps the data inside firestore collection (topics) so that it can be visible to the user
         const Discussion= topics.map((topic) => (  <div className="Discussion-Board p-3 m-2 border border-primary rounded" key={topic.id} > 
-        <p>Uploaded by: <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Report User!</Tooltip>}><label className="text-primary" style={{cursor:"pointer"}} data-id ={topic.created_by} data-lvl ={topic.userlvl} onClick={ showProfile }>{topic.created_by}</label></OverlayTrigger> on <strong>
+        <p>Uploaded by: <OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Report User!</Tooltip>}><label className="text-primary" style={{cursor:"pointer"}} user-name={topic.Name} data-id ={topic.created_by} data-lvl ={topic.userlvl} onClick={ showProfile }>{topic.Name}</label></OverlayTrigger> on <strong>
           {topic.created_at}</strong></p>  
           
           
@@ -343,14 +345,100 @@ uploadTask.on('state_changed',
         
 
         
+useEffect(() =>{
+  
+if(currentUser){
+  adventurerTag()
+}
+else{
+
+}
+ 
+
+},[])  // eslint-disable-line react-hooks/exhaustive-deps
+
+const [adventurername, setAdventurerName] = useState("")
+const [userlvl, setLevel] = useState(0)
+
+async function UpdateAdventurerName(value){
+
+  const DbRef = doc(forumdb, "userdata",currentUser.uid);
+
+         
+  await updateDoc(DbRef, {
+    AdventurerName: value
+
+});
+
+}
+
+function adventurerTag(){
+  onSnapshot(doc(forumdb, "userdata", currentUser.uid), (doc) => {
+
+      const docdata = (doc.data())
+
+      if (docdata)
+      {   
+        
+
+        if(docdata.AdventurerName){
+          console.log("welcome "+docdata.AdventurerName)
+          setAdventurerName(docdata.AdventurerName)
+          setLevel(docdata.level)
+        }
+        else
+        {
+          swal("You don't have an Adventurer Name yet:", {
+            content: "input",
+          })
+          .then((value) => {
+
+          if(value === null)
+          {
+            swal("Later!","You can set your Adventurer Name later.","info")
+          }
+          else{
+            UpdateAdventurerName(value)
+          }
+           
+           
+          });
+        }
+      }
+      else{
+          
+      
+    
+      }
+
+})
+}  
+
+
+        
          async function AddNew() {
 
           setError("")
                 if (tagCheck === true) {
                 
+                  if(adventurername === "")
+                  {
 
-                  //if user is logged-in
-                const userlevel = sessionStorage.getItem("userLevel")
+                    swal("You don't have an Adventurer Name yet:", {
+                      content: "input",
+                    })
+                    .then((value) => {
+          
+                    
+                      UpdateAdventurerName(value)
+                     
+                    });
+                    
+                  }
+                  else{
+                
+                     //if user is logged-in
+              
                //convert date which is timestamp to String
         var timestamp = Date.now();
         var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
@@ -365,8 +453,9 @@ uploadTask.on('state_changed',
           created_at: convertedDate,
           tags: tags,
           sampcodeimg: img,
-          userlvl: userlevel,
-          case_status: "unsolved"
+          userlvl: userlvl,
+          case_status: "unsolved",
+          Name: adventurername
         
           });
         
@@ -379,7 +468,8 @@ uploadTask.on('state_changed',
             localStorage.setItem('threadID',docRef.id);
          
            history.push("/Thread")
-        
+                  }
+
           
         }
         else {
@@ -426,7 +516,7 @@ uploadTask.on('state_changed',
 
             swal("Something is Wrong",error.code,"warning");
           }).finally(() =>{
-        
+              setShowR(false)
           })
         }
         
@@ -478,15 +568,15 @@ uploadTask.on('state_changed',
 
               <Navbar/>
 
-              <section className="m-3">
+              <section className="m-1">
                
                     <Card>
-                      <Card.Header>
-                        <div className="header mb-2">
-                          <h3 className="text-center mb-3">Forum</h3>
+                      <section>
+                        <div className="headers mb-2">
+                          <h3 className="text-center" style={{marginBottom:'5rem'}}>Forum</h3>
                           <h2  className="text-light fw-bold ml-2" style={{marginTop:'4rem'}}>ConquErroRoom</h2>
                         </div>
-                      </Card.Header>
+                      </section>
                       <Card.Body>
                         <Card.Title>
                         <div className="row">
@@ -528,14 +618,14 @@ uploadTask.on('state_changed',
                                                             <img src={avatar.img} className="rounded-circle" alt="UserLvl" width="100" height="100"/>
                                                           </div>
                                                           <div className="text-center">
-                                                          <strong>Email</strong>
-                                                            <h6>{showUserEmail}</h6>
+                                                          <strong>Adventurer Name</strong>
+                                                            <h6>{userName}</h6>
                                                             </div>
                                                           <div className="text-center">
                                                             <strong>User Level on post</strong>
                                                             <h5>{showUserLevel}</h5>
                                                           </div>
-                                                          <Button className="btn w-100 text-light"  onClick={askReport}><GoIcons.GoReport/> Report</Button>
+                                                          <Button className="btn w-100 text-light"  data-id={showUserEmail} onClick={askReport}><GoIcons.GoReport/> Report</Button>
                                                       </Modal.Body>
                                                     </Modal>
                                               </div>

@@ -3,18 +3,19 @@ import { Helmet } from "react-helmet";
 import { Row, Container, Col, Card, Tab, Tabs, Badge, Form, Table, Button} from 'react-bootstrap';
 import * as BsIcons from 'react-icons/bs';
 import Navbar from '../../Components/Navbar/Navbar';
-import {  collection, getFirestore,  query, getDocs } from 'firebase/firestore';
+import {  collection, getFirestore,  query, getDocs, limit, startAfter } from 'firebase/firestore';
 import * as IoIcons from 'react-icons/io5';
+import swal from 'sweetalert';
 
 
 function Tutorial() {
 
     const docsdb = getFirestore();
 
-
+    const [lastpage, setLastPage] = useState([]);
     const [Docs, setDocs] = useState([])
 
-const collRef = query(collection(docsdb, "docs"));
+const collRef = query(collection(docsdb, "docs"), limit(5));
 
 // Query the first page of docs
 async function fetch(){
@@ -28,6 +29,7 @@ const isEmpty = documentSnapshots.size === 0;
 if(!isEmpty)
 {     //throw data to useState
 const map =  documentSnapshots.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+setLastPage(documentSnapshots.docs[documentSnapshots.docs.length-1]) ;
 setDocs(map);
   }       
 else{
@@ -43,6 +45,51 @@ console.log(error.message)
 
 }
 
+async function showMore(){
+
+    
+    if (Docs.length === 0){
+                    
+        swal("Sorry","There are no more Data left to show you","warning")
+
+        } else{
+          try {   
+               
+            const next =
+            query(collRef,
+            startAfter(lastpage),
+            limit(5));
+
+            const nextDocs =  await getDocs(next)
+            
+            const isEmpty = nextDocs.size === 0;
+            if(!isEmpty){
+              const map =  nextDocs.docs.map((doc) => ({ ...doc.data(), id: doc.id }));
+
+              
+              setDocs((Docs) =>[...Docs, ...map]);
+
+             
+                setLastPage(nextDocs.docs[nextDocs.docs.length-1]);
+              
+          
+             
+            }
+            else{
+              swal("Sorry","There are no more Data left to show you","warning")
+       
+            }
+             
+           
+        
+     
+        }
+        catch (error) {
+          swal('Error!',error.message,'error')
+        }
+        }
+
+}
 
 useEffect(
     () => {
@@ -63,10 +110,11 @@ const docsfile = Docs.map((documents) => (
 
     <tbody key={documents.id}>
     <tr >
-    <td>{documents.Description}</td>
-    <td>{documents.Topic} </td>
-    <td>{documents.Owner}</td>
-    <td>  <Button data-id={documents.FileLink} onClick={download} style={{ textDecoration: 'none', marginLeft:'3px' }} className="mb-4"><IoIcons.IoDownload/></Button></td>
+    <td>{documents.title}</td>
+    <td>{documents.description} </td>
+    <td>{documents.tags}</td>
+    <td>{documents.created_by}</td>
+    <td>  <Button data-id={documents.fileLink} onClick={download} style={{ textDecoration: 'none', marginLeft:'3px' }} className="mb-4"><IoIcons.IoDownload/>Download</Button></td>
     </tr>
     </tbody>
 )
@@ -1030,9 +1078,9 @@ const docsfile = Docs.map((documents) => (
                         <section>
                             <Card className="mt-2">
                                 <Card.Header className="text-center">
-                                    <h3 className="text-center text-primary mt-2 fw-bold">Available Resources for Students</h3>
+                                    <h3 className="text-center text-primary mt-2 fw-bold">Resources that you might need, Adventurer.</h3>
                                     <p>
-                                        You may need specific softwares to open, view and print the files in this page. Most modern browsers and devices can open PDF and ZIP files.
+                                        You may need specific softwares to open, view and print the files in this page. Most modern browsers and devices can open PDF files.
                                     </p>
                                 </Card.Header>
                                 <Card.Body>
@@ -1049,10 +1097,12 @@ const docsfile = Docs.map((documents) => (
                                                         </thead>
                                                             {docsfile}
                                                     </Table>
-                                                    
+                                                   
                                             </Form> 
                                 </Card.Body>
+                              
                             </Card>
+                            <Button onClick={showMore}>Show More</Button>
                         </section>
                              
 

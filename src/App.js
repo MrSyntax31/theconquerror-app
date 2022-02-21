@@ -27,6 +27,10 @@ import PrivateRoute from './routing/PrivateRoute';
 import RequestDenied from './Components/Error/RequestDenied'
 import TopicList from './Page/Forum/TopicList';
 import  Assessment from './Page/Course/Assessment';
+import  UploadFile from './Page/Profile/UploadFile';
+import Leaderboard from './Page/Leaderboard/Leaderboard';
+
+import Graphs from './Page/Profile/Graphs';
 
 //Admin
 import Admin from './Admin/Admin';
@@ -75,9 +79,16 @@ const App = () => {
 
      <Route path="/error" component={RequestDenied}/>
 
+     <PrivateRoute path="/graphs" component={Graphs}/>
+
+     <Route path="/leaderboard" component={Leaderboard}/>
+
      <PrivateRoute path="/admin" component={Admin}/>
 
      <PrivateRoute path="/assessment" component={Assessment}/>
+
+     <PrivateRoute path="/UploadFile" component={UploadFile}/>
+
   </Switch>
  
 </AuthProvider>

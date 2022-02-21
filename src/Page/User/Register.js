@@ -61,7 +61,7 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
           const [occu, setOccu] = useState();
           const [insti, setInsti] = useState();
           const [address, setAddress] = useState();
-
+          const [adventurername, setAdvName] = useState();
           const [passwordH, PWHandler] = useState("password");
 
      const showPass = (event) => {
@@ -134,9 +134,12 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
             const uid = auth.currentUser.uid
 
           const data ={
+            Name: fname +" "+ lname,
+           AdventurerName: adventurername,
             Gender:gender,
             Occupation: occu,
-              Institution: insti
+              Institution: insti,
+              level: 1
             }
 
      await setDoc(doc(firestoredb, "userdata", uid), data);
@@ -186,7 +189,7 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
 
 
                           dupe();
-
+                        setAdvName("")
                         setBday("")
                         setEmail("")
                         setFname("")
@@ -314,6 +317,15 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
                             <div className="name">Personal Information</div>
                             <div className="value">
 
+                            <Form.Group id="AdventurerName" className="mb-3">
+                              <Form.Label>Adventurer name</Form.Label>
+                                <Form.Control  type="text" id="AdventurerName" value={adventurername || ''} onChange={e => setAdvName(e.target.value)} name="AdventurerName" pattern="[a-zA-Z\s]*" required placeholder="Adventurer Name/Nickname"/>
+                                <Form.Control.Feedback type="invalid">
+                               Please use a proper adventurer name
+                                  </Form.Control.Feedback>
+                                    <Form.Control.Feedback>Looks good!</Form.Control.Feedback>
+                              </Form.Group>
+
                               <Form.Group id="fname" className="mb-3">
                               <Form.Label>First Name</Form.Label>
                                 <Form.Control  type="text" id="fname" value={fname || ''} onChange={e => setFname(e.target.value)} name="fname" pattern="[a-zA-Z\s]*" required placeholder="First Name"/>
@@ -373,7 +385,7 @@ import { getFirestore, doc, setDoc } from "firebase/firestore";
                               <Form.Control as='select' value={occu || ''} onChange={e => OccupationValue(e)} required>
                                 <option value="">Select Occupation</option>
                                 <option value="Student">Student</option>
-                                <option value="Professor">Professor</option>
+                                <option value="Professor">Instructor</option>
                                 <option value="Others">Others.</option>
                               </Form.Control>
                               

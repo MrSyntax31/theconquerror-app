@@ -156,7 +156,7 @@ const Lessons = () => {
              return
              }
     
-
+        
   //Automatically Fetches Data from Firestore to show all offered Lessons
   useEffect(
     () => {
@@ -177,17 +177,18 @@ const Lessons = () => {
     const profileData = ref(realtimedb, '/users/' + userId);
     onValue(profileData, (snapshot) => {
       setData(snapshot.val().level);
-      
+          
   })
 
     
       }
 
+    
       
     },[]); // eslint-disable-line react-hooks/exhaustive-deps
  
 
-    const userlevel = parseInt(sessionStorage.getItem("userLevel"),10)
+    
     
 
   const enroll =  function(e){
@@ -205,14 +206,14 @@ const Lessons = () => {
       }
       else
       {   
-        if( userlevel >= difficulty)
+        if( userData >= difficulty)
         {
           sessionStorage.setItem('getLesson',listkey)
           history.push("/lessonscontent")
         }
         else {
           swal("Oops","You Cannot Enter that Dungeon yet!","error")
-         
+       
         }
        
       }

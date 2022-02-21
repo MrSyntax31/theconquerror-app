@@ -224,53 +224,82 @@ const LessonsContent = () => {
   
   fetchLesson();
   showProfile();
-
+  docListener()
   
   },[]);// eslint-disable-line react-hooks/exhaustive-deps 
 
+  const [isAlreadyDone, setStatus] = useState(false);
+  const [score, setscore] = useState(0);
 
-
-  function verificationStatus(){
+  async function docListener(){
 
     const lesskey = sessionStorage.getItem("getLesson")
-    
-    onSnapshot(doc(forumdb, "enrollees", userId,"coursesfinished",lesskey), (doc) => {
+    const docRef = doc(forumdb, "userdata", userId,"coursesfinished",lesskey);
 
-        const docdata = (doc.data())
+    const docSnap = await getDoc(docRef);
 
-        if (docdata)
-        {   
-         
-          swal({
-            title: "Do you want to re-run this Dungeon?",
-            text: "By pressing Ok, you will enter the battlefield again",
-            icon: "info",
-            buttons: true
-          })
-          .then((willHelp) => {
-            if (willHelp) {
-              
-              history.push("/assessment")
+    if (docSnap.exists())
+    {   
+      setStatus(true)
+      setscore(docSnap.data().ScoreOnTest)
+    }
+    else{
+      setStatus(false)
+    }
+  }
+
+
+  async function verificationStatus(){
+
+   
+    if(score === 10)
+    {
+      swal("Sorry!","You already Dominated this Dungeon!","info")
+    }
+    else{
+      if(isAlreadyDone === true){
+        swal({
+          title: "Do you want to re-run this Dungeon?",
+          text: "By pressing Ok, you will enter the battlefield again",
+          icon: "info",
+          buttons: true
+        })
+        .then((willHelp) => {
+          if (willHelp) {
             
-            } else {
-              swal("Aw!","You can always come back!","info");
-
-            }
-          });
-         
-        }
-      else
-          {
             history.push("/assessment")
+          
+          } else {
+            swal("Aw!","You can always come back!","info");
+  
           }
+        });
+      }
      
-         
-  })
+             else
+            {
+              swal({
+                title: "You are about to take an assessment",
+                text: "By pressing Ok, you will automatically start.",
+                icon: "info",
+                buttons: true
+              })
+              .then((willHelp) => {
+                if (willHelp) {
+  
+                  history.push("/assessment")
+                
+                } else {
+                  swal("Aw!","You can always come back!","info");
+    
+                }
+              });
+           
+            }     
+    }
+    
 }
 
-
-
-  const userLvl = parseInt(sessionStorage.getItem("userLevel"),10)
     
 
   const enroll =  function(e){
@@ -288,7 +317,7 @@ const LessonsContent = () => {
       }
       else
       {   
-        if( userLvl >= difficulty)
+        if( userlevel.level >= difficulty)
         {
 
           sessionStorage.setItem('getLesson',listkey)
@@ -298,7 +327,7 @@ const LessonsContent = () => {
         }
         else {
           swal("Oops","You Cannot Enter that Dungeon yet!","error")
-         
+        
         }
        
       }
@@ -659,7 +688,7 @@ const showCourse = courses1.map((courses1) => (
 
                       <br/> <br/> 
 
-                      <p>Instructions: Choose the best correct answer.  </p>
+                      <p>Instructions: Choose an Answer by clicking one of the Radio Buttons.  </p>
                   </Modal.Body>
                   <Modal.Footer>
                   <Button onClick={verificationStatus} style={{ textDecoration: 'none' }} className="mt-3 btn btn-primary fs-5">Get Started</Button>

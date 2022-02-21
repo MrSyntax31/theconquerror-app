@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import UserNav from './NavAuth'
 import * as ImIcons from 'react-icons/im';
 import * as MdIcons from 'react-icons/md';
+import * as GiIcons from 'react-icons/gi';
 
 function App() {
   return (
@@ -43,6 +44,11 @@ function App() {
             <li className="nav-item" style={{width: "6rem"}}>
               <NavLink className="nav-link" to="/forum" exact>
               <MdIcons.MdForum/> Forum
+              </NavLink>
+            </li>
+            <li className="nav-item" style={{width: "9rem"}}>
+              <NavLink className="nav-link" to="/leaderboard" exact>
+              <GiIcons.GiLaurelsTrophy/> Leaderboard
               </NavLink>
             </li>
           </Nav>

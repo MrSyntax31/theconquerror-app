@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import * as FaIcons from 'react-icons/fa';
 import Helmet from 'react-helmet';
 import Navbar from '../../Components/Navbar/Navbar'
-import {Container, Form, Row, Col, Dropdown, Modal, Button , Alert, OverlayTrigger, Tooltip} from 'react-bootstrap'
+import {Form, Row, Col, Dropdown, Modal, Button , Alert, OverlayTrigger, Tooltip} from 'react-bootstrap'
 import './Forum.css';
 import { getAuth , signOut, signInWithEmailAndPassword} from '@firebase/auth';
 import { getFirestore, doc, onSnapshot, addDoc, collection, query, orderBy , deleteDoc, updateDoc, setDoc} from '@firebase/firestore';
@@ -46,6 +46,74 @@ const Thread = () => {
 
     const handleCloseR = () => setShowR(false);
 
+    useEffect(() =>{
+  
+      if(user){
+        adventurerTag()
+      }
+      else{
+      
+      }
+       
+      
+      },[])  // eslint-disable-line react-hooks/exhaustive-deps
+      
+    const [adventurername, setAdventurerName] = useState("")
+    
+    async function UpdateAdventurerName(value){
+    
+      const DbRef = doc(forumdb, "userdata",user.uid);
+    
+             
+      await updateDoc(DbRef, {
+        AdventurerName: value
+    
+    });
+    
+    }
+    
+    function adventurerTag(){
+      onSnapshot(doc(forumdb, "userdata", user.uid), (doc) => {
+    
+          const docdata = (doc.data())
+    
+          if (docdata)
+          {   
+            
+    
+            if(docdata.AdventurerName){
+              console.log("welcome "+docdata.AdventurerName)
+              setAdventurerName(docdata.AdventurerName)
+          
+            }
+            else
+            {
+           
+          swal("You don't have an Adventurer Name yet:", {
+            content: "input",
+          })
+          .then((value) => {
+
+          if(value === null)
+          {
+            swal("Later!","You can set your Adventurer Name later.","info")
+          }
+          else{
+            UpdateAdventurerName(value)
+          }
+           
+           
+          });
+            }
+          }
+          else{
+              
+          
+        
+          }
+    
+    })
+    }  
     
     //Function that shows the profile of the user 
     function showProfile() {
@@ -81,7 +149,8 @@ const Thread = () => {
                 created_at: convertedDate,
                 user_id : user.uid,
                  email : user.email,
-                 level: userlevel.level
+                 level: userlevel.level,
+                 Name: adventurername
                 }).then(() =>{
                     setReply("");
                swal({icon: "success", title: "Success", text: "Comment has been posted!"});
@@ -174,7 +243,7 @@ const Thread = () => {
 },[]) // eslint-disable-line react-hooks/exhaustive-deps
 
 
-    const showRep= threadList.map((threadList) =>  <div key={threadList.id}>  <br></br> {threadList.reply} <br></br><OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Report User!</Tooltip>}><p className="text-primary d-inline-block" data-email={threadList.email} onClick={askReport} style={{cursor:"pointer"}}>{threadList.email}</p></OverlayTrigger> <br></br> Level: <strong>{threadList.level}</strong></div> )
+    const showRep= threadList.map((threadList) =>  <div key={threadList.id}>  <br></br> {threadList.reply} <br></br><OverlayTrigger overlay={<Tooltip id="tooltip-disabled">Report User!</Tooltip>}><p className="text-primary d-inline-block" data-email={threadList.email} onClick={askReport} style={{cursor:"pointer"}}>{threadList.Name}</p></OverlayTrigger> <br></br> Level: <strong>{threadList.level}</strong></div> )
 
   async function DeletePost(e) {
 
@@ -460,122 +529,131 @@ swal("Something is Wrong",error.code,"warning");
 
         <Navbar/>        
         
-        <Container className="mb-5 rounded p-5">
-        <div className="mt-5 mb-5">
-            <Link to="/forum" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"><FaIcons.FaArrowLeft/> Back</Link>
-        </div>
-        {/* Option Menu*/}
-        { hider && 
-        <div className="topnav-right">
-        <Dropdown>
-            <Dropdown.Toggle variant="primary" id="dropdown-basic">
-                <BiIcons.BiMenuAltRight/>
-            </Dropdown.Toggle>
+        <section className="mb-5 rounded p-5">
 
-            <Dropdown.Menu>
-                <Dropdown.Item onClick={DeletePost}>Delete</Dropdown.Item>
-                <Dropdown.Item onClick={caseClosed}>Case Close</Dropdown.Item>
-            </Dropdown.Menu>
-        </Dropdown>
-    </div>
-    }
-        { Empty && <h1>The Post probably went on a journey.</h1>  } 
-        <strong>{topic.title}</strong><br></br>
-        {topic.desc}<br></br>
-        <p className="text-primary">{topic.created_by}</p><br></br>
-        {topic.created_at}<br></br>
-        <div className="border border-primary mt-3">
+          <div className="mt-5 mb-5">
+              <Link to="/forum" style={{ textDecoration: 'none',marginLeft: '10px', marginTop: '5px' }} className="mt-5"><FaIcons.FaArrowLeft/> Back</Link>
+          </div>
 
-        { topic.sampcodeimg &&  <img className="mx-auto d-block img-fluid mt-3 mb-3 image-preview image-preview-js" style={{width: '25%', height: 'auto'}} src={topic.sampcodeimg} alt={topic.title} onClick={handleShow}/>  }
+            {/* Option Menu*/}
 
+            { hider && 
+            <div className="topnav-right">
+              <Dropdown>
+                  <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                      <BiIcons.BiMenuAltRight/>
+                  </Dropdown.Toggle>
 
-        </div>
+                  <Dropdown.Menu>
+                      <Dropdown.Item onClick={DeletePost}>Delete</Dropdown.Item>
+                      <Dropdown.Item onClick={caseClosed}>Case Close</Dropdown.Item>
+                  </Dropdown.Menu>
+              </Dropdown>
+            </div>
+            }
 
-        <Modal size="lg" show={show} onHide={handleClose} keyboard={false}>
-            <Modal.Header closeButton>
-            <Modal.Title><strong>{topic.title}</strong></Modal.Title>
-            <br/>
-            </Modal.Header>
+            { Empty && <h1>The Post probably went on a journey.</h1>  } 
+            <strong>{topic.title}</strong><br></br>
+            {topic.desc}<br></br>
+            <p className="text-primary">{topic.Name}</p><br></br>
+            {topic.created_at}<br></br>
             
-            <Modal.Body>
-            <img className="mx-auto d-block img-fluid mt-3 mb-3 image-preview image-preview-js" style={{width: '100%', height: 'auto'}} src={topic.sampcodeimg} alt={topic.title} />
-            </Modal.Body>
-        </Modal>
+            <div className="border border-primary mt-3">
 
-           {/* Modal Login*/}
-           <Modal show={showMl} onHide={handleCloseMl}>
-                    <Modal.Header closeButton>
-                      <Modal.Title>Log-in</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>Please Log-in to Continue!
-                    {error1 && <Alert variant="danger">{error1}</Alert>}
-                    <Form noValidate validated={validated1} className="">
-                                  <Form.Group id="email" className="mb-3">
-                                    <Form.Label>Email</Form.Label>
-                                    <Form.Control ref={emailRef}  name = "email"  type="email" required autoComplete="username" placeholder="Email Address"/>
-                                    <Form.Control.Feedback type="invalid">
-                                    Please double check your email.
-                                  </Form.Control.Feedback>
-                                  </Form.Group>
+              { topic.sampcodeimg &&  <img className="mx-auto d-block img-fluid mt-3 mb-3 image-preview image-preview-js" style={{width: '25%', height: 'auto'}} src={topic.sampcodeimg} alt={topic.title} onClick={handleShow}/>  }
 
-                                  <Form.Group id="password" className="mb-3">
-                                    <Form.Label>Password</Form.Label>
-                                    <Form.Control type={password} ref={passwordRef}  name = "password" autoComplete="current-password" required placeholder="Password"/>
+
+            </div>
+
+            <Modal size="lg" show={show} onHide={handleClose} keyboard={false}>
+                <Modal.Header closeButton>
+                <Modal.Title><strong>{topic.title}</strong></Modal.Title>
+                <br/>
+                </Modal.Header>
+                
+                <Modal.Body>
+                    <img className="mx-auto d-block img-fluid mt-3 mb-3 image-preview image-preview-js" style={{width: '100%', height: 'auto'}} src={topic.sampcodeimg} alt={topic.title} />
+                </Modal.Body>
+            </Modal>
+
+              {/* Modal Login*/}
+              <Modal show={showMl} onHide={handleCloseMl}>
+
+                      <Modal.Header closeButton>
+                        <Modal.Title>Log-in</Modal.Title>
+                      </Modal.Header>
+
+                      <Modal.Body>Please Log-in to Continue!
+                      {error1 && <Alert variant="danger">{error1}</Alert>}
+
+                                <Form noValidate validated={validated1} className="">
+                                    <Form.Group id="email" className="mb-3">
+                                      <Form.Label>Email</Form.Label>
+                                      <Form.Control ref={emailRef}  name = "email"  type="email" required autoComplete="username" placeholder="Email Address"/>
                                       <Form.Control.Feedback type="invalid">
-                                    Please enter a password.
-                                  </Form.Control.Feedback>
-                                    <div className="form-group mt-2 text-secondary">
-                                    <i onClick={showPass} className="fs-7" style={{cursor:"pointer", fontFamily:"Raleway, sans-serif"}}><AiIcons.AiFillEye/>Show/Hide Password</i>
-                                    </div>
-                                  
-                                  </Form.Group>
-                              
-                            <div className="w-100 mt-2 justify-content-right">
-                              <Link to="/forgot-pass" style={{ textDecoration: 'none' }}>Forgot Password</Link>
-                            </div>
+                                      Please double check your email.
+                                    </Form.Control.Feedback>
+                                    </Form.Group>
 
-                            <div className="col-xs-1 mt-3" align="center">
-                            <ReCAPTCHA
-                            sitekey={process.env.REACT_APP_SITEKEY}
-                            onChange={onChange}
-                            />
-                            </div>
-                            
-                            <Button onClick={handleSubmitLogin} className="w-100 mt-3 mb-3"  >Login</Button>
-                          
+                                    <Form.Group id="password" className="mb-3">
+                                      <Form.Label>Password</Form.Label>
+                                      <Form.Control type={password} ref={passwordRef}  name = "password" autoComplete="current-password" required placeholder="Password"/>
+                                        <Form.Control.Feedback type="invalid">
+                                      Please enter a password.
+                                    </Form.Control.Feedback>
+                                      <div className="form-group mt-2 text-secondary">
+                                      <i onClick={showPass} className="fs-7" style={{cursor:"pointer", fontFamily:"Raleway, sans-serif"}}><AiIcons.AiFillEye/>Show/Hide Password</i>
+                                      </div>
+                                    </Form.Group>
+                                
+                                    <div className="w-100 mt-2 justify-content-right">
+                                      <Link to="/forgot-pass" style={{ textDecoration: 'none' }}>Forgot Password</Link>
+                                    </div>
+
+                                    <div className="col-xs-1 mt-3" align="center">
+                                      <ReCAPTCHA
+                                      sitekey={process.env.REACT_APP_SITEKEY}
+                                      onChange={onChange}
+                                      />
+                                    </div>
+                              
+                                    <Button onClick={handleSubmitLogin} className="w-100 mt-3 mb-3"  >Login</Button>
                                 </Form>
 
-                    </Modal.Body>
-                    <Modal.Footer>
-                    <div className="w-100 mt-2 mb-2 text-center text-secondary">
-                                Don't have an account? <Link to="/register" style={{ textDecoration: 'none' }}>Register</Link>
-                            </div>
-                    </Modal.Footer>
-                  </Modal>                    
+                      </Modal.Body>
+
+                      <Modal.Footer>
+                          <div className="w-100 mt-2 mb-2 text-center text-secondary">
+                            Don't have an account? <Link to="/register" style={{ textDecoration: 'none' }}>Register</Link>
+                          </div>
+                      </Modal.Footer>
+
+              </Modal>                    
 
 
-        {showRep}
-        
-            { Empty ? '' :
-                   <Form noValidate validated={validated} onSubmit={handleSubmit}   className="">
+              {showRep}
+          
+              { Empty ? '' :
+                    <Form noValidate validated={validated} onSubmit={handleSubmit}   className="">
 
-                        <Row>
-                            <Col l="auto">
-                               
-                                <p className="mt-3">Comment</p>
-                                <div className="d-flex">
-                                  <input type="textarea"  value={reply || ''} disabled={closed}  onChange={e => setReply(e.target.value)} className="form-control w-100 m-1" required/>
-                                    <button type="submit" disabled={closed}  className="btn btn-primary m-1 text-right pull-right">Reply</button>   
-                                </div>
-                                <div className=" text-right">
-                                </div> 
-                            </Col>
-                            <Col sm lg="2">
-                            </Col>
-                        </Row>
+                          <Row>
+                              <Col l="auto">
+                                
+                                  <p className="mt-3">Comment</p>
+                                  <div className="d-flex">
+                                    <input type="textarea"  value={reply || ''} disabled={closed}  onChange={e => setReply(e.target.value)} className="form-control w-100 m-1" required/>
+                                      <button type="submit" disabled={closed}  className="btn btn-primary m-1 text-right pull-right">Reply</button>   
+                                  </div>
+                                  <div className=" text-right">
+                                  </div> 
+                              </Col>
+                              <Col sm lg="2">
+                              </Col>
+                          </Row>
                     </Form>
-                    } 
-        </Container>
+              } 
+        </section>
+
         <Modal show={showR} onHide={handleCloseR}>
                           <Modal.Header closeButton>
                             <Modal.Title>Report User</Modal.Title>
@@ -589,7 +667,7 @@ swal("Something is Wrong",error.code,"warning");
                               </Form.Group>
                             </Form>
                           </Modal.Body>
-                        </Modal>
+        </Modal>
 
         </div>
     

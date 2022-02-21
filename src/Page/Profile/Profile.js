@@ -5,10 +5,13 @@ import Helmet from 'react-helmet';
 import { Link } from "react-router-dom"
 
 //Styles & Libraries
-import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger } from 'react-bootstrap';
+import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger, Table } from 'react-bootstrap';
 
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
+import DatePicker from 'react-datepicker'
+import "react-datepicker/dist/react-datepicker.css";
+
 
 import './styles.css'
 import swal from 'sweetalert';
@@ -19,10 +22,10 @@ import 'csshake';
 
 import './Footer.css'
 
+
 //Firebase Database
-import {} from 'firebase/auth'
 import { getAuth, updatePassword, reauthenticateWithCredential , EmailAuthProvider, sendPasswordResetEmail } from '@firebase/auth';
-import { collection, getFirestore, doc, setDoc,  onSnapshot, query   } from 'firebase/firestore';
+import { collection, getFirestore, doc, setDoc,  onSnapshot, query , updateDoc } from 'firebase/firestore';
 import { getDatabase, ref, onValue, update } from "firebase/database";
 
 //Charts
@@ -153,7 +156,7 @@ const Profile = () => {
   function OccupationValue(e){
 
     const occuval = occu.current.value
-    console.log(occuval)
+  
     if(occuval === "Others"){
       showHide1("show")
 
@@ -337,7 +340,7 @@ charactersLength));
     onValue(profileData, (snapshot) => {
       setData(snapshot.val());
       sessionStorage.setItem("userLevel",(JSON.stringify(snapshot.val().level)))
-      
+     //setBday(snapshot.val().Birthday)
   })
 }
         
@@ -346,7 +349,8 @@ charactersLength));
        
 
       timer();
-    
+
+   
     
        
   },[]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -407,6 +411,7 @@ const gender = useRef();
 const occu = useRef();
 const insti  = useRef();
 const address = useRef();
+const [bday, setBday] = useState("");
 
 function updateProfile(){ 
   
@@ -415,13 +420,14 @@ function updateProfile(){
         // A post entry.
     const postData = {  
       Name: profile.Name,
-      Birthday: profile.Birthday,
+      Birthday: bday.toLocaleString("en-IN", {timeZone: "Asia/Kolkata"}).split(',')[0],
       Gender : gender.current.value,
       Occupation: occu.current.value,
       Address: address.current.value,
       email: profile.email,
       Institution: insti.current.value,
-      level: profile.level
+      level: profile.level,
+      Permission: profile.Permission
     };
   
     const updates = {};
@@ -516,11 +522,13 @@ function updateProfile(){
       else{
         isNotVerified(false)
       }
- 
+
+      
   }, [verifstat,profile]) // eslint-disable-line react-hooks/exhaustive-deps
 
  
   const [Applied, isApplied] = useState(false);
+
   function verificationStatus(){
     onSnapshot(doc(firestoredb, "verifiedteachers", userId), (doc) => {
 
@@ -544,8 +552,73 @@ function updateProfile(){
 
   })
 }
-  
+
+
+useEffect(() =>{
+
+  adventurerTag()
+
+},[])  // eslint-disable-line react-hooks/exhaustive-deps
+
+
+async function UpdateAdventurerName(value){
+
+  const DbRef = doc(firestoredb, "userdata",userId);
+
+         
+  await updateDoc(DbRef, {
+    AdventurerName: value
+
+});
+
+swal("Hey There!","Thanks "+value+", If you ever change your mind and want to update your Adventurer Name just send us a ticket on our Discord","info")
+
+}
+
+function adventurerTag(){
+  onSnapshot(doc(firestoredb, "userdata", userId), (doc) => {
+
+      const docdata = (doc.data())
+
+      if (docdata)
+      {   
     
+
+        if(docdata.AdventurerName){
+          console.log("welcome "+docdata.AdventurerName)
+        }
+        else
+        {
+          swal("You don't have an Adventurer Name yet:", {
+            content: "input",
+          })
+          .then((value) => {
+
+          if(value === null)
+          {
+            swal("Later!","You can set your Adventurer Name later.","info")
+          }
+          else{
+            UpdateAdventurerName(value)
+          }
+           
+           
+          });
+        }
+
+      }
+      else{
+          
+      // Do Nothing
+    
+      }
+
+})
+}  
+
+
+
+
     //Teacher Verification
     function UploadFile(){
       if(profile.Occupation !== "Instructor")
@@ -557,7 +630,7 @@ function updateProfile(){
       else
       { 
           if(verifstat.verifiedstatus === "Approved"){
-            setShow4(true);
+            history.push("/UploadFile")
           }
           else{
             swal({
@@ -647,8 +720,22 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
     {
       name: analytics.id,
       score: analytics.ScoreOnTest,
+      tries: analytics.tries,
     }
   ))
+
+  const dataList = graphdata.map((analytics) => (
+  
+    <tr key={analytics.id}>
+    <th>{analytics.id}</th>
+    <th>{analytics.AssessmentStatus}</th>
+    <th>{analytics.ScoreOnTest}</th>
+    <th>{analytics.finished_at}</th>
+    <th>{analytics.tries}</th>
+    </tr>
+ 
+  )
+  )
 
   async function DownloadCert(e){
 
@@ -677,6 +764,8 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
     </Popover>
   );
 
+
+  
     return (
         <>
         {/* Division for Tab Page and Description*/}
@@ -695,7 +784,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
               <div className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style={{minHeight: "600px", backgroundImage: "url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)", backgroundSize: "cover", backgroundPosition: "center top"}}>
 
                 <span className="mask bg-gradient-default opacity-8"></span>
-
+               
                 <div className="container-fluid d-flex align-items-center">
                   <div className="row">
                     <div className="col-lg-7 col-md-10">
@@ -769,7 +858,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                           <div className="col-8">
                             <h3 className="mb-0 mt-4">My account</h3>
                           </div>
-                          
+                              
                         </div>
                       </div>
                           {NotVerif &&
@@ -868,6 +957,39 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                       </ResponsiveContainer>
                     </div>
             </div>    
+
+                        {/*Time Table*/}
+                        <section>
+                            <Card className="mt-5 mb-5">
+                                <Card.Header className="text-center">
+                                    <h3 className="text-center mt-5 fw-bold">Lesson's Time Table</h3>
+                                    <p>
+                                        This shows the different lesson's time table and status of your current lesson.
+                                    </p>
+                                </Card.Header>
+                                <Card.Body>
+                                            <Form>
+                                                    <Table striped bordered hover>
+                                                        <thead>
+                                                        <tr className="text-primary fw-bold">
+                                                        <th>Lessons</th>
+                                                        <th>Status</th>
+                                                        <th>Score</th>
+                                                        <th>Finished At</th>
+                                                        <th>Tries</th>
+                                                        </tr>
+                                                          {dataList}
+                                                        </thead>
+                                                           
+                                                    </Table>
+                                                    
+                                            </Form> 
+                                </Card.Body>
+                                <div className="text-center">
+                                  <Link to="/graphs" style={{ textDecoration: 'none', marginLeft: '10px', marginTop: '5px' }} className="mb-5"> Show All Graphs</Link> 
+                                </div>
+                            </Card>
+            </section>
 
 
             <Offcanvas show={showOff} onHide={handleCloseOff}>
@@ -996,6 +1118,21 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                     <option value="Not Specified">Rather not specify</option>
                                                     </Form.Select>
                                                   </Form.Group>
+
+                                          
+                                                
+                                                    <Form.Group id="bday" className="mb-3">
+                                                    <Form.Label>Birthday</Form.Label>
+                                                      <DatePicker className="form-control"
+                                                     dateFormat="MMMM d, yyyy"
+                                                     selected={bday}
+                                                     onChange={(date) => setBday(date)}
+                                                     maxDate={Date.now()}
+                                                      placeholderText="Select your Birthday"
+                                                        required
+                                                    />
+                                                    </Form.Group>
+
 
                                                 <Form.Group id="occu">
                                                 <Form.Label>Occupation</Form.Label>

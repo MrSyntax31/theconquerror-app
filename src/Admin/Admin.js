@@ -7,12 +7,12 @@ import Helmet from 'react-helmet'
 import Navbar from './NavBar'
 
 //Bootstrap
-import {  Tabs, Tab, Card, Table, Form , Button} from 'react-bootstrap';
+import {  Tabs, Tab, Card, Table, Form , Button, Modal} from 'react-bootstrap';
 import * as MdIcons from "react-icons/md";
 
 //Firebase
 import {getAuth} from 'firebase/auth'
-import { getFirestore, query, collection, where, limit,  getDocs, updateDoc, doc, orderBy , onSnapshot, deleteDoc } from 'firebase/firestore';
+import { getFirestore,query, collection, where, limit,  getDocs, updateDoc, doc, orderBy , onSnapshot, deleteDoc, setDoc} from 'firebase/firestore';
 import { getDatabase, ref, onValue } from "firebase/database";
 
 import {  useHistory} from "react-router-dom"
@@ -35,7 +35,11 @@ const Admin = () => {
     const userId = auth.currentUser.uid;   
 
     const [profile, setData] = useState();
-  
+
+    const [showCert, setShowCert] = useState(false)
+
+    const handleCloseR = () => setShowCert(false)
+
 //Loads the function inside the useEffect when the component renders
 useEffect (() => {
     
@@ -347,6 +351,7 @@ setInsti(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
       NumberofStudents()
       NumberofInstructors()
       InstiCount()
+      
     },[]); // eslint-disable-line react-hooks/exhaustive-deps
     //For Graphs (Data)
     
@@ -361,6 +366,115 @@ const data =  [
   }
 ];
 
+const [searchStud, setSearch] = useState("");
+const [studList, setList] = useState([]);
+
+async function studentList(){
+  
+  const studlevel = parseInt(searchStud,10);
+  
+  const collectionRef = query(collection(admindb, "userdata"), where("level", "==", studlevel));
+
+const q = query(collectionRef);
+
+onSnapshot(q, (snapshot) =>
+setList(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+
+)
+
+}
+
+
+const [certificateData, setCertificate] = useState([]);
+const [studentID, setStudentID] = useState("");
+const [courseID, setCourseID] = useState("");
+async function ShowFinishedLessons(e){
+  
+  const studID = e.target.getAttribute("data-id")
+  setStudentID(studID)
+  setShowCert(true)
+
+  const collectionRef = query(collection(admindb, "userdata",studID,"coursesfinished"),where("AssessmentStatus","==","Passed"),where("certificate","==",""));
+const q = query(collectionRef);
+onSnapshot(q, (snapshot) =>
+setCertificate(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
+
+)
+}
+
+async function uploadCertFunction(value){
+
+     // Add a new document with a generated id.
+     await setDoc(doc(admindb, "userdata",studentID,"Certificates",courseID), {
+      Link: value
+      })
+      certificateGiven()
+      swal("UPLOADED!","Double Check mo nalang Name and ID arman","success")
+  }
+
+  async function certificateGiven(){
+
+    const DbRef = doc(admindb, "userdata",studentID,"coursesfinished",courseID)
+
+  await updateDoc(DbRef, {
+    certificate: "Given"
+
+});
+    
+    
+ }
+
+async function uploadCertificate(e){
+
+  setCourseID(e.target.getAttribute("data-id"))
+  setShowCert(false)
+if(courseID){
+  swal("Insert Link Here", {
+    content: "input",
+  })
+  .then((value) => {
+
+  if(value === null)
+  {
+    swal("Cancelled!","You Cancelled the certificate upload function.","error")
+  }
+  else{
+   
+    uploadCertFunction(value)
+  
+  }
+  });
+}
+else{
+  //
+}
+ 
+
+}
+
+const cert = certificateData.map((certData) => (
+   
+  <div key={certData.id}>
+  <strong>{certData.id}</strong>
+  <Button data-id={certData.id}  onClick={uploadCertificate} style={{ textDecoration: 'none', marginLeft:'3px' }} className="mb-4">Upload Certificate</Button>
+  </div>
+
+))
+
+
+const studentMap = studList.map((students) => ( 
+  <tbody key={students.id}>
+  <tr >
+  <td>{students.Name}</td>
+  <td>{students.Gender} </td>
+  <td>{students.Institution}</td>
+  <td>{students.level}</td>
+  <td><Button data-id={students.id} onClick={ShowFinishedLessons} >View</Button></td>
+  </tr>
+  </tbody>
+))
+
+
     return (
         <>
             {/* Tab Bar Title */}
@@ -368,7 +482,7 @@ const data =  [
                 <title>ConquError | Admin</title>
                 <meta name="description" content="Welcome to ConquError Admin page. Check out the documentation and reports of the latest updates within the system." />
             </Helmet>
-
+           
             {/* Navbar */}
             <Navbar/>
                 <h1 className="text-center text-primary fw-bold mt-3">
@@ -380,6 +494,7 @@ const data =  [
                   className="d-inline-block align-top"
                 />{' '}ConquError Console</h1>
                 <p className="text-secondary text-center"> <em> *NOTE: ALL DECISIONS SHOULD BE DISCUSSED ON OUR DISCORD SERVER</em></p>
+        
             {/* Content */}
             <section className="mt-3 mb-5 m-5">
 
@@ -560,11 +675,53 @@ const data =  [
                                             
                                         </Card>
                                     </Tab>
+
+                                    <Tab eventKey="Students" title="Students">
+                                    <Card>
+                                            <Card.Body>
+                                                <Card.Title>Students</Card.Title>
+                                                <Card.Text>
+                                                 This section shows all the Students. <br></br>
+                                                <input type="Number" onChange={e => setSearch(e.target.value)}></input><Button onClick={studentList}>Search</Button>
+                                                </Card.Text>
+                                            </Card.Body>
+
+                                            <Form className="m-2">
+                                                <Table striped bordered hover>
+                                                <thead>
+                                            <tr>
+                                            <th>Name</th>
+                                            <th>Gender</th>
+                                            <th>School</th>
+                                            <th>Level</th>
+                                            <th>View Courses Finished</th>
+                                            </tr>
+                                            </thead>
+                                          
+                                                {studentMap}  
+                                                </Table>
+                                              
+                                            </Form>
+                                            
+                                        </Card>
+                                    </Tab>
                                 </Tabs>
                             </section>
             
                 
             </section>
+
+            <Modal show={showCert} onHide={handleCloseR}>
+                                                <Modal.Header closeButton>
+                                                  <Modal.Title>Upload Certificate</Modal.Title>
+                                                </Modal.Header>
+                                                <Modal.Body>
+                                                  <Form>
+                                                  {cert}
+                                                  </Form>
+                                                </Modal.Body>
+                                              </Modal>
+
 
         </>
     )
