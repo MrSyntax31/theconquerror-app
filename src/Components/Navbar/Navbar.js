@@ -5,6 +5,7 @@ import UserNav from './NavAuth'
 import * as ImIcons from 'react-icons/im';
 import * as MdIcons from 'react-icons/md';
 import * as GiIcons from 'react-icons/gi';
+import * as GoIcons from 'react-icons/go';
 
 function App() {
   return (
@@ -49,6 +50,11 @@ function App() {
             <li className="nav-item" style={{width: "9rem"}}>
               <NavLink className="nav-link" to="/leaderboard" exact>
               <GiIcons.GiLaurelsTrophy/> Leaderboard
+              </NavLink>
+            </li>
+            <li className="nav-item" style={{width: "9rem"}}>
+              <NavLink className="nav-link" to="/graphs" exact>
+              <GoIcons.GoGraph/> Graphs
               </NavLink>
             </li>
           </Nav>

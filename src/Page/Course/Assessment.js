@@ -224,7 +224,6 @@ export default function Assessment() {
                await setDoc(doc(assessmentdb, "userdata",userid,"coursesfinished",coursecode), {
                 ScoreOnTest: score,
                 finished_at: convertedDate,
-<<<<<<< HEAD
                 AssessmentStatus : result,
                 tries: 1,
                 certificate: ""
@@ -278,18 +277,6 @@ export default function Assessment() {
                         addDataForAnalytics()
                       }
               
-=======
-                AssessmentStatus : result
-                
-                }).then(() =>{
-                    
-                    if(score < 7)
-                    {   
-                      history.push("/profile")
-                        swal("So Close!","Unfortunately, you failed to beat the final boss!","info")
-                        
-                    }
->>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
                     else {
                       if(score <= 6)
                       {   

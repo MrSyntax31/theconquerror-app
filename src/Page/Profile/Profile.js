@@ -5,11 +5,7 @@ import Helmet from 'react-helmet';
 import { Link } from "react-router-dom"
 
 //Styles & Libraries
-<<<<<<< HEAD
 import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger, Table } from 'react-bootstrap';
-=======
-import {  Modal, Button, Card, Offcanvas, Form, Popover, OverlayTrigger, Table, Container, Row, Col } from 'react-bootstrap';
->>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
 
 import * as IoIcons from 'react-icons/io5';
 import * as AiIcons from 'react-icons/ai';
@@ -25,7 +21,6 @@ import * as FaIcons from 'react-icons/fa';
 import 'csshake';
 
 import './Footer.css'
-import './timeline.scss'
 
 
 //Firebase Database
@@ -42,8 +37,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
-  ResponsiveContainer,
-  PieChart, Pie
+  ResponsiveContainer
 } from "recharts";
 
 //Navbar
@@ -724,8 +718,9 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
 
   const data =  graphdata.map((analytics) => ( 
     {
-      name: analytics.id,
-      score: analytics.ScoreOnTest,
+    
+      name: analytics.CourseName,
+      Score: analytics.ScoreOnTest,
       tries: analytics.tries,
     }
   ))
@@ -733,6 +728,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
   const dataList = graphdata.map((analytics) => (
   
     <tr key={analytics.id}>
+    <th>{analytics.CourseName}</th>
     <th>{analytics.id}</th>
     <th>{analytics.AssessmentStatus}</th>
     <th>{analytics.ScoreOnTest}</th>
@@ -760,14 +756,6 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
   
   ))
 
-
-  // Sample data
-    const pie = [
-      { name: "Group A", value: 400 },
-      { name: "Group B", value: 300 },
-      { name: "Group C", value: 300 }
-    ];
-
    //For Popup Notice
    const popover = (
     <Popover id="popover-basic">
@@ -793,7 +781,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
        <Navbar/>
         
         {/* Container for Card User Profile Information */}
-        <div className="main-content">
+        <div className="main-content mb-5">
 
               <div className="header pb-8 pt-5 pt-lg-8 d-flex align-items-center" style={{minHeight: "600px", backgroundImage: "url(https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)", backgroundSize: "cover", backgroundPosition: "center top"}}>
 
@@ -952,11 +940,9 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
 
         <div className="mt-5" style={{ textAlign: "center" }}>
             <h1 className="fw-bold">My ConquError Status</h1>
-
             <div className="w-100 mt-2 mb-2 text-center text-secondary">
               Wanna boost your skills? Go to Course! <Link to="/lessons" style={{ textDecoration: 'none' }}>Course</Link>
             </div>
-
             <div className="App">
               
                     <div style={{ width: '100%', height: 500, marginTop:'4rem', marginBottom:'4rem' }}>
@@ -967,67 +953,15 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                               <YAxis />
                               <Tooltip />
                               <Legend />
-                              <Bar dataKey="score" fill="#3a86ff" />
+                            
+                              <Bar dataKey="Score" fill="#3a86ff" />
                         </BarChart>
                       </ResponsiveContainer>
                     </div>
             </div>    
 
-<<<<<<< HEAD
                         {/*Time Table*/}
                         <section>
-=======
-            {/*Pie Graph*/}
-            <Container>
-              <Row>
-                <Col sm={4} className="mx-auto d-block">
-                <div className="App">
-              <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
-                <ResponsiveContainer>
-                  <PieChart>
-                            <Pie
-                              dataKey="value"
-                              isAnimationActive={false}
-                              data={pie}
-                              cx={200}
-                              cy={200}
-                              outerRadius={80}
-                              fill="#00bbf9"
-                              label
-                            />
-                            <Tooltip />
-                    </PieChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-                </Col>
-                <Col sm={4}  className="mx-auto d-block">
-                <div className="App">
-              <div style={{ width: '100%', height: 350, marginTop:'2rem', marginBottom:'2rem' }}>
-                <ResponsiveContainer>
-                  <PieChart>
-                            <Pie
-                              dataKey="value"
-                              isAnimationActive={false}
-                              data={pie}
-                              cx={200}
-                              cy={200}
-                              outerRadius={80}
-                              fill="#00bbf9"
-                              label
-                            />
-                            <Tooltip />
-                    </PieChart>
-                </ResponsiveContainer>
-              </div>
-            </div>
-                </Col>
-              </Row>
-            </Container>
-
-            {/*Time Table*/}
-            <section>
->>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
                             <Card className="mt-5 mb-5">
                                 <Card.Header className="text-center">
                                     <h3 className="text-center mt-5 fw-bold">Lesson's Time Table</h3>
@@ -1040,23 +974,14 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                     <Table striped bordered hover>
                                                         <thead>
                                                         <tr className="text-primary fw-bold">
-                                                        <th>Lessons</th>
+                                                        <th>Course Name</th>
+                                                        <th>Course Code</th>
                                                         <th>Status</th>
                                                         <th>Score</th>
                                                         <th>Finished At</th>
                                                         <th>Tries</th>
                                                         </tr>
-<<<<<<< HEAD
                                                           {dataList}
-=======
-                                                        <tr>
-                                                        <th>Lesson 1</th>
-                                                        <th>Pass</th>
-                                                        <th>9</th>
-                                                        <th>02/01/2022, 09:44:21 PM</th>
-                                                        <th>1</th>
-                                                        </tr>
->>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
                                                         </thead>
                                                            
                                                     </Table>
@@ -1064,11 +989,10 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                             </Form> 
                                 </Card.Body>
                                 <div className="text-center">
-                                  <Link to="/graphs" style={{ textDecoration: 'none', marginLeft: '10px', marginTop: '5px' }} className="mb-5"> Show All Graphs</Link> 
+                                { AdminCheck &&  <Link to="/graphs" style={{ textDecoration: 'none', marginLeft: '10px', marginTop: '5px' }} className="mb-5"> Show All Graphs</Link> }
                                 </div>
                             </Card>
-<<<<<<< HEAD
-            </section>
+                      </section>
 
 
             <Offcanvas show={showOff} onHide={handleCloseOff}>
@@ -1085,32 +1009,13 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                           <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
 
                           <Button variant="primary" onClick={handleShowC} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillSafetyCertificate/> Certificates</Button> 
-=======
-
-            </section>
-
-                                      <Offcanvas show={showOff} onHide={handleCloseOff}>
-                                          <Offcanvas.Header closeButton>
-                                            <Offcanvas.Title><IoIcons.IoSettingsSharp/> Settings</Offcanvas.Title>
-                                          </Offcanvas.Header>
-                                              <Offcanvas.Body>
-                                                                    
-                                                <div className=" d-grid gap-2 mt-3 mb-3">
-                                                    <Button variant="primary" onClick={handleShow5} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillProfile/> Update Information</Button>                     
-                                                        
-                                                    <Button variant="primary" onClick={handleShow} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillLock/> Change Password</Button> 
-                                                                      
-                                                    <Button variant="primary" onClick={handleShow2} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiOutlineWechat/> Send Feedback</Button> 
-
-                                                    <Button variant="primary" onClick={handleShowC} className="mb-2 w-75 mx-auto d-block"><AiIcons.AiFillSafetyCertificate/> Certificates</Button> 
-                                                                                            
-                                                    <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
-                                                      <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
-                                                    </div>
->>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
                                                                   
-                                              </Offcanvas.Body>
-                                      </Offcanvas>
+                          <div className="fs-4 fw-bold mt-3 mb-3">Join our guild !</div>
+                            <iframe src="https://discord.com/widget?id=911369671679283221&theme=dark" title="Discord" width="300" height="400" allowtransparency="true" frameBorder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts" className="mx-auto d-block"></iframe>
+                          </div>
+                                        
+                    </Offcanvas.Body>
+            </Offcanvas>
 
                                       {/*Change Password*/}
                                       <Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} >
@@ -1169,8 +1074,8 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                       </Modal>
 
 
-                                      {/*Upload Files*/}
-                                      <Modal show={show4} onHide={handleClose4} backdrop="static" keyboard={false} >
+                                          {/*Upload Files*/}
+                                          <Modal show={show4} onHide={handleClose4} backdrop="static" keyboard={false} >
                                             <Modal.Header closeButton>
                                               <Modal.Title>Upload Files</Modal.Title>
                                             </Modal.Header>
@@ -1188,11 +1093,11 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                               </Button>
                                               </OverlayTrigger>
                                             </Modal.Footer>
-                                      </Modal>
+                                          </Modal>
 
 
-                                      {/*Update Profile*/}
-                                      <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
+                                            {/*Update Profile*/}
+                                            <Modal show={show5}  onHide={handleClose5} backdrop="static"  keyboard={false}  >
                                                   <Modal.Header closeButton>
                                                     <Modal.Title>Update Profile</Modal.Title>
                                                   </Modal.Header>
@@ -1266,7 +1171,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
                                                     <Button variant="secondary" onClick={handleClose5}> Close</Button>
                                                   
                                                   </Modal.Footer>
-                                      </Modal>
+                                            </Modal>
                   
                   
             <a href="#top" className="scroll-top">
@@ -1275,7 +1180,7 @@ var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2
           </a>
         </div>
 
-        <footer className="sticky-footer">
+        <footer className="sticky-footer mt-5">
         <div>
         <FooterStyle className=" pt-10 text-white footer ">
         <div className="container d-flex align-items-center ">

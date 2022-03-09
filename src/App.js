@@ -26,13 +26,8 @@ import { AuthProvider } from "../src/firebase/auth"
 import PrivateRoute from './routing/PrivateRoute';
 import RequestDenied from './Components/Error/RequestDenied'
 import TopicList from './Page/Forum/TopicList';
-<<<<<<< HEAD
-import  Assessment from './Page/Course/Assessment';
-import  UploadFile from './Page/Profile/UploadFile';
-=======
-import Assessment from './Page/Course/Assessment';
 import UploadFile from './Page/Profile/UploadFile';
->>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
+import Assessment from './Page/Course/Assessment';
 import Leaderboard from './Page/Leaderboard/Leaderboard';
 
 import Graphs from './Page/Profile/Graphs';
@@ -70,7 +65,7 @@ const App = () => {
 
      <Route path="/register" component={Register} />
 
-      <Route path="/privacypolicy" component={Policy} />
+     <Route path="/privacypolicy" component={Policy} />
 
      <PrivateRoute path="/hangman" component={Hangman}/>
 
@@ -84,19 +79,12 @@ const App = () => {
 
      <Route path="/error" component={RequestDenied}/>
 
-<<<<<<< HEAD
-     <PrivateRoute path="/graphs" component={Graphs}/>
-
-     <Route path="/leaderboard" component={Leaderboard}/>
-
-=======
      <Route path="/UploadFile" component={UploadFile}/>
 
      <Route path="/leaderboard" component={Leaderboard}/>
 
      <Route path="/graphs" component={Graphs}/>
 
->>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
      <PrivateRoute path="/admin" component={Admin}/>
 
      <PrivateRoute path="/assessment" component={Assessment}/>

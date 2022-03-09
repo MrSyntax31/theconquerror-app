@@ -33,7 +33,6 @@ const Lessons = () => {
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
-    const handleShow = () => setShow(true);
 
     //Modal login  const [show, setShow] = useState(false);
 
@@ -195,7 +194,7 @@ const Lessons = () => {
    
     const listkey = e.target.getAttribute("data-id");
     const difficulty = parseInt(e.target.getAttribute("data-difficulty"),10)
-
+    const coursename = e.target.getAttribute("coursename");
 
       if (currentUser === null)
       {
@@ -209,6 +208,7 @@ const Lessons = () => {
         if( userData >= difficulty)
         {
           sessionStorage.setItem('getLesson',listkey)
+          sessionStorage.setItem('lessonName',coursename)
           history.push("/lessonscontent")
         }
         else {
@@ -221,16 +221,18 @@ const Lessons = () => {
 
 
     const showCourse = courses.map((courses) => (  
+      <Col sm={4}>
     <div key={courses.id} className="card mb-5">
-      <div className="single-feature wow fadeInUp m-2 p-1" data-wow-delay=".4s">
+      <div className="m-2 p-1" data-wow-delay=".4s">
         <h1 className="text-primary fw-bold">{courses.Difficulty}</h1>
-        <img className="w-50 mx-auto d-block" src={courses.Image} alt={courses.Title} />
+        <img className="mx-auto d-block" src={courses.Image} alt={courses.Title} style={{width:'25%'}}/>
         <h3>{courses.Title}</h3>
         <p>{courses.Description}</p>
         <p className="mt-3 mb-4"><FcIcons.FcClock/> Duration {courses.Duration} hrs</p>
-        <Button onClick={enroll} data-difficulty={courses.Difficulty} data-id={courses.id} >Get Started</Button>
+        <Button onClick={enroll} data-difficulty={courses.Difficulty} data-id={courses.id} coursename={courses.Title} >Get Started</Button>
       </div>
     </div>
+    </Col>
  ))
 
     return (
@@ -311,7 +313,14 @@ const Lessons = () => {
                         </ul>
                         <p>I show you exactly what you need to know to perform meaningful things using C++. This entails concentrating on what may provide you with the most benefit right now.</p>
                         <br/>
-                        <Button variant="primary" onClick={handleShow}> Explore Computer Programming</Button>
+                      
+
+                        <Container>
+                          <Row>
+                            {showCourse}
+                          </Row>
+                        </Container>
+                        
                     </Tab>
 
                     <Tab eventKey="home" title="Mechanics">

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 
 
@@ -278,20 +277,6 @@ getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) => {
       }
 
 
-=======
-import React from 'react';
-
-
-import { Helmet } from "react-helmet";
-
-import { Link } from "react-router-dom"
-import * as FaIcons from 'react-icons/fa';
-
-import './upload.css'
-//import './upload.scss'
-
-const UploadFile = () => {
->>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
   return <div className="backGround">
       {/* Helmet */}
             <div>
@@ -300,13 +285,8 @@ const UploadFile = () => {
                 <meta name="description" content="Welcome to the ConquError Upload file page." />
               </Helmet>
             </div> 
-<<<<<<< HEAD
             <Link to="/profile" style={{ textDecoration: 'none', marginLeft: '10px', marginTop: '5rem' }}><FaIcons.FaArrowLeft/> Return</Link>
       
-=======
-
-
->>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
             <div className="col-md-6 offset-md-3 mt-5 mb-5 container">
 
                 <div className="mb-3" >
@@ -315,25 +295,16 @@ const UploadFile = () => {
 
                 <br/>
         
-<<<<<<< HEAD
                 <Form noValidate validated={validated} onSubmit={handleSubmit}  className="card">
                     <h2 className="mt-3 fw-bold text-primary text-center">Upload your Files here!</h2>
                     
     
                     <p className="text-center mt-2">
                         Please upload documents strictly in PDF format.
-=======
-                <form className="card">
-                    <h2 className="mt-3 fw-bold text-primary text-center">Upload your Files here!</h2>
-
-                    <p className="text-center mt-2">
-                        Please upload documents only in 'pdf', 'docx', 'rtf', 'jpg', 'jpeg', 'png' & 'text' format.
->>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
                     </p>
 
                 <div className="form-group m-4">
                     <label htmlFor="exampleInputName">Title</label>
-<<<<<<< HEAD
                     <input type="text" name="title" className="form-control"  placeholder="Title" value={title || ""} onChange={e => setTitle(e.target.value)}  required="required"/>
                 </div>
                 <div className="form-group m-4">
@@ -382,30 +353,10 @@ const UploadFile = () => {
                               </Col>
                             </Row>
                           </Container>
-=======
-                    <input type="text" name="title" className="form-control" id="exampleInputName" placeholder="Title" required="required"/>
-                </div>
-                <div className="form-group m-4">
-                    <label htmlFor="exampleInputEmail1" required="required">Description</label>
-                    <input type="email" name="description" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Description"/>
-                </div>
-                <div className="form-group m-4">
-                    <label htmlFor="exampleInputEmail1" required="required">Owner</label>
-                    <input type="email" name="owner" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Owner"/>
-                </div>
-                <div className="form-group m-4">
-                    <label htmlFor="exampleFormControlSelect1">Tags</label>
-                    <select className="form-control" id="exampleFormControlSelect1" name="platform" required="required">
-                    <option>Programming</option>
-                    <option>C++</option>
-                    <option>Others</option>
-                    </select>
->>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
                 </div>
                 <hr/>
                 <div className="form-group mt-3 m-4">
                     <label className="mr-2 mb-3">Upload Document</label>
-<<<<<<< HEAD
                     <input type="file" name="file" accept='application/pdf' onChange={changeHandler}/>
                 </div>
                 <ProgressBar animated now={progbar} className="progress"/>
@@ -417,16 +368,6 @@ const UploadFile = () => {
 
        
               
-=======
-                    <input type="file" name="file"/>
-                </div>
-                <hr/>
-                    <button type="submit" className="btn btn-primary m-4">Submit</button>
-                </form>
-
-                <Link to="/profile" style={{ textDecoration: 'none', marginLeft: '10px', marginTop: '5rem' }}><FaIcons.FaArrowLeft/> Return</Link>
-            
->>>>>>> c6e069f5ada54da2f0ff471bf0d645c18824feb9
     </div> 
     
   </div>;
