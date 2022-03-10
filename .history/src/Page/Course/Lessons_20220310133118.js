@@ -330,6 +330,7 @@ const Lessons = () => {
                             
                             
                           </div>
+                        </Container>
                         
                     </Tab>
 
