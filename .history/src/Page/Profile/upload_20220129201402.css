@@ -1,0 +1,8 @@
+
+.backGround{
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to top, #4F6072, #8699AA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

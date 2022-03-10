@@ -1103,6 +1103,7 @@ const docsfile = Docs.map((documents) => (
                                 </Card.Body>
                               
                             </Card>
+                            <Button onClick={showMore}>Show More</Button>
                         </section>
                              
 

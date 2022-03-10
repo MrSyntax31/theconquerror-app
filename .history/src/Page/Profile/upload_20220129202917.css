@@ -1,0 +1,19 @@
+
+.backGround{
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to top, #ffffff, #8699AA);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+h1 {
+    font-size: 20px;
+    margin-top: 24px;
+    margin-bottom: 24px;
+  }
+  
+  img {
+  height: 40px;
+  }
