@@ -1,7 +1,7 @@
 import React, {useEffect,useState, useRef} from 'react';
 import { Helmet } from "react-helmet";
 import {  Card, Modal, Button,  OverlayTrigger, Popover, Offcanvas, Alert, ProgressBar, Badge} from 'react-bootstrap';
-import { getFirestore, collection, onSnapshot, query, orderBy, startAfter, limit, getDocs, doc, addDoc, where, setDoc } from 'firebase/firestore';
+import { getFirestore, collection, onSnapshot, query, orderBy, startAfter, limit, getDocs, doc, addDoc, where, setDoc , updateDoc} from 'firebase/firestore';
 import {} from '../../firebase/firebase'
 import {Container,  Row,Col, Form, FormControl, ButtonGroup} from 'react-bootstrap'
 import { getAuth , signOut, signInWithEmailAndPassword} from 'firebase/auth'
@@ -102,6 +102,26 @@ export default function TopicList() {
             
     
         };
+
+        function showMyQuestions(){
+
+          if (currentUser === null){
+            setShowMl(true)
+            swal("Oops!","You're not logged in!","error")
+          
+          }
+          else {
+
+            const creator = currentUser.email
+          
+
+          const myQ = query(collection(forumdb, "topics"), where("created_by", "==", creator));
+
+          setRef(myQ)
+          }
+          
+
+        }
 
         const [search, lookFor] = useState();
 
@@ -335,50 +355,141 @@ uploadTask.on('state_changed',
   }
 );
           }
-          async function AddNew() {
-
-            setError("")
-      
-                  if (tagCheck === true) {
+                 
+          useEffect(() =>{
   
-                    //if user is logged-in
-                  const userlevel = sessionStorage.getItem("userLevel")
-                 //convert date which is timestamp to String
-          var timestamp = Date.now();
-          var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
-          
+            if(currentUser){
+              adventurerTag()
+            }
+            else{
+            
+            }
+             
+            
+            },[])  // eslint-disable-line react-hooks/exhaustive-deps
+            
+const [adventurername, setAdventurerName] = useState("")
+const [userlvl, setLevel] = useState(0)
+
+async function UpdateAdventurerName(value){
+
+  const DbRef = doc(forumdb, "userdata",currentUser.uid);
+
          
-                        // Add a new document with a generated id.
-            const docRef = await addDoc(collection(forumdb, "topics"), {
-              title: question,
-            desc: description,
-            created_by: currentUser.email,
-            userid: currentUser.uid,
-            created_at: convertedDate,
-            tags: tags,
-            sampcodeimg: img,
-            userlvl: userlevel,
-            case_status: "unsolved"
-            });
-          
-              setImg("")
-              setDesc("");
-              setQuestion("");
-              setError("")
-              setShow(false)
-          
-              localStorage.setItem('threadID',docRef.id);
-           
-             history.push("/Thread")
-          
-            
-          }
-          else {
-            setError("Select a Tag")
-          }
+  await updateDoc(DbRef, {
+    AdventurerName: value
+
+});
+
+}
+
+function adventurerTag(){
+  onSnapshot(doc(forumdb, "userdata", currentUser.uid), (doc) => {
+
+      const docdata = (doc.data())
+
+      if (docdata)
+      {   
         
-            
+
+        if(docdata.AdventurerName){
+          console.log("welcome "+docdata.AdventurerName)
+          setAdventurerName(docdata.AdventurerName)
+          setLevel(docdata.level)
+        }
+        else
+        {
+      
+          swal("You don't have an Adventurer Name yet:", {
+            content: "input",
+          })
+          .then((value) => {
+
+          if(value === null)
+          {
+            swal("Later!","You can set your Adventurer Name later.","info")
           }
+          else{
+            UpdateAdventurerName(value)
+          }
+           
+           
+          });
+        }
+      }
+      else{
+          
+      
+    
+      }
+
+})
+}  
+
+
+        
+         async function AddNew() {
+
+          setError("")
+                if (tagCheck === true) {
+                
+                  if(adventurername === "")
+                  {
+
+                    swal("You don't have an Adventurer Name yet:", {
+                      content: "input",
+                    })
+                    .then((value) => {
+          
+                    
+                      UpdateAdventurerName(value)
+                     
+                    });
+                    
+                  }
+                  else{
+                
+                     //if user is logged-in
+              
+               //convert date which is timestamp to String
+        var timestamp = Date.now();
+        var convertedDate = new Intl.DateTimeFormat('en-US', {year: 'numeric', month: '2-digit',day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit'}).format(timestamp)
+        
+       
+                      // Add a new document with a generated id.
+          const docRef = await addDoc(collection(forumdb, "topics"), {
+            title: question,
+          desc: description,
+          created_by: currentUser.email,
+          userid: currentUser.uid,
+          created_at: convertedDate,
+          tags: tags,
+          sampcodeimg: img,
+          userlvl: userlvl,
+          case_status: "unsolved",
+          Name: adventurername
+        
+          });
+        
+            setImg("")
+            setDesc("");
+            setQuestion("");
+            setError("")
+            setShow(false)
+        
+            localStorage.setItem('threadID',docRef.id);
+         
+           history.push("/Thread")
+                  }
+
+          
+        }
+        else {
+          setError("Select a Tag")
+        }
+      
+          
+        }
   
   
           
@@ -395,39 +506,41 @@ uploadTask.on('state_changed',
     
       const [showUserEmail, setUserEmail] = useState([]);
       const [showUserLevel, setUserLevel] = useState([]);
-  
-          const showProfile = function(e) {
-  
-            const dataemail = e.target.getAttribute("data-id");
-            const datalvl = e.target.getAttribute("data-lvl");
-  
-            setUserEmail(dataemail)
-            setUserLevel(datalvl)
-  
-            onSnapshot(doc(forumdb, "warrioravatar", `${datalvl}`), (doc) => {
-        
-                const docdata = (doc.data())
-        
-                if (docdata)
-                {   
-                    setAvatar(docdata);
-                 
-                    setSmShow(true);  
-                }
-                else{
-                    
-                  swal("Something is Wrong","No Data Found","warning");
-                  setSmShow(false);
-                }
-        
+      const [userName, setUsername] = useState([]);    
+
+      const showProfile = function(e) {
+
+        const dataemail = e.target.getAttribute("data-id");
+        const datalvl = e.target.getAttribute("data-lvl");
+        const username = e.target.getAttribute("user-name")
+
+        setUserEmail(dataemail)
+        setUserLevel(datalvl)
+        setUsername(username)
+
+        onSnapshot(doc(forumdb, "warrioravatar", `${datalvl}`), (doc) => {
+    
+            const docdata = (doc.data())
+    
+            if (docdata)
+            {   
+                setAvatar(docdata);
+             
+                setSmShow(true);  
+            }
+            else{
                 
-            });
-              
-          };
-  
+              swal("Something is Wrong","No Data Found","warning");
+              setSmShow(false);
+            }
+    
+            
+        });
+          
+      };
           //Maps the data inside firestore collection (topics) so that it can be visible to the user
           const Discussion= topics.map((topic) => (  <div className="Discussion-Board p-3 m-2 border border-primary rounded" key={topic.id} > 
-          <p>Uploaded by: <label className="text-primary" style={{cursor:"pointer"}} data-id ={topic.created_by} data-lvl ={topic.userlvl} onClick={ showProfile }>{topic.created_by}</label> on <strong>
+          <p>Uploaded by: <label className="text-primary" style={{cursor:"pointer"}} data-id ={topic.created_by} user-name={topic.Name} data-lvl ={topic.userlvl} onClick={ showProfile }>{topic.Name}</label> on <strong>
             {topic.created_at}</strong></p>  
             
             
@@ -470,7 +583,7 @@ swal("Report Sent", "Thank you for making ConquError a healthy community.", "suc
 
 swal("Something is Wrong",error.code,"warning");
 }).finally(() =>{
-
+setShowR(false)
 })
 }
 
@@ -652,15 +765,15 @@ swal("Something is Wrong",error.code,"warning");
 
               <Navbar/>
 
-              <section className="m-3">
+              <section className="m-1">
                 
                     <Card>
-                      <Card.Header>
-                        <div className="header mb-2">
-                          <h3 className="text-center mb-3">Forum</h3>
+                      <section>
+                        <div className="headers mb-2">
+                          <h3 className="text-center" style={{marginBottom:'5rem'}}>Forum</h3>
                           <h2  className="text-light fw-bold ml-2" style={{marginTop:'4rem'}}>ConquErroRoom</h2>
                         </div>
-                      </Card.Header>
+                      </section>
                       <Card.Body>
                         <Card.Title>
                         <Container>
@@ -698,27 +811,28 @@ swal("Something is Wrong",error.code,"warning");
                             {/* Division for User Modal Info*/}
 
                             <Modal size="sm" show={smShow}  onHide={() => setSmShow(false)}  aria-labelledby="example-modal-sizes-title-sm">
-                              <Modal.Header closeButton>
-                                <Modal.Title id="example-modal-sizes-title-sm">
-                                  User Information
-                                </Modal.Title>
-                              </Modal.Header>
-                              <Modal.Body>
-                                  <div className="text-center">
-                                    <img src={avatar.img} className="rounded-circle" alt="UserLvl" width="100" height="100"/>
-                                  </div>
-                                  <div className="text-center">
-                                  <strong>Email</strong>
-                                    <h6>{showUserEmail}</h6>
-                                    </div>
-                                  <div className="text-center">
-                                    <strong>User Level on post</strong>
-                                    <h5>{showUserLevel}</h5>
-                                  </div>
-                                  <Button className="btn w-100 text-light"  onClick={askReport}><GoIcons.GoReport/> Report</Button>
-                              </Modal.Body>
-                            </Modal>
+                                                      <Modal.Header closeButton>
+                                                        <Modal.Title id="example-modal-sizes-title-sm">
+                                                          User Information
+                                                        </Modal.Title>
+                                                      </Modal.Header>
+                                                      <Modal.Body>
+                                                          <div className="text-center">
+                                                            <img src={avatar.img} className="rounded-circle" alt="UserLvl" width="100" height="100"/>
+                                                          </div>
+                                                          <div className="text-center">
+                                                          <strong>Adventurer Name</strong>
+                                                            <h6>{userName}</h6>
+                                                            </div>
+                                                          <div className="text-center">
+                                                            <strong>User Level on post</strong>
+                                                            <h5>{showUserLevel}</h5>
+                                                          </div>
+                                                          <Button className="btn w-100 text-light"  data-id={showUserEmail} onClick={askReport}><GoIcons.GoReport/> Report</Button>
+                                                      </Modal.Body>
+                                                    </Modal>
 
+                                                    
                             <Modal show={showR} onHide={handleCloseR}>
                               <Modal.Header closeButton>
                                 <Modal.Title>Report User</Modal.Title>
@@ -741,7 +855,7 @@ swal("Something is Wrong",error.code,"warning");
                                             <h3 className="fw-bold fs-m text-start mb-3"><GoIcons.GoCommentDiscussion/> All Topics </h3>
 
                                             <Button variant="primary" onClick={AskQuestion} className="mt-2 mb-2"> Ask a Question</Button>{' '}
-                                            <Button variant="primary"  className="mt-2 mb-2"> My Question</Button>
+                                            <Button variant="primary"  onClick={showMyQuestions} className="mt-2 mb-2"> My Question</Button>
                                               <br/>
                                               <em>To sort discussion please click</em>
                                               <Button variant="" className="text-primary" onClick={handleShowed}><BsIcons.BsTags/> Tags!</Button><br/>
@@ -813,7 +927,7 @@ swal("Something is Wrong",error.code,"warning");
                                               {fetching && <strong>Fetching more Problems.....</strong>}
                                             {!fetching && 
                                             
-                                                  <Button onClick={() => getMore()}>Show More</Button>
+                                                  <p className="text-primary" onClick={() => getMore()}>Show More</p>
                                               }
                                           </ButtonGroup>
                                 

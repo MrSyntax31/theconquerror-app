@@ -29,16 +29,16 @@ export default function Login() {
 
     const [recaptchaHandler, setHandler] = useState(false);
 
-    function onChange(value) {
+   async function onChange(value) {
 
-      if(value !== null)
-      {
-        setHandler(true)
+    if(value !== null)
+    {
+      setHandler(true)
       
-      }
-      else{
-        setHandler(false)
-      }
+    }
+    else{
+      setHandler(false)
+    }
       
      }
 
