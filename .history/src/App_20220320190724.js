@@ -2,6 +2,7 @@ import React from 'react';
 //import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { Helmet } from "react-helmet";
+import { Card } from 'react-bootstrap';
 import './App.css'
 
 import Home from './Page/Home/Home';

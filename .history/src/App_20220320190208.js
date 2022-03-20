@@ -2,6 +2,7 @@ import React from 'react';
 //import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { Helmet } from "react-helmet";
+import { Card } from 'react-bootstrap';
 import './App.css'
 
 import Home from './Page/Home/Home';
@@ -128,13 +129,13 @@ const App = () => {
               </div>
               
               <div className="animation">
-                <div className="one spin-one"></div>
-                <div className="two spin-one"></div>
+              <div className="one spin-one"></div>
+              <div className="three spin-one"></div>
               </div>
               
-              <h1 className="font-weight-bold text-light">ConquError is Under maintenance</h1>
-                <p className="font-weight-bold text-light mt-4">We are working on improving the site and fixing any bugs.</p>
-                <p className="font-weight-bold text-light mt-4">Please check back later.</p>
+              <h1 >ConquError is Under maintenance</h1>
+                <p>We are working on improving the site and fixing any bugs.</p>
+                <p>Please check back later.</p>
             </div>
           </div>
         </div>

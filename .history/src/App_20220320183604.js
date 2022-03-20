@@ -1,8 +1,10 @@
 import React from 'react';
-//import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from 'react-router-dom';
 import { Helmet } from "react-helmet";
-import './App.css'
 
 import Home from './Page/Home/Home';
 import Course from './Page/Course/Course';
@@ -36,7 +38,7 @@ import Admin from './Admin/Admin';
 
 //Maintenance
 import Maintenance from './Maintenance';
-
+{//}
 
 
 const App = () => {
@@ -106,37 +108,6 @@ const App = () => {
                 <title>ConquError | Maintenance</title>
                 <meta name="description" content="ConquError is under maintenance. " />
             </Helmet>
-        </div>
-
-
-        <div className="background-area">
-                
-                <div id='stars'></div>
-                <div id='stars2'></div>
-                <div id='stars3'></div>
-
-          <div className="container">
-            <div className="box">
-              <div className="mt-2 mb-5">
-                <div className="mb-2">
-                  <div className="avatar mx-auto">
-                    <img src="https://firebasestorage.googleapis.com/v0/b/conquerror-development.appspot.com/o/Homepage%2FTJDev.png?alt=media&token=e3f6d151-99c7-4c31-96ad-506b6fff9ff1" className="rotate rounded-circle z-depth-1 img-fluid" alt="developer" id=""/>
-                  </div>
-                        <h1 className="font-weight-bold text-light mt-4">Technojet.Dev</h1>
-                        <p className="font-weight-normal text-light">A move that can change your life! </p>
-                </div>
-              </div>
-              
-              <div className="animation">
-                <div className="one spin-one"></div>
-                <div className="two spin-one"></div>
-              </div>
-              
-              <h1 className="font-weight-bold text-light">ConquError is Under maintenance</h1>
-                <p className="font-weight-bold text-light mt-4">We are working on improving the site and fixing any bugs.</p>
-                <p className="font-weight-bold text-light mt-4">Please check back later.</p>
-            </div>
-          </div>
         </div>
   </>
 

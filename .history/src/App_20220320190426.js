@@ -2,6 +2,7 @@ import React from 'react';
 //import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import { Helmet } from "react-helmet";
+import { Card } from 'react-bootstrap';
 import './App.css'
 
 import Home from './Page/Home/Home';
@@ -128,8 +129,9 @@ const App = () => {
               </div>
               
               <div className="animation">
-                <div className="one spin-one"></div>
-                <div className="two spin-one"></div>
+              <div className="one spin-one"></div>
+              <div className="two spin-one"></div>
+              <div className="two spin-one"></div>
               </div>
               
               <h1 className="font-weight-bold text-light">ConquError is Under maintenance</h1>
